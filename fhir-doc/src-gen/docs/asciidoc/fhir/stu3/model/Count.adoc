@@ -1,0 +1,42 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Count
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Count
+
+A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Count[Count, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Count, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Count {
+}
+
+--
+
+=== Properties
+
+

@@ -1,0 +1,52 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= ContactPoint
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== ContactPoint
+
+Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ContactPoint[ContactPoint, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ContactPoint, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ContactPoint {
+	period : Period 0..1
+	rank : Integer 0..1
+	system : ContactPointSystem 0..1
+	use : ContactPointUse 0..1
+	value : String 0..1
+}
+
+--
+
+=== Properties
+period:: None
+rank:: Specifies a preferred order in which to use a set of contacts. Contacts are ranked with lower values coming before higher values.
+system:: Telecommunications form for contact point - what communications system is required to make use of the contact.
+use:: Identifies the purpose for the contact point.
+value:: The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).
+
+

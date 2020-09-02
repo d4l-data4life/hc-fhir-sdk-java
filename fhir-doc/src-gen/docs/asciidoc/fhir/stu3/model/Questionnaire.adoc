@@ -1,0 +1,270 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Questionnaire
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Questionnaire
+
+A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Questionnaire[Questionnaire, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Questionnaire, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Questionnaire {
+	approvalDate : Date 0..1
+	code : Coding 0..*
+	contact : ContactDetail 0..*
+	copyright : String 0..1
+	date : DateTime 0..1
+	description : String 0..1
+	effectivePeriod : Period 0..1
+	experimental : Boolean 0..1
+	identifier : Identifier 0..*
+	item : QuestionnaireItem 0..*
+	jurisdiction : CodeableConcept 0..*
+	lastReviewDate : Date 0..1
+	name : String 0..1
+	publisher : String 0..1
+	purpose : String 0..1
+	status : PublicationStatus 1..1
+	subjectType : String 0..*
+	title : String 0..1
+	url : String 0..1
+	useContext : UsageContext 0..*
+	version : String 0..1
+}
+
+--
+
+=== Properties
+approvalDate:: The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
+code:: An identifier for this question or group of questions in a particular terminology such as LOINC.
+contact:: Contact details to assist a user in finding and communicating with the publisher.
+copyright:: A copyright statement relating to the questionnaire and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the questionnaire.
+date:: The date  (and optionally time) when the questionnaire was published. The date must change if and when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the questionnaire changes.
+description:: A free text natural language description of the questionnaire from a consumer's perspective.
+effectivePeriod:: The period during which the questionnaire content was or is planned to be in active use.
+experimental:: A boolean value to indicate that this questionnaire is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.
+identifier:: A formal identifier that is used to identify this questionnaire when it is represented in other formats, or referenced in a specification, model, design or an instance.
+item:: A particular question, question grouping or display text that is part of the questionnaire.
+jurisdiction:: A legal or geographic region in which the questionnaire is intended to be used.
+lastReviewDate:: The date on which the resource content was last reviewed. Review happens periodically after approval, but doesn't change the original approval date.
+name:: A natural language name identifying the questionnaire. This name should be usable as an identifier for the module by machine processing applications such as code generation.
+publisher:: The name of the individual or organization that published the questionnaire.
+purpose:: Explaination of why this questionnaire is needed and why it has been designed as it has.
+status:: The status of this questionnaire. Enables tracking the life-cycle of the content.
+subjectType:: The types of subjects that can be the subject of responses created for the questionnaire.
+title:: A short, descriptive, user-friendly title for the questionnaire.
+url:: An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this questionnaire is (or will be) published. The URL SHOULD include the major version of the questionnaire. For more information see [Technical and Business Versions](resource.html#versions).
+useContext:: The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching for appropriate questionnaire instances.
+version:: The identifier that is used to identify this version of the questionnaire when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the questionnaire author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
+
+
+
+
+== QuestionnaireItem
+
+A particular question, question grouping or display text that is part of the questionnaire..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Questionnaire[Questionnaire, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, QuestionnaireItem, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class QuestionnaireItem {
+	code : Coding 0..*
+	definition : String 0..1
+	enableWhen : QuestionnaireItemEnableWhen 0..*
+	initialAttachment : Attachment 0..1
+	initialBoolean : Boolean 0..1
+	initialCoding : Coding 0..1
+	initialDate : Date 0..1
+	initialDateTime : DateTime 0..1
+	initialDecimal : Decimal 0..1
+	initialInteger : Integer 0..1
+	initialQuantity : Quantity 0..1
+	initialReference : Reference 0..1
+	initialString : String 0..1
+	initialTime : Time 0..1
+	initialUri : String 0..1
+	item : QuestionnaireItem 0..*
+	linkId : String 1..1
+	maxLength : Integer 0..1
+	option : QuestionnaireItemOption 0..*
+	options : Reference 0..1
+	prefix : String 0..1
+	readOnly : Boolean 0..1
+	repeats : Boolean 0..1
+	required : Boolean 0..1
+	text : String 0..1
+	type : QuestionnaireItemType 1..1
+}
+
+--
+
+=== Properties
+code:: A terminology code that corresponds to this group or question (e.g. a code from LOINC, which defines many questions and answers).
+definition:: A reference to an [ElementDefinition](elementdefinition.html) that provides the details for the item. If a definition is provided, then the following element values can be inferred from the definition: 
+
+* code (ElementDefinition.code)
+* type (ElementDefinition.type)
+* required (ElementDefinition.min)
+* repeats (ElementDefinition.max)
+* maxLength (ElementDefinition.maxLength)
+* options (ElementDefinition.binding)
+
+Any information provided in these elements on a Questionnaire Item overrides the information from the definition.
+enableWhen:: A constraint indicating that this item should only be enabled (displayed/allow answers to be captured) when the specified condition is true.
+initialAttachment:: The value that should be defaulted when initially rendering the questionnaire for user input.
+initialBoolean:: The value that should be defaulted when initially rendering the questionnaire for user input.
+initialCoding:: The value that should be defaulted when initially rendering the questionnaire for user input.
+initialDate:: The value that should be defaulted when initially rendering the questionnaire for user input.
+initialDateTime:: The value that should be defaulted when initially rendering the questionnaire for user input.
+initialDecimal:: The value that should be defaulted when initially rendering the questionnaire for user input.
+initialInteger:: The value that should be defaulted when initially rendering the questionnaire for user input.
+initialQuantity:: The value that should be defaulted when initially rendering the questionnaire for user input.
+initialReference:: The value that should be defaulted when initially rendering the questionnaire for user input.
+initialString:: The value that should be defaulted when initially rendering the questionnaire for user input.
+initialTime:: The value that should be defaulted when initially rendering the questionnaire for user input.
+initialUri:: The value that should be defaulted when initially rendering the questionnaire for user input.
+item:: Text, questions and other groups to be nested beneath a question or group.
+linkId:: An identifier that is unique within the Questionnaire allowing linkage to the equivalent item in a QuestionnaireResponse resource.
+maxLength:: The maximum number of characters that are permitted in the answer to be considered a "valid" QuestionnaireResponse.
+option:: One of the permitted answers for a "choice" or "open-choice" question.
+options:: A reference to a value set containing a list of codes representing permitted answers for a "choice" or "open-choice" question.
+prefix:: A short label for a particular group, question or set of display text within the questionnaire used for reference by the individual completing the questionnaire.
+readOnly:: An indication, when true, that the value cannot be changed by a human respondent to the Questionnaire.
+repeats:: An indication, if true, that the item may occur multiple times in the response, collecting multiple answers answers for questions or multiple sets of answers for groups.
+required:: An indication, if true, that the item must be present in a "completed" QuestionnaireResponse.  If false, the item may be skipped when answering the questionnaire.
+text:: The name of a section, the text of a question or text content for a display item.
+type:: The type of questionnaire item this is - whether text for display, a grouping of other items or a particular type of data to be captured (string, integer, coded choice, etc.).
+
+
+
+
+== QuestionnaireItemEnableWhen
+
+A constraint indicating that this item should only be enabled (displayed/allow answers to be captured) when the specified condition is true..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Questionnaire[Questionnaire, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, QuestionnaireItemEnableWhen, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class QuestionnaireItemEnableWhen {
+	answerAttachment : Attachment 0..1
+	answerBoolean : Boolean 0..1
+	answerCoding : Coding 0..1
+	answerDate : Date 0..1
+	answerDateTime : DateTime 0..1
+	answerDecimal : Decimal 0..1
+	answerInteger : Integer 0..1
+	answerQuantity : Quantity 0..1
+	answerReference : Reference 0..1
+	answerString : String 0..1
+	answerTime : Time 0..1
+	answerUri : String 0..1
+	hasAnswer : Boolean 0..1
+	question : String 1..1
+}
+
+--
+
+=== Properties
+answerAttachment:: An answer that the referenced question must match in order for the item to be enabled.
+answerBoolean:: An answer that the referenced question must match in order for the item to be enabled.
+answerCoding:: An answer that the referenced question must match in order for the item to be enabled.
+answerDate:: An answer that the referenced question must match in order for the item to be enabled.
+answerDateTime:: An answer that the referenced question must match in order for the item to be enabled.
+answerDecimal:: An answer that the referenced question must match in order for the item to be enabled.
+answerInteger:: An answer that the referenced question must match in order for the item to be enabled.
+answerQuantity:: An answer that the referenced question must match in order for the item to be enabled.
+answerReference:: An answer that the referenced question must match in order for the item to be enabled.
+answerString:: An answer that the referenced question must match in order for the item to be enabled.
+answerTime:: An answer that the referenced question must match in order for the item to be enabled.
+answerUri:: An answer that the referenced question must match in order for the item to be enabled.
+hasAnswer:: An indication that this item should be enabled only if the specified question is answered (hasAnswer=true) or not answered (hasAnswer=false).
+question:: The linkId for the question whose answer (or lack of answer) governs whether this item is enabled.
+
+
+
+
+== QuestionnaireItemOption
+
+One of the permitted answers for a "choice" or "open-choice" question..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Questionnaire[Questionnaire, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, QuestionnaireItemOption, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class QuestionnaireItemOption {
+	valueCoding : Coding 1..1
+	valueDate : Date 1..1
+	valueInteger : Integer 1..1
+	valueString : String 1..1
+	valueTime : Time 1..1
+}
+
+--
+
+=== Properties
+valueCoding:: A potential answer that's allowed as the answer to this question.
+valueDate:: A potential answer that's allowed as the answer to this question.
+valueInteger:: A potential answer that's allowed as the answer to this question.
+valueString:: A potential answer that's allowed as the answer to this question.
+valueTime:: A potential answer that's allowed as the answer to this question.
+
+

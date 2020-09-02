@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="296px" preserveAspectRatio="none" style="width:227px;height:296px;" version="1.1" viewBox="0 0 227 296" width="227px" zoomAndPan="magnify"><defs/><g><!--class QuestionnaireItemEnableWhen--><rect fill="#FEFECE" height="277.3711" id="QuestionnaireItemEnableWhen" style="stroke: #000000; stroke-width: 1.5;" width="210" x="6" y="8"/><ellipse cx="21" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M23.4731,30.1431 Q22.8921,30.4419 22.2529,30.5913 Q21.6138,30.7407 20.9082,30.7407 Q18.4014,30.7407 17.0815,29.0889 Q15.7617,27.437 15.7617,24.3159 Q15.7617,21.1865 17.0815,19.5347 Q18.4014,17.8828 20.9082,17.8828 Q21.6138,17.8828 22.2612,18.0322 Q22.9087,18.1816 23.4731,18.4805 L23.4731,21.2031 Q22.8423,20.6221 22.2488,20.3523 Q21.6553,20.0825 21.0244,20.0825 Q19.6797,20.0825 18.9949,21.1492 Q18.3101,22.2158 18.3101,24.3159 Q18.3101,26.4077 18.9949,27.4744 Q19.6797,28.541 21.0244,28.541 Q21.6553,28.541 22.2488,28.2712 Q22.8423,28.0015 23.4731,27.4204 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="174" x="37" y="28.5352">QuestionnaireItemEnableWhen</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="215" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="194" x="14" y="56.6348">answerAttachment : Attachment 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="154" x="14" y="73.5898">answerBoolean : Boolean 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="148" x="14" y="90.5449">answerCoding : Coding 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="118" x="14" y="107.5">answerDate : Date 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="170" x="14" y="124.4551">answerDateTime : DateTime 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="154" x="14" y="141.4102">answerDecimal : Decimal 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="146" x="14" y="158.3652">answerInteger : Integer 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="162" x="14" y="175.3203">answerQuantity : Quantity 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="176" x="14" y="192.2754">answerReference : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="134" x="14" y="209.2305">answerString : String 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="122" x="14" y="226.1855">answerTime : Time 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="118" x="14" y="243.1406">answerUri : String 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="133" x="14" y="260.0957">hasAnswer : Boolean 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="111" x="14" y="277.0508">question : String 1..1</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class QuestionnaireItemEnableWhen {
+	answerAttachment : Attachment 0..1
+	answerBoolean : Boolean 0..1
+	answerCoding : Coding 0..1
+	answerDate : Date 0..1
+	answerDateTime : DateTime 0..1
+	answerDecimal : Decimal 0..1
+	answerInteger : Integer 0..1
+	answerQuantity : Quantity 0..1
+	answerReference : Reference 0..1
+	answerString : String 0..1
+	answerTime : Time 0..1
+	answerUri : String 0..1
+	hasAnswer : Boolean 0..1
+	question : String 1..1
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_192-b12
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

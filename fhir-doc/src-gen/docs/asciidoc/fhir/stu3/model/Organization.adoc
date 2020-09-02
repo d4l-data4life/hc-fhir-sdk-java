@@ -1,0 +1,99 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Organization
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Organization
+
+A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, etc..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Organization[Organization, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Organization, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Organization {
+	active : Boolean 0..1
+	address : Address 0..*
+	alias : String 0..*
+	contact : OrganizationContact 0..*
+	endpoint : Reference 0..*
+	identifier : Identifier 0..*
+	name : String 0..1
+	partOf : Reference 0..1
+	telecom : ContactPoint 0..*
+	type : CodeableConcept 0..*
+}
+
+--
+
+=== Properties
+active:: None
+address:: None
+alias:: None
+contact:: None
+endpoint:: None
+identifier:: Identifier for the organization that is used to identify the organization across multiple disparate systems.
+name:: A name associated with the organization.
+partOf:: None
+telecom:: None
+type:: The kind(s) of organization that this is.
+
+
+
+
+== OrganizationContact
+
+Contact for the organization for a certain purpose.
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Organization[Organization, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, OrganizationContact, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class OrganizationContact {
+	address : Address 0..1
+	name : HumanName 0..1
+	purpose : CodeableConcept 0..1
+	telecom : ContactPoint 0..*
+}
+
+--
+
+=== Properties
+address:: None
+name:: None
+purpose:: Indicates a purpose for which the contact can be reached.
+telecom:: A contact detail (e.g. a telephone number or an email address) by which the party may be contacted.
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="262px" preserveAspectRatio="none" style="width:285px;height:262px;" version="1.1" viewBox="0 0 285 262" width="285px" zoomAndPan="magnify"><defs/><g><!--class MessageEvent--><rect fill="#FEFECE" height="243.4609" id="MessageEvent" style="stroke: #000000; stroke-width: 1.5;" width="268" x="6" y="8"/><ellipse cx="93.25" cy="24" fill="#EB937F" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M96.8643,30.5 L89.1445,30.5 L89.1445,18.1069 L96.8643,18.1069 L96.8643,20.2651 L91.5933,20.2651 L91.5933,22.938 L96.3662,22.938 L96.3662,25.0962 L91.5933,25.0962 L91.5933,28.3418 L96.8643,28.3418 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="81" x="115.75" y="28.5352">MessageEvent</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="273" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="121" x="14" y="56.6348">CODESYSTEM_EXPAND</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="226" x="14" y="73.5898">MEDICATIONADMINISTRATION_COMPLETE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="252" x="14" y="90.5449">MEDICATIONADMINISTRATION_NULLIFICATION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="233" x="14" y="107.5">MEDICATIONADMINISTRATION_RECORDING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="212" x="14" y="124.4551">MEDICATIONADMINISTRATION_UPDATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="82" x="14" y="141.4102">ADMIN_NOTIFY</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="152" x="14" y="158.3652">COMMUNICATION_REQUEST</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="162" x="14" y="175.3203">DIAGNOSTICREPORT_PROVIDE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="128" x="14" y="192.2754">OBSERVATION_PROVIDE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="75" x="14" y="209.2305">PATIENT_LINK</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="91" x="14" y="226.1855">PATIENT_UNLINK</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="103" x="14" y="243.1406">VALUESET_EXPAND</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+enum MessageEvent {
+    CODESYSTEM_EXPAND
+    MEDICATIONADMINISTRATION_COMPLETE
+    MEDICATIONADMINISTRATION_NULLIFICATION
+    MEDICATIONADMINISTRATION_RECORDING
+    MEDICATIONADMINISTRATION_UPDATE
+    ADMIN_NOTIFY
+    COMMUNICATION_REQUEST
+    DIAGNOSTICREPORT_PROVIDE
+    OBSERVATION_PROVIDE
+    PATIENT_LINK
+    PATIENT_UNLINK
+    VALUESET_EXPAND
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_192-b12
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

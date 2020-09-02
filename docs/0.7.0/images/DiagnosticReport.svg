@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="364px" preserveAspectRatio="none" style="width:265px;height:364px;" version="1.1" viewBox="0 0 265 364" width="265px" zoomAndPan="magnify"><defs/><g><!--class DiagnosticReport--><rect fill="#FEFECE" height="345.1914" id="DiagnosticReport" style="stroke: #000000; stroke-width: 1.5;" width="248" x="6" y="8"/><ellipse cx="74.75" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M77.2231,30.1431 Q76.6421,30.4419 76.0029,30.5913 Q75.3638,30.7407 74.6582,30.7407 Q72.1514,30.7407 70.8315,29.0889 Q69.5117,27.437 69.5117,24.3159 Q69.5117,21.1865 70.8315,19.5347 Q72.1514,17.8828 74.6582,17.8828 Q75.3638,17.8828 76.0112,18.0322 Q76.6587,18.1816 77.2231,18.4805 L77.2231,21.2031 Q76.5923,20.6221 75.9988,20.3523 Q75.4053,20.0825 74.7744,20.0825 Q73.4297,20.0825 72.7449,21.1492 Q72.0601,22.2158 72.0601,24.3159 Q72.0601,26.4077 72.7449,27.4744 Q73.4297,28.541 74.7744,28.541 Q75.4053,28.541 75.9988,28.2712 Q76.5923,28.0015 77.2231,27.4204 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="98" x="97.25" y="28.5352">DiagnosticReport</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="253" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="14" y="56.6348">basedOn : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="14" y="73.5898">category : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="153" x="14" y="90.5449">code : CodeableConcept 1..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="211" x="14" y="107.5">codedDiagnosis : CodeableConcept 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="123" x="14" y="124.4551">conclusion : String 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="126" x="14" y="141.4102">context : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="177" x="14" y="158.3652">effectiveDateTime : DateTime 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="145" x="14" y="175.3203">effectivePeriod : Period 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="126" x="14" y="192.2754">identifier : Identifier 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="14" y="209.2305">image : DiagnosticReportImage 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="156" x="14" y="226.1855">imagingStudy : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="14" y="243.1406">issued : Instant 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="232" x="14" y="260.0957">performer : DiagnosticReportPerformer 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="14" y="277.0508">presentedForm : Attachment 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="14" y="294.0059">result : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="134" x="14" y="310.9609">specimen : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="191" x="14" y="327.916">status : DiagnosticReportStatus 1..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="124" x="14" y="344.8711">subject : Reference 0..1</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class DiagnosticReport {
+	basedOn : Reference 0..*
+	category : CodeableConcept 0..1
+	code : CodeableConcept 1..1
+	codedDiagnosis : CodeableConcept 0..*
+	conclusion : String 0..1
+	context : Reference 0..1
+	effectiveDateTime : DateTime 0..1
+	effectivePeriod : Period 0..1
+	identifier : Identifier 0..*
+	image : DiagnosticReportImage 0..*
+	imagingStudy : Reference 0..*
+	issued : Instant 0..1
+	performer : DiagnosticReportPerformer 0..*
+	presentedForm : Attachment 0..*
+	result : Reference 0..*
+	specimen : Reference 0..*
+	status : DiagnosticReportStatus 1..1
+	subject : Reference 0..1
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_192-b12
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

@@ -1,0 +1,50 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Annotation
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Annotation
+
+A  text note which also  contains information about who made the statement and when..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Annotation[Annotation, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Annotation, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Annotation {
+	authorReference : Reference 0..1
+	authorString : String 0..1
+	text : String 1..1
+	time : DateTime 0..1
+}
+
+--
+
+=== Properties
+authorReference:: The individual responsible for making the annotation.
+authorString:: The individual responsible for making the annotation.
+text:: The text of the annotation.
+time:: Indicates when this particular annotation was made.
+
+

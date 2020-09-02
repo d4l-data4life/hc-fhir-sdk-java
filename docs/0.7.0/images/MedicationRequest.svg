@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="482px" preserveAspectRatio="none" style="width:349px;height:482px;" version="1.1" viewBox="0 0 349 482" width="349px" zoomAndPan="magnify"><defs/><g><!--class MedicationRequest--><rect fill="#FEFECE" height="463.877" id="MedicationRequest" style="stroke: #000000; stroke-width: 1.5;" width="332" x="6" y="8"/><ellipse cx="111.25" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M113.7231,30.1431 Q113.1421,30.4419 112.5029,30.5913 Q111.8638,30.7407 111.1582,30.7407 Q108.6514,30.7407 107.3315,29.0889 Q106.0117,27.437 106.0117,24.3159 Q106.0117,21.1865 107.3315,19.5347 Q108.6514,17.8828 111.1582,17.8828 Q111.8638,17.8828 112.5112,18.0322 Q113.1587,18.1816 113.7231,18.4805 L113.7231,21.2031 Q113.0923,20.6221 112.4988,20.3523 Q111.9053,20.0825 111.2744,20.0825 Q109.9297,20.0825 109.2449,21.1492 Q108.5601,22.2158 108.5601,24.3159 Q108.5601,26.4077 109.2449,27.4744 Q109.9297,28.541 111.2744,28.541 Q111.9053,28.541 112.4988,28.2712 Q113.0923,28.0015 113.7231,27.4204 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="109" x="133.75" y="28.5352">MedicationRequest</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="337" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="147" x="14" y="56.6348">authoredOn : DateTime 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="14" y="73.5898">basedOn : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="14" y="90.5449">category : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="126" x="14" y="107.5">context : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="134" x="14" y="124.4551">definition : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="157" x="14" y="141.4102">detectedIssue : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="316" x="14" y="158.3652">dispenseRequest : MedicationRequestDispenseRequest 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="168" x="14" y="175.3203">dosageInstruction : Dosage 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="151" x="14" y="192.2754">eventHistory : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="161" x="14" y="209.2305">groupIdentifier : Identifier 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="126" x="14" y="226.1855">identifier : Identifier 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="195" x="14" y="243.1406">intent : MedicationRequestIntent 1..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="281" x="14" y="260.0957">medicationCodeableConcept : CodeableConcept 1..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="197" x="14" y="277.0508">medicationReference : Reference 1..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="14" y="294.0059">note : Annotation 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="177" x="14" y="310.9609">priorPrescription : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="212" x="14" y="327.916">priority : MedicationRequestPriority 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="190" x="14" y="344.8711">reasonCode : CodeableConcept 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="173" x="14" y="361.8262">reasonReference : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="132" x="14" y="378.7813">recorder : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="239" x="14" y="395.7363">requester : MedicationRequestRequester 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="199" x="14" y="412.6914">status : MedicationRequestStatus 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="124" x="14" y="429.6465">subject : Reference 1..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="263" x="14" y="446.6016">substitution : MedicationRequestSubstitution 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="206" x="14" y="463.5566">supportingInformation : Reference 0..*</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class MedicationRequest {
+	authoredOn : DateTime 0..1
+	basedOn : Reference 0..*
+	category : CodeableConcept 0..1
+	context : Reference 0..1
+	definition : Reference 0..*
+	detectedIssue : Reference 0..*
+	dispenseRequest : MedicationRequestDispenseRequest 0..1
+	dosageInstruction : Dosage 0..*
+	eventHistory : Reference 0..*
+	groupIdentifier : Identifier 0..1
+	identifier : Identifier 0..*
+	intent : MedicationRequestIntent 1..1
+	medicationCodeableConcept : CodeableConcept 1..1
+	medicationReference : Reference 1..1
+	note : Annotation 0..*
+	priorPrescription : Reference 0..1
+	priority : MedicationRequestPriority 0..1
+	reasonCode : CodeableConcept 0..*
+	reasonReference : Reference 0..*
+	recorder : Reference 0..1
+	requester : MedicationRequestRequester 0..1
+	status : MedicationRequestStatus 0..1
+	subject : Reference 1..1
+	substitution : MedicationRequestSubstitution 0..1
+	supportingInformation : Reference 0..*
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_192-b12
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

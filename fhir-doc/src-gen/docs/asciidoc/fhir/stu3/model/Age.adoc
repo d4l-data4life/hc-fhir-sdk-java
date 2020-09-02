@@ -1,0 +1,42 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Age
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Age
+
+A duration of time during which an organism (or a process) has existed.
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Age[Age, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Age, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Age {
+}
+
+--
+
+=== Properties
+
+

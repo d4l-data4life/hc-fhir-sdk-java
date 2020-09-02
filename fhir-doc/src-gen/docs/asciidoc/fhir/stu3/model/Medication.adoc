@@ -1,0 +1,200 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Medication
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Medication
+
+This resource is primarily used for the identification and definition of a medication. It covers the ingredients and the packaging for a medication..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Medication[Medication, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Medication, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Medication {
+	code : CodeableConcept 0..1
+	form : CodeableConcept 0..1
+	image : Attachment 0..*
+	ingredient : MedicationIngredient 0..*
+	isBrand : Boolean 0..1
+	isOverTheCounter : Boolean 0..1
+	manufacturer : Reference 0..1
+	package : MedicationPackage 0..1
+	status : MedicationStatus 0..1
+}
+
+--
+
+=== Properties
+code:: A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.
+form:: Describes the form of the item.  Powder; tablets; capsule.
+image:: Photo(s) or graphic representation(s) of the medication.
+ingredient:: Identifies a particular constituent of interest in the product.
+isBrand:: Set to true if the item is attributable to a specific manufacturer.
+isOverTheCounter:: Set to true if the medication can be obtained without an order from a prescriber.
+manufacturer:: Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.
+package:: Information that only applies to packages (not products).
+status:: A code to indicate if the medication is in active use.
+
+
+
+
+== MedicationIngredient
+
+Identifies a particular constituent of interest in the product..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Medication[Medication, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, MedicationIngredient, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class MedicationIngredient {
+	amount : Ratio 0..1
+	isActive : Boolean 0..1
+	itemCodeableConcept : CodeableConcept 1..1
+	itemReference : Reference 1..1
+}
+
+--
+
+=== Properties
+amount:: Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet.
+isActive:: Indication of whether this ingredient affects the therapeutic action of the drug.
+itemCodeableConcept:: The actual ingredient - either a substance (simple ingredient) or another medication.
+itemReference:: The actual ingredient - either a substance (simple ingredient) or another medication.
+
+
+
+
+== MedicationPackage
+
+Information that only applies to packages (not products)..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Medication[Medication, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, MedicationPackage, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class MedicationPackage {
+	batch : MedicationPackageBatch 0..*
+	container : CodeableConcept 0..1
+	content : MedicationPackageContent 0..*
+}
+
+--
+
+=== Properties
+batch:: Information about a group of medication produced or packaged from one production run.
+container:: The kind of container that this package comes as.
+content:: A set of components that go to make up the described item.
+
+
+
+
+== MedicationPackageBatch
+
+Information about a group of medication produced or packaged from one production run..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Medication[Medication, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, MedicationPackageBatch, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class MedicationPackageBatch {
+	expirationDate : DateTime 0..1
+	lotNumber : String 0..1
+}
+
+--
+
+=== Properties
+expirationDate:: When this specific batch of product will expire.
+lotNumber:: The assigned lot number of a batch of the specified product.
+
+
+
+
+== MedicationPackageContent
+
+A set of components that go to make up the described item..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Medication[Medication, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, MedicationPackageContent, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class MedicationPackageContent {
+	amount : Quantity 0..1
+	itemCodeableConcept : CodeableConcept 1..1
+	itemReference : Reference 1..1
+}
+
+--
+
+=== Properties
+amount:: The amount of the product that is in the package.
+itemCodeableConcept:: Identifies one of the items in the package.
+itemReference:: Identifies one of the items in the package.
+
+

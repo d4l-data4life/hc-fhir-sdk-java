@@ -1,0 +1,46 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Range
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Range
+
+A set of ordered Quantities defined by a low and high limit..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Range[Range, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Range, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Range {
+	high : Quantity 0..1
+	low : Quantity 0..1
+}
+
+--
+
+=== Properties
+high:: The high limit. The boundary is inclusive.
+low:: The low limit. The boundary is inclusive.
+
+

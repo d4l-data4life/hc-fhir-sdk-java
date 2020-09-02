@@ -1,0 +1,46 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Ratio
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Ratio
+
+A relationship of two Quantity values - expressed as a numerator and a denominator..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Ratio[Ratio, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Ratio, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Ratio {
+	denominator : Quantity 0..1
+	numerator : Quantity 0..1
+}
+
+--
+
+=== Properties
+denominator:: The value of the denominator.
+numerator:: The value of the numerator.
+
+

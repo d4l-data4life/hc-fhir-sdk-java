@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="550px" preserveAspectRatio="none" style="width:126px;height:550px;" version="1.1" viewBox="0 0 126 550" width="126px" zoomAndPan="magnify"><defs/><g><!--class IssueType--><rect fill="#FEFECE" height="531.6973" id="IssueType" style="stroke: #000000; stroke-width: 1.5;" width="109" x="6" y="8"/><ellipse cx="27.75" cy="24" fill="#EB937F" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M31.3643,30.5 L23.6445,30.5 L23.6445,18.1069 L31.3643,18.1069 L31.3643,20.2651 L26.0933,20.2651 L26.0933,22.938 L30.8662,22.938 L30.8662,25.0962 L26.0933,25.0962 L26.0933,28.3418 L31.3643,28.3418 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="58" x="45.25" y="28.5352">IssueType</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="114" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="43" x="14" y="56.6348">INVALID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="14" y="73.5898">STRUCTURE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="14" y="90.5449">REQUIRED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="35" x="14" y="107.5">VALUE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="14" y="124.4551">INVARIANT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="52" x="14" y="141.4102">SECURITY</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="34" x="14" y="158.3652">LOGIN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="57" x="14" y="175.3203">UNKNOWN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="43" x="14" y="192.2754">EXPIRED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="61" x="14" y="209.2305">FORBIDDEN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="14" y="226.1855">SUPPRESSED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="67" x="14" y="243.1406">PROCESSING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="93" x="14" y="260.0957">NOT_SUPPORTED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="14" y="277.0508">DUPLICATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="69" x="14" y="294.0059">NOT_FOUND</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="62" x="14" y="310.9609">TOO_LONG</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="80" x="14" y="327.916">CODE_INVALID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="14" y="344.8711">EXTENSION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="74" x="14" y="361.8262">TOO_COSTLY</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="82" x="14" y="378.7813">BUSINESS_RULE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="55" x="14" y="395.7363">CONFLICT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="14" y="412.6914">INCOMPLETE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="14" y="429.6465">TRANSIENT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="72" x="14" y="446.6016">LOCK_ERROR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="58" x="14" y="463.5566">NO_STORE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="14" y="480.5117">EXCEPTION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="49" x="14" y="497.4668">TIMEOUT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="14" y="514.4219">THROTTLED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="91" x="14" y="531.377">INFORMATIONAL</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+enum IssueType {
+    INVALID
+    STRUCTURE
+    REQUIRED
+    VALUE
+    INVARIANT
+    SECURITY
+    LOGIN
+    UNKNOWN
+    EXPIRED
+    FORBIDDEN
+    SUPPRESSED
+    PROCESSING
+    NOT_SUPPORTED
+    DUPLICATE
+    NOT_FOUND
+    TOO_LONG
+    CODE_INVALID
+    EXTENSION
+    TOO_COSTLY
+    BUSINESS_RULE
+    CONFLICT
+    INCOMPLETE
+    TRANSIENT
+    LOCK_ERROR
+    NO_STORE
+    EXCEPTION
+    TIMEOUT
+    THROTTLED
+    INFORMATIONAL
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_192-b12
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

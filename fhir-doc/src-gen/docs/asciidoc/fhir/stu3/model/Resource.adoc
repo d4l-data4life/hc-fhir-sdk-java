@@ -1,0 +1,50 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Resource
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Resource
+
+This is the base resource type for everything..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Resource[Resource, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Resource, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Resource {
+	id : String 0..1
+	implicitRules : String 0..1
+	language : String 0..1
+	meta : Meta 0..1
+}
+
+--
+
+=== Properties
+id:: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+implicitRules:: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.
+language:: The base language in which the resource is written.
+meta:: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.
+
+

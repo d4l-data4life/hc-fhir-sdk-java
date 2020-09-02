@@ -1,0 +1,58 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Signature
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Signature
+
+A digital signature along with supporting context. The signature may be electronic/cryptographic in nature, or a graphical image representing a hand-written signature, or a signature process. Different signature approaches have different utilities..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Signature[Signature, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Signature, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Signature {
+	blob : String 0..1
+	contentType : String 0..1
+	onBehalfOfReference : Reference 0..1
+	onBehalfOfUri : String 0..1
+	type : Coding 1..*
+	when : Instant 1..1
+	whoReference : Reference 1..1
+	whoUri : String 1..1
+}
+
+--
+
+=== Properties
+blob:: The base64 encoding of the Signature content. When signature is not recorded electronically this element would be empty.
+contentType:: A mime type that indicates the technical format of the signature. Important mime types are application/signature+xml for X ML DigSig, application/jwt for JWT, and image/* for a graphical image of a signature, etc.
+onBehalfOfReference:: A reference to an application-usable description of the identity that is represented by the signature.
+onBehalfOfUri:: A reference to an application-usable description of the identity that is represented by the signature.
+type:: An indication of the reason that the entity signed this document. This may be explicitly included as part of the signature information and can be used when determining accountability for various actions concerning the document.
+when:: When the digital signature was signed.
+whoReference:: A reference to an application-usable description of the identity that signed  (e.g. the signature used their private key).
+whoUri:: A reference to an application-usable description of the identity that signed  (e.g. the signature used their private key).
+
+

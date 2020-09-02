@@ -1,0 +1,105 @@
+:library_version: 0.0.1
+:toc: macro
+:toclevels: 2
+:toc-title:
+ifdef::env-github[]
+:imagesdir: https://github.com/d4l-data4life/hc-fhir-sdk-java/blob/main/assets/images/
+:link-license: https://github.com/d4l-data4life/hc-fhir-sdk-java/blob/main/LICENSE
+:link-contribution: https://github.com/d4l-data4life/hc-fhir-sdk-java/blob/main/CONTRIBUTION.adoc
+:warning-caption: :warning:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+endif::[]
+ifndef::env-github[]
+:icons: font
+:imagesdir: ./assets/images
+:link-license: ./LICENCE
+:link-contribution: ./CONTRIBUTION.adoc
+endif::[]
+
+++++
+<div align="center">
+    <!-- PROJECT LOGO -->
+    <p>
+        <a><img src="https://github.com/d4l-data4life/hc-fhir-sdk-java/blob/main/assets/images/d4l-logo.svg" width="150"/></a>
+    </p>
+    <!-- PROJECT HEADER -->
+    <h1>data4life FHIR STU3 for Android/Java</h1>
+    <p><!-- PROJECT DESCRIPTION -->
+        Minimal FHIR standard models and data types for Android and Java
+    </p>
+    <p><!-- PROJECT DOCUMENTATION -->
+        <a href="https://github.com/d4l-data4life/hc-fhir-sdk-java"><strong>Explore the docs »</strong></a>
+    </p>
+    <p><!-- PROJECT ISSUES/FEATURES -->
+        <a href="https://github.com/d4l-data4life/hc-fhir-sdk-java/issues">Report Bug</a>
+        ·
+        <a href="https://github.com/d4l-data4life/hc-fhir-sdk-java/issues">Request Feature</a>
+    </p>
+    <p><!-- PROJECT BADGES -->
+        <a href="https://github.com/d4l-data4life/hc-fhir-sdk-java/actions">
+            <img src="https://github.com/d4l-data4life/hc-fhir-sdk-java/workflows/D4L%20CI%20KMP/badge.svg" alt="Build Status"/>
+        </a>
+        <a href="https://github.com/d4l-data4life/hc-fhir-sdk-java/blob/main/LICENSE">
+            <img src="https://img.shields.io/badge/license-PRIVATE-blue.svg"/>
+        </a>
+    </p>
+</div>
+++++
+
+[discrete]
+=== Table Of Contents
+toc::[]
+
+
+== Documentation
+
+Check current https://www.d4l.io/[documentation]
+
+== Maintenance
+
+=== Requirements
+
+* Android Studio 3.3.1
+* Java 7
+* Gradle 5.2.1
+* Python 3.5
+* Ruby
+* http://bundler.io/[Bundler]
+* https://fastlane.tools/[Fastlane]
+
+=== Build
+
+==== Description
+
+https://fastlane.tools/[fastlane] is used to manage fhir-parser and integrate generated models into fhir-java project
+
+https://github.com/gesundheitscloud/fhir-parser[fhir-parser] is used to generate Java models from JSON examples for latest FHIR standard
+
+Required resources include:
+* Base classes for primitive data types
+* Rules and templates for mapping
+* Settings with custom profiles and build targets
+
+----
+git submodule update --init --recursive
+(for furst time installation)
+
+----
+
+==== Generating models
+
+----
+bundle exec fastlane generate_fhir_java_models
+----
+
+==== Known issues with FHIR standard
+
+* String / Integer / Bool / URL are basic Java types and should inherit from FHIR Element in future versions.
+
+== Dependencies
+
+* https://github.com/square/moshi[Moshi JSON library]
+* https://github.com/gesundheitscloud/fhir-parser[fhir-parser] as FHIR model generator

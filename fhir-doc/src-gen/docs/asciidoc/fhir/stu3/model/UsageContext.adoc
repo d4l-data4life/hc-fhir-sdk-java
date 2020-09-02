@@ -1,0 +1,50 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= UsageContext
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== UsageContext
+
+Specifies clinical/business/etc metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care)..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/UsageContext[UsageContext, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, UsageContext, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class UsageContext {
+	code : Coding 1..1
+	valueCodeableConcept : CodeableConcept 1..1
+	valueQuantity : Quantity 1..1
+	valueRange : Range 1..1
+}
+
+--
+
+=== Properties
+code:: A code that identifies the type of context being specified by this usage context.
+valueCodeableConcept:: A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
+valueQuantity:: A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
+valueRange:: A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
+
+

@@ -1,0 +1,52 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Coding
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Coding
+
+A reference to a code defined by a terminology system.
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Coding[Coding, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Coding, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Coding {
+	code : String 0..1
+	display : String 0..1
+	system : String 0..1
+	userSelected : Boolean 0..1
+	version : String 0..1
+}
+
+--
+
+=== Properties
+code:: A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).
+display:: A representation of the meaning of the code in the system, following the rules of the system.
+system:: The identification of the code system that defines the meaning of the symbol in the code.
+userSelected:: Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).
+version:: The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.
+
+

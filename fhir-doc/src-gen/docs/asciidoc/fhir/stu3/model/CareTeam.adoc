@@ -1,0 +1,103 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= CareTeam
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== CareTeam
+
+The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/CareTeam[CareTeam, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, CareTeam, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class CareTeam {
+	category : CodeableConcept 0..*
+	context : Reference 0..1
+	identifier : Identifier 0..*
+	managingOrganization : Reference 0..*
+	name : String 0..1
+	note : Annotation 0..*
+	participant : CareTeamParticipant 0..*
+	period : Period 0..1
+	reasonCode : CodeableConcept 0..*
+	reasonReference : Reference 0..*
+	status : CareTeamStatus 0..1
+	subject : Reference 0..1
+}
+
+--
+
+=== Properties
+category:: Identifies what kind of team.  This is to support differentiation between multiple co-existing teams, such as care plan team, episode of care team, longitudinal care team.
+context:: The encounter or episode of care that establishes the context for this care team.
+identifier:: This records identifiers associated with this care team that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.
+managingOrganization:: The organization responsible for the care team.
+name:: A label for human use intended to distinguish like teams.  E.g. the "red" vs. "green" trauma teams.
+note:: None
+participant:: Identifies all people and organizations who are expected to be involved in the care team.
+period:: Indicates when the team did (or is intended to) come into effect and end.
+reasonCode:: Describes why the care team exists.
+reasonReference:: Condition(s) that this care team addresses.
+status:: Indicates the current state of the care team.
+subject:: Identifies the patient or group whose intended care is handled by the team.
+
+
+
+
+== CareTeamParticipant
+
+Identifies all people and organizations who are expected to be involved in the care team..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/CareTeam[CareTeam, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, CareTeamParticipant, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class CareTeamParticipant {
+	member : Reference 0..1
+	onBehalfOf : Reference 0..1
+	period : Period 0..1
+	role : CodeableConcept 0..1
+}
+
+--
+
+=== Properties
+member:: The specific person or organization who is participating/expected to participate in the care team.
+onBehalfOf:: The organization of the practitioner.
+period:: Indicates when the specific member or organization did (or is intended to) come into effect and end.
+role:: Indicates specific responsibility of an individual within the care team, such as "Primary care physician", "Trained social worker counselor", "Caregiver", etc.
+
+

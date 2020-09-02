@@ -1,0 +1,287 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= FHIR STU3 definition
+
+Generated from FHIR {{ info.version }} on {{ info.date }}
+
+{% set whitelist = [] %}
+{%- set _ = whitelist.append("CarePlan") %}
+{%- set _ = whitelist.append("DiagnosticReport") %}
+{%- set _ = whitelist.append("DocumentReference") %}
+{%- set _ = whitelist.append("Medication") %}
+{%- set _ = whitelist.append("MedicationRequest") %}
+{%- set _ = whitelist.append("Observation") %}
+{%- set _ = whitelist.append("Organization") %}
+{%- set _ = whitelist.append("Patient") %}
+{%- set _ = whitelist.append("Practitioner") %}
+{%- set _ = whitelist.append("Questionnaire") %}
+{%- set _ = whitelist.append("QuestionnaireResponse") %}
+
+{% set resourceWhiteList = [] %}
+
+{% set objecthelperlist = [] %}
+{%- set _ = objecthelperlist.append("QuestionnaireItem") %}
+{%- set _ = objecthelperlist.append("QuestionnaireResponseItem") %}
+{%- set _ = objecthelperlist.append("QuestionnaireResponseItemAnswer") %}
+
+{% set elementWhiteList = [] %}
+{%- set _ = elementWhiteList.append("Attachment") %}
+
+{% set excludelist = [] %}
+{%- set _ = excludelist.append("AdministrativeGender") %}
+{%- set _ = excludelist.append("Address") %}
+{%- set _ = excludelist.append("AddressUse") %}
+{%- set _ = excludelist.append("AddressType") %}
+{%- set _ = excludelist.append("Age") %}
+{%- set _ = excludelist.append("Annotation") %}
+{%- set _ = excludelist.append("BackboneElement") %}
+{%- set _ = excludelist.append("Boolean") %}
+{%- set _ = excludelist.append("CarePlanActivity") %}
+{%- set _ = excludelist.append("CarePlanActivityDetail") %}
+{%- set _ = excludelist.append("CodeableConcept") %}
+{%- set _ = excludelist.append("ContactDetail") %}
+{%- set _ = excludelist.append("ContactPoint") %}
+{%- set _ = excludelist.append("Coding") %}
+{%- set _ = excludelist.append("Count") %}
+{%- set _ = excludelist.append("Date") %}
+{%- set _ = excludelist.append("DateTime") %}
+{%- set _ = excludelist.append("Decimal") %}
+{%- set _ = excludelist.append("DiagnosticReportImage") %}
+{%- set _ = excludelist.append("DiagnosticReportPerformer") %}
+{%- set _ = excludelist.append("Distance") %}
+{%- set _ = excludelist.append("DocumentReferenceContent") %}
+{%- set _ = excludelist.append("DocumentReferenceContext") %}
+{%- set _ = excludelist.append("DocumentReferenceContextRelated") %}
+{%- set _ = excludelist.append("DocumentReferenceRelatesTo") %}
+{%- set _ = excludelist.append("Dosage") %}
+{%- set _ = excludelist.append("Duration") %}
+{%- set _ = excludelist.append("Element") %}
+{%- set _ = excludelist.append("Extension") %}
+{%- set _ = excludelist.append("HumanName") %}
+{%- set _ = excludelist.append("Identifier") %}
+{%- set _ = excludelist.append("Instant") %}
+{%- set _ = excludelist.append("Integer") %}
+{%- set _ = excludelist.append("MedicationIngredient") %}
+{%- set _ = excludelist.append("MedicationPackage") %}
+{%- set _ = excludelist.append("MedicationPackageBatch") %}
+{%- set _ = excludelist.append("MedicationPackageContent") %}
+{%- set _ = excludelist.append("MedicationRequestRequester") %}
+{%- set _ = excludelist.append("MedicationRequestDispenseRequest") %}
+{%- set _ = excludelist.append("MedicationRequestSubstitution") %}
+{%- set _ = excludelist.append("Meta") %}
+{%- set _ = excludelist.append("Money") %}
+{%- set _ = excludelist.append("NameUse") %}
+{%- set _ = excludelist.append("Narrative") %}
+{%- set _ = excludelist.append("ObservationComponent") %}
+{%- set _ = excludelist.append("ObservationReferenceRange") %}
+{%- set _ = excludelist.append("ObservationRelated") %}
+{%- set _ = excludelist.append("OrganizationContact") %}
+{%- set _ = excludelist.append("PatientAnimal") %}
+{%- set _ = excludelist.append("PatientCommunication") %}
+{%- set _ = excludelist.append("PatientContact") %}
+{%- set _ = excludelist.append("PatientLink") %}
+{%- set _ = excludelist.append("Period") %}
+{%- set _ = excludelist.append("PractitionerQualification") %}
+{%- set _ = excludelist.append("Quantity") %}
+{%- set _ = excludelist.append("QuestionnaireItemEnableWhen") %}
+{%- set _ = excludelist.append("QuestionnaireItemOption") %}
+{%- set _ = excludelist.append("Range") %}
+{%- set _ = excludelist.append("Ratio") %}
+{%- set _ = excludelist.append("Reference") %}
+{%- set _ = excludelist.append("SampledData") %}
+{%- set _ = excludelist.append("Signature") %}
+{%- set _ = excludelist.append("String") %}
+{%- set _ = excludelist.append("Time") %}
+{%- set _ = excludelist.append("Timing") %}
+{%- set _ = excludelist.append("UsageContext") %}
+
+{% set systemlist = [] %}
+
+== Overview
+
+[plantuml, FhirDataModelOverview, svg]
+--
+skinparam Shadowing false
+skinparam padding 16
+skinparam class {
+	FontSize 32
+	ArrowFontSize 26
+    ArrowColor SlateGrey
+    BorderColor Black
+}
+skinparam note {
+	FontSize 26
+    BorderColor DarkGrey
+    BackgroundColor SnowWhite
+}
+
+hide members
+hide circle
+hide methods
+
+'###### Together ######
+together {
+	class CarePlan
+	'enum CarePlanIntent
+	'enum CarePlanStatus
+	'class CarePlanActivity
+	'enum CarePlanActivityStatus
+	'class CarePlanActivityDetail
+	class Medication
+	'enum MedicationStatus
+	'class MedicationIngredient
+	'class MedicationPackage
+	class MedicationRequest
+   	'class MedicationRequestRequester
+   	'class MedicationRequestDispenseRequest
+   	'class MedicationRequestSubstitution
+   	'enum MedicationRequestPriority
+    'enum MedicationRequestIntent
+    'enum MedicationRequestStatus
+  	'class Dosage
+}
+
+together {
+	class DiagnosticReport
+	'enum DiagnosticReportStatus
+	'class DiagnosticReportImage
+	'class DiagnosticReportPerformer
+	class Observation
+    'class ObservationComponent
+   	'enum ObservationStatus
+   	'class ObservationRelated
+   	'class ObservationReferenceRange
+   	'class SampledData
+}
+
+
+together {
+	class DocumentReference
+	'class DocumentReferenceContent
+	'class DocumentReferenceContext
+	'enum DocumentReferenceStatus
+	'class DocumentReferenceRelatesTo
+	'enum CompositionStatus
+	class Attachment
+	class Organization
+	'class OrganizationContact
+	class Patient
+	'class PatientContact
+	class Practitioner
+	'class PractitionerQualification
+	'class Address
+	'class HumanName
+	class Reference
+}
+
+together {
+	class Questionnaire
+	class QuestionnaireItem
+	'enum QuestionnaireItemType
+	'class QuestionnaireItemOption
+	class QuestionnaireResponse
+	class QuestionnaireResponseItem
+    class QuestionnaireResponseItemAnswer
+	'enum QuestionnaireResponseStatus
+	'enum PublicationStatus
+}
+
+
+'###### Manual ######
+
+'###### Classes ######
+{%- for klass in classes %}{%- if klass.name in whitelist or klass.name in objecthelperlist or klass.name in elementWhiteList or klass.name in resourceWhiteList %}
+
+class {{ klass.name }} {
+{%- for prop in klass.properties %}
+	{%- if prop.enum %}{%- if not prop.enum.name in excludelist %}{%- if not prop.enum in systemlist %}{%- set _ = systemlist.append(prop.enum) %}{%- endif %}{%- endif %}{%- endif %}
+	{{ prop.name }} : {{ prop.enum.name or prop.class_name }}
+	{%- if prop.enum and prop.enum.restricted_to %}({{ prop.enum.restricted_to }}){%- endif %}
+	{%- if prop.restricted_to %}({{ prop.restricted_to }}){%- endif %}
+	{%- if not prop.one_of_many and prop.is_array %}
+	{%- if prop.nonoptional %} 1..*{%- else %} 0..*{%- endif %}
+	{%- else %}
+	{%- if prop.nonoptional %} 1..1{%- else %} 0..1{%- endif %}
+	{%- endif %}
+{%- endfor %}
+}
+
+class {{ klass.name }}
+{%- if klass.name in whitelist %} #Tomato{% endif %}
+{%- if klass.name in elementWhiteList %}{%- if klass.name == "Attachment" %} #SkyBlue{% else %} #PowderBlue{% endif %}{% endif %}
+
+{% if klass.superclass %}'{{ klass.name }} --|> {{ klass.superclass.name }}{% endif %}
+
+{%- set referencelist = [] %}
+{%- for prop in klass.properties %}
+
+{%- if prop.enum %}{%- if not prop.enum.name in excludelist %}{%- if not prop.enum.name in referencelist %}
+{%- set _ = referencelist.append(prop.enum.name) %}
+'{{ klass.name }}{%- if prop.is_array %} *--{%- else %} -->{%- endif %} {{ prop.enum.name }}{%- if prop.is_array %} : {{prop.name}}{%- endif %}
+{%- endif %}{%- endif %}{%- endif %}
+
+{%- if prop.class_name %}{%- if not prop.class_name in excludelist %}{%- if not prop.class_name in referencelist %}
+{%- set _ = referencelist.append(prop.class_name) %}
+{{ klass.name }}{%- if prop.is_array %} *--{%- else %} -->{%- endif %}{%- if prop.is_array %}{%- if prop.nonoptional %} "1..*"{%- else %} "0..*"{%- endif %}{%- endif %} {{ prop.class_name }}{%- if prop.is_array %} : {{prop.name}}{%- endif %}
+{%- endif %}{%- endif %}{%- endif %}
+
+{%- endfor %}
+
+{%- endif %}{%- endfor %}
+
+
+' ###### Code Systems ######
+{%- for system in systemlist %}
+'enum {{ system.name }} #PaleGreen
+'hide {{ system.name }} members
+{%- endfor %}
+
+
+' ###### Missing ######
+class Reference
+hide Reference members
+Reference --> Organization : asReference
+Reference --> Patient : asReference
+Reference --> Practitioner : asReference
+DocumentReference *-- "0..*" Reference : author
+
+
+' ###### Relations ######
+
+CarePlan *-- "0..*" MedicationRequest : activity
+DiagnosticReport *-- "0..*" Observation : result
+DocumentReference *-- "1..*" Attachment : content
+MedicationRequest *-- "0..1" Medication : reference
+Observation --> "0..1" Attachment : value
+Questionnaire *-- QuestionnaireResponse
+
+MedicationRequest -[hidden]- DiagnosticReport
+
+
+note as N1
+<b><color:red>DomainResource</color></b>
+<b><color:#Gold>ObjectHelper</color></b>
+<b><color:blue>Element</color></b>
+end note
+'<b><color:#Green>CodeSystem</color></b>
+
+--
+
+== Model
+
+{%- for klass in classes %}{% if klass.name in whitelist %}
+include::{{ klass.name }}.adoc[]
+{%- endif %}{%- endfor %}
+
+== Code System
+
+include::CodeSystems.adoc[]

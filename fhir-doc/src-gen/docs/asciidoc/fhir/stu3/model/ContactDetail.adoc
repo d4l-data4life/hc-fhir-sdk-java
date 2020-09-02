@@ -1,0 +1,46 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= ContactDetail
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== ContactDetail
+
+Specifies contact information for a person or organization..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ContactDetail[ContactDetail, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ContactDetail, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ContactDetail {
+	name : String 0..1
+	telecom : ContactPoint 0..*
+}
+
+--
+
+=== Properties
+name:: The name of an individual to contact.
+telecom:: The contact details for the individual (if a name was provided) or the organization.
+
+

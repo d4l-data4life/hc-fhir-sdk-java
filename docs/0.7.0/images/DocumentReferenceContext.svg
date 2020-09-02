@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="177px" preserveAspectRatio="none" style="width:290px;height:177px;" version="1.1" viewBox="0 0 290 177" width="290px" zoomAndPan="magnify"><defs/><g><!--class DocumentReferenceContext--><rect fill="#FEFECE" height="158.6855" id="DocumentReferenceContext" style="stroke: #000000; stroke-width: 1.5;" width="273" x="6" y="8"/><ellipse cx="56.25" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M58.7231,30.1431 Q58.1421,30.4419 57.5029,30.5913 Q56.8638,30.7407 56.1582,30.7407 Q53.6514,30.7407 52.3315,29.0889 Q51.0117,27.437 51.0117,24.3159 Q51.0117,21.1865 52.3315,19.5347 Q53.6514,17.8828 56.1582,17.8828 Q56.8638,17.8828 57.5112,18.0322 Q58.1587,18.1816 58.7231,18.4805 L58.7231,21.2031 Q58.0923,20.6221 57.4988,20.3523 Q56.9053,20.0825 56.2744,20.0825 Q54.9297,20.0825 54.2449,21.1492 Q53.5601,22.2158 53.5601,24.3159 Q53.5601,26.4077 54.2449,27.4744 Q54.9297,28.541 56.2744,28.541 Q56.9053,28.541 57.4988,28.2712 Q58.0923,28.0015 58.7231,27.4204 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="160" x="78.75" y="28.5352">DocumentReferenceContext</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="278" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="140" x="14" y="56.6348">encounter : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="154" x="14" y="73.5898">event : CodeableConcept 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="188" x="14" y="90.5449">facilityType : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="14" y="107.5">period : Period 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="207" x="14" y="124.4551">practiceSetting : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="257" x="14" y="141.4102">related : DocumentReferenceContextRelated 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="179" x="14" y="158.3652">sourcePatientInfo : Reference 0..1</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class DocumentReferenceContext {
+	encounter : Reference 0..1
+	event : CodeableConcept 0..*
+	facilityType : CodeableConcept 0..1
+	period : Period 0..1
+	practiceSetting : CodeableConcept 0..1
+	related : DocumentReferenceContextRelated 0..*
+	sourcePatientInfo : Reference 0..1
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_192-b12
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

@@ -1,0 +1,133 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= ProcedureRequest
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== ProcedureRequest
+
+A record of a request for diagnostic investigations, treatments, or operations to be performed..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ProcedureRequest[ProcedureRequest, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ProcedureRequest, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ProcedureRequest {
+	asNeededBoolean : Boolean 0..1
+	asNeededCodeableConcept : CodeableConcept 0..1
+	authoredOn : DateTime 0..1
+	basedOn : Reference 0..*
+	bodySite : CodeableConcept 0..*
+	category : CodeableConcept 0..*
+	code : CodeableConcept 1..1
+	context : Reference 0..1
+	definition : Reference 0..*
+	doNotPerform : Boolean 0..1
+	identifier : Identifier 0..*
+	intent : RequestIntent 1..1
+	note : Annotation 0..*
+	occurrenceDateTime : DateTime 0..1
+	occurrencePeriod : Period 0..1
+	occurrenceTiming : Timing 0..1
+	performer : Reference 0..1
+	performerType : CodeableConcept 0..1
+	priority : RequestPriority 0..1
+	reasonCode : CodeableConcept 0..*
+	reasonReference : Reference 0..*
+	relevantHistory : Reference 0..*
+	replaces : Reference 0..*
+	requester : ProcedureRequestRequester 0..1
+	requisition : Identifier 0..1
+	specimen : Reference 0..*
+	status : RequestStatus 1..1
+	subject : Reference 1..1
+	supportingInfo : Reference 0..*
+}
+
+--
+
+=== Properties
+asNeededBoolean:: If a CodeableConcept is present, it indicates the pre-condition for performing the procedure.  For example "pain", "on flare-up", etc.
+asNeededCodeableConcept:: If a CodeableConcept is present, it indicates the pre-condition for performing the procedure.  For example "pain", "on flare-up", etc.
+authoredOn:: When the request transitioned to being actionable.
+basedOn:: Plan/proposal/order fulfilled by this request.
+bodySite:: Anatomic location where the procedure should be performed. This is the target site.
+category:: A code that classifies the procedure for searching, sorting and display purposes (e.g. "Surgical Procedure").
+code:: A code that identifies a particular procedure, diagnostic investigation, or panel of investigations, that have been requested.
+context:: An encounter or episode of care that provides additional information about the healthcare context in which this request is made.
+definition:: Protocol or definition followed by this request.
+doNotPerform:: Set this to true if the record is saying that the procedure should NOT be performed.
+identifier:: Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.
+intent:: Whether the request is a proposal, plan, an original order or a reflex order.
+note:: Any other notes and comments made about the service request. For example, letting provider know that "patient hates needles" or other provider instructions.
+occurrenceDateTime:: The date/time at which the diagnostic testing should occur.
+occurrencePeriod:: The date/time at which the diagnostic testing should occur.
+occurrenceTiming:: The date/time at which the diagnostic testing should occur.
+performer:: The desired perfomer for doing the diagnostic testing.  For example, the surgeon, dermatopathologist, endoscopist, etc.
+performerType:: Desired type of performer for doing the diagnostic testing.
+priority:: Indicates how quickly the ProcedureRequest should be addressed with respect to other requests.
+reasonCode:: An explanation or justification for why this diagnostic investigation is being requested in coded or textual form.   This is often for billing purposes.  May relate to the resources referred to in supportingInformation.
+reasonReference:: Indicates another resource that provides a justification for why this diagnostic investigation is being requested.   May relate to the resources referred to in supportingInformation.
+relevantHistory:: Key events in the history of the request.
+replaces:: The request takes the place of the referenced completed or terminated request(s).
+requester:: The individual who initiated the request and has responsibility for its activation.
+requisition:: A shared identifier common to all procedure or diagnostic requests that were authorized more or less simultaneously by a single author, representing the composite or group identifier.
+specimen:: One or more specimens that the laboratory procedure will use.
+status:: The status of the order.
+subject:: On whom or what the procedure or diagnostic is to be performed. This is usually a human patient, but can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).
+supportingInfo:: Additional clinical information about the patient or specimen that may influence the procedure or diagnostics or their interpretations.     This information includes diagnosis, clinical findings and other observations.  In laboratory ordering these are typically referred to as "ask at order entry questions (AOEs)".  This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order. For example,  reporting the amount of inspired oxygen for blood gas measurements.
+
+
+
+
+== ProcedureRequestRequester
+
+The individual who initiated the request and has responsibility for its activation..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ProcedureRequest[ProcedureRequest, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ProcedureRequestRequester, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ProcedureRequestRequester {
+	agent : Reference 1..1
+	onBehalfOf : Reference 0..1
+}
+
+--
+
+=== Properties
+agent:: The device, practitioner or organization who initiated the request.
+onBehalfOf:: The organization the device or practitioner was acting on behalf of.
+
+

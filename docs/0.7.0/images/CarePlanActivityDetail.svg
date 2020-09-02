@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="381px" preserveAspectRatio="none" style="width:298px;height:381px;" version="1.1" viewBox="0 0 298 381" width="298px" zoomAndPan="magnify"><defs/><g><!--class CarePlanActivityDetail--><rect fill="#FEFECE" height="362.1465" id="CarePlanActivityDetail" style="stroke: #000000; stroke-width: 1.5;" width="281" x="6" y="8"/><ellipse cx="78.25" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M80.7231,30.1431 Q80.1421,30.4419 79.5029,30.5913 Q78.8638,30.7407 78.1582,30.7407 Q75.6514,30.7407 74.3315,29.0889 Q73.0117,27.437 73.0117,24.3159 Q73.0117,21.1865 74.3315,19.5347 Q75.6514,17.8828 78.1582,17.8828 Q78.8638,17.8828 79.5112,18.0322 Q80.1587,18.1816 80.7231,18.4805 L80.7231,21.2031 Q80.0923,20.6221 79.4988,20.3523 Q78.9053,20.0825 78.2744,20.0825 Q76.9297,20.0825 76.2449,21.1492 Q75.5601,22.2158 75.5601,24.3159 Q75.5601,26.4077 76.2449,27.4744 Q76.9297,28.541 78.2744,28.541 Q78.9053,28.541 79.4988,28.2712 Q80.0923,28.0015 80.7231,27.4204 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="124" x="100.75" y="28.5352">CarePlanActivityDetail</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="286" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="14" y="56.6348">category : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="153" x="14" y="73.5898">code : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="146" x="14" y="90.5449">dailyAmount : Quantity 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="136" x="14" y="107.5">definition : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="125" x="14" y="124.4551">description : String 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="106" x="14" y="141.4102">goal : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="128" x="14" y="158.3652">location : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="138" x="14" y="175.3203">performer : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="265" x="14" y="192.2754">productCodeableConcept : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="181" x="14" y="209.2305">productReference : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="14" y="226.1855">prohibited : Boolean 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="122" x="14" y="243.1406">quantity : Quantity 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="190" x="14" y="260.0957">reasonCode : CodeableConcept 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="173" x="14" y="277.0508">reasonReference : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="155" x="14" y="294.0059">scheduledPeriod : Period 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="151" x="14" y="310.9609">scheduledString : String 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="161" x="14" y="327.916">scheduledTiming : Timing 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="185" x="14" y="344.8711">status : CarePlanActivityStatus 1..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="136" x="14" y="361.8262">statusReason : String 0..1</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class CarePlanActivityDetail {
+	category : CodeableConcept 0..1
+	code : CodeableConcept 0..1
+	dailyAmount : Quantity 0..1
+	definition : Reference 0..1
+	description : String 0..1
+	goal : Reference 0..*
+	location : Reference 0..1
+	performer : Reference 0..*
+	productCodeableConcept : CodeableConcept 0..1
+	productReference : Reference 0..1
+	prohibited : Boolean 0..1
+	quantity : Quantity 0..1
+	reasonCode : CodeableConcept 0..*
+	reasonReference : Reference 0..*
+	scheduledPeriod : Period 0..1
+	scheduledString : String 0..1
+	scheduledTiming : Timing 0..1
+	status : CarePlanActivityStatus 1..1
+	statusReason : String 0..1
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_192-b12
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

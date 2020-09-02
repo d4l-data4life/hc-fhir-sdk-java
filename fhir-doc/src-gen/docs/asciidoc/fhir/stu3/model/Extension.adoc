@@ -1,0 +1,120 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Extension
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Extension
+
+Optional Extension Element - found in all resources..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Extension[Extension, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Extension, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Extension {
+	url : String 1..1
+	valueAddress : Address 0..1
+	valueAge : Age 0..1
+	valueAnnotation : Annotation 0..1
+	valueAttachment : Attachment 0..1
+	valueBase64Binary : String 0..1
+	valueBoolean : Boolean 0..1
+	valueCode : String 0..1
+	valueCodeableConcept : CodeableConcept 0..1
+	valueCoding : Coding 0..1
+	valueContactPoint : ContactPoint 0..1
+	valueCount : Count 0..1
+	valueDate : Date 0..1
+	valueDateTime : DateTime 0..1
+	valueDecimal : Decimal 0..1
+	valueDistance : Distance 0..1
+	valueDuration : Duration 0..1
+	valueHumanName : HumanName 0..1
+	valueId : String 0..1
+	valueIdentifier : Identifier 0..1
+	valueInstant : Instant 0..1
+	valueInteger : Integer 0..1
+	valueMarkdown : String 0..1
+	valueMeta : Meta 0..1
+	valueMoney : Money 0..1
+	valueOid : String 0..1
+	valuePeriod : Period 0..1
+	valuePositiveInt : Integer 0..1
+	valueQuantity : Quantity 0..1
+	valueRange : Range 0..1
+	valueRatio : Ratio 0..1
+	valueReference : Reference 0..1
+	valueSampledData : SampledData 0..1
+	valueSignature : Signature 0..1
+	valueString : String 0..1
+	valueTime : Time 0..1
+	valueTiming : Timing 0..1
+	valueUnsignedInt : Integer 0..1
+	valueUri : String 0..1
+}
+
+--
+
+=== Properties
+url:: Source of the definition for the extension code - a logical name or a URL.
+valueAddress:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueAge:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueAnnotation:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueAttachment:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueBase64Binary:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueBoolean:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueCode:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueCodeableConcept:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueCoding:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueContactPoint:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueCount:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueDate:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueDateTime:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueDecimal:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueDistance:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueDuration:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueHumanName:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueId:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueIdentifier:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueInstant:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueInteger:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueMarkdown:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueMeta:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueMoney:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueOid:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valuePeriod:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valuePositiveInt:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueQuantity:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueRange:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueRatio:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueReference:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueSampledData:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueSignature:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueString:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueTime:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueTiming:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueUnsignedInt:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+valueUri:: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+
+
