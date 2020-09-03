@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="279px" preserveAspectRatio="none" style="width:141px;height:279px;" version="1.1" viewBox="0 0 141 279" width="141px" zoomAndPan="magnify"><defs/><g><!--class GoalStatus--><rect fill="#FEFECE" height="260.416" id="GoalStatus" style="stroke: #000000; stroke-width: 1.5;" width="124" x="6" y="8"/><ellipse cx="33.6" cy="24" fill="#EB937F" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M37.2143,30.5 L29.4945,30.5 L29.4945,18.1069 L37.2143,18.1069 L37.2143,20.2651 L31.9433,20.2651 L31.9433,22.938 L36.7162,22.938 L36.7162,25.0962 L31.9433,25.0962 L31.9433,28.3418 L37.2143,28.3418 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="60" x="52.4" y="28.5352">GoalStatus</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="129" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="57" x="14" y="56.6348">PROPOSED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="57" x="14" y="73.5898">ACCEPTED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="50" x="14" y="90.5449">PLANNED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="72" x="14" y="107.5">IN_PROGRESS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="14" y="124.4551">ON_TARGET</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="14" y="141.4102">AHEAD_OF_TARGET</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="88" x="14" y="158.3652">BEHIND_TARGET</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="14" y="175.3203">SUSTAINING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="14" y="192.2754">ACHIEVED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="14" y="209.2305">ON_HOLD</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="14" y="226.1855">CANCELLED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="14" y="243.1406">ENTERED_IN_ERROR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="14" y="260.0957">REJECTED</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+enum GoalStatus {
+    PROPOSED
+    ACCEPTED
+    PLANNED
+    IN_PROGRESS
+    ON_TARGET
+    AHEAD_OF_TARGET
+    BEHIND_TARGET
+    SUSTAINING
+    ACHIEVED
+    ON_HOLD
+    CANCELLED
+    ENTERED_IN_ERROR
+    REJECTED
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_192-b12
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

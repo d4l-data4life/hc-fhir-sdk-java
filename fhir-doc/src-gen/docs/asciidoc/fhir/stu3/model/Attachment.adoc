@@ -1,0 +1,58 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Attachment
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Attachment
+
+For referring to data content defined in other formats..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Attachment[Attachment, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Attachment, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Attachment {
+	contentType : String 0..1
+	creation : DateTime 0..1
+	data : String 0..1
+	hash : String 0..1
+	language : String 0..1
+	size : Integer 0..1
+	title : String 0..1
+	url : String 0..1
+}
+
+--
+
+=== Properties
+contentType:: Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.
+creation:: The date that the attachment was first created.
+data:: The actual data of the attachment - a sequence of bytes. In XML, represented using base64.
+hash:: The calculated hash of the data using SHA-1. Represented using base64.
+language:: The human language of the content. The value can be any valid value according to BCP 47.
+size:: The number of bytes of data that make up this attachment (before base64 encoding, if that is done).
+title:: A label or set of text to display in place of the data.
+url:: An alternative location where the data can be accessed.
+
+

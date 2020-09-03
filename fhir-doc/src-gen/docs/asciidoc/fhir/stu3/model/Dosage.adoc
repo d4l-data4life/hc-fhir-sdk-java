@@ -1,0 +1,78 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Dosage
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Dosage
+
+Indicates how the medication is/was taken or should be taken by the patient..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Dosage[Dosage, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Dosage, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Dosage {
+	additionalInstruction : CodeableConcept 0..*
+	asNeededBoolean : Boolean 0..1
+	asNeededCodeableConcept : CodeableConcept 0..1
+	doseQuantity : Quantity 0..1
+	doseRange : Range 0..1
+	maxDosePerAdministration : Quantity 0..1
+	maxDosePerLifetime : Quantity 0..1
+	maxDosePerPeriod : Ratio 0..1
+	method : CodeableConcept 0..1
+	patientInstruction : String 0..1
+	rateQuantity : Quantity 0..1
+	rateRange : Range 0..1
+	rateRatio : Ratio 0..1
+	route : CodeableConcept 0..1
+	sequence : Integer 0..1
+	site : CodeableConcept 0..1
+	text : String 0..1
+	timing : Timing 0..1
+}
+
+--
+
+=== Properties
+additionalInstruction:: None
+asNeededBoolean:: Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept).
+asNeededCodeableConcept:: Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept).
+doseQuantity:: None
+doseRange:: None
+maxDosePerAdministration:: None
+maxDosePerLifetime:: None
+maxDosePerPeriod:: None
+method:: None
+patientInstruction:: Instructions in terms that are understood by the patient or consumer.
+rateQuantity:: None
+rateRange:: None
+rateRatio:: None
+route:: None
+sequence:: Indicates the order in which the dosage instructions should be applied or interpreted.
+site:: None
+text:: None
+timing:: None
+
+

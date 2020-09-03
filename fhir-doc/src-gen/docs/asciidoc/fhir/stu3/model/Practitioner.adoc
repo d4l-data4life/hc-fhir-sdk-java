@@ -1,0 +1,99 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Practitioner
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Practitioner
+
+A person who is directly or indirectly involved in the provisioning of healthcare..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Practitioner[Practitioner, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Practitioner, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Practitioner {
+	active : Boolean 0..1
+	address : Address 0..*
+	birthDate : Date 0..1
+	communication : CodeableConcept 0..*
+	gender : AdministrativeGender 0..1
+	identifier : Identifier 0..*
+	name : HumanName 0..*
+	photo : Attachment 0..*
+	qualification : PractitionerQualification 0..*
+	telecom : ContactPoint 0..*
+}
+
+--
+
+=== Properties
+active:: None
+address:: Address(es) of the practitioner that are not role specific (typically home address). Work addresses are not typically entered in this property as they are usually role dependent.
+birthDate:: The date of birth for the practitioner.
+communication:: None
+gender:: Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.
+identifier:: An identifier that applies to this person in this role.
+name:: None
+photo:: None
+qualification:: None
+telecom:: A contact detail for the practitioner, e.g. a telephone number or an email address.
+
+
+
+
+== PractitionerQualification
+
+Qualifications obtained by training and certification.
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Practitioner[Practitioner, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, PractitionerQualification, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class PractitionerQualification {
+	code : CodeableConcept 1..1
+	identifier : Identifier 0..*
+	issuer : Reference 0..1
+	period : Period 0..1
+}
+
+--
+
+=== Properties
+code:: None
+identifier:: An identifier that applies to this person's qualification in this role.
+issuer:: None
+period:: None
+
+

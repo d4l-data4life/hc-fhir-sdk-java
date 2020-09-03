@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="225px" preserveAspectRatio="none" style="width:206px;height:225px;background:#000000;" version="1.1" viewBox="0 0 206 225" width="206px" zoomAndPan="magnify"><defs/><g><rect fill="#33FF02" height="21.4883" style="stroke: #33FF02; stroke-width: 1.0;" width="199" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="165" x="6" y="20">[From string (line 10) ]</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="10" y="40.4883"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="74" x="5" y="56.9766">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="199" x="5" y="73.4648">skinparam Shadowing false</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="153" x="5" y="89.9531">skinparam padding 2</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="127" x="5" y="106.4414">skinparam class {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="129" x="25" y="122.9297">BorderColor Black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="5" x="5" y="139.418">}</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="10" y="155.9063"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="99" x="5" y="172.3945">hide methods</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="10" y="188.8828"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="161" x="5" y="205.3711">class {{ klass.name }} {</text><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="94" x="10" y="221.8594">Syntax Error?</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class {{ klass.name }} {
+{%- for prop in klass.properties %}
+	{{ prop.name }} : {{ prop.enum.name or prop.class_name }}
+	{%- if prop.enum and prop.enum.restricted_to %}({{ prop.enum.restricted_to }}){%- endif %}
+	{%- if prop.restricted_to %}({{ prop.restricted_to }}){%- endif %}
+	{%- if not prop.one_of_many and prop.is_array %}
+	{%- if prop.nonoptional %} 1..*{%- else %} 0..*{%- endif %}
+	{%- else %}
+	{%- if prop.nonoptional %} 1..1{%- else %} 0..1{%- endif %}
+	{%- endif %}
+{%- endfor %}
+}
+
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(APACHE source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 1.8.0_212-release-1586-b4-5784211
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

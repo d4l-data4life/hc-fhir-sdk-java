@@ -1,0 +1,115 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Goal
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Goal
+
+Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Goal[Goal, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Goal, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Goal {
+	addresses : Reference 0..*
+	category : CodeableConcept 0..*
+	description : CodeableConcept 1..1
+	expressedBy : Reference 0..1
+	identifier : Identifier 0..*
+	note : Annotation 0..*
+	outcomeCode : CodeableConcept 0..*
+	outcomeReference : Reference 0..*
+	priority : CodeableConcept 0..1
+	startCodeableConcept : CodeableConcept 0..1
+	startDate : Date 0..1
+	status : GoalStatus 1..1
+	statusDate : Date 0..1
+	statusReason : String 0..1
+	subject : Reference 0..1
+	target : GoalTarget 0..1
+}
+
+--
+
+=== Properties
+addresses:: The identified conditions and other health record elements that are intended to be addressed by the goal.
+category:: Indicates a category the goal falls within.
+description:: Human-readable and/or coded description of a specific desired objective of care, such as "control blood pressure" or "negotiate an obstacle course" or "dance with child at wedding".
+expressedBy:: Indicates whose goal this is - patient goal, practitioner goal, etc.
+identifier:: This records identifiers associated with this care plan that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).
+note:: Any comments related to the goal.
+outcomeCode:: Identifies the change (or lack of change) at the point when the status of the goal is assessed.
+outcomeReference:: Details of what's changed (or not changed).
+priority:: Identifies the mutually agreed level of importance associated with reaching/sustaining the goal.
+startCodeableConcept:: The date or event after which the goal should begin being pursued.
+startDate:: The date or event after which the goal should begin being pursued.
+status:: Indicates whether the goal has been reached and is still considered relevant.
+statusDate:: Identifies when the current status.  I.e. When initially created, when achieved, when cancelled, etc.
+statusReason:: Captures the reason for the current status.
+subject:: Identifies the patient, group or organization for whom the goal is being established.
+target:: Indicates what should be done by when.
+
+
+
+
+== GoalTarget
+
+Indicates what should be done by when..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Goal[Goal, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, GoalTarget, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class GoalTarget {
+	detailCodeableConcept : CodeableConcept 0..1
+	detailQuantity : Quantity 0..1
+	detailRange : Range 0..1
+	dueDate : Date 0..1
+	dueDuration : Duration 0..1
+	measure : CodeableConcept 0..1
+}
+
+--
+
+=== Properties
+detailCodeableConcept:: The target value of the focus to be achieved to signify the fulfillment of the goal, e.g. 150 pounds, 7.0%. Either the high or low or both values of the range can be specified. When a low value is missing, it indicates that the goal is achieved at any focus value at or below the high value. Similarly, if the high value is missing, it indicates that the goal is achieved at any focus value at or above the low value.
+detailQuantity:: The target value of the focus to be achieved to signify the fulfillment of the goal, e.g. 150 pounds, 7.0%. Either the high or low or both values of the range can be specified. When a low value is missing, it indicates that the goal is achieved at any focus value at or below the high value. Similarly, if the high value is missing, it indicates that the goal is achieved at any focus value at or above the low value.
+detailRange:: The target value of the focus to be achieved to signify the fulfillment of the goal, e.g. 150 pounds, 7.0%. Either the high or low or both values of the range can be specified. When a low value is missing, it indicates that the goal is achieved at any focus value at or below the high value. Similarly, if the high value is missing, it indicates that the goal is achieved at any focus value at or above the low value.
+dueDate:: Indicates either the date or the duration after start by which the goal should be met.
+dueDuration:: Indicates either the date or the duration after start by which the goal should be met.
+measure:: The parameter whose value is being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.
+
+

@@ -1,0 +1,46 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Element
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Element
+
+Base definition for all elements in a resource..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Element[Element, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Element, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Element {
+	extension : Extension 0..*
+	id : String 0..1
+}
+
+--
+
+=== Properties
+extension:: May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+id:: unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+
+

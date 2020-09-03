@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="601px" preserveAspectRatio="none" style="width:299px;height:601px;" version="1.1" viewBox="0 0 299 601" width="299px" zoomAndPan="magnify"><defs/><g><!--class Observation--><rect fill="#FEFECE" height="582.5625" id="Observation" style="stroke: #000000; stroke-width: 1.5;" width="282" x="6" y="8"/><ellipse cx="106.25" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M108.7231,30.1431 Q108.1421,30.4419 107.5029,30.5913 Q106.8638,30.7407 106.1582,30.7407 Q103.6514,30.7407 102.3315,29.0889 Q101.0117,27.437 101.0117,24.3159 Q101.0117,21.1865 102.3315,19.5347 Q103.6514,17.8828 106.1582,17.8828 Q106.8638,17.8828 107.5112,18.0322 Q108.1587,18.1816 108.7231,18.4805 L108.7231,21.2031 Q108.0923,20.6221 107.4988,20.3523 Q106.9053,20.0825 106.2744,20.0825 Q104.9297,20.0825 104.2449,21.1492 Q103.5601,22.2158 103.5601,24.3159 Q103.5601,26.4077 104.2449,27.4744 Q104.9297,28.541 106.2744,28.541 Q106.9053,28.541 107.4988,28.2712 Q108.0923,28.0015 108.7231,27.4204 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="69" x="128.75" y="28.5352">Observation</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="287" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="14" y="56.6348">basedOn : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="173" x="14" y="73.5898">bodySite : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="172" x="14" y="90.5449">category : CodeableConcept 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="153" x="14" y="107.5">code : CodeableConcept 1..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="14" y="124.4551">comment : String 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="220" x="14" y="141.4102">component : ObservationComponent 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="126" x="14" y="158.3652">context : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="227" x="14" y="175.3203">dataAbsentReason : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="14" y="192.2754">device : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="177" x="14" y="209.2305">effectiveDateTime : DateTime 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="145" x="14" y="226.1855">effectivePeriod : Period 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="126" x="14" y="243.1406">identifier : Identifier 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="201" x="14" y="260.0957">interpretation : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="14" y="277.0508">issued : Instant 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="168" x="14" y="294.0059">method : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="138" x="14" y="310.9609">performer : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="266" x="14" y="327.916">referenceRange : ObservationReferenceRange 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="172" x="14" y="344.8711">related : ObservationRelated 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="136" x="14" y="361.8262">specimen : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="164" x="14" y="378.7813">status : ObservationStatus 1..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="124" x="14" y="395.7363">subject : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="184" x="14" y="412.6914">valueAttachment : Attachment 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="144" x="14" y="429.6465">valueBoolean : Boolean 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="250" x="14" y="446.6016">valueCodeableConcept : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="160" x="14" y="463.5566">valueDateTime : DateTime 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="128" x="14" y="480.5117">valuePeriod : Period 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="152" x="14" y="497.4668">valueQuantity : Quantity 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="126" x="14" y="514.4219">valueRange : Range 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="14" y="531.377">valueRatio : Ratio 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="198" x="14" y="548.332">valueSampledData : SampledData 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="124" x="14" y="565.2871">valueString : String 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="14" y="582.2422">valueTime : Time 0..1</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Observation {
+	basedOn : Reference 0..*
+	bodySite : CodeableConcept 0..1
+	category : CodeableConcept 0..*
+	code : CodeableConcept 1..1
+	comment : String 0..1
+	component : ObservationComponent 0..*
+	context : Reference 0..1
+	dataAbsentReason : CodeableConcept 0..1
+	device : Reference 0..1
+	effectiveDateTime : DateTime 0..1
+	effectivePeriod : Period 0..1
+	identifier : Identifier 0..*
+	interpretation : CodeableConcept 0..1
+	issued : Instant 0..1
+	method : CodeableConcept 0..1
+	performer : Reference 0..*
+	referenceRange : ObservationReferenceRange 0..*
+	related : ObservationRelated 0..*
+	specimen : Reference 0..1
+	status : ObservationStatus 1..1
+	subject : Reference 0..1
+	valueAttachment : Attachment 0..1
+	valueBoolean : Boolean 0..1
+	valueCodeableConcept : CodeableConcept 0..1
+	valueDateTime : DateTime 0..1
+	valuePeriod : Period 0..1
+	valueQuantity : Quantity 0..1
+	valueRange : Range 0..1
+	valueRatio : Ratio 0..1
+	valueSampledData : SampledData 0..1
+	valueString : String 0..1
+	valueTime : Time 0..1
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_192-b12
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

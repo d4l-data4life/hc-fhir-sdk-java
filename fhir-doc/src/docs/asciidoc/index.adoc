@@ -1,0 +1,32 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:linkcss:
+:stylesdir: styles/
+:imagesdir: images/
+:numbered:
+
+= PHDP FHIR SDK Documentation
+Copyright (c) 2018-2019, D4L data4life gGmbH
+:revnumber: {project-version}
+:description: PHDP FHIR SDK Documentation
+:keywords: SDK Android Java FHIR
+
+
+Minimal FHIR standard models and data types for Java and Android.
+
+include::../../../../fhir-java/src/docs/asciidoc/index.adoc[]
+
+
+include::../../../src-gen/docs/asciidoc/fhir/stu3/model/index.adoc[]
+
+
+[appendix]
+== Copyright and License
+
+----
+include::../../../../LICENSE[]
+----

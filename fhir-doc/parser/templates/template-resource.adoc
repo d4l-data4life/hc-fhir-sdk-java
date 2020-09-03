@@ -1,0 +1,69 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= {{ profile.name }}
+
+Generated from FHIR {{ info.version }} on {{ info.date }}
+
+{%- for klass in classes %}
+
+{%- set superclasses = {} %}
+{%- set ns = namespace(sclass=klass) %}
+{%- for number in range(1, 10) %}
+{%- if ns.sclass.superclass %}
+{%- set ns.sclass = ns.sclass.superclass %}
+{%- set _ = superclasses.update({ns.sclass.name:ns.sclass}) %}
+{%- endif %}
+
+{%- endfor %}
+
+== {{ klass.name }}
+
+{% if klass.formal %}{{ klass.formal }}.{% else %}{{ klass.short }}.{% endif %}
+
+FHIR Reference: {{ profile.url }}[{{ profile.targetname }}, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, {{ klass.name }}, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class {{ klass.name }} {
+{%- for prop in klass.properties %}
+	{{ prop.name }} : {{ prop.enum.name or prop.class_name }}
+	{%- if prop.enum and prop.enum.restricted_to %}({{ prop.enum.restricted_to }}){%- endif %}
+	{%- if prop.restricted_to %}({{ prop.restricted_to }}){%- endif %}
+	{%- if not prop.one_of_many and prop.is_array %}
+	{%- if prop.nonoptional %} 1..*{%- else %} 0..*{%- endif %}
+	{%- else %}
+	{%- if prop.nonoptional %} 1..1{%- else %} 0..1{%- endif %}
+	{%- endif %}
+{%- endfor %}
+}
+
+--
+
+=== Properties
+
+{%- for prop in klass.properties %}
+{{ prop.name }}:: {{ prop.formal }}
+{%- endfor %}
+
+
+{% endfor %}

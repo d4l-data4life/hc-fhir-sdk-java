@@ -1,0 +1,573 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= FHIR STU3 definition
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+
+
+
+
+
+
+
+
+
+
+
+
+== Overview
+
+[plantuml, FhirDataModelOverview, svg]
+--
+skinparam Shadowing false
+skinparam padding 16
+skinparam class {
+	FontSize 32
+	ArrowFontSize 26
+    ArrowColor SlateGrey
+    BorderColor Black
+}
+skinparam note {
+	FontSize 26
+    BorderColor DarkGrey
+    BackgroundColor SnowWhite
+}
+
+hide members
+hide circle
+hide methods
+
+'###### Together ######
+together {
+	class CarePlan
+	'enum CarePlanIntent
+	'enum CarePlanStatus
+	'class CarePlanActivity
+	'enum CarePlanActivityStatus
+	'class CarePlanActivityDetail
+	class Medication
+	'enum MedicationStatus
+	'class MedicationIngredient
+	'class MedicationPackage
+	class MedicationRequest
+   	'class MedicationRequestRequester
+   	'class MedicationRequestDispenseRequest
+   	'class MedicationRequestSubstitution
+   	'enum MedicationRequestPriority
+    'enum MedicationRequestIntent
+    'enum MedicationRequestStatus
+  	'class Dosage
+}
+
+together {
+	class DiagnosticReport
+	'enum DiagnosticReportStatus
+	'class DiagnosticReportImage
+	'class DiagnosticReportPerformer
+	class Observation
+    'class ObservationComponent
+   	'enum ObservationStatus
+   	'class ObservationRelated
+   	'class ObservationReferenceRange
+   	'class SampledData
+}
+
+
+together {
+	class DocumentReference
+	'class DocumentReferenceContent
+	'class DocumentReferenceContext
+	'enum DocumentReferenceStatus
+	'class DocumentReferenceRelatesTo
+	'enum CompositionStatus
+	class Attachment
+	class Organization
+	'class OrganizationContact
+	class Patient
+	'class PatientContact
+	class Practitioner
+	'class PractitionerQualification
+	'class Address
+	'class HumanName
+	class Reference
+}
+
+together {
+	class Questionnaire
+	class QuestionnaireItem
+	'enum QuestionnaireItemType
+	'class QuestionnaireItemOption
+	class QuestionnaireResponse
+	class QuestionnaireResponseItem
+    class QuestionnaireResponseItemAnswer
+	'enum QuestionnaireResponseStatus
+	'enum PublicationStatus
+}
+
+
+'###### Manual ######
+
+'###### Classes ######
+
+class Attachment {
+	contentType : String 0..1
+	creation : DateTime 0..1
+	data : String 0..1
+	hash : String 0..1
+	language : String 0..1
+	size : Integer 0..1
+	title : String 0..1
+	url : String 0..1
+}
+
+class Attachment #SkyBlue
+
+'Attachment --|> Element
+
+class CarePlan {
+	activity : CarePlanActivity 0..*
+	addresses : Reference 0..*
+	author : Reference 0..*
+	basedOn : Reference 0..*
+	careTeam : Reference 0..*
+	category : CodeableConcept 0..*
+	context : Reference 0..1
+	definition : Reference 0..*
+	description : String 0..1
+	goal : Reference 0..*
+	identifier : Identifier 0..*
+	intent : CarePlanIntent 1..1
+	note : Annotation 0..*
+	partOf : Reference 0..*
+	period : Period 0..1
+	replaces : Reference 0..*
+	status : CarePlanStatus 1..1
+	subject : Reference 1..1
+	supportingInfo : Reference 0..*
+	title : String 0..1
+}
+
+class CarePlan #Tomato
+
+'CarePlan --|> DomainResource
+'CarePlan --> CarePlanIntent
+'CarePlan --> CarePlanStatus
+
+class DiagnosticReport {
+	basedOn : Reference 0..*
+	category : CodeableConcept 0..1
+	code : CodeableConcept 1..1
+	codedDiagnosis : CodeableConcept 0..*
+	conclusion : String 0..1
+	context : Reference 0..1
+	effectiveDateTime : DateTime 0..1
+	effectivePeriod : Period 0..1
+	identifier : Identifier 0..*
+	image : DiagnosticReportImage 0..*
+	imagingStudy : Reference 0..*
+	issued : Instant 0..1
+	performer : DiagnosticReportPerformer 0..*
+	presentedForm : Attachment 0..*
+	result : Reference 0..*
+	specimen : Reference 0..*
+	status : DiagnosticReportStatus 1..1
+	subject : Reference 0..1
+}
+
+class DiagnosticReport #Tomato
+
+'DiagnosticReport --|> DomainResource
+DiagnosticReport *-- "0..*" Attachment : presentedForm
+'DiagnosticReport --> DiagnosticReportStatus
+
+class DocumentReference {
+	authenticator : Reference 0..1
+	author : Reference 0..*
+	class : CodeableConcept 0..1
+	content : DocumentReferenceContent 1..*
+	context : DocumentReferenceContext 0..1
+	created : DateTime 0..1
+	custodian : Reference 0..1
+	description : String 0..1
+	docStatus : CompositionStatus 0..1
+	identifier : Identifier 0..*
+	indexed : Instant 1..1
+	masterIdentifier : Identifier 0..1
+	relatesTo : DocumentReferenceRelatesTo 0..*
+	securityLabel : CodeableConcept 0..*
+	status : DocumentReferenceStatus 1..1
+	subject : Reference 0..1
+	type : CodeableConcept 1..1
+}
+
+class DocumentReference #Tomato
+
+'DocumentReference --|> DomainResource
+'DocumentReference --> CompositionStatus
+'DocumentReference --> DocumentReferenceStatus
+
+class Medication {
+	code : CodeableConcept 0..1
+	form : CodeableConcept 0..1
+	image : Attachment 0..*
+	ingredient : MedicationIngredient 0..*
+	isBrand : Boolean 0..1
+	isOverTheCounter : Boolean 0..1
+	manufacturer : Reference 0..1
+	package : MedicationPackage 0..1
+	status : MedicationStatus 0..1
+}
+
+class Medication #Tomato
+
+'Medication --|> DomainResource
+Medication *-- "0..*" Attachment : image
+'Medication --> MedicationStatus
+
+class MedicationRequest {
+	authoredOn : DateTime 0..1
+	basedOn : Reference 0..*
+	category : CodeableConcept 0..1
+	context : Reference 0..1
+	definition : Reference 0..*
+	detectedIssue : Reference 0..*
+	dispenseRequest : MedicationRequestDispenseRequest 0..1
+	dosageInstruction : Dosage 0..*
+	eventHistory : Reference 0..*
+	groupIdentifier : Identifier 0..1
+	identifier : Identifier 0..*
+	intent : MedicationRequestIntent 1..1
+	medicationCodeableConcept : CodeableConcept 1..1
+	medicationReference : Reference 1..1
+	note : Annotation 0..*
+	priorPrescription : Reference 0..1
+	priority : MedicationRequestPriority 0..1
+	reasonCode : CodeableConcept 0..*
+	reasonReference : Reference 0..*
+	recorder : Reference 0..1
+	requester : MedicationRequestRequester 0..1
+	status : MedicationRequestStatus 0..1
+	subject : Reference 1..1
+	substitution : MedicationRequestSubstitution 0..1
+	supportingInformation : Reference 0..*
+}
+
+class MedicationRequest #Tomato
+
+'MedicationRequest --|> DomainResource
+'MedicationRequest --> MedicationRequestIntent
+'MedicationRequest --> MedicationRequestPriority
+'MedicationRequest --> MedicationRequestStatus
+
+class Observation {
+	basedOn : Reference 0..*
+	bodySite : CodeableConcept 0..1
+	category : CodeableConcept 0..*
+	code : CodeableConcept 1..1
+	comment : String 0..1
+	component : ObservationComponent 0..*
+	context : Reference 0..1
+	dataAbsentReason : CodeableConcept 0..1
+	device : Reference 0..1
+	effectiveDateTime : DateTime 0..1
+	effectivePeriod : Period 0..1
+	identifier : Identifier 0..*
+	interpretation : CodeableConcept 0..1
+	issued : Instant 0..1
+	method : CodeableConcept 0..1
+	performer : Reference 0..*
+	referenceRange : ObservationReferenceRange 0..*
+	related : ObservationRelated 0..*
+	specimen : Reference 0..1
+	status : ObservationStatus 1..1
+	subject : Reference 0..1
+	valueAttachment : Attachment 0..1
+	valueBoolean : Boolean 0..1
+	valueCodeableConcept : CodeableConcept 0..1
+	valueDateTime : DateTime 0..1
+	valuePeriod : Period 0..1
+	valueQuantity : Quantity 0..1
+	valueRange : Range 0..1
+	valueRatio : Ratio 0..1
+	valueSampledData : SampledData 0..1
+	valueString : String 0..1
+	valueTime : Time 0..1
+}
+
+class Observation #Tomato
+
+'Observation --|> DomainResource
+'Observation --> ObservationStatus
+Observation --> Attachment
+
+class Organization {
+	active : Boolean 0..1
+	address : Address 0..*
+	alias : String 0..*
+	contact : OrganizationContact 0..*
+	endpoint : Reference 0..*
+	identifier : Identifier 0..*
+	name : String 0..1
+	partOf : Reference 0..1
+	telecom : ContactPoint 0..*
+	type : CodeableConcept 0..*
+}
+
+class Organization #Tomato
+
+'Organization --|> DomainResource
+
+class Patient {
+	active : Boolean 0..1
+	address : Address 0..*
+	animal : PatientAnimal 0..1
+	birthDate : Date 0..1
+	communication : PatientCommunication 0..*
+	contact : PatientContact 0..*
+	deceasedBoolean : Boolean 0..1
+	deceasedDateTime : DateTime 0..1
+	gender : AdministrativeGender 0..1
+	generalPractitioner : Reference 0..*
+	identifier : Identifier 0..*
+	link : PatientLink 0..*
+	managingOrganization : Reference 0..1
+	maritalStatus : CodeableConcept 0..1
+	multipleBirthBoolean : Boolean 0..1
+	multipleBirthInteger : Integer 0..1
+	name : HumanName 0..*
+	photo : Attachment 0..*
+	telecom : ContactPoint 0..*
+}
+
+class Patient #Tomato
+
+'Patient --|> DomainResource
+Patient *-- "0..*" Attachment : photo
+
+class Practitioner {
+	active : Boolean 0..1
+	address : Address 0..*
+	birthDate : Date 0..1
+	communication : CodeableConcept 0..*
+	gender : AdministrativeGender 0..1
+	identifier : Identifier 0..*
+	name : HumanName 0..*
+	photo : Attachment 0..*
+	qualification : PractitionerQualification 0..*
+	telecom : ContactPoint 0..*
+}
+
+class Practitioner #Tomato
+
+'Practitioner --|> DomainResource
+Practitioner *-- "0..*" Attachment : photo
+
+class Questionnaire {
+	approvalDate : Date 0..1
+	code : Coding 0..*
+	contact : ContactDetail 0..*
+	copyright : String 0..1
+	date : DateTime 0..1
+	description : String 0..1
+	effectivePeriod : Period 0..1
+	experimental : Boolean 0..1
+	identifier : Identifier 0..*
+	item : QuestionnaireItem 0..*
+	jurisdiction : CodeableConcept 0..*
+	lastReviewDate : Date 0..1
+	name : String 0..1
+	publisher : String 0..1
+	purpose : String 0..1
+	status : PublicationStatus 1..1
+	subjectType : String 0..*
+	title : String 0..1
+	url : String 0..1
+	useContext : UsageContext 0..*
+	version : String 0..1
+}
+
+class Questionnaire #Tomato
+
+'Questionnaire --|> DomainResource
+Questionnaire *-- "0..*" QuestionnaireItem : item
+'Questionnaire --> PublicationStatus
+
+class QuestionnaireItem {
+	code : Coding 0..*
+	definition : String 0..1
+	enableWhen : QuestionnaireItemEnableWhen 0..*
+	initialAttachment : Attachment 0..1
+	initialBoolean : Boolean 0..1
+	initialCoding : Coding 0..1
+	initialDate : Date 0..1
+	initialDateTime : DateTime 0..1
+	initialDecimal : Decimal 0..1
+	initialInteger : Integer 0..1
+	initialQuantity : Quantity 0..1
+	initialReference : Reference 0..1
+	initialString : String 0..1
+	initialTime : Time 0..1
+	initialUri : String 0..1
+	item : QuestionnaireItem 0..*
+	linkId : String 1..1
+	maxLength : Integer 0..1
+	option : QuestionnaireItemOption 0..*
+	options : Reference 0..1
+	prefix : String 0..1
+	readOnly : Boolean 0..1
+	repeats : Boolean 0..1
+	required : Boolean 0..1
+	text : String 0..1
+	type : QuestionnaireItemType 1..1
+}
+
+class QuestionnaireItem
+
+'QuestionnaireItem --|> BackboneElement
+QuestionnaireItem --> Attachment
+QuestionnaireItem *-- "0..*" QuestionnaireItem : item
+'QuestionnaireItem --> QuestionnaireItemType
+
+class QuestionnaireResponse {
+	author : Reference 0..1
+	authored : DateTime 0..1
+	basedOn : Reference 0..*
+	context : Reference 0..1
+	identifier : Identifier 0..1
+	item : QuestionnaireResponseItem 0..*
+	parent : Reference 0..*
+	questionnaire : Reference 0..1
+	source : Reference 0..1
+	status : QuestionnaireResponseStatus 1..1
+	subject : Reference 0..1
+}
+
+class QuestionnaireResponse #Tomato
+
+'QuestionnaireResponse --|> DomainResource
+QuestionnaireResponse *-- "0..*" QuestionnaireResponseItem : item
+'QuestionnaireResponse --> QuestionnaireResponseStatus
+
+class QuestionnaireResponseItem {
+	answer : QuestionnaireResponseItemAnswer 0..*
+	definition : String 0..1
+	item : QuestionnaireResponseItem 0..*
+	linkId : String 1..1
+	subject : Reference 0..1
+	text : String 0..1
+}
+
+class QuestionnaireResponseItem
+
+'QuestionnaireResponseItem --|> BackboneElement
+QuestionnaireResponseItem *-- "0..*" QuestionnaireResponseItemAnswer : answer
+QuestionnaireResponseItem *-- "0..*" QuestionnaireResponseItem : item
+
+class QuestionnaireResponseItemAnswer {
+	item : QuestionnaireResponseItem 0..*
+	valueAttachment : Attachment 0..1
+	valueBoolean : Boolean 0..1
+	valueCoding : Coding 0..1
+	valueDate : Date 0..1
+	valueDateTime : DateTime 0..1
+	valueDecimal : Decimal 0..1
+	valueInteger : Integer 0..1
+	valueQuantity : Quantity 0..1
+	valueReference : Reference 0..1
+	valueString : String 0..1
+	valueTime : Time 0..1
+	valueUri : String 0..1
+}
+
+class QuestionnaireResponseItemAnswer
+
+'QuestionnaireResponseItemAnswer --|> BackboneElement
+QuestionnaireResponseItemAnswer *-- "0..*" QuestionnaireResponseItem : item
+QuestionnaireResponseItemAnswer --> Attachment
+
+
+' ###### Code Systems ######
+'enum CarePlanIntent #PaleGreen
+'hide CarePlanIntent members
+'enum CarePlanStatus #PaleGreen
+'hide CarePlanStatus members
+'enum DiagnosticReportStatus #PaleGreen
+'hide DiagnosticReportStatus members
+'enum CompositionStatus #PaleGreen
+'hide CompositionStatus members
+'enum DocumentReferenceStatus #PaleGreen
+'hide DocumentReferenceStatus members
+'enum MedicationStatus #PaleGreen
+'hide MedicationStatus members
+'enum MedicationRequestIntent #PaleGreen
+'hide MedicationRequestIntent members
+'enum MedicationRequestPriority #PaleGreen
+'hide MedicationRequestPriority members
+'enum MedicationRequestStatus #PaleGreen
+'hide MedicationRequestStatus members
+'enum ObservationStatus #PaleGreen
+'hide ObservationStatus members
+'enum PublicationStatus #PaleGreen
+'hide PublicationStatus members
+'enum QuestionnaireItemType #PaleGreen
+'hide QuestionnaireItemType members
+'enum QuestionnaireResponseStatus #PaleGreen
+'hide QuestionnaireResponseStatus members
+
+
+' ###### Missing ######
+class Reference
+hide Reference members
+Reference --> Organization : asReference
+Reference --> Patient : asReference
+Reference --> Practitioner : asReference
+DocumentReference *-- "0..*" Reference : author
+
+
+' ###### Relations ######
+
+CarePlan *-- "0..*" MedicationRequest : activity
+DiagnosticReport *-- "0..*" Observation : result
+DocumentReference *-- "1..*" Attachment : content
+MedicationRequest *-- "0..1" Medication : reference
+Observation --> "0..1" Attachment : value
+Questionnaire *-- QuestionnaireResponse
+
+MedicationRequest -[hidden]- DiagnosticReport
+
+
+note as N1
+<b><color:red>DomainResource</color></b>
+<b><color:#Gold>ObjectHelper</color></b>
+<b><color:blue>Element</color></b>
+end note
+'<b><color:#Green>CodeSystem</color></b>
+
+--
+
+== Model
+include::CarePlan.adoc[]
+include::DiagnosticReport.adoc[]
+include::DocumentReference.adoc[]
+include::Medication.adoc[]
+include::MedicationRequest.adoc[]
+include::Observation.adoc[]
+include::Organization.adoc[]
+include::Patient.adoc[]
+include::Practitioner.adoc[]
+include::Questionnaire.adoc[]
+include::QuestionnaireResponse.adoc[]
+
+== Code System
+
+include::CodeSystems.adoc[]

@@ -1,0 +1,137 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= FamilyMemberHistory
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== FamilyMemberHistory
+
+Significant health events and conditions for a person related to the patient relevant in the context of care for the patient..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory[FamilyMemberHistory, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, FamilyMemberHistory, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class FamilyMemberHistory {
+	ageAge : Age 0..1
+	ageRange : Range 0..1
+	ageString : String 0..1
+	bornDate : Date 0..1
+	bornPeriod : Period 0..1
+	bornString : String 0..1
+	condition : FamilyMemberHistoryCondition 0..*
+	date : DateTime 0..1
+	deceasedAge : Age 0..1
+	deceasedBoolean : Boolean 0..1
+	deceasedDate : Date 0..1
+	deceasedRange : Range 0..1
+	deceasedString : String 0..1
+	definition : Reference 0..*
+	estimatedAge : Boolean 0..1
+	gender : AdministrativeGender 0..1
+	identifier : Identifier 0..*
+	name : String 0..1
+	notDone : Boolean 0..1
+	notDoneReason : CodeableConcept 0..1
+	note : Annotation 0..*
+	patient : Reference 1..1
+	reasonCode : CodeableConcept 0..*
+	reasonReference : Reference 0..*
+	relationship : CodeableConcept 1..1
+	status : FamilyHistoryStatus 1..1
+}
+
+--
+
+=== Properties
+ageAge:: The age of the relative at the time the family member history is recorded.
+ageRange:: The age of the relative at the time the family member history is recorded.
+ageString:: The age of the relative at the time the family member history is recorded.
+bornDate:: The actual or approximate date of birth of the relative.
+bornPeriod:: The actual or approximate date of birth of the relative.
+bornString:: The actual or approximate date of birth of the relative.
+condition:: The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition.
+date:: The date (and possibly time) when the family member history was taken.
+deceasedAge:: Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
+deceasedBoolean:: Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
+deceasedDate:: Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
+deceasedRange:: Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
+deceasedString:: Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
+definition:: A protocol or questionnaire that was adhered to in whole or in part by this event.
+estimatedAge:: If true, indicates that the age value specified is an estimated value.
+gender:: Administrative Gender - the gender that the relative is considered to have for administration and record keeping purposes.
+identifier:: This records identifiers associated with this family member history record that are defined by business processes and/ or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).
+name:: This will either be a name or a description; e.g. "Aunt Susan", "my cousin with the red hair".
+notDone:: If true, indicates the taking of an individual family member's history did not occur. The notDone element should not be used to document negated conditions, such as a family member that did not have a condition.
+notDoneReason:: Describes why the family member's history is absent.
+note:: This property allows a non condition-specific note to the made about the related person. Ideally, the note would be in the condition property, but this is not always possible.
+patient:: The person who this history concerns.
+reasonCode:: Describes why the family member history occurred in coded or textual form.
+reasonReference:: Indicates a Condition, Observation, AllergyIntolerance, or QuestionnaireResponse that justifies this family member history event.
+relationship:: The type of relationship this person has to the patient (father, mother, brother etc.).
+status:: A code specifying the status of the record of the family history of a specific family member.
+
+
+
+
+== FamilyMemberHistoryCondition
+
+The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory[FamilyMemberHistory, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, FamilyMemberHistoryCondition, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class FamilyMemberHistoryCondition {
+	code : CodeableConcept 1..1
+	note : Annotation 0..*
+	onsetAge : Age 0..1
+	onsetPeriod : Period 0..1
+	onsetRange : Range 0..1
+	onsetString : String 0..1
+	outcome : CodeableConcept 0..1
+}
+
+--
+
+=== Properties
+code:: The actual condition specified. Could be a coded condition (like MI or Diabetes) or a less specific string like 'cancer' depending on how much is known about the condition and the capabilities of the creating system.
+note:: An area where general notes can be placed about this specific condition.
+onsetAge:: Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
+onsetPeriod:: Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
+onsetRange:: Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
+onsetString:: Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
+outcome:: Indicates what happened as a result of this condition.  If the condition resulted in death, deceased date is captured on the relation.
+
+

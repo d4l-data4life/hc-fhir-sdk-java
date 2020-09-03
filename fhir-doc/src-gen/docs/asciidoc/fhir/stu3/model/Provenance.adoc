@@ -1,0 +1,142 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Provenance
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Provenance
+
+Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Provenance[Provenance, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Provenance, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Provenance {
+	activity : Coding 0..1
+	agent : ProvenanceAgent 1..*
+	entity : ProvenanceEntity 0..*
+	location : Reference 0..1
+	period : Period 0..1
+	policy : String 0..*
+	reason : Coding 0..*
+	recorded : Instant 1..1
+	signature : Signature 0..*
+	target : Reference 1..*
+}
+
+--
+
+=== Properties
+activity:: An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.
+agent:: An actor taking a role in an activity  for which it can be assigned some degree of responsibility for the activity taking place.
+entity:: None
+location:: None
+period:: The period during which the activity occurred.
+policy:: Policy or plan the activity was defined by. Typically, a single activity may have multiple applicable policy documents, such as patient consent, guarantor funding, etc.
+reason:: The reason that the activity was taking place.
+recorded:: The instant of time at which the activity was recorded.
+signature:: A digital signature on the target Reference(s). The signer should match a Provenance.agent. The purpose of the signature is indicated.
+target:: The Reference(s) that were generated or updated by  the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by the same activity.
+
+
+
+
+== ProvenanceAgent
+
+An actor taking a role in an activity  for which it can be assigned some degree of responsibility for the activity taking place..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Provenance[Provenance, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ProvenanceAgent, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ProvenanceAgent {
+	onBehalfOfReference : Reference 0..1
+	onBehalfOfUri : String 0..1
+	relatedAgentType : CodeableConcept 0..1
+	role : CodeableConcept 0..*
+	whoReference : Reference 1..1
+	whoUri : String 1..1
+}
+
+--
+
+=== Properties
+onBehalfOfReference:: The individual, device, or organization for whom the change was made.
+onBehalfOfUri:: The individual, device, or organization for whom the change was made.
+relatedAgentType:: The type of relationship between agents.
+role:: The function of the agent with respect to the activity. The security role enabling the agent with respect to the activity.
+whoReference:: The individual, device or organization that participated in the event.
+whoUri:: The individual, device or organization that participated in the event.
+
+
+
+
+== ProvenanceEntity
+
+An entity used in this activity.
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Provenance[Provenance, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ProvenanceEntity, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ProvenanceEntity {
+	agent : ProvenanceAgent 0..*
+	role : ProvenanceEntityRole 1..1
+	whatIdentifier : Identifier 1..1
+	whatReference : Reference 1..1
+	whatUri : String 1..1
+}
+
+--
+
+=== Properties
+agent:: The entity is attributed to an agent to express the agent's responsibility for that entity, possibly along with other agents. This description can be understood as shorthand for saying that the agent was responsible for the activity which generated the entity.
+role:: How the entity was used during the activity.
+whatIdentifier:: Identity of the  Entity used. May be a logical or physical uri and maybe absolute or relative.
+whatReference:: Identity of the  Entity used. May be a logical or physical uri and maybe absolute or relative.
+whatUri:: Identity of the  Entity used. May be a logical or physical uri and maybe absolute or relative.
+
+

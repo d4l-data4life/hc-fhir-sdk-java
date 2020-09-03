@@ -1,0 +1,62 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Address
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Address
+
+An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Address[Address, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Address, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Address {
+	city : String 0..1
+	country : String 0..1
+	district : String 0..1
+	line : String 0..*
+	period : Period 0..1
+	postalCode : String 0..1
+	state : String 0..1
+	text : String 0..1
+	type : AddressType 0..1
+	use : AddressUse 0..1
+}
+
+--
+
+=== Properties
+city:: The name of the city, town, village or other community or delivery center.
+country:: Country - a nation as commonly understood or generally accepted.
+district:: The name of the administrative area (county).
+line:: This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.
+period:: None
+postalCode:: A postal code designating a region defined by the postal service.
+state:: Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes).
+text:: A full text representation of the address.
+type:: Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
+use:: The purpose of this address.
+
+

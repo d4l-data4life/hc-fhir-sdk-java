@@ -1,0 +1,56 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= HumanName
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== HumanName
+
+A human's name with the ability to identify parts and usage..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/HumanName[HumanName, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, HumanName, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class HumanName {
+	family : String 0..1
+	given : String 0..*
+	period : Period 0..1
+	prefix : String 0..*
+	suffix : String 0..*
+	text : String 0..1
+	use : NameUse 0..1
+}
+
+--
+
+=== Properties
+family:: The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.
+given:: Given name.
+period:: Indicates the period of time when this name was valid for the named person.
+prefix:: Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
+suffix:: Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
+text:: A full text representation of the name.
+use:: Identifies the purpose for this name.
+
+

@@ -1,0 +1,91 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:linkcss:
+:stylesdir: styles/
+:imagesdir: images/
+:numbered:
+
+= FHIR Java SDK Documentation
+
+ifndef::sourcedir[:sourcedir: ../java]
+
+Cover the SDK Core project features.
+
+== Requirements
+
+* Java 7
+
+== Installation
+
+=== Gradle
+
+Add the following maven repository url to your root build.gradle:
+
+[source, gradle]
+----
+allprojects {
+    repositories {
+        ...
+        maven {
+            name = "GithubPackages"
+            url = uri("https://maven.pkg.github.com/d4l-data4life/hc-fhir-sdk-java")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("PACKAGE_REGISTRY_USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("PACKAGE_REGISTRY_TOKEN")
+            }
+        }
+    }
+}
+----
+
+Your GitHub **username** and **token** needs to be stored in your global Gradle properties: `~/.gradle/gradle.properties`
+
+NOTICE:: You need to have *read* access to this repository and generate a link:https://github.com/settings/tokens/new[personal access token] with `repo`, `write:packages` and `read:packages` scope.
+
+----
+gpr.user=github-username
+gpr.key=github-token
+----
+
+Add dependencies to app `build.gradle`.
+
+[source, gradle]
+----
+dependencies {
+	implementation 'care.data4life.hc-fhir-sdk-java:hc-fhir-android:${latestVersion}'
+}
+----
+
+=== Dependencies
+
+* https://github.com/square/moshi[Moshi JSON library, window="_blank"] 1.8.0
+
+== Usage
+
+Create instance of FhirParser for STU3 FHIR version.
+
+[source, java]
+----
+FhirParser parser = new Fhir().createStu3Parser();
+----
+
+Convert FHIR to JSON String:
+
+[source, java]
+----
+DocumentReference document = ...
+
+String jsonString = parser.fromFhir(document);
+----
+
+Convert JSON String to FHIR:
+
+[source, java]
+----
+DocumentReference document = parser.toFhir(DocumentReference.class, jsonString)
+----
+

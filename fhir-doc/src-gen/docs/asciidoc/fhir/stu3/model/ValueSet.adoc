@@ -1,0 +1,390 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= ValueSet
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== ValueSet
+
+A value set specifies a set of codes drawn from one or more code systems..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ValueSet[ValueSet, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ValueSet, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ValueSet {
+	compose : ValueSetCompose 0..1
+	contact : ContactDetail 0..*
+	copyright : String 0..1
+	date : DateTime 0..1
+	description : String 0..1
+	expansion : ValueSetExpansion 0..1
+	experimental : Boolean 0..1
+	extensible : Boolean 0..1
+	identifier : Identifier 0..*
+	immutable : Boolean 0..1
+	jurisdiction : CodeableConcept 0..*
+	name : String 0..1
+	publisher : String 0..1
+	purpose : String 0..1
+	status : PublicationStatus 1..1
+	title : String 0..1
+	url : String 0..1
+	useContext : UsageContext 0..*
+	version : String 0..1
+}
+
+--
+
+=== Properties
+compose:: A set of criteria that define the content logical definition of the value set by including or excluding codes from outside this value set. This I also known as the "Content Logical Definition" (CLD).
+contact:: Contact details to assist a user in finding and communicating with the publisher.
+copyright:: A copyright statement relating to the value set and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the value set.
+date:: The date  (and optionally time) when the value set was published. The date must change if and when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the value set changes. (e.g. the 'content logical definition').
+description:: A free text natural language description of the value set from a consumer's perspective.
+expansion:: A value set can also be "expanded", where the value set is turned into a simple collection of enumerated codes. This element holds the expansion, if it has been performed.
+experimental:: A boolean value to indicate that this value set is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.
+extensible:: Whether this is intended to be used with an extensible binding or not.
+identifier:: A formal identifier that is used to identify this value set when it is represented in other formats, or referenced in a specification, model, design or an instance.
+immutable:: If this is set to 'true', then no new versions of the content logical definition can be created.  Note: Other metadata might still change.
+jurisdiction:: A legal or geographic region in which the value set is intended to be used.
+name:: A natural language name identifying the value set. This name should be usable as an identifier for the module by machine processing applications such as code generation.
+publisher:: The name of the individual or organization that published the value set.
+purpose:: Explaination of why this value set is needed and why it has been designed as it has.
+status:: The status of this value set. Enables tracking the life-cycle of the content.
+title:: A short, descriptive, user-friendly title for the value set.
+url:: An absolute URI that is used to identify this value set when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this value set is (or will be) published. The URL SHOULD include the major version of the value set. For more information see [Technical and Business Versions](resource.html#versions).
+useContext:: The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching for appropriate value set instances.
+version:: The identifier that is used to identify this version of the value set when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the value set author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
+
+
+
+
+== ValueSetCompose
+
+A set of criteria that define the content logical definition of the value set by including or excluding codes from outside this value set. This I also known as the "Content Logical Definition" (CLD)..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ValueSet[ValueSet, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ValueSetCompose, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ValueSetCompose {
+	exclude : ValueSetComposeInclude 0..*
+	inactive : Boolean 0..1
+	include : ValueSetComposeInclude 1..*
+	lockedDate : Date 0..1
+}
+
+--
+
+=== Properties
+exclude:: Exclude one or more codes from the value set based on code system filters and/or other value sets.
+inactive:: Whether inactive codes - codes that are not approved for current use - are in the value set. If inactive = true, inactive codes are to be included in the expansion, if inactive = false, the inactive codes will not be included in the expansion. If absent, the behavior is determined by the implementation, or by the applicable ExpansionProfile (but generally, inactive codes would be expected to be included).
+include:: None
+lockedDate:: If a locked date is defined, then the Content Logical Definition must be evaluated using the current version as of the locked date for referenced code system(s) and value set instances where ValueSet.compose.include.version is not defined.
+
+
+
+
+== ValueSetComposeInclude
+
+Include one or more codes from a code system or other value set(s).
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ValueSet[ValueSet, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ValueSetComposeInclude, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ValueSetComposeInclude {
+	concept : ValueSetComposeIncludeConcept 0..*
+	filter : ValueSetComposeIncludeFilter 0..*
+	system : String 0..1
+	valueSet : String 0..*
+	version : String 0..1
+}
+
+--
+
+=== Properties
+concept:: Specifies a concept to be included or excluded.
+filter:: Select concepts by specify a matching criteria based on the properties (including relationships) defined by the system. If multiple filters are specified, they SHALL all be true.
+system:: An absolute URI which is the code system from which the selected codes come from.
+valueSet:: Selects concepts found in this value set. This is an absolute URI that is a reference to ValueSet.url.
+version:: The version of the code system that the codes are selected from.
+
+
+
+
+== ValueSetComposeIncludeConcept
+
+Specifies a concept to be included or excluded..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ValueSet[ValueSet, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ValueSetComposeIncludeConcept, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ValueSetComposeIncludeConcept {
+	code : String 1..1
+	designation : ValueSetComposeIncludeConceptDesignation 0..*
+	display : String 0..1
+}
+
+--
+
+=== Properties
+code:: Specifies a code for the concept to be included or excluded.
+designation:: Additional representations for this concept when used in this value set - other languages, aliases, specialized purposes, used for particular purposes, etc.
+display:: The text to display to the user for this concept in the context of this valueset. If no display is provided, then applications using the value set use the display specified for the code by the system.
+
+
+
+
+== ValueSetComposeIncludeConceptDesignation
+
+Additional representations for this concept when used in this value set - other languages, aliases, specialized purposes, used for particular purposes, etc..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ValueSet[ValueSet, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ValueSetComposeIncludeConceptDesignation, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ValueSetComposeIncludeConceptDesignation {
+	language : String 0..1
+	use : Coding 0..1
+	value : String 1..1
+}
+
+--
+
+=== Properties
+language:: The language this designation is defined for.
+use:: A code that details how this designation would be used.
+value:: None
+
+
+
+
+== ValueSetComposeIncludeFilter
+
+Select concepts by specify a matching criteria based on the properties (including relationships) defined by the system. If multiple filters are specified, they SHALL all be true..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ValueSet[ValueSet, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ValueSetComposeIncludeFilter, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ValueSetComposeIncludeFilter {
+	op : FilterOperator 1..1
+	property : String 1..1
+	value : String 1..1
+}
+
+--
+
+=== Properties
+op:: The kind of operation to perform as a part of the filter criteria.
+property:: A code that identifies a property defined in the code system.
+value:: The match value may be either a code defined by the system, or a string value, which is a regex match on the literal string of the property value when the operation is 'regex', or one of the values (true and false), when the operation is 'exists'.
+
+
+
+
+== ValueSetExpansion
+
+A value set can also be "expanded", where the value set is turned into a simple collection of enumerated codes. This element holds the expansion, if it has been performed..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ValueSet[ValueSet, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ValueSetExpansion, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ValueSetExpansion {
+	contains : ValueSetExpansionContains 0..*
+	identifier : String 1..1
+	offset : Integer 0..1
+	parameter : ValueSetExpansionParameter 0..*
+	timestamp : DateTime 1..1
+	total : Integer 0..1
+}
+
+--
+
+=== Properties
+contains:: The codes that are contained in the value set expansion.
+identifier:: An identifier that uniquely identifies this expansion of the valueset. Systems may re-use the same identifier as long as the expansion and the definition remain the same, but are not required to do so.
+offset:: If paging is being used, the offset at which this resource starts.  I.e. this resource is a partial view into the expansion. If paging is not being used, this element SHALL not be present.
+parameter:: A parameter that controlled the expansion process. These parameters may be used by users of expanded value sets to check whether the expansion is suitable for a particular purpose, or to pick the correct expansion.
+timestamp:: The time at which the expansion was produced by the expanding system.
+total:: The total number of concepts in the expansion. If the number of concept nodes in this resource is less than the stated number, then the server can return more using the offset parameter.
+
+
+
+
+== ValueSetExpansionContains
+
+The codes that are contained in the value set expansion..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ValueSet[ValueSet, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ValueSetExpansionContains, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ValueSetExpansionContains {
+	abstract : Boolean 0..1
+	code : String 0..1
+	contains : ValueSetExpansionContains 0..*
+	designation : ValueSetComposeIncludeConceptDesignation 0..*
+	display : String 0..1
+	inactive : Boolean 0..1
+	system : String 0..1
+	version : String 0..1
+}
+
+--
+
+=== Properties
+abstract:: If true, this entry is included in the expansion for navigational purposes, and the user cannot select the code directly as a proper value.
+code:: The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.
+contains:: Other codes and entries contained under this entry in the hierarchy.
+designation:: Additional representations for this item - other languages, aliases, specialized purposes, used for particular purposes, etc. These are relevant when the conditions of the expansion do not fix to a single correct representation.
+display:: The recommended display for this item in the expansion.
+inactive:: If the concept is inactive in the code system that defines it. Inactive codes are those that are no longer to be used, but are maintained by the code system for understanding legacy data.
+system:: An absolute URI which is the code system in which the code for this item in the expansion is defined.
+version:: The version of this code system that defined this code and/or display. This should only be used with code systems that do not enforce concept permanence.
+
+
+
+
+== ValueSetExpansionParameter
+
+A parameter that controlled the expansion process. These parameters may be used by users of expanded value sets to check whether the expansion is suitable for a particular purpose, or to pick the correct expansion..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/ValueSet[ValueSet, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ValueSetExpansionParameter, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ValueSetExpansionParameter {
+	name : String 1..1
+	valueBoolean : Boolean 0..1
+	valueCode : String 0..1
+	valueDecimal : Decimal 0..1
+	valueInteger : Integer 0..1
+	valueString : String 0..1
+	valueUri : String 0..1
+}
+
+--
+
+=== Properties
+name:: The name of the parameter.
+valueBoolean:: The value of the parameter.
+valueCode:: The value of the parameter.
+valueDecimal:: The value of the parameter.
+valueInteger:: The value of the parameter.
+valueString:: The value of the parameter.
+valueUri:: The value of the parameter.
+
+

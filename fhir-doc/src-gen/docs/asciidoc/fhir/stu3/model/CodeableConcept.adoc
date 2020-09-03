@@ -1,0 +1,46 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= CodeableConcept
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== CodeableConcept
+
+A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/CodeableConcept[CodeableConcept, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, CodeableConcept, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class CodeableConcept {
+	coding : Coding 0..*
+	text : String 0..1
+}
+
+--
+
+=== Properties
+coding:: A reference to a code defined by a terminology system.
+text:: A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.
+
+

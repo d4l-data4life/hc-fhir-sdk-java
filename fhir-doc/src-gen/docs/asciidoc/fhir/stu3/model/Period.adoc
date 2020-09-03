@@ -1,0 +1,46 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Period
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Period
+
+A time period defined by a start and end date and optionally time..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Period[Period, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Period, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Period {
+	end : DateTime 0..1
+	start : DateTime 0..1
+}
+
+--
+
+=== Properties
+end:: The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.
+start:: The start of the period. The boundary is inclusive.
+
+

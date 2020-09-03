@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="109px" preserveAspectRatio="none" style="width:142px;height:109px;" version="1.1" viewBox="0 0 142 109" width="142px" zoomAndPan="magnify"><defs/><g><!--class SequenceStatus--><rect fill="#FEFECE" height="90.8652" id="SequenceStatus" style="stroke: #000000; stroke-width: 1.5;" width="125" x="6" y="8"/><ellipse cx="21" cy="24" fill="#EB937F" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M24.6143,30.5 L16.8945,30.5 L16.8945,18.1069 L24.6143,18.1069 L24.6143,20.2651 L19.3433,20.2651 L19.3433,22.938 L24.1162,22.938 L24.1162,25.0962 L19.3433,25.0962 L19.3433,28.3418 L24.6143,28.3418 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="89" x="37" y="28.5352">SequenceStatus</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="130" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="47" x="14" y="56.6348">POSITIVE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="53" x="14" y="73.5898">NEGATIVE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="41" x="14" y="90.5449">ABSENT</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+enum SequenceStatus {
+    POSITIVE
+    NEGATIVE
+    ABSENT
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_192-b12
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

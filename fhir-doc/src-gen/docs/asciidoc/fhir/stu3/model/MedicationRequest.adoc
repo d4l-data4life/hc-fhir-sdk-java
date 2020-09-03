@@ -1,0 +1,197 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= MedicationRequest
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== MedicationRequest
+
+An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/MedicationRequest[MedicationRequest, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, MedicationRequest, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class MedicationRequest {
+	authoredOn : DateTime 0..1
+	basedOn : Reference 0..*
+	category : CodeableConcept 0..1
+	context : Reference 0..1
+	definition : Reference 0..*
+	detectedIssue : Reference 0..*
+	dispenseRequest : MedicationRequestDispenseRequest 0..1
+	dosageInstruction : Dosage 0..*
+	eventHistory : Reference 0..*
+	groupIdentifier : Identifier 0..1
+	identifier : Identifier 0..*
+	intent : MedicationRequestIntent 1..1
+	medicationCodeableConcept : CodeableConcept 1..1
+	medicationReference : Reference 1..1
+	note : Annotation 0..*
+	priorPrescription : Reference 0..1
+	priority : MedicationRequestPriority 0..1
+	reasonCode : CodeableConcept 0..*
+	reasonReference : Reference 0..*
+	recorder : Reference 0..1
+	requester : MedicationRequestRequester 0..1
+	status : MedicationRequestStatus 0..1
+	subject : Reference 1..1
+	substitution : MedicationRequestSubstitution 0..1
+	supportingInformation : Reference 0..*
+}
+
+--
+
+=== Properties
+authoredOn:: The date (and perhaps time) when the prescription was initially written or authored on.
+basedOn:: A plan or request that is fulfilled in whole or in part by this medication request.
+category:: Indicates the type of medication order and where the medication is expected to be consumed or administered.
+context:: A link to an encounter, or episode of care, that identifies the particular occurrence or set occurrences of contact between patient and health care provider.
+definition:: Protocol or definition followed by this request.
+detectedIssue:: Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, duplicate therapy, dosage alert etc.
+dispenseRequest:: Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department.
+dosageInstruction:: Indicates how the medication is to be used by the patient.
+eventHistory:: Links to Provenance records for past versions of this resource or fulfilling request or event resources that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the resource.
+groupIdentifier:: A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition or prescription.
+identifier:: This records identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. For example a re-imbursement system might issue its own id for each prescription that is created.  This is particularly important where FHIR only provides part of an entire workflow process where records must be tracked through an entire system.
+intent:: Whether the request is a proposal, plan, or an original order.
+medicationCodeableConcept:: Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications.
+medicationReference:: Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications.
+note:: Extra information about the prescription that could not be conveyed by the other attributes.
+priorPrescription:: A link to a resource representing an earlier order related order or prescription.
+priority:: Indicates how quickly the Medication Request should be addressed with respect to other requests.
+reasonCode:: The reason or the indication for ordering the medication.
+reasonReference:: Condition or observation that supports why the medication was ordered.
+recorder:: The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.
+requester:: The individual, organization or device that initiated the request and has responsibility for its activation.
+status:: A code specifying the current state of the order.  Generally this will be active or completed state.
+subject:: A link to a resource representing the person or set of individuals to whom the medication will be given.
+substitution:: Indicates whether or not substitution can or should be part of the dispense. In some cases substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.
+supportingInformation:: Include additional information (for example, patient height and weight) that supports the ordering of the medication.
+
+
+
+
+== MedicationRequestDispenseRequest
+
+Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/MedicationRequest[MedicationRequest, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, MedicationRequestDispenseRequest, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class MedicationRequestDispenseRequest {
+	expectedSupplyDuration : Duration 0..1
+	numberOfRepeatsAllowed : Integer 0..1
+	performer : Reference 0..1
+	quantity : Quantity 0..1
+	validityPeriod : Period 0..1
+}
+
+--
+
+=== Properties
+expectedSupplyDuration:: Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last.
+numberOfRepeatsAllowed:: An integer indicating the number of times, in addition to the original dispense, (aka refills or repeats) that the patient can receive the prescribed medication. Usage Notes: This integer does not include the original order dispense. This means that if an order indicates dispense 30 tablets plus "3 repeats", then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.
+performer:: Indicates the intended dispensing Organization specified by the prescriber.
+quantity:: The amount that is to be dispensed for one fill.
+validityPeriod:: This indicates the validity period of a prescription (stale dating the Prescription).
+
+
+
+
+== MedicationRequestRequester
+
+The individual, organization or device that initiated the request and has responsibility for its activation..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/MedicationRequest[MedicationRequest, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, MedicationRequestRequester, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class MedicationRequestRequester {
+	agent : Reference 1..1
+	onBehalfOf : Reference 0..1
+}
+
+--
+
+=== Properties
+agent:: The healthcare professional responsible for authorizing the initial prescription.
+onBehalfOf:: The organization the device or practitioner was acting on behalf of.
+
+
+
+
+== MedicationRequestSubstitution
+
+Indicates whether or not substitution can or should be part of the dispense. In some cases substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/MedicationRequest[MedicationRequest, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, MedicationRequestSubstitution, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class MedicationRequestSubstitution {
+	allowed : Boolean 1..1
+	reason : CodeableConcept 0..1
+}
+
+--
+
+=== Properties
+allowed:: True if the prescriber allows a different drug to be dispensed from what was prescribed.
+reason:: Indicates the reason for the substitution, or why substitution must or must not be performed.
+
+

@@ -1,0 +1,116 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Code Systems
+
+Generated from FHIR {{ info.version }} on {{ info.date }}
+
+== Description
+
+Many elements in the FHIR resources have a coded value: some fixed string (a sequence of characters) assigned elsewhere that identifies some defined "concept". The sequence of characters and its meaning may be defined in one of several places:
+
+* As one of a set of fixed values defined in this specification
+* In an internet RFC (e.g. mime type, language)
+* An HL7 specification (HL7 v3 code system, or HL7 v2 table)
+* Some external terminology or ontology such as LOINC, or SNOMED CT
+* A locally maintained dictionary, look up table or enumeration in an application (for further discussion of locally defined value sets, see "Profiling FHIR"
+
+These methods of defining codes are collectively called `code systems`. This list is far from complete; there are many ways to define code systems, and they vary widely in sophistication and size.
+
+FHIR Reference: http://hl7.org/fhir/terminologies.html[Code Systems, window="_blank"]
+
+== Available code systems
+{%- for system in systems %}{%- if system.generate_enum %}
+* <<{{ system.name }}>>
+{%- endif %}{%- endfor %}
+
+{% for system in systems %}{% if system.generate_enum %}
+=== {{ system.name }}
+
+{{ system.definition.description }}
+
+FHIR Reference: {{ system.url }}[{{ system.name }}, window="_blank"]
+
+==== Diagram
+
+[plantuml, {{ system.name }}, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+enum {{ system.name }} {
+{%- for code in system.codes %}
+	{%- if code.code == "=" %}
+    EQUAL
+    {%- else %}
+    {%- if code.code == "<" %}
+    LESS_THAN
+    {%- else %}
+    {%- if code.code == "<=" %}
+    LESS_OR_EQUAL
+    {%- else %}
+    {%- if code.code == ">" %}
+    GREATER_THAN
+    {%- else %}
+    {%- if code.code == ">=" %}
+    GREATER_OR_EQUAL
+    {%- else %}
+    {%- if code.code == "*" %}
+    MAX
+    {%- else %}
+    {{ code.code.upper()|replace('-', '_') }}
+    {%- endif %}
+    {%- endif %}
+    {%- endif %}
+    {%- endif %}
+    {%- endif %}
+    {%- endif %}
+{%- endfor %}
+}
+
+--
+
+==== Codes
+
+{%- for code in system.codes %}
+{%- if code.code == "=" %}
+EQUAL
+{%- else %}
+{%- if code.code == "<" %}
+LESS_THAN
+{%- else %}
+{%- if code.code == "<=" %}
+LESS_OR_EQUAL
+{%- else %}
+{%- if code.code == ">" %}
+GREATER_THAN
+{%- else %}
+{%- if code.code == ">=" %}
+GREATER_OR_EQUAL
+{%- else %}
+{%- if code.code == "*" %}
+MAX
+{%- else %}
+{{ code.code.upper()|replace('-', '_') }}
+{%- endif %}
+{%- endif %}
+{%- endif %}
+{%- endif %}
+{%- endif %}
+{%- endif %}:: {{ code.definition }}
+{%- endfor %}
+
+{% endif %}{% endfor %}

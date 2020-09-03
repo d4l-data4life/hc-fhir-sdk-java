@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="347px" preserveAspectRatio="none" style="width:273px;height:347px;" version="1.1" viewBox="0 0 273 347" width="273px" zoomAndPan="magnify"><defs/><g><!--class DocumentReference--><rect fill="#FEFECE" height="328.2363" id="DocumentReference" style="stroke: #000000; stroke-width: 1.5;" width="256" x="6" y="8"/><ellipse cx="69.75" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M72.2231,30.1431 Q71.6421,30.4419 71.0029,30.5913 Q70.3638,30.7407 69.6582,30.7407 Q67.1514,30.7407 65.8315,29.0889 Q64.5117,27.437 64.5117,24.3159 Q64.5117,21.1865 65.8315,19.5347 Q67.1514,17.8828 69.6582,17.8828 Q70.3638,17.8828 71.0112,18.0322 Q71.6587,18.1816 72.2231,18.4805 L72.2231,21.2031 Q71.5923,20.6221 70.9988,20.3523 Q70.4053,20.0825 69.7744,20.0825 Q68.4297,20.0825 67.7449,21.1492 Q67.0601,22.2158 67.0601,24.3159 Q67.0601,26.4077 67.7449,27.4744 Q68.4297,28.541 69.7744,28.541 Q70.4053,28.541 70.9988,28.2712 Q71.5923,28.0015 72.2231,27.4204 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="116" x="92.25" y="28.5352">DocumentReference</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="261" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="157" x="14" y="56.6348">authenticator : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="14" y="73.5898">author : Reference 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="154" x="14" y="90.5449">class : CodeableConcept 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="222" x="14" y="107.5">content : DocumentReferenceContent 1..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="224" x="14" y="124.4551">context : DocumentReferenceContext 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="122" x="14" y="141.4102">created : DateTime 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="138" x="14" y="158.3652">custodian : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="125" x="14" y="175.3203">description : String 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="14" y="192.2754">docStatus : CompositionStatus 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="126" x="14" y="209.2305">identifier : Identifier 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="14" y="226.1855">indexed : Instant 1..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="165" x="14" y="243.1406">masterIdentifier : Identifier 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="240" x="14" y="260.0957">relatesTo : DocumentReferenceRelatesTo 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="196" x="14" y="277.0508">securityLabel : CodeableConcept 0..*</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="206" x="14" y="294.0059">status : DocumentReferenceStatus 1..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="124" x="14" y="310.9609">subject : Reference 0..1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="150" x="14" y="327.916">type : CodeableConcept 1..1</text><!--
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class DocumentReference {
+	authenticator : Reference 0..1
+	author : Reference 0..*
+	class : CodeableConcept 0..1
+	content : DocumentReferenceContent 1..*
+	context : DocumentReferenceContext 0..1
+	created : DateTime 0..1
+	custodian : Reference 0..1
+	description : String 0..1
+	docStatus : CompositionStatus 0..1
+	identifier : Identifier 0..*
+	indexed : Instant 1..1
+	masterIdentifier : Identifier 0..1
+	relatesTo : DocumentReferenceRelatesTo 0..*
+	securityLabel : CodeableConcept 0..*
+	status : DocumentReferenceStatus 1..1
+	subject : Reference 0..1
+	type : CodeableConcept 1..1
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_192-b12
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

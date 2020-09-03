@@ -1,0 +1,50 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= DomainResource
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== DomainResource
+
+A resource that includes narrative, extensions, and contained resources..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/DomainResource[DomainResource, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, DomainResource, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class DomainResource {
+	contained : Resource 0..*
+	extension : Extension 0..*
+	modifierExtension : Extension 0..*
+	text : Narrative 0..1
+}
+
+--
+
+=== Properties
+contained:: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
+extension:: May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+modifierExtension:: May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+text:: A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+
+

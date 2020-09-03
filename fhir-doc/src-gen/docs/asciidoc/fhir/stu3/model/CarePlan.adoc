@@ -1,0 +1,188 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= CarePlan
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== CarePlan
+
+Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/CarePlan[CarePlan, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, CarePlan, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class CarePlan {
+	activity : CarePlanActivity 0..*
+	addresses : Reference 0..*
+	author : Reference 0..*
+	basedOn : Reference 0..*
+	careTeam : Reference 0..*
+	category : CodeableConcept 0..*
+	context : Reference 0..1
+	definition : Reference 0..*
+	description : String 0..1
+	goal : Reference 0..*
+	identifier : Identifier 0..*
+	intent : CarePlanIntent 1..1
+	note : Annotation 0..*
+	partOf : Reference 0..*
+	period : Period 0..1
+	replaces : Reference 0..*
+	status : CarePlanStatus 1..1
+	subject : Reference 1..1
+	supportingInfo : Reference 0..*
+	title : String 0..1
+}
+
+--
+
+=== Properties
+activity:: Identifies a planned action to occur as part of the plan.  For example, a medication to be used, lab tests to perform, self-monitoring, education, etc.
+addresses:: Identifies the conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan.
+author:: Identifies the individual(s) or ogranization who is responsible for the content of the care plan.
+basedOn:: A care plan that is fulfilled in whole or in part by this care plan.
+careTeam:: Identifies all people and organizations who are expected to be involved in the care envisioned by this plan.
+category:: Identifies what "kind" of plan this is to support differentiation between multiple co-existing plans; e.g. "Home health", "psychiatric", "asthma", "disease management", "wellness plan", etc.
+context:: Identifies the original context in which this particular CarePlan was created.
+definition:: Identifies the protocol, questionnaire, guideline or other specification the care plan should be conducted in accordance with.
+description:: A description of the scope and nature of the plan.
+goal:: Describes the intended objective(s) of carrying out the care plan.
+identifier:: This records identifiers associated with this care plan that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).
+intent:: Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain.
+note:: General notes about the care plan not covered elsewhere.
+partOf:: A larger care plan of which this particular care plan is a component or step.
+period:: Indicates when the plan did (or is intended to) come into effect and end.
+replaces:: Completed or terminated care plan whose function is taken by this new care plan.
+status:: Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.
+subject:: Identifies the patient or group whose intended care is described by the plan.
+supportingInfo:: Identifies portions of the patient's record that specifically influenced the formation of the plan.  These might include co-morbidities, recent procedures, limitations, recent assessments, etc.
+title:: None
+
+
+
+
+== CarePlanActivity
+
+Identifies a planned action to occur as part of the plan.  For example, a medication to be used, lab tests to perform, self-monitoring, education, etc..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/CarePlan[CarePlan, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, CarePlanActivity, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class CarePlanActivity {
+	detail : CarePlanActivityDetail 0..1
+	outcomeCodeableConcept : CodeableConcept 0..*
+	outcomeReference : Reference 0..*
+	progress : Annotation 0..*
+	reference : Reference 0..1
+}
+
+--
+
+=== Properties
+detail:: A simple summary of a planned activity suitable for a general care plan system (e.g. form driven) that doesn't know about specific resources such as procedure etc.
+outcomeCodeableConcept:: Identifies the outcome at the point when the status of the activity is assessed.  For example, the outcome of an education activity could be patient understands (or not).
+outcomeReference:: Details of the outcome or action resulting from the activity.  The reference to an "event" resource, such as Procedure or Encounter or Observation, is the result/outcome of the activity itself.  The activity can be conveyed using CarePlan.activity.detail OR using the CarePlan.activity.reference (a reference to a “request” resource).
+progress:: Notes about the adherence/status/progress of the activity.
+reference:: The details of the proposed activity represented in a specific resource.
+
+
+
+
+== CarePlanActivityDetail
+
+A simple summary of a planned activity suitable for a general care plan system (e.g. form driven) that doesn't know about specific resources such as procedure etc..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/CarePlan[CarePlan, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, CarePlanActivityDetail, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class CarePlanActivityDetail {
+	category : CodeableConcept 0..1
+	code : CodeableConcept 0..1
+	dailyAmount : Quantity 0..1
+	definition : Reference 0..1
+	description : String 0..1
+	goal : Reference 0..*
+	location : Reference 0..1
+	performer : Reference 0..*
+	productCodeableConcept : CodeableConcept 0..1
+	productReference : Reference 0..1
+	prohibited : Boolean 0..1
+	quantity : Quantity 0..1
+	reasonCode : CodeableConcept 0..*
+	reasonReference : Reference 0..*
+	scheduledPeriod : Period 0..1
+	scheduledString : String 0..1
+	scheduledTiming : Timing 0..1
+	status : CarePlanActivityStatus 1..1
+	statusReason : String 0..1
+}
+
+--
+
+=== Properties
+category:: High-level categorization of the type of activity in a care plan.
+code:: Detailed description of the type of planned activity; e.g. What lab test, what procedure, what kind of encounter.
+dailyAmount:: Identifies the quantity expected to be consumed in a given day.
+definition:: Identifies the protocol, questionnaire, guideline or other specification the planned activity should be conducted in accordance with.
+description:: This provides a textual description of constraints on the intended activity occurrence, including relation to other activities.  It may also include objectives, pre-conditions and end-conditions.  Finally, it may convey specifics about the activity such as body site, method, route, etc.
+goal:: Internal reference that identifies the goals that this activity is intended to contribute towards meeting.
+location:: Identifies the facility where the activity will occur; e.g. home, hospital, specific clinic, etc.
+performer:: Identifies who's expected to be involved in the activity.
+productCodeableConcept:: Identifies the food, drug or other product to be consumed or supplied in the activity.
+productReference:: Identifies the food, drug or other product to be consumed or supplied in the activity.
+prohibited:: If true, indicates that the described activity is one that must NOT be engaged in when following the plan.  If false, indicates that the described activity is one that should be engaged in when following the plan.
+quantity:: Identifies the quantity expected to be supplied, administered or consumed by the subject.
+reasonCode:: Provides the rationale that drove the inclusion of this particular activity as part of the plan or the reason why the activity was prohibited.
+reasonReference:: Provides the health condition(s) that drove the inclusion of this particular activity as part of the plan.
+scheduledPeriod:: The period, timing or frequency upon which the described activity is to occur.
+scheduledString:: The period, timing or frequency upon which the described activity is to occur.
+scheduledTiming:: The period, timing or frequency upon which the described activity is to occur.
+status:: Identifies what progress is being made for the specific activity.
+statusReason:: Provides reason why the activity isn't yet started, is on hold, was cancelled, etc.
+
+

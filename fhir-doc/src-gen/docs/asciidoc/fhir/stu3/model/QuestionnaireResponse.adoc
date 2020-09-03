@@ -1,0 +1,160 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= QuestionnaireResponse
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== QuestionnaireResponse
+
+A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse[QuestionnaireResponse, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, QuestionnaireResponse, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class QuestionnaireResponse {
+	author : Reference 0..1
+	authored : DateTime 0..1
+	basedOn : Reference 0..*
+	context : Reference 0..1
+	identifier : Identifier 0..1
+	item : QuestionnaireResponseItem 0..*
+	parent : Reference 0..*
+	questionnaire : Reference 0..1
+	source : Reference 0..1
+	status : QuestionnaireResponseStatus 1..1
+	subject : Reference 0..1
+}
+
+--
+
+=== Properties
+author:: Person who received the answers to the questions in the QuestionnaireResponse and recorded them in the system.
+authored:: The date and/or time that this set of answers were last changed.
+basedOn:: The order, proposal or plan that is fulfilled in whole or in part by this QuestionnaireResponse.  For example, a ProcedureRequest seeking an intake assessment or a decision support recommendation to assess for post-partum depression.
+context:: The encounter or episode of care with primary association to the questionnaire response.
+identifier:: A business identifier assigned to a particular completed (or partially completed) questionnaire.
+item:: A group or question item from the original questionnaire for which answers are provided.
+parent:: A procedure or observation that this questionnaire was performed as part of the execution of.  For example, the surgery a checklist was executed as part of.
+questionnaire:: The Questionnaire that defines and organizes the questions for which answers are being provided.
+source:: The person who answered the questions about the subject.
+status:: The position of the questionnaire response within its overall lifecycle.
+subject:: The subject of the questionnaire response.  This could be a patient, organization, practitioner, device, etc.  This is who/what the answers apply to, but is not necessarily the source of information.
+
+
+
+
+== QuestionnaireResponseItem
+
+A group or question item from the original questionnaire for which answers are provided..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse[QuestionnaireResponse, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, QuestionnaireResponseItem, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class QuestionnaireResponseItem {
+	answer : QuestionnaireResponseItemAnswer 0..*
+	definition : String 0..1
+	item : QuestionnaireResponseItem 0..*
+	linkId : String 1..1
+	subject : Reference 0..1
+	text : String 0..1
+}
+
+--
+
+=== Properties
+answer:: The respondent's answer(s) to the question.
+definition:: A reference to an [ElementDefinition](elementdefinition.html) that provides the details for the item.
+item:: Questions or sub-groups nested beneath a question or group.
+linkId:: The item from the Questionnaire that corresponds to this item in the QuestionnaireResponse resource.
+subject:: More specific subject this section's answers are about, details the subject given in QuestionnaireResponse.
+text:: Text that is displayed above the contents of the group or as the text of the question being answered.
+
+
+
+
+== QuestionnaireResponseItemAnswer
+
+The respondent's answer(s) to the question..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse[QuestionnaireResponse, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, QuestionnaireResponseItemAnswer, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class QuestionnaireResponseItemAnswer {
+	item : QuestionnaireResponseItem 0..*
+	valueAttachment : Attachment 0..1
+	valueBoolean : Boolean 0..1
+	valueCoding : Coding 0..1
+	valueDate : Date 0..1
+	valueDateTime : DateTime 0..1
+	valueDecimal : Decimal 0..1
+	valueInteger : Integer 0..1
+	valueQuantity : Quantity 0..1
+	valueReference : Reference 0..1
+	valueString : String 0..1
+	valueTime : Time 0..1
+	valueUri : String 0..1
+}
+
+--
+
+=== Properties
+item:: Nested groups and/or questions found within this particular answer.
+valueAttachment:: The answer (or one of the answers) provided by the respondent to the question.
+valueBoolean:: The answer (or one of the answers) provided by the respondent to the question.
+valueCoding:: The answer (or one of the answers) provided by the respondent to the question.
+valueDate:: The answer (or one of the answers) provided by the respondent to the question.
+valueDateTime:: The answer (or one of the answers) provided by the respondent to the question.
+valueDecimal:: The answer (or one of the answers) provided by the respondent to the question.
+valueInteger:: The answer (or one of the answers) provided by the respondent to the question.
+valueQuantity:: The answer (or one of the answers) provided by the respondent to the question.
+valueReference:: The answer (or one of the answers) provided by the respondent to the question.
+valueString:: The answer (or one of the answers) provided by the respondent to the question.
+valueTime:: The answer (or one of the answers) provided by the respondent to the question.
+valueUri:: The answer (or one of the answers) provided by the respondent to the question.
+
+

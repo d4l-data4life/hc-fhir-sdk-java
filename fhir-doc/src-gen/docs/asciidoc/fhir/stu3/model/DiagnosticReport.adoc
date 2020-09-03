@@ -1,0 +1,144 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= DiagnosticReport
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== DiagnosticReport
+
+The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/DiagnosticReport[DiagnosticReport, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, DiagnosticReport, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class DiagnosticReport {
+	basedOn : Reference 0..*
+	category : CodeableConcept 0..1
+	code : CodeableConcept 1..1
+	codedDiagnosis : CodeableConcept 0..*
+	conclusion : String 0..1
+	context : Reference 0..1
+	effectiveDateTime : DateTime 0..1
+	effectivePeriod : Period 0..1
+	identifier : Identifier 0..*
+	image : DiagnosticReportImage 0..*
+	imagingStudy : Reference 0..*
+	issued : Instant 0..1
+	performer : DiagnosticReportPerformer 0..*
+	presentedForm : Attachment 0..*
+	result : Reference 0..*
+	specimen : Reference 0..*
+	status : DiagnosticReportStatus 1..1
+	subject : Reference 0..1
+}
+
+--
+
+=== Properties
+basedOn:: Details concerning a test or procedure requested.
+category:: A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes.
+code:: A code or name that describes this diagnostic report.
+codedDiagnosis:: None
+conclusion:: Concise and clinically contextualized impression / summary of the diagnostic report.
+context:: The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport per is about.
+effectiveDateTime:: The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself.
+effectivePeriod:: The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself.
+identifier:: Identifiers assigned to this report by the performer or other systems.
+image:: A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).
+imagingStudy:: One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images.
+issued:: The date and time that this version of the report was released from the source diagnostic service.
+performer:: Indicates who or what participated in producing the report.
+presentedForm:: Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.
+result:: Observations that are part of this diagnostic report. Observations can be simple name/value pairs (e.g. "atomic" results), or they can be grouping observations that include references to other members of the group (e.g. "panels").
+specimen:: Details about the specimens on which this diagnostic report is based.
+status:: The status of the diagnostic report as a whole.
+subject:: The subject of the report. Usually, but not always, this is a patient. However diagnostic services also perform analyses on specimens collected from a variety of other sources.
+
+
+
+
+== DiagnosticReportImage
+
+A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/DiagnosticReport[DiagnosticReport, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, DiagnosticReportImage, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class DiagnosticReportImage {
+	comment : String 0..1
+	link : Reference 1..1
+}
+
+--
+
+=== Properties
+comment:: A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features.
+link:: None
+
+
+
+
+== DiagnosticReportPerformer
+
+Indicates who or what participated in producing the report..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/DiagnosticReport[DiagnosticReport, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, DiagnosticReportPerformer, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class DiagnosticReportPerformer {
+	actor : Reference 1..1
+	role : CodeableConcept 0..1
+}
+
+--
+
+=== Properties
+actor:: The reference to the  practitioner or organization involved in producing the report. For example, the diagnostic service that is responsible for issuing the report.
+role:: Describes the type of participation (e.g.  a responsible party, author, or verifier).
+
+

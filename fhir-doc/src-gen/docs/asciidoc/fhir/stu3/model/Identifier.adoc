@@ -1,0 +1,54 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Identifier
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Identifier
+
+A technical identifier - identifies some entity uniquely and unambiguously..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Identifier[Identifier, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Identifier, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Identifier {
+	assigner : Reference 0..1
+	period : Period 0..1
+	system : String 0..1
+	type : CodeableConcept 0..1
+	use : IdentifierUse 0..1
+	value : String 0..1
+}
+
+--
+
+=== Properties
+assigner:: Organization that issued/manages the identifier.
+period:: Time period during which identifier is/was valid for use.
+system:: Establishes the namespace for the value - that is, a URL that describes a set values that are unique.
+type:: A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.
+use:: The purpose of this identifier.
+value:: The portion of the identifier typically relevant to the user and which is unique within the context of the system.
+
+

@@ -1,0 +1,237 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Observation
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Observation
+
+Measurements and simple assertions made about a patient, device or other subject..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Observation[Observation, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Observation, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Observation {
+	basedOn : Reference 0..*
+	bodySite : CodeableConcept 0..1
+	category : CodeableConcept 0..*
+	code : CodeableConcept 1..1
+	comment : String 0..1
+	component : ObservationComponent 0..*
+	context : Reference 0..1
+	dataAbsentReason : CodeableConcept 0..1
+	device : Reference 0..1
+	effectiveDateTime : DateTime 0..1
+	effectivePeriod : Period 0..1
+	identifier : Identifier 0..*
+	interpretation : CodeableConcept 0..1
+	issued : Instant 0..1
+	method : CodeableConcept 0..1
+	performer : Reference 0..*
+	referenceRange : ObservationReferenceRange 0..*
+	related : ObservationRelated 0..*
+	specimen : Reference 0..1
+	status : ObservationStatus 1..1
+	subject : Reference 0..1
+	valueAttachment : Attachment 0..1
+	valueBoolean : Boolean 0..1
+	valueCodeableConcept : CodeableConcept 0..1
+	valueDateTime : DateTime 0..1
+	valuePeriod : Period 0..1
+	valueQuantity : Quantity 0..1
+	valueRange : Range 0..1
+	valueRatio : Ratio 0..1
+	valueSampledData : SampledData 0..1
+	valueString : String 0..1
+	valueTime : Time 0..1
+}
+
+--
+
+=== Properties
+basedOn:: A plan, proposal or order that is fulfilled in whole or in part by this event.
+bodySite:: Indicates the site on the subject's body where the observation was made (i.e. the target site).
+category:: A code that classifies the general type of observation being made.
+code:: Describes what was observed. Sometimes this is called the observation "name".
+comment:: May include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result.
+component:: Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.
+context:: The healthcare event  (e.g. a patient and healthcare provider interaction) during which this observation is made.
+dataAbsentReason:: Provides a reason why the expected value in the element Observation.value[x] is missing.
+device:: The device used to generate the observation data.
+effectiveDateTime:: The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.
+effectivePeriod:: The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.
+identifier:: A unique identifier assigned to this observation.
+interpretation:: The assessment made based on the result of the observation.  Intended as a simple compact code often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result. Otherwise known as abnormal flag.
+issued:: The date and time this observation was made available to providers, typically after the results have been reviewed and verified.
+method:: Indicates the mechanism used to perform the observation.
+performer:: Who was responsible for asserting the observed value as "true".
+referenceRange:: Guidance on how to interpret the value by comparison to a normal or recommended range.
+related:: A  reference to another resource (usually another Observation) whose relationship is defined by the relationship type code.
+specimen:: The specimen that was used when this observation was made.
+status:: The status of the result value.
+subject:: The patient, or group of patients, location, or device whose characteristics (direct or indirect) are described by the observation and into whose record the observation is placed.  Comments: Indirect characteristics may be those of a specimen, fetus, donor,  other observer (for example a relative or EMT), or any observation made about the subject.
+valueAttachment:: The information determined as a result of making the observation, if the information has a simple value.
+valueBoolean:: The information determined as a result of making the observation, if the information has a simple value.
+valueCodeableConcept:: The information determined as a result of making the observation, if the information has a simple value.
+valueDateTime:: The information determined as a result of making the observation, if the information has a simple value.
+valuePeriod:: The information determined as a result of making the observation, if the information has a simple value.
+valueQuantity:: The information determined as a result of making the observation, if the information has a simple value.
+valueRange:: The information determined as a result of making the observation, if the information has a simple value.
+valueRatio:: The information determined as a result of making the observation, if the information has a simple value.
+valueSampledData:: The information determined as a result of making the observation, if the information has a simple value.
+valueString:: The information determined as a result of making the observation, if the information has a simple value.
+valueTime:: The information determined as a result of making the observation, if the information has a simple value.
+
+
+
+
+== ObservationComponent
+
+Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Observation[Observation, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ObservationComponent, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ObservationComponent {
+	code : CodeableConcept 1..1
+	dataAbsentReason : CodeableConcept 0..1
+	interpretation : CodeableConcept 0..1
+	referenceRange : ObservationReferenceRange 0..*
+	valueAttachment : Attachment 0..1
+	valueCodeableConcept : CodeableConcept 0..1
+	valueDateTime : DateTime 0..1
+	valuePeriod : Period 0..1
+	valueQuantity : Quantity 0..1
+	valueRange : Range 0..1
+	valueRatio : Ratio 0..1
+	valueSampledData : SampledData 0..1
+	valueString : String 0..1
+	valueTime : Time 0..1
+}
+
+--
+
+=== Properties
+code:: Describes what was observed. Sometimes this is called the observation "code".
+dataAbsentReason:: Provides a reason why the expected value in the element Observation.value[x] is missing.
+interpretation:: The assessment made based on the result of the observation.  Intended as a simple compact code often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result. Otherwise known as abnormal flag.
+referenceRange:: Guidance on how to interpret the value by comparison to a normal or recommended range.
+valueAttachment:: The information determined as a result of making the observation, if the information has a simple value.
+valueCodeableConcept:: The information determined as a result of making the observation, if the information has a simple value.
+valueDateTime:: The information determined as a result of making the observation, if the information has a simple value.
+valuePeriod:: The information determined as a result of making the observation, if the information has a simple value.
+valueQuantity:: The information determined as a result of making the observation, if the information has a simple value.
+valueRange:: The information determined as a result of making the observation, if the information has a simple value.
+valueRatio:: The information determined as a result of making the observation, if the information has a simple value.
+valueSampledData:: The information determined as a result of making the observation, if the information has a simple value.
+valueString:: The information determined as a result of making the observation, if the information has a simple value.
+valueTime:: The information determined as a result of making the observation, if the information has a simple value.
+
+
+
+
+== ObservationReferenceRange
+
+Guidance on how to interpret the value by comparison to a normal or recommended range..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Observation[Observation, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ObservationReferenceRange, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ObservationReferenceRange {
+	age : Range 0..1
+	appliesTo : CodeableConcept 0..*
+	high : Quantity 0..1
+	low : Quantity 0..1
+	text : String 0..1
+	type : CodeableConcept 0..1
+}
+
+--
+
+=== Properties
+age:: The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.
+appliesTo:: Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.
+high:: The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9).   If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).
+low:: The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9).   If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).
+text:: Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of "Negative" or a list or table of 'normals'.
+type:: Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.
+
+
+
+
+== ObservationRelated
+
+A  reference to another resource (usually another Observation) whose relationship is defined by the relationship type code..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Observation[Observation, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ObservationRelated, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ObservationRelated {
+	target : Reference 1..1
+	type : ObservationRelationshipType 0..1
+}
+
+--
+
+=== Properties
+target:: A reference to the observation or [QuestionnaireResponse](questionnaireresponse.html#) resource that is related to this observation.
+type:: A code specifying the kind of relationship that exists with the target resource.
+
+

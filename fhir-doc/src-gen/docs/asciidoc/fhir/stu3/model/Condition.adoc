@@ -1,0 +1,158 @@
+// Settings:
+:doctype: book
+:toc: left
+:toclevels: 4
+:icons: font
+:source-highlighter: prettify
+:numbered:
+:stylesdir: styles/
+:imagesdir: images/
+:linkcss:
+
+= Condition
+
+Generated from FHIR 3.0.1.11917 on 2019-06-14
+
+== Condition
+
+A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Condition[Condition, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, Condition, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class Condition {
+	abatementAge : Age 0..1
+	abatementBoolean : Boolean 0..1
+	abatementDateTime : DateTime 0..1
+	abatementPeriod : Period 0..1
+	abatementRange : Range 0..1
+	abatementString : String 0..1
+	assertedDate : DateTime 0..1
+	asserter : Reference 0..1
+	bodySite : CodeableConcept 0..*
+	category : CodeableConcept 0..*
+	clinicalStatus : String 0..1
+	code : CodeableConcept 0..1
+	context : Reference 0..1
+	evidence : ConditionEvidence 0..*
+	identifier : Identifier 0..*
+	note : Annotation 0..*
+	onsetAge : Age 0..1
+	onsetDateTime : DateTime 0..1
+	onsetPeriod : Period 0..1
+	onsetRange : Range 0..1
+	onsetString : String 0..1
+	severity : CodeableConcept 0..1
+	stage : ConditionStage 0..1
+	subject : Reference 1..1
+	verificationStatus : ConditionVerificationStatus 0..1
+}
+
+--
+
+=== Properties
+abatementAge:: The date or estimated date that the condition resolved or went into remission. This is called "abatement" because of the many overloaded connotations associated with "remission" or "resolution" - Conditions are never really resolved, but they can abate.
+abatementBoolean:: The date or estimated date that the condition resolved or went into remission. This is called "abatement" because of the many overloaded connotations associated with "remission" or "resolution" - Conditions are never really resolved, but they can abate.
+abatementDateTime:: The date or estimated date that the condition resolved or went into remission. This is called "abatement" because of the many overloaded connotations associated with "remission" or "resolution" - Conditions are never really resolved, but they can abate.
+abatementPeriod:: The date or estimated date that the condition resolved or went into remission. This is called "abatement" because of the many overloaded connotations associated with "remission" or "resolution" - Conditions are never really resolved, but they can abate.
+abatementRange:: The date or estimated date that the condition resolved or went into remission. This is called "abatement" because of the many overloaded connotations associated with "remission" or "resolution" - Conditions are never really resolved, but they can abate.
+abatementString:: The date or estimated date that the condition resolved or went into remission. This is called "abatement" because of the many overloaded connotations associated with "remission" or "resolution" - Conditions are never really resolved, but they can abate.
+assertedDate:: The date on which the existance of the Condition was first asserted or acknowledged.
+asserter:: Individual who is making the condition statement.
+bodySite:: The anatomical location where this condition manifests itself.
+category:: A category assigned to the condition.
+clinicalStatus:: The clinical status of the condition.
+code:: None
+context:: Encounter during which the condition was first asserted.
+evidence:: Supporting Evidence / manifestations that are the basis on which this condition is suspected or confirmed.
+identifier:: This records identifiers associated with this condition that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).
+note:: Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis.
+onsetAge:: Estimated or actual date or date-time  the condition began, in the opinion of the clinician.
+onsetDateTime:: Estimated or actual date or date-time  the condition began, in the opinion of the clinician.
+onsetPeriod:: Estimated or actual date or date-time  the condition began, in the opinion of the clinician.
+onsetRange:: Estimated or actual date or date-time  the condition began, in the opinion of the clinician.
+onsetString:: Estimated or actual date or date-time  the condition began, in the opinion of the clinician.
+severity:: A subjective assessment of the severity of the condition as evaluated by the clinician.
+stage:: Clinical stage or grade of a condition. May include formal severity assessments.
+subject:: Indicates the patient or group who the condition record is associated with.
+verificationStatus:: The verification status to support the clinical status of the condition.
+
+
+
+
+== ConditionEvidence
+
+Supporting Evidence / manifestations that are the basis on which this condition is suspected or confirmed..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Condition[Condition, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ConditionEvidence, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ConditionEvidence {
+	code : CodeableConcept 0..*
+	detail : Reference 0..*
+}
+
+--
+
+=== Properties
+code:: A manifestation or symptom that led to the recording of this condition.
+detail:: Links to other relevant information, including pathology reports.
+
+
+
+
+== ConditionStage
+
+Clinical stage or grade of a condition. May include formal severity assessments..
+
+FHIR Reference: http://hl7.org/fhir/StructureDefinition/Condition[Condition, window="_blank"]
+
+
+=== Diagram
+
+[plantuml, ConditionStage, svg]
+--
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+class ConditionStage {
+	assessment : Reference 0..*
+	summary : CodeableConcept 0..1
+}
+
+--
+
+=== Properties
+assessment:: Reference to a formal record of the evidence on which the staging assessment is based.
+summary:: A simple summary of the stage such as "Stage 3". The determination of the stage is disease-specific.
+
+
