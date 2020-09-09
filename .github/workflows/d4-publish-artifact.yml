@@ -23,8 +23,6 @@ jobs:
           submodule: 'recursive'
       - name: Cleanup
         run: ./gradlew clean
-      - name: Generate models
-        run: bundle exec fastlane generate_fhir_java_models
       - name: Build project
         run: ./gradlew build
       - name: Publish artifacts
