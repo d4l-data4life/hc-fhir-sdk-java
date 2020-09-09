@@ -18,7 +18,6 @@ package care.data4life.fhir.stu3.model;
 
 import care.data4life.fhir.stu3.FhirStu3Parser;
 import care.data4life.fhir.test.util.FileHelper;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
