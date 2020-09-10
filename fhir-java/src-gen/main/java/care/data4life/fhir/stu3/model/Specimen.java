@@ -115,7 +115,8 @@ public class Specimen extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on
+     * 2020-07-29
      */
     public static class SpecimenCollection extends BackboneElement {
 
@@ -163,11 +164,13 @@ public class Specimen extends DomainResource {
     /**
      * Specimen.java
      * <p>
-     * The container holding the specimen.  The recursive nature of containers; i.e. blood in tube in tray in rack is not addressed here.
+     * The container holding the specimen.  The recursive nature of containers; i.e. blood in tube
+     * in tray in rack is not addressed here.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on
+     * 2020-07-29
      */
     public static class SpecimenContainer extends BackboneElement {
 
@@ -224,7 +227,8 @@ public class Specimen extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on
+     * 2020-07-29
      */
     public static class SpecimenProcessing extends BackboneElement {
 

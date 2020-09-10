@@ -29,7 +29,8 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * Detailed information about conditions, problems or diagnoses.
  * <p>
- * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
+ * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept
+ * that has risen to a level of concern.
  * <p>
  * <p>
  * "Generated from FHIR 3.0.1.11917 on 2020-07-29

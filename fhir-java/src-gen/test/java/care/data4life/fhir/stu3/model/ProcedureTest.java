@@ -29,7 +29,8 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * An action that is being or was performed on a patient.
  * <p>
- * An action that is or was performed on a patient. This can be a physical intervention like an operation, or less invasive like counseling or hypnotherapy.
+ * An action that is or was performed on a patient. This can be a physical intervention like an
+ * operation, or less invasive like counseling or hypnotherapy.
  * <p>
  * <p>
  * "Generated from FHIR 3.0.1.11917 on 2020-07-29

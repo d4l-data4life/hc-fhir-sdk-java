@@ -29,7 +29,9 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * A structured set of questions.
  * <p>
- * A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.
+ * A structured set of questions intended to guide the collection of answers from end-users.
+ * Questionnaires provide detailed control over order, presentation, phraseology and grouping to
+ * allow coherent, consistent data collection.
  * <p>
  * <p>
  * "Generated from FHIR 3.0.1.11917 on 2020-07-29

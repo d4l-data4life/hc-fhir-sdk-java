@@ -29,7 +29,8 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * Definition of a Medication.
  * <p>
- * This resource is primarily used for the identification and definition of a medication. It covers the ingredients and the packaging for a medication.
+ * This resource is primarily used for the identification and definition of a medication. It covers
+ * the ingredients and the packaging for a medication.
  * <p>
  * <p>
  * "Generated from FHIR 3.0.1.11917 on 2020-07-29

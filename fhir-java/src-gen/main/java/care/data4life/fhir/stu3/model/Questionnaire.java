@@ -25,11 +25,14 @@ import javax.annotation.Nullable;
 /**
  * Questionnaire.java
  * <p>
- * A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.
+ * A structured set of questions intended to guide the collection of answers from end-users.
+ * Questionnaires provide detailed control over order, presentation, phraseology and grouping to
+ * allow coherent, consistent data collection.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on
+ * 2020-07-29
  */
 public class Questionnaire extends DomainResource {
 
@@ -160,7 +163,8 @@ public class Questionnaire extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on
+     * 2020-07-29
      */
     public static class QuestionnaireItem extends BackboneElement {
 
@@ -314,11 +318,13 @@ public class Questionnaire extends DomainResource {
     /**
      * Questionnaire.java
      * <p>
-     * A constraint indicating that this item should only be enabled (displayed/allow answers to be captured) when the specified condition is true.
+     * A constraint indicating that this item should only be enabled (displayed/allow answers to be
+     * captured) when the specified condition is true.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on
+     * 2020-07-29
      */
     public static class QuestionnaireItemEnableWhen extends BackboneElement {
 
@@ -415,7 +421,8 @@ public class Questionnaire extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on
+     * 2020-07-29
      */
     public static class QuestionnaireItemOption extends BackboneElement {
 

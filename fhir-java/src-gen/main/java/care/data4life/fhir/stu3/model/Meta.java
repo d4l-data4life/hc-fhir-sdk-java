@@ -25,7 +25,9 @@ import javax.annotation.Nullable;
 /**
  * Meta.java
  * <p>
- * The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.
+ * The metadata about a resource. This is content in the resource that is maintained by the
+ * infrastructure. Changes to the content may not always be associated with version changes to the
+ * resource.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Meta">Meta</a>
  * <p>

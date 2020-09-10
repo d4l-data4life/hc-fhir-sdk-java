@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on
+ * 2020-07-29
  */
 public class DocumentReference extends DomainResource {
 
@@ -140,11 +141,13 @@ public class DocumentReference extends DomainResource {
     /**
      * DocumentReference.java
      * <p>
-     * The document and format referenced. There may be multiple content element repetitions, each with a different format.
+     * The document and format referenced. There may be multiple content element repetitions, each
+     * with a different format.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
+     * on 2020-07-29
      */
     public static class DocumentReferenceContent extends BackboneElement {
 
@@ -181,7 +184,8 @@ public class DocumentReference extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
+     * on 2020-07-29
      */
     public static class DocumentReferenceContext extends BackboneElement {
 
@@ -238,7 +242,8 @@ public class DocumentReference extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
+     * on 2020-07-29
      */
     public static class DocumentReferenceContextRelated extends BackboneElement {
 
@@ -270,7 +275,8 @@ public class DocumentReference extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
+     * on 2020-07-29
      */
     public static class DocumentReferenceRelatesTo extends BackboneElement {
 

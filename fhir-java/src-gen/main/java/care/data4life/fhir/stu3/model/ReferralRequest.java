@@ -25,11 +25,13 @@ import javax.annotation.Nullable;
 /**
  * ReferralRequest.java
  * <p>
- * Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.
+ * Used to record and send details about a request for referral service or transfer of a patient to
+ * the care of another provider or provider organization.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ReferralRequest">ReferralRequest</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ReferralRequest) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ReferralRequest) on
+ * 2020-07-29
  */
 public class ReferralRequest extends DomainResource {
 
@@ -178,7 +180,8 @@ public class ReferralRequest extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ReferralRequest">ReferralRequest</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ReferralRequest) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ReferralRequest) on
+     * 2020-07-29
      */
     public static class ReferralRequestRequester extends BackboneElement {
 

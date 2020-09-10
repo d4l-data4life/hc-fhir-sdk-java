@@ -29,7 +29,9 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * Describes the intended objective(s) for a patient, group or organization.
  * <p>
- * Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
+ * Describes the intended objective(s) for a patient, group or organization care, for example,
+ * weight loss, restoring an activity of daily living, obtaining herd immunity via immunization,
+ * meeting a process improvement objective, etc.
  * <p>
  * <p>
  * "Generated from FHIR 3.0.1.11917 on 2020-07-29

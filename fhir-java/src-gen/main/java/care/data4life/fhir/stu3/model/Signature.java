@@ -25,11 +25,14 @@ import javax.annotation.Nullable;
 /**
  * Signature.java
  * <p>
- * A digital signature along with supporting context. The signature may be electronic/cryptographic in nature, or a graphical image representing a hand-written signature, or a signature process. Different signature approaches have different utilities.
+ * A digital signature along with supporting context. The signature may be electronic/cryptographic
+ * in nature, or a graphical image representing a hand-written signature, or a signature process.
+ * Different signature approaches have different utilities.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Signature">Signature</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Signature) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Signature) on
+ * 2020-07-29
  */
 public class Signature extends Element {
 

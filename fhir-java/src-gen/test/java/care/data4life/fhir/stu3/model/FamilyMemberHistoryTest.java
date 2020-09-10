@@ -29,7 +29,8 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * Information about patient's relatives, relevant for patient.
  * <p>
- * Significant health events and conditions for a person related to the patient relevant in the context of care for the patient.
+ * Significant health events and conditions for a person related to the patient relevant in the
+ * context of care for the patient.
  * <p>
  * <p>
  * "Generated from FHIR 3.0.1.11917 on 2020-07-29

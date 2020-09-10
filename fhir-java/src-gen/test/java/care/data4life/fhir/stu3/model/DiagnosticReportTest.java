@@ -27,9 +27,13 @@ import static org.junit.Assert.assertEquals;
 /**
  * DiagnosticReportTest.java
  * <p>
- * A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports.
+ * A Diagnostic report - a combination of request information, atomic results, images,
+ * interpretation, as well as formatted reports.
  * <p>
- * The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
+ * The findings and interpretation of diagnostic  tests performed on patients, groups of patients,
+ * devices, and locations, and/or specimens derived from these. The report includes clinical context
+ * such as requesting and provider information, and some mix of atomic results, images, textual and
+ * coded interpretations, and formatted representation of diagnostic reports.
  * <p>
  * <p>
  * "Generated from FHIR 3.0.1.11917 on 2020-07-29

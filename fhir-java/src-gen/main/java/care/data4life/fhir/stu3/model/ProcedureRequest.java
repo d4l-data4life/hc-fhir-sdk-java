@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ProcedureRequest">ProcedureRequest</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ProcedureRequest) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ProcedureRequest) on
+ * 2020-07-29
  */
 public class ProcedureRequest extends DomainResource {
 
@@ -204,7 +205,8 @@ public class ProcedureRequest extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ProcedureRequest">ProcedureRequest</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ProcedureRequest) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ProcedureRequest) on
+     * 2020-07-29
      */
     public static class ProcedureRequestRequester extends BackboneElement {
 

@@ -29,7 +29,8 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * A request for referral or transfer of care.
  * <p>
- * Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.
+ * Used to record and send details about a request for referral service or transfer of a patient to
+ * the care of another provider or provider organization.
  * <p>
  * <p>
  * "Generated from FHIR 3.0.1.11917 on 2020-07-29

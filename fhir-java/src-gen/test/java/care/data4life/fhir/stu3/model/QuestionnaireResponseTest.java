@@ -29,7 +29,9 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * A structured set of questions and their answers.
  * <p>
- * A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
+ * A structured set of questions and their answers. The questions are ordered and grouped into
+ * coherent subsets, corresponding to the structure of the grouping of the questionnaire being
+ * responded to.
  * <p>
  * <p>
  * "Generated from FHIR 3.0.1.11917 on 2020-07-29

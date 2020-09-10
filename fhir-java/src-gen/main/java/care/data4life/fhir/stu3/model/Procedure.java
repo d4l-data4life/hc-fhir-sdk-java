@@ -25,11 +25,13 @@ import javax.annotation.Nullable;
 /**
  * Procedure.java
  * <p>
- * An action that is or was performed on a patient. This can be a physical intervention like an operation, or less invasive like counseling or hypnotherapy.
+ * An action that is or was performed on a patient. This can be a physical intervention like an
+ * operation, or less invasive like counseling or hypnotherapy.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Procedure) on
+ * 2020-07-29
  */
 public class Procedure extends DomainResource {
 
@@ -187,11 +189,14 @@ public class Procedure extends DomainResource {
     /**
      * Procedure.java
      * <p>
-     * A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
+     * A device that is implanted, removed or otherwise manipulated (calibration, battery
+     * replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the
+     * Procedure.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Procedure) on
+     * 2020-07-29
      */
     public static class ProcedureFocalDevice extends BackboneElement {
 
@@ -228,7 +233,8 @@ public class Procedure extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Procedure) on
+     * 2020-07-29
      */
     public static class ProcedurePerformer extends BackboneElement {
 

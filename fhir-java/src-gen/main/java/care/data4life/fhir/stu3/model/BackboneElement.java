@@ -25,11 +25,13 @@ import javax.annotation.Nullable;
 /**
  * BackboneElement.java
  * <p>
- * Base definition for all elements that are defined inside a resource - but not those in a data type.
+ * Base definition for all elements that are defined inside a resource - but not those in a data
+ * type.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/BackboneElement">BackboneElement</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/BackboneElement) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/BackboneElement) on
+ * 2020-07-29
  */
 public class BackboneElement extends Element {
 

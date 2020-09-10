@@ -25,11 +25,13 @@ import javax.annotation.Nullable;
 /**
  * Condition.java
  * <p>
- * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
+ * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept
+ * that has risen to a level of concern.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
+ * 2020-07-29
  */
 public class Condition extends DomainResource {
 
@@ -176,11 +178,13 @@ public class Condition extends DomainResource {
     /**
      * Condition.java
      * <p>
-     * Supporting Evidence / manifestations that are the basis on which this condition is suspected or confirmed.
+     * Supporting Evidence / manifestations that are the basis on which this condition is suspected
+     * or confirmed.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
+     * 2020-07-29
      */
     public static class ConditionEvidence extends BackboneElement {
 
@@ -212,7 +216,8 @@ public class Condition extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
+     * 2020-07-29
      */
     public static class ConditionStage extends BackboneElement {
 

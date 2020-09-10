@@ -25,7 +25,10 @@ import javax.annotation.Nullable;
 /**
  * Timing.java
  * <p>
- * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
+ * Specifies an event that may occur multiple times. Timing schedules are used to record when things
+ * are planned, expected or requested to occur. The most common usage is in dosage instructions for
+ * medications. They are also used when planning care of various kinds, and may be used for
+ * reporting the schedule to which past regular activities were carried out.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
  * <p>
@@ -65,7 +68,8 @@ public class Timing extends Element {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing) on
+     * 2020-07-29
      */
     public static class TimingRepeat extends Element {
 

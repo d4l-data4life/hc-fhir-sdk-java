@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on
+ * 2020-07-29
  */
 public class Observation extends DomainResource {
 
@@ -212,11 +213,15 @@ public class Observation extends DomainResource {
     /**
      * Observation.java
      * <p>
-     * Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.
+     * Some observations have multiple component observations.  These component observations are
+     * expressed as separate code value pairs that share the same attributes.  Examples include
+     * systolic and diastolic component observations for blood pressure measurement and multiple
+     * component observations for genetics observations.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on
+     * 2020-07-29
      */
     public static class ObservationComponent extends BackboneElement {
 
@@ -313,7 +318,8 @@ public class Observation extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on
+     * 2020-07-29
      */
     public static class ObservationReferenceRange extends BackboneElement {
 
@@ -361,11 +367,13 @@ public class Observation extends DomainResource {
     /**
      * Observation.java
      * <p>
-     * A  reference to another resource (usually another Observation) whose relationship is defined by the relationship type code.
+     * A  reference to another resource (usually another Observation) whose relationship is defined
+     * by the relationship type code.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on
+     * 2020-07-29
      */
     public static class ObservationRelated extends BackboneElement {
 

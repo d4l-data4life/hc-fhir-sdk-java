@@ -25,11 +25,13 @@ import javax.annotation.Nullable;
 /**
  * Medication.java
  * <p>
- * This resource is primarily used for the identification and definition of a medication. It covers the ingredients and the packaging for a medication.
+ * This resource is primarily used for the identification and definition of a medication. It covers
+ * the ingredients and the packaging for a medication.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on
+ * 2020-07-29
  */
 public class Medication extends DomainResource {
 
@@ -95,7 +97,8 @@ public class Medication extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on
+     * 2020-07-29
      */
     public static class MedicationIngredient extends BackboneElement {
 
@@ -149,7 +152,8 @@ public class Medication extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on
+     * 2020-07-29
      */
     public static class MedicationPackage extends BackboneElement {
 
@@ -186,7 +190,8 @@ public class Medication extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on
+     * 2020-07-29
      */
     public static class MedicationPackageBatch extends BackboneElement {
 
@@ -218,7 +223,8 @@ public class Medication extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on
+     * 2020-07-29
      */
     public static class MedicationPackageContent extends BackboneElement {
 

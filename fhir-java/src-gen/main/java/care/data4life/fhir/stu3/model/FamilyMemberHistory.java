@@ -25,11 +25,13 @@ import javax.annotation.Nullable;
 /**
  * FamilyMemberHistory.java
  * <p>
- * Significant health events and conditions for a person related to the patient relevant in the context of care for the patient.
+ * Significant health events and conditions for a person related to the patient relevant in the
+ * context of care for the patient.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory">FamilyMemberHistory</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory) on
+ * 2020-07-29
  */
 public class FamilyMemberHistory extends DomainResource {
 
@@ -184,11 +186,14 @@ public class FamilyMemberHistory extends DomainResource {
     /**
      * FamilyMemberHistory.java
      * <p>
-     * The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition.
+     * The significant Conditions (or condition) that the family member had. This is a repeating
+     * section to allow a system to represent more than one condition per resource, though there is
+     * nothing stopping multiple resources - one per condition.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory">FamilyMemberHistory</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory)
+     * on 2020-07-29
      */
     public static class FamilyMemberHistoryCondition extends BackboneElement {
 

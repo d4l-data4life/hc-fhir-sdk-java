@@ -125,19 +125,28 @@ public class CodeSystems {
     public enum ActionGroupingBehavior {
 
         /**
-         * Any group marked with this behavior should be displayed as a visual group to the end user
+         * Any group marked with this behavior should be displayed as a visual group to the end
+         * user
          */
         @Json(name = "visual-group")
         VISUAL_GROUP,
 
         /**
-         * A group with this behavior logically groups its sub-elements, and may be shown as a visual group to the end user, but it is not required to do so
+         * A group with this behavior logically groups its sub-elements, and may be shown as a
+         * visual group to the end user, but it is not required to do so
          */
         @Json(name = "logical-group")
         LOGICAL_GROUP,
 
         /**
-         * A group of related alternative actions is a sentence group if the target referenced by the action is the same in all the actions and each action simply constitutes a different variation on how to specify the details for the target. For example, two actions that could be in a SentenceGroup are "aspirin, 500 mg, 2 times per day" and "aspirin, 300 mg, 3 times per day". In both cases, aspirin is the target referenced by the action, and the two actions represent different options for how aspirin might be ordered for the patient. Note that a SentenceGroup would almost always have an associated selection behavior of "AtMostOne", unless it's a required action, in which case, it would be "ExactlyOne"
+         * A group of related alternative actions is a sentence group if the target referenced by
+         * the action is the same in all the actions and each action simply constitutes a different
+         * variation on how to specify the details for the target. For example, two actions that
+         * could be in a SentenceGroup are "aspirin, 500 mg, 2 times per day" and "aspirin, 300 mg,
+         * 3 times per day". In both cases, aspirin is the target referenced by the action, and the
+         * two actions represent different options for how aspirin might be ordered for the patient.
+         * Note that a SentenceGroup would almost always have an associated selection behavior of
+         * "AtMostOne", unless it's a required action, in which case, it would be "ExactlyOne"
          */
         @Json(name = "sentence-group")
         SENTENCE_GROUP,
@@ -209,13 +218,18 @@ public class CodeSystems {
     public enum ActionPrecheckBehavior {
 
         /**
-         * An action with this behavior is one of the most frequent action that is, or should be, included by an end user, for the particular context in which the action occurs. The system displaying the action to the end user should consider "pre-checking" such an action as a convenience for the user
+         * An action with this behavior is one of the most frequent action that is, or should be,
+         * included by an end user, for the particular context in which the action occurs. The
+         * system displaying the action to the end user should consider "pre-checking" such an
+         * action as a convenience for the user
          */
         @Json(name = "yes")
         YES,
 
         /**
-         * An action with this behavior is one of the less frequent actions included by the end user, for the particular context in which the action occurs. The system displaying the actions to the end user would typically not "pre-check" such an action
+         * An action with this behavior is one of the less frequent actions included by the end
+         * user, for the particular context in which the action occurs. The system displaying the
+         * actions to the end user would typically not "pre-check" such an action
          */
         @Json(name = "no")
         NO,
@@ -291,19 +305,22 @@ public class CodeSystems {
     public enum ActionRequiredBehavior {
 
         /**
-         * An action with this behavior must be included in the actions processed by the end user; the end user may not choose not to include this action
+         * An action with this behavior must be included in the actions processed by the end user;
+         * the end user may not choose not to include this action
          */
         @Json(name = "must")
         MUST,
 
         /**
-         * An action with this behavior may be included in the set of actions processed by the end user
+         * An action with this behavior may be included in the set of actions processed by the end
+         * user
          */
         @Json(name = "could")
         COULD,
 
         /**
-         * An action with this behavior must be included in the set of actions processed by the end user, unless the end user provides documentation as to why the action was not included
+         * An action with this behavior must be included in the set of actions processed by the end
+         * user, unless the end user provides documentation as to why the action was not included
          */
         @Json(name = "must-unless-documented")
         MUST_UNLESS_DOCUMENTED,
@@ -329,13 +346,15 @@ public class CodeSystems {
         ALL,
 
         /**
-         * All the actions in the group are meant to be chosen as a single unit: either all must be selected by the end user, or none may be selected
+         * All the actions in the group are meant to be chosen as a single unit: either all must be
+         * selected by the end user, or none may be selected
          */
         @Json(name = "all-or-none")
         ALL_OR_NONE,
 
         /**
-         * The end user must choose one and only one of the selectable actions in the group. The user may not choose none of the actions in the group
+         * The end user must choose one and only one of the selectable actions in the group. The
+         * user may not choose none of the actions in the group
          */
         @Json(name = "exactly-one")
         EXACTLY_ONE,
@@ -685,13 +704,15 @@ public class CodeSystems {
         CONTAINED,
 
         /**
-         * The reference to a resource that has to be resolved externally to the resource that includes the reference.
+         * The reference to a resource that has to be resolved externally to the resource that
+         * includes the reference.
          */
         @Json(name = "referenced")
         REFERENCED,
 
         /**
-         * The resource the reference points to will be found in the same bundle as the resource that includes the reference.
+         * The resource the reference points to will be found in the same bundle as the resource
+         * that includes the reference.
          */
         @Json(name = "bundled")
         BUNDLED,
@@ -717,45 +738,56 @@ public class CodeSystems {
         MEDICATION,
 
         /**
-         * Any substances that are encountered in the environment, including any substance not already classified as food, medication, or biologic.
+         * Any substances that are encountered in the environment, including any substance not
+         * already classified as food, medication, or biologic.
          */
         @Json(name = "environment")
         ENVIRONMENT,
 
         /**
-         * A preparation that is synthesized from living organisms or their products, especially a human or animal protein, such as a hormone or antitoxin, that is used as a diagnostic, preventive, or therapeutic agent. Examples of biologic medications include: vaccines; allergenic extracts, which are used for both diagnosis and treatment (for example, allergy shots); gene therapies; cellular therapies.  There are other biologic products, such as tissues, that are not typically associated with allergies.
+         * A preparation that is synthesized from living organisms or their products, especially a
+         * human or animal protein, such as a hormone or antitoxin, that is used as a diagnostic,
+         * preventive, or therapeutic agent. Examples of biologic medications include: vaccines;
+         * allergenic extracts, which are used for both diagnosis and treatment (for example,
+         * allergy shots); gene therapies; cellular therapies.  There are other biologic products,
+         * such as tissues, that are not typically associated with allergies.
          */
         @Json(name = "biologic")
         BIOLOGIC,
     }
 
     /**
-     * Statement about the degree of clinical certainty that a specific substance was the cause of the manifestation in a reaction event.
+     * Statement about the degree of clinical certainty that a specific substance was the cause of
+     * the manifestation in a reaction event.
      *
      * @see <a href="http://hl7.org/fhir/reaction-event-certainty">AllergyIntoleranceCertainty</a>
      */
     public enum AllergyIntoleranceCertainty {
 
         /**
-         * There is a low level of clinical certainty that the reaction was caused by the identified substance.
+         * There is a low level of clinical certainty that the reaction was caused by the identified
+         * substance.
          */
         @Json(name = "unlikely")
         UNLIKELY,
 
         /**
-         * There is a high level of clinical certainty that the reaction was caused by the identified substance.
+         * There is a high level of clinical certainty that the reaction was caused by the
+         * identified substance.
          */
         @Json(name = "likely")
         LIKELY,
 
         /**
-         * There is a very high level of clinical certainty that the reaction was due to the identified substance, which may include clinical evidence by testing or rechallenge.
+         * There is a very high level of clinical certainty that the reaction was due to the
+         * identified substance, which may include clinical evidence by testing or rechallenge.
          */
         @Json(name = "confirmed")
         CONFIRMED,
 
         /**
-         * The clinical certainty that the reaction was caused by the identified substance is unknown.  It is an explicit assertion that certainty is not known.
+         * The clinical certainty that the reaction was caused by the identified substance is
+         * unknown.  It is an explicit assertion that certainty is not known.
          */
         @Json(name = "unknown")
         UNKNOWN,
@@ -781,27 +813,31 @@ public class CodeSystems {
         INACTIVE,
 
         /**
-         * A reaction to the identified substance has been clinically reassessed by testing or re-exposure and considered to be resolved.
+         * A reaction to the identified substance has been clinically reassessed by testing or
+         * re-exposure and considered to be resolved.
          */
         @Json(name = "resolved")
         RESOLVED,
     }
 
     /**
-     * Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance.
+     * Estimate of the potential clinical harm, or seriousness, of a reaction to an identified
+     * substance.
      *
      * @see <a href="http://hl7.org/fhir/allergy-intolerance-criticality">AllergyIntoleranceCriticality</a>
      */
     public enum AllergyIntoleranceCriticality {
 
         /**
-         * Worst case result of a future exposure is not assessed to be life-threatening or having high potential for organ system failure.
+         * Worst case result of a future exposure is not assessed to be life-threatening or having
+         * high potential for organ system failure.
          */
         @Json(name = "low")
         LOW,
 
         /**
-         * Worst case result of a future exposure is assessed to be life-threatening or having high potential for organ system failure.
+         * Worst case result of a future exposure is assessed to be life-threatening or having high
+         * potential for organ system failure.
          */
         @Json(name = "high")
         HIGH,
@@ -814,7 +850,8 @@ public class CodeSystems {
     }
 
     /**
-     * Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.
+     * Clinical assessment of the severity of a reaction event as a whole, potentially considering
+     * multiple different manifestations.
      *
      * @see <a href="http://hl7.org/fhir/reaction-event-severity">AllergyIntoleranceSeverity</a>
      */
@@ -840,7 +877,8 @@ public class CodeSystems {
     }
 
     /**
-     * The risk of an adverse reaction (allergy or intolerance) for this patient upon exposure to the substance (including pharmaceutical products).
+     * The risk of an adverse reaction (allergy or intolerance) for this patient upon exposure to
+     * the substance (including pharmaceutical products).
      *
      * @see <a href="http://hl7.org/fhir/allerg-intol-substance-exp-risk">AllergyIntoleranceSubstanceExposureRisk</a>
      */
@@ -853,7 +891,8 @@ public class CodeSystems {
         KNOWN_REACTION_RISK,
 
         /**
-         * No known risk of allergy or intolerance reaction upon exposure to the specified substance.
+         * No known risk of allergy or intolerance reaction upon exposure to the specified
+         * substance.
          */
         @Json(name = "no-known-reaction-risk")
         NO_KNOWN_REACTION_RISK,
@@ -867,39 +906,48 @@ public class CodeSystems {
     public enum AllergyIntoleranceType {
 
         /**
-         * A propensity for hypersensitivity reaction(s) to a substance.  These reactions are most typically type I hypersensitivity, plus other "allergy-like" reactions, including pseudoallergy.
+         * A propensity for hypersensitivity reaction(s) to a substance.  These reactions are most
+         * typically type I hypersensitivity, plus other "allergy-like" reactions, including
+         * pseudoallergy.
          */
         @Json(name = "allergy")
         ALLERGY,
 
         /**
-         * A propensity for adverse reactions to a substance that is not judged to be allergic or "allergy-like".  These reactions are typically (but not necessarily) non-immune.  They are to some degree idiosyncratic and/or individually specific (i.e. are not a reaction that is expected to occur with most or all patients given similar circumstances).
+         * A propensity for adverse reactions to a substance that is not judged to be allergic or
+         * "allergy-like".  These reactions are typically (but not necessarily) non-immune.  They
+         * are to some degree idiosyncratic and/or individually specific (i.e. are not a reaction
+         * that is expected to occur with most or all patients given similar circumstances).
          */
         @Json(name = "intolerance")
         INTOLERANCE,
     }
 
     /**
-     * Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance.
+     * Assertion about certainty associated with a propensity, or potential risk, of a reaction to
+     * the identified substance.
      *
      * @see <a href="http://hl7.org/fhir/allergy-verification-status">AllergyIntoleranceVerificationStatus</a>
      */
     public enum AllergyIntoleranceVerificationStatus {
 
         /**
-         * A low level of certainty about the propensity for a reaction to the identified substance.
+         * A low level of certainty about the propensity for a reaction to the identified
+         * substance.
          */
         @Json(name = "unconfirmed")
         UNCONFIRMED,
 
         /**
-         * A high level of certainty about the propensity for a reaction to the identified substance, which may include clinical evidence by testing or rechallenge.
+         * A high level of certainty about the propensity for a reaction to the identified
+         * substance, which may include clinical evidence by testing or rechallenge.
          */
         @Json(name = "confirmed")
         CONFIRMED,
 
         /**
-         * A propensity for a reaction to the identified substance has been disproven with a high level of clinical certainty, which may include testing or rechallenge, and is refuted.
+         * A propensity for a reaction to the identified substance has been disproven with a high
+         * level of clinical certainty, which may include testing or rechallenge, and is refuted.
          */
         @Json(name = "refuted")
         REFUTED,
@@ -919,19 +967,22 @@ public class CodeSystems {
     public enum AppointmentStatus {
 
         /**
-         * None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time may not be set yet.
+         * None of the participant(s) have finalized their acceptance of the appointment request,
+         * and the start/end time may not be set yet.
          */
         @Json(name = "proposed")
         PROPOSED,
 
         /**
-         * Some or all of the participant(s) have not finalized their acceptance of the appointment request.
+         * Some or all of the participant(s) have not finalized their acceptance of the appointment
+         * request.
          */
         @Json(name = "pending")
         PENDING,
 
         /**
-         * All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.
+         * All participant(s) have been considered and the appointment is confirmed to go ahead at
+         * the date/times specified.
          */
         @Json(name = "booked")
         BOOKED,
@@ -955,7 +1006,8 @@ public class CodeSystems {
         CANCELLED,
 
         /**
-         * Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).
+         * Some or all of the participant(s) have not/did not appear for the appointment (usually
+         * the patient).
          */
         @Json(name = "noshow")
         NOSHOW,
@@ -1173,7 +1225,8 @@ public class CodeSystems {
         D,
 
         /**
-         * Perform a system or application function such as log-on, program execution or use of an object's method, or perform a query/search operation.
+         * Perform a system or application function such as log-on, program execution or use of an
+         * object's method, or perform a query/search operation.
          */
         @Json(name = "E")
         E,
@@ -1193,19 +1246,24 @@ public class CodeSystems {
         REQUIRED,
 
         /**
-         * To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.
+         * To be conformant, the concept in this element SHALL be from the specified value set if
+         * any of the codes within the value set can apply to the concept being communicated.  If
+         * the value set does not cover the concept (based on human review), alternate codings (or,
+         * data type allowing, text) may be included instead.
          */
         @Json(name = "extensible")
         EXTENSIBLE,
 
         /**
-         * Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.
+         * Instances are encouraged to draw from the specified codes for interoperability purposes
+         * but are not required to do so to be considered conformant.
          */
         @Json(name = "preferred")
         PREFERRED,
 
         /**
-         * Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.
+         * Instances are not expected or even encouraged to draw from the specified value set.  The
+         * value set merely provides examples of the types of concepts intended to be included.
          */
         @Json(name = "example")
         EXAMPLE,
@@ -1237,19 +1295,22 @@ public class CodeSystems {
         TRANSACTION,
 
         /**
-         * The bundle is a transaction response. Because the response is a transaction response, the transaction has succeeded, and all responses are error free.
+         * The bundle is a transaction response. Because the response is a transaction response, the
+         * transaction has succeeded, and all responses are error free.
          */
         @Json(name = "transaction-response")
         TRANSACTION_RESPONSE,
 
         /**
-         * The bundle is a transaction - intended to be processed by a server as a group of actions.
+         * The bundle is a transaction - intended to be processed by a server as a group of
+         * actions.
          */
         @Json(name = "batch")
         BATCH,
 
         /**
-         * The bundle is a batch response. Note that as a batch, some responses may indicate failure and others success.
+         * The bundle is a batch response. Note that as a batch, some responses may indicate failure
+         * and others success.
          */
         @Json(name = "batch-response")
         BATCH_RESPONSE,
@@ -1261,13 +1322,15 @@ public class CodeSystems {
         HISTORY,
 
         /**
-         * The bundle is a list of resources returned as a result of a search/query interaction, operation, or message.
+         * The bundle is a list of resources returned as a result of a search/query interaction,
+         * operation, or message.
          */
         @Json(name = "searchset")
         SEARCHSET,
 
         /**
-         * The bundle is a set of resources collected into a single package for ease of distribution.
+         * The bundle is a set of resources collected into a single package for ease of
+         * distribution.
          */
         @Json(name = "collection")
         COLLECTION,
@@ -1281,19 +1344,22 @@ public class CodeSystems {
     public enum CapabilityStatementKind {
 
         /**
-         * The CapabilityStatement instance represents the present capabilities of a specific system instance.  This is the kind returned by OPTIONS for a FHIR server end-point.
+         * The CapabilityStatement instance represents the present capabilities of a specific system
+         * instance.  This is the kind returned by OPTIONS for a FHIR server end-point.
          */
         @Json(name = "instance")
         INSTANCE,
 
         /**
-         * The CapabilityStatement instance represents the capabilities of a system or piece of software, independent of a particular installation.
+         * The CapabilityStatement instance represents the capabilities of a system or piece of
+         * software, independent of a particular installation.
          */
         @Json(name = "capability")
         CAPABILITY,
 
         /**
-         * The CapabilityStatement instance represents a set of requirements for other systems to meet; e.g. as part of an implementation guide or 'request for proposal'.
+         * The CapabilityStatement instance represents a set of requirements for other systems to
+         * meet; e.g. as part of an implementation guide or 'request for proposal'.
          */
         @Json(name = "requirements")
         REQUIREMENTS,
@@ -1325,7 +1391,8 @@ public class CodeSystems {
         IN_PROGRESS,
 
         /**
-         * Activity was started but has temporarily ceased with an expectation of resumption at a future time.
+         * Activity was started but has temporarily ceased with an expectation of resumption at a
+         * future time.
          */
         @Json(name = "on-hold")
         ON_HOLD,
@@ -1337,7 +1404,8 @@ public class CodeSystems {
         COMPLETED,
 
         /**
-         * The activities have been ended prior to completion (perhaps even before they were started).
+         * The activities have been ended prior to completion (perhaps even before they were
+         * started).
          */
         @Json(name = "cancelled")
         CANCELLED,
@@ -1357,13 +1425,15 @@ public class CodeSystems {
     public enum CarePlanIntent {
 
         /**
-         * The care plan is a suggestion made by someone/something that doesn't have an intention to ensure it occurs and without providing an authorization to act
+         * The care plan is a suggestion made by someone/something that doesn't have an intention to
+         * ensure it occurs and without providing an authorization to act
          */
         @Json(name = "proposal")
         PROPOSAL,
 
         /**
-         * The care plan represents an intention to ensure something occurs without providing an authorization for others to act
+         * The care plan represents an intention to ensure something occurs without providing an
+         * authorization for others to act
          */
         @Json(name = "plan")
         PLAN,
@@ -1375,7 +1445,8 @@ public class CodeSystems {
         ORDER,
 
         /**
-         * The care plan represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.
+         * The care plan represents a component or option for a RequestGroup that establishes
+         * timing, conditionality and/or other constraints among a set of requests.
          * <p>
          * Refer to [[[RequestGroup]]] for additional information on how this status is used
          */
@@ -1384,7 +1455,8 @@ public class CodeSystems {
     }
 
     /**
-     * Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.
+     * Indicates whether the plan is currently being acted upon, represents future intentions or is
+     * now a historical record.
      *
      * @see <a href="http://hl7.org/fhir/care-plan-status">CarePlanStatus</a>
      */
@@ -1421,7 +1493,8 @@ public class CodeSystems {
         ENTERED_IN_ERROR,
 
         /**
-         * The plan has been terminated prior to reaching completion (though it may have been replaced by a new plan).
+         * The plan has been terminated prior to reaching completion (though it may have been
+         * replaced by a new plan).
          */
         @Json(name = "cancelled")
         CANCELLED,
@@ -1441,37 +1514,52 @@ public class CodeSystems {
     public enum CareTeamCategory {
 
         /**
-         * This type of team focuses on one specific type of incident, which is non-patient specific. The incident is determined by the context of use.  For example, code team (code red, code blue, medical emergency treatment) or the PICC line team.
+         * This type of team focuses on one specific type of incident, which is non-patient
+         * specific. The incident is determined by the context of use.  For example, code team (code
+         * red, code blue, medical emergency treatment) or the PICC line team.
          */
         @Json(name = "event")
         EVENT,
 
         /**
-         * This type of team focuses on one specific encounter. The encounter is determined by the context of use.  For example, during an inpatient encounter, the nutrition support care team
+         * This type of team focuses on one specific encounter. The encounter is determined by the
+         * context of use.  For example, during an inpatient encounter, the nutrition support care
+         * team
          */
         @Json(name = "encounter")
         ENCOUNTER,
 
         /**
-         * This type of team focuses on one specific episode of care with a defined time period or self-limiting process (e.g. 10 visits). The episode of care is determined by the context of use.  For example, a maternity care team over 9 months.
+         * This type of team focuses on one specific episode of care with a defined time period or
+         * self-limiting process (e.g. 10 visits). The episode of care is determined by the context
+         * of use.  For example, a maternity care team over 9 months.
          */
         @Json(name = "episode")
         EPISODE,
 
         /**
-         * This type of team focuses on overall care coordination managing one or more conditions across the continuum of care ensuring there are smooth transitions of care. The members of the team are determined or selected by an individual or organization. When determined by an organization, the team may be assigned or based on the person's enrollment in a particular program. For example, disease management team or patient centered medical home team.
+         * This type of team focuses on overall care coordination managing one or more conditions
+         * across the continuum of care ensuring there are smooth transitions of care. The members
+         * of the team are determined or selected by an individual or organization. When determined
+         * by an organization, the team may be assigned or based on the person's enrollment in a
+         * particular program. For example, disease management team or patient centered medical home
+         * team.
          */
         @Json(name = "longitudinal")
         LONGITUDINAL,
 
         /**
-         * This type of team focuses on one specific condition. The condition is determined by the context of use.  For example, a disease management team focused on one condition (e.g. diabetes).
+         * This type of team focuses on one specific condition. The condition is determined by the
+         * context of use.  For example, a disease management team focused on one condition (e.g.
+         * diabetes).
          */
         @Json(name = "condition")
         CONDITION,
 
         /**
-         * This type of team is responsible for establishing, conducting, coordinating and monitoring the outcomes of clinical trials. The team focuses on research, clinical care and education.
+         * This type of team is responsible for establishing, conducting, coordinating and
+         * monitoring the outcomes of clinical trials. The team focuses on research, clinical care
+         * and education.
          */
         @Json(name = "clinical-research")
         CLINICAL_RESEARCH,
@@ -1485,7 +1573,8 @@ public class CodeSystems {
     public enum CareTeamStatus {
 
         /**
-         * The care team has been drafted and proposed, but not yet participating in the coordination and delivery of care.
+         * The care team has been drafted and proposed, but not yet participating in the
+         * coordination and delivery of care.
          */
         @Json(name = "proposed")
         PROPOSED,
@@ -1497,13 +1586,15 @@ public class CodeSystems {
         ACTIVE,
 
         /**
-         * The care team is temporarily on hold or suspended and not participating in the coordination and delivery of care.
+         * The care team is temporarily on hold or suspended and not participating in the
+         * coordination and delivery of care.
          */
         @Json(name = "suspended")
         SUSPENDED,
 
         /**
-         * The care team was, but is no longer, participating in the coordination and delivery of care.
+         * The care team was, but is no longer, participating in the coordination and delivery of
+         * care.
          */
         @Json(name = "inactive")
         INACTIVE,
@@ -1523,7 +1614,8 @@ public class CodeSystems {
     public enum ChargeItemStatus {
 
         /**
-         * The charge item has been entered, but the charged service is not  yet complete, so it shall not be billed yet but might be used in the context of pre-authorization
+         * The charge item has been entered, but the charged service is not  yet complete, so it
+         * shall not be billed yet but might be used in the context of pre-authorization
          */
         @Json(name = "planned")
         PLANNED,
@@ -1535,7 +1627,8 @@ public class CodeSystems {
         BILLABLE,
 
         /**
-         * The charge item has been determined to be not billable (e.g. due to rules associated with the billing code)
+         * The charge item has been determined to be not billable (e.g. due to rules associated with
+         * the billing code)
          */
         @Json(name = "not-billable")
         NOT_BILLABLE,
@@ -1547,7 +1640,9 @@ public class CodeSystems {
         ABORTED,
 
         /**
-         * The charge item has been billed (e.g. a billing engine has generated financial transactions by applying the associated ruled for the charge item to the context of the Encounter, and placed them into Claims/Invoices
+         * The charge item has been billed (e.g. a billing engine has generated financial
+         * transactions by applying the associated ruled for the charge item to the context of the
+         * Encounter, and placed them into Claims/Invoices
          */
         @Json(name = "billed")
         BILLED,
@@ -1559,7 +1654,9 @@ public class CodeSystems {
         ENTERED_IN_ERROR,
 
         /**
-         * The authoring system does not know which of the status values currently applies for this charge item  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+         * The authoring system does not know which of the status values currently applies for this
+         * charge item  Note: This concept is not to be used for "other" - one of the listed
+         * statuses is presumed to apply, it's just not known which one.
          */
         @Json(name = "unknown")
         UNKNOWN,
@@ -1631,7 +1728,8 @@ public class CodeSystems {
         CLASSIFICATION,
 
         /**
-         * Indicates the useContext is a context - a domain of use - e.g. Particular country, organization or system
+         * Indicates the useContext is a context - a domain of use - e.g. Particular country,
+         * organization or system
          */
         @Json(name = "context")
         CONTEXT,
@@ -1657,14 +1755,16 @@ public class CodeSystems {
         COMPLETED,
 
         /**
-         * This assessment was never actually done and the record is erroneous (e.g. Wrong patient).
+         * This assessment was never actually done and the record is erroneous (e.g. Wrong
+         * patient).
          */
         @Json(name = "entered-in-error")
         ENTERED_IN_ERROR,
     }
 
     /**
-     * How much of the content of the code system - the concepts and codes it defines - are represented in a code system resource
+     * How much of the content of the code system - the concepts and codes it defines - are
+     * represented in a code system resource
      *
      * @see <a href="http://hl7.org/fhir/codesystem-content-mode">CodeSystemContentMode</a>
      */
@@ -1703,13 +1803,17 @@ public class CodeSystems {
     public enum CodeSystemHierarchyMeaning {
 
         /**
-         * No particular relationship between the concepts can be assumed, except what can be determined by inspection of the definitions of the elements (possible reasons to use this: importing from a source where this is not defined, or where various parts of the hierarchy have different meanings)
+         * No particular relationship between the concepts can be assumed, except what can be
+         * determined by inspection of the definitions of the elements (possible reasons to use
+         * this: importing from a source where this is not defined, or where various parts of the
+         * hierarchy have different meanings)
          */
         @Json(name = "grouped-by")
         GROUPED_BY,
 
         /**
-         * A hierarchy where the child concepts have an IS-A relationship with the parents - that is, all the properties of the parent are also true for its child concepts
+         * A hierarchy where the child concepts have an IS-A relationship with the parents - that
+         * is, all the properties of the parent are also true for its child concepts
          */
         @Json(name = "is-a")
         IS_A,
@@ -1721,7 +1825,9 @@ public class CodeSystems {
         PART_OF,
 
         /**
-         * Child concepts in the hierarchy may have only one parent, and there is a presumption that the code system is a "closed world" meaning all things must be in the hierarchy. This results in concepts such as "not otherwise classified."
+         * Child concepts in the hierarchy may have only one parent, and there is a presumption that
+         * the code system is a "closed world" meaning all things must be in the hierarchy. This
+         * results in concepts such as "not otherwise classified."
          */
         @Json(name = "classified-with")
         CLASSIFIED_WITH,
@@ -1849,25 +1955,30 @@ public class CodeSystems {
     public enum CompositeMeasureScoring {
 
         /**
-         * Opportunity scoring combines the scores from component measures by combining the numerators and denominators for each component
+         * Opportunity scoring combines the scores from component measures by combining the
+         * numerators and denominators for each component
          */
         @Json(name = "opportunity")
         OPPORTUNITY,
 
         /**
-         * All-or-nothing scoring includes an individual in the numerator of the composite measure if they are in the numerators of all of the component measures in which they are in the denominator
+         * All-or-nothing scoring includes an individual in the numerator of the composite measure
+         * if they are in the numerators of all of the component measures in which they are in the
+         * denominator
          */
         @Json(name = "all-or-nothing")
         ALL_OR_NOTHING,
 
         /**
-         * Linear scoring gives an individual a score based on the number of numerators in which they appear
+         * Linear scoring gives an individual a score based on the number of numerators in which
+         * they appear
          */
         @Json(name = "linear")
         LINEAR,
 
         /**
-         * Weighted scoring gives an individual a score based on a weighted factor for each component numerator in which they appear
+         * Weighted scoring gives an individual a score based on a weighted factor for each
+         * component numerator in which they appear
          */
         @Json(name = "weighted")
         WEIGHTED,
@@ -1899,7 +2010,8 @@ public class CodeSystems {
         LEGAL,
 
         /**
-         * The organization authenticated the content as consistent with their policies and procedures.
+         * The organization authenticated the content as consistent with their policies and
+         * procedures.
          */
         @Json(name = "official")
         OFFICIAL,
@@ -1913,25 +2025,31 @@ public class CodeSystems {
     public enum CompositionStatus {
 
         /**
-         * This is a preliminary composition or document (also known as initial or interim). The content may be incomplete or unverified.
+         * This is a preliminary composition or document (also known as initial or interim). The
+         * content may be incomplete or unverified.
          */
         @Json(name = "preliminary")
         PRELIMINARY,
 
         /**
-         * This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.
+         * This version of the composition is complete and verified by an appropriate person and no
+         * further work is planned. Any subsequent updates would be on a new version of the
+         * composition.
          */
         @Json(name = "final")
         FINAL,
 
         /**
-         * The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as "final" and the composition is complete and verified by an authorized person.
+         * The composition content or the referenced resources have been modified (edited or added
+         * to) subsequent to being released as "final" and the composition is complete and verified
+         * by an authorized person.
          */
         @Json(name = "amended")
         AMENDED,
 
         /**
-         * The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.
+         * The composition or document was originally created/issued in error, and this is an
+         * amendment that marks that the entire series should not be considered as valid.
          */
         @Json(name = "entered-in-error")
         ENTERED_IN_ERROR,
@@ -1945,19 +2063,23 @@ public class CodeSystems {
     public enum ConceptMapEquivalence {
 
         /**
-         * The concepts are related to each other, and have at least some overlap in meaning, but the exact relationship is not known
+         * The concepts are related to each other, and have at least some overlap in meaning, but
+         * the exact relationship is not known
          */
         @Json(name = "relatedto")
         RELATEDTO,
 
         /**
-         * The definitions of the concepts mean the same thing (including when structural implications of meaning are considered) (i.e. extensionally identical).
+         * The definitions of the concepts mean the same thing (including when structural
+         * implications of meaning are considered) (i.e. extensionally identical).
          */
         @Json(name = "equivalent")
         EQUIVALENT,
 
         /**
-         * The definitions of the concepts are exactly the same (i.e. only grammatical differences) and structural implications of meaning are identical or irrelevant (i.e. intentionally identical).
+         * The definitions of the concepts are exactly the same (i.e. only grammatical differences)
+         * and structural implications of meaning are identical or irrelevant (i.e. intentionally
+         * identical).
          */
         @Json(name = "equal")
         EQUAL,
@@ -1969,25 +2091,33 @@ public class CodeSystems {
         WIDER,
 
         /**
-         * The target mapping subsumes the meaning of the source concept (e.g. the source is-a target).
+         * The target mapping subsumes the meaning of the source concept (e.g. the source is-a
+         * target).
          */
         @Json(name = "subsumes")
         SUBSUMES,
 
         /**
-         * The target mapping is narrower in meaning than the source concept. The sense in which the mapping is narrower SHALL be described in the comments in this case, and applications should be careful when attempting to use these mappings operationally.
+         * The target mapping is narrower in meaning than the source concept. The sense in which the
+         * mapping is narrower SHALL be described in the comments in this case, and applications
+         * should be careful when attempting to use these mappings operationally.
          */
         @Json(name = "narrower")
         NARROWER,
 
         /**
-         * The target mapping specializes the meaning of the source concept (e.g. the target is-a source).
+         * The target mapping specializes the meaning of the source concept (e.g. the target is-a
+         * source).
          */
         @Json(name = "specializes")
         SPECIALIZES,
 
         /**
-         * The target mapping overlaps with the source concept, but both source and target cover additional meaning, or the definitions are imprecise and it is uncertain whether they have the same boundaries to their meaning. The sense in which the mapping is narrower SHALL be described in the comments in this case, and applications should be careful when attempting to use these mappings operationally.
+         * The target mapping overlaps with the source concept, but both source and target cover
+         * additional meaning, or the definitions are imprecise and it is uncertain whether they
+         * have the same boundaries to their meaning. The sense in which the mapping is narrower
+         * SHALL be described in the comments in this case, and applications should be careful when
+         * attempting to use these mappings operationally.
          */
         @Json(name = "inexact")
         INEXACT,
@@ -1999,7 +2129,8 @@ public class CodeSystems {
         UNMATCHED,
 
         /**
-         * This is an explicit assertion that there is no mapping between the source and target concept.
+         * This is an explicit assertion that there is no mapping between the source and target
+         * concept.
          */
         @Json(name = "disjoint")
         DISJOINT,
@@ -2032,7 +2163,8 @@ public class CodeSystems {
     }
 
     /**
-     * Enumeration indicating whether the condition is currently active, inactive, or has been resolved.
+     * Enumeration indicating whether the condition is currently active, inactive, or has been
+     * resolved.
      *
      * @see <a href="http://hl7.org/fhir/condition-state">ConditionState</a>
      */
@@ -2058,7 +2190,8 @@ public class CodeSystems {
     }
 
     /**
-     * The verification status to support or decline the clinical status of the condition or diagnosis.
+     * The verification status to support or decline the clinical status of the condition or
+     * diagnosis.
      *
      * @see <a href="http://hl7.org/fhir/condition-ver-status">ConditionVerificationStatus</a>
      */
@@ -2071,13 +2204,15 @@ public class CodeSystems {
         PROVISIONAL,
 
         /**
-         * One of a set of potential (and typically mutually exclusive) diagnoses asserted to further guide the diagnostic process and preliminary treatment.
+         * One of a set of potential (and typically mutually exclusive) diagnoses asserted to
+         * further guide the diagnostic process and preliminary treatment.
          */
         @Json(name = "differential")
         DIFFERENTIAL,
 
         /**
-         * There is sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
+         * There is sufficient diagnostic and/or clinical evidence to treat this as a confirmed
+         * condition.
          */
         @Json(name = "confirmed")
         CONFIRMED,
@@ -2095,7 +2230,8 @@ public class CodeSystems {
         ENTERED_IN_ERROR,
 
         /**
-         * The condition status is unknown.  Note that "unknown" is a value of last resort and every attempt should be made to provide a meaningful value other than "unknown".
+         * The condition status is unknown.  Note that "unknown" is a value of last resort and every
+         * attempt should be made to provide a meaningful value other than "unknown".
          */
         @Json(name = "unknown")
         UNKNOWN,
@@ -2121,7 +2257,8 @@ public class CodeSystems {
         SINGLE,
 
         /**
-         * Conditional deletes are supported, and multiple resources can be deleted in a single interaction.
+         * Conditional deletes are supported, and multiple resources can be deleted in a single
+         * interaction.
          */
         @Json(name = "multiple")
         MULTIPLE,
@@ -2153,14 +2290,16 @@ public class CodeSystems {
         NOT_MATCH,
 
         /**
-         * Conditional reads are supported, with both If-Modified-Since and If-None-Match HTTP Headers.
+         * Conditional reads are supported, with both If-Modified-Since and If-None-Match HTTP
+         * Headers.
          */
         @Json(name = "full-support")
         FULL_SUPPORT,
     }
 
     /**
-     * Indicates the degree of adherence to a specified behavior or capability expected for a system to be deemed conformant with a specification.
+     * Indicates the degree of adherence to a specified behavior or capability expected for a system
+     * to be deemed conformant with a specification.
      *
      * @see <a href="http://hl7.org/fhir/conformance-expectation">ConformanceExpectation</a>
      */
@@ -2173,19 +2312,22 @@ public class CodeSystems {
         SHALL,
 
         /**
-         * Support for the specified capability is strongly encouraged, and failure to support it should only occur after careful consideration.
+         * Support for the specified capability is strongly encouraged, and failure to support it
+         * should only occur after careful consideration.
          */
         @Json(name = "SHOULD")
         SHOULD,
 
         /**
-         * Support for the specified capability is not necessary to be considered conformant, and the requirement should be considered strictly optional.
+         * Support for the specified capability is not necessary to be considered conformant, and
+         * the requirement should be considered strictly optional.
          */
         @Json(name = "MAY")
         MAY,
 
         /**
-         * Support for the specified capability is strongly discouraged and should occur only after careful consideration.
+         * Support for the specified capability is strongly discouraged and should occur only after
+         * careful consideration.
          */
         @Json(name = "SHOULD-NOT")
         SHOULD_NOT,
@@ -2211,7 +2353,8 @@ public class CodeSystems {
         RELATED,
 
         /**
-         * The consent applies directly to the instance of the resource and instances that refer to it
+         * The consent applies directly to the instance of the resource and instances that refer to
+         * it
          */
         @Json(name = "dependents")
         DEPENDENTS,
@@ -2257,7 +2400,8 @@ public class CodeSystems {
         DRAFT,
 
         /**
-         * The consent has been proposed but not yet agreed to by all parties. The negotiation stage.
+         * The consent has been proposed but not yet agreed to by all parties. The negotiation
+         * stage.
          */
         @Json(name = "proposed")
         PROPOSED,
@@ -2301,7 +2445,8 @@ public class CodeSystems {
         ERROR,
 
         /**
-         * If the constraint is violated, the resource is conformant, but it is not necessarily following best practice.
+         * If the constraint is violated, the resource is conformant, but it is not necessarily
+         * following best practice.
          */
         @Json(name = "warning")
         WARNING,
@@ -2315,13 +2460,15 @@ public class CodeSystems {
     public enum ContactPointSystem {
 
         /**
-         * The value is a telephone number used for voice calls. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required.
+         * The value is a telephone number used for voice calls. Use of full international numbers
+         * starting with + is recommended to enable automatic dialing support but not required.
          */
         @Json(name = "phone")
         PHONE,
 
         /**
-         * The value is a fax machine. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required.
+         * The value is a fax machine. Use of full international numbers starting with + is
+         * recommended to enable automatic dialing support but not required.
          */
         @Json(name = "fax")
         FAX,
@@ -2333,25 +2480,32 @@ public class CodeSystems {
         EMAIL,
 
         /**
-         * The value is a pager number. These may be local pager numbers that are only usable on a particular pager system.
+         * The value is a pager number. These may be local pager numbers that are only usable on a
+         * particular pager system.
          */
         @Json(name = "pager")
         PAGER,
 
         /**
-         * A contact that is not a phone, fax, pager or email address and is expressed as a URL.  This is intended for various personal contacts including blogs, Skype, Twitter, Facebook, etc. Do not use for email addresses.
+         * A contact that is not a phone, fax, pager or email address and is expressed as a URL.
+         * This is intended for various personal contacts including blogs, Skype, Twitter, Facebook,
+         * etc. Do not use for email addresses.
          */
         @Json(name = "url")
         URL,
 
         /**
-         * A contact that can be used for sending an sms message (e.g. mobide phones, some landlines)
+         * A contact that can be used for sending an sms message (e.g. mobide phones, some
+         * landlines)
          */
         @Json(name = "sms")
         SMS,
 
         /**
-         * A contact that is not a phone, fax, page or email address and is not expressible as a URL.  E.g. Internal mail address.  This SHOULD NOT be used for contacts that are expressible as a URL (e.g. Skype, Twitter, Facebook, etc.)  Extensions may be used to distinguish "other" contact types.
+         * A contact that is not a phone, fax, page or email address and is not expressible as a
+         * URL.  E.g. Internal mail address.  This SHOULD NOT be used for contacts that are
+         * expressible as a URL (e.g. Skype, Twitter, Facebook, etc.)  Extensions may be used to
+         * distinguish "other" contact types.
          */
         @Json(name = "other")
         OTHER,
@@ -2365,13 +2519,17 @@ public class CodeSystems {
     public enum ContactPointUse {
 
         /**
-         * A communication contact point at a home; attempted contacts for business purposes might intrude privacy and chances are one will contact family or other household members instead of the person one wishes to call. Typically used with urgent cases, or if no other contacts are available.
+         * A communication contact point at a home; attempted contacts for business purposes might
+         * intrude privacy and chances are one will contact family or other household members
+         * instead of the person one wishes to call. Typically used with urgent cases, or if no
+         * other contacts are available.
          */
         @Json(name = "home")
         HOME,
 
         /**
-         * An office contact point. First choice for business related contacts during business hours.
+         * An office contact point. First choice for business related contacts during business
+         * hours.
          */
         @Json(name = "work")
         WORK,
@@ -2389,7 +2547,9 @@ public class CodeSystems {
         OLD,
 
         /**
-         * A telecommunication device that moves and stays with its owner. May have characteristics of all other use codes, suitable for urgent matters, not the first choice for routine business.
+         * A telecommunication device that moves and stays with its owner. May have characteristics
+         * of all other use codes, suitable for urgent matters, not the first choice for routine
+         * business.
          */
         @Json(name = "mobile")
         MOBILE,
@@ -2541,13 +2701,15 @@ public class CodeSystems {
         ERROR,
 
         /**
-         * NaN, standing for not a number, is a numeric data type value representing an undefined or unrepresentable value.
+         * NaN, standing for not a number, is a numeric data type value representing an undefined or
+         * unrepresentable value.
          */
         @Json(name = "NaN")
         NAN,
 
         /**
-         * The value is not available because the observation procedure (test, etc.) was not performed.
+         * The value is not available because the observation procedure (test, etc.) was not
+         * performed.
          */
         @Json(name = "not-performed")
         NOT_PERFORMED,
@@ -2561,37 +2723,47 @@ public class CodeSystems {
     public enum DataElementStringency {
 
         /**
-         * The data element is sufficiently well-constrained that multiple pieces of data captured according to the constraints of the data element will be comparable (though in some cases, a degree of automated conversion/normalization may be required).
+         * The data element is sufficiently well-constrained that multiple pieces of data captured
+         * according to the constraints of the data element will be comparable (though in some
+         * cases, a degree of automated conversion/normalization may be required).
          */
         @Json(name = "comparable")
         COMPARABLE,
 
         /**
-         * The data element is fully specified down to a single value set, single unit of measure, single data type, etc.  Multiple pieces of data associated with this data element are fully comparable.
+         * The data element is fully specified down to a single value set, single unit of measure,
+         * single data type, etc.  Multiple pieces of data associated with this data element are
+         * fully comparable.
          */
         @Json(name = "fully-specified")
         FULLY_SPECIFIED,
 
         /**
-         * The data element allows multiple units of measure having equivalent meaning; e.g. "cc" (cubic centimeter) and "mL" (milliliter).
+         * The data element allows multiple units of measure having equivalent meaning; e.g. "cc"
+         * (cubic centimeter) and "mL" (milliliter).
          */
         @Json(name = "equivalent")
         EQUIVALENT,
 
         /**
-         * The data element allows multiple units of measure that are convertable between each other (e.g. inches and centimeters) and/or allows data to be captured in multiple value sets for which a known mapping exists allowing conversion of meaning.
+         * The data element allows multiple units of measure that are convertable between each other
+         * (e.g. inches and centimeters) and/or allows data to be captured in multiple value sets
+         * for which a known mapping exists allowing conversion of meaning.
          */
         @Json(name = "convertable")
         CONVERTABLE,
 
         /**
-         * A convertable data element where unit conversions are different only by a power of 10; e.g. g, mg, kg.
+         * A convertable data element where unit conversions are different only by a power of 10;
+         * e.g. g, mg, kg.
          */
         @Json(name = "scaleable")
         SCALEABLE,
 
         /**
-         * The data element is unconstrained in units, choice of data types and/or choice of vocabulary such that automated comparison of data captured using the data element is not possible.
+         * The data element is unconstrained in units, choice of data types and/or choice of
+         * vocabulary such that automated comparison of data captured using the data element is not
+         * possible.
          */
         @Json(name = "flexible")
         FLEXIBLE,
@@ -2605,7 +2777,10 @@ public class CodeSystems {
     public enum DataType {
 
         /**
-         * An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.
+         * An address expressed using postal conventions (as opposed to GPS or other location
+         * definition formats).  This data type may be used to convey addresses for use in
+         * delivering mail as well as for visiting locations which might not be valid for mail
+         * delivery.  There are a variety of postal address formats defined around the world.
          */
         @Json(name = "Address")
         ADDRESS,
@@ -2629,13 +2804,15 @@ public class CodeSystems {
         ATTACHMENT,
 
         /**
-         * Base definition for all elements that are defined inside a resource - but not those in a data type.
+         * Base definition for all elements that are defined inside a resource - but not those in a
+         * data type.
          */
         @Json(name = "BackboneElement")
         BACKBONEELEMENT,
 
         /**
-         * A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
+         * A concept that may be defined by a formal reference to a terminology or ontology or may
+         * be provided by text.
          */
         @Json(name = "CodeableConcept")
         CODEABLECONCEPT,
@@ -2653,25 +2830,30 @@ public class CodeSystems {
         CONTACTDETAIL,
 
         /**
-         * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
+         * Details for all kinds of technology mediated contact points for a person or organization,
+         * including telephone, email, etc.
          */
         @Json(name = "ContactPoint")
         CONTACTPOINT,
 
         /**
-         * A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.
+         * A contributor to the content of a knowledge asset, including authors, editors, reviewers,
+         * and endorsers.
          */
         @Json(name = "Contributor")
         CONTRIBUTOR,
 
         /**
-         * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
+         * A measured amount (or an amount that can potentially be measured). Note that measured
+         * amounts include amounts that are not precisely quantified, including amounts involving
+         * arbitrary units and floating currencies.
          */
         @Json(name = "Count")
         COUNT,
 
         /**
-         * Describes a required data item for evaluation in terms of the type of data, and optional code or date-based filters of the data.
+         * Describes a required data item for evaluation in terms of the type of data, and optional
+         * code or date-based filters of the data.
          */
         @Json(name = "DataRequirement")
         DATAREQUIREMENT,
@@ -2725,7 +2907,9 @@ public class CodeSystems {
         IDENTIFIER,
 
         /**
-         * The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.
+         * The metadata about a resource. This is content in the resource that is maintained by the
+         * infrastructure. Changes to the content may not always be associated with version changes
+         * to the resource.
          */
         @Json(name = "Meta")
         META,
@@ -2743,7 +2927,9 @@ public class CodeSystems {
         NARRATIVE,
 
         /**
-         * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
+         * The parameters to the module. This collection specifies both the input and output
+         * parameters. Input parameters are provided by the caller as part of the $evaluate
+         * operation. Output parameters are included in the GuidanceResponse.
          */
         @Json(name = "ParameterDefinition")
         PARAMETERDEFINITION,
@@ -2755,7 +2941,9 @@ public class CodeSystems {
         PERIOD,
 
         /**
-         * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
+         * A measured amount (or an amount that can potentially be measured). Note that measured
+         * amounts include amounts that are not precisely quantified, including amounts involving
+         * arbitrary units and floating currencies.
          */
         @Json(name = "Quantity")
         QUANTITY,
@@ -2779,19 +2967,24 @@ public class CodeSystems {
         REFERENCE,
 
         /**
-         * Related artifacts such as additional documentation, justification, or bibliographic references.
+         * Related artifacts such as additional documentation, justification, or bibliographic
+         * references.
          */
         @Json(name = "RelatedArtifact")
         RELATEDARTIFACT,
 
         /**
-         * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
+         * A series of measurements taken by a device, with upper and lower limits. There may be
+         * more than one dimension in the data.
          */
         @Json(name = "SampledData")
         SAMPLEDDATA,
 
         /**
-         * A digital signature along with supporting context. The signature may be electronic/cryptographic in nature, or a graphical image representing a hand-written signature, or a signature process. Different signature approaches have different utilities.
+         * A digital signature along with supporting context. The signature may be
+         * electronic/cryptographic in nature, or a graphical image representing a hand-written
+         * signature, or a signature process. Different signature approaches have different
+         * utilities.
          */
         @Json(name = "Signature")
         SIGNATURE,
@@ -2803,7 +2996,11 @@ public class CodeSystems {
         SIMPLEQUANTITY,
 
         /**
-         * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
+         * Specifies an event that may occur multiple times. Timing schedules are used to record
+         * when things are planned, expected or requested to occur. The most common usage is in
+         * dosage instructions for medications. They are also used when planning care of various
+         * kinds, and may be used for reporting the schedule to which past regular activities were
+         * carried out.
          */
         @Json(name = "Timing")
         TIMING,
@@ -2815,7 +3012,10 @@ public class CodeSystems {
         TRIGGERDEFINITION,
 
         /**
-         * Specifies clinical/business/etc metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
+         * Specifies clinical/business/etc metadata that can be used to retrieve, index and/or
+         * categorize an artifact. This metadata can either be specific to the applicable population
+         * (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting,
+         * provider of care).
          */
         @Json(name = "UsageContext")
         USAGECONTEXT,
@@ -2833,19 +3033,26 @@ public class CodeSystems {
         BOOLEAN,
 
         /**
-         * A string which has at least one character and no leading or trailing whitespace and where there is no whitespace other than single spaces in the contents
+         * A string which has at least one character and no leading or trailing whitespace and where
+         * there is no whitespace other than single spaces in the contents
          */
         @Json(name = "code")
         CODE,
 
         /**
-         * A date or partial date (e.g. just year or year + month). There is no time zone. The format is a union of the schema types gYear, gYearMonth and date.  Dates SHALL be valid dates.
+         * A date or partial date (e.g. just year or year + month). There is no time zone. The
+         * format is a union of the schema types gYear, gYearMonth and date.  Dates SHALL be valid
+         * dates.
          */
         @Json(name = "date")
         DATE,
 
         /**
-         * A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes are specified, a time zone SHALL be populated. The format is a union of the schema types gYear, gYearMonth, date and dateTime. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored.                 Dates SHALL be valid dates.
+         * A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes
+         * are specified, a time zone SHALL be populated. The format is a union of the schema types
+         * gYear, gYearMonth, date and dateTime. Seconds must be provided due to schema type
+         * constraints but may be zero-filled and may be ignored.                 Dates SHALL be
+         * valid dates.
          */
         @Json(name = "dateTime")
         DATETIME,
@@ -2857,7 +3064,9 @@ public class CodeSystems {
         DECIMAL,
 
         /**
-         * Any combination of letters, numerals, "-" and ".", with a length limit of 64 characters.  (This might be an integer, an unprefixed OID, UUID or any other identifier pattern that meets these constraints.)  Ids are case-insensitive.
+         * Any combination of letters, numerals, "-" and ".", with a length limit of 64 characters.
+         * (This might be an integer, an unprefixed OID, UUID or any other identifier pattern that
+         * meets these constraints.)  Ids are case-insensitive.
          */
         @Json(name = "id")
         ID,
@@ -2875,7 +3084,8 @@ public class CodeSystems {
         INTEGER,
 
         /**
-         * A string that may contain markdown syntax for optional processing by a mark down presentation engine
+         * A string that may contain markdown syntax for optional processing by a mark down
+         * presentation engine
          */
         @Json(name = "markdown")
         MARKDOWN,
@@ -3005,7 +3215,9 @@ public class CodeSystems {
         WITHDRAWN,
 
         /**
-         * The authoring system does not know which of the status values currently applies for this request.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+         * The authoring system does not know which of the status values currently applies for this
+         * request.  Note: This concept is not to be used for "other" - one of the listed statuses
+         * is presumed to apply, it's just not known which one.
          */
         @Json(name = "unknown")
         UNKNOWN,
@@ -3045,19 +3257,22 @@ public class CodeSystems {
     public enum DetectedIssueSeverity {
 
         /**
-         * Indicates the issue may be life-threatening or has the potential to cause permanent injury.
+         * Indicates the issue may be life-threatening or has the potential to cause permanent
+         * injury.
          */
         @Json(name = "high")
         HIGH,
 
         /**
-         * Indicates the issue may result in noticeable adverse consequences but is unlikely to be life-threatening or cause permanent injury.
+         * Indicates the issue may result in noticeable adverse consequences but is unlikely to be
+         * life-threatening or cause permanent injury.
          */
         @Json(name = "moderate")
         MODERATE,
 
         /**
-         * Indicates the issue may result in some adverse consequences but is unlikely to substantially affect the situation of the subject.
+         * Indicates the issue may result in some adverse consequences but is unlikely to
+         * substantially affect the situation of the subject.
          */
         @Json(name = "low")
         LOW,
@@ -3253,7 +3468,8 @@ public class CodeSystems {
         MEASUREMENT,
 
         /**
-         * DeviceObservations generated for this DeviceMetric is a setting that will influence the behavior of the Device.
+         * DeviceObservations generated for this DeviceMetric is a setting that will influence the
+         * behavior of the Device.
          */
         @Json(name = "setting")
         SETTING,
@@ -3360,7 +3576,8 @@ public class CodeSystems {
     }
 
     /**
-     * Codes for device specification types such as serial number, part number, hardware revision, software revision, etc.
+     * Codes for device specification types such as serial number, part number, hardware revision,
+     * software revision, etc.
      *
      * @see <a href="http://hl7.org/fhir/specification-type">DeviceSpecificationSpecType</a>
      */
@@ -3447,13 +3664,15 @@ public class CodeSystems {
         INTENDED,
 
         /**
-         * Actions implied by the statement have been permanently halted, before all of them occurred.
+         * Actions implied by the statement have been permanently halted, before all of them
+         * occurred.
          */
         @Json(name = "stopped")
         STOPPED,
 
         /**
-         * Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called "suspended".
+         * Actions implied by the statement have been temporarily halted, but are expected to
+         * continue later. May also be called "suspended".
          */
         @Json(name = "on-hold")
         ON_HOLD,
@@ -3473,7 +3692,8 @@ public class CodeSystems {
         REGISTERED,
 
         /**
-         * This is a partial (e.g. initial, interim or preliminary) report: data in the report may be incomplete or unverified.
+         * This is a partial (e.g. initial, interim or preliminary) report: data in the report may
+         * be incomplete or unverified.
          */
         @Json(name = "partial")
         PARTIAL,
@@ -3491,37 +3711,46 @@ public class CodeSystems {
         FINAL,
 
         /**
-         * Subsequent to being final, the report has been modified.  This includes any change in the results, diagnosis, narrative text, or other content of a report that has been issued.
+         * Subsequent to being final, the report has been modified.  This includes any change in the
+         * results, diagnosis, narrative text, or other content of a report that has been issued.
          */
         @Json(name = "amended")
         AMENDED,
 
         /**
-         * Subsequent to being final, the report has been modified  to correct an error in the report or referenced results.
+         * Subsequent to being final, the report has been modified  to correct an error in the
+         * report or referenced results.
          */
         @Json(name = "corrected")
         CORRECTED,
 
         /**
-         * Subsequent to being final, the report has been modified by adding new content. The existing content is unchanged.
+         * Subsequent to being final, the report has been modified by adding new content. The
+         * existing content is unchanged.
          */
         @Json(name = "appended")
         APPENDED,
 
         /**
-         * The report is unavailable because the measurement was not started or not completed (also sometimes called "aborted").
+         * The report is unavailable because the measurement was not started or not completed (also
+         * sometimes called "aborted").
          */
         @Json(name = "cancelled")
         CANCELLED,
 
         /**
-         * The report has been withdrawn following a previous final release.  This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be "cancelled" rather than "entered-in-error".)
+         * The report has been withdrawn following a previous final release.  This electronic record
+         * should never have existed, though it is possible that real-world decisions were based on
+         * it. (If real-world activity has occurred, the status should be "cancelled" rather than
+         * "entered-in-error".)
          */
         @Json(name = "entered-in-error")
         ENTERED_IN_ERROR,
 
         /**
-         * The authoring system does not know which of the status values currently applies for this request. Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+         * The authoring system does not know which of the status values currently applies for this
+         * request. Note: This concept is not to be used for "other" - one of the listed statuses is
+         * presumed to apply, it's just not known which one.
          */
         @Json(name = "unknown")
         UNKNOWN,
@@ -3535,7 +3764,8 @@ public class CodeSystems {
     public enum DigitalMediaType {
 
         /**
-         * The media consists of one or more unmoving images, including photographs, computer-generated graphs and charts, and scanned documents
+         * The media consists of one or more unmoving images, including photographs,
+         * computer-generated graphs and charts, and scanned documents
          */
         @Json(name = "photo")
         PHOTO,
@@ -3573,7 +3803,8 @@ public class CodeSystems {
         EXISTS,
 
         /**
-         * The slices have different values in the nominated element, as determined by testing them against the applicable ElementDefinition.pattern[x]
+         * The slices have different values in the nominated element, as determined by testing them
+         * against the applicable ElementDefinition.pattern[x]
          */
         @Json(name = "pattern")
         PATTERN,
@@ -3585,7 +3816,8 @@ public class CodeSystems {
         TYPE,
 
         /**
-         * The slices are differentiated by conformance of the nominated element to a specifed profile
+         * The slices are differentiated by conformance of the nominated element to a specifed
+         * profile
          */
         @Json(name = "profile")
         PROFILE,
@@ -3651,7 +3883,8 @@ public class CodeSystems {
         REPLACES,
 
         /**
-         * This document was generated by transforming the target document (e.g. format or language conversion).
+         * This document was generated by transforming the target document (e.g. format or language
+         * conversion).
          */
         @Json(name = "transforms")
         TRANSFORMS,
@@ -3685,7 +3918,8 @@ public class CodeSystems {
         /**
          * The patient is currently at this location, or was between the period specified.
          * <p>
-         * A system may update these records when the patient leaves the location to either reserved, or completed
+         * A system may update these records when the patient leaves the location to either
+         * reserved, or completed
          */
         @Json(name = "active")
         ACTIVE,
@@ -3719,19 +3953,22 @@ public class CodeSystems {
         PLANNED,
 
         /**
-         * The Patient is present for the encounter, however is not currently meeting with a practitioner.
+         * The Patient is present for the encounter, however is not currently meeting with a
+         * practitioner.
          */
         @Json(name = "arrived")
         ARRIVED,
 
         /**
-         * The patient has been assessed for the priority of their treatment based on the severity of their condition.
+         * The patient has been assessed for the priority of their treatment based on the severity
+         * of their condition.
          */
         @Json(name = "triaged")
         TRIAGED,
 
         /**
-         * The Encounter has begun and the patient is present / the practitioner and the patient are meeting.
+         * The Encounter has begun and the patient is present / the practitioner and the patient are
+         * meeting.
          */
         @Json(name = "in-progress")
         IN_PROGRESS,
@@ -3761,7 +3998,8 @@ public class CodeSystems {
         ENTERED_IN_ERROR,
 
         /**
-         * The encounter status is unknown. Note that "unknown" is a value of last resort and every attempt should be made to provide a meaningful value other than "unknown".
+         * The encounter status is unknown. Note that "unknown" is a value of last resort and every
+         * attempt should be made to provide a meaningful value other than "unknown".
          */
         @Json(name = "unknown")
         UNKNOWN,
@@ -3787,7 +4025,8 @@ public class CodeSystems {
         SUSPENDED,
 
         /**
-         * This endpoint has exceeded connectivity thresholds and is considered in an error state and should no longer be attempted to connect to until corrective action is taken
+         * This endpoint has exceeded connectivity thresholds and is considered in an error state
+         * and should no longer be attempted to connect to until corrective action is taken
          */
         @Json(name = "error")
         ERROR,
@@ -3819,13 +4058,17 @@ public class CodeSystems {
     public enum EpisodeOfCareStatus {
 
         /**
-         * This episode of care is planned to start at the date specified in the period.start. During this status, an organization may perform assessments to determine if the patient is eligible to receive services, or be organizing to make resources available to provide care services.
+         * This episode of care is planned to start at the date specified in the period.start.
+         * During this status, an organization may perform assessments to determine if the patient
+         * is eligible to receive services, or be organizing to make resources available to provide
+         * care services.
          */
         @Json(name = "planned")
         PLANNED,
 
         /**
-         * This episode has been placed on a waitlist, pending the episode being made active (or cancelled).
+         * This episode has been placed on a waitlist, pending the episode being made active (or
+         * cancelled).
          */
         @Json(name = "waitlist")
         WAITLIST,
@@ -3837,19 +4080,25 @@ public class CodeSystems {
         ACTIVE,
 
         /**
-         * This episode of care is on hold, the organization has limited responsibility for the patient (such as while on respite).
+         * This episode of care is on hold, the organization has limited responsibility for the
+         * patient (such as while on respite).
          */
         @Json(name = "onhold")
         ONHOLD,
 
         /**
-         * This episode of care is finished and the organization is not expecting to be providing further care to the patient. Can also be known as "closed", "completed" or other similar terms.
+         * This episode of care is finished and the organization is not expecting to be providing
+         * further care to the patient. Can also be known as "closed", "completed" or other similar
+         * terms.
          */
         @Json(name = "finished")
         FINISHED,
 
         /**
-         * The episode of care was cancelled, or withdrawn from service, often selected during the planned stage as the patient may have gone elsewhere, or the circumstances have changed and the organization is unable to provide the care. It indicates that services terminated outside the planned/expected workflow.
+         * The episode of care was cancelled, or withdrawn from service, often selected during the
+         * planned stage as the patient may have gone elsewhere, or the circumstances have changed
+         * and the organization is unable to provide the care. It indicates that services terminated
+         * outside the planned/expected workflow.
          */
         @Json(name = "cancelled")
         CANCELLED,
@@ -3889,7 +4138,8 @@ public class CodeSystems {
     public enum EventStatus {
 
         /**
-         * The core event has not started yet, but some staging activities have begun (e.g. surgical suite preparation).  Preparation stages may be tracked for billing purposes.
+         * The core event has not started yet, but some staging activities have begun (e.g. surgical
+         * suite preparation).  Preparation stages may be tracked for billing purposes.
          */
         @Json(name = "preparation")
         PREPARATION,
@@ -3919,13 +4169,17 @@ public class CodeSystems {
         COMPLETED,
 
         /**
-         * This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be "cancelled" rather than "entered-in-error".)
+         * This electronic record should never have existed, though it is possible that real-world
+         * decisions were based on it.  (If real-world activity has occurred, the status should be
+         * "cancelled" rather than "entered-in-error".)
          */
         @Json(name = "entered-in-error")
         ENTERED_IN_ERROR,
 
         /**
-         * The authoring system does not know which of the status values currently applies for this request.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+         * The authoring system does not know which of the status values currently applies for this
+         * request.  Note: This concept is not to be used for "other" - one of the listed statuses
+         * is presumed to apply, it's just not known which one.
          */
         @Json(name = "unknown")
         UNKNOWN,
@@ -4015,13 +4269,16 @@ public class CodeSystems {
         RESOURCE,
 
         /**
-         * The context is all nodes matching a particular data type element path (root or repeating element) or all elements referencing a particular primitive data type (expressed as the datatype name).
+         * The context is all nodes matching a particular data type element path (root or repeating
+         * element) or all elements referencing a particular primitive data type (expressed as the
+         * datatype name).
          */
         @Json(name = "datatype")
         DATATYPE,
 
         /**
-         * The context is a particular extension from a particular profile, a uri that identifies the extension definition.
+         * The context is a particular extension from a particular profile, a uri that identifies
+         * the extension definition.
          */
         @Json(name = "extension")
         EXTENSION,
@@ -4035,31 +4292,41 @@ public class CodeSystems {
     public enum FHIRDefinedConceptProperties {
 
         /**
-         * True if the concept is not considered active - e.g. not a valid concept any more. Property type is boolean, default value is false
+         * True if the concept is not considered active - e.g. not a valid concept any more.
+         * Property type is boolean, default value is false
          */
         @Json(name = "inactive")
         INACTIVE,
 
         /**
-         * The date at which a concept was deprecated. Concepts that are deprecated but not inactive can still be used, but their use is discouraged, and they should be expected to be made inactive in a future release. Property type is dateTime
+         * The date at which a concept was deprecated. Concepts that are deprecated but not inactive
+         * can still be used, but their use is discouraged, and they should be expected to be made
+         * inactive in a future release. Property type is dateTime
          */
         @Json(name = "deprecated")
         DEPRECATED,
 
         /**
-         * The concept is not intended to be chosen by the user - only intended to be used as a selector for other concepts. Note, though, that the interpretation of this is highly contextual; all concepts are selectable in some context. Property type is boolean, default value is false
+         * The concept is not intended to be chosen by the user - only intended to be used as a
+         * selector for other concepts. Note, though, that the interpretation of this is highly
+         * contextual; all concepts are selectable in some context. Property type is boolean,
+         * default value is false
          */
         @Json(name = "notSelectable")
         NOTSELECTABLE,
 
         /**
-         * The concept identified in this property is a parent of the concept on which it is a property. The property type will be 'code'. The meaning of 'parent' is defined by the hierarchyMeaning attribute
+         * The concept identified in this property is a parent of the concept on which it is a
+         * property. The property type will be 'code'. The meaning of 'parent' is defined by the
+         * hierarchyMeaning attribute
          */
         @Json(name = "parent")
         PARENT,
 
         /**
-         * The concept identified in this property is a child of the concept on which it is a property. The property type will be 'code'. The meaning of 'child' is defined by the hierarchyMeaning attribute
+         * The concept identified in this property is a child of the concept on which it is a
+         * property. The property type will be 'code'. The meaning of 'child' is defined by the
+         * hierarchyMeaning attribute
          */
         @Json(name = "child")
         CHILD,
@@ -4073,13 +4340,15 @@ public class CodeSystems {
     public enum FHIRDeviceStatus {
 
         /**
-         * The Device is available for use.  Note: This means for *implanted devices*  the device is implanted in the patient.
+         * The Device is available for use.  Note: This means for *implanted devices*  the device is
+         * implanted in the patient.
          */
         @Json(name = "active")
         ACTIVE,
 
         /**
-         * The Device is no longer available for use (e.g. lost, expired, damaged).  Note: This means for *implanted devices*  the device has been removed from the patient.
+         * The Device is no longer available for use (e.g. lost, expired, damaged).  Note: This
+         * means for *implanted devices*  the device has been removed from the patient.
          */
         @Json(name = "inactive")
         INACTIVE,
@@ -4135,7 +4404,8 @@ public class CodeSystems {
         DELETE,
 
         /**
-         * Retrieve the change history for a particular resource, type of resource, or the entire system.
+         * Retrieve the change history for a particular resource, type of resource, or the entire
+         * system.
          */
         @Json(name = "history")
         HISTORY,
@@ -4259,7 +4529,8 @@ public class CodeSystems {
         UNABLE_TO_OBTAIN,
 
         /**
-         * Patient does not have the information now, but can provide the information at a later date.
+         * Patient does not have the information now, but can provide the information at a later
+         * date.
          */
         @Json(name = "deferred")
         DEFERRED,
@@ -4279,7 +4550,8 @@ public class CodeSystems {
         PARTIAL,
 
         /**
-         * All available related health information is captured as of the date (and possibly time) when the family member history was taken.
+         * All available related health information is captured as of the date (and possibly time)
+         * when the family member history was taken.
          */
         @Json(name = "completed")
         COMPLETED,
@@ -4311,19 +4583,22 @@ public class CodeSystems {
         EQUAL,
 
         /**
-         * Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, including the provided concept itself (i.e. include child codes)
+         * Includes all concept ids that have a transitive is-a relationship with the concept Id
+         * provided as the value, including the provided concept itself (i.e. include child codes)
          */
         @Json(name = "is-a")
         IS_A,
 
         /**
-         * Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, excluding the provided concept itself (i.e. include child codes)
+         * Includes all concept ids that have a transitive is-a relationship with the concept Id
+         * provided as the value, excluding the provided concept itself (i.e. include child codes)
          */
         @Json(name = "descendent-of")
         DESCENDENT_OF,
 
         /**
-         * The specified property of the code does not have an is-a relationship with the provided value.
+         * The specified property of the code does not have an is-a relationship with the provided
+         * value.
          */
         @Json(name = "is-not-a")
         IS_NOT_A,
@@ -4335,39 +4610,46 @@ public class CodeSystems {
         REGEX,
 
         /**
-         * The specified property of the code is in the set of codes or concepts specified in the provided value (comma separated list).
+         * The specified property of the code is in the set of codes or concepts specified in the
+         * provided value (comma separated list).
          */
         @Json(name = "in")
         IN,
 
         /**
-         * The specified property of the code is not in the set of codes or concepts specified in the provided value (comma separated list).
+         * The specified property of the code is not in the set of codes or concepts specified in
+         * the provided value (comma separated list).
          */
         @Json(name = "not-in")
         NOT_IN,
 
         /**
-         * Includes all concept ids that have a transitive is-a relationship from the concept Id provided as the value, including the provided concept itself (e.g. include parent codes)
+         * Includes all concept ids that have a transitive is-a relationship from the concept Id
+         * provided as the value, including the provided concept itself (e.g. include parent codes)
          */
         @Json(name = "generalizes")
         GENERALIZES,
 
         /**
-         * The specified property of the code has at least one value (if the specified value is true; if the specified value is false, then matches when the specified property of the code has no values)
+         * The specified property of the code has at least one value (if the specified value is
+         * true; if the specified value is false, then matches when the specified property of the
+         * code has no values)
          */
         @Json(name = "exists")
         EXISTS,
     }
 
     /**
-     * Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or entered in error.
+     * Indicates whether this flag is active and needs to be displayed to a user, or whether it is
+     * no longer needed or entered in error.
      *
      * @see <a href="http://hl7.org/fhir/flag-status">FlagStatus</a>
      */
     public enum FlagStatus {
 
         /**
-         * A current flag that should be displayed to a user. A system may use the category to determine which roles should view the flag.
+         * A current flag that should be displayed to a user. A system may use the category to
+         * determine which roles should view the flag.
          */
         @Json(name = "active")
         ACTIVE,
@@ -4419,7 +4701,8 @@ public class CodeSystems {
     public enum GoalRelationshipType {
 
         /**
-         * Indicates that the target goal is one which must be met before striving for the current goal
+         * Indicates that the target goal is one which must be met before striving for the current
+         * goal
          */
         @Json(name = "predecessor")
         PREDECESSOR,
@@ -4443,7 +4726,8 @@ public class CodeSystems {
         MILESTONE,
 
         /**
-         * Indicates that the relationship is not covered by one of the pre-defined codes.  (An extension may convey more information about the meaning of the relationship.)
+         * Indicates that the relationship is not covered by one of the pre-defined codes.  (An
+         * extension may convey more information about the meaning of the relationship.)
          */
         @Json(name = "other")
         OTHER,
@@ -4475,7 +4759,8 @@ public class CodeSystems {
         PLANNED,
 
         /**
-         * The goal is being sought but has not yet been reached.  (Also applies if goal was reached in the past but there has been regression and goal is being sought again)
+         * The goal is being sought but has not yet been reached.  (Also applies if goal was reached
+         * in the past but there has been regression and goal is being sought again)
          */
         @Json(name = "in-progress")
         IN_PROGRESS,
@@ -4511,7 +4796,8 @@ public class CodeSystems {
         ACHIEVED,
 
         /**
-         * The goal remains a long term objective but is no longer being actively pursued for a temporary period of time.
+         * The goal remains a long term objective but is no longer being actively pursued for a
+         * temporary period of time.
          */
         @Json(name = "on-hold")
         ON_HOLD,
@@ -4549,7 +4835,8 @@ public class CodeSystems {
         IDENTICAL,
 
         /**
-         * The compartment must be the same - the record must be about the same patient, but the reference may be different
+         * The compartment must be the same - the record must be about the same patient, but the
+         * reference may be different
          */
         @Json(name = "matching")
         MATCHING,
@@ -4625,7 +4912,8 @@ public class CodeSystems {
         SUCCESS,
 
         /**
-         * The request was processed successfully, but more data may result in a more complete evaluation
+         * The request was processed successfully, but more data may result in a more complete
+         * evaluation
          */
         @Json(name = "data-requested")
         DATA_REQUESTED,
@@ -4683,7 +4971,8 @@ public class CodeSystems {
     public enum GuidePageKind {
 
         /**
-         * This is a page of content that is included in the implementation guide. It has no particular function.
+         * This is a page of content that is included in the implementation guide. It has no
+         * particular function.
          */
         @Json(name = "page")
         PAGE,
@@ -4707,7 +4996,8 @@ public class CodeSystems {
         INCLUDE,
 
         /**
-         * This is a page that lists the resources of a given type, and also creates pages for all the listed types as other pages in the section.
+         * This is a page that lists the resources of a given type, and also creates pages for all
+         * the listed types as other pages in the section.
          */
         @Json(name = "directory")
         DIRECTORY,
@@ -4725,7 +5015,8 @@ public class CodeSystems {
         TOC,
 
         /**
-         * This is a page that represents a presented resource. This is typically used for generated conformance resource presentations.
+         * This is a page that represents a presented resource. This is typically used for generated
+         * conformance resource presentations.
          */
         @Json(name = "resource")
         RESOURCE,
@@ -4967,14 +5258,17 @@ public class CodeSystems {
         TEMP,
 
         /**
-         * An identifier that was assigned in secondary use - it serves to identify the object in a relative context, but cannot be consistently assigned to the same object again in a different context.
+         * An identifier that was assigned in secondary use - it serves to identify the object in a
+         * relative context, but cannot be consistently assigned to the same object again in a
+         * different context.
          */
         @Json(name = "secondary")
         SECONDARY,
     }
 
     /**
-     * The level of confidence that this link represents the same actual person, based on NIST Authentication Levels.
+     * The level of confidence that this link represents the same actual person, based on NIST
+     * Authentication Levels.
      *
      * @see <a href="http://hl7.org/fhir/identity-assuranceLevel">IdentityAssuranceLevel</a>
      */
@@ -5057,7 +5351,8 @@ public class CodeSystems {
         ERROR,
 
         /**
-         * The issue is not important enough to cause the action to fail, but may cause it to be performed suboptimally or in a way that is not as desired.
+         * The issue is not important enough to cause the action to fail, but may cause it to be
+         * performed suboptimally or in a way that is not as desired.
          */
         @Json(name = "warning")
         WARNING,
@@ -5083,7 +5378,8 @@ public class CodeSystems {
         INVALID,
 
         /**
-         * A structural issue in the content such as wrong namespace, or unable to parse the content completely, or invalid json syntax.
+         * A structural issue in the content such as wrong namespace, or unable to parse the content
+         * completely, or invalid json syntax.
          */
         @Json(name = "structure")
         STRUCTURE,
@@ -5119,7 +5415,8 @@ public class CodeSystems {
         LOGIN,
 
         /**
-         * The user or system was not able to be authenticated (either there is no process, or the proferred token is unacceptable).
+         * The user or system was not able to be authenticated (either there is no process, or the
+         * proferred token is unacceptable).
          */
         @Json(name = "unknown")
         UNKNOWN,
@@ -5137,13 +5434,16 @@ public class CodeSystems {
         FORBIDDEN,
 
         /**
-         * Some information was not or may not have been returned due to business rules, consent or privacy rules, or access permission constraints.  This information may be accessible through alternate processes.
+         * Some information was not or may not have been returned due to business rules, consent or
+         * privacy rules, or access permission constraints.  This information may be accessible
+         * through alternate processes.
          */
         @Json(name = "suppressed")
         SUPPRESSED,
 
         /**
-         * Processing issues. These are expected to be final e.g. there is no point resubmitting the same content unchanged.
+         * Processing issues. These are expected to be final e.g. there is no point resubmitting the
+         * same content unchanged.
          */
         @Json(name = "processing")
         PROCESSING,
@@ -5161,31 +5461,37 @@ public class CodeSystems {
         DUPLICATE,
 
         /**
-         * The reference provided was not found. In a pure RESTful environment, this would be an HTTP 404 error, but this code may be used where the content is not found further into the application architecture.
+         * The reference provided was not found. In a pure RESTful environment, this would be an
+         * HTTP 404 error, but this code may be used where the content is not found further into the
+         * application architecture.
          */
         @Json(name = "not-found")
         NOT_FOUND,
 
         /**
-         * Provided content is too long (typically, this is a denial of service protection type of error).
+         * Provided content is too long (typically, this is a denial of service protection type of
+         * error).
          */
         @Json(name = "too-long")
         TOO_LONG,
 
         /**
-         * The code or system could not be understood, or it was not valid in the context of a particular ValueSet.code.
+         * The code or system could not be understood, or it was not valid in the context of a
+         * particular ValueSet.code.
          */
         @Json(name = "code-invalid")
         CODE_INVALID,
 
         /**
-         * An extension was found that was not acceptable, could not be resolved, or a modifierExtension was not recognized.
+         * An extension was found that was not acceptable, could not be resolved, or a
+         * modifierExtension was not recognized.
          */
         @Json(name = "extension")
         EXTENSION,
 
         /**
-         * The operation was stopped to protect server resources; e.g. a request for a value set expansion on all of SNOMED CT.
+         * The operation was stopped to protect server resources; e.g. a request for a value set
+         * expansion on all of SNOMED CT.
          */
         @Json(name = "too-costly")
         TOO_COSTLY,
@@ -5197,19 +5503,23 @@ public class CodeSystems {
         BUSINESS_RULE,
 
         /**
-         * Content could not be accepted because of an edit conflict (i.e. version aware updates) (In a pure RESTful environment, this would be an HTTP 404 error, but this code may be used where the conflict is discovered further into the application architecture.)
+         * Content could not be accepted because of an edit conflict (i.e. version aware updates)
+         * (In a pure RESTful environment, this would be an HTTP 404 error, but this code may be
+         * used where the conflict is discovered further into the application architecture.)
          */
         @Json(name = "conflict")
         CONFLICT,
 
         /**
-         * Not all data sources typically accessed could be reached, or responded in time, so the returned information may not be complete.
+         * Not all data sources typically accessed could be reached, or responded in time, so the
+         * returned information may not be complete.
          */
         @Json(name = "incomplete")
         INCOMPLETE,
 
         /**
-         * Transient processing issues. The system receiving the error may be able to resubmit the same content once an underlying issue is resolved.
+         * Transient processing issues. The system receiving the error may be able to resubmit the
+         * same content once an underlying issue is resolved.
          */
         @Json(name = "transient")
         TRANSIENT,
@@ -5221,7 +5531,8 @@ public class CodeSystems {
         LOCK_ERROR,
 
         /**
-         * The persistent store is unavailable; e.g. the database is down for maintenance or similar action.
+         * The persistent store is unavailable; e.g. the database is down for maintenance or similar
+         * action.
          */
         @Json(name = "no-store")
         NO_STORE,
@@ -5245,7 +5556,9 @@ public class CodeSystems {
         THROTTLED,
 
         /**
-         * A message unrelated to the processing success of the completed operation (examples of the latter include things like reminders of password expiry, system maintenance times, etc.).
+         * A message unrelated to the processing success of the completed operation (examples of the
+         * latter include things like reminders of password expiry, system maintenance times,
+         * etc.).
          */
         @Json(name = "informational")
         INFORMATIONAL,
@@ -5277,7 +5590,8 @@ public class CodeSystems {
         ASSET_COLLECTION,
 
         /**
-         * The resource defines the dependencies, parameters, and data requirements for a particular module or evaluation context
+         * The resource defines the dependencies, parameters, and data requirements for a particular
+         * module or evaluation context
          */
         @Json(name = "module-definition")
         MODULE_DEFINITION,
@@ -5291,25 +5605,35 @@ public class CodeSystems {
     public enum LinkType {
 
         /**
-         * The patient resource containing this link must no longer be used. The link points forward to another patient resource that must be used in lieu of the patient resource that contains this link.
+         * The patient resource containing this link must no longer be used. The link points forward
+         * to another patient resource that must be used in lieu of the patient resource that
+         * contains this link.
          */
         @Json(name = "replaced-by")
         REPLACED_BY,
 
         /**
-         * The patient resource containing this link is the current active patient record. The link points back to an inactive patient resource that has been merged into this resource, and should be consulted to retrieve additional referenced information.
+         * The patient resource containing this link is the current active patient record. The link
+         * points back to an inactive patient resource that has been merged into this resource, and
+         * should be consulted to retrieve additional referenced information.
          */
         @Json(name = "replaces")
         REPLACES,
 
         /**
-         * The patient resource containing this link is in use and valid but not considered the main source of information about a patient. The link points forward to another patient resource that should be consulted to retrieve additional patient information.
+         * The patient resource containing this link is in use and valid but not considered the main
+         * source of information about a patient. The link points forward to another patient
+         * resource that should be consulted to retrieve additional patient information.
          */
         @Json(name = "refer")
         REFER,
 
         /**
-         * The patient resource containing this link is in use and valid, but points to another patient resource that is known to contain data about the same person. Data in this resource might overlap or contradict information found in the other patient resource. This link does not indicate any relative importance of the resources concerned, and both should be regarded as equally valid.
+         * The patient resource containing this link is in use and valid, but points to another
+         * patient resource that is known to contain data about the same person. Data in this
+         * resource might overlap or contradict information found in the other patient resource.
+         * This link does not indicate any relative importance of the resources concerned, and both
+         * should be regarded as equally valid.
          */
         @Json(name = "seealso")
         SEEALSO,
@@ -5323,19 +5647,23 @@ public class CodeSystems {
     public enum LinkageType {
 
         /**
-         * The record represents the "source of truth" (from the perspective of this Linkage resource) for the underlying event/condition/etc.
+         * The record represents the "source of truth" (from the perspective of this Linkage
+         * resource) for the underlying event/condition/etc.
          */
         @Json(name = "source")
         SOURCE,
 
         /**
-         * The record represents the alternative view of the underlying event/condition/etc.  The record may still be actively maintained, even though it is not considered to be the source of truth.
+         * The record represents the alternative view of the underlying event/condition/etc.  The
+         * record may still be actively maintained, even though it is not considered to be the
+         * source of truth.
          */
         @Json(name = "alternate")
         ALTERNATE,
 
         /**
-         * The record represents an obsolete record of the underlyng event/condition/etc.  It is not expected to be actively maintained.
+         * The record represents an obsolete record of the underlyng event/condition/etc.  It is not
+         * expected to be actively maintained.
          */
         @Json(name = "historical")
         HISTORICAL,
@@ -5349,7 +5677,8 @@ public class CodeSystems {
     public enum ListMode {
 
         /**
-         * This list is the master list, maintained in an ongoing fashion with regular updates as the real world list it is tracking changes
+         * This list is the master list, maintained in an ongoing fashion with regular updates as
+         * the real world list it is tracking changes
          */
         @Json(name = "working")
         WORKING,
@@ -5394,20 +5723,24 @@ public class CodeSystems {
     }
 
     /**
-     * Indicates whether a resource instance represents a specific location or a class of locations.
+     * Indicates whether a resource instance represents a specific location or a class of
+     * locations.
      *
      * @see <a href="http://hl7.org/fhir/location-mode">LocationMode</a>
      */
     public enum LocationMode {
 
         /**
-         * The Location resource represents a specific instance of a location (e.g. Operating Theatre 1A).
+         * The Location resource represents a specific instance of a location (e.g. Operating
+         * Theatre 1A).
          */
         @Json(name = "instance")
         INSTANCE,
 
         /**
-         * The Location represents a class of locations (e.g. Any Operating Theatre) although this class of locations could be constrained within a specific boundary (such as organization, or parent location, address etc.).
+         * The Location represents a class of locations (e.g. Any Operating Theatre) although this
+         * class of locations could be constrained within a specific boundary (such as organization,
+         * or parent location, address etc.).
          */
         @Json(name = "kind")
         KIND,
@@ -5440,7 +5773,8 @@ public class CodeSystems {
     }
 
     /**
-     * A Master Patient Index (MPI) assessment of whether a candidate patient record is a match or not.
+     * A Master Patient Index (MPI) assessment of whether a candidate patient record is a match or
+     * not.
      *
      * @see <a href="http://hl7.org/fhir/match-grade">MatchGrade</a>
      */
@@ -5453,19 +5787,23 @@ public class CodeSystems {
         CERTAIN,
 
         /**
-         * This record is a close match, but not a certain match. Additional review (e.g. by a human) may be required before using this as a match.
+         * This record is a close match, but not a certain match. Additional review (e.g. by a
+         * human) may be required before using this as a match.
          */
         @Json(name = "probable")
         PROBABLE,
 
         /**
-         * This record may be a matching one. Additional review (e.g. by a human) SHOULD be performed before using this as a match.
+         * This record may be a matching one. Additional review (e.g. by a human) SHOULD be
+         * performed before using this as a match.
          */
         @Json(name = "possible")
         POSSIBLE,
 
         /**
-         * This record is known not to be a match. Note that usually non-matching records are not returned, but in some cases records previously or likely considered as a match may specifically be negated by the matching engine
+         * This record is known not to be a match. Note that usually non-matching records are not
+         * returned, but in some cases records previously or likely considered as a match may
+         * specifically be negated by the matching engine
          */
         @Json(name = "certainly-not")
         CERTAINLY_NOT,
@@ -5567,13 +5905,15 @@ public class CodeSystems {
     public enum MeasureDataUsage {
 
         /**
-         * The data is intended to be provided as additional information alongside the measure results
+         * The data is intended to be provided as additional information alongside the measure
+         * results
          */
         @Json(name = "supplemental-data")
         SUPPLEMENTAL_DATA,
 
         /**
-         * The data is intended to be used to calculate and apply a risk adjustment model for the measure
+         * The data is intended to be used to calculate and apply a risk adjustment model for the
+         * measure
          */
         @Json(name = "risk-adjustment-factor")
         RISK_ADJUSTMENT_FACTOR,
@@ -5587,55 +5927,80 @@ public class CodeSystems {
     public enum MeasurePopulationType {
 
         /**
-         * The initial population refers to all patients or events to be evaluated by a quality measure involving patients who share a common set of specified characterstics. All patients or events counted (for example, as numerator, as denominator) are drawn from the initial population
+         * The initial population refers to all patients or events to be evaluated by a quality
+         * measure involving patients who share a common set of specified characterstics. All
+         * patients or events counted (for example, as numerator, as denominator) are drawn from the
+         * initial population
          */
         @Json(name = "initial-population")
         INITIAL_POPULATION,
 
         /**
-         * The upper portion of a fraction used to calculate a rate, proportion, or ratio. Also called the measure focus, it is the target process, condition, event, or outcome. Numerator criteria are the processes or outcomes expected for each patient, or event defined in the denominator. A numerator statement describes the clinical action that satisfies the conditions of the measure
+         * The upper portion of a fraction used to calculate a rate, proportion, or ratio. Also
+         * called the measure focus, it is the target process, condition, event, or outcome.
+         * Numerator criteria are the processes or outcomes expected for each patient, or event
+         * defined in the denominator. A numerator statement describes the clinical action that
+         * satisfies the conditions of the measure
          */
         @Json(name = "numerator")
         NUMERATOR,
 
         /**
-         * Numerator exclusion criteria define patients or events to be removed from the numerator. Numerator exclusions are used in proportion and ratio measures to help narrow the numerator (for inverted measures)
+         * Numerator exclusion criteria define patients or events to be removed from the numerator.
+         * Numerator exclusions are used in proportion and ratio measures to help narrow the
+         * numerator (for inverted measures)
          */
         @Json(name = "numerator-exclusion")
         NUMERATOR_EXCLUSION,
 
         /**
-         * The lower portion of a fraction used to calculate a rate, proportion, or ratio. The denominator can be the same as the initial population, or a subset of the initial population to further constrain the population for the purpose of the measure
+         * The lower portion of a fraction used to calculate a rate, proportion, or ratio. The
+         * denominator can be the same as the initial population, or a subset of the initial
+         * population to further constrain the population for the purpose of the measure
          */
         @Json(name = "denominator")
         DENOMINATOR,
 
         /**
-         * Denominator exclusion criteria define patients or events that should be removed from the denominator before determining if numerator criteria are met. Denominator exclusions are used in proportion and ratio measures to help narrow the denominator. For example, patients with bilateral lower extremity amputations would be listed as a denominator exclusion for a measure requiring foot exams
+         * Denominator exclusion criteria define patients or events that should be removed from the
+         * denominator before determining if numerator criteria are met. Denominator exclusions are
+         * used in proportion and ratio measures to help narrow the denominator. For example,
+         * patients with bilateral lower extremity amputations would be listed as a denominator
+         * exclusion for a measure requiring foot exams
          */
         @Json(name = "denominator-exclusion")
         DENOMINATOR_EXCLUSION,
 
         /**
-         * Denominator exceptions are conditions that should remove a patient or event from the denominator of a measure only if the numerator criteria are not met. Denominator exception allows for adjustment of the calculated score for those providers with higher risk populations. Denominator exception criteria are only used in proportion measures
+         * Denominator exceptions are conditions that should remove a patient or event from the
+         * denominator of a measure only if the numerator criteria are not met. Denominator
+         * exception allows for adjustment of the calculated score for those providers with higher
+         * risk populations. Denominator exception criteria are only used in proportion measures
          */
         @Json(name = "denominator-exception")
         DENOMINATOR_EXCEPTION,
 
         /**
-         * Measure population criteria define the patients or events for which the individual observation for the measure should be taken. Measure populations are used for continuous variable measures rather than numerator and denominator criteria
+         * Measure population criteria define the patients or events for which the individual
+         * observation for the measure should be taken. Measure populations are used for continuous
+         * variable measures rather than numerator and denominator criteria
          */
         @Json(name = "measure-population")
         MEASURE_POPULATION,
 
         /**
-         * Measure population criteria define the patients or events that should be removed from the measure population before determining the outcome of one or more continuous variables defined for the measure observation. Measure population exclusion criteria are used within continuous variable measures to help narrow the measure population
+         * Measure population criteria define the patients or events that should be removed from the
+         * measure population before determining the outcome of one or more continuous variables
+         * defined for the measure observation. Measure population exclusion criteria are used
+         * within continuous variable measures to help narrow the measure population
          */
         @Json(name = "measure-population-exclusion")
         MEASURE_POPULATION_EXCLUSION,
 
         /**
-         * Defines the individual observation to be performed for each patient or event in the measure population. Measure observations for each case in the population are aggregated to determine the overall measure score for the population
+         * Defines the individual observation to be performed for each patient or event in the
+         * measure population. Measure observations for each case in the population are aggregated
+         * to determine the overall measure score for the population
          */
         @Json(name = "measure-observation")
         MEASURE_OBSERVATION,
@@ -5675,19 +6040,22 @@ public class CodeSystems {
     public enum MeasureReportType {
 
         /**
-         * An individual report that provides information on the performance for a given measure with respect to a single patient
+         * An individual report that provides information on the performance for a given measure
+         * with respect to a single patient
          */
         @Json(name = "individual")
         INDIVIDUAL,
 
         /**
-         * A patient list report that includes a listing of patients that satisfied each population criteria in the measure
+         * A patient list report that includes a listing of patients that satisfied each population
+         * criteria in the measure
          */
         @Json(name = "patient-list")
         PATIENT_LIST,
 
         /**
-         * A summary report that returns the number of patients in each population criteria for the measure
+         * A summary report that returns the number of patients in each population criteria for the
+         * measure
          */
         @Json(name = "summary")
         SUMMARY,
@@ -5733,25 +6101,30 @@ public class CodeSystems {
     public enum MeasureType {
 
         /**
-         * A measure which focuses on a process which leads to a certain outcome, meaning that a scientific basis exists for believing that the process, when executed well, will increase the probability of achieving a desired outcome
+         * A measure which focuses on a process which leads to a certain outcome, meaning that a
+         * scientific basis exists for believing that the process, when executed well, will increase
+         * the probability of achieving a desired outcome
          */
         @Json(name = "process")
         PROCESS,
 
         /**
-         * A measure that indicates the result of the performance (or non-performance) of a function or process
+         * A measure that indicates the result of the performance (or non-performance) of a function
+         * or process
          */
         @Json(name = "outcome")
         OUTCOME,
 
         /**
-         * A measure that focuses on a health care provider's capacity, systems, and processes to provide high-quality care
+         * A measure that focuses on a health care provider's capacity, systems, and processes to
+         * provide high-quality care
          */
         @Json(name = "structure")
         STRUCTURE,
 
         /**
-         * A measure that focuses on patient-reported information such as patient engagement or patient experience measures
+         * A measure that focuses on patient-reported information such as patient engagement or
+         * patient experience measures
          */
         @Json(name = "patient-reported-outcome")
         PATIENT_REPORTED_OUTCOME,
@@ -5777,13 +6150,15 @@ public class CodeSystems {
         INPATIENT,
 
         /**
-         * Includes administrations in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+         * Includes administrations in an outpatient setting (for example, Emergency Department,
+         * Outpatient Clinic, Outpatient Surgery, Doctor's office)
          */
         @Json(name = "outpatient")
         OUTPATIENT,
 
         /**
-         * Includes administrations by the patient in their home (this would include long term care or nursing homes, hospices, etc)
+         * Includes administrations by the patient in their home (this would include long term care
+         * or nursing homes, hospices, etc)
          */
         @Json(name = "community")
         COMMUNITY,
@@ -5803,7 +6178,8 @@ public class CodeSystems {
         IN_PROGRESS,
 
         /**
-         * Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called "suspended".
+         * Actions implied by the administration have been temporarily halted, but are expected to
+         * continue later. May also be called "suspended".
          */
         @Json(name = "on-hold")
         ON_HOLD,
@@ -5821,13 +6197,16 @@ public class CodeSystems {
         ENTERED_IN_ERROR,
 
         /**
-         * Actions implied by the administration have been permanently halted, before all of them occurred.
+         * Actions implied by the administration have been permanently halted, before all of them
+         * occurred.
          */
         @Json(name = "stopped")
         STOPPED,
 
         /**
-         * The authoring system does not know which of the status values currently applies for this request. Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+         * The authoring system does not know which of the status values currently applies for this
+         * request. Note: This concept is not to be used for "other" - one of the listed statuses is
+         * presumed to apply, it's just not known which one.
          */
         @Json(name = "unknown")
         UNKNOWN,
@@ -5847,19 +6226,22 @@ public class CodeSystems {
         AMPOULE,
 
         /**
-         * A container, typically made of glass or plastic and with a narrow neck, used for storing liquids.
+         * A container, typically made of glass or plastic and with a narrow neck, used for storing
+         * liquids.
          */
         @Json(name = "bottle")
         BOTTLE,
 
         /**
-         * A container with a flat base and sides, typically square or rectangular and having a lid.
+         * A container with a flat base and sides, typically square or rectangular and having a
+         * lid.
          */
         @Json(name = "box")
         BOX,
 
         /**
-         * A device of various configuration and composition used with a syringe for the application of anesthetic or other materials to a patient.
+         * A device of various configuration and composition used with a syringe for the application
+         * of anesthetic or other materials to a patient.
          */
         @Json(name = "cartridge")
         CARTRIDGE,
@@ -5871,19 +6253,22 @@ public class CodeSystems {
         CONTAINER,
 
         /**
-         * A long, hollow cylinder of metal, plastic, glass, etc., for holding medications, typically creams or ointments
+         * A long, hollow cylinder of metal, plastic, glass, etc., for holding medications,
+         * typically creams or ointments
          */
         @Json(name = "tube")
         TUBE,
 
         /**
-         * A dose of medicine prepared in an individual package for convenience, safety or monitoring.
+         * A dose of medicine prepared in an individual package for convenience, safety or
+         * monitoring.
          */
         @Json(name = "unitdose")
         UNITDOSE,
 
         /**
-         * A small container, typically cylindrical and made of glass, used especially for holding liquid medications.
+         * A small container, typically cylindrical and made of glass, used especially for holding
+         * liquid medications.
          */
         @Json(name = "vial")
         VIAL,
@@ -5897,19 +6282,23 @@ public class CodeSystems {
     public enum MedicationDispenseCategory {
 
         /**
-         * Includes dispenses for medications to be administered or consumed in an inpatient or acute care setting
+         * Includes dispenses for medications to be administered or consumed in an inpatient or
+         * acute care setting
          */
         @Json(name = "inpatient")
         INPATIENT,
 
         /**
-         * Includes dispenses for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+         * Includes dispenses for medications to be administered or consumed in an outpatient
+         * setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery,
+         * Doctor's office)
          */
         @Json(name = "outpatient")
         OUTPATIENT,
 
         /**
-         * Includes dispenses for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc)
+         * Includes dispenses for medications to be administered or consumed by the patient in their
+         * home (this would include long term care or nursing homes, hospices, etc)
          */
         @Json(name = "community")
         COMMUNITY,
@@ -5923,7 +6312,9 @@ public class CodeSystems {
     public enum MedicationDispenseStatus {
 
         /**
-         * The core event has not started yet, but some staging activities have begun (e.g. initial compounding or packaging of medication). Preparation stages may be tracked for billing purposes.
+         * The core event has not started yet, but some staging activities have begun (e.g. initial
+         * compounding or packaging of medication). Preparation stages may be tracked for billing
+         * purposes.
          */
         @Json(name = "preparation")
         PREPARATION,
@@ -5935,7 +6326,8 @@ public class CodeSystems {
         IN_PROGRESS,
 
         /**
-         * Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called "suspended"
+         * Actions implied by the administration have been temporarily halted, but are expected to
+         * continue later. May also be called "suspended"
          */
         @Json(name = "on-hold")
         ON_HOLD,
@@ -5953,33 +6345,39 @@ public class CodeSystems {
         ENTERED_IN_ERROR,
 
         /**
-         * Actions implied by the dispense have been permanently halted, before all of them occurred.
+         * Actions implied by the dispense have been permanently halted, before all of them
+         * occurred.
          */
         @Json(name = "stopped")
         STOPPED,
     }
 
     /**
-     * A coded concept identifying where the medication ordered is expected to be consumed or administered
+     * A coded concept identifying where the medication ordered is expected to be consumed or
+     * administered
      *
      * @see <a href="http://hl7.org/fhir/medication-request-category">MedicationRequestCategory</a>
      */
     public enum MedicationRequestCategory {
 
         /**
-         * Includes orders for medications to be administered or consumed in an inpatient or acute care setting
+         * Includes orders for medications to be administered or consumed in an inpatient or acute
+         * care setting
          */
         @Json(name = "inpatient")
         INPATIENT,
 
         /**
-         * Includes orders for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+         * Includes orders for medications to be administered or consumed in an outpatient setting
+         * (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's
+         * office)
          */
         @Json(name = "outpatient")
         OUTPATIENT,
 
         /**
-         * Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc)
+         * Includes orders for medications to be administered or consumed by the patient in their
+         * home (this would include long term care or nursing homes, hospices, etc)
          */
         @Json(name = "community")
         COMMUNITY,
@@ -5993,13 +6391,15 @@ public class CodeSystems {
     public enum MedicationRequestIntent {
 
         /**
-         * The request is a suggestion made by someone/something that doesn't have an intention to ensure it occurs and without providing an authorization to act
+         * The request is a suggestion made by someone/something that doesn't have an intention to
+         * ensure it occurs and without providing an authorization to act
          */
         @Json(name = "proposal")
         PROPOSAL,
 
         /**
-         * The request represents an intension to ensure something occurs without providing an authorization for others to act
+         * The request represents an intension to ensure something occurs without providing an
+         * authorization for others to act
          */
         @Json(name = "plan")
         PLAN,
@@ -6011,7 +6411,8 @@ public class CodeSystems {
         ORDER,
 
         /**
-         * The request represents an instance for the particular order, for example a medication administration record.
+         * The request represents an instance for the particular order, for example a medication
+         * administration record.
          */
         @Json(name = "instance-order")
         INSTANCE_ORDER,
@@ -6050,20 +6451,23 @@ public class CodeSystems {
     }
 
     /**
-     * A coded concept specifying the state of the prescribing event. Describes the lifecycle of the prescription
+     * A coded concept specifying the state of the prescribing event. Describes the lifecycle of the
+     * prescription
      *
      * @see <a href="http://hl7.org/fhir/medication-request-status">MedicationRequestStatus</a>
      */
     public enum MedicationRequestStatus {
 
         /**
-         * The prescription is 'actionable', but not all actions that are implied by it have occurred yet.
+         * The prescription is 'actionable', but not all actions that are implied by it have
+         * occurred yet.
          */
         @Json(name = "active")
         ACTIVE,
 
         /**
-         * Actions implied by the prescription are to be temporarily halted, but are expected to continue later.  May also be called "suspended".
+         * Actions implied by the prescription are to be temporarily halted, but are expected to
+         * continue later.  May also be called "suspended".
          */
         @Json(name = "on-hold")
         ON_HOLD,
@@ -6087,51 +6491,60 @@ public class CodeSystems {
         ENTERED_IN_ERROR,
 
         /**
-         * Actions implied by the prescription are to be permanently halted, before all of them occurred.
+         * Actions implied by the prescription are to be permanently halted, before all of them
+         * occurred.
          */
         @Json(name = "stopped")
         STOPPED,
 
         /**
-         * The prescription is not yet 'actionable', i.e. it is a work in progress, requires sign-off or verification, and needs to be run through decision support process.
+         * The prescription is not yet 'actionable', i.e. it is a work in progress, requires
+         * sign-off or verification, and needs to be run through decision support process.
          */
         @Json(name = "draft")
         DRAFT,
 
         /**
-         * The authoring system does not know which of the status values currently applies for this request
+         * The authoring system does not know which of the status values currently applies for this
+         * request
          */
         @Json(name = "unknown")
         UNKNOWN,
     }
 
     /**
-     * A coded concept identifying where the medication included in the medicationstatement is expected to be consumed or administered
+     * A coded concept identifying where the medication included in the medicationstatement is
+     * expected to be consumed or administered
      *
      * @see <a href="http://hl7.org/fhir/medication-statement-category">MedicationStatementCategory</a>
      */
     public enum MedicationStatementCategory {
 
         /**
-         * Includes orders for medications to be administered or consumed in an inpatient or acute care setting
+         * Includes orders for medications to be administered or consumed in an inpatient or acute
+         * care setting
          */
         @Json(name = "inpatient")
         INPATIENT,
 
         /**
-         * Includes orders for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+         * Includes orders for medications to be administered or consumed in an outpatient setting
+         * (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's
+         * office)
          */
         @Json(name = "outpatient")
         OUTPATIENT,
 
         /**
-         * Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc)
+         * Includes orders for medications to be administered or consumed by the patient in their
+         * home (this would include long term care or nursing homes, hospices, etc)
          */
         @Json(name = "community")
         COMMUNITY,
 
         /**
-         * Includes statements about medication use, including over the counter medication, provided by the patient, agent or another provider
+         * Includes statements about medication use, including over the counter medication, provided
+         * by the patient, agent or another provider
          */
         @Json(name = "patientspecified")
         PATIENTSPECIFIED,
@@ -6169,20 +6582,23 @@ public class CodeSystems {
         INTENDED,
 
         /**
-         * Actions implied by the statement have been permanently halted, before all of them occurred.
+         * Actions implied by the statement have been permanently halted, before all of them
+         * occurred.
          */
         @Json(name = "stopped")
         STOPPED,
 
         /**
-         * Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called "suspended".
+         * Actions implied by the statement have been temporarily halted, but are expected to
+         * continue later. May also be called "suspended".
          */
         @Json(name = "on-hold")
         ON_HOLD,
     }
 
     /**
-     * A coded concept identifying level of certainty if patient has taken or has not taken the medication
+     * A coded concept identifying level of certainty if patient has taken or has not taken the
+     * medication
      *
      * @see <a href="http://hl7.org/fhir/medication-statement-taken">MedicationStatementTaken</a>
      */
@@ -6247,7 +6663,9 @@ public class CodeSystems {
     public enum MessageEvent {
 
         /**
-         * The definition of a code system is used to create a simple collection of codes suitable for use for data entry or validation. An expanded code system will be returned, or an error message.
+         * The definition of a code system is used to create a simple collection of codes suitable
+         * for use for data entry or validation. An expanded code system will be returned, or an
+         * error message.
          */
         @Json(name = "CodeSystem-expand")
         CODESYSTEM_EXPAND,
@@ -6259,7 +6677,8 @@ public class CodeSystems {
         MEDICATIONADMINISTRATION_COMPLETE,
 
         /**
-         * Someone wishes to record that the record of administration of a medication is in error and should be ignored.
+         * Someone wishes to record that the record of administration of a medication is in error
+         * and should be ignored.
          */
         @Json(name = "MedicationAdministration-Nullification")
         MEDICATIONADMINISTRATION_NULLIFICATION,
@@ -6277,7 +6696,9 @@ public class CodeSystems {
         MEDICATIONADMINISTRATION_UPDATE,
 
         /**
-         * Notification of a change to an administrative resource (either create or update). Note that there is no delete, though some administrative resources have status or period elements for this use.
+         * Notification of a change to an administrative resource (either create or update). Note
+         * that there is no delete, though some administrative resources have status or period
+         * elements for this use.
          */
         @Json(name = "admin-notify")
         ADMIN_NOTIFY,
@@ -6307,13 +6728,16 @@ public class CodeSystems {
         PATIENT_LINK,
 
         /**
-         * Notification that previous advice that two patient records concern the same patient is now considered incorrect.
+         * Notification that previous advice that two patient records concern the same patient is
+         * now considered incorrect.
          */
         @Json(name = "patient-unlink")
         PATIENT_UNLINK,
 
         /**
-         * The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation. An expanded value set will be returned, or an error message.
+         * The definition of a value set is used to create a simple collection of codes suitable for
+         * use for data entry or validation. An expanded value set will be returned, or an error
+         * message.
          */
         @Json(name = "valueset-expand")
         VALUESET_EXPAND,
@@ -6327,19 +6751,22 @@ public class CodeSystems {
     public enum MessageSignificanceCategory {
 
         /**
-         * The message represents/requests a change that should not be processed more than once; e.g., making a booking for an appointment.
+         * The message represents/requests a change that should not be processed more than once;
+         * e.g., making a booking for an appointment.
          */
         @Json(name = "Consequence")
         CONSEQUENCE,
 
         /**
-         * The message represents a response to query for current information. Retrospective processing is wrong and/or wasteful.
+         * The message represents a response to query for current information. Retrospective
+         * processing is wrong and/or wasteful.
          */
         @Json(name = "Currency")
         CURRENCY,
 
         /**
-         * The content is not necessarily intended to be current, and it can be reprocessed, though there may be version issues created by processing old notifications.
+         * The content is not necessarily intended to be current, and it can be reprocessed, though
+         * there may be version issues created by processing old notifications.
          */
         @Json(name = "Notification")
         NOTIFICATION,
@@ -6353,7 +6780,8 @@ public class CodeSystems {
     public enum MessageTransport {
 
         /**
-         * The application sends or receives messages using HTTP POST (may be over http: or https:).
+         * The application sends or receives messages using HTTP POST (may be over http: or
+         * https:).
          */
         @Json(name = "http")
         HTTP,
@@ -6372,7 +6800,8 @@ public class CodeSystems {
     }
 
     /**
-     * HL7-defined table of codes which identify conditions under which acknowledgments are required to be returned in response to a message.
+     * HL7-defined table of codes which identify conditions under which acknowledgments are required
+     * to be returned in response to a message.
      *
      * @see <a href="http://hl7.org/fhir/messageheader-response-request">MessageheaderResponseRequest</a>
      */
@@ -6404,7 +6833,8 @@ public class CodeSystems {
     }
 
     /**
-     * This value set is suitable for use with the provenance resource. It is derived from, but not compatible with, the HL7 v3 Purpose of use Code system.
+     * This value set is suitable for use with the provenance resource. It is derived from, but not
+     * compatible with, the HL7 v3 Purpose of use Code system.
      *
      * @see <a href="http://healthit.gov/nhin/purposeofuse">NHINPurposeOfUse</a>
      */
@@ -6471,7 +6901,8 @@ public class CodeSystems {
         DIRECTORY,
 
         /**
-         * Disclose to a family member, other relative, or a close personal friend of the individual
+         * Disclose to a family member, other relative, or a close personal friend of the
+         * individual
          */
         @Json(name = "FAMILY")
         FAMILY,
@@ -6483,7 +6914,8 @@ public class CodeSystems {
         PRESENT,
 
         /**
-         * Permission cannot practicably be provided because of the individual's incapacity or an emergency.
+         * Permission cannot practicably be provided because of the individual's incapacity or an
+         * emergency.
          */
         @Json(name = "EMERGENCY")
         EMERGENCY,
@@ -6587,25 +7019,29 @@ public class CodeSystems {
         USUAL,
 
         /**
-         * The formal name as registered in an official (government) registry, but which name might not be commonly used. May be called "legal name".
+         * The formal name as registered in an official (government) registry, but which name might
+         * not be commonly used. May be called "legal name".
          */
         @Json(name = "official")
         OFFICIAL,
 
         /**
-         * A temporary name. Name.period can provide more detailed information. This may also be used for temporary names assigned at birth or in emergency situations.
+         * A temporary name. Name.period can provide more detailed information. This may also be
+         * used for temporary names assigned at birth or in emergency situations.
          */
         @Json(name = "temp")
         TEMP,
 
         /**
-         * A name that is used to address the person in an informal manner, but is not part of their formal or usual name
+         * A name that is used to address the person in an informal manner, but is not part of their
+         * formal or usual name
          */
         @Json(name = "nickname")
         NICKNAME,
 
         /**
-         * Anonymous assigned name, alias, or pseudonym (used to protect a person's identity for privacy reasons)
+         * Anonymous assigned name, alias, or pseudonym (used to protect a person's identity for
+         * privacy reasons)
          */
         @Json(name = "anonymous")
         ANONYMOUS,
@@ -6617,7 +7053,11 @@ public class CodeSystems {
         OLD,
 
         /**
-         * A name used prior to changing name because of marriage. This name use is for use by applications that collect and store names that were used prior to a marriage. Marriage naming customs vary greatly around the world, and are constantly changing. This term is not gender specific. The use of this term does not imply any particular history for a person's name
+         * A name used prior to changing name because of marriage. This name use is for use by
+         * applications that collect and store names that were used prior to a marriage. Marriage
+         * naming customs vary greatly around the world, and are constantly changing. This term is
+         * not gender specific. The use of this term does not imply any particular history for a
+         * person's name
          */
         @Json(name = "maiden")
         MAIDEN,
@@ -6643,13 +7083,15 @@ public class CodeSystems {
         UUID,
 
         /**
-         * A uniform resource identifier (ideally a URL - uniform resource locator); e.g. http://unitsofmeasure.org.
+         * A uniform resource identifier (ideally a URL - uniform resource locator); e.g.
+         * http://unitsofmeasure.org.
          */
         @Json(name = "uri")
         URI,
 
         /**
-         * Some other type of unique identifier; e.g. HL7-assigned reserved string such as LN for LOINC.
+         * Some other type of unique identifier; e.g. HL7-assigned reserved string such as LN for
+         * LOINC.
          */
         @Json(name = "other")
         OTHER,
@@ -6663,13 +7105,15 @@ public class CodeSystems {
     public enum NamingSystemType {
 
         /**
-         * The naming system is used to define concepts and symbols to represent those concepts; e.g. UCUM, LOINC, NDC code, local lab codes, etc.
+         * The naming system is used to define concepts and symbols to represent those concepts;
+         * e.g. UCUM, LOINC, NDC code, local lab codes, etc.
          */
         @Json(name = "codesystem")
         CODESYSTEM,
 
         /**
-         * The naming system is used to manage identifiers (e.g. license numbers, order numbers, etc.).
+         * The naming system is used to manage identifiers (e.g. license numbers, order numbers,
+         * etc.).
          */
         @Json(name = "identifier")
         IDENTIFIER,
@@ -6689,25 +7133,30 @@ public class CodeSystems {
     public enum NarrativeStatus {
 
         /**
-         * The contents of the narrative are entirely generated from the structured data in the content.
+         * The contents of the narrative are entirely generated from the structured data in the
+         * content.
          */
         @Json(name = "generated")
         GENERATED,
 
         /**
-         * The contents of the narrative are entirely generated from the structured data in the content and some of the content is generated from extensions
+         * The contents of the narrative are entirely generated from the structured data in the
+         * content and some of the content is generated from extensions
          */
         @Json(name = "extensions")
         EXTENSIONS,
 
         /**
-         * The contents of the narrative may contain additional information not found in the structured data. Note that there is no computable way to determine what the extra information is, other than by human inspection
+         * The contents of the narrative may contain additional information not found in the
+         * structured data. Note that there is no computable way to determine what the extra
+         * information is, other than by human inspection
          */
         @Json(name = "additional")
         ADDITIONAL,
 
         /**
-         * The contents of the narrative are some equivalent of "No human-readable text provided in this case"
+         * The contents of the narrative are some equivalent of "No human-readable text provided in
+         * this case"
          */
         @Json(name = "empty")
         EMPTY,
@@ -6771,19 +7220,22 @@ public class CodeSystems {
         REQUESTED,
 
         /**
-         * The request is 'actionable', but not all actions that are implied by it have occurred yet.
+         * The request is 'actionable', but not all actions that are implied by it have occurred
+         * yet.
          */
         @Json(name = "active")
         ACTIVE,
 
         /**
-         * Actions implied by the request have been temporarily halted, but are expected to continue later. May also be called "suspended".
+         * Actions implied by the request have been temporarily halted, but are expected to continue
+         * later. May also be called "suspended".
          */
         @Json(name = "on-hold")
         ON_HOLD,
 
         /**
-         * All actions that are implied by the order have occurred and no continuation is planned (this will rarely be made explicit).
+         * All actions that are implied by the order have occurred and no continuation is planned
+         * (this will rarely be made explicit).
          */
         @Json(name = "completed")
         COMPLETED,
@@ -6809,37 +7261,45 @@ public class CodeSystems {
     public enum ObservationRelationshipType {
 
         /**
-         * This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.
+         * This observation is a group observation (e.g. a battery, a panel of tests, a set of vital
+         * sign measurements) that includes the target as a member of the group.
          */
         @Json(name = "has-member")
         HAS_MEMBER,
 
         /**
-         * The target resource (Observation or QuestionnaireResponse) is part of the information from which this observation value is derived. (e.g. calculated anion gap, Apgar score)  NOTE:  "derived-from" is the only logical choice when referencing QuestionnaireResponse.
+         * The target resource (Observation or QuestionnaireResponse) is part of the information
+         * from which this observation value is derived. (e.g. calculated anion gap, Apgar score)
+         * NOTE:  "derived-from" is the only logical choice when referencing QuestionnaireResponse.
          */
         @Json(name = "derived-from")
         DERIVED_FROM,
 
         /**
-         * This observation follows the target observation (e.g. timed tests such as Glucose Tolerance Test).
+         * This observation follows the target observation (e.g. timed tests such as Glucose
+         * Tolerance Test).
          */
         @Json(name = "sequel-to")
         SEQUEL_TO,
 
         /**
-         * This observation replaces a previous observation (i.e. a revised value). The target observation is now obsolete.
+         * This observation replaces a previous observation (i.e. a revised value). The target
+         * observation is now obsolete.
          */
         @Json(name = "replaces")
         REPLACES,
 
         /**
-         * The value of the target observation qualifies (refines) the semantics of the source observation (e.g. a lipemia measure target from a plasma measure).
+         * The value of the target observation qualifies (refines) the semantics of the source
+         * observation (e.g. a lipemia measure target from a plasma measure).
          */
         @Json(name = "qualified-by")
         QUALIFIED_BY,
 
         /**
-         * The value of the target observation interferes (degrades quality, or prevents valid observation) with the semantics of the source observation (e.g. a hemolysis measure target from a plasma potassium measure, which has no value).
+         * The value of the target observation interferes (degrades quality, or prevents valid
+         * observation) with the semantics of the source observation (e.g. a hemolysis measure
+         * target from a plasma potassium measure, which has no value).
          */
         @Json(name = "interfered-by")
         INTERFERED_BY,
@@ -6871,31 +7331,39 @@ public class CodeSystems {
         FINAL,
 
         /**
-         * Subsequent to being Final, the observation has been modified subsequent.  This includes updates/new information and corrections.
+         * Subsequent to being Final, the observation has been modified subsequent.  This includes
+         * updates/new information and corrections.
          */
         @Json(name = "amended")
         AMENDED,
 
         /**
-         * Subsequent to being Final, the observation has been modified to correct an error in the test result.
+         * Subsequent to being Final, the observation has been modified to correct an error in the
+         * test result.
          */
         @Json(name = "corrected")
         CORRECTED,
 
         /**
-         * The observation is unavailable because the measurement was not started or not completed (also sometimes called "aborted").
+         * The observation is unavailable because the measurement was not started or not completed
+         * (also sometimes called "aborted").
          */
         @Json(name = "cancelled")
         CANCELLED,
 
         /**
-         * The observation has been withdrawn following previous final release.  This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be "cancelled" rather than "entered-in-error".)
+         * The observation has been withdrawn following previous final release.  This electronic
+         * record should never have existed, though it is possible that real-world decisions were
+         * based on it. (If real-world activity has occurred, the status should be "cancelled"
+         * rather than "entered-in-error".)
          */
         @Json(name = "entered-in-error")
         ENTERED_IN_ERROR,
 
         /**
-         * The authoring system does not know which of the status values currently applies for this request. Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring system does not know which.
+         * The authoring system does not know which of the status values currently applies for this
+         * request. Note: This concept is not to be used for "other" - one of the listed statuses is
+         * presumed to apply, but the authoring system does not know which.
          */
         @Json(name = "unknown")
         UNKNOWN,
@@ -7269,7 +7737,9 @@ public class CodeSystems {
         OPTIONAL,
 
         /**
-         * The participant is excluded from the appointment, and may not be informed of the appointment taking place. (Appointment is about them, not for them - such as 2 doctors discussing results about a patient's test).
+         * The participant is excluded from the appointment, and may not be informed of the
+         * appointment taking place. (Appointment is about them, not for them - such as 2 doctors
+         * discussing results about a patient's test).
          */
         @Json(name = "information-only")
         INFORMATION_ONLY,
@@ -7289,19 +7759,23 @@ public class CodeSystems {
         ACCEPTED,
 
         /**
-         * The participant has declined the appointment and will not participate in the appointment.
+         * The participant has declined the appointment and will not participate in the
+         * appointment.
          */
         @Json(name = "declined")
         DECLINED,
 
         /**
-         * The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.
+         * The participant has  tentatively accepted the appointment. This could be automatically
+         * created by a system and requires further processing before it can be accepted. There is
+         * no commitment that attendance will occur.
          */
         @Json(name = "tentative")
         TENTATIVE,
 
         /**
-         * The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.
+         * The participant needs to indicate if they accept the appointment by changing this status
+         * to one of the other statuses.
          */
         @Json(name = "needs-action")
         NEEDS_ACTION,
@@ -7315,19 +7789,27 @@ public class CodeSystems {
     public enum PlanDefinitionType {
 
         /**
-         * A pre-defined and approved group of orders related to a particular clinical condition (e.g. hypertension treatment and monitoring) or stage of care (e.g. hospital admission to Coronary Care Unit). An order set is used as a checklist for the clinician when managing a patient with a specific condition. It is a structured collection of orders relevant to that condition and presented to the clinician in a computerized provider order entry (CPOE) system
+         * A pre-defined and approved group of orders related to a particular clinical condition
+         * (e.g. hypertension treatment and monitoring) or stage of care (e.g. hospital admission to
+         * Coronary Care Unit). An order set is used as a checklist for the clinician when managing
+         * a patient with a specific condition. It is a structured collection of orders relevant to
+         * that condition and presented to the clinician in a computerized provider order entry
+         * (CPOE) system
          */
         @Json(name = "order-set")
         ORDER_SET,
 
         /**
-         * A set of activities that can be performed that have relationships in terms of order, pre-conditions, etc.
+         * A set of activities that can be performed that have relationships in terms of order,
+         * pre-conditions, etc.
          */
         @Json(name = "protocol")
         PROTOCOL,
 
         /**
-         * A decision support rule of the form [on Event] if Condition then Action. It is intended to be a shareable, computable definition of actions that should be taken whenever some condition is met in response to a particular event or events
+         * A decision support rule of the form [on Event] if Condition then Action. It is intended
+         * to be a shareable, computable definition of actions that should be taken whenever some
+         * condition is met in response to a particular event or events
          */
         @Json(name = "eca-rule")
         ECA_RULE,
@@ -7385,7 +7867,8 @@ public class CodeSystems {
         CODE,
 
         /**
-         * The property  value is a code defined in an external code system. This may be used for translations, but is not the intent
+         * The property  value is a code defined in an external code system. This may be used for
+         * translations, but is not the intent
          */
         @Json(name = "Coding")
         CODING,
@@ -7397,7 +7880,8 @@ public class CodeSystems {
         STRING,
 
         /**
-         * The property value is a string (often used to assign ranking values to concepts for supporting score assessments)
+         * The property value is a string (often used to assign ranking values to concepts for
+         * supporting score assessments)
          */
         @Json(name = "integer")
         INTEGER,
@@ -7423,7 +7907,8 @@ public class CodeSystems {
     public enum ProvenanceEntityRole {
 
         /**
-         * A transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a preexisting entity.
+         * A transformation of an entity into another, an update of an entity resulting in a new
+         * one, or the construction of a new entity based on a preexisting entity.
          */
         @Json(name = "derivation")
         DERIVATION,
@@ -7435,19 +7920,23 @@ public class CodeSystems {
         REVISION,
 
         /**
-         * The repeat of (some or all of) an entity, such as text or image, by someone who may or may not be its original author.
+         * The repeat of (some or all of) an entity, such as text or image, by someone who may or
+         * may not be its original author.
          */
         @Json(name = "quotation")
         QUOTATION,
 
         /**
-         * A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight.
+         * A primary source for a topic refers to something produced by some agent with direct
+         * experience and knowledge about the topic, at the time of the topic's study, without
+         * benefit from hindsight.
          */
         @Json(name = "source")
         SOURCE,
 
         /**
-         * A derivation for which the entity is removed from accessibility usually through the use of the Delete operation.
+         * A derivation for which the entity is removed from accessibility usually through the use
+         * of the Delete operation.
          */
         @Json(name = "removal")
         REMOVAL,
@@ -7461,7 +7950,8 @@ public class CodeSystems {
     public enum PublicationStatus {
 
         /**
-         * This resource is still under development and is not yet considered to be ready for normal use.
+         * This resource is still under development and is not yet considered to be ready for normal
+         * use.
          */
         @Json(name = "draft")
         DRAFT,
@@ -7479,14 +7969,17 @@ public class CodeSystems {
         RETIRED,
 
         /**
-         * The authoring system does not know which of the status values currently applies for this resource.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+         * The authoring system does not know which of the status values currently applies for this
+         * resource.  Note: This concept is not to be used for "other" - one of the listed statuses
+         * is presumed to apply, it's just not known which one.
          */
         @Json(name = "unknown")
         UNKNOWN,
     }
 
     /**
-     * A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM systems
+     * A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford
+     * CEBM systems
      *
      * @see <a href="http://hl7.org/fhir/evidence-quality">QualityOfEvidenceRating</a>
      */
@@ -7595,8 +8088,8 @@ public class CodeSystems {
         DISPLAY,
 
         /**
-         * An item that defines a specific answer to be captured, and may have child items.
-         * (the answer provided in the QuestionnaireResponse should be of the defined datatype)
+         * An item that defines a specific answer to be captured, and may have child items. (the
+         * answer provided in the QuestionnaireResponse should be of the defined datatype)
          */
         @Json(name = "question")
         QUESTION,
@@ -7656,13 +8149,16 @@ public class CodeSystems {
         URL,
 
         /**
-         * Question with a Coding drawn from a list of options (specified in either the option property, or via the valueset referenced in the options property) as an answer (valueCoding)
+         * Question with a Coding drawn from a list of options (specified in either the option
+         * property, or via the valueset referenced in the options property) as an answer
+         * (valueCoding)
          */
         @Json(name = "choice")
         CHOICE,
 
         /**
-         * Answer is a Coding drawn from a list of options (as with the choice type) or a free-text entry in a string (valueCoding or valueString)
+         * Answer is a Coding drawn from a list of options (as with the choice type) or a free-text
+         * entry in a string (valueCoding or valueString)
          */
         @Json(name = "open-choice")
         OPEN_CHOICE,
@@ -7674,21 +8170,26 @@ public class CodeSystems {
         ATTACHMENT,
 
         /**
-         * Question with a reference to another resource (practitioner, organization, etc.) as an answer (valueReference)
+         * Question with a reference to another resource (practitioner, organization, etc.) as an
+         * answer (valueReference)
          */
         @Json(name = "reference")
         REFERENCE,
 
         /**
-         * Question with a combination of a numeric value and unit, potentially with a comparator (<, >, etc.) as an answer. (valueQuantity)
-         * There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to define what unit whould be captured (or the a unit that has a ucum conversion from the provided unit)
+         * Question with a combination of a numeric value and unit, potentially with a comparator
+         * (<, >, etc.) as an answer. (valueQuantity) There is an extension
+         * 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to define
+         * what unit whould be captured (or the a unit that has a ucum conversion from the provided
+         * unit)
          */
         @Json(name = "quantity")
         QUANTITY,
     }
 
     /**
-     * Identifies the modes of usage of a questionnaire that should enable a particular questionnaire item
+     * Identifies the modes of usage of a questionnaire that should enable a particular
+     * questionnaire item
      *
      * @see <a href="http://hl7.org/fhir/questionnaire-usage-mode">QuestionnaireItemUsageMode</a>
      */
@@ -7713,13 +8214,15 @@ public class CodeSystems {
         DISPLAY,
 
         /**
-         * Render the item only when displaying a completed form and the item has been answered (or has child items that have been answered)
+         * Render the item only when displaying a completed form and the item has been answered (or
+         * has child items that have been answered)
          */
         @Json(name = "display-non-empty")
         DISPLAY_NON_EMPTY,
 
         /**
-         * Render the item when capturing data or when displaying a completed form and the item has been answered (or has child items that have been answered)
+         * Render the item when capturing data or when displaying a completed form and the item has
+         * been answered (or has child items that have been answered)
          */
         @Json(name = "capture-display-non-empty")
         CAPTURE_DISPLAY_NON_EMPTY,
@@ -7733,19 +8236,22 @@ public class CodeSystems {
     public enum QuestionnaireResponseStatus {
 
         /**
-         * This QuestionnaireResponse has been partially filled out with answers, but changes or additions are still expected to be made to it.
+         * This QuestionnaireResponse has been partially filled out with answers, but changes or
+         * additions are still expected to be made to it.
          */
         @Json(name = "in-progress")
         IN_PROGRESS,
 
         /**
-         * This QuestionnaireResponse has been filled out with answers, and the current content is regarded as definitive.
+         * This QuestionnaireResponse has been filled out with answers, and the current content is
+         * regarded as definitive.
          */
         @Json(name = "completed")
         COMPLETED,
 
         /**
-         * This QuestionnaireResponse has been filled out with answers, then marked as complete, yet changes or additions have been made to it afterwards.
+         * This QuestionnaireResponse has been filled out with answers, then marked as complete, yet
+         * changes or additions have been made to it afterwards.
          */
         @Json(name = "amended")
         AMENDED,
@@ -7757,7 +8263,8 @@ public class CodeSystems {
         ENTERED_IN_ERROR,
 
         /**
-         * This QuestionnaireResponse has been partially filled out with answers, but has been abandoned. It is unknown whether changes or additions are expected to be made to it.
+         * This QuestionnaireResponse has been partially filled out with answers, but has been
+         * abandoned. It is unknown whether changes or additions are expected to be made to it.
          */
         @Json(name = "stopped")
         STOPPED,
@@ -7771,7 +8278,8 @@ public class CodeSystems {
     public enum ReferenceHandlingPolicy {
 
         /**
-         * The server supports and populates Literal references where they are known (this code does not guarantee that all references are literal; see 'enforced')
+         * The server supports and populates Literal references where they are known (this code does
+         * not guarantee that all references are literal; see 'enforced')
          */
         @Json(name = "literal")
         LITERAL,
@@ -7783,13 +8291,16 @@ public class CodeSystems {
         LOGICAL,
 
         /**
-         * The server will attempt to resolve logical references to literal references (if resolution fails, the server may still accept resources; see logical)
+         * The server will attempt to resolve logical references to literal references (if
+         * resolution fails, the server may still accept resources; see logical)
          */
         @Json(name = "resolves")
         RESOLVES,
 
         /**
-         * The server enforces that references have integrity - e.g. it ensures that references can always be resolved. This is typically the case for clinical record systems, but often not the case for middleware/proxy systems
+         * The server enforces that references have integrity - e.g. it ensures that references can
+         * always be resolved. This is typically the case for clinical record systems, but often not
+         * the case for middleware/proxy systems
          */
         @Json(name = "enforced")
         ENFORCED,
@@ -7802,7 +8313,8 @@ public class CodeSystems {
     }
 
     /**
-     * Whether a reference needs to be version specific or version independent, or whether either can be used
+     * Whether a reference needs to be version specific or version independent, or whether either
+     * can be used
      *
      * @see <a href="http://hl7.org/fhir/reference-version-rules">ReferenceVersionRules</a>
      */
@@ -7847,13 +8359,17 @@ public class CodeSystems {
         PHONE,
 
         /**
-         * Referrals may be accepted via a secure messaging system. To determine the types of secure messaging systems supported, refer to the identifiers collection. Callers will need to understand the specific identifier system used to know that they are able to transmit messages.
+         * Referrals may be accepted via a secure messaging system. To determine the types of secure
+         * messaging systems supported, refer to the identifiers collection. Callers will need to
+         * understand the specific identifier system used to know that they are able to transmit
+         * messages.
          */
         @Json(name = "elec")
         ELEC,
 
         /**
-         * Referrals may be accepted via a secure email. To send please encrypt with the services public key.
+         * Referrals may be accepted via a secure email. To send please encrypt with the services
+         * public key.
          */
         @Json(name = "semail")
         SEMAIL,
@@ -7873,19 +8389,26 @@ public class CodeSystems {
     public enum RelatedArtifactType {
 
         /**
-         * Additional documentation for the knowledge resource. This would include additional instructions on usage as well as additional information on clinical context or appropriateness
+         * Additional documentation for the knowledge resource. This would include additional
+         * instructions on usage as well as additional information on clinical context or
+         * appropriateness
          */
         @Json(name = "documentation")
         DOCUMENTATION,
 
         /**
-         * A summary of the justification for the knowledge resource including supporting evidence, relevant guidelines, or other clinically important information. This information is intended to provide a way to make the justification for the knowledge resource available to the consumer of interventions or results produced by the knowledge resource
+         * A summary of the justification for the knowledge resource including supporting evidence,
+         * relevant guidelines, or other clinically important information. This information is
+         * intended to provide a way to make the justification for the knowledge resource available
+         * to the consumer of interventions or results produced by the knowledge resource
          */
         @Json(name = "justification")
         JUSTIFICATION,
 
         /**
-         * Bibliographic citation for papers, references, or other relevant material for the knowledge resource. This is intended to allow for citation of related material, but that was not necessarily specifically prepared in connection with this knowledge resource
+         * Bibliographic citation for papers, references, or other relevant material for the
+         * knowledge resource. This is intended to allow for citation of related material, but that
+         * was not necessarily specifically prepared in connection with this knowledge resource
          */
         @Json(name = "citation")
         CITATION,
@@ -7903,7 +8426,11 @@ public class CodeSystems {
         SUCCESSOR,
 
         /**
-         * The knowledge resource is derived from the related artifact. This is intended to capture the relationship in which a particular knowledge resource is based on the content of another artifact, but is modified to capture either a different set of overall requirements, or a more specific set of requirements such as those involved in a particular institution or clinical setting
+         * The knowledge resource is derived from the related artifact. This is intended to capture
+         * the relationship in which a particular knowledge resource is based on the content of
+         * another artifact, but is modified to capture either a different set of overall
+         * requirements, or a more specific set of requirements such as those involved in a
+         * particular institution or clinical setting
          */
         @Json(name = "derived-from")
         DERIVED_FROM,
@@ -7929,13 +8456,15 @@ public class CodeSystems {
     public enum RepositoryType {
 
         /**
-         * When URL is clicked, the resource can be seen directly (by webpage or by download link format)
+         * When URL is clicked, the resource can be seen directly (by webpage or by download link
+         * format)
          */
         @Json(name = "directlink")
         DIRECTLINK,
 
         /**
-         * When the API method (e.g. [base_url]/[parameter]) related with the URL of the website is executed, the resource can be seen directly (usually in JSON or XML format)
+         * When the API method (e.g. [base_url]/[parameter]) related with the URL of the website is
+         * executed, the resource can be seen directly (usually in JSON or XML format)
          */
         @Json(name = "openapi")
         OPENAPI,
@@ -7947,7 +8476,8 @@ public class CodeSystems {
         LOGIN,
 
         /**
-         * When logged in and  follow the API in the website related with URL, the resource can be seen.
+         * When logged in and  follow the API in the website related with URL, the resource can be
+         * seen.
          */
         @Json(name = "oauth")
         OAUTH,
@@ -7967,13 +8497,15 @@ public class CodeSystems {
     public enum RequestIntent {
 
         /**
-         * The request is a suggestion made by someone/something that doesn't have an intention to ensure it occurs and without providing an authorization to act
+         * The request is a suggestion made by someone/something that doesn't have an intention to
+         * ensure it occurs and without providing an authorization to act
          */
         @Json(name = "proposal")
         PROPOSAL,
 
         /**
-         * The request represents an intension to ensure something occurs without providing an authorization for others to act
+         * The request represents an intension to ensure something occurs without providing an
+         * authorization for others to act
          */
         @Json(name = "plan")
         PLAN,
@@ -7991,25 +8523,30 @@ public class CodeSystems {
         ORIGINAL_ORDER,
 
         /**
-         * The request represents an automatically generated supplemental authorization for action based on a parent authorization together with initial results of the action taken against that parent authorization
+         * The request represents an automatically generated supplemental authorization for action
+         * based on a parent authorization together with initial results of the action taken against
+         * that parent authorization
          */
         @Json(name = "reflex-order")
         REFLEX_ORDER,
 
         /**
-         * The request represents the view of an authorization instantiated by a fulfilling system representing the details of the fulfiller's intention to act upon a submitted order
+         * The request represents the view of an authorization instantiated by a fulfilling system
+         * representing the details of the fulfiller's intention to act upon a submitted order
          */
         @Json(name = "filler-order")
         FILLER_ORDER,
 
         /**
-         * An order created in fulfillment of a broader order that represents the authorization for a single activity occurrence.  E.g. The administration of a single dose of a drug.
+         * An order created in fulfillment of a broader order that represents the authorization for
+         * a single activity occurrence.  E.g. The administration of a single dose of a drug.
          */
         @Json(name = "instance-order")
         INSTANCE_ORDER,
 
         /**
-         * The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.
+         * The request represents a component or option for a RequestGroup that establishes timing,
+         * conditionality and/or other constraints among a set of requests.
          * <p>
          * Refer to [[[RequestGroup]]] for additional information on how this status is used
          */
@@ -8043,7 +8580,8 @@ public class CodeSystems {
         ASAP,
 
         /**
-         * The request should be actioned immediately - highest possible priority.  E.g. an emergency
+         * The request should be actioned immediately - highest possible priority.  E.g. an
+         * emergency
          */
         @Json(name = "stat")
         STAT,
@@ -8069,31 +8607,38 @@ public class CodeSystems {
         ACTIVE,
 
         /**
-         * The authorization/request to act has been temporarily withdrawn but is expected to resume in the future
+         * The authorization/request to act has been temporarily withdrawn but is expected to resume
+         * in the future
          */
         @Json(name = "suspended")
         SUSPENDED,
 
         /**
-         * The authorization/request to act has been terminated prior to the full completion of the intended actions.  No further activity should occur.
+         * The authorization/request to act has been terminated prior to the full completion of the
+         * intended actions.  No further activity should occur.
          */
         @Json(name = "cancelled")
         CANCELLED,
 
         /**
-         * Activity against the request has been sufficiently completed to the satisfaction of the requester
+         * Activity against the request has been sufficiently completed to the satisfaction of the
+         * requester
          */
         @Json(name = "completed")
         COMPLETED,
 
         /**
-         * This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be "cancelled" rather than "entered-in-error".)
+         * This electronic record should never have existed, though it is possible that real-world
+         * decisions were based on it.  (If real-world activity has occurred, the status should be
+         * "cancelled" rather than "entered-in-error".)
          */
         @Json(name = "entered-in-error")
         ENTERED_IN_ERROR,
 
         /**
-         * The authoring system does not know which of the status values currently applies for this request.  Note: This concept is not to be used for "other" . One of the listed statuses is presumed to apply,  but the system creating the request doesn't know.
+         * The authoring system does not know which of the status values currently applies for this
+         * request.  Note: This concept is not to be used for "other" . One of the listed statuses
+         * is presumed to apply,  but the system creating the request doesn't know.
          */
         @Json(name = "unknown")
         UNKNOWN,
@@ -8107,7 +8652,8 @@ public class CodeSystems {
     public enum ResearchStudyStatus {
 
         /**
-         * The study is undergoing design but the process of selecting study subjects and capturing data has not yet begun.
+         * The study is undergoing design but the process of selecting study subjects and capturing
+         * data has not yet begun.
          */
         @Json(name = "draft")
         DRAFT,
@@ -8131,13 +8677,15 @@ public class CodeSystems {
         STOPPED,
 
         /**
-         * The information sought by the study has been gathered and compiled and no further work is being performed
+         * The information sought by the study has been gathered and compiled and no further work is
+         * being performed
          */
         @Json(name = "completed")
         COMPLETED,
 
         /**
-         * This study never actually existed.  The record is retained for tracking purposes in the event decisions may have been made based on this erroneous information.
+         * This study never actually existed.  The record is retained for tracking purposes in the
+         * event decisions may have been made based on this erroneous information.
          */
         @Json(name = "entered-in-error")
         ENTERED_IN_ERROR,
@@ -8151,19 +8699,22 @@ public class CodeSystems {
     public enum ResearchSubjectStatus {
 
         /**
-         * The subject has been identified as a potential participant in the study but has not yet agreed to participate
+         * The subject has been identified as a potential participant in the study but has not yet
+         * agreed to participate
          */
         @Json(name = "candidate")
         CANDIDATE,
 
         /**
-         * The subject has agreed to participate in the study but has not yet begun performing any action within the study
+         * The subject has agreed to participate in the study but has not yet begun performing any
+         * action within the study
          */
         @Json(name = "enrolled")
         ENROLLED,
 
         /**
-         * The subject is currently being monitored and/or subject to treatment as part of the study
+         * The subject is currently being monitored and/or subject to treatment as part of the
+         * study
          */
         @Json(name = "active")
         ACTIVE,
@@ -8175,13 +8726,15 @@ public class CodeSystems {
         SUSPENDED,
 
         /**
-         * The subject has permanently ended participation in the study prior to completion of the intended monitoring/treatment
+         * The subject has permanently ended participation in the study prior to completion of the
+         * intended monitoring/treatment
          */
         @Json(name = "withdrawn")
         WITHDRAWN,
 
         /**
-         * All intended monitoring/treatment of the subject has been completed and their engagement with the study is now ended
+         * All intended monitoring/treatment of the subject has been completed and their engagement
+         * with the study is now ended
          */
         @Json(name = "completed")
         COMPLETED,
@@ -8227,19 +8780,24 @@ public class CodeSystems {
     public enum ResourceValidationMode {
 
         /**
-         * The server checks the content, and then checks that the content would be acceptable as a create (e.g. that the content would not violate any uniqueness constraints).
+         * The server checks the content, and then checks that the content would be acceptable as a
+         * create (e.g. that the content would not violate any uniqueness constraints).
          */
         @Json(name = "create")
         CREATE,
 
         /**
-         * The server checks the content, and then checks that it would accept it as an update against the nominated specific resource (e.g. that there are no changes to immutable fields the server does not allow to change, and checking version integrity if appropriate).
+         * The server checks the content, and then checks that it would accept it as an update
+         * against the nominated specific resource (e.g. that there are no changes to immutable
+         * fields the server does not allow to change, and checking version integrity if
+         * appropriate).
          */
         @Json(name = "update")
         UPDATE,
 
         /**
-         * The server ignores the content, and checks that the nominated resource is allowed to be deleted (e.g. checking referential integrity rules).
+         * The server ignores the content, and checks that the nominated resource is allowed to be
+         * deleted (e.g. checking referential integrity rules).
          */
         @Json(name = "delete")
         DELETE,
@@ -8265,7 +8823,8 @@ public class CodeSystems {
         VERSIONED,
 
         /**
-         * VersionId must be correct for updates (server) or will be specified (If-match header) for updates (client).
+         * VersionId must be correct for updates (server) or will be specified (If-match header) for
+         * updates (client).
          */
         @Json(name = "versioned-update")
         VERSIONED_UPDATE,
@@ -8285,13 +8844,16 @@ public class CodeSystems {
         OK,
 
         /**
-         * Some internal unexpected error occurred - wait and try again. Note - this is usually used for things like database unavailable, which may be expected to resolve, though human intervention may be required.
+         * Some internal unexpected error occurred - wait and try again. Note - this is usually used
+         * for things like database unavailable, which may be expected to resolve, though human
+         * intervention may be required.
          */
         @Json(name = "transient-error")
         TRANSIENT_ERROR,
 
         /**
-         * The message was rejected because of a problem with the content. There is no point in re-sending without change. The response narrative SHALL describe the issue.
+         * The message was rejected because of a problem with the content. There is no point in
+         * re-sending without change. The response narrative SHALL describe the issue.
          */
         @Json(name = "fatal-error")
         FATAL_ERROR,
@@ -8417,14 +8979,16 @@ public class CodeSystems {
         EB,
 
         /**
-         * the value for the parameter in the resource is approximately the same to the provided value.
+         * the value for the parameter in the resource is approximately the same to the provided
+         * value.
          */
         @Json(name = "ap")
         AP,
     }
 
     /**
-     * Why an entry is in the result set - whether it's included as a match or because of an _include requirement.
+     * Why an entry is in the result set - whether it's included as a match or because of an
+     * _include requirement.
      *
      * @see <a href="http://hl7.org/fhir/search-entry-mode">SearchEntryMode</a>
      */
@@ -8437,13 +9001,15 @@ public class CodeSystems {
         MATCH,
 
         /**
-         * This resource is returned because it is referred to from another resource in the search set.
+         * This resource is returned because it is referred to from another resource in the search
+         * set.
          */
         @Json(name = "include")
         INCLUDE,
 
         /**
-         * An OperationOutcome that provides additional information about the processing of a search.
+         * An OperationOutcome that provides additional information about the processing of a
+         * search.
          */
         @Json(name = "outcome")
         OUTCOME,
@@ -8463,13 +9029,15 @@ public class CodeSystems {
         MISSING,
 
         /**
-         * The search parameter returns resources that have a value that exactly matches the supplied parameter (the whole string, including casing and accents).
+         * The search parameter returns resources that have a value that exactly matches the
+         * supplied parameter (the whole string, including casing and accents).
          */
         @Json(name = "exact")
         EXACT,
 
         /**
-         * The search parameter returns resources that include the supplied parameter value anywhere within the field being searched.
+         * The search parameter returns resources that include the supplied parameter value anywhere
+         * within the field being searched.
          */
         @Json(name = "contains")
         CONTAINS,
@@ -8481,37 +9049,43 @@ public class CodeSystems {
         NOT,
 
         /**
-         * The search parameter is processed as a string that searches text associated with the code/value - either CodeableConcept.text, Coding.display, or Identifier.type.text.
+         * The search parameter is processed as a string that searches text associated with the
+         * code/value - either CodeableConcept.text, Coding.display, or Identifier.type.text.
          */
         @Json(name = "text")
         TEXT,
 
         /**
-         * The search parameter is a URI (relative or absolute) that identifies a value set, and the search parameter tests whether the coding is in the specified value set.
+         * The search parameter is a URI (relative or absolute) that identifies a value set, and the
+         * search parameter tests whether the coding is in the specified value set.
          */
         @Json(name = "in")
         IN,
 
         /**
-         * The search parameter is a URI (relative or absolute) that identifies a value set, and the search parameter tests whether the coding is not in the specified value set.
+         * The search parameter is a URI (relative or absolute) that identifies a value set, and the
+         * search parameter tests whether the coding is not in the specified value set.
          */
         @Json(name = "not-in")
         NOT_IN,
 
         /**
-         * The search parameter tests whether the value in a resource is subsumed by the specified value (is-a, or hierarchical relationships).
+         * The search parameter tests whether the value in a resource is subsumed by the specified
+         * value (is-a, or hierarchical relationships).
          */
         @Json(name = "below")
         BELOW,
 
         /**
-         * The search parameter tests whether the value in a resource subsumes the specified value (is-a, or hierarchical relationships).
+         * The search parameter tests whether the value in a resource subsumes the specified value
+         * (is-a, or hierarchical relationships).
          */
         @Json(name = "above")
         ABOVE,
 
         /**
-         * The search parameter only applies to the Resource Type specified as a modifier (e.g. the modifier is not actually :type, but :Patient etc.).
+         * The search parameter only applies to the Resource Type specified as a modifier (e.g. the
+         * modifier is not actually :type, but :Patient etc.).
          */
         @Json(name = "type")
         TYPE,
@@ -8531,19 +9105,25 @@ public class CodeSystems {
         NUMBER,
 
         /**
-         * Search parameter is on a date/time. The date format is the standard XML format, though other formats may be supported.
+         * Search parameter is on a date/time. The date format is the standard XML format, though
+         * other formats may be supported.
          */
         @Json(name = "date")
         DATE,
 
         /**
-         * Search parameter is a simple string, like a name part. Search is case-insensitive and accent-insensitive. May match just the start of a string. String parameters may contain spaces.
+         * Search parameter is a simple string, like a name part. Search is case-insensitive and
+         * accent-insensitive. May match just the start of a string. String parameters may contain
+         * spaces.
          */
         @Json(name = "string")
         STRING,
 
         /**
-         * Search parameter on a coded element or identifier. May be used to search through the text, displayname, code and code/codesystem (for codes) and label, system and key (for identifier). Its value is either a string or a pair of namespace and value, separated by a "|", depending on the modifier used.
+         * Search parameter on a coded element or identifier. May be used to search through the
+         * text, displayname, code and code/codesystem (for codes) and label, system and key (for
+         * identifier). Its value is either a string or a pair of namespace and value, separated by
+         * a "|", depending on the modifier used.
          */
         @Json(name = "token")
         TOKEN,
@@ -8626,7 +9206,8 @@ public class CodeSystems {
     }
 
     /**
-     * The code(s) that detail the conditions under which the healthcare service is available/offered.
+     * The code(s) that detail the conditions under which the healthcare service is
+     * available/offered.
      *
      * @see <a href="http://hl7.org/fhir/service-provision-conditions">ServiceProvisionConditions</a>
      */
@@ -8659,7 +9240,8 @@ public class CodeSystems {
     public enum SlicingRules {
 
         /**
-         * No additional content is allowed other than that described by the slices in this profile.
+         * No additional content is allowed other than that described by the slices in this
+         * profile.
          */
         @Json(name = "closed")
         CLOSED,
@@ -8671,7 +9253,9 @@ public class CodeSystems {
         OPEN,
 
         /**
-         * Additional content is allowed, but only at the end of the list. Note that using this requires that the slices be ordered, which makes it hard to share uses. This should only be done where absolutely required.
+         * Additional content is allowed, but only at the end of the list. Note that using this
+         * requires that the slices be ordered, which makes it hard to share uses. This should only
+         * be done where absolutely required.
          */
         @Json(name = "openAtEnd")
         OPENATEND,
@@ -8685,7 +9269,8 @@ public class CodeSystems {
     public enum SlotStatus {
 
         /**
-         * Indicates that the time interval is busy because one  or more events have been scheduled for that interval.
+         * Indicates that the time interval is busy because one  or more events have been scheduled
+         * for that interval.
          */
         @Json(name = "busy")
         BUSY,
@@ -8703,7 +9288,8 @@ public class CodeSystems {
         BUSY_UNAVAILABLE,
 
         /**
-         * Indicates that the time interval is busy because one or more events have been tentatively scheduled for that interval.
+         * Indicates that the time interval is busy because one or more events have been tentatively
+         * scheduled for that interval.
          */
         @Json(name = "busy-tentative")
         BUSY_TENTATIVE,
@@ -8741,7 +9327,8 @@ public class CodeSystems {
         TRACE,
 
         /**
-         * The specific quantity is not known, but is known to be non-zero and is not specified because it makes up the bulk of the material.
+         * The specific quantity is not known, but is known to be non-zero and is not specified
+         * because it makes up the bulk of the material.
          */
         @Json(name = "sufficient")
         SUFFICIENT,
@@ -8779,7 +9366,8 @@ public class CodeSystems {
         UNAVAILABLE,
 
         /**
-         * The specimen cannot be used because of a quality issue such as a broken container, contamination, or too old.
+         * The specimen cannot be used because of a quality issue such as a broken container,
+         * contamination, or too old.
          */
         @Json(name = "unsatisfactory")
         UNSATISFACTORY,
@@ -8792,7 +9380,8 @@ public class CodeSystems {
     }
 
     /**
-     * A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems
+     * A rating system that describes the strength of the recommendation, such as the GRADE,
+     * DynaMed, or HGPS systems
      *
      * @see <a href="http://hl7.org/fhir/recommendation-strength">StrengthOfRecommendationRating</a>
      */
@@ -8819,13 +9408,15 @@ public class CodeSystems {
     public enum StructureDefinitionKind {
 
         /**
-         * A primitive type that has a value and an extension. These can be used throughout Resource and extension definitions. Only the base specification can define primitive types.
+         * A primitive type that has a value and an extension. These can be used throughout Resource
+         * and extension definitions. Only the base specification can define primitive types.
          */
         @Json(name = "primitive-type")
         PRIMITIVE_TYPE,
 
         /**
-         * A  complex structure that defines a set of data elements. These can be used throughout Resource and extension definitions, and in logical models.
+         * A  complex structure that defines a set of data elements. These can be used throughout
+         * Resource and extension definitions, and in logical models.
          */
         @Json(name = "complex-type")
         COMPLEX_TYPE,
@@ -8877,7 +9468,8 @@ public class CodeSystems {
         NONE,
 
         /**
-         * This group is a default mapping group for the specified types and for the primary source type
+         * This group is a default mapping group for the specified types and for the primary source
+         * type
          */
         @Json(name = "types")
         TYPES,
@@ -8917,25 +9509,29 @@ public class CodeSystems {
     public enum StructureMapModelMode {
 
         /**
-         * This structure describes an instance passed to the mapping engine that is used a source of data
+         * This structure describes an instance passed to the mapping engine that is used a source
+         * of data
          */
         @Json(name = "source")
         SOURCE,
 
         /**
-         * This structure describes an instance that the mapping engine may ask for that is used a source of data
+         * This structure describes an instance that the mapping engine may ask for that is used a
+         * source of data
          */
         @Json(name = "queried")
         QUERIED,
 
         /**
-         * This structure describes an instance passed to the mapping engine that is used a target of data
+         * This structure describes an instance passed to the mapping engine that is used a target
+         * of data
          */
         @Json(name = "target")
         TARGET,
 
         /**
-         * This structure describes an instance that the mapping engine may ask to create that is used a target of data
+         * This structure describes an instance that the mapping engine may ask to create that is
+         * used a target of data
          */
         @Json(name = "produced")
         PRODUCED,
@@ -8987,19 +9583,22 @@ public class CodeSystems {
     public enum StructureMapTargetListMode {
 
         /**
-         * when the target list is being assembled, the items for this rule go first. If more that one rule defines a first item (for a given instance of mapping) then this is an error
+         * when the target list is being assembled, the items for this rule go first. If more that
+         * one rule defines a first item (for a given instance of mapping) then this is an error
          */
         @Json(name = "first")
         FIRST,
 
         /**
-         * the target instance is shared with the target instances generated by another rule (up to the first common n items, then create new ones)
+         * the target instance is shared with the target instances generated by another rule (up to
+         * the first common n items, then create new ones)
          */
         @Json(name = "share")
         SHARE,
 
         /**
-         * when the target list is being assembled, the items for this rule go last. If more that one rule defines a last item (for a given instance of mapping) then this is an error
+         * when the target list is being assembled, the items for this rule go last. If more that
+         * one rule defines a last item (for a given instance of mapping) then this is an error
          */
         @Json(name = "last")
         LAST,
@@ -9019,7 +9618,8 @@ public class CodeSystems {
     public enum StructureMapTransform {
 
         /**
-         * create(type : string) - type is passed through to the application on the standard API, and must be known by it
+         * create(type : string) - type is passed through to the application on the standard API,
+         * and must be known by it
          */
         @Json(name = "create")
         CREATE,
@@ -9037,13 +9637,15 @@ public class CodeSystems {
         TRUNCATE,
 
         /**
-         * escape(source, fmt1, fmt2) - change source from one kind of escaping to another (plain, java, xml, json). note that this is for when the string itself is escaped
+         * escape(source, fmt1, fmt2) - change source from one kind of escaping to another (plain,
+         * java, xml, json). note that this is for when the string itself is escaped
          */
         @Json(name = "escape")
         ESCAPE,
 
         /**
-         * cast(source, type?) - case source from one type to another. target type can be left as implicit if there is one and only one target type known
+         * cast(source, type?) - case source from one type to another. target type can be left as
+         * implicit if there is one and only one target type known
          */
         @Json(name = "cast")
         CAST,
@@ -9079,7 +9681,8 @@ public class CodeSystems {
         UUID,
 
         /**
-         * Return the appropriate string to put in a reference that refers to the resource provided as a parameter
+         * Return the appropriate string to put in a reference that refers to the resource provided
+         * as a parameter
          */
         @Json(name = "pointer")
         POINTER,
@@ -9103,19 +9706,22 @@ public class CodeSystems {
         C,
 
         /**
-         * Create a quantity. Parameters = (text) or (value, unit, [system, code]) where text is the natural representation e.g. [comparator]value[space]unit
+         * Create a quantity. Parameters = (text) or (value, unit, [system, code]) where text is the
+         * natural representation e.g. [comparator]value[space]unit
          */
         @Json(name = "qty")
         QTY,
 
         /**
-         * Create an identifier. Parameters = (system, value[, type]) where type is a code from the identifier type value set
+         * Create an identifier. Parameters = (system, value[, type]) where type is a code from the
+         * identifier type value set
          */
         @Json(name = "id")
         ID,
 
         /**
-         * Create a contact details. Parameters = (value) or (system, value). If no system is provided, the system should be inferred from the content of the value
+         * Create a contact details. Parameters = (value) or (system, value). If no system is
+         * provided, the system should be inferred from the content of the value
          */
         @Json(name = "cp")
         CP,
@@ -9129,31 +9735,36 @@ public class CodeSystems {
     public enum SubscriptionChannelType {
 
         /**
-         * The channel is executed by making a post to the URI. If a payload is included, the URL is interpreted as the service base, and an update (PUT) is made.
+         * The channel is executed by making a post to the URI. If a payload is included, the URL is
+         * interpreted as the service base, and an update (PUT) is made.
          */
         @Json(name = "rest-hook")
         REST_HOOK,
 
         /**
-         * The channel is executed by sending a packet across a web socket connection maintained by the client. The URL identifies the websocket, and the client binds to this URL.
+         * The channel is executed by sending a packet across a web socket connection maintained by
+         * the client. The URL identifies the websocket, and the client binds to this URL.
          */
         @Json(name = "websocket")
         WEBSOCKET,
 
         /**
-         * The channel is executed by sending an email to the email addressed in the URI (which must be a mailto:).
+         * The channel is executed by sending an email to the email addressed in the URI (which must
+         * be a mailto:).
          */
         @Json(name = "email")
         EMAIL,
 
         /**
-         * The channel is executed by sending an SMS message to the phone number identified in the URL (tel:).
+         * The channel is executed by sending an SMS message to the phone number identified in the
+         * URL (tel:).
          */
         @Json(name = "sms")
         SMS,
 
         /**
-         * The channel is executed by sending a message (e.g. a Bundle with a MessageHeader resource etc.) to the application identified in the URI.
+         * The channel is executed by sending a message (e.g. a Bundle with a MessageHeader resource
+         * etc.) to the application identified in the URI.
          */
         @Json(name = "message")
         MESSAGE,
@@ -9237,7 +9848,9 @@ public class CodeSystems {
         ABANDONED,
 
         /**
-         * This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be "cancelled" rather than "entered-in-error".)
+         * This electronic record should never have existed, though it is possible that real-world
+         * decisions were based on it. (If real-world activity has occurred, the status should be
+         * "cancelled" rather than "entered-in-error".)
          */
         @Json(name = "entered-in-error")
         ENTERED_IN_ERROR,
@@ -9283,38 +9896,46 @@ public class CodeSystems {
         ACTIVE,
 
         /**
-         * The authorization/request to act has been temporarily withdrawn but is expected to resume in the future
+         * The authorization/request to act has been temporarily withdrawn but is expected to resume
+         * in the future
          */
         @Json(name = "suspended")
         SUSPENDED,
 
         /**
-         * The authorization/request to act has been terminated prior to the full completion of the intended actions.  No further activity should occur.
+         * The authorization/request to act has been terminated prior to the full completion of the
+         * intended actions.  No further activity should occur.
          */
         @Json(name = "cancelled")
         CANCELLED,
 
         /**
-         * Activity against the request has been sufficiently completed to the satisfaction of the requester
+         * Activity against the request has been sufficiently completed to the satisfaction of the
+         * requester
          */
         @Json(name = "completed")
         COMPLETED,
 
         /**
-         * This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be "cancelled" rather than "entered-in-error".)
+         * This electronic record should never have existed, though it is possible that real-world
+         * decisions were based on it.  (If real-world activity has occurred, the status should be
+         * "cancelled" rather than "entered-in-error".)
          */
         @Json(name = "entered-in-error")
         ENTERED_IN_ERROR,
 
         /**
-         * The authoring system does not know which of the status values currently applies for this request.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+         * The authoring system does not know which of the status values currently applies for this
+         * request.  Note: This concept is not to be used for "other" - one of the listed statuses
+         * is presumed to apply, it's just not known which one.
          */
         @Json(name = "unknown")
         UNKNOWN,
     }
 
     /**
-     * How to manage the intersection between a fixed version in a value set, and a fixed version of the system in the expansion profile
+     * How to manage the intersection between a fixed version in a value set, and a fixed version of
+     * the system in the expansion profile
      *
      * @see <a href="http://hl7.org/fhir/system-version-processing-mode">SystemVersionProcessingMode</a>
      */
@@ -9327,13 +9948,20 @@ public class CodeSystems {
         DEFAULT,
 
         /**
-         * Use this version of the code system. If a value set specifies a different version, the expansion operation should fail
+         * Use this version of the code system. If a value set specifies a different version, the
+         * expansion operation should fail
          */
         @Json(name = "check")
         CHECK,
 
         /**
-         * Use this version of the code system irrespective of which version is specified by a value set. Note that this has obvious safety issues, in that it may result in a value set expansion giving a different list of codes that is both wrong and unsafe, and implementers should only use this capability reluctantly. It primarily exists to deal with situations where specifications have fallen into decay as time passes. If a  version is override, the version used SHALL explicitly be represented in the expansion parameters
+         * Use this version of the code system irrespective of which version is specified by a value
+         * set. Note that this has obvious safety issues, in that it may result in a value set
+         * expansion giving a different list of codes that is both wrong and unsafe, and
+         * implementers should only use this capability reluctantly. It primarily exists to deal
+         * with situations where specifications have fallen into decay as time passes. If a  version
+         * is override, the version used SHALL explicitly be represented in the expansion
+         * parameters
          */
         @Json(name = "override")
         OVERRIDE,
@@ -9359,7 +9987,8 @@ public class CodeSystems {
         DISPATCHER,
 
         /**
-         * A workflow participant that schedules (dispatches and sets the time or date for performance of) services.
+         * A workflow participant that schedules (dispatches and sets the time or date for
+         * performance of) services.
          */
         @Json(name = "scheduler")
         SCHEDULER,
@@ -9383,7 +10012,8 @@ public class CodeSystems {
         MANAGER,
 
         /**
-         * A workflow participant that acquires resources (specimens, images, etc) necessary to perform the task.
+         * A workflow participant that acquires resources (specimens, images, etc) necessary to
+         * perform the task.
          */
         @Json(name = "acquirer")
         ACQUIRER,
@@ -9415,7 +10045,8 @@ public class CodeSystems {
         REQUESTED,
 
         /**
-         * A potential performer has claimed ownership of the task and is evaluating whether to perform it.
+         * A potential performer has claimed ownership of the task and is evaluating whether to
+         * perform it.
          */
         @Json(name = "received")
         RECEIVED,
@@ -9427,13 +10058,15 @@ public class CodeSystems {
         ACCEPTED,
 
         /**
-         * The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action.
+         * The potential performer who claimed ownership of the task has decided not to execute it
+         * prior to performing any action.
          */
         @Json(name = "rejected")
         REJECTED,
 
         /**
-         * Task is ready to be performed, but no action has yet been taken.  Used in place of requested/received/accepted/rejected when request assignment and acceptance is a given.
+         * Task is ready to be performed, but no action has yet been taken.  Used in place of
+         * requested/received/accepted/rejected when request assignment and acceptance is a given.
          */
         @Json(name = "ready")
         READY,
@@ -9469,7 +10102,8 @@ public class CodeSystems {
         COMPLETED,
 
         /**
-         * The task should never have existed and is retained only because of the possibility it may have used.
+         * The task should never have existed and is retained only because of the possibility it may
+         * have used.
          */
         @Json(name = "entered-in-error")
         ENTERED_IN_ERROR,
@@ -9693,7 +10327,8 @@ public class CodeSystems {
         NAMED_EVENT,
 
         /**
-         * The trigger occurs at a specific time or periodically as described by a timing or schedule
+         * The trigger occurs at a specific time or periodically as described by a timing or
+         * schedule
          */
         @Json(name = "periodic")
         PERIODIC,
@@ -9769,7 +10404,8 @@ public class CodeSystems {
         RFID,
 
         /**
-         * The data was read from the label by a person and manually entered. (e.g.  via a keyboard)
+         * The data was read from the label by a person and manually entered. (e.g.  via a
+         * keyboard)
          */
         @Json(name = "manual")
         MANUAL,
@@ -9781,7 +10417,8 @@ public class CodeSystems {
         CARD,
 
         /**
-         * The data originated from a patient source and not directly scanned or read from a label or card.
+         * The data originated from a patient source and not directly scanned or read from a label
+         * or card.
          */
         @Json(name = "self-reported")
         SELF_REPORTED,
@@ -9794,7 +10431,8 @@ public class CodeSystems {
     }
 
     /**
-     * A code that indicates whether an application accepts unknown elements or extensions when reading resources.
+     * A code that indicates whether an application accepts unknown elements or extensions when
+     * reading resources.
      *
      * @see <a href="http://hl7.org/fhir/unknown-content-code">UnknownContentCode</a>
      */
@@ -9833,49 +10471,63 @@ public class CodeSystems {
     public enum UsageContextType {
 
         /**
-         * The gender of the patient. For this context type, the value should be a code taken from the http://hl7.org/fhir/ValueSet/administrative-gender value set
+         * The gender of the patient. For this context type, the value should be a code taken from
+         * the http://hl7.org/fhir/ValueSet/administrative-gender value set
          */
         @Json(name = "gender")
         GENDER,
 
         /**
-         * The age of the patient. For this context type, the value should be a range the specifies the applicable ages or a code from the MeSH value set http://hl7.org/fhir/ValueSet/v3-AgeGroupObservationValue
+         * The age of the patient. For this context type, the value should be a range the specifies
+         * the applicable ages or a code from the MeSH value set http://hl7.org/fhir/ValueSet/v3-AgeGroupObservationValue
          */
         @Json(name = "age")
         AGE,
 
         /**
-         * The clinical concept(s) addressed by the artifact. For example, disease, diagnostic test interpretation, medication ordering as in http://hl7.org/fhir/ValueSet/condition-code.
+         * The clinical concept(s) addressed by the artifact. For example, disease, diagnostic test
+         * interpretation, medication ordering as in http://hl7.org/fhir/ValueSet/condition-code.
          */
         @Json(name = "focus")
         FOCUS,
 
         /**
-         * The clinical specialty of the context in which the patient is being treated - For example, PCP, Patient, Cardiologist, Behavioral Professional, Oral Health Professional, Prescriber, etc... taken from the NUCC Health Care provider taxonomy value set http://hl7.org/fhir/ValueSet/provider-taxonomy.
+         * The clinical specialty of the context in which the patient is being treated - For
+         * example, PCP, Patient, Cardiologist, Behavioral Professional, Oral Health Professional,
+         * Prescriber, etc... taken from the NUCC Health Care provider taxonomy value set
+         * http://hl7.org/fhir/ValueSet/provider-taxonomy.
          */
         @Json(name = "user")
         USER,
 
         /**
-         * The settings in which the artifact is intended for use. For example, admission, pre-op, etc. For example, the ActEncounterCode value set http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+         * The settings in which the artifact is intended for use. For example, admission, pre-op,
+         * etc. For example, the ActEncounterCode value set http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
          */
         @Json(name = "workflow")
         WORKFLOW,
 
         /**
-         * The context for the clinical task(s) represented by this artifact. Can be any task context represented by the HL7 ActTaskCode value set http://hl7.org/fhir/ValueSet/v3-ActTaskCode. General categories include: order entry, patient documentation and patient information review.
+         * The context for the clinical task(s) represented by this artifact. Can be any task
+         * context represented by the HL7 ActTaskCode value set http://hl7.org/fhir/ValueSet/v3-ActTaskCode.
+         * General categories include: order entry, patient documentation and patient information
+         * review.
          */
         @Json(name = "task")
         TASK,
 
         /**
-         * The venue in which an artifact could be used. For example, Outpatient, Inpatient, Home, Nursing home. The code value may originate from either the HL7 ActEncounterCode http://hl7.org/fhir/ValueSet/v3-ActEncounterCode or NUCC non-individual provider codes http://hl7.org/fhir/ValueSet/provider-taxonomy
+         * The venue in which an artifact could be used. For example, Outpatient, Inpatient, Home,
+         * Nursing home. The code value may originate from either the HL7 ActEncounterCode
+         * http://hl7.org/fhir/ValueSet/v3-ActEncounterCode or NUCC non-individual provider codes
+         * http://hl7.org/fhir/ValueSet/provider-taxonomy
          */
         @Json(name = "venue")
         VENUE,
 
         /**
-         * The species to which an artifact applies. For example, SNOMED - 387961004 | Kingdom Animalia (organism).
+         * The species to which an artifact applies. For example, SNOMED - 387961004 | Kingdom
+         * Animalia (organism).
          */
         @Json(name = "species")
         SPECIES,
@@ -9966,14 +10618,16 @@ public class CodeSystems {
     }
 
     /**
-     * How a search parameter relates to the set of elements returned by evaluating its xpath query.
+     * How a search parameter relates to the set of elements returned by evaluating its xpath
+     * query.
      *
      * @see <a href="http://hl7.org/fhir/search-xpath-usage">XPathUsageType</a>
      */
     public enum XPathUsageType {
 
         /**
-         * The search parameter is derived directly from the selected nodes based on the type definitions.
+         * The search parameter is derived directly from the selected nodes based on the type
+         * definitions.
          */
         @Json(name = "normal")
         NORMAL,
@@ -9991,7 +10645,8 @@ public class CodeSystems {
         NEARBY,
 
         /**
-         * The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle.
+         * The search parameter is based on a spatial transform of the selected nodes, using
+         * physical distance from the middle.
          */
         @Json(name = "distance")
         DISTANCE,

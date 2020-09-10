@@ -29,7 +29,9 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * A grouping of people or organizations with a common purpose.
  * <p>
- * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, etc.
+ * A formally or informally recognized grouping of people or organizations formed for the purpose of
+ * achieving some form of collective action.  Includes companies, institutions, corporations,
+ * departments, community groups, healthcare practice groups, etc.
  * <p>
  * <p>
  * "Generated from FHIR 3.0.1.11917 on 2020-07-29

@@ -25,11 +25,15 @@ import javax.annotation.Nullable;
 /**
  * DiagnosticReport.java
  * <p>
- * The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
+ * The findings and interpretation of diagnostic  tests performed on patients, groups of patients,
+ * devices, and locations, and/or specimens derived from these. The report includes clinical context
+ * such as requesting and provider information, and some mix of atomic results, images, textual and
+ * coded interpretations, and formatted representation of diagnostic reports.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on
+ * 2020-07-29
  */
 public class DiagnosticReport extends DomainResource {
 
@@ -142,11 +146,14 @@ public class DiagnosticReport extends DomainResource {
     /**
      * DiagnosticReport.java
      * <p>
-     * A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).
+     * A list of key images associated with this report. The images are generally created during the
+     * diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides
+     * of interest).
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on
+     * 2020-07-29
      */
     public static class DiagnosticReportImage extends BackboneElement {
 
@@ -183,7 +190,8 @@ public class DiagnosticReport extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on
+     * 2020-07-29
      */
     public static class DiagnosticReportPerformer extends BackboneElement {
 
