@@ -95,6 +95,8 @@ git submodule update --init --recursive
 bundle exec fastlane generate_fhir_java_models
 ----
 
+After generating the models please run a reformat code on the `fhir-java/src-gen` folder and make sure the test in `ObservationTest` and `PatientTest` adjustments are still in place.
+
 ==== Known issues with FHIR standard
 
 * String / Integer / Bool / URL are basic Java types and should inherit from FHIR Element in future versions.
