@@ -26,5 +26,4 @@ public interface FhirDateCodec {
      * @return object as Date
      */
     Date toDate();
-
 }

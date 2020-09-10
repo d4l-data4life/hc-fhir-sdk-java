@@ -18,22 +18,22 @@ package care.data4life.fhir.stu3.model;
 
 /**
  * Age.java
- *
+ * <p>
  * A duration of time during which an organism (or a process) has existed
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Age">Age</a>
- *
+ * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Age) on 2020-07-29
  */
 public class Age extends Quantity {
 
-  public static final String resourceType = "Age";
+    public static final String resourceType = "Age";
 
-  public Age() {
-  }
+    public Age() {
+    }
 
-  @Override
-  public String getResourceType() {
-    return Age.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return Age.resourceType;
+    }
 }

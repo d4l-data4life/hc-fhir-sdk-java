@@ -17,51 +17,52 @@
 package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
+
 import javax.annotation.Nullable;
 
 /**
  * Coding.java
- *
+ * <p>
  * A reference to a code defined by a terminology system
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Coding">Coding</a>
- *
+ * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Coding) on 2020-07-29
  */
 public class Coding extends Element {
 
-  public static final String resourceType = "Coding";
+    public static final String resourceType = "Coding";
 
-  // Symbol in syntax defined by the system.
-  @Json(name = "code")
-  @Nullable
-  public String code;
+    // Symbol in syntax defined by the system.
+    @Json(name = "code")
+    @Nullable
+    public String code;
 
-  // Representation defined by the system.
-  @Json(name = "display")
-  @Nullable
-  public String display;
+    // Representation defined by the system.
+    @Json(name = "display")
+    @Nullable
+    public String display;
 
-  // Identity of the terminology system.
-  @Json(name = "system")
-  @Nullable
-  public String system;
+    // Identity of the terminology system.
+    @Json(name = "system")
+    @Nullable
+    public String system;
 
-  // If this coding was chosen directly by the user.
-  @Json(name = "userSelected")
-  @Nullable
-  public Boolean userSelected;
+    // If this coding was chosen directly by the user.
+    @Json(name = "userSelected")
+    @Nullable
+    public Boolean userSelected;
 
-  // Version of the system - if relevant.
-  @Json(name = "version")
-  @Nullable
-  public String version;
+    // Version of the system - if relevant.
+    @Json(name = "version")
+    @Nullable
+    public String version;
 
-  public Coding() {
-  }
+    public Coding() {
+    }
 
-  @Override
-  public String getResourceType() {
-    return Coding.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return Coding.resourceType;
+    }
 }

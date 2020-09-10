@@ -17,41 +17,42 @@
 package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
+
 import javax.annotation.Nullable;
 
 /**
  * Reference.java
- *
+ * <p>
  * A reference from one resource to another
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Reference">Reference</a>
- *
+ * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Reference) on 2020-07-29
  */
 public class Reference extends Element {
 
-  public static final String resourceType = "Reference";
+    public static final String resourceType = "Reference";
 
-  // Text alternative for the resource.
-  @Json(name = "display")
-  @Nullable
-  public String display;
+    // Text alternative for the resource.
+    @Json(name = "display")
+    @Nullable
+    public String display;
 
-  // Logical reference, when literal reference is not known.
-  @Json(name = "identifier")
-  @Nullable
-  public Identifier identifier;
+    // Logical reference, when literal reference is not known.
+    @Json(name = "identifier")
+    @Nullable
+    public Identifier identifier;
 
-  // Literal reference, Relative, internal or absolute URL.
-  @Json(name = "reference")
-  @Nullable
-  public String reference;
+    // Literal reference, Relative, internal or absolute URL.
+    @Json(name = "reference")
+    @Nullable
+    public String reference;
 
-  public Reference() {
-  }
+    public Reference() {
+    }
 
-  @Override
-  public String getResourceType() {
-    return Reference.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return Reference.resourceType;
+    }
 }

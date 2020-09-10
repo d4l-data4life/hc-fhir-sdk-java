@@ -36,34 +36,45 @@ public final class FhirDateTimeFormatter {
     private static final String INSTANT_FORMAT = "%Y-%M-%DT%h:%m:%s%z";
     private static final String TIME_FORMAT = "%h:%m:%s";
 
-
     private FhirDateTimeFormatter() {
     }
 
     public static String formatDate(FhirDate date) {
         if (date.getMonth() != null && date.getDay() != null) {
-            return doFormat(DATE_FORMAT_FULL, date.getYear(), date.getMonth(), date.getDay(), null, null, null, null, null, null);
+            return doFormat(DATE_FORMAT_FULL, date.getYear(), date.getMonth(), date.getDay(), null, null,
+                    null, null, null, null);
         } else if (date.getMonth() != null) {
-            return doFormat(DATE_FORMAT_YEAR_MONTH, date.getYear(), date.getMonth(), null, null, null, null, null, null, null);
+            return doFormat(DATE_FORMAT_YEAR_MONTH, date.getYear(), date.getMonth(), null, null, null,
+                    null, null, null, null);
         } else {
-            return doFormat(DATE_FORMAT_YEAR, date.getYear(), null, null, null, null, null, null, null, null);
+            return doFormat(DATE_FORMAT_YEAR, date.getYear(), null, null, null, null, null, null, null,
+                    null);
         }
     }
 
     public static String formatDateTime(FhirDateTime dateTime) {
         if (dateTime.getTime() != null) {
-            return doFormat(DATE_TIME_FORMAT, dateTime.getDate().getYear(), dateTime.getDate().getMonth(), dateTime.getDate().getDay(), dateTime.getTime().getHour(), dateTime.getTime().getMinute(), dateTime.getTime().getSecond(), dateTime.getTime().getFractionOfSecond(), dateTime.getTime().getFractionPadding(), dateTime.getTimeZone());
+            return doFormat(DATE_TIME_FORMAT, dateTime.getDate().getYear(), dateTime.getDate().getMonth(),
+                    dateTime.getDate().getDay(), dateTime.getTime().getHour(), dateTime.getTime().getMinute(),
+                    dateTime.getTime().getSecond(), dateTime.getTime().getFractionOfSecond(),
+                    dateTime.getTime().getFractionPadding(), dateTime.getTimeZone());
         } else {
             return formatDate(dateTime.getDate());
         }
     }
 
     public static String formatInstant(FhirInstant instant) {
-        return doFormat(INSTANT_FORMAT, instant.getDateTime().getDate().getYear(), instant.getDateTime().getDate().getMonth(), instant.getDateTime().getDate().getDay(), instant.getDateTime().getTime().getHour(), instant.getDateTime().getTime().getMinute(), instant.getDateTime().getTime().getSecond(), instant.getDateTime().getTime().getFractionOfSecond(), instant.getDateTime().getTime().getFractionPadding(), instant.getDateTime().getTimeZone());
+        return doFormat(INSTANT_FORMAT, instant.getDateTime().getDate().getYear(),
+                instant.getDateTime().getDate().getMonth(), instant.getDateTime().getDate().getDay(),
+                instant.getDateTime().getTime().getHour(), instant.getDateTime().getTime().getMinute(),
+                instant.getDateTime().getTime().getSecond(),
+                instant.getDateTime().getTime().getFractionOfSecond(),
+                instant.getDateTime().getTime().getFractionPadding(), instant.getDateTime().getTimeZone());
     }
 
     public static String formatTime(FhirTime time) {
-        return doFormat(TIME_FORMAT, null, null, null, time.getHour(), time.getMinute(), time.getSecond(), time.getFractionOfSecond(), time.getFractionPadding(), null);
+        return doFormat(TIME_FORMAT, null, null, null, time.getHour(), time.getMinute(),
+                time.getSecond(), time.getFractionOfSecond(), time.getFractionPadding(), null);
     }
 
     private static String doFormat(
@@ -130,7 +141,6 @@ public final class FhirDateTimeFormatter {
         return buffer.toString();
     }
 
-
     private static void formatYear(@Nullable Integer year, StringBuilder buf) {
         String s;
         if (year == null) {
@@ -138,7 +148,9 @@ public final class FhirDateTimeFormatter {
         } else if (year <= 0) { // negative value
             s = Integer.toString(1 - year);
         } else // positive value
+        {
             s = Integer.toString(year);
+        }
 
         while (s.length() < 4) {
             s = '0' + s;
@@ -167,13 +179,15 @@ public final class FhirDateTimeFormatter {
         formatTwoDigits(minute, buffer);
     }
 
-    private static void formatSecond(@Nullable Integer second, @Nullable Integer fractionOfSecond, @Nullable Integer fractionPadding, StringBuilder buffer) {
+    private static void formatSecond(@Nullable Integer second, @Nullable Integer fractionOfSecond,
+                                     @Nullable Integer fractionPadding, StringBuilder buffer) {
         formatTwoDigits(second, buffer);
         if (fractionOfSecond != null && fractionOfSecond > 0) {
             buffer.append('.');
             if (fractionPadding != null) {
                 String fraction = String.valueOf(fractionOfSecond);
-                buffer.append(String.format(("%0" + (fractionPadding + fraction.length()) + "d"), fractionOfSecond));
+                buffer.append(
+                        String.format(("%0" + (fractionPadding + fraction.length()) + "d"), fractionOfSecond));
             } else {
                 buffer.append(Integer.toString(fractionOfSecond));
             }
@@ -195,9 +209,9 @@ public final class FhirDateTimeFormatter {
             return;
         }
 
-        if (offset >= 0)
+        if (offset >= 0) {
             buffer.append('+');
-        else {
+        } else {
             buffer.append('-');
             offset *= -1;
         }

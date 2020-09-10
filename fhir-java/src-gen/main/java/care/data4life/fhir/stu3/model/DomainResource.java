@@ -17,47 +17,49 @@
 package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
+
 import java.util.List;
+
 import javax.annotation.Nullable;
 
 /**
  * DomainResource.java
- *
+ * <p>
  * A resource that includes narrative, extensions, and contained resources.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DomainResource">DomainResource</a>
- *
+ * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DomainResource) on 2020-07-29
  */
 public class DomainResource extends Resource {
 
-  public static final String resourceType = "DomainResource";
+    public static final String resourceType = "DomainResource";
 
-  // Contained, inline Resources.
-  @Json(name = "contained")
-  @Nullable
-  public List<Resource> contained;
+    // Contained, inline Resources.
+    @Json(name = "contained")
+    @Nullable
+    public List<Resource> contained;
 
-  // Additional Content defined by implementations.
-  @Json(name = "extension")
-  @Nullable
-  public List<Extension> extension;
+    // Additional Content defined by implementations.
+    @Json(name = "extension")
+    @Nullable
+    public List<Extension> extension;
 
-  // Extensions that cannot be ignored.
-  @Json(name = "modifierExtension")
-  @Nullable
-  public List<Extension> modifierExtension;
+    // Extensions that cannot be ignored.
+    @Json(name = "modifierExtension")
+    @Nullable
+    public List<Extension> modifierExtension;
 
-  // Text summary of the resource, for human interpretation.
-  @Json(name = "text")
-  @Nullable
-  public Narrative text;
+    // Text summary of the resource, for human interpretation.
+    @Json(name = "text")
+    @Nullable
+    public Narrative text;
 
-  public DomainResource() {
-  }
+    public DomainResource() {
+    }
 
-  @Override
-  public String getResourceType() {
-    return DomainResource.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return DomainResource.resourceType;
+    }
 }

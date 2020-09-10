@@ -17,51 +17,52 @@
 package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
+
 import javax.annotation.Nullable;
 
 /**
  * Quantity.java
- *
+ * <p>
  * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Quantity">Quantity</a>
- *
+ * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Quantity) on 2020-07-29
  */
 public class Quantity extends Element {
 
-  public static final String resourceType = "Quantity";
+    public static final String resourceType = "Quantity";
 
-  // Coded form of the unit.
-  @Json(name = "code")
-  @Nullable
-  public String code;
+    // Coded form of the unit.
+    @Json(name = "code")
+    @Nullable
+    public String code;
 
-  // How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
-  @Json(name = "comparator")
-  @Nullable
-  public CodeSystems.QuantityComparator comparator;
+    // How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
+    @Json(name = "comparator")
+    @Nullable
+    public CodeSystems.QuantityComparator comparator;
 
-  // System that defines coded unit form.
-  @Json(name = "system")
-  @Nullable
-  public String system;
+    // System that defines coded unit form.
+    @Json(name = "system")
+    @Nullable
+    public String system;
 
-  // Unit representation.
-  @Json(name = "unit")
-  @Nullable
-  public String unit;
+    // Unit representation.
+    @Json(name = "unit")
+    @Nullable
+    public String unit;
 
-  // Numerical value (with implicit precision).
-  @Json(name = "value")
-  @Nullable
-  public FhirDecimal value;
+    // Numerical value (with implicit precision).
+    @Json(name = "value")
+    @Nullable
+    public FhirDecimal value;
 
-  public Quantity() {
-  }
+    public Quantity() {
+    }
 
-  @Override
-  public String getResourceType() {
-    return Quantity.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return Quantity.resourceType;
+    }
 }
