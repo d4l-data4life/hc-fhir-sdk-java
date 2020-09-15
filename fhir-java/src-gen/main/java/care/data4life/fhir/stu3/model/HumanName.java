@@ -17,62 +17,65 @@
 package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
+
 import java.util.List;
+
 import javax.annotation.Nullable;
 
 /**
  * HumanName.java
- *
+ * <p>
  * A human's name with the ability to identify parts and usage.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/HumanName">HumanName</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/HumanName) on 2020-07-29
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/HumanName) on
+ * 2020-07-29
  */
 public class HumanName extends Element {
 
-  public static final String resourceType = "HumanName";
+    public static final String resourceType = "HumanName";
 
-  // Family name (often called 'Surname').
-  @Json(name = "family")
-  @Nullable
-  public String family;
+    // Family name (often called 'Surname').
+    @Json(name = "family")
+    @Nullable
+    public String family;
 
-  // Given names (not always 'first'). Includes middle names.
-  @Json(name = "given")
-  @Nullable
-  public List<String> given;
+    // Given names (not always 'first'). Includes middle names.
+    @Json(name = "given")
+    @Nullable
+    public List<String> given;
 
-  // Time period when name was/is in use.
-  @Json(name = "period")
-  @Nullable
-  public Period period;
+    // Time period when name was/is in use.
+    @Json(name = "period")
+    @Nullable
+    public Period period;
 
-  // Parts that come before the name.
-  @Json(name = "prefix")
-  @Nullable
-  public List<String> prefix;
+    // Parts that come before the name.
+    @Json(name = "prefix")
+    @Nullable
+    public List<String> prefix;
 
-  // Parts that come after the name.
-  @Json(name = "suffix")
-  @Nullable
-  public List<String> suffix;
+    // Parts that come after the name.
+    @Json(name = "suffix")
+    @Nullable
+    public List<String> suffix;
 
-  // Text representation of the full name.
-  @Json(name = "text")
-  @Nullable
-  public String text;
+    // Text representation of the full name.
+    @Json(name = "text")
+    @Nullable
+    public String text;
 
-  // Identifies the purpose for this name.
-  @Json(name = "use")
-  @Nullable
-  public CodeSystems.NameUse use;
+    // Identifies the purpose for this name.
+    @Json(name = "use")
+    @Nullable
+    public CodeSystems.NameUse use;
 
-  public HumanName() {
-  }
+    public HumanName() {
+    }
 
-  @Override
-  public String getResourceType() {
-    return HumanName.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return HumanName.resourceType;
+    }
 }

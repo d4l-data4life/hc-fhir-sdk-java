@@ -18,22 +18,22 @@ package care.data4life.fhir.stu3.model;
 
 /**
  * Duration.java
- *
+ * <p>
  * A length of time
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Duration">Duration</a>
- *
+ * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Duration) on 2020-07-29
  */
 public class Duration extends Quantity {
 
-  public static final String resourceType = "Duration";
+    public static final String resourceType = "Duration";
 
-  public Duration() {
-  }
+    public Duration() {
+    }
 
-  @Override
-  public String getResourceType() {
-    return Duration.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return Duration.resourceType;
+    }
 }

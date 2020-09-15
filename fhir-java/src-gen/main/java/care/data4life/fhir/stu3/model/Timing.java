@@ -17,149 +17,155 @@
 package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
+
 import java.util.List;
+
 import javax.annotation.Nullable;
 
 /**
  * Timing.java
- *
- * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
+ * <p>
+ * Specifies an event that may occur multiple times. Timing schedules are used to record when things
+ * are planned, expected or requested to occur. The most common usage is in dosage instructions for
+ * medications. They are also used when planning care of various kinds, and may be used for
+ * reporting the schedule to which past regular activities were carried out.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
- *
+ * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing) on 2020-07-29
  */
 public class Timing extends Element {
 
-  public static final String resourceType = "Timing";
+    public static final String resourceType = "Timing";
 
-  // BID | TID | QID | AM | PM | QD | QOD | Q4H | Q6H +.
-  @Json(name = "code")
-  @Nullable
-  public CodeableConcept code;
-
-  // When the event occurs.
-  @Json(name = "event")
-  @Nullable
-  public List<FhirDateTime> event;
-
-  // When the event is to occur.
-  @Json(name = "repeat")
-  @Nullable
-  public TimingRepeat repeat;
-
-  public Timing() {
-  }
-
-  @Override
-  public String getResourceType() {
-    return Timing.resourceType;
-  }
-
-  /**
-   * Timing.java
-   *
-   * A set of rules that describe when the event is scheduled.
-   *
-   * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
-   *
-   * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing) on 2020-07-29
-   */
-  public static class TimingRepeat extends Element {
-
-    public static final String resourceType = "TimingRepeat";
-
-    // Length/Range of lengths, or (Start and/or end) limits.
-    @Json(name = "boundsDuration")
+    // BID | TID | QID | AM | PM | QD | QOD | Q4H | Q6H +.
+    @Json(name = "code")
     @Nullable
-    public Duration boundsDuration;
+    public CodeableConcept code;
 
-    // Length/Range of lengths, or (Start and/or end) limits.
-    @Json(name = "boundsPeriod")
+    // When the event occurs.
+    @Json(name = "event")
     @Nullable
-    public Period boundsPeriod;
+    public List<FhirDateTime> event;
 
-    // Length/Range of lengths, or (Start and/or end) limits.
-    @Json(name = "boundsRange")
+    // When the event is to occur.
+    @Json(name = "repeat")
     @Nullable
-    public Range boundsRange;
+    public TimingRepeat repeat;
 
-    // Number of times to repeat.
-    @Json(name = "count")
-    @Nullable
-    public Integer count;
-
-    // Maximum number of times to repeat.
-    @Json(name = "countMax")
-    @Nullable
-    public Integer countMax;
-
-    // If one or more days of week is provided, then the action happens only on the specified day(s).
-    @Json(name = "dayOfWeek")
-    @Nullable
-    public List<CodeSystems.DaysOfWeek> dayOfWeek;
-
-    // How long when it happens.
-    @Json(name = "duration")
-    @Nullable
-    public FhirDecimal duration;
-
-    // How long when it happens (Max).
-    @Json(name = "durationMax")
-    @Nullable
-    public FhirDecimal durationMax;
-
-    // s | min | h | d | wk | mo | a - unit of time (UCUM).
-    @Json(name = "durationUnit")
-    @Nullable
-    public String durationUnit;
-
-    // Event occurs frequency times per period.
-    @Json(name = "frequency")
-    @Nullable
-    public Integer frequency;
-
-    // Event occurs up to frequencyMax times per period.
-    @Json(name = "frequencyMax")
-    @Nullable
-    public Integer frequencyMax;
-
-    // Minutes from event (before or after).
-    @Json(name = "offset")
-    @Nullable
-    public Integer offset;
-
-    // Event occurs frequency times per period.
-    @Json(name = "period")
-    @Nullable
-    public FhirDecimal period;
-
-    // Upper limit of period (3-4 hours).
-    @Json(name = "periodMax")
-    @Nullable
-    public FhirDecimal periodMax;
-
-    // s | min | h | d | wk | mo | a - unit of time (UCUM).
-    @Json(name = "periodUnit")
-    @Nullable
-    public String periodUnit;
-
-    // Time of day for action.
-    @Json(name = "timeOfDay")
-    @Nullable
-    public List<FhirTime> timeOfDay;
-
-    // Regular life events the event is tied to.
-    @Json(name = "when")
-    @Nullable
-    public List<String> when;
-
-    public TimingRepeat() {
+    public Timing() {
     }
 
     @Override
     public String getResourceType() {
-      return TimingRepeat.resourceType;
+        return Timing.resourceType;
     }
-  }
+
+    /**
+     * Timing.java
+     * <p>
+     * A set of rules that describe when the event is scheduled.
+     *
+     * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
+     * <p>
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing) on
+     * 2020-07-29
+     */
+    public static class TimingRepeat extends Element {
+
+        public static final String resourceType = "TimingRepeat";
+
+        // Length/Range of lengths, or (Start and/or end) limits.
+        @Json(name = "boundsDuration")
+        @Nullable
+        public Duration boundsDuration;
+
+        // Length/Range of lengths, or (Start and/or end) limits.
+        @Json(name = "boundsPeriod")
+        @Nullable
+        public Period boundsPeriod;
+
+        // Length/Range of lengths, or (Start and/or end) limits.
+        @Json(name = "boundsRange")
+        @Nullable
+        public Range boundsRange;
+
+        // Number of times to repeat.
+        @Json(name = "count")
+        @Nullable
+        public Integer count;
+
+        // Maximum number of times to repeat.
+        @Json(name = "countMax")
+        @Nullable
+        public Integer countMax;
+
+        // If one or more days of week is provided, then the action happens only on the specified day(s).
+        @Json(name = "dayOfWeek")
+        @Nullable
+        public List<CodeSystems.DaysOfWeek> dayOfWeek;
+
+        // How long when it happens.
+        @Json(name = "duration")
+        @Nullable
+        public FhirDecimal duration;
+
+        // How long when it happens (Max).
+        @Json(name = "durationMax")
+        @Nullable
+        public FhirDecimal durationMax;
+
+        // s | min | h | d | wk | mo | a - unit of time (UCUM).
+        @Json(name = "durationUnit")
+        @Nullable
+        public String durationUnit;
+
+        // Event occurs frequency times per period.
+        @Json(name = "frequency")
+        @Nullable
+        public Integer frequency;
+
+        // Event occurs up to frequencyMax times per period.
+        @Json(name = "frequencyMax")
+        @Nullable
+        public Integer frequencyMax;
+
+        // Minutes from event (before or after).
+        @Json(name = "offset")
+        @Nullable
+        public Integer offset;
+
+        // Event occurs frequency times per period.
+        @Json(name = "period")
+        @Nullable
+        public FhirDecimal period;
+
+        // Upper limit of period (3-4 hours).
+        @Json(name = "periodMax")
+        @Nullable
+        public FhirDecimal periodMax;
+
+        // s | min | h | d | wk | mo | a - unit of time (UCUM).
+        @Json(name = "periodUnit")
+        @Nullable
+        public String periodUnit;
+
+        // Time of day for action.
+        @Json(name = "timeOfDay")
+        @Nullable
+        public List<FhirTime> timeOfDay;
+
+        // Regular life events the event is tied to.
+        @Json(name = "when")
+        @Nullable
+        public List<String> when;
+
+        public TimingRepeat() {
+        }
+
+        @Override
+        public String getResourceType() {
+            return TimingRepeat.resourceType;
+        }
+    }
 }

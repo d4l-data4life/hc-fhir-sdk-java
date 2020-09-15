@@ -40,7 +40,7 @@ endif::[]
     </p>
     <p><!-- PROJECT BADGES -->
         <a href="https://github.com/d4l-data4life/hc-fhir-sdk-java/actions">
-            <img src="https://github.com/d4l-data4life/hc-fhir-sdk-java/workflows/D4L%20Publish%20Artifact/badge.svg" alt="Build Status"/>
+            <img src="https://github.com/d4l-data4life/hc-fhir-sdk-java/workflows/D4L%20CI/badge.svg" alt="Build Status"/>
         </a>
         <a href="https://github.com/d4l-data4life/hc-fhir-sdk-java/blob/main/LICENSE">
             <img src="https://img.shields.io/badge/license-PRIVATE-blue.svg"/>
@@ -94,6 +94,8 @@ git submodule update --init --recursive
 ----
 bundle exec fastlane generate_fhir_java_models
 ----
+
+After generating the models please run a reformat code on the `fhir-java/src-gen` folder and make sure the test in `ObservationTest` and `PatientTest` adjustments are still in place.
 
 ==== Known issues with FHIR standard
 

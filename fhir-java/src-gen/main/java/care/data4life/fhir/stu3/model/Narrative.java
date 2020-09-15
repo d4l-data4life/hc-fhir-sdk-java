@@ -20,38 +20,39 @@ import com.squareup.moshi.Json;
 
 /**
  * Narrative.java
- *
+ * <p>
  * A human-readable formatted text, including images
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Narrative">Narrative</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Narrative) on 2020-07-29
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Narrative) on
+ * 2020-07-29
  */
 public class Narrative extends Element {
 
-  public static final String resourceType = "Narrative";
+    public static final String resourceType = "Narrative";
 
-  // Limited xhtml content.
-  @Json(name = "div")
-  public String div;
+    // Limited xhtml content.
+    @Json(name = "div")
+    public String div;
 
-  // The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.
-  @Json(name = "status")
-  public CodeSystems.NarrativeStatus status;
+    // The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.
+    @Json(name = "status")
+    public CodeSystems.NarrativeStatus status;
 
-  /**
-   * Constructor for all required properties.
-   *
-   * @param div String
-   * @param status CodeSystems.NarrativeStatus
-   */
-  public Narrative(String div, CodeSystems.NarrativeStatus status) {
-    this.div = div;
-    this.status = status;
-  }
+    /**
+     * Constructor for all required properties.
+     *
+     * @param div    String
+     * @param status CodeSystems.NarrativeStatus
+     */
+    public Narrative(String div, CodeSystems.NarrativeStatus status) {
+        this.div = div;
+        this.status = status;
+    }
 
-  @Override
-  public String getResourceType() {
-    return Narrative.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return Narrative.resourceType;
+    }
 }

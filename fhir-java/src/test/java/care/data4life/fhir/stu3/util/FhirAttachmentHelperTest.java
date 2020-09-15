@@ -33,7 +33,9 @@ import care.data4life.fhir.stu3.model.Patient;
 import care.data4life.fhir.stu3.model.QuestionnaireResponse;
 import care.data4life.fhir.test.util.FileHelper;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 
 public class FhirAttachmentHelperTest {

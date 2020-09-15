@@ -17,304 +17,312 @@
 package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
+
 import java.util.List;
+
 import javax.annotation.Nullable;
 
 /**
  * CarePlan.java
- *
- * Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
+ * <p>
+ * Describes the intention of how one or more practitioners intend to deliver care for a particular
+ * patient, group or community for a period of time, possibly limited to care for a specific
+ * condition or set of conditions.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
- *
+ * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CarePlan) on 2020-07-29
  */
 public class CarePlan extends DomainResource {
 
-  public static final String resourceType = "CarePlan";
+    public static final String resourceType = "CarePlan";
 
-  // Action to occur as part of plan.
-  @Json(name = "activity")
-  @Nullable
-  public List<CarePlanActivity> activity;
-
-  // Health issues this plan addresses.
-  @Json(name = "addresses")
-  @Nullable
-  public List<Reference> addresses;
-
-  // Who is responsible for contents of the plan.
-  @Json(name = "author")
-  @Nullable
-  public List<Reference> author;
-
-  // Fulfills care plan.
-  @Json(name = "basedOn")
-  @Nullable
-  public List<Reference> basedOn;
-
-  // Who's involved in plan?.
-  @Json(name = "careTeam")
-  @Nullable
-  public List<Reference> careTeam;
-
-  // Type of plan.
-  @Json(name = "category")
-  @Nullable
-  public List<CodeableConcept> category;
-
-  // Created in context of.
-  @Json(name = "context")
-  @Nullable
-  public Reference context;
-
-  // Protocol or definition.
-  @Json(name = "definition")
-  @Nullable
-  public List<Reference> definition;
-
-  // Summary of nature of plan.
-  @Json(name = "description")
-  @Nullable
-  public String description;
-
-  // Desired outcome of plan.
-  @Json(name = "goal")
-  @Nullable
-  public List<Reference> goal;
-
-  // External Ids for this plan.
-  @Json(name = "identifier")
-  @Nullable
-  public List<Identifier> identifier;
-
-  // Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain.
-  @Json(name = "intent")
-  public CodeSystems.CarePlanIntent intent;
-
-  // Comments about the plan.
-  @Json(name = "note")
-  @Nullable
-  public List<Annotation> note;
-
-  // Part of referenced CarePlan.
-  @Json(name = "partOf")
-  @Nullable
-  public List<Reference> partOf;
-
-  // Time period plan covers.
-  @Json(name = "period")
-  @Nullable
-  public Period period;
-
-  // CarePlan replaced by this CarePlan.
-  @Json(name = "replaces")
-  @Nullable
-  public List<Reference> replaces;
-
-  // Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.
-  @Json(name = "status")
-  public CodeSystems.CarePlanStatus status;
-
-  // Who care plan is for.
-  @Json(name = "subject")
-  public Reference subject;
-
-  // Information considered as part of plan.
-  @Json(name = "supportingInfo")
-  @Nullable
-  public List<Reference> supportingInfo;
-
-  // Human-friendly name for the CarePlan.
-  @Json(name = "title")
-  @Nullable
-  public String title;
-
-  /**
-   * Constructor for all required properties.
-   *
-   * @param intent CodeSystems.CarePlanIntent
-   * @param status CodeSystems.CarePlanStatus
-   * @param subject Reference
-   */
-  public CarePlan(CodeSystems.CarePlanIntent intent, CodeSystems.CarePlanStatus status,
-      Reference subject) {
-    this.intent = intent;
-    this.status = status;
-    this.subject = subject;
-  }
-
-  @Override
-  public String getResourceType() {
-    return CarePlan.resourceType;
-  }
-
-  /**
-   * CarePlan.java
-   *
-   * Identifies a planned action to occur as part of the plan.  For example, a medication to be used, lab tests to perform, self-monitoring, education, etc.
-   *
-   * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
-   *
-   * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CarePlan) on 2020-07-29
-   */
-  public static class CarePlanActivity extends BackboneElement {
-
-    public static final String resourceType = "CarePlanActivity";
-
-    // In-line definition of activity.
-    @Json(name = "detail")
+    // Action to occur as part of plan.
+    @Json(name = "activity")
     @Nullable
-    public CarePlanActivityDetail detail;
+    public List<CarePlanActivity> activity;
 
-    // Results of the activity.
-    @Json(name = "outcomeCodeableConcept")
+    // Health issues this plan addresses.
+    @Json(name = "addresses")
     @Nullable
-    public List<CodeableConcept> outcomeCodeableConcept;
+    public List<Reference> addresses;
 
-    // Appointment, Encounter, Procedure, etc..
-    @Json(name = "outcomeReference")
+    // Who is responsible for contents of the plan.
+    @Json(name = "author")
     @Nullable
-    public List<Reference> outcomeReference;
+    public List<Reference> author;
 
-    // Comments about the activity status/progress.
-    @Json(name = "progress")
+    // Fulfills care plan.
+    @Json(name = "basedOn")
     @Nullable
-    public List<Annotation> progress;
+    public List<Reference> basedOn;
 
-    // Activity details defined in specific resource.
-    @Json(name = "reference")
+    // Who's involved in plan?.
+    @Json(name = "careTeam")
     @Nullable
-    public Reference reference;
+    public List<Reference> careTeam;
 
-    public CarePlanActivity() {
-    }
-
-    @Override
-    public String getResourceType() {
-      return CarePlanActivity.resourceType;
-    }
-  }
-
-  /**
-   * CarePlan.java
-   *
-   * A simple summary of a planned activity suitable for a general care plan system (e.g. form driven) that doesn't know about specific resources such as procedure etc.
-   *
-   * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
-   *
-   * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CarePlan) on 2020-07-29
-   */
-  public static class CarePlanActivityDetail extends BackboneElement {
-
-    public static final String resourceType = "CarePlanActivityDetail";
-
-    // diet | drug | encounter | observation | procedure | supply | other.
+    // Type of plan.
     @Json(name = "category")
     @Nullable
-    public CodeableConcept category;
+    public List<CodeableConcept> category;
 
-    // Detail type of activity.
-    @Json(name = "code")
+    // Created in context of.
+    @Json(name = "context")
     @Nullable
-    public CodeableConcept code;
-
-    // How to consume/day?.
-    @Json(name = "dailyAmount")
-    @Nullable
-    public Quantity dailyAmount;
+    public Reference context;
 
     // Protocol or definition.
     @Json(name = "definition")
     @Nullable
-    public Reference definition;
+    public List<Reference> definition;
 
-    // Extra info describing activity to perform.
+    // Summary of nature of plan.
     @Json(name = "description")
     @Nullable
     public String description;
 
-    // Goals this activity relates to.
+    // Desired outcome of plan.
     @Json(name = "goal")
     @Nullable
     public List<Reference> goal;
 
-    // Where it should happen.
-    @Json(name = "location")
+    // External Ids for this plan.
+    @Json(name = "identifier")
     @Nullable
-    public Reference location;
+    public List<Identifier> identifier;
 
-    // Who will be responsible?.
-    @Json(name = "performer")
+    // Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain.
+    @Json(name = "intent")
+    public CodeSystems.CarePlanIntent intent;
+
+    // Comments about the plan.
+    @Json(name = "note")
     @Nullable
-    public List<Reference> performer;
+    public List<Annotation> note;
 
-    // What is to be administered/supplied.
-    @Json(name = "productCodeableConcept")
+    // Part of referenced CarePlan.
+    @Json(name = "partOf")
     @Nullable
-    public CodeableConcept productCodeableConcept;
+    public List<Reference> partOf;
 
-    // What is to be administered/supplied.
-    @Json(name = "productReference")
+    // Time period plan covers.
+    @Json(name = "period")
     @Nullable
-    public Reference productReference;
+    public Period period;
 
-    // Do NOT do.
-    @Json(name = "prohibited")
+    // CarePlan replaced by this CarePlan.
+    @Json(name = "replaces")
     @Nullable
-    public Boolean prohibited;
+    public List<Reference> replaces;
 
-    // How much to administer/supply/consume.
-    @Json(name = "quantity")
-    @Nullable
-    public Quantity quantity;
-
-    // Why activity should be done or why activity was prohibited.
-    @Json(name = "reasonCode")
-    @Nullable
-    public List<CodeableConcept> reasonCode;
-
-    // Condition triggering need for activity.
-    @Json(name = "reasonReference")
-    @Nullable
-    public List<Reference> reasonReference;
-
-    // When activity is to occur.
-    @Json(name = "scheduledPeriod")
-    @Nullable
-    public Period scheduledPeriod;
-
-    // When activity is to occur.
-    @Json(name = "scheduledString")
-    @Nullable
-    public String scheduledString;
-
-    // When activity is to occur.
-    @Json(name = "scheduledTiming")
-    @Nullable
-    public Timing scheduledTiming;
-
-    // Identifies what progress is being made for the specific activity.
+    // Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.
     @Json(name = "status")
-    public CodeSystems.CarePlanActivityStatus status;
+    public CodeSystems.CarePlanStatus status;
 
-    // Reason for current status.
-    @Json(name = "statusReason")
+    // Who care plan is for.
+    @Json(name = "subject")
+    public Reference subject;
+
+    // Information considered as part of plan.
+    @Json(name = "supportingInfo")
     @Nullable
-    public String statusReason;
+    public List<Reference> supportingInfo;
+
+    // Human-friendly name for the CarePlan.
+    @Json(name = "title")
+    @Nullable
+    public String title;
 
     /**
      * Constructor for all required properties.
      *
-     * @param status CodeSystems.CarePlanActivityStatus
+     * @param intent  CodeSystems.CarePlanIntent
+     * @param status  CodeSystems.CarePlanStatus
+     * @param subject Reference
      */
-    public CarePlanActivityDetail(CodeSystems.CarePlanActivityStatus status) {
-      this.status = status;
+    public CarePlan(CodeSystems.CarePlanIntent intent, CodeSystems.CarePlanStatus status,
+                    Reference subject) {
+        this.intent = intent;
+        this.status = status;
+        this.subject = subject;
     }
 
     @Override
     public String getResourceType() {
-      return CarePlanActivityDetail.resourceType;
+        return CarePlan.resourceType;
     }
-  }
+
+    /**
+     * CarePlan.java
+     * <p>
+     * Identifies a planned action to occur as part of the plan.  For example, a medication to be
+     * used, lab tests to perform, self-monitoring, education, etc.
+     *
+     * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
+     * <p>
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CarePlan) on
+     * 2020-07-29
+     */
+    public static class CarePlanActivity extends BackboneElement {
+
+        public static final String resourceType = "CarePlanActivity";
+
+        // In-line definition of activity.
+        @Json(name = "detail")
+        @Nullable
+        public CarePlanActivityDetail detail;
+
+        // Results of the activity.
+        @Json(name = "outcomeCodeableConcept")
+        @Nullable
+        public List<CodeableConcept> outcomeCodeableConcept;
+
+        // Appointment, Encounter, Procedure, etc..
+        @Json(name = "outcomeReference")
+        @Nullable
+        public List<Reference> outcomeReference;
+
+        // Comments about the activity status/progress.
+        @Json(name = "progress")
+        @Nullable
+        public List<Annotation> progress;
+
+        // Activity details defined in specific resource.
+        @Json(name = "reference")
+        @Nullable
+        public Reference reference;
+
+        public CarePlanActivity() {
+        }
+
+        @Override
+        public String getResourceType() {
+            return CarePlanActivity.resourceType;
+        }
+    }
+
+    /**
+     * CarePlan.java
+     * <p>
+     * A simple summary of a planned activity suitable for a general care plan system (e.g. form
+     * driven) that doesn't know about specific resources such as procedure etc.
+     *
+     * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
+     * <p>
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CarePlan) on
+     * 2020-07-29
+     */
+    public static class CarePlanActivityDetail extends BackboneElement {
+
+        public static final String resourceType = "CarePlanActivityDetail";
+
+        // diet | drug | encounter | observation | procedure | supply | other.
+        @Json(name = "category")
+        @Nullable
+        public CodeableConcept category;
+
+        // Detail type of activity.
+        @Json(name = "code")
+        @Nullable
+        public CodeableConcept code;
+
+        // How to consume/day?.
+        @Json(name = "dailyAmount")
+        @Nullable
+        public Quantity dailyAmount;
+
+        // Protocol or definition.
+        @Json(name = "definition")
+        @Nullable
+        public Reference definition;
+
+        // Extra info describing activity to perform.
+        @Json(name = "description")
+        @Nullable
+        public String description;
+
+        // Goals this activity relates to.
+        @Json(name = "goal")
+        @Nullable
+        public List<Reference> goal;
+
+        // Where it should happen.
+        @Json(name = "location")
+        @Nullable
+        public Reference location;
+
+        // Who will be responsible?.
+        @Json(name = "performer")
+        @Nullable
+        public List<Reference> performer;
+
+        // What is to be administered/supplied.
+        @Json(name = "productCodeableConcept")
+        @Nullable
+        public CodeableConcept productCodeableConcept;
+
+        // What is to be administered/supplied.
+        @Json(name = "productReference")
+        @Nullable
+        public Reference productReference;
+
+        // Do NOT do.
+        @Json(name = "prohibited")
+        @Nullable
+        public Boolean prohibited;
+
+        // How much to administer/supply/consume.
+        @Json(name = "quantity")
+        @Nullable
+        public Quantity quantity;
+
+        // Why activity should be done or why activity was prohibited.
+        @Json(name = "reasonCode")
+        @Nullable
+        public List<CodeableConcept> reasonCode;
+
+        // Condition triggering need for activity.
+        @Json(name = "reasonReference")
+        @Nullable
+        public List<Reference> reasonReference;
+
+        // When activity is to occur.
+        @Json(name = "scheduledPeriod")
+        @Nullable
+        public Period scheduledPeriod;
+
+        // When activity is to occur.
+        @Json(name = "scheduledString")
+        @Nullable
+        public String scheduledString;
+
+        // When activity is to occur.
+        @Json(name = "scheduledTiming")
+        @Nullable
+        public Timing scheduledTiming;
+
+        // Identifies what progress is being made for the specific activity.
+        @Json(name = "status")
+        public CodeSystems.CarePlanActivityStatus status;
+
+        // Reason for current status.
+        @Json(name = "statusReason")
+        @Nullable
+        public String statusReason;
+
+        /**
+         * Constructor for all required properties.
+         *
+         * @param status CodeSystems.CarePlanActivityStatus
+         */
+        public CarePlanActivityDetail(CodeSystems.CarePlanActivityStatus status) {
+            this.status = status;
+        }
+
+        @Override
+        public String getResourceType() {
+            return CarePlanActivityDetail.resourceType;
+        }
+    }
 }

@@ -64,8 +64,10 @@ public class FhirAttachmentHelper {
                 return ((Medication) domainResource).image;
             case "Observation":
                 List<Attachment> observationAttachments = new ArrayList<>();
-                if (((Observation) domainResource).component == null && ((Observation) domainResource).valueAttachment == null)
+                if (((Observation) domainResource).component == null
+                        && ((Observation) domainResource).valueAttachment == null) {
                     return observationAttachments;
+                }
                 if (((Observation) domainResource).component != null) {
                     for (Observation.ObservationComponent component : ((Observation) domainResource).component) {
                         if (component == null || component.valueAttachment == null) continue;
@@ -76,8 +78,9 @@ public class FhirAttachmentHelper {
                 return observationAttachments;
             case "DocumentReference":
                 List<Attachment> documentAttachments = new ArrayList<>();
-                if (((DocumentReference) domainResource).content == null)
+                if (((DocumentReference) domainResource).content == null) {
                     return documentAttachments;
+                }
                 for (DocumentReference.DocumentReferenceContent content : ((DocumentReference) domainResource).content) {
                     if (content == null || content.attachment == null) continue;
                     documentAttachments.add(content.attachment);
@@ -85,8 +88,9 @@ public class FhirAttachmentHelper {
                 return documentAttachments;
             case "Questionnaire":
                 List<Attachment> questionnaireAttachments = new ArrayList<>();
-                if (((Questionnaire) domainResource).item == null)
+                if (((Questionnaire) domainResource).item == null) {
                     return questionnaireAttachments;
+                }
                 for (Questionnaire.QuestionnaireItem item : ((Questionnaire) domainResource).item) {
                     if (item == null || item.initialAttachment == null) continue;
                     questionnaireAttachments.add(item.initialAttachment);
@@ -94,8 +98,9 @@ public class FhirAttachmentHelper {
                 return questionnaireAttachments;
             case "QuestionnaireResponse":
                 List<Attachment> answerAttachments = new ArrayList<>();
-                if (((QuestionnaireResponse) domainResource).item == null)
+                if (((QuestionnaireResponse) domainResource).item == null) {
                     return answerAttachments;
+                }
                 for (QuestionnaireResponse.QuestionnaireResponseItem item : ((QuestionnaireResponse) domainResource).item) {
                     if (item.answer == null) continue;
                     for (QuestionnaireResponse.QuestionnaireResponseItemAnswer answer : item.answer) {
@@ -106,75 +111,85 @@ public class FhirAttachmentHelper {
                 return answerAttachments;
             default:
                 return null;
-
         }
     }
 
-    public static void updateAttachmentData(DomainResource domainResource, HashMap<Attachment, String> dataHashMap) {
+    public static void updateAttachmentData(DomainResource domainResource,
+                                            HashMap<Attachment, String> dataHashMap) {
         switch (domainResource.getResourceType()) {
             case "Patient":
-                ((Patient) domainResource).photo = setHashMapAttachment(((Patient) domainResource).photo, dataHashMap);
+                ((Patient) domainResource).photo =
+                        setHashMapAttachment(((Patient) domainResource).photo, dataHashMap);
                 break;
             case "Practitioner":
-                ((Practitioner) domainResource).photo = setHashMapAttachment(((Practitioner) domainResource).photo, dataHashMap);
+                ((Practitioner) domainResource).photo =
+                        setHashMapAttachment(((Practitioner) domainResource).photo, dataHashMap);
                 break;
             case "DiagnosticReport":
-                ((DiagnosticReport) domainResource).presentedForm = setHashMapAttachment(((DiagnosticReport) domainResource).presentedForm, dataHashMap);
+                ((DiagnosticReport) domainResource).presentedForm =
+                        setHashMapAttachment(((DiagnosticReport) domainResource).presentedForm, dataHashMap);
                 break;
             case "Medication":
-                ((Medication) domainResource).image = setHashMapAttachment(((Medication) domainResource).image, dataHashMap);
+                ((Medication) domainResource).image =
+                        setHashMapAttachment(((Medication) domainResource).image, dataHashMap);
                 break;
             case "Observation":
                 insertDataAttachment(((Observation) domainResource).valueAttachment, dataHashMap);
-                if (((Observation) domainResource).component != null)
+                if (((Observation) domainResource).component != null) {
                     for (Observation.ObservationComponent component : ((Observation) domainResource).component) {
                         insertDataAttachment(component.valueAttachment, dataHashMap);
                     }
+                }
                 break;
             case "DocumentReference":
-                if (((DocumentReference) domainResource).content != null)
+                if (((DocumentReference) domainResource).content != null) {
                     for (DocumentReference.DocumentReferenceContent content : ((DocumentReference) domainResource).content) {
                         insertDataAttachment(content.attachment, dataHashMap);
                     }
+                }
                 break;
             case "Questionnaire":
-                if (((Questionnaire) domainResource).item != null)
+                if (((Questionnaire) domainResource).item != null) {
                     for (Questionnaire.QuestionnaireItem item : ((Questionnaire) domainResource).item) {
                         insertDataAttachment(item.initialAttachment, dataHashMap);
                     }
+                }
                 break;
             case "QuestionnaireResponse":
-                if (((QuestionnaireResponse) domainResource).item != null)
+                if (((QuestionnaireResponse) domainResource).item != null) {
                     for (QuestionnaireResponse.QuestionnaireResponseItem item : ((QuestionnaireResponse) domainResource).item) {
                         if (item.answer == null) continue;
                         for (QuestionnaireResponse.QuestionnaireResponseItemAnswer answer : item.answer) {
                             insertDataAttachment(answer.valueAttachment, dataHashMap);
                         }
                     }
+                }
                 break;
             default:
                 break;
         }
     }
 
-    public static void insertDataAttachment(Attachment attachment, HashMap<Attachment, String> dataHashMap) {
-        if (dataHashMap == null)
+    public static void insertDataAttachment(Attachment attachment,
+                                            HashMap<Attachment, String> dataHashMap) {
+        if (dataHashMap == null) {
             attachment.data = null;
-        else if (attachment != null)
+        } else if (attachment != null) {
             attachment.data = dataHashMap.get(attachment);
+        }
     }
 
-    public static List<Attachment> setHashMapAttachment(List<Attachment> attachments, HashMap<Attachment, String> dataHashMap) {
+    public static List<Attachment> setHashMapAttachment(List<Attachment> attachments,
+                                                        HashMap<Attachment, String> dataHashMap) {
         for (Attachment attachment : attachments) {
-            if (dataHashMap == null || dataHashMap.isEmpty())
+            if (dataHashMap == null || dataHashMap.isEmpty()) {
                 attachment.data = null;
-            else
+            } else {
                 attachment.data = dataHashMap.get(attachment);
-
+            }
         }
         return attachments;
     }
-
 
     public static List<Identifier> getIdentifier(DomainResource domainResource) {
         switch (domainResource.getResourceType()) {
@@ -191,7 +206,8 @@ public class FhirAttachmentHelper {
             case "Questionnaire":
                 return ((Questionnaire) domainResource).identifier;
             case "QuestionnaireResponse":
-                List<Identifier> identifierList = new ArrayList<>(Collections.singleton(((QuestionnaireResponse) domainResource).identifier));
+                List<Identifier> identifierList = new ArrayList<>(
+                        Collections.singleton(((QuestionnaireResponse) domainResource).identifier));
                 return identifierList;
             default:
                 return null;
@@ -225,16 +241,17 @@ public class FhirAttachmentHelper {
             default:
                 break;
         }
-
     }
 
-    public static void appendIdentifier(DomainResource domainResource, String appendingId, String assigner) {
+    public static void appendIdentifier(DomainResource domainResource, String appendingId,
+                                        String assigner) {
         List<Identifier> identifiers = getIdentifier(domainResource);
         if (identifiers == null) identifiers = new ArrayList<>();
-        if (domainResource instanceof QuestionnaireResponse)
+        if (domainResource instanceof QuestionnaireResponse) {
             identifiers.set(0, buildIdentifier(appendingId, assigner));
-        else
+        } else {
             identifiers.add(buildIdentifier(appendingId, assigner));
+        }
         setIdentifier(domainResource, identifiers);
     }
 

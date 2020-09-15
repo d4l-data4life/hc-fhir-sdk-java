@@ -18,22 +18,22 @@ package care.data4life.fhir.stu3.model;
 
 /**
  * Money.java
- *
+ * <p>
  * An amount of economic utility in some recognized currency
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Money">Money</a>
- *
+ * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Money) on 2020-07-29
  */
 public class Money extends Quantity {
 
-  public static final String resourceType = "Money";
+    public static final String resourceType = "Money";
 
-  public Money() {
-  }
+    public Money() {
+    }
 
-  @Override
-  public String getResourceType() {
-    return Money.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return Money.resourceType;
+    }
 }

@@ -17,46 +17,47 @@
 package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
+
 import javax.annotation.Nullable;
 
 /**
  * Resource.java
- *
+ * <p>
  * This is the base resource type for everything.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Resource">Resource</a>
- *
+ * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Resource) on 2020-07-29
  */
 public class Resource extends FhirStu3Base {
 
-  public static final String resourceType = "Resource";
+    public static final String resourceType = "Resource";
 
-  // Logical id of this artifact.
-  @Json(name = "id")
-  @Nullable
-  public String id;
+    // Logical id of this artifact.
+    @Json(name = "id")
+    @Nullable
+    public String id;
 
-  // A set of rules under which this content was created.
-  @Json(name = "implicitRules")
-  @Nullable
-  public String implicitRules;
+    // A set of rules under which this content was created.
+    @Json(name = "implicitRules")
+    @Nullable
+    public String implicitRules;
 
-  // Language of the resource content.
-  @Json(name = "language")
-  @Nullable
-  public String language;
+    // Language of the resource content.
+    @Json(name = "language")
+    @Nullable
+    public String language;
 
-  // Metadata about the resource.
-  @Json(name = "meta")
-  @Nullable
-  public Meta meta;
+    // Metadata about the resource.
+    @Json(name = "meta")
+    @Nullable
+    public Meta meta;
 
-  public Resource() {
-  }
+    public Resource() {
+    }
 
-  @Override
-  public String getResourceType() {
-    return Resource.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return Resource.resourceType;
+    }
 }

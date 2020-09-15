@@ -18,22 +18,24 @@ package care.data4life.fhir.stu3.model;
 
 /**
  * Count.java
- *
- * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
+ * <p>
+ * A measured amount (or an amount that can potentially be measured). Note that measured amounts
+ * include amounts that are not precisely quantified, including amounts involving arbitrary units
+ * and floating currencies.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Count">Count</a>
- *
+ * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Count) on 2020-07-29
  */
 public class Count extends Quantity {
 
-  public static final String resourceType = "Count";
+    public static final String resourceType = "Count";
 
-  public Count() {
-  }
+    public Count() {
+    }
 
-  @Override
-  public String getResourceType() {
-    return Count.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return Count.resourceType;
+    }
 }

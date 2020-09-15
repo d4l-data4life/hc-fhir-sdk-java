@@ -38,9 +38,9 @@ public final class FhirDateTimeConverter {
     }
 
     public static Date fromFhirDate(FhirDate fhirDate) {
-        return convertToDate(fhirDate.getYear(), fhirDate.getMonth(), fhirDate.getDay(), null, null, null, null, null, null);
+        return convertToDate(fhirDate.getYear(), fhirDate.getMonth(), fhirDate.getDay(), null, null,
+                null, null, null, null);
     }
-
 
     public static FhirDateTime toFhirDateTime(Date date) {
         Calendar calendar = getCalender(null);
@@ -48,7 +48,8 @@ public final class FhirDateTimeConverter {
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         if (hour > 0) {
             TimeZone timeZone = TimeZone.getDefault();
-            return new FhirDateTime(convertToFhirDate(date, timeZone), convertToFhirTime(date, timeZone, false), TimeZone.getDefault());
+            return new FhirDateTime(convertToFhirDate(date, timeZone),
+                    convertToFhirTime(date, timeZone, false), TimeZone.getDefault());
         } else {
             return new FhirDateTime(convertToFhirDate(date, null), null, null);
         }
@@ -56,31 +57,44 @@ public final class FhirDateTimeConverter {
 
     public static Date fromFhirDateTime(FhirDateTime fhirDateTime) {
         if (fhirDateTime.getTime() != null) {
-            return convertToDate(fhirDateTime.getDate().getYear(), fhirDateTime.getDate().getMonth(), fhirDateTime.getDate().getDay(), fhirDateTime.getTime().getHour(), fhirDateTime.getTime().getMinute(), fhirDateTime.getTime().getSecond(), fhirDateTime.getTime().getFractionOfSecond(), fhirDateTime.getTime().getFractionPadding(), fhirDateTime.getTimeZone());
+            return convertToDate(fhirDateTime.getDate().getYear(), fhirDateTime.getDate().getMonth(),
+                    fhirDateTime.getDate().getDay(), fhirDateTime.getTime().getHour(),
+                    fhirDateTime.getTime().getMinute(), fhirDateTime.getTime().getSecond(),
+                    fhirDateTime.getTime().getFractionOfSecond(), fhirDateTime.getTime().getFractionPadding(),
+                    fhirDateTime.getTimeZone());
         } else {
-            return convertToDate(fhirDateTime.getDate().getYear(), fhirDateTime.getDate().getMonth(), fhirDateTime.getDate().getDay(), null, null, null, null, null, fhirDateTime.getTimeZone());
+            return convertToDate(fhirDateTime.getDate().getYear(), fhirDateTime.getDate().getMonth(),
+                    fhirDateTime.getDate().getDay(), null, null, null, null, null,
+                    fhirDateTime.getTimeZone());
         }
     }
 
-
     public static FhirInstant toFhirInstant(Date date) {
         TimeZone timeZone = TimeZone.getDefault();
-        return new FhirInstant(new FhirDateTime(convertToFhirDate(date, timeZone), convertToFhirTime(date, timeZone, true), TimeZone.getDefault()));
+        return new FhirInstant(
+                new FhirDateTime(convertToFhirDate(date, timeZone), convertToFhirTime(date, timeZone, true),
+                        TimeZone.getDefault()));
     }
 
     public static Date fromFhirInstant(FhirInstant fhirInstant) {
-        return convertToDate(fhirInstant.getDateTime().getDate().getYear(), fhirInstant.getDateTime().getDate().getMonth(), fhirInstant.getDateTime().getDate().getDay(), fhirInstant.getDateTime().getTime().getHour(), fhirInstant.getDateTime().getTime().getMinute(), fhirInstant.getDateTime().getTime().getSecond(), fhirInstant.getDateTime().getTime().getFractionOfSecond(), fhirInstant.getDateTime().getTime().getFractionPadding(), fhirInstant.getDateTime().getTimeZone());
+        return convertToDate(fhirInstant.getDateTime().getDate().getYear(),
+                fhirInstant.getDateTime().getDate().getMonth(),
+                fhirInstant.getDateTime().getDate().getDay(), fhirInstant.getDateTime().getTime().getHour(),
+                fhirInstant.getDateTime().getTime().getMinute(),
+                fhirInstant.getDateTime().getTime().getSecond(),
+                fhirInstant.getDateTime().getTime().getFractionOfSecond(),
+                fhirInstant.getDateTime().getTime().getFractionPadding(),
+                fhirInstant.getDateTime().getTimeZone());
     }
-
 
     public static FhirTime toFhirTime(Date date) {
         return convertToFhirTime(date, null, false);
     }
 
     public static Date fromFhirTime(FhirTime fhirTime) {
-        return convertToDate(null, null, null, fhirTime.getHour(), fhirTime.getMinute(), fhirTime.getSecond(), fhirTime.getFractionOfSecond(), fhirTime.getFractionPadding(), null);
+        return convertToDate(null, null, null, fhirTime.getHour(), fhirTime.getMinute(),
+                fhirTime.getSecond(), fhirTime.getFractionOfSecond(), fhirTime.getFractionPadding(), null);
     }
-
 
     private static Date convertToDate(
             @Nullable Integer year,
@@ -122,7 +136,6 @@ public final class FhirDateTimeConverter {
         return calendar.getTime();
     }
 
-
     private static FhirDate convertToFhirDate(Date date, @Nullable TimeZone timeZone) {
         Calendar calendar = getCalender(timeZone);
         calendar.setTime(date);
@@ -134,7 +147,8 @@ public final class FhirDateTimeConverter {
         return new FhirDate(year, month, day);
     }
 
-    private static FhirTime convertToFhirTime(Date date, @Nullable TimeZone timeZone, boolean isInstant) {
+    private static FhirTime convertToFhirTime(Date date, @Nullable TimeZone timeZone,
+                                              boolean isInstant) {
         Calendar calendar = getCalender(timeZone);
         calendar.setTime(date);
 
@@ -154,9 +168,11 @@ public final class FhirDateTimeConverter {
         }
 
         if (isInstant) {
-            return new FhirTime(hour, minute, second >= 0 ? second : null, milliseconds > 0 ? milliseconds : null, padding > 0 ? padding : null);
+            return new FhirTime(hour, minute, second >= 0 ? second : null,
+                    milliseconds > 0 ? milliseconds : null, padding > 0 ? padding : null);
         } else {
-            return new FhirTime(hour, minute, second > 0 ? second : null, milliseconds > 0 ? milliseconds : null, padding > 0 ? padding : null);
+            return new FhirTime(hour, minute, second > 0 ? second : null,
+                    milliseconds > 0 ? milliseconds : null, padding > 0 ? padding : null);
         }
     }
 

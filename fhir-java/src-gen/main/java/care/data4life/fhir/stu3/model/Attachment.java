@@ -17,66 +17,68 @@
 package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
+
 import javax.annotation.Nullable;
 
 /**
  * Attachment.java
- *
+ * <p>
  * For referring to data content defined in other formats.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Attachment">Attachment</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Attachment) on 2020-07-29
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Attachment) on
+ * 2020-07-29
  */
 public class Attachment extends Element {
 
-  public static final String resourceType = "Attachment";
+    public static final String resourceType = "Attachment";
 
-  // Mime type of the content, with charset etc..
-  @Json(name = "contentType")
-  @Nullable
-  public String contentType;
+    // Mime type of the content, with charset etc..
+    @Json(name = "contentType")
+    @Nullable
+    public String contentType;
 
-  // Date attachment was first created.
-  @Json(name = "creation")
-  @Nullable
-  public FhirDateTime creation;
+    // Date attachment was first created.
+    @Json(name = "creation")
+    @Nullable
+    public FhirDateTime creation;
 
-  // Data inline, base64ed.
-  @Json(name = "data")
-  @Nullable
-  public String data;
+    // Data inline, base64ed.
+    @Json(name = "data")
+    @Nullable
+    public String data;
 
-  // Hash of the data (sha-1, base64ed).
-  @Json(name = "hash")
-  @Nullable
-  public String hash;
+    // Hash of the data (sha-1, base64ed).
+    @Json(name = "hash")
+    @Nullable
+    public String hash;
 
-  // Human language of the content (BCP-47).
-  @Json(name = "language")
-  @Nullable
-  public String language;
+    // Human language of the content (BCP-47).
+    @Json(name = "language")
+    @Nullable
+    public String language;
 
-  // Number of bytes of content (if url provided).
-  @Json(name = "size")
-  @Nullable
-  public Integer size;
+    // Number of bytes of content (if url provided).
+    @Json(name = "size")
+    @Nullable
+    public Integer size;
 
-  // Label to display in place of the data.
-  @Json(name = "title")
-  @Nullable
-  public String title;
+    // Label to display in place of the data.
+    @Json(name = "title")
+    @Nullable
+    public String title;
 
-  // Uri where the data can be found.
-  @Json(name = "url")
-  @Nullable
-  public String url;
+    // Uri where the data can be found.
+    @Json(name = "url")
+    @Nullable
+    public String url;
 
-  public Attachment() {
-  }
+    public Attachment() {
+    }
 
-  @Override
-  public String getResourceType() {
-    return Attachment.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return Attachment.resourceType;
+    }
 }

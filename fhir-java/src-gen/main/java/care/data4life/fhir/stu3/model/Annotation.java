@@ -17,51 +17,53 @@
 package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
+
 import javax.annotation.Nullable;
 
 /**
  * Annotation.java
- *
+ * <p>
  * A  text note which also  contains information about who made the statement and when.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Annotation">Annotation</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Annotation) on 2020-07-29
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Annotation) on
+ * 2020-07-29
  */
 public class Annotation extends Element {
 
-  public static final String resourceType = "Annotation";
+    public static final String resourceType = "Annotation";
 
-  // Individual responsible for the annotation.
-  @Json(name = "authorReference")
-  @Nullable
-  public Reference authorReference;
+    // Individual responsible for the annotation.
+    @Json(name = "authorReference")
+    @Nullable
+    public Reference authorReference;
 
-  // Individual responsible for the annotation.
-  @Json(name = "authorString")
-  @Nullable
-  public String authorString;
+    // Individual responsible for the annotation.
+    @Json(name = "authorString")
+    @Nullable
+    public String authorString;
 
-  // The annotation  - text content.
-  @Json(name = "text")
-  public String text;
+    // The annotation  - text content.
+    @Json(name = "text")
+    public String text;
 
-  // When the annotation was made.
-  @Json(name = "time")
-  @Nullable
-  public FhirDateTime time;
+    // When the annotation was made.
+    @Json(name = "time")
+    @Nullable
+    public FhirDateTime time;
 
-  /**
-   * Constructor for all required properties.
-   *
-   * @param text String
-   */
-  public Annotation(String text) {
-    this.text = text;
-  }
+    /**
+     * Constructor for all required properties.
+     *
+     * @param text String
+     */
+    public Annotation(String text) {
+        this.text = text;
+    }
 
-  @Override
-  public String getResourceType() {
-    return Annotation.resourceType;
-  }
+    @Override
+    public String getResourceType() {
+        return Annotation.resourceType;
+    }
 }

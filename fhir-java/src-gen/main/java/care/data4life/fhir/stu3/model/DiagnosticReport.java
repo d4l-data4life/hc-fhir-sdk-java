@@ -17,197 +17,207 @@
 package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
+
 import java.util.List;
+
 import javax.annotation.Nullable;
 
 /**
  * DiagnosticReport.java
- *
- * The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
+ * <p>
+ * The findings and interpretation of diagnostic  tests performed on patients, groups of patients,
+ * devices, and locations, and/or specimens derived from these. The report includes clinical context
+ * such as requesting and provider information, and some mix of atomic results, images, textual and
+ * coded interpretations, and formatted representation of diagnostic reports.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on 2020-07-29
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on
+ * 2020-07-29
  */
 public class DiagnosticReport extends DomainResource {
 
-  public static final String resourceType = "DiagnosticReport";
+    public static final String resourceType = "DiagnosticReport";
 
-  // What was requested.
-  @Json(name = "basedOn")
-  @Nullable
-  public List<Reference> basedOn;
-
-  // Service category.
-  @Json(name = "category")
-  @Nullable
-  public CodeableConcept category;
-
-  // Name/Code for this diagnostic report.
-  @Json(name = "code")
-  public CodeableConcept code;
-
-  // Codes for the conclusion.
-  @Json(name = "codedDiagnosis")
-  @Nullable
-  public List<CodeableConcept> codedDiagnosis;
-
-  // Clinical Interpretation of test results.
-  @Json(name = "conclusion")
-  @Nullable
-  public String conclusion;
-
-  // Health care event when test ordered.
-  @Json(name = "context")
-  @Nullable
-  public Reference context;
-
-  // Clinically relevant time/time-period for report.
-  @Json(name = "effectiveDateTime")
-  @Nullable
-  public FhirDateTime effectiveDateTime;
-
-  // Clinically relevant time/time-period for report.
-  @Json(name = "effectivePeriod")
-  @Nullable
-  public Period effectivePeriod;
-
-  // Business identifier for report.
-  @Json(name = "identifier")
-  @Nullable
-  public List<Identifier> identifier;
-
-  // Key images associated with this report.
-  @Json(name = "image")
-  @Nullable
-  public List<DiagnosticReportImage> image;
-
-  // Reference to full details of imaging associated with the diagnostic report.
-  @Json(name = "imagingStudy")
-  @Nullable
-  public List<Reference> imagingStudy;
-
-  // DateTime this version was released.
-  @Json(name = "issued")
-  @Nullable
-  public FhirInstant issued;
-
-  // Participants in producing the report.
-  @Json(name = "performer")
-  @Nullable
-  public List<DiagnosticReportPerformer> performer;
-
-  // Entire report as issued.
-  @Json(name = "presentedForm")
-  @Nullable
-  public List<Attachment> presentedForm;
-
-  // Observations - simple, or complex nested groups.
-  @Json(name = "result")
-  @Nullable
-  public List<Reference> result;
-
-  // Specimens this report is based on.
-  @Json(name = "specimen")
-  @Nullable
-  public List<Reference> specimen;
-
-  // The status of the diagnostic report as a whole.
-  @Json(name = "status")
-  public CodeSystems.DiagnosticReportStatus status;
-
-  // The subject of the report - usually, but not always, the patient.
-  @Json(name = "subject")
-  @Nullable
-  public Reference subject;
-
-  /**
-   * Constructor for all required properties.
-   *
-   * @param code CodeableConcept
-   * @param status CodeSystems.DiagnosticReportStatus
-   */
-  public DiagnosticReport(CodeableConcept code, CodeSystems.DiagnosticReportStatus status) {
-    this.code = code;
-    this.status = status;
-  }
-
-  @Override
-  public String getResourceType() {
-    return DiagnosticReport.resourceType;
-  }
-
-  /**
-   * DiagnosticReport.java
-   *
-   * A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).
-   *
-   * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
-   *
-   * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on 2020-07-29
-   */
-  public static class DiagnosticReportImage extends BackboneElement {
-
-    public static final String resourceType = "DiagnosticReportImage";
-
-    // Comment about the image (e.g. explanation).
-    @Json(name = "comment")
+    // What was requested.
+    @Json(name = "basedOn")
     @Nullable
-    public String comment;
+    public List<Reference> basedOn;
 
-    // Reference to the image source.
-    @Json(name = "link")
-    public Reference link;
+    // Service category.
+    @Json(name = "category")
+    @Nullable
+    public CodeableConcept category;
+
+    // Name/Code for this diagnostic report.
+    @Json(name = "code")
+    public CodeableConcept code;
+
+    // Codes for the conclusion.
+    @Json(name = "codedDiagnosis")
+    @Nullable
+    public List<CodeableConcept> codedDiagnosis;
+
+    // Clinical Interpretation of test results.
+    @Json(name = "conclusion")
+    @Nullable
+    public String conclusion;
+
+    // Health care event when test ordered.
+    @Json(name = "context")
+    @Nullable
+    public Reference context;
+
+    // Clinically relevant time/time-period for report.
+    @Json(name = "effectiveDateTime")
+    @Nullable
+    public FhirDateTime effectiveDateTime;
+
+    // Clinically relevant time/time-period for report.
+    @Json(name = "effectivePeriod")
+    @Nullable
+    public Period effectivePeriod;
+
+    // Business identifier for report.
+    @Json(name = "identifier")
+    @Nullable
+    public List<Identifier> identifier;
+
+    // Key images associated with this report.
+    @Json(name = "image")
+    @Nullable
+    public List<DiagnosticReportImage> image;
+
+    // Reference to full details of imaging associated with the diagnostic report.
+    @Json(name = "imagingStudy")
+    @Nullable
+    public List<Reference> imagingStudy;
+
+    // DateTime this version was released.
+    @Json(name = "issued")
+    @Nullable
+    public FhirInstant issued;
+
+    // Participants in producing the report.
+    @Json(name = "performer")
+    @Nullable
+    public List<DiagnosticReportPerformer> performer;
+
+    // Entire report as issued.
+    @Json(name = "presentedForm")
+    @Nullable
+    public List<Attachment> presentedForm;
+
+    // Observations - simple, or complex nested groups.
+    @Json(name = "result")
+    @Nullable
+    public List<Reference> result;
+
+    // Specimens this report is based on.
+    @Json(name = "specimen")
+    @Nullable
+    public List<Reference> specimen;
+
+    // The status of the diagnostic report as a whole.
+    @Json(name = "status")
+    public CodeSystems.DiagnosticReportStatus status;
+
+    // The subject of the report - usually, but not always, the patient.
+    @Json(name = "subject")
+    @Nullable
+    public Reference subject;
 
     /**
      * Constructor for all required properties.
      *
-     * @param link Reference
+     * @param code   CodeableConcept
+     * @param status CodeSystems.DiagnosticReportStatus
      */
-    public DiagnosticReportImage(Reference link) {
-      this.link = link;
+    public DiagnosticReport(CodeableConcept code, CodeSystems.DiagnosticReportStatus status) {
+        this.code = code;
+        this.status = status;
     }
 
     @Override
     public String getResourceType() {
-      return DiagnosticReportImage.resourceType;
+        return DiagnosticReport.resourceType;
     }
-  }
-
-  /**
-   * DiagnosticReport.java
-   *
-   * Indicates who or what participated in producing the report.
-   *
-   * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
-   *
-   * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on 2020-07-29
-   */
-  public static class DiagnosticReportPerformer extends BackboneElement {
-
-    public static final String resourceType = "DiagnosticReportPerformer";
-
-    // Practitioner or Organization  participant.
-    @Json(name = "actor")
-    public Reference actor;
-
-    // Type of performer.
-    @Json(name = "role")
-    @Nullable
-    public CodeableConcept role;
 
     /**
-     * Constructor for all required properties.
+     * DiagnosticReport.java
+     * <p>
+     * A list of key images associated with this report. The images are generally created during the
+     * diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides
+     * of interest).
      *
-     * @param actor Reference
+     * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
+     * <p>
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on
+     * 2020-07-29
      */
-    public DiagnosticReportPerformer(Reference actor) {
-      this.actor = actor;
+    public static class DiagnosticReportImage extends BackboneElement {
+
+        public static final String resourceType = "DiagnosticReportImage";
+
+        // Comment about the image (e.g. explanation).
+        @Json(name = "comment")
+        @Nullable
+        public String comment;
+
+        // Reference to the image source.
+        @Json(name = "link")
+        public Reference link;
+
+        /**
+         * Constructor for all required properties.
+         *
+         * @param link Reference
+         */
+        public DiagnosticReportImage(Reference link) {
+            this.link = link;
+        }
+
+        @Override
+        public String getResourceType() {
+            return DiagnosticReportImage.resourceType;
+        }
     }
 
-    @Override
-    public String getResourceType() {
-      return DiagnosticReportPerformer.resourceType;
+    /**
+     * DiagnosticReport.java
+     * <p>
+     * Indicates who or what participated in producing the report.
+     *
+     * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
+     * <p>
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on
+     * 2020-07-29
+     */
+    public static class DiagnosticReportPerformer extends BackboneElement {
+
+        public static final String resourceType = "DiagnosticReportPerformer";
+
+        // Practitioner or Organization  participant.
+        @Json(name = "actor")
+        public Reference actor;
+
+        // Type of performer.
+        @Json(name = "role")
+        @Nullable
+        public CodeableConcept role;
+
+        /**
+         * Constructor for all required properties.
+         *
+         * @param actor Reference
+         */
+        public DiagnosticReportPerformer(Reference actor) {
+            this.actor = actor;
+        }
+
+        @Override
+        public String getResourceType() {
+            return DiagnosticReportPerformer.resourceType;
+        }
     }
-  }
 }
