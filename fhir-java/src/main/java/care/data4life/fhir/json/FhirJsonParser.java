@@ -17,11 +17,10 @@
 package care.data4life.fhir.json;
 
 import care.data4life.fhir.FhirException;
-import care.data4life.fhir.stu3.model.FhirStu3Base;
 
-public interface FhirJsonParser {
+public interface FhirJsonParser<BASE> {
 
-    <T extends FhirStu3Base> T fromJson(Class<T> fhirType, String fhirJson) throws FhirException;
+    <T extends BASE> T fromJson(Class<T> fhirType, String fhirJson) throws FhirException;
 
-    <T extends FhirStu3Base> String toJson(T fhirObject) throws FhirException;
+    <T extends BASE> String toJson(T fhirObject) throws FhirException;
 }
