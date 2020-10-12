@@ -63,8 +63,8 @@ public class FhirInstantTest {
 
                 // valid
                 {new FhirDateTime(new FhirDate(2018, 5, 12), new FhirTime(12, 13, 15, null, null), TimeZone.getTimeZone("GMT")), new Date(1526127195000L), "2018-05-12T12:13:15Z", false},
-                {new FhirDateTime(new FhirDate(2018, 5, 12), new FhirTime(12, 13, 15, null, null), TimeZone.getTimeZone("Europe/Paris")), new Date(1526119995000L), "2018-05-12T12:13:15+01:00", false},
-                {new FhirDateTime(new FhirDate(2018, 5, 12), new FhirTime(12, 13, 15, 123, 2), TimeZone.getTimeZone("Europe/Paris")), new Date(1526119995001L), "2018-05-12T12:13:15.00123+01:00", false},
+                {new FhirDateTime(new FhirDate(2018, 5, 12), new FhirTime(12, 13, 15, null, null), TimeZone.getTimeZone("Europe/Paris")), new Date(1526119995000L), "2018-05-12T12:13:15+02:00", false},
+                {new FhirDateTime(new FhirDate(2018, 5, 12), new FhirTime(12, 13, 15, 123, 2), TimeZone.getTimeZone("Europe/Paris")), new Date(1526119995001L), "2018-05-12T12:13:15.00123+02:00", false},
         });
     }
 

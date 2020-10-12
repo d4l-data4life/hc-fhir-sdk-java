@@ -62,7 +62,7 @@ public class FhirDateTimeTest {
 
                 // valid
                 {new FhirDate(2018, 5, 12), null, null, new Date(1526083200000L), "2018-05-12", false},
-                {new FhirDate(2018, 5, 12), new FhirTime(12, 13, 15, null, null), TimeZone.getTimeZone("Europe/Paris"), new Date(1526119995000L), "2018-05-12T12:13:15+01:00", false},
+                {new FhirDate(2018, 5, 12), new FhirTime(12, 13, 15, null, null), TimeZone.getTimeZone("Europe/Paris"), new Date(1526119995000L), "2018-05-12T12:13:15+02:00", false},
         });
     }
 
