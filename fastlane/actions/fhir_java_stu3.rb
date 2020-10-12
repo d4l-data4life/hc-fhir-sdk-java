@@ -2,7 +2,7 @@ require "fileutils"
 
 module Fastlane
   module Actions
-    class FhirJavaAction < Action
+    class FhirJavaStu3Action < Action
       def self.run(params)
         cleanup
         generate_fhir_models
@@ -15,9 +15,9 @@ module Fastlane
           resources_path = './fhir-java/parser'
 
           # Configure our mappings
-          FileUtils.copy("#{resources_path}/config/mappings.py", "#{fhir_parser}/mappings.py")
-          FileUtils.copy("#{resources_path}/config/settings.py", "#{fhir_parser}/settings.py")
-          FileUtils.copy_entry("#{resources_path}/templates", "#{fhir_parser}/templates")
+          FileUtils.copy("#{resources_path}/stu3/config/mappings.py", "#{fhir_parser}/mappings.py")
+          FileUtils.copy("#{resources_path}/stu3/config/settings.py", "#{fhir_parser}/settings.py")
+          FileUtils.copy_entry("#{resources_path}/stu3/templates", "#{fhir_parser}/templates")
 
           # Create a cache for the FHIR STU3 JSON models
           cache_src = File.join('.', 'fhir-spec', 'hl7.org','fhir','STU3')
@@ -27,17 +27,6 @@ module Fastlane
           Zip::File.open(File.join(cache_src, "examples-json.zip")) do |zipfile|
             zipfile.each do |f|
               zipfile.extract(f, File.join(cache_dst, f.name))
-            end
-          end
-
-          # Create a cache for the FHIR r4 JSON models
-          cache_r4_src = File.join('.', 'fhir-spec', 'hl7.org','fhir','r4')
-          cache_r4_dst = File.join(fhir_parser, "r4-downloads")
-          FileUtils.mkdir(cache_r4_dst)
-          FileUtils.copy(File.join(cache_r4_src, "version.info"), cache_r4_dst)
-          Zip::File.open(File.join(cache_r4_src, "examples-json.zip")) do |zipfile|
-            zipfile.each do |f|
-              zipfile.extract(f, File.join(cache_r4_dst, f.name))
             end
           end
 
@@ -62,7 +51,6 @@ module Fastlane
           sh "rm -rf #{fhir_parser}/mappings.py"
           sh "rm -rf #{fhir_parser}/settings.py"
           sh "rm -rf #{fhir_parser}/downloads"
-          sh "rm -rf #{fhir_parser}/r4-downloads"
 
           UI.success "Done cleanup ✅"
       end
