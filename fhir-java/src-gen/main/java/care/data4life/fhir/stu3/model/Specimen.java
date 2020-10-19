@@ -29,70 +29,71 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on 2020-10-15
  */
 public class Specimen extends DomainResource {
 
     public static final String resourceType = "Specimen";
-
-    // Identifier assigned by the lab.
-    @Json(name = "accessionIdentifier")
-    @Nullable
-    public Identifier accessionIdentifier;
-
-    // Collection details.
-    @Json(name = "collection")
-    @Nullable
-    public SpecimenCollection collection;
-
-    // Direct container of specimen (tube/slide, etc.).
-    @Json(name = "container")
-    @Nullable
-    public List<SpecimenContainer> container;
 
     // External Identifier.
     @Json(name = "identifier")
     @Nullable
     public List<Identifier> identifier;
 
-    // Comments.
-    @Json(name = "note")
+    // Identifier assigned by the lab.
+    @Json(name = "accessionIdentifier")
     @Nullable
-    public List<Annotation> note;
+    public Identifier accessionIdentifier;
 
-    // Specimen from which this specimen originated.
-    @Json(name = "parent")
+    // The availability of the specimen.
+    @Json(name = "status")
     @Nullable
-    public List<Reference> parent;
+    public CodeSystemSpecimenStatus status;
 
-    // Processing and processing step details.
-    @Json(name = "processing")
+    // Kind of material that forms the specimen.
+    @Json(name = "type")
     @Nullable
-    public List<SpecimenProcessing> processing;
+    public CodeableConcept type;
+
+    // Where the specimen came from. This may be from the patient(s) or from the environment or a device.
+    @Json(name = "subject")
+    public Reference subject;
 
     // The time when specimen was received for processing.
     @Json(name = "receivedTime")
     @Nullable
     public FhirDateTime receivedTime;
 
+    // Specimen from which this specimen originated.
+    @Json(name = "parent")
+    @Nullable
+    public List<Reference> parent;
+
     // Why the specimen was collected.
     @Json(name = "request")
     @Nullable
     public List<Reference> request;
 
-    // The availability of the specimen.
-    @Json(name = "status")
+    // Collection details.
+    @Json(name = "collection")
     @Nullable
-    public CodeSystems.SpecimenStatus status;
+    public SpecimenCollection collection;
 
-    // Where the specimen came from. This may be from the patient(s) or from the environment or a device.
-    @Json(name = "subject")
-    public Reference subject;
-
-    // Kind of material that forms the specimen.
-    @Json(name = "type")
+    // Processing and processing step details.
+    @Json(name = "processing")
     @Nullable
-    public CodeableConcept type;
+    public List<SpecimenProcessing> processing;
+
+    // Direct container of specimen (tube/slide, etc.).
+    @Json(name = "container")
+    @Nullable
+    public List<SpecimenContainer> container;
+
+    // Comments.
+    @Json(name = "note")
+    @Nullable
+    public List<Annotation> note;
+
 
     /**
      * Constructor for all required properties.
@@ -108,6 +109,7 @@ public class Specimen extends DomainResource {
         return Specimen.resourceType;
     }
 
+
     /**
      * Specimen.java
      * <p>
@@ -116,16 +118,16 @@ public class Specimen extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class SpecimenCollection extends BackboneElement {
 
         public static final String resourceType = "SpecimenCollection";
 
-        // Anatomical collection site.
-        @Json(name = "bodySite")
+        // Who collected the specimen.
+        @Json(name = "collector")
         @Nullable
-        public CodeableConcept bodySite;
+        public Reference collector;
 
         // Collection time.
         @Json(name = "collectedDateTime")
@@ -137,20 +139,21 @@ public class Specimen extends DomainResource {
         @Nullable
         public Period collectedPeriod;
 
-        // Who collected the specimen.
-        @Json(name = "collector")
+        // The quantity of specimen collected.
+        @Json(name = "quantity")
         @Nullable
-        public Reference collector;
+        public Quantity quantity;
 
         // Technique used to perform collection.
         @Json(name = "method")
         @Nullable
         public CodeableConcept method;
 
-        // The quantity of specimen collected.
-        @Json(name = "quantity")
+        // Anatomical collection site.
+        @Json(name = "bodySite")
         @Nullable
-        public Quantity quantity;
+        public CodeableConcept bodySite;
+
 
         public SpecimenCollection() {
         }
@@ -159,7 +162,10 @@ public class Specimen extends DomainResource {
         public String getResourceType() {
             return SpecimenCollection.resourceType;
         }
+
+
     }
+
 
     /**
      * Specimen.java
@@ -170,11 +176,36 @@ public class Specimen extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class SpecimenContainer extends BackboneElement {
 
         public static final String resourceType = "SpecimenContainer";
+
+        // Id for the container.
+        @Json(name = "identifier")
+        @Nullable
+        public List<Identifier> identifier;
+
+        // Textual description of the container.
+        @Json(name = "description")
+        @Nullable
+        public String description;
+
+        // Kind of container directly associated with specimen.
+        @Json(name = "type")
+        @Nullable
+        public CodeableConcept type;
+
+        // Container volume or size.
+        @Json(name = "capacity")
+        @Nullable
+        public Quantity capacity;
+
+        // Quantity of specimen within container.
+        @Json(name = "specimenQuantity")
+        @Nullable
+        public Quantity specimenQuantity;
 
         // Additive associated with container.
         @Json(name = "additiveCodeableConcept")
@@ -186,30 +217,6 @@ public class Specimen extends DomainResource {
         @Nullable
         public Reference additiveReference;
 
-        // Container volume or size.
-        @Json(name = "capacity")
-        @Nullable
-        public Quantity capacity;
-
-        // Textual description of the container.
-        @Json(name = "description")
-        @Nullable
-        public String description;
-
-        // Id for the container.
-        @Json(name = "identifier")
-        @Nullable
-        public List<Identifier> identifier;
-
-        // Quantity of specimen within container.
-        @Json(name = "specimenQuantity")
-        @Nullable
-        public Quantity specimenQuantity;
-
-        // Kind of container directly associated with specimen.
-        @Json(name = "type")
-        @Nullable
-        public CodeableConcept type;
 
         public SpecimenContainer() {
         }
@@ -218,7 +225,10 @@ public class Specimen extends DomainResource {
         public String getResourceType() {
             return SpecimenContainer.resourceType;
         }
+
+
     }
+
 
     /**
      * Specimen.java
@@ -228,16 +238,11 @@ public class Specimen extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class SpecimenProcessing extends BackboneElement {
 
         public static final String resourceType = "SpecimenProcessing";
-
-        // Material used in the processing step.
-        @Json(name = "additive")
-        @Nullable
-        public List<Reference> additive;
 
         // Textual description of procedure.
         @Json(name = "description")
@@ -249,6 +254,11 @@ public class Specimen extends DomainResource {
         @Nullable
         public CodeableConcept procedure;
 
+        // Material used in the processing step.
+        @Json(name = "additive")
+        @Nullable
+        public List<Reference> additive;
+
         // Date and time of specimen processing.
         @Json(name = "timeDateTime")
         @Nullable
@@ -259,6 +269,7 @@ public class Specimen extends DomainResource {
         @Nullable
         public Period timePeriod;
 
+
         public SpecimenProcessing() {
         }
 
@@ -266,5 +277,9 @@ public class Specimen extends DomainResource {
         public String getResourceType() {
             return SpecimenProcessing.resourceType;
         }
+
+
     }
+
+
 }

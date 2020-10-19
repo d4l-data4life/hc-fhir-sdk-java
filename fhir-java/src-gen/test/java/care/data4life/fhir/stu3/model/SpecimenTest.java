@@ -16,6 +16,7 @@
 
 package care.data4life.fhir.stu3.model;
 
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
@@ -32,7 +33,7 @@ import static org.junit.Assert.assertEquals;
  * A sample to be used for analysis.
  * <p>
  * <p>
- * "Generated from FHIR 3.0.1.11917 on 2020-07-29
+ * "Generated from FHIR 3.0.1.11917 on 2020-10-15
  */
 public class SpecimenTest {
 
@@ -54,9 +55,9 @@ public class SpecimenTest {
         assertEquals(data.note.get(0).text, "Patient dropped off specimen");
         assertEquals(data.parent.get(0).reference, "#stool");
         assertEquals(data.receivedTime.toString(), "2015-08-18T07:03:00Z");
-        assertEquals(data.status, CodeSystems.SpecimenStatus.AVAILABLE);
+        assertEquals(data.status, CodeSystemSpecimenStatus.AVAILABLE);
         assertEquals(data.subject.reference, "Patient/example");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
         assertEquals(data.type.coding.get(0).code, "429951000124103");
         assertEquals(data.type.coding.get(0).display, "Bacterial isolate specimen");
         assertEquals(data.type.coding.get(0).system, "http://snomed.info/sct");
@@ -84,13 +85,12 @@ public class SpecimenTest {
         assertEquals(data.processing.get(0).additive.get(0).display, "6 N HCl");
         assertEquals(data.processing.get(0).description, "Acidify to pH < 3.0 with 6 N HCl.");
         assertEquals(data.processing.get(0).procedure.coding.get(0).code, "ACID");
-        assertEquals(data.processing.get(0).procedure.coding.get(0).system,
-                "http://hl7.org/fhir/v2/0373");
+        assertEquals(data.processing.get(0).procedure.coding.get(0).system, "http://hl7.org/fhir/v2/0373");
         assertEquals(data.processing.get(0).timeDateTime.toString(), "2015-08-18T08:10:00Z");
         assertEquals(data.receivedTime.toString(), "2015-08-18T07:03:00Z");
-        assertEquals(data.status, CodeSystems.SpecimenStatus.AVAILABLE);
+        assertEquals(data.status, CodeSystemSpecimenStatus.AVAILABLE);
         assertEquals(data.subject.reference, "Patient/example");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
         assertEquals(data.type.coding.get(0).code, "RANDU");
         assertEquals(data.type.coding.get(0).display, "Urine, Random");
         assertEquals(data.type.coding.get(0).system, "http://hl7.org/fhir/v2/0487");
@@ -115,7 +115,7 @@ public class SpecimenTest {
         assertEquals(data.id, "sst");
         assertEquals(data.request.get(0).reference, "ProcedureRequest/ft4");
         assertEquals(data.subject.reference, "Patient/pat2");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
         assertEquals(data.type.coding.get(0).code, "119364003");
         assertEquals(data.type.coding.get(0).display, "Serum sample");
         assertEquals(data.type.coding.get(0).system, "http://snomed.info/sct");
@@ -133,8 +133,7 @@ public class SpecimenTest {
         assertEquals(data.accessionIdentifier.system, "http://lab.acme.org/specimens/2011");
         assertEquals(data.accessionIdentifier.value, "X352356");
         assertEquals(data.collection.bodySite.coding.get(0).code, "49852007");
-        assertEquals(data.collection.bodySite.coding.get(0).display,
-                "Structure of median cubital vein (body structure)");
+        assertEquals(data.collection.bodySite.coding.get(0).display, "Structure of median cubital vein (body structure)");
         assertEquals(data.collection.bodySite.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.collection.bodySite.text, "Right median cubital vein");
         assertEquals(data.collection.collectedDateTime.toString(), "2011-05-30T06:15:00Z");
@@ -158,10 +157,10 @@ public class SpecimenTest {
         assertEquals(data.note.get(0).text, "Specimen is grossly lipemic");
         assertEquals(data.receivedTime.toString(), "2011-03-04T07:03:00Z");
         assertEquals(data.request.get(0).reference, "ProcedureRequest/example");
-        assertEquals(data.status, CodeSystems.SpecimenStatus.AVAILABLE);
+        assertEquals(data.status, CodeSystemSpecimenStatus.AVAILABLE);
         assertEquals(data.subject.display, "Peter Patient");
         assertEquals(data.subject.reference, "Patient/example");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
         assertEquals(data.type.coding.get(0).code, "122555007");
         assertEquals(data.type.coding.get(0).display, "Venous blood specimen");
         assertEquals(data.type.coding.get(0).system, "http://snomed.info/sct");

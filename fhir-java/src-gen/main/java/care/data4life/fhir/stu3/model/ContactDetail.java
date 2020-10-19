@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ContactDetail">ContactDetail</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ContactDetail) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class ContactDetail extends Element {
 
@@ -46,6 +46,7 @@ public class ContactDetail extends Element {
     @Nullable
     public List<ContactPoint> telecom;
 
+
     public ContactDetail() {
     }
 
@@ -53,4 +54,6 @@ public class ContactDetail extends Element {
     public String getResourceType() {
         return ContactDetail.resourceType;
     }
+
+
 }

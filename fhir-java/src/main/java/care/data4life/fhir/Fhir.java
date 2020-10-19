@@ -16,12 +16,17 @@
 
 package care.data4life.fhir;
 
+import care.data4life.fhir.r4.Fhir4Parser;
 import care.data4life.fhir.stu3.FhirStu3Parser;
 
 public final class Fhir {
 
     public FhirParser createStu3Parser() {
         return new FhirStu3Parser();
+    }
+
+    public FhirParser createR4Parser() {
+        return new Fhir4Parser();
     }
 
 }

@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Extension">Extension</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Extension) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class Extension extends Element {
 
@@ -37,6 +37,86 @@ public class Extension extends Element {
     // identifies the meaning of the extension.
     @Json(name = "url")
     public String url;
+
+    // Value of extension.
+    @Json(name = "valueBase64Binary")
+    @Nullable
+    public String valueBase64Binary;
+
+    // Value of extension.
+    @Json(name = "valueBoolean")
+    @Nullable
+    public Boolean valueBoolean;
+
+    // Value of extension.
+    @Json(name = "valueCode")
+    @Nullable
+    public String valueCode;
+
+    // Value of extension.
+    @Json(name = "valueDate")
+    @Nullable
+    public FhirDate valueDate;
+
+    // Value of extension.
+    @Json(name = "valueDateTime")
+    @Nullable
+    public FhirDateTime valueDateTime;
+
+    // Value of extension.
+    @Json(name = "valueDecimal")
+    @Nullable
+    public FhirDecimal valueDecimal;
+
+    // Value of extension.
+    @Json(name = "valueId")
+    @Nullable
+    public String valueId;
+
+    // Value of extension.
+    @Json(name = "valueInstant")
+    @Nullable
+    public FhirInstant valueInstant;
+
+    // Value of extension.
+    @Json(name = "valueInteger")
+    @Nullable
+    public Integer valueInteger;
+
+    // Value of extension.
+    @Json(name = "valueMarkdown")
+    @Nullable
+    public String valueMarkdown;
+
+    // Value of extension.
+    @Json(name = "valueOid")
+    @Nullable
+    public String valueOid;
+
+    // Value of extension.
+    @Json(name = "valuePositiveInt")
+    @Nullable
+    public Integer valuePositiveInt;
+
+    // Value of extension.
+    @Json(name = "valueString")
+    @Nullable
+    public String valueString;
+
+    // Value of extension.
+    @Json(name = "valueTime")
+    @Nullable
+    public FhirTime valueTime;
+
+    // Value of extension.
+    @Json(name = "valueUnsignedInt")
+    @Nullable
+    public Integer valueUnsignedInt;
+
+    // Value of extension.
+    @Json(name = "valueUri")
+    @Nullable
+    public String valueUri;
 
     // Value of extension.
     @Json(name = "valueAddress")
@@ -59,21 +139,6 @@ public class Extension extends Element {
     public Attachment valueAttachment;
 
     // Value of extension.
-    @Json(name = "valueBase64Binary")
-    @Nullable
-    public String valueBase64Binary;
-
-    // Value of extension.
-    @Json(name = "valueBoolean")
-    @Nullable
-    public Boolean valueBoolean;
-
-    // Value of extension.
-    @Json(name = "valueCode")
-    @Nullable
-    public String valueCode;
-
-    // Value of extension.
     @Json(name = "valueCodeableConcept")
     @Nullable
     public CodeableConcept valueCodeableConcept;
@@ -94,21 +159,6 @@ public class Extension extends Element {
     public Count valueCount;
 
     // Value of extension.
-    @Json(name = "valueDate")
-    @Nullable
-    public FhirDate valueDate;
-
-    // Value of extension.
-    @Json(name = "valueDateTime")
-    @Nullable
-    public FhirDateTime valueDateTime;
-
-    // Value of extension.
-    @Json(name = "valueDecimal")
-    @Nullable
-    public FhirDecimal valueDecimal;
-
-    // Value of extension.
     @Json(name = "valueDistance")
     @Nullable
     public Distance valueDistance;
@@ -124,34 +174,9 @@ public class Extension extends Element {
     public HumanName valueHumanName;
 
     // Value of extension.
-    @Json(name = "valueId")
-    @Nullable
-    public String valueId;
-
-    // Value of extension.
     @Json(name = "valueIdentifier")
     @Nullable
     public Identifier valueIdentifier;
-
-    // Value of extension.
-    @Json(name = "valueInstant")
-    @Nullable
-    public FhirInstant valueInstant;
-
-    // Value of extension.
-    @Json(name = "valueInteger")
-    @Nullable
-    public Integer valueInteger;
-
-    // Value of extension.
-    @Json(name = "valueMarkdown")
-    @Nullable
-    public String valueMarkdown;
-
-    // Value of extension.
-    @Json(name = "valueMeta")
-    @Nullable
-    public Meta valueMeta;
 
     // Value of extension.
     @Json(name = "valueMoney")
@@ -159,19 +184,9 @@ public class Extension extends Element {
     public Money valueMoney;
 
     // Value of extension.
-    @Json(name = "valueOid")
-    @Nullable
-    public String valueOid;
-
-    // Value of extension.
     @Json(name = "valuePeriod")
     @Nullable
     public Period valuePeriod;
-
-    // Value of extension.
-    @Json(name = "valuePositiveInt")
-    @Nullable
-    public Integer valuePositiveInt;
 
     // Value of extension.
     @Json(name = "valueQuantity")
@@ -204,29 +219,15 @@ public class Extension extends Element {
     public Signature valueSignature;
 
     // Value of extension.
-    @Json(name = "valueString")
-    @Nullable
-    public String valueString;
-
-    // Value of extension.
-    @Json(name = "valueTime")
-    @Nullable
-    public FhirTime valueTime;
-
-    // Value of extension.
     @Json(name = "valueTiming")
     @Nullable
     public Timing valueTiming;
 
     // Value of extension.
-    @Json(name = "valueUnsignedInt")
+    @Json(name = "valueMeta")
     @Nullable
-    public Integer valueUnsignedInt;
+    public Meta valueMeta;
 
-    // Value of extension.
-    @Json(name = "valueUri")
-    @Nullable
-    public String valueUri;
 
     /**
      * Constructor for all required properties.
@@ -241,4 +242,6 @@ public class Extension extends Element {
     public String getResourceType() {
         return Extension.resourceType;
     }
+
+
 }

@@ -30,41 +30,41 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient) on 2020-10-15
  */
 public class Patient extends DomainResource {
 
     public static final String resourceType = "Patient";
+
+    // An identifier for this patient.
+    @Json(name = "identifier")
+    @Nullable
+    public List<Identifier> identifier;
 
     // Whether this patient's record is in active use.
     @Json(name = "active")
     @Nullable
     public Boolean active;
 
-    // Addresses for the individual.
-    @Json(name = "address")
+    // A name associated with the patient.
+    @Json(name = "name")
     @Nullable
-    public List<Address> address;
+    public List<HumanName> name;
 
-    // This patient is known to be an animal (non-human).
-    @Json(name = "animal")
+    // A contact detail for the individual.
+    @Json(name = "telecom")
     @Nullable
-    public PatientAnimal animal;
+    public List<ContactPoint> telecom;
+
+    // Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.
+    @Json(name = "gender")
+    @Nullable
+    public CodeSystemAdministrativeGender gender;
 
     // The date of birth for the individual.
     @Json(name = "birthDate")
     @Nullable
     public FhirDate birthDate;
-
-    // A list of Languages which may be used to communicate with the patient about his or her health.
-    @Json(name = "communication")
-    @Nullable
-    public List<PatientCommunication> communication;
-
-    // A contact party (e.g. guardian, partner, friend) for the patient.
-    @Json(name = "contact")
-    @Nullable
-    public List<PatientContact> contact;
 
     // Indicates if the individual is deceased or not.
     @Json(name = "deceasedBoolean")
@@ -76,30 +76,10 @@ public class Patient extends DomainResource {
     @Nullable
     public FhirDateTime deceasedDateTime;
 
-    // Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.
-    @Json(name = "gender")
+    // Addresses for the individual.
+    @Json(name = "address")
     @Nullable
-    public CodeSystems.AdministrativeGender gender;
-
-    // Patient's nominated primary care provider.
-    @Json(name = "generalPractitioner")
-    @Nullable
-    public List<Reference> generalPractitioner;
-
-    // An identifier for this patient.
-    @Json(name = "identifier")
-    @Nullable
-    public List<Identifier> identifier;
-
-    // Link to another patient resource that concerns the same actual person.
-    @Json(name = "link")
-    @Nullable
-    public List<PatientLink> link;
-
-    // Organization that is the custodian of the patient record.
-    @Json(name = "managingOrganization")
-    @Nullable
-    public Reference managingOrganization;
+    public List<Address> address;
 
     // Marital (civil) status of a patient.
     @Json(name = "maritalStatus")
@@ -116,20 +96,41 @@ public class Patient extends DomainResource {
     @Nullable
     public Integer multipleBirthInteger;
 
-    // A name associated with the patient.
-    @Json(name = "name")
-    @Nullable
-    public List<HumanName> name;
-
     // Image of the patient.
     @Json(name = "photo")
     @Nullable
     public List<Attachment> photo;
 
-    // A contact detail for the individual.
-    @Json(name = "telecom")
+    // A contact party (e.g. guardian, partner, friend) for the patient.
+    @Json(name = "contact")
     @Nullable
-    public List<ContactPoint> telecom;
+    public List<PatientContact> contact;
+
+    // This patient is known to be an animal (non-human).
+    @Json(name = "animal")
+    @Nullable
+    public PatientAnimal animal;
+
+    // A list of Languages which may be used to communicate with the patient about his or her health.
+    @Json(name = "communication")
+    @Nullable
+    public List<PatientCommunication> communication;
+
+    // Patient's nominated primary care provider.
+    @Json(name = "generalPractitioner")
+    @Nullable
+    public List<Reference> generalPractitioner;
+
+    // Organization that is the custodian of the patient record.
+    @Json(name = "managingOrganization")
+    @Nullable
+    public Reference managingOrganization;
+
+    // Link to another patient resource that concerns the same actual person.
+    @Json(name = "link")
+    @Nullable
+    public List<PatientLink> link;
+
 
     public Patient() {
     }
@@ -139,6 +140,7 @@ public class Patient extends DomainResource {
         return Patient.resourceType;
     }
 
+
     /**
      * Patient.java
      * <p>
@@ -147,11 +149,15 @@ public class Patient extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class PatientAnimal extends BackboneElement {
 
         public static final String resourceType = "PatientAnimal";
+
+        // E.g. Dog, Cow.
+        @Json(name = "species")
+        public CodeableConcept species;
 
         // E.g. Poodle, Angus.
         @Json(name = "breed")
@@ -163,9 +169,6 @@ public class Patient extends DomainResource {
         @Nullable
         public CodeableConcept genderStatus;
 
-        // E.g. Dog, Cow.
-        @Json(name = "species")
-        public CodeableConcept species;
 
         /**
          * Constructor for all required properties.
@@ -180,7 +183,10 @@ public class Patient extends DomainResource {
         public String getResourceType() {
             return PatientAnimal.resourceType;
         }
+
+
     }
+
 
     /**
      * Patient.java
@@ -190,7 +196,7 @@ public class Patient extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class PatientCommunication extends BackboneElement {
 
@@ -205,6 +211,7 @@ public class Patient extends DomainResource {
         @Nullable
         public Boolean preferred;
 
+
         /**
          * Constructor for all required properties.
          *
@@ -218,7 +225,10 @@ public class Patient extends DomainResource {
         public String getResourceType() {
             return PatientCommunication.resourceType;
         }
+
+
     }
+
 
     /**
      * Patient.java
@@ -228,11 +238,26 @@ public class Patient extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class PatientContact extends BackboneElement {
 
         public static final String resourceType = "PatientContact";
+
+        // The kind of relationship.
+        @Json(name = "relationship")
+        @Nullable
+        public List<CodeableConcept> relationship;
+
+        // A name associated with the contact person.
+        @Json(name = "name")
+        @Nullable
+        public HumanName name;
+
+        // A contact detail for the person.
+        @Json(name = "telecom")
+        @Nullable
+        public List<ContactPoint> telecom;
 
         // Address for the contact person.
         @Json(name = "address")
@@ -242,12 +267,7 @@ public class Patient extends DomainResource {
         // Administrative Gender - the gender that the contact person is considered to have for administration and record keeping purposes.
         @Json(name = "gender")
         @Nullable
-        public CodeSystems.AdministrativeGender gender;
-
-        // A name associated with the contact person.
-        @Json(name = "name")
-        @Nullable
-        public HumanName name;
+        public CodeSystemAdministrativeGender gender;
 
         // Organization that is associated with the contact.
         @Json(name = "organization")
@@ -259,15 +279,6 @@ public class Patient extends DomainResource {
         @Nullable
         public Period period;
 
-        // The kind of relationship.
-        @Json(name = "relationship")
-        @Nullable
-        public List<CodeableConcept> relationship;
-
-        // A contact detail for the person.
-        @Json(name = "telecom")
-        @Nullable
-        public List<ContactPoint> telecom;
 
         public PatientContact() {
         }
@@ -276,7 +287,10 @@ public class Patient extends DomainResource {
         public String getResourceType() {
             return PatientContact.resourceType;
         }
+
+
     }
+
 
     /**
      * Patient.java
@@ -286,7 +300,7 @@ public class Patient extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class PatientLink extends BackboneElement {
 
@@ -298,15 +312,16 @@ public class Patient extends DomainResource {
 
         // The type of link between this patient resource and another patient resource.
         @Json(name = "type")
-        public CodeSystems.LinkType type;
+        public CodeSystemLinkType type;
+
 
         /**
          * Constructor for all required properties.
          *
          * @param other Reference
-         * @param type  CodeSystems.LinkType
+         * @param type  CodeSystemLinkType
          */
-        public PatientLink(Reference other, CodeSystems.LinkType type) {
+        public PatientLink(Reference other, CodeSystemLinkType type) {
             this.other = other;
             this.type = type;
         }
@@ -315,5 +330,9 @@ public class Patient extends DomainResource {
         public String getResourceType() {
             return PatientLink.resourceType;
         }
+
+
     }
+
+
 }

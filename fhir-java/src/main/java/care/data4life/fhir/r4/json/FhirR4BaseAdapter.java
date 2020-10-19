@@ -30,8 +30,8 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 import care.data4life.fhir.r4.model.FhirR4Base;
-import care.data4life.fhir.stu3.model.DomainResource;
-import care.data4life.fhir.stu3.model.Resource;
+import care.data4life.fhir.r4.model.DomainResource;
+import care.data4life.fhir.r4.model.Resource;
 
 public class FhirR4BaseAdapter extends JsonAdapter<FhirR4Base> {
 
@@ -78,14 +78,13 @@ public class FhirR4BaseAdapter extends JsonAdapter<FhirR4Base> {
                                 jsonMap.remove(JSON_KEY_CONTAINED);
                             }
 
-                            /*
+
                             DomainResource resource = (DomainResource) jsonAdapter.fromJsonValue(jsonObject);
                             if (resource != null) {
                                 resource.contained = containedResources;
                             }
-                             */
-                            // FIXME return class
-                            return null;
+
+                            return resource;
 
                         } else {
                             return (FhirR4Base) jsonAdapter.fromJsonValue(jsonObject);
@@ -143,15 +142,12 @@ public class FhirR4BaseAdapter extends JsonAdapter<FhirR4Base> {
         }
 
         List<Map<String, Object>> containedObjectMapList = null;
-        //  fixme
-        /*
         if (value instanceof DomainResource) {
             DomainResource domainResource = (DomainResource) value;
             if (domainResource.contained != null) {
                 containedObjectMapList = toContainedResources(domainResource.contained);
             }
         }
-         */
 
         Class type = value.getClass();
         JsonAdapter jsonAdapter = moshi.adapter(type);

@@ -29,7 +29,8 @@ end
 
 desc "Generate FHIR Java models"
 lane :generate_fhir_java_models do | options |
-  fhir_java
+  fhir_java_stu3
+  fhir_java_r4
 end
 
 

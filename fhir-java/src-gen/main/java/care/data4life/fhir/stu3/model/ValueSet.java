@@ -29,112 +29,113 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ValueSet) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ValueSet) on 2020-10-15
  */
 public class ValueSet extends DomainResource {
 
     public static final String resourceType = "ValueSet";
-
-    // Definition of the content of the value set (CLD).
-    @Json(name = "compose")
-    @Nullable
-    public ValueSetCompose compose;
-
-    // Contact details for the publisher.
-    @Json(name = "contact")
-    @Nullable
-    public List<ContactDetail> contact;
-
-    // Use and/or publishing restrictions.
-    @Json(name = "copyright")
-    @Nullable
-    public String copyright;
-
-    // Date this was last changed.
-    @Json(name = "date")
-    @Nullable
-    public FhirDateTime date;
-
-    // Natural language description of the value set.
-    @Json(name = "description")
-    @Nullable
-    public String description;
-
-    // Used when the value set is "expanded".
-    @Json(name = "expansion")
-    @Nullable
-    public ValueSetExpansion expansion;
-
-    // For testing purposes, not real usage.
-    @Json(name = "experimental")
-    @Nullable
-    public Boolean experimental;
-
-    // Whether this is intended to be used with an extensible binding.
-    @Json(name = "extensible")
-    @Nullable
-    public Boolean extensible;
-
-    // Additional identifier for the value set.
-    @Json(name = "identifier")
-    @Nullable
-    public List<Identifier> identifier;
-
-    // Indicates whether or not any change to the content logical definition may occur.
-    @Json(name = "immutable")
-    @Nullable
-    public Boolean immutable;
-
-    // Intended jurisdiction for value set (if applicable).
-    @Json(name = "jurisdiction")
-    @Nullable
-    public List<CodeableConcept> jurisdiction;
-
-    // Name for this value set (computer friendly).
-    @Json(name = "name")
-    @Nullable
-    public String name;
-
-    // Name of the publisher (organization or individual).
-    @Json(name = "publisher")
-    @Nullable
-    public String publisher;
-
-    // Why this value set is defined.
-    @Json(name = "purpose")
-    @Nullable
-    public String purpose;
-
-    // The status of this value set. Enables tracking the life-cycle of the content.
-    @Json(name = "status")
-    public CodeSystems.PublicationStatus status;
-
-    // Name for this value set (human friendly).
-    @Json(name = "title")
-    @Nullable
-    public String title;
 
     // Logical URI to reference this value set (globally unique).
     @Json(name = "url")
     @Nullable
     public String url;
 
-    // Context the content is intended to support.
-    @Json(name = "useContext")
+    // Additional identifier for the value set.
+    @Json(name = "identifier")
     @Nullable
-    public List<UsageContext> useContext;
+    public List<Identifier> identifier;
 
     // Business version of the value set.
     @Json(name = "version")
     @Nullable
     public String version;
 
+    // Name for this value set (computer friendly).
+    @Json(name = "name")
+    @Nullable
+    public String name;
+
+    // Name for this value set (human friendly).
+    @Json(name = "title")
+    @Nullable
+    public String title;
+
+    // The status of this value set. Enables tracking the life-cycle of the content.
+    @Json(name = "status")
+    public CodeSystemPublicationStatus status;
+
+    // For testing purposes, not real usage.
+    @Json(name = "experimental")
+    @Nullable
+    public Boolean experimental;
+
+    // Date this was last changed.
+    @Json(name = "date")
+    @Nullable
+    public FhirDateTime date;
+
+    // Name of the publisher (organization or individual).
+    @Json(name = "publisher")
+    @Nullable
+    public String publisher;
+
+    // Contact details for the publisher.
+    @Json(name = "contact")
+    @Nullable
+    public List<ContactDetail> contact;
+
+    // Natural language description of the value set.
+    @Json(name = "description")
+    @Nullable
+    public String description;
+
+    // Context the content is intended to support.
+    @Json(name = "useContext")
+    @Nullable
+    public List<UsageContext> useContext;
+
+    // Intended jurisdiction for value set (if applicable).
+    @Json(name = "jurisdiction")
+    @Nullable
+    public List<CodeableConcept> jurisdiction;
+
+    // Indicates whether or not any change to the content logical definition may occur.
+    @Json(name = "immutable")
+    @Nullable
+    public Boolean immutable;
+
+    // Why this value set is defined.
+    @Json(name = "purpose")
+    @Nullable
+    public String purpose;
+
+    // Use and/or publishing restrictions.
+    @Json(name = "copyright")
+    @Nullable
+    public String copyright;
+
+    // Whether this is intended to be used with an extensible binding.
+    @Json(name = "extensible")
+    @Nullable
+    public Boolean extensible;
+
+    // Definition of the content of the value set (CLD).
+    @Json(name = "compose")
+    @Nullable
+    public ValueSetCompose compose;
+
+    // Used when the value set is "expanded".
+    @Json(name = "expansion")
+    @Nullable
+    public ValueSetExpansion expansion;
+
+
     /**
      * Constructor for all required properties.
      *
-     * @param status CodeSystems.PublicationStatus
+     * @param status CodeSystemPublicationStatus
      */
-    public ValueSet(CodeSystems.PublicationStatus status) {
+    public ValueSet(CodeSystemPublicationStatus status) {
         this.status = status;
     }
 
@@ -142,6 +143,7 @@ public class ValueSet extends DomainResource {
     public String getResourceType() {
         return ValueSet.resourceType;
     }
+
 
     /**
      * ValueSet.java
@@ -153,16 +155,16 @@ public class ValueSet extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ValueSetCompose extends BackboneElement {
 
         public static final String resourceType = "ValueSetCompose";
 
-        // Explicitly exclude codes from a code system or other value sets.
-        @Json(name = "exclude")
+        // Fixed date for version-less references (transitive).
+        @Json(name = "lockedDate")
         @Nullable
-        public List<ValueSetComposeInclude> exclude;
+        public FhirDate lockedDate;
 
         // Whether inactive codes are in the value set.
         @Json(name = "inactive")
@@ -173,10 +175,11 @@ public class ValueSet extends DomainResource {
         @Json(name = "include")
         public List<ValueSetComposeInclude> include;
 
-        // Fixed date for version-less references (transitive).
-        @Json(name = "lockedDate")
+        // Explicitly exclude codes from a code system or other value sets.
+        @Json(name = "exclude")
         @Nullable
-        public FhirDate lockedDate;
+        public List<ValueSetComposeInclude> exclude;
+
 
         /**
          * Constructor for all required properties.
@@ -191,7 +194,10 @@ public class ValueSet extends DomainResource {
         public String getResourceType() {
             return ValueSetCompose.resourceType;
         }
+
+
     }
+
 
     /**
      * ValueSet.java
@@ -201,11 +207,21 @@ public class ValueSet extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ValueSetComposeInclude extends BackboneElement {
 
         public static final String resourceType = "ValueSetComposeInclude";
+
+        // The system the codes come from.
+        @Json(name = "system")
+        @Nullable
+        public String system;
+
+        // Specific version of the code system referred to.
+        @Json(name = "version")
+        @Nullable
+        public String version;
 
         // A concept defined in the system.
         @Json(name = "concept")
@@ -217,20 +233,11 @@ public class ValueSet extends DomainResource {
         @Nullable
         public List<ValueSetComposeIncludeFilter> filter;
 
-        // The system the codes come from.
-        @Json(name = "system")
-        @Nullable
-        public String system;
-
         // Select only contents included in this value set.
         @Json(name = "valueSet")
         @Nullable
         public List<String> valueSet;
 
-        // Specific version of the code system referred to.
-        @Json(name = "version")
-        @Nullable
-        public String version;
 
         public ValueSetComposeInclude() {
         }
@@ -239,7 +246,10 @@ public class ValueSet extends DomainResource {
         public String getResourceType() {
             return ValueSetComposeInclude.resourceType;
         }
+
+
     }
+
 
     /**
      * ValueSet.java
@@ -249,7 +259,7 @@ public class ValueSet extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ValueSetComposeIncludeConcept extends BackboneElement {
 
@@ -259,15 +269,16 @@ public class ValueSet extends DomainResource {
         @Json(name = "code")
         public String code;
 
+        // Text to display for this code for this value set in this valueset.
+        @Json(name = "display")
+        @Nullable
+        public String display;
+
         // Additional representations for this concept.
         @Json(name = "designation")
         @Nullable
         public List<ValueSetComposeIncludeConceptDesignation> designation;
 
-        // Text to display for this code for this value set in this valueset.
-        @Json(name = "display")
-        @Nullable
-        public String display;
 
         /**
          * Constructor for all required properties.
@@ -282,7 +293,10 @@ public class ValueSet extends DomainResource {
         public String getResourceType() {
             return ValueSetComposeIncludeConcept.resourceType;
         }
+
+
     }
+
 
     /**
      * ValueSet.java
@@ -293,7 +307,7 @@ public class ValueSet extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ValueSetComposeIncludeConceptDesignation extends BackboneElement {
 
@@ -313,6 +327,7 @@ public class ValueSet extends DomainResource {
         @Json(name = "value")
         public String value;
 
+
         /**
          * Constructor for all required properties.
          *
@@ -326,7 +341,10 @@ public class ValueSet extends DomainResource {
         public String getResourceType() {
             return ValueSetComposeIncludeConceptDesignation.resourceType;
         }
+
+
     }
+
 
     /**
      * ValueSet.java
@@ -338,35 +356,35 @@ public class ValueSet extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ValueSetComposeIncludeFilter extends BackboneElement {
 
         public static final String resourceType = "ValueSetComposeIncludeFilter";
 
-        // The kind of operation to perform as a part of the filter criteria.
-        @Json(name = "op")
-        public CodeSystems.FilterOperator op;
-
         // A property defined by the code system.
         @Json(name = "property")
         public String property;
+
+        // The kind of operation to perform as a part of the filter criteria.
+        @Json(name = "op")
+        public CodeSystemFilterOperator op;
 
         // Code from the system, or regex criteria, or boolean value for exists.
         @Json(name = "value")
         public String value;
 
+
         /**
          * Constructor for all required properties.
          *
-         * @param op       CodeSystems.FilterOperator
          * @param property String
+         * @param op       CodeSystemFilterOperator
          * @param value    String
          */
-        public ValueSetComposeIncludeFilter(CodeSystems.FilterOperator op, String property,
-                                            String value) {
-            this.op = op;
+        public ValueSetComposeIncludeFilter(String property, CodeSystemFilterOperator op, String value) {
             this.property = property;
+            this.op = op;
             this.value = value;
         }
 
@@ -374,7 +392,10 @@ public class ValueSet extends DomainResource {
         public String getResourceType() {
             return ValueSetComposeIncludeFilter.resourceType;
         }
+
+
     }
+
 
     /**
      * ValueSet.java
@@ -385,20 +406,24 @@ public class ValueSet extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ValueSetExpansion extends BackboneElement {
 
         public static final String resourceType = "ValueSetExpansion";
 
-        // Codes in the value set.
-        @Json(name = "contains")
-        @Nullable
-        public List<ValueSetExpansionContains> contains;
-
         // Uniquely identifies this expansion.
         @Json(name = "identifier")
         public String identifier;
+
+        // Time ValueSet expansion happened.
+        @Json(name = "timestamp")
+        public FhirDateTime timestamp;
+
+        // Total number of codes in the expansion.
+        @Json(name = "total")
+        @Nullable
+        public Integer total;
 
         // Offset at which this resource starts.
         @Json(name = "offset")
@@ -410,14 +435,11 @@ public class ValueSet extends DomainResource {
         @Nullable
         public List<ValueSetExpansionParameter> parameter;
 
-        // Time ValueSet expansion happened.
-        @Json(name = "timestamp")
-        public FhirDateTime timestamp;
-
-        // Total number of codes in the expansion.
-        @Json(name = "total")
+        // Codes in the value set.
+        @Json(name = "contains")
         @Nullable
-        public Integer total;
+        public List<ValueSetExpansionContains> contains;
+
 
         /**
          * Constructor for all required properties.
@@ -434,7 +456,10 @@ public class ValueSet extends DomainResource {
         public String getResourceType() {
             return ValueSetExpansion.resourceType;
         }
+
+
     }
+
 
     /**
      * ValueSet.java
@@ -444,51 +469,52 @@ public class ValueSet extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ValueSetExpansionContains extends BackboneElement {
 
         public static final String resourceType = "ValueSetExpansionContains";
-
-        // If user cannot select this entry.
-        @Json(name = "abstract")
-        @Nullable
-        public Boolean abstrakt;
-
-        // Code - if blank, this is not a selectable code.
-        @Json(name = "code")
-        @Nullable
-        public String code;
-
-        // Codes contained under this entry.
-        @Json(name = "contains")
-        @Nullable
-        public List<ValueSetExpansionContains> contains;
-
-        // Additional representations for this item.
-        @Json(name = "designation")
-        @Nullable
-        public List<ValueSetComposeIncludeConceptDesignation> designation;
-
-        // User display for the concept.
-        @Json(name = "display")
-        @Nullable
-        public String display;
-
-        // If concept is inactive in the code system.
-        @Json(name = "inactive")
-        @Nullable
-        public Boolean inactive;
 
         // System value for the code.
         @Json(name = "system")
         @Nullable
         public String system;
 
+        // If user cannot select this entry.
+        @Json(name = "abstract")
+        @Nullable
+        public Boolean abstrakt;
+
+        // If concept is inactive in the code system.
+        @Json(name = "inactive")
+        @Nullable
+        public Boolean inactive;
+
         // Version in which this code/display is defined.
         @Json(name = "version")
         @Nullable
         public String version;
+
+        // Code - if blank, this is not a selectable code.
+        @Json(name = "code")
+        @Nullable
+        public String code;
+
+        // User display for the concept.
+        @Json(name = "display")
+        @Nullable
+        public String display;
+
+        // Additional representations for this item.
+        @Json(name = "designation")
+        @Nullable
+        public List<ValueSetComposeIncludeConceptDesignation> designation;
+
+        // Codes contained under this entry.
+        @Json(name = "contains")
+        @Nullable
+        public List<ValueSetExpansionContains> contains;
+
 
         public ValueSetExpansionContains() {
         }
@@ -497,7 +523,10 @@ public class ValueSet extends DomainResource {
         public String getResourceType() {
             return ValueSetExpansionContains.resourceType;
         }
+
+
     }
+
 
     /**
      * ValueSet.java
@@ -509,7 +538,7 @@ public class ValueSet extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ValueSetExpansionParameter extends BackboneElement {
 
@@ -520,19 +549,14 @@ public class ValueSet extends DomainResource {
         public String name;
 
         // Value of the named parameter.
+        @Json(name = "valueString")
+        @Nullable
+        public String valueString;
+
+        // Value of the named parameter.
         @Json(name = "valueBoolean")
         @Nullable
         public Boolean valueBoolean;
-
-        // Value of the named parameter.
-        @Json(name = "valueCode")
-        @Nullable
-        public String valueCode;
-
-        // Value of the named parameter.
-        @Json(name = "valueDecimal")
-        @Nullable
-        public FhirDecimal valueDecimal;
 
         // Value of the named parameter.
         @Json(name = "valueInteger")
@@ -540,14 +564,20 @@ public class ValueSet extends DomainResource {
         public Integer valueInteger;
 
         // Value of the named parameter.
-        @Json(name = "valueString")
+        @Json(name = "valueDecimal")
         @Nullable
-        public String valueString;
+        public FhirDecimal valueDecimal;
 
         // Value of the named parameter.
         @Json(name = "valueUri")
         @Nullable
         public String valueUri;
+
+        // Value of the named parameter.
+        @Json(name = "valueCode")
+        @Nullable
+        public String valueCode;
+
 
         /**
          * Constructor for all required properties.
@@ -562,5 +592,9 @@ public class ValueSet extends DomainResource {
         public String getResourceType() {
             return ValueSetExpansionParameter.resourceType;
         }
+
+
     }
+
+
 }

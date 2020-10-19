@@ -18,54 +18,46 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
+{% if system.generate_enum %}
+
 /**
- * CodeSystems.java
+ * {{ system.definition.description }}
  *
- * Generated from FHIR {{ info.version }} on {{ info.date }}
+ * @see <a href="{{ system.url }}">{{ system.name }}</a>
  */
-public class CodeSystems {
-	{% for system in systems %}{% if system.generate_enum %}
+public enum CodeSystem{{ system.name }} {
+	{%- for code in system.codes %}
+
 	/**
-	 * {{ system.definition.description }}
-	 *
-	 * @see <a href="{{ system.url }}">{{ system.name }}</a>
-	 */
-	public enum {{ system.name }} {
-		{%- for code in system.codes %}
+	* {{ code.definition }}
+	*/
+	@Json(name = "{{code.code}}")
+	{%- if code.code == "=" %}
+	EQUAL,
+	{%- else %}
+	{%- if code.code == "<" %}
+	LESS_THAN,
+	{%- else %}
+	{%- if code.code == "<=" %}
+	LESS_OR_EQUAL,
+	{%- else %}
+	{%- if code.code == ">" %}
+	GREATER_THAN,
+	{%- else %}
+	{%- if code.code == ">=" %}
+	GREATER_OR_EQUAL,
+	{%- else %}
+	{%- if code.code == "*" %}
+	MAX,
+	{%- else %}
+	{{ code.code.upper()|replace('-', '_')|replace('.', '_')|replace('/', '_') }},
+	{%- endif %}
+	{%- endif %}
+	{%- endif %}
+	{%- endif %}
+	{%- endif %}
+	{%- endif %}
 
-		/**
-		 * {{ code.definition }}
-		 */
-		@Json(name = "{{code.code}}")
-		{%- if code.code == "=" %}
-		EQUAL,
-		{%- else %}
-		{%- if code.code == "<" %}
-		LESS_THAN,
-		{%- else %}
-		{%- if code.code == "<=" %}
-		LESS_OR_EQUAL,
-		{%- else %}
-		{%- if code.code == ">" %}
-		GREATER_THAN,
-		{%- else %}
-		{%- if code.code == ">=" %}
-		GREATER_OR_EQUAL,
-		{%- else %}
-		{%- if code.code == "*" %}
-		MAX,
-		{%- else %}
-		{{ code.code.upper()|replace('-', '_') }},
-		{%- endif %}
-		{%- endif %}
-		{%- endif %}
-		{%- endif %}
-		{%- endif %}
-		{%- endif %}
-
-		{%- endfor %}
-	}
-	{% endif %}{% endfor %}
+	{%- endfor %}
 }
-
-
+{% endif %}

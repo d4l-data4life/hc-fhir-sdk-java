@@ -31,11 +31,16 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Meta">Meta</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Meta) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Meta) on 2020-10-15
  */
 public class Meta extends Element {
 
     public static final String resourceType = "Meta";
+
+    // Version specific identifier.
+    @Json(name = "versionId")
+    @Nullable
+    public String versionId;
 
     // When the resource version last changed.
     @Json(name = "lastUpdated")
@@ -57,10 +62,6 @@ public class Meta extends Element {
     @Nullable
     public List<Coding> tag;
 
-    // Version specific identifier.
-    @Json(name = "versionId")
-    @Nullable
-    public String versionId;
 
     public Meta() {
     }
@@ -69,4 +70,6 @@ public class Meta extends Element {
     public String getResourceType() {
         return Meta.resourceType;
     }
+
+
 }

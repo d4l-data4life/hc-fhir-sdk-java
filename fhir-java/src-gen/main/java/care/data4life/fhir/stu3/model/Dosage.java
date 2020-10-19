@@ -29,16 +29,36 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Dosage">Dosage</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Dosage) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Dosage) on 2020-10-15
  */
 public class Dosage extends Element {
 
     public static final String resourceType = "Dosage";
 
+    // The order of the dosage instructions.
+    @Json(name = "sequence")
+    @Nullable
+    public Integer sequence;
+
+    // Free text dosage instructions e.g. SIG.
+    @Json(name = "text")
+    @Nullable
+    public String text;
+
     // Supplemental instruction - e.g. "with meals".
     @Json(name = "additionalInstruction")
     @Nullable
     public List<CodeableConcept> additionalInstruction;
+
+    // Patient or consumer oriented instructions.
+    @Json(name = "patientInstruction")
+    @Nullable
+    public String patientInstruction;
+
+    // When medication should be administered.
+    @Json(name = "timing")
+    @Nullable
+    public Timing timing;
 
     // Take "as needed" (for x).
     @Json(name = "asNeededBoolean")
@@ -50,15 +70,35 @@ public class Dosage extends Element {
     @Nullable
     public CodeableConcept asNeededCodeableConcept;
 
-    // Amount of medication per dose.
-    @Json(name = "doseQuantity")
+    // Body site to administer to.
+    @Json(name = "site")
     @Nullable
-    public Quantity doseQuantity;
+    public CodeableConcept site;
+
+    // How drug should enter body.
+    @Json(name = "route")
+    @Nullable
+    public CodeableConcept route;
+
+    // Technique for administering medication.
+    @Json(name = "method")
+    @Nullable
+    public CodeableConcept method;
 
     // Amount of medication per dose.
     @Json(name = "doseRange")
     @Nullable
     public Range doseRange;
+
+    // Amount of medication per dose.
+    @Json(name = "doseQuantity")
+    @Nullable
+    public Quantity doseQuantity;
+
+    // Upper limit on medication per unit of time.
+    @Json(name = "maxDosePerPeriod")
+    @Nullable
+    public Ratio maxDosePerPeriod;
 
     // Upper limit on medication per administration.
     @Json(name = "maxDosePerAdministration")
@@ -70,25 +110,10 @@ public class Dosage extends Element {
     @Nullable
     public Quantity maxDosePerLifetime;
 
-    // Upper limit on medication per unit of time.
-    @Json(name = "maxDosePerPeriod")
-    @Nullable
-    public Ratio maxDosePerPeriod;
-
-    // Technique for administering medication.
-    @Json(name = "method")
-    @Nullable
-    public CodeableConcept method;
-
-    // Patient or consumer oriented instructions.
-    @Json(name = "patientInstruction")
-    @Nullable
-    public String patientInstruction;
-
     // Amount of medication per unit of time.
-    @Json(name = "rateQuantity")
+    @Json(name = "rateRatio")
     @Nullable
-    public Quantity rateQuantity;
+    public Ratio rateRatio;
 
     // Amount of medication per unit of time.
     @Json(name = "rateRange")
@@ -96,34 +121,10 @@ public class Dosage extends Element {
     public Range rateRange;
 
     // Amount of medication per unit of time.
-    @Json(name = "rateRatio")
+    @Json(name = "rateQuantity")
     @Nullable
-    public Ratio rateRatio;
+    public Quantity rateQuantity;
 
-    // How drug should enter body.
-    @Json(name = "route")
-    @Nullable
-    public CodeableConcept route;
-
-    // The order of the dosage instructions.
-    @Json(name = "sequence")
-    @Nullable
-    public Integer sequence;
-
-    // Body site to administer to.
-    @Json(name = "site")
-    @Nullable
-    public CodeableConcept site;
-
-    // Free text dosage instructions e.g. SIG.
-    @Json(name = "text")
-    @Nullable
-    public String text;
-
-    // When medication should be administered.
-    @Json(name = "timing")
-    @Nullable
-    public Timing timing;
 
     public Dosage() {
     }
@@ -132,4 +133,6 @@ public class Dosage extends Element {
     public String getResourceType() {
         return Dosage.resourceType;
     }
+
+
 }

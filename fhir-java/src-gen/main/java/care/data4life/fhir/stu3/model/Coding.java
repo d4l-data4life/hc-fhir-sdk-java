@@ -27,11 +27,21 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Coding">Coding</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Coding) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Coding) on 2020-10-15
  */
 public class Coding extends Element {
 
     public static final String resourceType = "Coding";
+
+    // Identity of the terminology system.
+    @Json(name = "system")
+    @Nullable
+    public String system;
+
+    // Version of the system - if relevant.
+    @Json(name = "version")
+    @Nullable
+    public String version;
 
     // Symbol in syntax defined by the system.
     @Json(name = "code")
@@ -43,20 +53,11 @@ public class Coding extends Element {
     @Nullable
     public String display;
 
-    // Identity of the terminology system.
-    @Json(name = "system")
-    @Nullable
-    public String system;
-
     // If this coding was chosen directly by the user.
     @Json(name = "userSelected")
     @Nullable
     public Boolean userSelected;
 
-    // Version of the system - if relevant.
-    @Json(name = "version")
-    @Nullable
-    public String version;
 
     public Coding() {
     }
@@ -65,4 +66,6 @@ public class Coding extends Element {
     public String getResourceType() {
         return Coding.resourceType;
     }
+
+
 }

@@ -37,11 +37,39 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Provenance) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class Provenance extends DomainResource {
 
     public static final String resourceType = "Provenance";
+
+    // Target Reference(s) (usually version specific).
+    @Json(name = "target")
+    public List<Reference> target;
+
+    // When the activity occurred.
+    @Json(name = "period")
+    @Nullable
+    public Period period;
+
+    // When the activity was recorded / updated.
+    @Json(name = "recorded")
+    public FhirInstant recorded;
+
+    // Policy or plan the activity was defined by.
+    @Json(name = "policy")
+    @Nullable
+    public List<String> policy;
+
+    // Where the activity occurred, if relevant.
+    @Json(name = "location")
+    @Nullable
+    public Reference location;
+
+    // Reason the activity is occurring.
+    @Json(name = "reason")
+    @Nullable
+    public List<Coding> reason;
 
     // Activity that occurred.
     @Json(name = "activity")
@@ -57,56 +85,30 @@ public class Provenance extends DomainResource {
     @Nullable
     public List<ProvenanceEntity> entity;
 
-    // Where the activity occurred, if relevant.
-    @Json(name = "location")
-    @Nullable
-    public Reference location;
-
-    // When the activity occurred.
-    @Json(name = "period")
-    @Nullable
-    public Period period;
-
-    // Policy or plan the activity was defined by.
-    @Json(name = "policy")
-    @Nullable
-    public List<String> policy;
-
-    // Reason the activity is occurring.
-    @Json(name = "reason")
-    @Nullable
-    public List<Coding> reason;
-
-    // When the activity was recorded / updated.
-    @Json(name = "recorded")
-    public FhirInstant recorded;
-
     // Signature on target.
     @Json(name = "signature")
     @Nullable
     public List<Signature> signature;
 
-    // Target Reference(s) (usually version specific).
-    @Json(name = "target")
-    public List<Reference> target;
 
     /**
      * Constructor for all required properties.
      *
-     * @param agent    List of ProvenanceAgent
-     * @param recorded FhirInstant
      * @param target   List of Reference
+     * @param recorded FhirInstant
+     * @param agent    List of ProvenanceAgent
      */
-    public Provenance(List<ProvenanceAgent> agent, FhirInstant recorded, List<Reference> target) {
-        this.agent = agent;
-        this.recorded = recorded;
+    public Provenance(List<Reference> target, FhirInstant recorded, List<ProvenanceAgent> agent) {
         this.target = target;
+        this.recorded = recorded;
+        this.agent = agent;
     }
 
     @Override
     public String getResourceType() {
         return Provenance.resourceType;
     }
+
 
     /**
      * Provenance.java
@@ -117,26 +119,11 @@ public class Provenance extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Provenance) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ProvenanceAgent extends BackboneElement {
 
         public static final String resourceType = "ProvenanceAgent";
-
-        // Who the agent is representing.
-        @Json(name = "onBehalfOfReference")
-        @Nullable
-        public Reference onBehalfOfReference;
-
-        // Who the agent is representing.
-        @Json(name = "onBehalfOfUri")
-        @Nullable
-        public String onBehalfOfUri;
-
-        // Type of relationship between agents.
-        @Json(name = "relatedAgentType")
-        @Nullable
-        public CodeableConcept relatedAgentType;
 
         // What the agents role was.
         @Json(name = "role")
@@ -144,25 +131,41 @@ public class Provenance extends DomainResource {
         public List<CodeableConcept> role;
 
         // Who participated.
-        @Json(name = "whoReference")
-        @Nullable
-        public Reference whoReference;
-
-        // Who participated.
         @Json(name = "whoUri")
         @Nullable
         public String whoUri;
 
+        // Who participated.
+        @Json(name = "whoReference")
+        @Nullable
+        public Reference whoReference;
+
+        // Who the agent is representing.
+        @Json(name = "onBehalfOfUri")
+        @Nullable
+        public String onBehalfOfUri;
+
+        // Who the agent is representing.
+        @Json(name = "onBehalfOfReference")
+        @Nullable
+        public Reference onBehalfOfReference;
+
+        // Type of relationship between agents.
+        @Json(name = "relatedAgentType")
+        @Nullable
+        public CodeableConcept relatedAgentType;
+
+
         /**
          * Constructor for all required properties.
          *
-         * @param who as one of String, Reference*
+         * @param who as one of Reference, String*
          */
         public ProvenanceAgent(Object who) {
-            if (who instanceof String) {
-                this.whoUri = (String) who;
-            } else if (who instanceof Reference) {
+            if (who instanceof Reference) {
                 this.whoReference = (Reference) who;
+            } else if (who instanceof String) {
+                this.whoUri = (String) who;
             } else {
                 //FIXME Type: (of: who)) for property (who) is invalid, ignoring")
             }
@@ -172,7 +175,10 @@ public class Provenance extends DomainResource {
         public String getResourceType() {
             return ProvenanceAgent.resourceType;
         }
+
+
     }
+
 
     /**
      * Provenance.java
@@ -182,25 +188,20 @@ public class Provenance extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Provenance) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ProvenanceEntity extends BackboneElement {
 
         public static final String resourceType = "ProvenanceEntity";
 
-        // Entity is attributed to this agent.
-        @Json(name = "agent")
-        @Nullable
-        public List<ProvenanceAgent> agent;
-
         // How the entity was used during the activity.
         @Json(name = "role")
-        public CodeSystems.ProvenanceEntityRole role;
+        public CodeSystemProvenanceEntityRole role;
 
         // Identity of entity.
-        @Json(name = "whatIdentifier")
+        @Json(name = "whatUri")
         @Nullable
-        public Identifier whatIdentifier;
+        public String whatUri;
 
         // Identity of entity.
         @Json(name = "whatReference")
@@ -208,24 +209,30 @@ public class Provenance extends DomainResource {
         public Reference whatReference;
 
         // Identity of entity.
-        @Json(name = "whatUri")
+        @Json(name = "whatIdentifier")
         @Nullable
-        public String whatUri;
+        public Identifier whatIdentifier;
+
+        // Entity is attributed to this agent.
+        @Json(name = "agent")
+        @Nullable
+        public List<ProvenanceAgent> agent;
+
 
         /**
          * Constructor for all required properties.
          *
-         * @param role CodeSystems.ProvenanceEntityRole
-         * @param what as one of String, Reference, Identifier*
+         * @param role CodeSystemProvenanceEntityRole
+         * @param what as one of Identifier, Reference, String*
          */
-        public ProvenanceEntity(CodeSystems.ProvenanceEntityRole role, Object what) {
+        public ProvenanceEntity(CodeSystemProvenanceEntityRole role, Object what) {
             this.role = role;
-            if (what instanceof String) {
-                this.whatUri = (String) what;
+            if (what instanceof Identifier) {
+                this.whatIdentifier = (Identifier) what;
             } else if (what instanceof Reference) {
                 this.whatReference = (Reference) what;
-            } else if (what instanceof Identifier) {
-                this.whatIdentifier = (Identifier) what;
+            } else if (what instanceof String) {
+                this.whatUri = (String) what;
             } else {
                 //FIXME Type: (of: what)) for property (what) is invalid, ignoring")
             }
@@ -235,5 +242,9 @@ public class Provenance extends DomainResource {
         public String getResourceType() {
             return ProvenanceEntity.resourceType;
         }
+
+
     }
+
+
 }

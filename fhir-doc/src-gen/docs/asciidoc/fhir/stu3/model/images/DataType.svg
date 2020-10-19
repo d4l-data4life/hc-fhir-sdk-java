@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="973px" preserveAspectRatio="none" style="width:159px;height:973px;" version="1.1" viewBox="0 0 159 973" width="159px" zoomAndPan="magnify"><defs/><g><!--MD5=[3949b939274c3ebd79b8ab92605ab7ed]
+class DataType--><rect fill="#FEFECE" height="955.5742" id="DataType" style="stroke: #000000; stroke-width: 1.5;" width="141" x="7" y="7"/><ellipse cx="44.05" cy="23" fill="#EB937F" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M47.6643,29.5 L39.9445,29.5 L39.9445,17.1069 L47.6643,17.1069 L47.6643,19.2651 L42.3933,19.2651 L42.3933,21.938 L47.1662,21.938 L47.1662,24.0962 L42.3933,24.0962 L42.3933,27.3418 L47.6643,27.3418 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="64.95" y="27.5352">DataType</text><line style="stroke: #000000; stroke-width: 1.5;" x1="8" x2="147" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="49" x="15" y="55.6348">ADDRESS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="22" x="15" y="72.5898">AGE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="75" x="15" y="89.5449">ANNOTATION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="76" x="15" y="106.5">ATTACHMENT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="106" x="15" y="123.4551">BACKBONEELEMENT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="15" y="140.4102">CODEABLECONCEPT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="44" x="15" y="157.3652">CODING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="93" x="15" y="174.3203">CONTACTDETAIL</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="88" x="15" y="191.2754">CONTACTPOINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="79" x="15" y="208.2305">CONTRIBUTOR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="40" x="15" y="225.1855">COUNT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="15" y="242.1406">DATAREQUIREMENT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="15" y="259.0957">DISTANCE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="45" x="15" y="276.0508">DOSAGE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="58" x="15" y="293.0059">DURATION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="15" y="309.9609">ELEMENT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="15" y="326.916">ELEMENTDEFINITION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="15" y="343.8711">EXTENSION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="72" x="15" y="360.8262">HUMANNAME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="57" x="15" y="377.7813">IDENTIFIER</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="30" x="15" y="394.7363">META</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="39" x="15" y="411.6914">MONEY</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="61" x="15" y="428.6465">NARRATIVE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="125" x="15" y="445.6016">PARAMETERDEFINITION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="39" x="15" y="462.5566">PERIOD</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="57" x="15" y="479.5117">QUANTITY</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="37" x="15" y="496.4668">RANGE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="34" x="15" y="513.4219">RATIO</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="15" y="530.377">REFERENCE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="15" y="547.332">RELATEDARTIFACT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="80" x="15" y="564.2871">SAMPLEDDATA</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="61" x="15" y="581.2422">SIGNATURE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="93" x="15" y="598.1973">SIMPLEQUANTITY</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="38" x="15" y="615.1523">TIMING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="15" y="632.1074">TRIGGERDEFINITION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="88" x="15" y="649.0625">USAGECONTEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="79" x="15" y="666.0176">BASE64BINARY</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="52" x="15" y="682.9727">BOOLEAN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="31" x="15" y="699.9277">CODE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="29" x="15" y="716.8828">DATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="15" y="733.8379">DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="15" y="750.793">DECIMAL</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="11" x="15" y="767.748">ID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="47" x="15" y="784.7031">INSTANT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="45" x="15" y="801.6582">INTEGER</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="15" y="818.6133">MARKDOWN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="20" x="15" y="835.5684">OID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="15" y="852.5234">POSITIVEINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="39" x="15" y="869.4785">STRING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="25" x="15" y="886.4336">TIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="15" y="903.3887">UNSIGNEDINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="18" x="15" y="920.3438">URI</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="27" x="15" y="937.2988">UUID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="37" x="15" y="954.2539">XHTML</text><!--MD5=[d6f9c06d5f38a514baf68c42d435c84f]
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+enum DataType {
+    ADDRESS
+    AGE
+    ANNOTATION
+    ATTACHMENT
+    BACKBONEELEMENT
+    CODEABLECONCEPT
+    CODING
+    CONTACTDETAIL
+    CONTACTPOINT
+    CONTRIBUTOR
+    COUNT
+    DATAREQUIREMENT
+    DISTANCE
+    DOSAGE
+    DURATION
+    ELEMENT
+    ELEMENTDEFINITION
+    EXTENSION
+    HUMANNAME
+    IDENTIFIER
+    META
+    MONEY
+    NARRATIVE
+    PARAMETERDEFINITION
+    PERIOD
+    QUANTITY
+    RANGE
+    RATIO
+    REFERENCE
+    RELATEDARTIFACT
+    SAMPLEDDATA
+    SIGNATURE
+    SIMPLEQUANTITY
+    TIMING
+    TRIGGERDEFINITION
+    USAGECONTEXT
+    BASE64BINARY
+    BOOLEAN
+    CODE
+    DATE
+    DATETIME
+    DECIMAL
+    ID
+    INSTANT
+    INTEGER
+    MARKDOWN
+    OID
+    POSITIVEINT
+    STRING
+    TIME
+    UNSIGNEDINT
+    URI
+    UUID
+    XHTML
+}
+
+@enduml
+
+PlantUML version 1.2020.06(Sun Apr 05 14:38:32 CEST 2020)
+(APACHE source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 1.8.0_242-release-1644-b3-6222593
+Operating System: Mac OS X
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

@@ -29,36 +29,37 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ContactPoint">ContactPoint</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ContactPoint) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class ContactPoint extends Element {
 
     public static final String resourceType = "ContactPoint";
 
-    // Time period when the contact point was/is in use.
-    @Json(name = "period")
+    // Telecommunications form for contact point - what communications system is required to make use of the contact.
+    @Json(name = "system")
     @Nullable
-    public Period period;
+    public CodeSystemContactPointSystem system;
+
+    // The actual contact point details.
+    @Json(name = "value")
+    @Nullable
+    public String value;
+
+    // Identifies the purpose for the contact point.
+    @Json(name = "use")
+    @Nullable
+    public CodeSystemContactPointUse use;
 
     // Specify preferred order of use (1 = highest).
     @Json(name = "rank")
     @Nullable
     public Integer rank;
 
-    // Telecommunications form for contact point - what communications system is required to make use of the contact.
-    @Json(name = "system")
+    // Time period when the contact point was/is in use.
+    @Json(name = "period")
     @Nullable
-    public CodeSystems.ContactPointSystem system;
+    public Period period;
 
-    // Identifies the purpose for the contact point.
-    @Json(name = "use")
-    @Nullable
-    public CodeSystems.ContactPointUse use;
-
-    // The actual contact point details.
-    @Json(name = "value")
-    @Nullable
-    public String value;
 
     public ContactPoint() {
     }
@@ -67,4 +68,6 @@ public class ContactPoint extends Element {
     public String getResourceType() {
         return ContactPoint.resourceType;
     }
+
+
 }

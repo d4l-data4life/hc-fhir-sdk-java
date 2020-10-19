@@ -30,11 +30,16 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DomainResource">DomainResource</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DomainResource) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class DomainResource extends Resource {
 
     public static final String resourceType = "DomainResource";
+
+    // Text summary of the resource, for human interpretation.
+    @Json(name = "text")
+    @Nullable
+    public Narrative text;
 
     // Contained, inline Resources.
     @Json(name = "contained")
@@ -51,10 +56,6 @@ public class DomainResource extends Resource {
     @Nullable
     public List<Extension> modifierExtension;
 
-    // Text summary of the resource, for human interpretation.
-    @Json(name = "text")
-    @Nullable
-    public Narrative text;
 
     public DomainResource() {
     }
@@ -63,4 +64,6 @@ public class DomainResource extends Resource {
     public String getResourceType() {
         return DomainResource.resourceType;
     }
+
+
 }

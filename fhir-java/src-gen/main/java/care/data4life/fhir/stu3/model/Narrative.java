@@ -26,33 +26,36 @@ import com.squareup.moshi.Json;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Narrative">Narrative</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Narrative) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class Narrative extends Element {
 
     public static final String resourceType = "Narrative";
 
+    // The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.
+    @Json(name = "status")
+    public CodeSystemNarrativeStatus status;
+
     // Limited xhtml content.
     @Json(name = "div")
     public String div;
 
-    // The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.
-    @Json(name = "status")
-    public CodeSystems.NarrativeStatus status;
 
     /**
      * Constructor for all required properties.
      *
+     * @param status CodeSystemNarrativeStatus
      * @param div    String
-     * @param status CodeSystems.NarrativeStatus
      */
-    public Narrative(String div, CodeSystems.NarrativeStatus status) {
-        this.div = div;
+    public Narrative(CodeSystemNarrativeStatus status, String div) {
         this.status = status;
+        this.div = div;
     }
 
     @Override
     public String getResourceType() {
         return Narrative.resourceType;
     }
+
+
 }

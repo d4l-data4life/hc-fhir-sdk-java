@@ -16,6 +16,7 @@
 
 package care.data4life.fhir.stu3.model;
 
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
@@ -33,7 +34,7 @@ import static org.junit.Assert.assertEquals;
  * that has risen to a level of concern.
  * <p>
  * <p>
- * "Generated from FHIR 3.0.1.11917 on 2020-07-29
+ * "Generated from FHIR 3.0.1.11917 on 2020-10-15
  */
 public class ConditionTest {
 
@@ -68,8 +69,8 @@ public class ConditionTest {
         assertEquals(data.severity.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.subject.display, "P. van de Heuvel");
         assertEquals(data.subject.reference, "Patient/f001");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
-        assertEquals(data.verificationStatus, CodeSystems.ConditionVerificationStatus.CONFIRMED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+        assertEquals(data.verificationStatus, CodeSystemConditionVerificationStatus.CONFIRMED);
 
         String json = parser.fromFhir(data);
 
@@ -90,8 +91,7 @@ public class ConditionTest {
         assertEquals(data.category.get(0).coding.get(0).display, "Problem");
         assertEquals(data.category.get(0).coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.category.get(0).coding.get(1).code, "problem-list-item");
-        assertEquals(data.category.get(0).coding.get(1).system,
-                "http://hl7.org/fhir/condition-category");
+        assertEquals(data.category.get(0).coding.get(1).system, "http://hl7.org/fhir/condition-category");
         assertEquals(data.clinicalStatus, "active");
         assertEquals(data.code.coding.get(0).code, "10001005");
         assertEquals(data.code.coding.get(0).display, "Bacterial sepsis");
@@ -107,8 +107,8 @@ public class ConditionTest {
         assertEquals(data.severity.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.subject.display, "Roel");
         assertEquals(data.subject.reference, "Patient/f201");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
-        assertEquals(data.verificationStatus, CodeSystems.ConditionVerificationStatus.CONFIRMED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+        assertEquals(data.verificationStatus, CodeSystemConditionVerificationStatus.CONFIRMED);
 
         String json = parser.fromFhir(data);
 
@@ -122,8 +122,7 @@ public class ConditionTest {
 
         assertEquals(data.category.get(0).coding.get(0).code, "encounter-diagnosis");
         assertEquals(data.category.get(0).coding.get(0).display, "Encounter Diagnosis");
-        assertEquals(data.category.get(0).coding.get(0).system,
-                "http://hl7.org/fhir/condition-category");
+        assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org/fhir/condition-category");
         assertEquals(data.clinicalStatus, "active");
         assertEquals(data.code.coding.get(0).code, "422504002");
         assertEquals(data.code.coding.get(0).display, "Ischemic stroke (disorder)");
@@ -132,10 +131,9 @@ public class ConditionTest {
         assertEquals(data.id, "stroke");
         assertEquals(data.onsetDateTime.toString(), "2010-07-18");
         assertEquals(data.subject.reference, "Patient/example");
-        assertEquals(data.text.div,
-                "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ischemic stroke, July 18, 2010</div>");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
-        assertEquals(data.verificationStatus, CodeSystems.ConditionVerificationStatus.CONFIRMED);
+        assertEquals(data.text.div, "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ischemic stroke, July 18, 2010</div>");
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+        assertEquals(data.verificationStatus, CodeSystemConditionVerificationStatus.CONFIRMED);
 
         String json = parser.fromFhir(data);
 
@@ -149,17 +147,15 @@ public class ConditionTest {
 
         assertEquals(data.category.get(0).coding.get(0).code, "problem-list-item");
         assertEquals(data.category.get(0).coding.get(0).display, "Problem List Item");
-        assertEquals(data.category.get(0).coding.get(0).system,
-                "http://hl7.org/fhir/condition-category");
+        assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org/fhir/condition-category");
         assertEquals(data.clinicalStatus, "active");
         assertEquals(data.code.coding.get(0).code, "312824007");
         assertEquals(data.code.coding.get(0).display, "Family history of cancer of colon");
         assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.id, "family-history");
         assertEquals(data.subject.reference, "Patient/example");
-        assertEquals(data.text.div,
-                "<div xmlns=\"http://www.w3.org/1999/xhtml\">Family history of cancer of colon</div>");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.div, "<div xmlns=\"http://www.w3.org/1999/xhtml\">Family history of cancer of colon</div>");
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -198,8 +194,8 @@ public class ConditionTest {
         assertEquals(data.stage.summary.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.subject.display, "P. van de Heuvel");
         assertEquals(data.subject.reference, "Patient/f001");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
-        assertEquals(data.verificationStatus, CodeSystems.ConditionVerificationStatus.CONFIRMED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+        assertEquals(data.verificationStatus, CodeSystemConditionVerificationStatus.CONFIRMED);
 
         String json = parser.fromFhir(data);
 
@@ -220,8 +216,8 @@ public class ConditionTest {
         assertEquals(data.id, "f205");
         assertEquals(data.subject.display, "Roel");
         assertEquals(data.subject.reference, "Patient/f201");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
-        assertEquals(data.verificationStatus, CodeSystems.ConditionVerificationStatus.DIFFERENTIAL);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+        assertEquals(data.verificationStatus, CodeSystemConditionVerificationStatus.DIFFERENTIAL);
 
         String json = parser.fromFhir(data);
 
@@ -243,12 +239,10 @@ public class ConditionTest {
         assertEquals(data.category.get(0).coding.get(0).display, "Problem");
         assertEquals(data.category.get(0).coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.category.get(0).coding.get(1).code, "problem-list-item");
-        assertEquals(data.category.get(0).coding.get(1).system,
-                "http://hl7.org/fhir/condition-category");
+        assertEquals(data.category.get(0).coding.get(1).system, "http://hl7.org/fhir/condition-category");
         assertEquals(data.clinicalStatus, "active");
         assertEquals(data.code.coding.get(0).code, "36225005");
-        assertEquals(data.code.coding.get(0).display,
-                "Acute renal insufficiency specified as due to procedure");
+        assertEquals(data.code.coding.get(0).display, "Acute renal insufficiency specified as due to procedure");
         assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.context.display, "Roel's encounter on March eleventh");
         assertEquals(data.context.reference, "Encounter/f203");
@@ -264,8 +258,8 @@ public class ConditionTest {
         assertEquals(data.stage.summary.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.subject.display, "Roel");
         assertEquals(data.subject.reference, "Patient/f201");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
-        assertEquals(data.verificationStatus, CodeSystems.ConditionVerificationStatus.DIFFERENTIAL);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+        assertEquals(data.verificationStatus, CodeSystemConditionVerificationStatus.DIFFERENTIAL);
 
         String json = parser.fromFhir(data);
 
@@ -279,8 +273,7 @@ public class ConditionTest {
 
         assertEquals(data.category.get(0).coding.get(0).code, "problem-list-item");
         assertEquals(data.category.get(0).coding.get(0).display, "Problem List Item");
-        assertEquals(data.category.get(0).coding.get(0).system,
-                "http://hl7.org/fhir/condition-category");
+        assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org/fhir/condition-category");
         assertEquals(data.clinicalStatus, "active");
         assertEquals(data.code.text, "Asthma");
         assertEquals(data.id, "example2");
@@ -289,10 +282,9 @@ public class ConditionTest {
         assertEquals(data.severity.coding.get(0).display, "Mild");
         assertEquals(data.severity.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.subject.reference, "Patient/example");
-        assertEquals(data.text.div,
-                "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mild Asthma (Date: 12-Nov 2012)</div>");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
-        assertEquals(data.verificationStatus, CodeSystems.ConditionVerificationStatus.CONFIRMED);
+        assertEquals(data.text.div, "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mild Asthma (Date: 12-Nov 2012)</div>");
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+        assertEquals(data.verificationStatus, CodeSystemConditionVerificationStatus.CONFIRMED);
 
         String json = parser.fromFhir(data);
 
@@ -313,14 +305,12 @@ public class ConditionTest {
         assertEquals(data.bodySite.get(0).coding.get(0).display, "Entire head and neck");
         assertEquals(data.bodySite.get(0).coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.category.get(0).coding.get(0).code, "encounter-diagnosis");
-        assertEquals(data.category.get(0).coding.get(0).system,
-                "http://hl7.org/fhir/condition-category");
+        assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org/fhir/condition-category");
         assertEquals(data.clinicalStatus, "resolved");
         assertEquals(data.code.coding.get(0).code, "363346000");
         assertEquals(data.code.coding.get(0).display, "Malignant neoplastic disease");
         assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
-        assertEquals(data.evidence.get(0).detail.get(0).display,
-                "Erasmus' diagnostic report of Roel's tumor");
+        assertEquals(data.evidence.get(0).detail.get(0).display, "Erasmus' diagnostic report of Roel's tumor");
         assertEquals(data.evidence.get(0).detail.get(0).reference, "DiagnosticReport/f201");
         assertEquals(data.id, "f202");
         assertEquals(data.meta.security.get(0).code, "TBOO");
@@ -335,8 +325,8 @@ public class ConditionTest {
         assertEquals(data.severity.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.subject.display, "Roel");
         assertEquals(data.subject.reference, "Patient/f201");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
-        assertEquals(data.verificationStatus, CodeSystems.ConditionVerificationStatus.CONFIRMED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+        assertEquals(data.verificationStatus, CodeSystemConditionVerificationStatus.CONFIRMED);
 
         String json = parser.fromFhir(data);
 
@@ -358,8 +348,7 @@ public class ConditionTest {
         assertEquals(data.category.get(0).coding.get(0).display, "Problem");
         assertEquals(data.category.get(0).coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.category.get(0).coding.get(1).code, "problem-list-item");
-        assertEquals(data.category.get(0).coding.get(1).system,
-                "http://hl7.org/fhir/condition-category");
+        assertEquals(data.category.get(0).coding.get(1).system, "http://hl7.org/fhir/condition-category");
         assertEquals(data.clinicalStatus, "resolved");
         assertEquals(data.code.coding.get(0).code, "386661006");
         assertEquals(data.code.coding.get(0).display, "Fever");
@@ -378,8 +367,8 @@ public class ConditionTest {
         assertEquals(data.severity.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.subject.display, "Roel");
         assertEquals(data.subject.reference, "Patient/f201");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
-        assertEquals(data.verificationStatus, CodeSystems.ConditionVerificationStatus.CONFIRMED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+        assertEquals(data.verificationStatus, CodeSystemConditionVerificationStatus.CONFIRMED);
 
         String json = parser.fromFhir(data);
 

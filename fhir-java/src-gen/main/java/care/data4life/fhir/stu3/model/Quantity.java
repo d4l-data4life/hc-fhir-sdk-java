@@ -29,36 +29,37 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Quantity">Quantity</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Quantity) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Quantity) on 2020-10-15
  */
 public class Quantity extends Element {
 
     public static final String resourceType = "Quantity";
 
-    // Coded form of the unit.
-    @Json(name = "code")
+    // Numerical value (with implicit precision).
+    @Json(name = "value")
     @Nullable
-    public String code;
+    public FhirDecimal value;
 
     // How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
     @Json(name = "comparator")
     @Nullable
-    public CodeSystems.QuantityComparator comparator;
-
-    // System that defines coded unit form.
-    @Json(name = "system")
-    @Nullable
-    public String system;
+    public CodeSystemQuantityComparator comparator;
 
     // Unit representation.
     @Json(name = "unit")
     @Nullable
     public String unit;
 
-    // Numerical value (with implicit precision).
-    @Json(name = "value")
+    // System that defines coded unit form.
+    @Json(name = "system")
     @Nullable
-    public FhirDecimal value;
+    public String system;
+
+    // Coded form of the unit.
+    @Json(name = "code")
+    @Nullable
+    public String code;
+
 
     public Quantity() {
     }
@@ -67,4 +68,6 @@ public class Quantity extends Element {
     public String getResourceType() {
         return Quantity.resourceType;
     }
+
+
 }

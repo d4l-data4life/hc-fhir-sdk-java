@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="905px" preserveAspectRatio="none" style="width:244px;height:905px;" version="1.1" viewBox="0 0 244 905" width="244px" zoomAndPan="magnify"><defs/><g><!--MD5=[2a5c936e13e4e6bd0944b3686fd457fc]
+class OperationOutcomeCodes--><rect fill="#FEFECE" height="887.7539" id="OperationOutcomeCodes" style="stroke: #000000; stroke-width: 1.5;" width="226" x="7" y="7"/><ellipse cx="42.7" cy="23" fill="#EB937F" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M46.3143,29.5 L38.5945,29.5 L38.5945,17.1069 L46.3143,17.1069 L46.3143,19.2651 L41.0433,19.2651 L41.0433,21.938 L45.8162,21.938 L45.8162,24.0962 L41.0433,24.0962 L41.0433,27.3418 L46.3143,27.3418 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="144" x="63.3" y="27.5352">OperationOutcomeCodes</text><line style="stroke: #000000; stroke-width: 1.5;" x1="8" x2="232" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="120" x="15" y="55.6348">MSG_AUTH_REQUIRED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="103" x="15" y="72.5898">MSG_BAD_FORMAT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="15" y="89.5449">MSG_BAD_SYNTAX</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="158" x="15" y="106.5">MSG_CANT_PARSE_CONTENT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="137" x="15" y="123.4551">MSG_CANT_PARSE_ROOT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="79" x="15" y="140.4102">MSG_CREATED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="15" y="157.3652">MSG_DATE_FORMAT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="76" x="15" y="174.3203">MSG_DELETED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="113" x="15" y="191.2754">MSG_DELETED_DONE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="93" x="15" y="208.2305">MSG_DELETED_ID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="106" x="15" y="225.1855">MSG_DUPLICATE_ID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="117" x="15" y="242.1406">MSG_ERROR_PARSING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="89" x="15" y="259.0957">MSG_ID_INVALID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="15" y="276.0508">MSG_ID_TOO_LONG</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="89" x="15" y="293.0059">MSG_INVALID_ID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="15" y="309.9609">MSG_JSON_OBJECT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="95" x="15" y="326.916">MSG_LOCAL_FAIL</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="92" x="15" y="343.8711">MSG_NO_MATCH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="15" y="360.8262">MSG_NO_EXIST</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="98" x="15" y="377.7813">MSG_NO_MODULE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="106" x="15" y="394.7363">MSG_NO_SUMMARY</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="132" x="15" y="411.6914">MSG_OP_NOT_ALLOWED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="122" x="15" y="428.6465">MSG_PARAM_CHAINED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="136" x="15" y="445.6016">MSG_PARAM_NO_REPEAT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="15" y="462.5566">MSG_PARAM_UNKNOWN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="116" x="15" y="479.5117">MSG_PARAM_INVALID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="173" x="15" y="496.4668">MSG_PARAM_MODIFIER_INVALID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="210" x="15" y="513.4219">MSG_RESOURCE_EXAMPLE_PROTECTED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="132" x="15" y="530.377">MSG_RESOURCE_ID_FAIL</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="15" y="547.332">MSG_RESOURCE_NOT_ALLOWED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="146" x="15" y="564.2871">MSG_RESOURCE_REQUIRED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="167" x="15" y="581.2422">MSG_RESOURCE_ID_MISMATCH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="152" x="15" y="598.1973">MSG_RESOURCE_ID_MISSING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="182" x="15" y="615.1523">MSG_RESOURCE_TYPE_MISMATCH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="121" x="15" y="632.1074">MSG_SORT_UNKNOWN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="191" x="15" y="649.0625">MSG_TRANSACTION_DUPLICATE_ID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="15" y="666.0176">MSG_TRANSACTION_MISSING_ID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="166" x="15" y="682.9727">MSG_UNHANDLED_NODE_TYPE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="145" x="15" y="699.9277">MSG_UNKNOWN_CONTENT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="155" x="15" y="716.8828">MSG_UNKNOWN_OPERATION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="118" x="15" y="733.8379">MSG_UNKNOWN_TYPE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="80" x="15" y="750.793">MSG_UPDATED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="15" y="767.748">MSG_VERSION_AWARE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="180" x="15" y="784.7031">MSG_VERSION_AWARE_CONFLICT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="146" x="15" y="801.6582">MSG_VERSION_AWARE_URL</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="90" x="15" y="818.6133">MSG_WRONG_NS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="15" y="835.5684">SEARCH_MULTIPLE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="158" x="15" y="852.5234">UPDATE_MULTIPLE_MATCHES</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="154" x="15" y="869.4785">DELETE_MULTIPLE_MATCHES</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="80" x="15" y="886.4336">SEARCH_NONE</text><!--MD5=[0da81c15ba14ce52f43ee82371a9feca]
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+enum OperationOutcomeCodes {
+    MSG_AUTH_REQUIRED
+    MSG_BAD_FORMAT
+    MSG_BAD_SYNTAX
+    MSG_CANT_PARSE_CONTENT
+    MSG_CANT_PARSE_ROOT
+    MSG_CREATED
+    MSG_DATE_FORMAT
+    MSG_DELETED
+    MSG_DELETED_DONE
+    MSG_DELETED_ID
+    MSG_DUPLICATE_ID
+    MSG_ERROR_PARSING
+    MSG_ID_INVALID
+    MSG_ID_TOO_LONG
+    MSG_INVALID_ID
+    MSG_JSON_OBJECT
+    MSG_LOCAL_FAIL
+    MSG_NO_MATCH
+    MSG_NO_EXIST
+    MSG_NO_MODULE
+    MSG_NO_SUMMARY
+    MSG_OP_NOT_ALLOWED
+    MSG_PARAM_CHAINED
+    MSG_PARAM_NO_REPEAT
+    MSG_PARAM_UNKNOWN
+    MSG_PARAM_INVALID
+    MSG_PARAM_MODIFIER_INVALID
+    MSG_RESOURCE_EXAMPLE_PROTECTED
+    MSG_RESOURCE_ID_FAIL
+    MSG_RESOURCE_NOT_ALLOWED
+    MSG_RESOURCE_REQUIRED
+    MSG_RESOURCE_ID_MISMATCH
+    MSG_RESOURCE_ID_MISSING
+    MSG_RESOURCE_TYPE_MISMATCH
+    MSG_SORT_UNKNOWN
+    MSG_TRANSACTION_DUPLICATE_ID
+    MSG_TRANSACTION_MISSING_ID
+    MSG_UNHANDLED_NODE_TYPE
+    MSG_UNKNOWN_CONTENT
+    MSG_UNKNOWN_OPERATION
+    MSG_UNKNOWN_TYPE
+    MSG_UPDATED
+    MSG_VERSION_AWARE
+    MSG_VERSION_AWARE_CONFLICT
+    MSG_VERSION_AWARE_URL
+    MSG_WRONG_NS
+    SEARCH_MULTIPLE
+    UPDATE_MULTIPLE_MATCHES
+    DELETE_MULTIPLE_MATCHES
+    SEARCH_NONE
+}
+
+@enduml
+
+PlantUML version 1.2020.06(Sun Apr 05 14:38:32 CEST 2020)
+(APACHE source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 1.8.0_242-release-1644-b3-6222593
+Operating System: Mac OS X
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

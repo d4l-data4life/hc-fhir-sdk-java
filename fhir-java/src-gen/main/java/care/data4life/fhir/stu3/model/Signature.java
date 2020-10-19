@@ -32,31 +32,11 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Signature">Signature</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Signature) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class Signature extends Element {
 
     public static final String resourceType = "Signature";
-
-    // The actual signature content (XML DigSig. JWT, picture, etc.).
-    @Json(name = "blob")
-    @Nullable
-    public String blob;
-
-    // The technical format of the signature.
-    @Json(name = "contentType")
-    @Nullable
-    public String contentType;
-
-    // The party represented.
-    @Json(name = "onBehalfOfReference")
-    @Nullable
-    public Reference onBehalfOfReference;
-
-    // The party represented.
-    @Json(name = "onBehalfOfUri")
-    @Nullable
-    public String onBehalfOfUri;
 
     // Indication of the reason the entity signed the object(s).
     @Json(name = "type")
@@ -67,29 +47,50 @@ public class Signature extends Element {
     public FhirInstant when;
 
     // Who signed.
+    @Json(name = "whoUri")
+    @Nullable
+    public String whoUri;
+
+    // Who signed.
     @Json(name = "whoReference")
     @Nullable
     public Reference whoReference;
 
-    // Who signed.
-    @Json(name = "whoUri")
+    // The party represented.
+    @Json(name = "onBehalfOfUri")
     @Nullable
-    public String whoUri;
+    public String onBehalfOfUri;
+
+    // The party represented.
+    @Json(name = "onBehalfOfReference")
+    @Nullable
+    public Reference onBehalfOfReference;
+
+    // The technical format of the signature.
+    @Json(name = "contentType")
+    @Nullable
+    public String contentType;
+
+    // The actual signature content (XML DigSig. JWT, picture, etc.).
+    @Json(name = "blob")
+    @Nullable
+    public String blob;
+
 
     /**
      * Constructor for all required properties.
      *
      * @param type List of Coding
      * @param when FhirInstant
-     * @param who  as one of String, Reference*
+     * @param who  as one of Reference, String*
      */
     public Signature(List<Coding> type, FhirInstant when, Object who) {
         this.type = type;
         this.when = when;
-        if (who instanceof String) {
-            this.whoUri = (String) who;
-        } else if (who instanceof Reference) {
+        if (who instanceof Reference) {
             this.whoReference = (Reference) who;
+        } else if (who instanceof String) {
+            this.whoUri = (String) who;
         } else {
             //FIXME Type: (of: who)) for property (who) is invalid, ignoring")
         }
@@ -99,4 +100,6 @@ public class Signature extends Element {
     public String getResourceType() {
         return Signature.resourceType;
     }
+
+
 }

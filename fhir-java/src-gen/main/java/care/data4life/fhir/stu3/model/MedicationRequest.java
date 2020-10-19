@@ -33,70 +33,50 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/MedicationRequest) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class MedicationRequest extends DomainResource {
 
     public static final String resourceType = "MedicationRequest";
-
-    // When request was initially authored.
-    @Json(name = "authoredOn")
-    @Nullable
-    public FhirDateTime authoredOn;
-
-    // What request fulfills.
-    @Json(name = "basedOn")
-    @Nullable
-    public List<Reference> basedOn;
-
-    // Type of medication usage.
-    @Json(name = "category")
-    @Nullable
-    public CodeableConcept category;
-
-    // Created during encounter/admission/stay.
-    @Json(name = "context")
-    @Nullable
-    public Reference context;
-
-    // Protocol or definition.
-    @Json(name = "definition")
-    @Nullable
-    public List<Reference> definition;
-
-    // Clinical Issue with action.
-    @Json(name = "detectedIssue")
-    @Nullable
-    public List<Reference> detectedIssue;
-
-    // Medication supply authorization.
-    @Json(name = "dispenseRequest")
-    @Nullable
-    public MedicationRequestDispenseRequest dispenseRequest;
-
-    // How the medication should be taken.
-    @Json(name = "dosageInstruction")
-    @Nullable
-    public List<Dosage> dosageInstruction;
-
-    // A list of events of interest in the lifecycle.
-    @Json(name = "eventHistory")
-    @Nullable
-    public List<Reference> eventHistory;
-
-    // Composite request this is part of.
-    @Json(name = "groupIdentifier")
-    @Nullable
-    public Identifier groupIdentifier;
 
     // External ids for this request.
     @Json(name = "identifier")
     @Nullable
     public List<Identifier> identifier;
 
+    // Protocol or definition.
+    @Json(name = "definition")
+    @Nullable
+    public List<Reference> definition;
+
+    // What request fulfills.
+    @Json(name = "basedOn")
+    @Nullable
+    public List<Reference> basedOn;
+
+    // Composite request this is part of.
+    @Json(name = "groupIdentifier")
+    @Nullable
+    public Identifier groupIdentifier;
+
+    // A code specifying the current state of the order.  Generally this will be active or completed state.
+    @Json(name = "status")
+    @Nullable
+    public CodeSystemMedicationRequestStatus status;
+
     // Whether the request is a proposal, plan, or an original order.
     @Json(name = "intent")
-    public CodeSystems.MedicationRequestIntent intent;
+    public CodeSystemMedicationRequestIntent intent;
+
+    // Type of medication usage.
+    @Json(name = "category")
+    @Nullable
+    public CodeableConcept category;
+
+    // Indicates how quickly the Medication Request should be addressed with respect to other requests.
+    @Json(name = "priority")
+    @Nullable
+    public CodeSystemMedicationRequestPriority priority;
 
     // Medication to be taken.
     @Json(name = "medicationCodeableConcept")
@@ -108,20 +88,34 @@ public class MedicationRequest extends DomainResource {
     @Nullable
     public Reference medicationReference;
 
-    // Information about the prescription.
-    @Json(name = "note")
-    @Nullable
-    public List<Annotation> note;
+    // Who or group medication request is for.
+    @Json(name = "subject")
+    public Reference subject;
 
-    // An order/prescription that is being replaced.
-    @Json(name = "priorPrescription")
+    // Created during encounter/admission/stay.
+    @Json(name = "context")
     @Nullable
-    public Reference priorPrescription;
+    public Reference context;
 
-    // Indicates how quickly the Medication Request should be addressed with respect to other requests.
-    @Json(name = "priority")
+    // Information to support ordering of the medication.
+    @Json(name = "supportingInformation")
     @Nullable
-    public CodeSystems.MedicationRequestPriority priority;
+    public List<Reference> supportingInformation;
+
+    // When request was initially authored.
+    @Json(name = "authoredOn")
+    @Nullable
+    public FhirDateTime authoredOn;
+
+    // Who/What requested the Request.
+    @Json(name = "requester")
+    @Nullable
+    public MedicationRequestRequester requester;
+
+    // Person who entered the request.
+    @Json(name = "recorder")
+    @Nullable
+    public Reference recorder;
 
     // Reason or indication for writing the prescription.
     @Json(name = "reasonCode")
@@ -133,44 +127,50 @@ public class MedicationRequest extends DomainResource {
     @Nullable
     public List<Reference> reasonReference;
 
-    // Person who entered the request.
-    @Json(name = "recorder")
+    // Information about the prescription.
+    @Json(name = "note")
     @Nullable
-    public Reference recorder;
+    public List<Annotation> note;
 
-    // Who/What requested the Request.
-    @Json(name = "requester")
+    // How the medication should be taken.
+    @Json(name = "dosageInstruction")
     @Nullable
-    public MedicationRequestRequester requester;
+    public List<Dosage> dosageInstruction;
 
-    // A code specifying the current state of the order.  Generally this will be active or completed state.
-    @Json(name = "status")
+    // Medication supply authorization.
+    @Json(name = "dispenseRequest")
     @Nullable
-    public CodeSystems.MedicationRequestStatus status;
-
-    // Who or group medication request is for.
-    @Json(name = "subject")
-    public Reference subject;
+    public MedicationRequestDispenseRequest dispenseRequest;
 
     // Any restrictions on medication substitution.
     @Json(name = "substitution")
     @Nullable
     public MedicationRequestSubstitution substitution;
 
-    // Information to support ordering of the medication.
-    @Json(name = "supportingInformation")
+    // An order/prescription that is being replaced.
+    @Json(name = "priorPrescription")
     @Nullable
-    public List<Reference> supportingInformation;
+    public Reference priorPrescription;
+
+    // Clinical Issue with action.
+    @Json(name = "detectedIssue")
+    @Nullable
+    public List<Reference> detectedIssue;
+
+    // A list of events of interest in the lifecycle.
+    @Json(name = "eventHistory")
+    @Nullable
+    public List<Reference> eventHistory;
+
 
     /**
      * Constructor for all required properties.
      *
-     * @param intent     CodeSystems.MedicationRequestIntent
+     * @param intent     CodeSystemMedicationRequestIntent
      * @param medication as one of CodeableConcept, Reference*
      * @param subject    Reference
      */
-    public MedicationRequest(CodeSystems.MedicationRequestIntent intent, Object medication,
-                             Reference subject) {
+    public MedicationRequest(CodeSystemMedicationRequestIntent intent, Object medication, Reference subject) {
         this.intent = intent;
         if (medication instanceof CodeableConcept) {
             this.medicationCodeableConcept = (CodeableConcept) medication;
@@ -187,6 +187,7 @@ public class MedicationRequest extends DomainResource {
         return MedicationRequest.resourceType;
     }
 
+
     /**
      * MedicationRequest.java
      * <p>
@@ -197,38 +198,38 @@ public class MedicationRequest extends DomainResource {
      * pharmacy department.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
-     * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/MedicationRequest)
-     * on 2020-07-29
+     * on 2020-10-15
      */
     public static class MedicationRequestDispenseRequest extends BackboneElement {
 
         public static final String resourceType = "MedicationRequestDispenseRequest";
 
-        // Number of days supply per dispense.
-        @Json(name = "expectedSupplyDuration")
+        // Time period supply is authorized for.
+        @Json(name = "validityPeriod")
         @Nullable
-        public Duration expectedSupplyDuration;
+        public Period validityPeriod;
 
         // Number of refills authorized.
         @Json(name = "numberOfRepeatsAllowed")
         @Nullable
         public Integer numberOfRepeatsAllowed;
 
-        // Intended dispenser.
-        @Json(name = "performer")
-        @Nullable
-        public Reference performer;
-
         // Amount of medication to supply per dispense.
         @Json(name = "quantity")
         @Nullable
         public Quantity quantity;
 
-        // Time period supply is authorized for.
-        @Json(name = "validityPeriod")
+        // Number of days supply per dispense.
+        @Json(name = "expectedSupplyDuration")
         @Nullable
-        public Period validityPeriod;
+        public Duration expectedSupplyDuration;
+
+        // Intended dispenser.
+        @Json(name = "performer")
+        @Nullable
+        public Reference performer;
+
 
         public MedicationRequestDispenseRequest() {
         }
@@ -237,7 +238,10 @@ public class MedicationRequest extends DomainResource {
         public String getResourceType() {
             return MedicationRequestDispenseRequest.resourceType;
         }
+
+
     }
+
 
     /**
      * MedicationRequest.java
@@ -246,9 +250,8 @@ public class MedicationRequest extends DomainResource {
      * its activation.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
-     * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/MedicationRequest)
-     * on 2020-07-29
+     * on 2020-10-15
      */
     public static class MedicationRequestRequester extends BackboneElement {
 
@@ -263,6 +266,7 @@ public class MedicationRequest extends DomainResource {
         @Nullable
         public Reference onBehalfOf;
 
+
         /**
          * Constructor for all required properties.
          *
@@ -276,7 +280,10 @@ public class MedicationRequest extends DomainResource {
         public String getResourceType() {
             return MedicationRequestRequester.resourceType;
         }
+
+
     }
+
 
     /**
      * MedicationRequest.java
@@ -286,9 +293,8 @@ public class MedicationRequest extends DomainResource {
      * the prescriber's intent. If nothing is specified substitution may be done.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
-     * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/MedicationRequest)
-     * on 2020-07-29
+     * on 2020-10-15
      */
     public static class MedicationRequestSubstitution extends BackboneElement {
 
@@ -303,6 +309,7 @@ public class MedicationRequest extends DomainResource {
         @Nullable
         public CodeableConcept reason;
 
+
         /**
          * Constructor for all required properties.
          *
@@ -316,5 +323,9 @@ public class MedicationRequest extends DomainResource {
         public String getResourceType() {
             return MedicationRequestSubstitution.resourceType;
         }
+
+
     }
+
+
 }

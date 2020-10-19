@@ -30,21 +30,25 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class Observation extends DomainResource {
 
     public static final String resourceType = "Observation";
+
+    // Business Identifier for observation.
+    @Json(name = "identifier")
+    @Nullable
+    public List<Identifier> identifier;
 
     // Fulfills plan, proposal or order.
     @Json(name = "basedOn")
     @Nullable
     public List<Reference> basedOn;
 
-    // Observed body part.
-    @Json(name = "bodySite")
-    @Nullable
-    public CodeableConcept bodySite;
+    // The status of the result value.
+    @Json(name = "status")
+    public CodeSystemObservationStatus status;
 
     // Classification of  type of observation.
     @Json(name = "category")
@@ -55,30 +59,15 @@ public class Observation extends DomainResource {
     @Json(name = "code")
     public CodeableConcept code;
 
-    // Comments about result.
-    @Json(name = "comment")
+    // Who and/or what this is about.
+    @Json(name = "subject")
     @Nullable
-    public String comment;
-
-    // Component results.
-    @Json(name = "component")
-    @Nullable
-    public List<ObservationComponent> component;
+    public Reference subject;
 
     // Healthcare event during which this observation is made.
     @Json(name = "context")
     @Nullable
     public Reference context;
-
-    // Why the result is missing.
-    @Json(name = "dataAbsentReason")
-    @Nullable
-    public CodeableConcept dataAbsentReason;
-
-    // (Measurement) Device.
-    @Json(name = "device")
-    @Nullable
-    public Reference device;
 
     // Clinically relevant time/time-period for observation.
     @Json(name = "effectiveDateTime")
@@ -90,64 +79,20 @@ public class Observation extends DomainResource {
     @Nullable
     public Period effectivePeriod;
 
-    // Business Identifier for observation.
-    @Json(name = "identifier")
-    @Nullable
-    public List<Identifier> identifier;
-
-    // High, low, normal, etc..
-    @Json(name = "interpretation")
-    @Nullable
-    public CodeableConcept interpretation;
-
     // Date/Time this was made available.
     @Json(name = "issued")
     @Nullable
     public FhirInstant issued;
-
-    // How it was done.
-    @Json(name = "method")
-    @Nullable
-    public CodeableConcept method;
 
     // Who is responsible for the observation.
     @Json(name = "performer")
     @Nullable
     public List<Reference> performer;
 
-    // Provides guide for interpretation.
-    @Json(name = "referenceRange")
-    @Nullable
-    public List<ObservationReferenceRange> referenceRange;
-
-    // Resource related to this observation.
-    @Json(name = "related")
-    @Nullable
-    public List<ObservationRelated> related;
-
-    // Specimen used for this observation.
-    @Json(name = "specimen")
-    @Nullable
-    public Reference specimen;
-
-    // The status of the result value.
-    @Json(name = "status")
-    public CodeSystems.ObservationStatus status;
-
-    // Who and/or what this is about.
-    @Json(name = "subject")
-    @Nullable
-    public Reference subject;
-
     // Actual result.
-    @Json(name = "valueAttachment")
+    @Json(name = "valueQuantity")
     @Nullable
-    public Attachment valueAttachment;
-
-    // Actual result.
-    @Json(name = "valueBoolean")
-    @Nullable
-    public Boolean valueBoolean;
+    public Quantity valueQuantity;
 
     // Actual result.
     @Json(name = "valueCodeableConcept")
@@ -155,19 +100,14 @@ public class Observation extends DomainResource {
     public CodeableConcept valueCodeableConcept;
 
     // Actual result.
-    @Json(name = "valueDateTime")
+    @Json(name = "valueString")
     @Nullable
-    public FhirDateTime valueDateTime;
+    public String valueString;
 
     // Actual result.
-    @Json(name = "valuePeriod")
+    @Json(name = "valueBoolean")
     @Nullable
-    public Period valuePeriod;
-
-    // Actual result.
-    @Json(name = "valueQuantity")
-    @Nullable
-    public Quantity valueQuantity;
+    public Boolean valueBoolean;
 
     // Actual result.
     @Json(name = "valueRange")
@@ -185,30 +125,92 @@ public class Observation extends DomainResource {
     public SampledData valueSampledData;
 
     // Actual result.
-    @Json(name = "valueString")
+    @Json(name = "valueAttachment")
     @Nullable
-    public String valueString;
+    public Attachment valueAttachment;
 
     // Actual result.
     @Json(name = "valueTime")
     @Nullable
     public FhirTime valueTime;
 
+    // Actual result.
+    @Json(name = "valueDateTime")
+    @Nullable
+    public FhirDateTime valueDateTime;
+
+    // Actual result.
+    @Json(name = "valuePeriod")
+    @Nullable
+    public Period valuePeriod;
+
+    // Why the result is missing.
+    @Json(name = "dataAbsentReason")
+    @Nullable
+    public CodeableConcept dataAbsentReason;
+
+    // High, low, normal, etc..
+    @Json(name = "interpretation")
+    @Nullable
+    public CodeableConcept interpretation;
+
+    // Comments about result.
+    @Json(name = "comment")
+    @Nullable
+    public String comment;
+
+    // Observed body part.
+    @Json(name = "bodySite")
+    @Nullable
+    public CodeableConcept bodySite;
+
+    // How it was done.
+    @Json(name = "method")
+    @Nullable
+    public CodeableConcept method;
+
+    // Specimen used for this observation.
+    @Json(name = "specimen")
+    @Nullable
+    public Reference specimen;
+
+    // (Measurement) Device.
+    @Json(name = "device")
+    @Nullable
+    public Reference device;
+
+    // Provides guide for interpretation.
+    @Json(name = "referenceRange")
+    @Nullable
+    public List<ObservationReferenceRange> referenceRange;
+
+    // Resource related to this observation.
+    @Json(name = "related")
+    @Nullable
+    public List<ObservationRelated> related;
+
+    // Component results.
+    @Json(name = "component")
+    @Nullable
+    public List<ObservationComponent> component;
+
+
     /**
      * Constructor for all required properties.
      *
+     * @param status CodeSystemObservationStatus
      * @param code   CodeableConcept
-     * @param status CodeSystems.ObservationStatus
      */
-    public Observation(CodeableConcept code, CodeSystems.ObservationStatus status) {
-        this.code = code;
+    public Observation(CodeSystemObservationStatus status, CodeableConcept code) {
         this.status = status;
+        this.code = code;
     }
 
     @Override
     public String getResourceType() {
         return Observation.resourceType;
     }
+
 
     /**
      * Observation.java
@@ -221,7 +223,7 @@ public class Observation extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ObservationComponent extends BackboneElement {
 
@@ -231,25 +233,10 @@ public class Observation extends DomainResource {
         @Json(name = "code")
         public CodeableConcept code;
 
-        // Why the component result is missing.
-        @Json(name = "dataAbsentReason")
-        @Nullable
-        public CodeableConcept dataAbsentReason;
-
-        // High, low, normal, etc..
-        @Json(name = "interpretation")
-        @Nullable
-        public CodeableConcept interpretation;
-
-        // Provides guide for interpretation of component result.
-        @Json(name = "referenceRange")
-        @Nullable
-        public List<ObservationReferenceRange> referenceRange;
-
         // Actual component result.
-        @Json(name = "valueAttachment")
+        @Json(name = "valueQuantity")
         @Nullable
-        public Attachment valueAttachment;
+        public Quantity valueQuantity;
 
         // Actual component result.
         @Json(name = "valueCodeableConcept")
@@ -257,19 +244,9 @@ public class Observation extends DomainResource {
         public CodeableConcept valueCodeableConcept;
 
         // Actual component result.
-        @Json(name = "valueDateTime")
+        @Json(name = "valueString")
         @Nullable
-        public FhirDateTime valueDateTime;
-
-        // Actual component result.
-        @Json(name = "valuePeriod")
-        @Nullable
-        public Period valuePeriod;
-
-        // Actual component result.
-        @Json(name = "valueQuantity")
-        @Nullable
-        public Quantity valueQuantity;
+        public String valueString;
 
         // Actual component result.
         @Json(name = "valueRange")
@@ -287,14 +264,40 @@ public class Observation extends DomainResource {
         public SampledData valueSampledData;
 
         // Actual component result.
-        @Json(name = "valueString")
+        @Json(name = "valueAttachment")
         @Nullable
-        public String valueString;
+        public Attachment valueAttachment;
 
         // Actual component result.
         @Json(name = "valueTime")
         @Nullable
         public FhirTime valueTime;
+
+        // Actual component result.
+        @Json(name = "valueDateTime")
+        @Nullable
+        public FhirDateTime valueDateTime;
+
+        // Actual component result.
+        @Json(name = "valuePeriod")
+        @Nullable
+        public Period valuePeriod;
+
+        // Why the component result is missing.
+        @Json(name = "dataAbsentReason")
+        @Nullable
+        public CodeableConcept dataAbsentReason;
+
+        // High, low, normal, etc..
+        @Json(name = "interpretation")
+        @Nullable
+        public CodeableConcept interpretation;
+
+        // Provides guide for interpretation of component result.
+        @Json(name = "referenceRange")
+        @Nullable
+        public List<ObservationReferenceRange> referenceRange;
+
 
         /**
          * Constructor for all required properties.
@@ -309,7 +312,10 @@ public class Observation extends DomainResource {
         public String getResourceType() {
             return ObservationComponent.resourceType;
         }
+
+
     }
+
 
     /**
      * Observation.java
@@ -319,41 +325,42 @@ public class Observation extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ObservationReferenceRange extends BackboneElement {
 
         public static final String resourceType = "ObservationReferenceRange";
-
-        // Applicable age range, if relevant.
-        @Json(name = "age")
-        @Nullable
-        public Range age;
-
-        // Reference range population.
-        @Json(name = "appliesTo")
-        @Nullable
-        public List<CodeableConcept> appliesTo;
-
-        // High Range, if relevant.
-        @Json(name = "high")
-        @Nullable
-        public Quantity high;
 
         // Low Range, if relevant.
         @Json(name = "low")
         @Nullable
         public Quantity low;
 
-        // Text based reference range in an observation.
-        @Json(name = "text")
+        // High Range, if relevant.
+        @Json(name = "high")
         @Nullable
-        public String text;
+        public Quantity high;
 
         // Reference range qualifier.
         @Json(name = "type")
         @Nullable
         public CodeableConcept type;
+
+        // Reference range population.
+        @Json(name = "appliesTo")
+        @Nullable
+        public List<CodeableConcept> appliesTo;
+
+        // Applicable age range, if relevant.
+        @Json(name = "age")
+        @Nullable
+        public Range age;
+
+        // Text based reference range in an observation.
+        @Json(name = "text")
+        @Nullable
+        public String text;
+
 
         public ObservationReferenceRange() {
         }
@@ -362,7 +369,10 @@ public class Observation extends DomainResource {
         public String getResourceType() {
             return ObservationReferenceRange.resourceType;
         }
+
+
     }
+
 
     /**
      * Observation.java
@@ -373,20 +383,21 @@ public class Observation extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Observation) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ObservationRelated extends BackboneElement {
 
         public static final String resourceType = "ObservationRelated";
 
+        // A code specifying the kind of relationship that exists with the target resource.
+        @Json(name = "type")
+        @Nullable
+        public CodeSystemObservationRelationshipType type;
+
         // Resource that is related to this one.
         @Json(name = "target")
         public Reference target;
 
-        // A code specifying the kind of relationship that exists with the target resource.
-        @Json(name = "type")
-        @Nullable
-        public CodeSystems.ObservationRelationshipType type;
 
         /**
          * Constructor for all required properties.
@@ -401,5 +412,9 @@ public class Observation extends DomainResource {
         public String getResourceType() {
             return ObservationRelated.resourceType;
         }
+
+
     }
+
+
 }

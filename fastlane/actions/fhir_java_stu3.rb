@@ -64,14 +64,14 @@ module Fastlane
 
           modelTarget = "./fhir-java/src-gen/main/java/care/data4life/fhir/stu3/model"
           testTarget = "./fhir-java/src-gen/test/java/care/data4life/fhir/stu3/model"
-          testJsonTarget = "./fhir-java/src-gen/test/resources/"
+          testJsonTarget = "./fhir-java/src-gen/test/resources/stu3/"
 
 
           # Define filenames to include
           base = ["FhirElementFactory"]
           complex = ["Ratio", "Period", "Range", "Attachment", "Identifier", "HumanName", "Annotation", "Address", "ContactPoint", "SampledData", "Money", "Count", "Duration", "Quantity", "Distance", "Age", "CodeableConcept", "Signature", "Coding", "Timing", "Element"]
           special = ["Reference", "Narrative", "Extension", "Resource", "Meta"]
-          enum = ["CodeSystems"]
+          enum = Dir[ modelSource ].select{ |f| f[/CodeSystem+/] }.map{ |f| File.basename(f, '.*') }
           model = [
               "BackboneElement",
               "DocumentReference",
@@ -99,7 +99,8 @@ module Fastlane
               "UsageContext",
               "ReferralRequest",
               "ValueSet",
-              "Procedure"
+              "Procedure",
+              "Encounter"
           ]
 
           # FIXME

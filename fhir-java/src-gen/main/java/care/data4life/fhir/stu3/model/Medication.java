@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class Medication extends DomainResource {
 
@@ -42,25 +42,10 @@ public class Medication extends DomainResource {
     @Nullable
     public CodeableConcept code;
 
-    // Details about packaged medications.
-    @Json(name = "package")
+    // A code to indicate if the medication is in active use.
+    @Json(name = "status")
     @Nullable
-    public MedicationPackage fhirPackage;
-
-    // powder | tablets | capsule +.
-    @Json(name = "form")
-    @Nullable
-    public CodeableConcept form;
-
-    // Picture of the medication.
-    @Json(name = "image")
-    @Nullable
-    public List<Attachment> image;
-
-    // Active or inactive ingredient.
-    @Json(name = "ingredient")
-    @Nullable
-    public List<MedicationIngredient> ingredient;
+    public CodeSystemMedicationStatus status;
 
     // True if a brand.
     @Json(name = "isBrand")
@@ -77,10 +62,26 @@ public class Medication extends DomainResource {
     @Nullable
     public Reference manufacturer;
 
-    // A code to indicate if the medication is in active use.
-    @Json(name = "status")
+    // powder | tablets | capsule +.
+    @Json(name = "form")
     @Nullable
-    public CodeSystems.MedicationStatus status;
+    public CodeableConcept form;
+
+    // Active or inactive ingredient.
+    @Json(name = "ingredient")
+    @Nullable
+    public List<MedicationIngredient> ingredient;
+
+    // Details about packaged medications.
+    @Json(name = "package")
+    @Nullable
+    public MedicationPackage fhirPackage;
+
+    // Picture of the medication.
+    @Json(name = "image")
+    @Nullable
+    public List<Attachment> image;
+
 
     public Medication() {
     }
@@ -90,6 +91,7 @@ public class Medication extends DomainResource {
         return Medication.resourceType;
     }
 
+
     /**
      * Medication.java
      * <p>
@@ -98,21 +100,11 @@ public class Medication extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class MedicationIngredient extends BackboneElement {
 
         public static final String resourceType = "MedicationIngredient";
-
-        // Quantity of ingredient present.
-        @Json(name = "amount")
-        @Nullable
-        public Ratio amount;
-
-        // Active ingredient indicator.
-        @Json(name = "isActive")
-        @Nullable
-        public Boolean isActive;
 
         // The product contained.
         @Json(name = "itemCodeableConcept")
@@ -123,6 +115,17 @@ public class Medication extends DomainResource {
         @Json(name = "itemReference")
         @Nullable
         public Reference itemReference;
+
+        // Active ingredient indicator.
+        @Json(name = "isActive")
+        @Nullable
+        public Boolean isActive;
+
+        // Quantity of ingredient present.
+        @Json(name = "amount")
+        @Nullable
+        public Ratio amount;
+
 
         /**
          * Constructor for all required properties.
@@ -143,7 +146,10 @@ public class Medication extends DomainResource {
         public String getResourceType() {
             return MedicationIngredient.resourceType;
         }
+
+
     }
+
 
     /**
      * Medication.java
@@ -153,16 +159,11 @@ public class Medication extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class MedicationPackage extends BackboneElement {
 
         public static final String resourceType = "MedicationPackage";
-
-        // Identifies a single production run.
-        @Json(name = "batch")
-        @Nullable
-        public List<MedicationPackageBatch> batch;
 
         // E.g. box, vial, blister-pack.
         @Json(name = "container")
@@ -174,6 +175,12 @@ public class Medication extends DomainResource {
         @Nullable
         public List<MedicationPackageContent> content;
 
+        // Identifies a single production run.
+        @Json(name = "batch")
+        @Nullable
+        public List<MedicationPackageBatch> batch;
+
+
         public MedicationPackage() {
         }
 
@@ -181,7 +188,10 @@ public class Medication extends DomainResource {
         public String getResourceType() {
             return MedicationPackage.resourceType;
         }
+
+
     }
+
 
     /**
      * Medication.java
@@ -191,21 +201,22 @@ public class Medication extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class MedicationPackageBatch extends BackboneElement {
 
         public static final String resourceType = "MedicationPackageBatch";
+
+        // Identifier assigned to batch.
+        @Json(name = "lotNumber")
+        @Nullable
+        public String lotNumber;
 
         // When batch will expire.
         @Json(name = "expirationDate")
         @Nullable
         public FhirDateTime expirationDate;
 
-        // Identifier assigned to batch.
-        @Json(name = "lotNumber")
-        @Nullable
-        public String lotNumber;
 
         public MedicationPackageBatch() {
         }
@@ -214,7 +225,10 @@ public class Medication extends DomainResource {
         public String getResourceType() {
             return MedicationPackageBatch.resourceType;
         }
+
+
     }
+
 
     /**
      * Medication.java
@@ -224,16 +238,11 @@ public class Medication extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Medication) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class MedicationPackageContent extends BackboneElement {
 
         public static final String resourceType = "MedicationPackageContent";
-
-        // Quantity present in the package.
-        @Json(name = "amount")
-        @Nullable
-        public Quantity amount;
 
         // The item in the package.
         @Json(name = "itemCodeableConcept")
@@ -244,6 +253,12 @@ public class Medication extends DomainResource {
         @Json(name = "itemReference")
         @Nullable
         public Reference itemReference;
+
+        // Quantity present in the package.
+        @Json(name = "amount")
+        @Nullable
+        public Quantity amount;
+
 
         /**
          * Constructor for all required properties.
@@ -264,5 +279,9 @@ public class Medication extends DomainResource {
         public String getResourceType() {
             return MedicationPackageContent.resourceType;
         }
+
+
     }
+
+
 }

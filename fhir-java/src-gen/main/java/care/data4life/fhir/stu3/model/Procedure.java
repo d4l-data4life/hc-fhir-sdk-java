@@ -31,71 +31,35 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Procedure) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class Procedure extends DomainResource {
 
     public static final String resourceType = "Procedure";
-
-    // A request for this procedure.
-    @Json(name = "basedOn")
-    @Nullable
-    public List<Reference> basedOn;
-
-    // Target body sites.
-    @Json(name = "bodySite")
-    @Nullable
-    public List<CodeableConcept> bodySite;
-
-    // Classification of the procedure.
-    @Json(name = "category")
-    @Nullable
-    public CodeableConcept category;
-
-    // Identification of the procedure.
-    @Json(name = "code")
-    @Nullable
-    public CodeableConcept code;
-
-    // Complication following the procedure.
-    @Json(name = "complication")
-    @Nullable
-    public List<CodeableConcept> complication;
-
-    // A condition that is a result of the procedure.
-    @Json(name = "complicationDetail")
-    @Nullable
-    public List<Reference> complicationDetail;
-
-    // Encounter or episode associated with the procedure.
-    @Json(name = "context")
-    @Nullable
-    public Reference context;
-
-    // Instantiates protocol or definition.
-    @Json(name = "definition")
-    @Nullable
-    public List<Reference> definition;
-
-    // Device changed in procedure.
-    @Json(name = "focalDevice")
-    @Nullable
-    public List<ProcedureFocalDevice> focalDevice;
-
-    // Instructions for follow up.
-    @Json(name = "followUp")
-    @Nullable
-    public List<CodeableConcept> followUp;
 
     // External Identifiers for this procedure.
     @Json(name = "identifier")
     @Nullable
     public List<Identifier> identifier;
 
-    // Where the procedure happened.
-    @Json(name = "location")
+    // Instantiates protocol or definition.
+    @Json(name = "definition")
     @Nullable
-    public Reference location;
+    public List<Reference> definition;
+
+    // A request for this procedure.
+    @Json(name = "basedOn")
+    @Nullable
+    public List<Reference> basedOn;
+
+    // Part of referenced event.
+    @Json(name = "partOf")
+    @Nullable
+    public List<Reference> partOf;
+
+    // A code specifying the state of the procedure. Generally this will be in-progress or completed state.
+    @Json(name = "status")
+    public CodeSystemEventStatus status;
 
     // True if procedure was not performed as scheduled.
     @Json(name = "notDone")
@@ -107,20 +71,24 @@ public class Procedure extends DomainResource {
     @Nullable
     public CodeableConcept notDoneReason;
 
-    // Additional information about the procedure.
-    @Json(name = "note")
+    // Classification of the procedure.
+    @Json(name = "category")
     @Nullable
-    public List<Annotation> note;
+    public CodeableConcept category;
 
-    // The result of procedure.
-    @Json(name = "outcome")
+    // Identification of the procedure.
+    @Json(name = "code")
     @Nullable
-    public CodeableConcept outcome;
+    public CodeableConcept code;
 
-    // Part of referenced event.
-    @Json(name = "partOf")
+    // Who the procedure was performed on.
+    @Json(name = "subject")
+    public Reference subject;
+
+    // Encounter or episode associated with the procedure.
+    @Json(name = "context")
     @Nullable
-    public List<Reference> partOf;
+    public Reference context;
 
     // Date/Period the procedure was performed.
     @Json(name = "performedDateTime")
@@ -137,6 +105,11 @@ public class Procedure extends DomainResource {
     @Nullable
     public List<ProcedurePerformer> performer;
 
+    // Where the procedure happened.
+    @Json(name = "location")
+    @Nullable
+    public Reference location;
+
     // Coded reason procedure performed.
     @Json(name = "reasonCode")
     @Nullable
@@ -147,36 +120,64 @@ public class Procedure extends DomainResource {
     @Nullable
     public List<Reference> reasonReference;
 
+    // Target body sites.
+    @Json(name = "bodySite")
+    @Nullable
+    public List<CodeableConcept> bodySite;
+
+    // The result of procedure.
+    @Json(name = "outcome")
+    @Nullable
+    public CodeableConcept outcome;
+
     // Any report resulting from the procedure.
     @Json(name = "report")
     @Nullable
     public List<Reference> report;
 
-    // A code specifying the state of the procedure. Generally this will be in-progress or completed state.
-    @Json(name = "status")
-    public CodeSystems.EventStatus status;
-
-    // Who the procedure was performed on.
-    @Json(name = "subject")
-    public Reference subject;
-
-    // Coded items used during the procedure.
-    @Json(name = "usedCode")
+    // Complication following the procedure.
+    @Json(name = "complication")
     @Nullable
-    public List<CodeableConcept> usedCode;
+    public List<CodeableConcept> complication;
+
+    // A condition that is a result of the procedure.
+    @Json(name = "complicationDetail")
+    @Nullable
+    public List<Reference> complicationDetail;
+
+    // Instructions for follow up.
+    @Json(name = "followUp")
+    @Nullable
+    public List<CodeableConcept> followUp;
+
+    // Additional information about the procedure.
+    @Json(name = "note")
+    @Nullable
+    public List<Annotation> note;
+
+    // Device changed in procedure.
+    @Json(name = "focalDevice")
+    @Nullable
+    public List<ProcedureFocalDevice> focalDevice;
 
     // Items used during procedure.
     @Json(name = "usedReference")
     @Nullable
     public List<Reference> usedReference;
 
+    // Coded items used during the procedure.
+    @Json(name = "usedCode")
+    @Nullable
+    public List<CodeableConcept> usedCode;
+
+
     /**
      * Constructor for all required properties.
      *
-     * @param status  CodeSystems.EventStatus
+     * @param status  CodeSystemEventStatus
      * @param subject Reference
      */
-    public Procedure(CodeSystems.EventStatus status, Reference subject) {
+    public Procedure(CodeSystemEventStatus status, Reference subject) {
         this.status = status;
         this.subject = subject;
     }
@@ -185,6 +186,7 @@ public class Procedure extends DomainResource {
     public String getResourceType() {
         return Procedure.resourceType;
     }
+
 
     /**
      * Procedure.java
@@ -196,7 +198,7 @@ public class Procedure extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Procedure) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ProcedureFocalDevice extends BackboneElement {
 
@@ -211,6 +213,7 @@ public class Procedure extends DomainResource {
         @Json(name = "manipulated")
         public Reference manipulated;
 
+
         /**
          * Constructor for all required properties.
          *
@@ -224,7 +227,10 @@ public class Procedure extends DomainResource {
         public String getResourceType() {
             return ProcedureFocalDevice.resourceType;
         }
+
+
     }
+
 
     /**
      * Procedure.java
@@ -234,11 +240,16 @@ public class Procedure extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Procedure) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ProcedurePerformer extends BackboneElement {
 
         public static final String resourceType = "ProcedurePerformer";
+
+        // The role the actor was in.
+        @Json(name = "role")
+        @Nullable
+        public CodeableConcept role;
 
         // The reference to the practitioner.
         @Json(name = "actor")
@@ -249,10 +260,6 @@ public class Procedure extends DomainResource {
         @Nullable
         public Reference onBehalfOf;
 
-        // The role the actor was in.
-        @Json(name = "role")
-        @Nullable
-        public CodeableConcept role;
 
         /**
          * Constructor for all required properties.
@@ -267,5 +274,9 @@ public class Procedure extends DomainResource {
         public String getResourceType() {
             return ProcedurePerformer.resourceType;
         }
+
+
     }
+
+
 }

@@ -60,7 +60,7 @@ public {% if not loop.first %}static {% endif %}class {{ klass.name }}{% if klas
 	{%- else %}
 	@Nullable
     {%- endif %}
-	public {% if prop.is_array %}List<{% endif %}{% if prop.enum %}CodeSystems.{% endif %}{{ prop.enum.name or prop.class_name }}{% if prop.is_array %}>{% endif %} {{ prop.name }};
+	public {% if prop.is_array %}List<{% endif %}{% if prop.enum %}CodeSystem{% endif %}{{ prop.enum.name or prop.class_name }}{% if prop.is_array %}>{% endif %} {{ prop.name }};
 {%- endfor %}
 
     {% if klass.has_nonoptional %}
@@ -68,7 +68,7 @@ public {% if not loop.first %}static {% endif %}class {{ klass.name }}{% if klas
 	 * Constructor for all required properties.
 	 * {%- for nonop in klass.nonexpanded_nonoptionals %}
 	 * {%- if nonop.one_of_many %} @param {{ nonop.one_of_many }} as one of{% for expanded in klass.expanded_nonoptionals[nonop.one_of_many] %}{%- if not loop.first %},{% endif %} {{ expanded.class_name }}{%- endfor -%}
-	 * {%- else %} @param {{ nonop.name }} {% if nonop.is_array %}List of {% endif %}{% if nonop.enum %}CodeSystems.{% endif %}{{ nonop.enum.name or nonop.class_name }}{%- endif %}
+	 * {%- else %} @param {{ nonop.name }} {% if nonop.is_array %}List of {% endif %}{% if nonop.enum %}CodeSystem{% endif %}{{ nonop.enum.name or nonop.class_name }}{%- endif %}
 	 * {%- endfor %}
 	 */
 	public {{ klass.name }}(
@@ -77,7 +77,7 @@ public {% if not loop.first %}static {% endif %}class {{ klass.name }}{% if klas
 		{%- if nonop.one_of_many -%}
 		Object {{ nonop.one_of_many }}
 		{%- else -%}
-		{% if nonop.is_array %}List<{% endif %}{% if nonop.enum %}CodeSystems.{% endif %}{{ nonop.enum.name or nonop.class_name }}{% if nonop.is_array %}>{% endif %} {{ nonop.name }}
+		{% if nonop.is_array %}List<{% endif %}{% if nonop.enum %}CodeSystem{% endif %}{{ nonop.enum.name or nonop.class_name }}{% if nonop.is_array %}>{% endif %} {{ nonop.name }}
 		{%- endif -%}
 		{%- endfor -%}
 	) {

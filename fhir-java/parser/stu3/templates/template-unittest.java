@@ -51,7 +51,7 @@ public class {{ class.name }}Test {
 		{{ class.name }} data = parser.toFhir({{ class.name }}.class , sourceJson);
 		{% for onetest in tcase.tests -%}
 		{%- if onetest.enum %}
-		assertEquals(data.{{ onetest.path }}, CodeSystems.{{ onetest.enum }}.
+		assertEquals(data.{{ onetest.path }}, CodeSystem{{ onetest.enum }}.
 		{%- if onetest.value == "=" -%}
 		EQUAL
 		{%- else -%}

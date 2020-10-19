@@ -30,43 +30,22 @@ import javax.annotation.Nullable;
  * responded to.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
- * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
- * on 2020-07-29
+ * on 2020-10-15
  */
 public class QuestionnaireResponse extends DomainResource {
 
     public static final String resourceType = "QuestionnaireResponse";
-
-    // Person who received and recorded the answers.
-    @Json(name = "author")
-    @Nullable
-    public Reference author;
-
-    // Date the answers were gathered.
-    @Json(name = "authored")
-    @Nullable
-    public FhirDateTime authored;
-
-    // Request fulfilled by this QuestionnaireResponse.
-    @Json(name = "basedOn")
-    @Nullable
-    public List<Reference> basedOn;
-
-    // Encounter or Episode during which questionnaire was completed.
-    @Json(name = "context")
-    @Nullable
-    public Reference context;
 
     // Unique id for this set of answers.
     @Json(name = "identifier")
     @Nullable
     public Identifier identifier;
 
-    // Groups and questions.
-    @Json(name = "item")
+    // Request fulfilled by this QuestionnaireResponse.
+    @Json(name = "basedOn")
     @Nullable
-    public List<QuestionnaireResponseItem> item;
+    public List<Reference> basedOn;
 
     // Part of this action.
     @Json(name = "parent")
@@ -78,26 +57,47 @@ public class QuestionnaireResponse extends DomainResource {
     @Nullable
     public Reference questionnaire;
 
-    // The person who answered the questions.
-    @Json(name = "source")
-    @Nullable
-    public Reference source;
-
     // The position of the questionnaire response within its overall lifecycle.
     @Json(name = "status")
-    public CodeSystems.QuestionnaireResponseStatus status;
+    public CodeSystemQuestionnaireResponseStatus status;
 
     // The subject of the questions.
     @Json(name = "subject")
     @Nullable
     public Reference subject;
 
+    // Encounter or Episode during which questionnaire was completed.
+    @Json(name = "context")
+    @Nullable
+    public Reference context;
+
+    // Date the answers were gathered.
+    @Json(name = "authored")
+    @Nullable
+    public FhirDateTime authored;
+
+    // Person who received and recorded the answers.
+    @Json(name = "author")
+    @Nullable
+    public Reference author;
+
+    // The person who answered the questions.
+    @Json(name = "source")
+    @Nullable
+    public Reference source;
+
+    // Groups and questions.
+    @Json(name = "item")
+    @Nullable
+    public List<QuestionnaireResponseItem> item;
+
+
     /**
      * Constructor for all required properties.
      *
-     * @param status CodeSystems.QuestionnaireResponseStatus
+     * @param status CodeSystemQuestionnaireResponseStatus
      */
-    public QuestionnaireResponse(CodeSystems.QuestionnaireResponseStatus status) {
+    public QuestionnaireResponse(CodeSystemQuestionnaireResponseStatus status) {
         this.status = status;
     }
 
@@ -106,48 +106,49 @@ public class QuestionnaireResponse extends DomainResource {
         return QuestionnaireResponse.resourceType;
     }
 
+
     /**
      * QuestionnaireResponse.java
      * <p>
      * A group or question item from the original questionnaire for which answers are provided.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
-     * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
-     * on 2020-07-29
+     * on 2020-10-15
      */
     public static class QuestionnaireResponseItem extends BackboneElement {
 
         public static final String resourceType = "QuestionnaireResponseItem";
 
-        // The response(s) to the question.
-        @Json(name = "answer")
-        @Nullable
-        public List<QuestionnaireResponseItemAnswer> answer;
+        // Pointer to specific item from Questionnaire.
+        @Json(name = "linkId")
+        public String linkId;
 
         // ElementDefinition - details for the item.
         @Json(name = "definition")
         @Nullable
         public String definition;
 
-        // Nested questionnaire response items.
-        @Json(name = "item")
+        // Name for group or question text.
+        @Json(name = "text")
         @Nullable
-        public List<QuestionnaireResponseItem> item;
-
-        // Pointer to specific item from Questionnaire.
-        @Json(name = "linkId")
-        public String linkId;
+        public String text;
 
         // The subject this group's answers are about.
         @Json(name = "subject")
         @Nullable
         public Reference subject;
 
-        // Name for group or question text.
-        @Json(name = "text")
+        // The response(s) to the question.
+        @Json(name = "answer")
         @Nullable
-        public String text;
+        public List<QuestionnaireResponseItemAnswer> answer;
+
+        // Nested questionnaire response items.
+        @Json(name = "item")
+        @Nullable
+        public List<QuestionnaireResponseItem> item;
+
 
         /**
          * Constructor for all required properties.
@@ -162,7 +163,10 @@ public class QuestionnaireResponse extends DomainResource {
         public String getResourceType() {
             return QuestionnaireResponseItem.resourceType;
         }
+
+
     }
+
 
     /**
      * QuestionnaireResponse.java
@@ -170,43 +174,17 @@ public class QuestionnaireResponse extends DomainResource {
      * The respondent's answer(s) to the question.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
-     * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
-     * on 2020-07-29
+     * on 2020-10-15
      */
     public static class QuestionnaireResponseItemAnswer extends BackboneElement {
 
         public static final String resourceType = "QuestionnaireResponseItemAnswer";
 
-        // Nested groups and questions.
-        @Json(name = "item")
-        @Nullable
-        public List<QuestionnaireResponseItem> item;
-
-        // Single-valued answer to the question.
-        @Json(name = "valueAttachment")
-        @Nullable
-        public Attachment valueAttachment;
-
         // Single-valued answer to the question.
         @Json(name = "valueBoolean")
         @Nullable
         public Boolean valueBoolean;
-
-        // Single-valued answer to the question.
-        @Json(name = "valueCoding")
-        @Nullable
-        public Coding valueCoding;
-
-        // Single-valued answer to the question.
-        @Json(name = "valueDate")
-        @Nullable
-        public FhirDate valueDate;
-
-        // Single-valued answer to the question.
-        @Json(name = "valueDateTime")
-        @Nullable
-        public FhirDateTime valueDateTime;
 
         // Single-valued answer to the question.
         @Json(name = "valueDecimal")
@@ -219,6 +197,41 @@ public class QuestionnaireResponse extends DomainResource {
         public Integer valueInteger;
 
         // Single-valued answer to the question.
+        @Json(name = "valueDate")
+        @Nullable
+        public FhirDate valueDate;
+
+        // Single-valued answer to the question.
+        @Json(name = "valueDateTime")
+        @Nullable
+        public FhirDateTime valueDateTime;
+
+        // Single-valued answer to the question.
+        @Json(name = "valueTime")
+        @Nullable
+        public FhirTime valueTime;
+
+        // Single-valued answer to the question.
+        @Json(name = "valueString")
+        @Nullable
+        public String valueString;
+
+        // Single-valued answer to the question.
+        @Json(name = "valueUri")
+        @Nullable
+        public String valueUri;
+
+        // Single-valued answer to the question.
+        @Json(name = "valueAttachment")
+        @Nullable
+        public Attachment valueAttachment;
+
+        // Single-valued answer to the question.
+        @Json(name = "valueCoding")
+        @Nullable
+        public Coding valueCoding;
+
+        // Single-valued answer to the question.
         @Json(name = "valueQuantity")
         @Nullable
         public Quantity valueQuantity;
@@ -228,20 +241,11 @@ public class QuestionnaireResponse extends DomainResource {
         @Nullable
         public Reference valueReference;
 
-        // Single-valued answer to the question.
-        @Json(name = "valueString")
+        // Nested groups and questions.
+        @Json(name = "item")
         @Nullable
-        public String valueString;
+        public List<QuestionnaireResponseItem> item;
 
-        // Single-valued answer to the question.
-        @Json(name = "valueTime")
-        @Nullable
-        public FhirTime valueTime;
-
-        // Single-valued answer to the question.
-        @Json(name = "valueUri")
-        @Nullable
-        public String valueUri;
 
         public QuestionnaireResponseItemAnswer() {
         }
@@ -250,5 +254,9 @@ public class QuestionnaireResponse extends DomainResource {
         public String getResourceType() {
             return QuestionnaireResponseItemAnswer.resourceType;
         }
+
+
     }
+
+
 }

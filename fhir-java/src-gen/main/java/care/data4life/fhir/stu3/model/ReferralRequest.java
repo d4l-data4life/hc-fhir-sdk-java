@@ -31,55 +31,68 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ReferralRequest">ReferralRequest</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ReferralRequest) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class ReferralRequest extends DomainResource {
 
     public static final String resourceType = "ReferralRequest";
-
-    // Date of creation/activation.
-    @Json(name = "authoredOn")
-    @Nullable
-    public FhirDateTime authoredOn;
-
-    // Request fulfilled by this request.
-    @Json(name = "basedOn")
-    @Nullable
-    public List<Reference> basedOn;
-
-    // Originating encounter.
-    @Json(name = "context")
-    @Nullable
-    public Reference context;
-
-    // Instantiates protocol or definition.
-    @Json(name = "definition")
-    @Nullable
-    public List<Reference> definition;
-
-    // A textual description of the referral.
-    @Json(name = "description")
-    @Nullable
-    public String description;
-
-    // Composite request this is part of.
-    @Json(name = "groupIdentifier")
-    @Nullable
-    public Identifier groupIdentifier;
 
     // Business identifier.
     @Json(name = "identifier")
     @Nullable
     public List<Identifier> identifier;
 
+    // Instantiates protocol or definition.
+    @Json(name = "definition")
+    @Nullable
+    public List<Reference> definition;
+
+    // Request fulfilled by this request.
+    @Json(name = "basedOn")
+    @Nullable
+    public List<Reference> basedOn;
+
+    // Request(s) replaced by this request.
+    @Json(name = "replaces")
+    @Nullable
+    public List<Reference> replaces;
+
+    // Composite request this is part of.
+    @Json(name = "groupIdentifier")
+    @Nullable
+    public Identifier groupIdentifier;
+
+    // The status of the authorization/intention reflected by the referral request record.
+    @Json(name = "status")
+    public CodeSystemRequestStatus status;
+
     // Distinguishes the "level" of authorization/demand implicit in this request.
     @Json(name = "intent")
-    public CodeSystems.RequestIntent intent;
+    public CodeSystemRequestIntent intent;
 
-    // Comments made about referral request.
-    @Json(name = "note")
+    // Referral/Transition of care request type.
+    @Json(name = "type")
     @Nullable
-    public List<Annotation> note;
+    public CodeableConcept type;
+
+    // An indication of the urgency of referral (or where applicable the type of transfer of care) request.
+    @Json(name = "priority")
+    @Nullable
+    public CodeSystemRequestPriority priority;
+
+    // Actions requested as part of the referral.
+    @Json(name = "serviceRequested")
+    @Nullable
+    public List<CodeableConcept> serviceRequested;
+
+    // Patient referred to care or transfer.
+    @Json(name = "subject")
+    public Reference subject;
+
+    // Originating encounter.
+    @Json(name = "context")
+    @Nullable
+    public Reference context;
 
     // When the service(s) requested in the referral should occur.
     @Json(name = "occurrenceDateTime")
@@ -91,10 +104,25 @@ public class ReferralRequest extends DomainResource {
     @Nullable
     public Period occurrencePeriod;
 
-    // An indication of the urgency of referral (or where applicable the type of transfer of care) request.
-    @Json(name = "priority")
+    // Date of creation/activation.
+    @Json(name = "authoredOn")
     @Nullable
-    public CodeSystems.RequestPriority priority;
+    public FhirDateTime authoredOn;
+
+    // Who/what is requesting service.
+    @Json(name = "requester")
+    @Nullable
+    public ReferralRequestRequester requester;
+
+    // The clinical specialty (discipline) that the referral is requested for.
+    @Json(name = "specialty")
+    @Nullable
+    public CodeableConcept specialty;
+
+    // Receiver of referral / transfer of care request.
+    @Json(name = "recipient")
+    @Nullable
+    public List<Reference> recipient;
 
     // Reason for referral / transfer of care request.
     @Json(name = "reasonCode")
@@ -106,65 +134,37 @@ public class ReferralRequest extends DomainResource {
     @Nullable
     public List<Reference> reasonReference;
 
-    // Receiver of referral / transfer of care request.
-    @Json(name = "recipient")
+    // A textual description of the referral.
+    @Json(name = "description")
     @Nullable
-    public List<Reference> recipient;
-
-    // Key events in history of request.
-    @Json(name = "relevantHistory")
-    @Nullable
-    public List<Reference> relevantHistory;
-
-    // Request(s) replaced by this request.
-    @Json(name = "replaces")
-    @Nullable
-    public List<Reference> replaces;
-
-    // Who/what is requesting service.
-    @Json(name = "requester")
-    @Nullable
-    public ReferralRequestRequester requester;
-
-    // Actions requested as part of the referral.
-    @Json(name = "serviceRequested")
-    @Nullable
-    public List<CodeableConcept> serviceRequested;
-
-    // The clinical specialty (discipline) that the referral is requested for.
-    @Json(name = "specialty")
-    @Nullable
-    public CodeableConcept specialty;
-
-    // The status of the authorization/intention reflected by the referral request record.
-    @Json(name = "status")
-    public CodeSystems.RequestStatus status;
-
-    // Patient referred to care or transfer.
-    @Json(name = "subject")
-    public Reference subject;
+    public String description;
 
     // Additonal information to support referral or transfer of care request.
     @Json(name = "supportingInfo")
     @Nullable
     public List<Reference> supportingInfo;
 
-    // Referral/Transition of care request type.
-    @Json(name = "type")
+    // Comments made about referral request.
+    @Json(name = "note")
     @Nullable
-    public CodeableConcept type;
+    public List<Annotation> note;
+
+    // Key events in history of request.
+    @Json(name = "relevantHistory")
+    @Nullable
+    public List<Reference> relevantHistory;
+
 
     /**
      * Constructor for all required properties.
      *
-     * @param intent  CodeSystems.RequestIntent
-     * @param status  CodeSystems.RequestStatus
+     * @param status  CodeSystemRequestStatus
+     * @param intent  CodeSystemRequestIntent
      * @param subject Reference
      */
-    public ReferralRequest(CodeSystems.RequestIntent intent, CodeSystems.RequestStatus status,
-                           Reference subject) {
-        this.intent = intent;
+    public ReferralRequest(CodeSystemRequestStatus status, CodeSystemRequestIntent intent, Reference subject) {
         this.status = status;
+        this.intent = intent;
         this.subject = subject;
     }
 
@@ -172,6 +172,7 @@ public class ReferralRequest extends DomainResource {
     public String getResourceType() {
         return ReferralRequest.resourceType;
     }
+
 
     /**
      * ReferralRequest.java
@@ -181,7 +182,7 @@ public class ReferralRequest extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ReferralRequest">ReferralRequest</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ReferralRequest) on
-     * 2020-07-29
+     * 2020-10-15
      */
     public static class ReferralRequestRequester extends BackboneElement {
 
@@ -196,6 +197,7 @@ public class ReferralRequest extends DomainResource {
         @Nullable
         public Reference onBehalfOf;
 
+
         /**
          * Constructor for all required properties.
          *
@@ -209,5 +211,9 @@ public class ReferralRequest extends DomainResource {
         public String getResourceType() {
             return ReferralRequestRequester.resourceType;
         }
+
+
     }
+
+
 }

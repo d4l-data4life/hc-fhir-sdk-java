@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="125px" preserveAspectRatio="none" style="width:165px;height:125px;" version="1.1" viewBox="0 0 165 125" width="165px" zoomAndPan="magnify"><defs/><g><!--MD5=[174086ce5a0f284ad944506b46dfb378]
+class MeasureScoring--><rect fill="#FEFECE" height="107.8203" id="MeasureScoring" style="stroke: #000000; stroke-width: 1.5;" width="147" x="7" y="7"/><ellipse cx="31.45" cy="23" fill="#EB937F" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><path d="M35.0643,29.5 L27.3445,29.5 L27.3445,17.1069 L35.0643,17.1069 L35.0643,19.2651 L29.7933,19.2651 L29.7933,21.938 L34.5662,21.938 L34.5662,24.0962 L29.7933,24.0962 L29.7933,27.3418 L35.0643,27.3418 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="90" x="49.55" y="27.5352">MeasureScoring</text><line style="stroke: #000000; stroke-width: 1.5;" x1="8" x2="153" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="71" x="15" y="55.6348">PROPORTION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="34" x="15" y="72.5898">RATIO</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="15" y="89.5449">CONTINUOUS_VARIABLE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="15" y="106.5">COHORT</text><!--MD5=[939d9b59494bfe6cb9bd83f9caf930bc]
+@startuml
+skinparam Shadowing false
+skinparam padding 2
+skinparam class {
+    BorderColor Black
+}
+
+hide methods
+
+enum MeasureScoring {
+    PROPORTION
+    RATIO
+    CONTINUOUS_VARIABLE
+    COHORT
+}
+
+@enduml
+
+PlantUML version 1.2020.06(Sun Apr 05 14:38:32 CEST 2020)
+(APACHE source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 1.8.0_242-release-1644-b3-6222593
+Operating System: Mac OS X
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>

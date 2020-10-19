@@ -23,11 +23,12 @@ package care.data4life.fhir.stu3.model;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Money">Money</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Money) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Money) on 2020-10-15
  */
 public class Money extends Quantity {
 
     public static final String resourceType = "Money";
+
 
     public Money() {
     }
@@ -36,4 +37,6 @@ public class Money extends Quantity {
     public String getResourceType() {
         return Money.resourceType;
     }
+
+
 }

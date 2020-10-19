@@ -27,21 +27,22 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Period">Period</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Period) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Period) on 2020-10-15
  */
 public class Period extends Element {
 
     public static final String resourceType = "Period";
+
+    // Starting time with inclusive boundary.
+    @Json(name = "start")
+    @Nullable
+    public FhirDateTime start;
 
     // End time with inclusive boundary, if not ongoing.
     @Json(name = "end")
     @Nullable
     public FhirDateTime end;
 
-    // Starting time with inclusive boundary.
-    @Json(name = "start")
-    @Nullable
-    public FhirDateTime start;
 
     public Period() {
     }
@@ -50,4 +51,6 @@ public class Period extends Element {
     public String getResourceType() {
         return Period.resourceType;
     }
+
+
 }

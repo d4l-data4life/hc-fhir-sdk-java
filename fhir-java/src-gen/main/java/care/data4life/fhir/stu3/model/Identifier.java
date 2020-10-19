@@ -28,41 +28,42 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Identifier">Identifier</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Identifier) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class Identifier extends Element {
 
     public static final String resourceType = "Identifier";
 
-    // Organization that issued id (may be just text).
-    @Json(name = "assigner")
+    // The purpose of this identifier.
+    @Json(name = "use")
     @Nullable
-    public Reference assigner;
-
-    // Time period when id is/was valid for use.
-    @Json(name = "period")
-    @Nullable
-    public Period period;
-
-    // The namespace for the identifier value.
-    @Json(name = "system")
-    @Nullable
-    public String system;
+    public CodeSystemIdentifierUse use;
 
     // Description of identifier.
     @Json(name = "type")
     @Nullable
     public CodeableConcept type;
 
-    // The purpose of this identifier.
-    @Json(name = "use")
+    // The namespace for the identifier value.
+    @Json(name = "system")
     @Nullable
-    public CodeSystems.IdentifierUse use;
+    public String system;
 
     // The value that is unique.
     @Json(name = "value")
     @Nullable
     public String value;
+
+    // Time period when id is/was valid for use.
+    @Json(name = "period")
+    @Nullable
+    public Period period;
+
+    // Organization that issued id (may be just text).
+    @Json(name = "assigner")
+    @Nullable
+    public Reference assigner;
+
 
     public Identifier() {
     }
@@ -71,4 +72,6 @@ public class Identifier extends Element {
     public String getResourceType() {
         return Identifier.resourceType;
     }
+
+
 }

@@ -32,61 +32,62 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Address">Address</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Address) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Address) on 2020-10-15
  */
 public class Address extends Element {
 
     public static final String resourceType = "Address";
 
-    // Name of city, town etc..
-    @Json(name = "city")
+    // The purpose of this address.
+    @Json(name = "use")
     @Nullable
-    public String city;
+    public CodeSystemAddressUse use;
 
-    // Country (e.g. can be ISO 3166 2 or 3 letter code).
-    @Json(name = "country")
+    // Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
+    @Json(name = "type")
     @Nullable
-    public String country;
-
-    // District name (aka county).
-    @Json(name = "district")
-    @Nullable
-    public String district;
-
-    // Street name, number, direction & P.O. Box etc..
-    @Json(name = "line")
-    @Nullable
-    public List<String> line;
-
-    // Time period when address was/is in use.
-    @Json(name = "period")
-    @Nullable
-    public Period period;
-
-    // Postal code for area.
-    @Json(name = "postalCode")
-    @Nullable
-    public String postalCode;
-
-    // Sub-unit of country (abbreviations ok).
-    @Json(name = "state")
-    @Nullable
-    public String state;
+    public CodeSystemAddressType type;
 
     // Text representation of the address.
     @Json(name = "text")
     @Nullable
     public String text;
 
-    // Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
-    @Json(name = "type")
+    // Street name, number, direction & P.O. Box etc..
+    @Json(name = "line")
     @Nullable
-    public CodeSystems.AddressType type;
+    public List<String> line;
 
-    // The purpose of this address.
-    @Json(name = "use")
+    // Name of city, town etc..
+    @Json(name = "city")
     @Nullable
-    public CodeSystems.AddressUse use;
+    public String city;
+
+    // District name (aka county).
+    @Json(name = "district")
+    @Nullable
+    public String district;
+
+    // Sub-unit of country (abbreviations ok).
+    @Json(name = "state")
+    @Nullable
+    public String state;
+
+    // Postal code for area.
+    @Json(name = "postalCode")
+    @Nullable
+    public String postalCode;
+
+    // Country (e.g. can be ISO 3166 2 or 3 letter code).
+    @Json(name = "country")
+    @Nullable
+    public String country;
+
+    // Time period when address was/is in use.
+    @Json(name = "period")
+    @Nullable
+    public Period period;
+
 
     public Address() {
     }
@@ -95,4 +96,6 @@ public class Address extends Element {
     public String getResourceType() {
         return Address.resourceType;
     }
+
+
 }

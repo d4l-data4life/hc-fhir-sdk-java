@@ -42,7 +42,7 @@ public class FhirR4MoshiJsonParser implements FhirJsonParser<FhirR4Base> {
 
     public FhirR4MoshiJsonParser() {
         this.moshi = new Moshi.Builder()
-                .add(new FhirStu3BaseAdapterFactory())
+                .add(new FhirR4BaseAdapterFactory())
                 .add(URL.class, new FhirUrlJsonAdapter().nullSafe())
                 .add(BigDecimal.class, new BigDecimalJsonAdapter())
                 .add(FhirDate.class, new FhirDateJsonAdapter().nullSafe())

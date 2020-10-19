@@ -16,6 +16,7 @@
 
 package care.data4life.fhir.stu3.model;
 
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
@@ -33,7 +34,7 @@ import static org.junit.Assert.assertEquals;
  * coordination and delivery of care for a patient.
  * <p>
  * <p>
- * "Generated from FHIR 3.0.1.11917 on 2020-07-29
+ * "Generated from FHIR 3.0.1.11917 on 2020-10-15
  */
 public class CareTeamTest {
 
@@ -45,8 +46,7 @@ public class CareTeamTest {
         CareTeam data = parser.toFhir(CareTeam.class, sourceJson);
 
         assertEquals(data.category.get(0).coding.get(0).code, "encounter");
-        assertEquals(data.category.get(0).coding.get(0).system,
-                "http://hl7.org/fhir/care-team-category");
+        assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org/fhir/care-team-category");
         assertEquals(data.contained.get(0).id, "pr1");
         assertEquals(data.context.reference, "Encounter/example");
         assertEquals(data.id, "example");
@@ -62,11 +62,11 @@ public class CareTeamTest {
         assertEquals(data.participant.get(1).period.end.toString(), "2013-01-01");
         assertEquals(data.participant.get(1).role.text, "adviser");
         assertEquals(data.period.end.toString(), "2013-01-01");
-        assertEquals(data.status, CodeSystems.CareTeamStatus.ACTIVE);
+        assertEquals(data.status, CodeSystemCareTeamStatus.ACTIVE);
         assertEquals(data.subject.display, "Peter James Chalmers");
         assertEquals(data.subject.reference, "Patient/example");
         assertEquals(data.text.div, "<div xmlns=\"http://www.w3.org/1999/xhtml\">Care Team</div>");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 

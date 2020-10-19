@@ -28,26 +28,27 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Reference">Reference</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Reference) on
- * 2020-07-29
+ * 2020-10-15
  */
 public class Reference extends Element {
 
     public static final String resourceType = "Reference";
 
-    // Text alternative for the resource.
-    @Json(name = "display")
+    // Literal reference, Relative, internal or absolute URL.
+    @Json(name = "reference")
     @Nullable
-    public String display;
+    public String reference;
 
     // Logical reference, when literal reference is not known.
     @Json(name = "identifier")
     @Nullable
     public Identifier identifier;
 
-    // Literal reference, Relative, internal or absolute URL.
-    @Json(name = "reference")
+    // Text alternative for the resource.
+    @Json(name = "display")
     @Nullable
-    public String reference;
+    public String display;
+
 
     public Reference() {
     }
@@ -56,4 +57,6 @@ public class Reference extends Element {
     public String getResourceType() {
         return Reference.resourceType;
     }
+
+
 }
