@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The type of an address (physical / postal).
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAddressType {
 
-    /**
-     * Mailing addresses - PO Boxes and care-of addresses.
-     */
-    @Json(name = "postal")
-    POSTAL,
+	/**
+	* Mailing addresses - PO Boxes and care-of addresses.
+	*/
+	@Json(name = "postal")
+	POSTAL,
 
-    /**
-     * A physical address that can be visited.
-     */
-    @Json(name = "physical")
-    PHYSICAL,
+	/**
+	* A physical address that can be visited.
+	*/
+	@Json(name = "physical")
+	PHYSICAL,
 
-    /**
-     * An address that is both physical and postal.
-     */
-    @Json(name = "both")
-    BOTH,
+	/**
+	* An address that is both physical and postal.
+	*/
+	@Json(name = "both")
+	BOTH,
 }

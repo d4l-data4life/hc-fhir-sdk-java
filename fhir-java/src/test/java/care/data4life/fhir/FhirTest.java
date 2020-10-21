@@ -19,8 +19,7 @@ package care.data4life.fhir;
 import org.junit.Before;
 import org.junit.Test;
 
-import care.data4life.fhir.r4.Fhir4Parser;
-import care.data4life.fhir.r4.model.FhirR4Base;
+import care.data4life.fhir.r4.FhirR4Parser;
 import care.data4life.fhir.stu3.FhirStu3Parser;
 
 import static org.junit.Assert.assertTrue;
@@ -43,7 +42,7 @@ public class FhirTest {
 
     @Test
     public void createR4Parser() {
-        assertTrue(fhir.createR4Parser() instanceof Fhir4Parser);
+        assertTrue(fhir.createR4Parser() instanceof FhirR4Parser);
     }
 
 

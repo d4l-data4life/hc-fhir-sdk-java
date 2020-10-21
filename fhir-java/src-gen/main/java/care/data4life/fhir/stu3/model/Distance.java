@@ -16,27 +16,37 @@
 
 package care.data4life.fhir.stu3.model;
 
+import com.squareup.moshi.Json;
+
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
+import javax.annotation.Nullable;
+
 /**
  * Distance.java
- * <p>
- * A length - a value with a unit that is a physical distance
  *
+ * A length - a value with a unit that is a physical distance
+ * 
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Distance">Distance</a>
- * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Distance) on 2020-10-15
+ *
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Distance) on 2020-10-19
  */
-public class Distance extends Quantity {
+public class Distance extends Quantity  {
 
-    public static final String resourceType = "Distance";
+	public static final String resourceType = "Distance";
 
+    
+	public Distance() {
+	}
+	@Override
+	public String getResourceType() {
+		return Distance.resourceType;
+	}
 
-    public Distance() {
-    }
-
-    @Override
-    public String getResourceType() {
-        return Distance.resourceType;
-    }
 
 
 }

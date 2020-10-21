@@ -18,64 +18,65 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Meta.java
- * <p>
- * The metadata about a resource. This is content in the resource that is maintained by the
- * infrastructure. Changes to the content might not always be associated with version changes to the
- * resource.
+ *
+ * The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Meta">Meta</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Meta) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Meta) on 2020-10-19
  */
-public class Meta extends Element {
+public class Meta extends Element  {
 
-    public static final String resourceType = "Meta";
-
-    // Version specific identifier.
+	public static final String resourceType = "Meta";
+  
+	// Version specific identifier.
     @Json(name = "versionId")
-    @Nullable
-    public String versionId;
-
-    // When the resource version last changed.
+	@Nullable
+	public String versionId;
+  
+	// When the resource version last changed.
     @Json(name = "lastUpdated")
-    @Nullable
-    public FhirInstant lastUpdated;
-
-    // Identifies where the resource comes from.
+	@Nullable
+	public FhirInstant lastUpdated;
+  
+	// Identifies where the resource comes from.
     @Json(name = "source")
-    @Nullable
-    public String source;
-
-    // Profiles this resource claims to conform to.
+	@Nullable
+	public String source;
+  
+	// Profiles this resource claims to conform to.
     @Json(name = "profile")
-    @Nullable
-    public List<Canonical> profile;
-
-    // Security Labels applied to this resource.
+	@Nullable
+	public List<Canonical> profile;
+  
+	// Security Labels applied to this resource.
     @Json(name = "security")
-    @Nullable
-    public List<Coding> security;
-
-    // Tags applied to this resource.
+	@Nullable
+	public List<Coding> security;
+  
+	// Tags applied to this resource.
     @Json(name = "tag")
-    @Nullable
-    public List<Coding> tag;
+	@Nullable
+	public List<Coding> tag;
 
+    
+	public Meta() {
+	}
+	@Override
+	public String getResourceType() {
+		return Meta.resourceType;
+	}
 
-    public Meta() {
-    }
-
-    @Override
-    public String getResourceType() {
-        return Meta.resourceType;
-    }
 
 
 }

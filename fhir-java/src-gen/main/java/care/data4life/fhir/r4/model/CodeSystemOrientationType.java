@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Type for orientation.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemOrientationType {
 
-    /**
-     * Sense orientation of reference sequence.
-     */
-    @Json(name = "sense")
-    SENSE,
+	/**
+	* Sense orientation of reference sequence.
+	*/
+	@Json(name = "sense")
+	SENSE,
 
-    /**
-     * Antisense orientation of reference sequence.
-     */
-    @Json(name = "antisense")
-    ANTISENSE,
+	/**
+	* Antisense orientation of reference sequence.
+	*/
+	@Json(name = "antisense")
+	ANTISENSE,
 }

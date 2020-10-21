@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set contract specific codes for security control.
  *
@@ -26,9 +27,9 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContractResourceSecurityControlCodes {
 
-    /**
-     * To be completed
-     */
-    @Json(name = "policy")
-    POLICY,
+	/**
+	* To be completed
+	*/
+	@Json(name = "policy")
+	POLICY,
 }

@@ -18,70 +18,75 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
  * RelatedArtifact.java
- * <p>
+ *
  * Related artifacts such as additional documentation, justification, or bibliographic references.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/RelatedArtifact">RelatedArtifact</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/RelatedArtifact) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/RelatedArtifact) on 2020-10-19
  */
-public class RelatedArtifact extends Element {
+public class RelatedArtifact extends Element  {
 
-    public static final String resourceType = "RelatedArtifact";
-
-    // The type of relationship to the related artifact.
+	public static final String resourceType = "RelatedArtifact";
+  
+	// The type of relationship to the related artifact.
     @Json(name = "type")
-    public CodeSystemRelatedArtifactType type;
-
-    // Short label.
+	public CodeSystemRelatedArtifactType type;
+  
+	// Short label.
     @Json(name = "label")
-    @Nullable
-    public String label;
-
-    // Brief description of the related artifact.
+	@Nullable
+	public String label;
+  
+	// Brief description of the related artifact.
     @Json(name = "display")
-    @Nullable
-    public String display;
-
-    // Bibliographic citation for the artifact.
+	@Nullable
+	public String display;
+  
+	// Bibliographic citation for the artifact.
     @Json(name = "citation")
-    @Nullable
-    public String citation;
-
-    // Where the artifact can be accessed.
+	@Nullable
+	public String citation;
+  
+	// Where the artifact can be accessed.
     @Json(name = "url")
-    @Nullable
-    public Url url;
-
-    // What document is being referenced.
+	@Nullable
+	public Url url;
+  
+	// What document is being referenced.
     @Json(name = "document")
-    @Nullable
-    public Attachment document;
-
-    // What resource is being referenced.
+	@Nullable
+	public Attachment document;
+  
+	// What resource is being referenced.
     @Json(name = "resource")
-    @Nullable
-    public Canonical resource;
+	@Nullable
+	public Canonical resource;
 
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param type CodeSystemRelatedArtifactType
+	 *
+	 */
+	public RelatedArtifact(CodeSystemRelatedArtifactType type) {
+		this.type = type;
+	}@Override
+	public String getResourceType() {
+		return RelatedArtifact.resourceType;
+	}
 
-    /**
-     * Constructor for all required properties.
-     *
-     * @param type CodeSystemRelatedArtifactType
-     */
-    public RelatedArtifact(CodeSystemRelatedArtifactType type) {
-        this.type = type;
-    }
-
-    @Override
-    public String getResourceType() {
-        return RelatedArtifact.resourceType;
-    }
 
 
 }

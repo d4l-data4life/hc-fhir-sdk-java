@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes sample Item Type codes.
  *
@@ -26,22 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemClaimItemTypeCodes {
 
-    /**
-     * A group of products and/or Services, amount ar the summary or detail level products and
-     * services.
-     */
-    @Json(name = "group")
-    GROUP,
+	/**
+	* A group of products and/or Services, amount ar the summary or detail level products and services.
+	*/
+	@Json(name = "group")
+	GROUP,
 
-    /**
-     * A billed product line item.
-     */
-    @Json(name = "product")
-    PRODUCT,
+	/**
+	* A billed product line item.
+	*/
+	@Json(name = "product")
+	PRODUCT,
 
-    /**
-     * A billed service line item.
-     */
-    @Json(name = "service")
-    SERVICE,
+	/**
+	* A billed service line item.
+	*/
+	@Json(name = "service")
+	SERVICE,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Mode for this instance of data
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemStructureMapInputMode {
 
-    /**
-     * Names an input instance used a source for mapping
-     */
-    @Json(name = "source")
-    SOURCE,
+	/**
+	* Names an input instance used a source for mapping
+	*/
+	@Json(name = "source")
+	SOURCE,
 
-    /**
-     * Names an instance that is being populated
-     */
-    @Json(name = "target")
-    TARGET,
+	/**
+	* Names an instance that is being populated
+	*/
+	@Json(name = "target")
+	TARGET,
 }

@@ -19,24 +19,23 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * The value set to instantiate this attribute should be drawn from a terminologically robust code
- * system that consists of or contains concepts to support describing the patient's eligibility for
- * a vaccination program. This value set is provided as a suggestive example.
+ * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the patient's eligibility for a vaccination program. This value set is provided as a suggestive example.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/immunization-program-eligibility">ImmunizationProgramEligibility</a>
  */
 public enum CodeSystemImmunizationProgramEligibility {
 
-    /**
-     * The patient is not eligible for the funding program.
-     */
-    @Json(name = "ineligible")
-    INELIGIBLE,
+	/**
+	* The patient is not eligible for the funding program.
+	*/
+	@Json(name = "ineligible")
+	INELIGIBLE,
 
-    /**
-     * The patient is eligible for the funding program because they are uninsured.
-     */
-    @Json(name = "uninsured")
-    UNINSURED,
+	/**
+	* The patient is eligible for the funding program because they are uninsured.
+	*/
+	@Json(name = "uninsured")
+	UNINSURED,
 }

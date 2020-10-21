@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Codes indicating whether the goal has been accepted by a stakeholder
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGoalAcceptanceStatus {
 
-    /**
-     * Stakeholder supports pursuit of the goal
-     */
-    @Json(name = "agree")
-    AGREE,
+	/**
+	* Stakeholder supports pursuit of the goal
+	*/
+	@Json(name = "agree")
+	AGREE,
 
-    /**
-     * Stakeholder is not in support of the pursuit of the goal
-     */
-    @Json(name = "disagree")
-    DISAGREE,
+	/**
+	* Stakeholder is not in support of the pursuit of the goal
+	*/
+	@Json(name = "disagree")
+	DISAGREE,
 
-    /**
-     * Stakeholder has not yet made a decision on whether they support the goal
-     */
-    @Json(name = "pending")
-    PENDING,
+	/**
+	* Stakeholder has not yet made a decision on whether they support the goal
+	*/
+	@Json(name = "pending")
+	PENDING,
 }

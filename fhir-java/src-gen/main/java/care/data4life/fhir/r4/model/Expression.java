@@ -18,62 +18,65 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
  * Expression.java
- * <p>
- * A expression that is evaluated in a specified context and returns a value. The context of use of
- * the expression must specify the context in which the expression is evaluated, and how the result
- * of the expression is used.
+ *
+ * A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Expression">Expression</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Expression) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Expression) on 2020-10-19
  */
-public class Expression extends Element {
+public class Expression extends Element  {
 
-    public static final String resourceType = "Expression";
-
-    // Natural language description of the condition.
+	public static final String resourceType = "Expression";
+  
+	// Natural language description of the condition.
     @Json(name = "description")
-    @Nullable
-    public String description;
-
-    // Short name assigned to expression for reuse.
+	@Nullable
+	public String description;
+  
+	// Short name assigned to expression for reuse.
     @Json(name = "name")
-    @Nullable
-    public String name;
-
-    // text/cql | text/fhirpath | application/x-fhir-query | etc..
+	@Nullable
+	public String name;
+  
+	// text/cql | text/fhirpath | application/x-fhir-query | etc..
     @Json(name = "language")
-    public String language;
-
-    // Expression in specified language.
+	public String language;
+  
+	// Expression in specified language.
     @Json(name = "expression")
-    @Nullable
-    public String expression;
-
-    // Where the expression is found.
+	@Nullable
+	public String expression;
+  
+	// Where the expression is found.
     @Json(name = "reference")
-    @Nullable
-    public String reference;
+	@Nullable
+	public String reference;
 
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param language String
+	 *
+	 */
+	public Expression(String language) {
+		this.language = language;
+	}@Override
+	public String getResourceType() {
+		return Expression.resourceType;
+	}
 
-    /**
-     * Constructor for all required properties.
-     *
-     * @param language String
-     */
-    public Expression(String language) {
-        this.language = language;
-    }
-
-    @Override
-    public String getResourceType() {
-        return Expression.resourceType;
-    }
 
 
 }

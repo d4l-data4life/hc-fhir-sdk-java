@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Degree of preference of a type of conditioned specimen.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSpecimenContainedPreference {
 
-    /**
-     * This type of contained specimen is preferred to collect this kind of specimen.
-     */
-    @Json(name = "preferred")
-    PREFERRED,
+	/**
+	* This type of contained specimen is preferred to collect this kind of specimen.
+	*/
+	@Json(name = "preferred")
+	PREFERRED,
 
-    /**
-     * This type of conditioned specimen is an alternate.
-     */
-    @Json(name = "alternate")
-    ALTERNATE,
+	/**
+	* This type of conditioned specimen is an alternate.
+	*/
+	@Json(name = "alternate")
+	ALTERNATE,
 }

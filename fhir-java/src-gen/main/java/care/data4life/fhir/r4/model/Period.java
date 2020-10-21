@@ -18,40 +18,45 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
  * Period.java
- * <p>
+ *
  * A time period defined by a start and end date and optionally time.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Period">Period</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Period) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Period) on 2020-10-19
  */
-public class Period extends Element {
+public class Period extends Element  {
 
-    public static final String resourceType = "Period";
-
-    // Starting time with inclusive boundary.
+	public static final String resourceType = "Period";
+  
+	// Starting time with inclusive boundary.
     @Json(name = "start")
-    @Nullable
-    public FhirDateTime start;
-
-    // End time with inclusive boundary, if not ongoing.
+	@Nullable
+	public FhirDateTime start;
+  
+	// End time with inclusive boundary, if not ongoing.
     @Json(name = "end")
-    @Nullable
-    public FhirDateTime end;
+	@Nullable
+	public FhirDateTime end;
 
+    
+	public Period() {
+	}
+	@Override
+	public String getResourceType() {
+		return Period.resourceType;
+	}
 
-    public Period() {
-    }
-
-    @Override
-    public String getResourceType() {
-        return Period.resourceType;
-    }
 
 
 }

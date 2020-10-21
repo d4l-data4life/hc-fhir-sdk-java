@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes sample Modifier type codes.
  *
@@ -26,39 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemModifierTypeCodes {
 
-    /**
-     * Repair of prior service or installation.
-     */
-    @Json(name = "a")
-    A,
+	/**
+	* Repair of prior service or installation.
+	*/
+	@Json(name = "a")
+	A,
 
-    /**
-     * Temporary service or installation.
-     */
-    @Json(name = "b")
-    B,
+	/**
+	* Temporary service or installation.
+	*/
+	@Json(name = "b")
+	B,
 
-    /**
-     * Treatment associated with TMJ.
-     */
-    @Json(name = "c")
-    C,
+	/**
+	* Treatment associated with TMJ.
+	*/
+	@Json(name = "c")
+	C,
 
-    /**
-     * Implant or associated with an implant.
-     */
-    @Json(name = "e")
-    E,
+	/**
+	* Implant or associated with an implant.
+	*/
+	@Json(name = "e")
+	E,
 
-    /**
-     * A Rush service or service performed outside of normal office hours.
-     */
-    @Json(name = "rooh")
-    ROOH,
+	/**
+	* A Rush service or service performed outside of normal office hours.
+	*/
+	@Json(name = "rooh")
+	ROOH,
 
-    /**
-     * None.
-     */
-    @Json(name = "x")
-    X,
+	/**
+	* None.
+	*/
+	@Json(name = "x")
+	X,
 }

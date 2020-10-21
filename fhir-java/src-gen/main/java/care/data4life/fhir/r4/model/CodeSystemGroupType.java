@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Types of resources that are part of group.
  *
@@ -26,39 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGroupType {
 
-    /**
-     * Group contains "person" Patient resources.
-     */
-    @Json(name = "person")
-    PERSON,
+	/**
+	* Group contains "person" Patient resources.
+	*/
+	@Json(name = "person")
+	PERSON,
 
-    /**
-     * Group contains "animal" Patient resources.
-     */
-    @Json(name = "animal")
-    ANIMAL,
+	/**
+	* Group contains "animal" Patient resources.
+	*/
+	@Json(name = "animal")
+	ANIMAL,
 
-    /**
-     * Group contains healthcare practitioner resources (Practitioner or PractitionerRole).
-     */
-    @Json(name = "practitioner")
-    PRACTITIONER,
+	/**
+	* Group contains healthcare practitioner resources (Practitioner or PractitionerRole).
+	*/
+	@Json(name = "practitioner")
+	PRACTITIONER,
 
-    /**
-     * Group contains Device resources.
-     */
-    @Json(name = "device")
-    DEVICE,
+	/**
+	* Group contains Device resources.
+	*/
+	@Json(name = "device")
+	DEVICE,
 
-    /**
-     * Group contains Medication resources.
-     */
-    @Json(name = "medication")
-    MEDICATION,
+	/**
+	* Group contains Medication resources.
+	*/
+	@Json(name = "medication")
+	MEDICATION,
 
-    /**
-     * Group contains Substance resources.
-     */
-    @Json(name = "substance")
-    SUBSTANCE,
+	/**
+	* Group contains Substance resources.
+	*/
+	@Json(name = "substance")
+	SUBSTANCE,
 }

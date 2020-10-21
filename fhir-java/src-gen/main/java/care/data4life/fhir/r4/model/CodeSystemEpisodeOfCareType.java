@@ -19,41 +19,41 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This example value set defines a set of codes that can be used to express the usage type of an
- * EpisodeOfCare record.
+ * This example value set defines a set of codes that can be used to express the usage type of an EpisodeOfCare record.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/episodeofcare-type">EpisodeOfCareType</a>
  */
 public enum CodeSystemEpisodeOfCareType {
 
-    /**
-     * hacc
-     */
-    @Json(name = "hacc")
-    HACC,
+	/**
+	* hacc
+	*/
+	@Json(name = "hacc")
+	HACC,
 
-    /**
-     * pac
-     */
-    @Json(name = "pac")
-    PAC,
+	/**
+	* pac
+	*/
+	@Json(name = "pac")
+	PAC,
 
-    /**
-     * diab
-     */
-    @Json(name = "diab")
-    DIAB,
+	/**
+	* diab
+	*/
+	@Json(name = "diab")
+	DIAB,
 
-    /**
-     * da
-     */
-    @Json(name = "da")
-    DA,
+	/**
+	* da
+	*/
+	@Json(name = "da")
+	DA,
 
-    /**
-     * cacp
-     */
-    @Json(name = "cacp")
-    CACP,
+	/**
+	* cacp
+	*/
+	@Json(name = "cacp")
+	CACP,
 }

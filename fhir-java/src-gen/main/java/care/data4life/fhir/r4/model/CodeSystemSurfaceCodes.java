@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes a smattering of FDI tooth surface codes.
  *
@@ -26,69 +27,69 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSurfaceCodes {
 
-    /**
-     * The surface of a tooth that is closest to the midline (middle) of the face.
-     */
-    @Json(name = "M")
-    M,
+	/**
+	* The surface of a tooth that is closest to the midline (middle) of the face.
+	*/
+	@Json(name = "M")
+	M,
 
-    /**
-     * The chewing surface of posterior teeth.
-     */
-    @Json(name = "O")
-    O,
+	/**
+	* The chewing surface of posterior teeth.
+	*/
+	@Json(name = "O")
+	O,
 
-    /**
-     * The biting edge of anterior teeth.
-     */
-    @Json(name = "I")
-    I,
+	/**
+	* The biting edge of anterior teeth.
+	*/
+	@Json(name = "I")
+	I,
 
-    /**
-     * The surface of a tooth that faces away from the midline of the face.
-     */
-    @Json(name = "D")
-    D,
+	/**
+	* The surface of a tooth that faces away from the midline of the face.
+	*/
+	@Json(name = "D")
+	D,
 
-    /**
-     * The surface of a posterior tooth facing the cheeks.
-     */
-    @Json(name = "B")
-    B,
+	/**
+	* The surface of a posterior tooth facing the cheeks.
+	*/
+	@Json(name = "B")
+	B,
 
-    /**
-     * The surface of a tooth facing the lips.
-     */
-    @Json(name = "V")
-    V,
+	/**
+	* The surface of a tooth facing the lips.
+	*/
+	@Json(name = "V")
+	V,
 
-    /**
-     * The surface of a tooth facing the tongue.
-     */
-    @Json(name = "L")
-    L,
+	/**
+	* The surface of a tooth facing the tongue.
+	*/
+	@Json(name = "L")
+	L,
 
-    /**
-     * The Mesioclusal surfaces of a tooth.
-     */
-    @Json(name = "MO")
-    MO,
+	/**
+	* The Mesioclusal surfaces of a tooth.
+	*/
+	@Json(name = "MO")
+	MO,
 
-    /**
-     * The Distoclusal surfaces of a tooth.
-     */
-    @Json(name = "DO")
-    DO,
+	/**
+	* The Distoclusal surfaces of a tooth.
+	*/
+	@Json(name = "DO")
+	DO,
 
-    /**
-     * The Distoincisal surfaces of a tooth.
-     */
-    @Json(name = "DI")
-    DI,
+	/**
+	* The Distoincisal surfaces of a tooth.
+	*/
+	@Json(name = "DI")
+	DI,
 
-    /**
-     * The Mesioclusodistal surfaces of a tooth.
-     */
-    @Json(name = "MOD")
-    MOD,
+	/**
+	* The Mesioclusodistal surfaces of a tooth.
+	*/
+	@Json(name = "MOD")
+	MOD,
 }

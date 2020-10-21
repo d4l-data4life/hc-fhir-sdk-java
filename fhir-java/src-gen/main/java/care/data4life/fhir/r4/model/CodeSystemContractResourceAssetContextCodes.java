@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set contract specific codes for asset context.
  *
@@ -26,9 +27,9 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContractResourceAssetContextCodes {
 
-    /**
-     * To be completed
-     */
-    @Json(name = "custodian")
-    CUSTODIAN,
+	/**
+	* To be completed
+	*/
+	@Json(name = "custodian")
+	CUSTODIAN,
 }

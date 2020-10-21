@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Why the supply item was requested
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSupplyRequestReason {
 
-    /**
-     * The supply has been requested for use in direct patient care.
-     */
-    @Json(name = "patient-care")
-    PATIENT_CARE,
+	/**
+	* The supply has been requested for use in direct patient care.
+	*/
+	@Json(name = "patient-care")
+	PATIENT_CARE,
 
-    /**
-     * The supply has been requested for for creating or replenishing ward stock.
-     */
-    @Json(name = "ward-stock")
-    WARD_STOCK,
+	/**
+	* The supply has been requested for for creating or replenishing ward stock.
+	*/
+	@Json(name = "ward-stock")
+	WARD_STOCK,
 }

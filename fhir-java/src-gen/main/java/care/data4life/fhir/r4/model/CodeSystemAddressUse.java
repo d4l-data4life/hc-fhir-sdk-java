@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The use of an address.
  *
@@ -26,33 +27,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAddressUse {
 
-    /**
-     * A communication address at a home.
-     */
-    @Json(name = "home")
-    HOME,
+	/**
+	* A communication address at a home.
+	*/
+	@Json(name = "home")
+	HOME,
 
-    /**
-     * An office address. First choice for business related contacts during business hours.
-     */
-    @Json(name = "work")
-    WORK,
+	/**
+	* An office address. First choice for business related contacts during business hours.
+	*/
+	@Json(name = "work")
+	WORK,
 
-    /**
-     * A temporary address. The period can provide more detailed information.
-     */
-    @Json(name = "temp")
-    TEMP,
+	/**
+	* A temporary address. The period can provide more detailed information.
+	*/
+	@Json(name = "temp")
+	TEMP,
 
-    /**
-     * This address is no longer in use (or was never correct but retained for records).
-     */
-    @Json(name = "old")
-    OLD,
+	/**
+	* This address is no longer in use (or was never correct but retained for records).
+	*/
+	@Json(name = "old")
+	OLD,
 
-    /**
-     * An address to be used to send bills, invoices, receipts etc.
-     */
-    @Json(name = "billing")
-    BILLING,
+	/**
+	* An address to be used to send bills, invoices, receipts etc.
+	*/
+	@Json(name = "billing")
+	BILLING,
 }

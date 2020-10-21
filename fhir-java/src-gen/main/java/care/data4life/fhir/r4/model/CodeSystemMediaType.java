@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Codes for high level media categories.
  *
@@ -26,22 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMediaType {
 
-    /**
-     * The media consists of one or more unmoving images, including photographs, computer-generated
-     * graphs and charts, and scanned documents
-     */
-    @Json(name = "image")
-    IMAGE,
+	/**
+	* The media consists of one or more unmoving images, including photographs, computer-generated graphs and charts, and scanned documents
+	*/
+	@Json(name = "image")
+	IMAGE,
 
-    /**
-     * The media consists of a series of frames that capture a moving image
-     */
-    @Json(name = "video")
-    VIDEO,
+	/**
+	* The media consists of a series of frames that capture a moving image
+	*/
+	@Json(name = "video")
+	VIDEO,
 
-    /**
-     * The media consists of a sound recording
-     */
-    @Json(name = "audio")
-    AUDIO,
+	/**
+	* The media consists of a sound recording
+	*/
+	@Json(name = "audio")
+	AUDIO,
 }

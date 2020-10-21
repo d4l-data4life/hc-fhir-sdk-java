@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * How a type relates to its baseDefinition.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemTypeDerivationRule {
 
-    /**
-     * This definition defines a new type that adds additional elements to the base type.
-     */
-    @Json(name = "specialization")
-    SPECIALIZATION,
+	/**
+	* This definition defines a new type that adds additional elements to the base type.
+	*/
+	@Json(name = "specialization")
+	SPECIALIZATION,
 
-    /**
-     * This definition adds additional rules to an existing concrete type.
-     */
-    @Json(name = "constraint")
-    CONSTRAINT,
+	/**
+	* This definition adds additional rules to an existing concrete type.
+	*/
+	@Json(name = "constraint")
+	CONSTRAINT,
 }

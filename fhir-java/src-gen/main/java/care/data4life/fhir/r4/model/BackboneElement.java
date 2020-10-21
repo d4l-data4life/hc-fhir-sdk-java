@@ -18,38 +18,40 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * BackboneElement.java
- * <p>
- * Base definition for all elements that are defined inside a resource - but not those in a data
- * type.
+ *
+ * Base definition for all elements that are defined inside a resource - but not those in a data type.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/BackboneElement">BackboneElement</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/BackboneElement) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/BackboneElement) on 2020-10-19
  */
-public class BackboneElement extends Element {
+public class BackboneElement extends Element  {
 
-    public static final String resourceType = "BackboneElement";
-
-    // Extensions that cannot be ignored even if unrecognized.
+	public static final String resourceType = "BackboneElement";
+  
+	// Extensions that cannot be ignored even if unrecognized.
     @Json(name = "modifierExtension")
-    @Nullable
-    public List<Extension> modifierExtension;
+	@Nullable
+	public List<Extension> modifierExtension;
 
+    
+	public BackboneElement() {
+	}
+	@Override
+	public String getResourceType() {
+		return BackboneElement.resourceType;
+	}
 
-    public BackboneElement() {
-    }
-
-    @Override
-    public String getResourceType() {
-        return BackboneElement.resourceType;
-    }
 
 
 }

@@ -19,35 +19,35 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * The level of confidence that this link represents the same actual person, based on NIST
- * Authentication Levels.
+ * The level of confidence that this link represents the same actual person, based on NIST Authentication Levels.
  *
  * @see <a href="http://hl7.org/fhir/identity-assuranceLevel">IdentityAssuranceLevel</a>
  */
 public enum CodeSystemIdentityAssuranceLevel {
 
-    /**
-     * Little or no confidence in the asserted identity's accuracy.
-     */
-    @Json(name = "level1")
-    LEVEL1,
+	/**
+	* Little or no confidence in the asserted identity's accuracy.
+	*/
+	@Json(name = "level1")
+	LEVEL1,
 
-    /**
-     * Some confidence in the asserted identity's accuracy.
-     */
-    @Json(name = "level2")
-    LEVEL2,
+	/**
+	* Some confidence in the asserted identity's accuracy.
+	*/
+	@Json(name = "level2")
+	LEVEL2,
 
-    /**
-     * High confidence in the asserted identity's accuracy.
-     */
-    @Json(name = "level3")
-    LEVEL3,
+	/**
+	* High confidence in the asserted identity's accuracy.
+	*/
+	@Json(name = "level3")
+	LEVEL3,
 
-    /**
-     * Very high confidence in the asserted identity's accuracy.
-     */
-    @Json(name = "level4")
-    LEVEL4,
+	/**
+	* Very high confidence in the asserted identity's accuracy.
+	*/
+	@Json(name = "level4")
+	LEVEL4,
 }

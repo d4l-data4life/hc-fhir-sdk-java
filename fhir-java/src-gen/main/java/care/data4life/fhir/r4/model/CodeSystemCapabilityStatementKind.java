@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * How a capability statement is intended to be used.
  *
@@ -26,24 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCapabilityStatementKind {
 
-    /**
-     * The CapabilityStatement instance represents the present capabilities of a specific system
-     * instance.  This is the kind returned by /metadata for a FHIR server end-point.
-     */
-    @Json(name = "instance")
-    INSTANCE,
+	/**
+	* The CapabilityStatement instance represents the present capabilities of a specific system instance.  This is the kind returned by /metadata for a FHIR server end-point.
+	*/
+	@Json(name = "instance")
+	INSTANCE,
 
-    /**
-     * The CapabilityStatement instance represents the capabilities of a system or piece of
-     * software, independent of a particular installation.
-     */
-    @Json(name = "capability")
-    CAPABILITY,
+	/**
+	* The CapabilityStatement instance represents the capabilities of a system or piece of software, independent of a particular installation.
+	*/
+	@Json(name = "capability")
+	CAPABILITY,
 
-    /**
-     * The CapabilityStatement instance represents a set of requirements for other systems to meet;
-     * e.g. as part of an implementation guide or 'request for proposal'.
-     */
-    @Json(name = "requirements")
-    REQUIREMENTS,
+	/**
+	* The CapabilityStatement instance represents a set of requirements for other systems to meet; e.g. as part of an implementation guide or 'request for proposal'.
+	*/
+	@Json(name = "requirements")
+	REQUIREMENTS,
 }

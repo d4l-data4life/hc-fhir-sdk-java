@@ -19,29 +19,29 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * Example codes indicating the change that happened to the device during the procedure.  Note that
- * these are in no way complete and might not even be appropriate for some uses.
+ * Example codes indicating the change that happened to the device during the procedure.  Note that these are in no way complete and might not even be appropriate for some uses.
  *
  * @see <a href="http://hl7.org/fhir/device-action">ProcedureDeviceActionCodes</a>
  */
 public enum CodeSystemProcedureDeviceActionCodes {
 
-    /**
-     * The device was implanted in the patient during the procedure.
-     */
-    @Json(name = "implanted")
-    IMPLANTED,
+	/**
+	* The device was implanted in the patient during the procedure.
+	*/
+	@Json(name = "implanted")
+	IMPLANTED,
 
-    /**
-     * The device was explanted from the patient during the procedure.
-     */
-    @Json(name = "explanted")
-    EXPLANTED,
+	/**
+	* The device was explanted from the patient during the procedure.
+	*/
+	@Json(name = "explanted")
+	EXPLANTED,
 
-    /**
-     * The device remains in the patient, but its location, settings, or functionality was changed.
-     */
-    @Json(name = "manipulated")
-    MANIPULATED,
+	/**
+	* The device remains in the patient, but its location, settings, or functionality was changed.
+	*/
+	@Json(name = "manipulated")
+	MANIPULATED,
 }

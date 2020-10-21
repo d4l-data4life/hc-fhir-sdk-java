@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Preferred value set for AllergyIntolerance Verification Status.
  *
@@ -26,30 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAllergyIntoleranceVerificationStatusCodes {
 
-    /**
-     * A low level of certainty about the propensity for a reaction to the identified substance.
-     */
-    @Json(name = "unconfirmed")
-    UNCONFIRMED,
+	/**
+	* A low level of certainty about the propensity for a reaction to the identified substance.
+	*/
+	@Json(name = "unconfirmed")
+	UNCONFIRMED,
 
-    /**
-     * A high level of certainty about the propensity for a reaction to the identified substance,
-     * which may include clinical evidence by testing or rechallenge.
-     */
-    @Json(name = "confirmed")
-    CONFIRMED,
+	/**
+	* A high level of certainty about the propensity for a reaction to the identified substance, which may include clinical evidence by testing or rechallenge.
+	*/
+	@Json(name = "confirmed")
+	CONFIRMED,
 
-    /**
-     * A propensity for a reaction to the identified substance has been disputed or disproven with a
-     * sufficient level of clinical certainty to justify invalidating the assertion. This might or
-     * might not include testing or rechallenge.
-     */
-    @Json(name = "refuted")
-    REFUTED,
+	/**
+	* A propensity for a reaction to the identified substance has been disputed or disproven with a sufficient level of clinical certainty to justify invalidating the assertion. This might or might not include testing or rechallenge.
+	*/
+	@Json(name = "refuted")
+	REFUTED,
 
-    /**
-     * The statement was entered in error and is not valid.
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* The statement was entered in error and is not valid.
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 }

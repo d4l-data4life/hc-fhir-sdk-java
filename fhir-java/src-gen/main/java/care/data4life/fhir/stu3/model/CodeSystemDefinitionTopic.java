@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * High-level categorization of the definition, used for searching, sorting, and filtering
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDefinitionTopic {
 
-    /**
-     * The definition is related to treatment of the patient
-     */
-    @Json(name = "treatment")
-    TREATMENT,
+	/**
+	* The definition is related to treatment of the patient
+	*/
+	@Json(name = "treatment")
+	TREATMENT,
 
-    /**
-     * The definition is related to education of the patient
-     */
-    @Json(name = "education")
-    EDUCATION,
+	/**
+	* The definition is related to education of the patient
+	*/
+	@Json(name = "education")
+	EDUCATION,
 
-    /**
-     * The definition is related to assessment of the patient
-     */
-    @Json(name = "assessment")
-    ASSESSMENT,
+	/**
+	* The definition is related to assessment of the patient
+	*/
+	@Json(name = "assessment")
+	ASSESSMENT,
 }

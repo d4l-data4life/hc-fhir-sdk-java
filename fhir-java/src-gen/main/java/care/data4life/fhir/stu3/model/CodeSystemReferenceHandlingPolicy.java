@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A set of flags that defines how references are supported.
  *
@@ -26,37 +27,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemReferenceHandlingPolicy {
 
-    /**
-     * The server supports and populates Literal references where they are known (this code does not
-     * guarantee that all references are literal; see 'enforced')
-     */
-    @Json(name = "literal")
-    LITERAL,
+	/**
+	* The server supports and populates Literal references where they are known (this code does not guarantee that all references are literal; see 'enforced')
+	*/
+	@Json(name = "literal")
+	LITERAL,
 
-    /**
-     * The server allows logical references
-     */
-    @Json(name = "logical")
-    LOGICAL,
+	/**
+	* The server allows logical references
+	*/
+	@Json(name = "logical")
+	LOGICAL,
 
-    /**
-     * The server will attempt to resolve logical references to literal references (if resolution
-     * fails, the server may still accept resources; see logical)
-     */
-    @Json(name = "resolves")
-    RESOLVES,
+	/**
+	* The server will attempt to resolve logical references to literal references (if resolution fails, the server may still accept resources; see logical)
+	*/
+	@Json(name = "resolves")
+	RESOLVES,
 
-    /**
-     * The server enforces that references have integrity - e.g. it ensures that references can
-     * always be resolved. This is typically the case for clinical record systems, but often not the
-     * case for middleware/proxy systems
-     */
-    @Json(name = "enforced")
-    ENFORCED,
+	/**
+	* The server enforces that references have integrity - e.g. it ensures that references can always be resolved. This is typically the case for clinical record systems, but often not the case for middleware/proxy systems
+	*/
+	@Json(name = "enforced")
+	ENFORCED,
 
-    /**
-     * The server does not support references that point to other servers
-     */
-    @Json(name = "local")
-    LOCAL,
+	/**
+	* The server does not support references that point to other servers
+	*/
+	@Json(name = "local")
+	LOCAL,
 }

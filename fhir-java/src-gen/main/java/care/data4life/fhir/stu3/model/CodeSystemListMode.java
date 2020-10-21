@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The processing mode that applies to this list
  *
@@ -26,22 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemListMode {
 
-    /**
-     * This list is the master list, maintained in an ongoing fashion with regular updates as the
-     * real world list it is tracking changes
-     */
-    @Json(name = "working")
-    WORKING,
+	/**
+	* This list is the master list, maintained in an ongoing fashion with regular updates as the real world list it is tracking changes
+	*/
+	@Json(name = "working")
+	WORKING,
 
-    /**
-     * This list was prepared as a snapshot. It should not be assumed to be current
-     */
-    @Json(name = "snapshot")
-    SNAPSHOT,
+	/**
+	* This list was prepared as a snapshot. It should not be assumed to be current
+	*/
+	@Json(name = "snapshot")
+	SNAPSHOT,
 
-    /**
-     * A list that indicates where changes have been made or recommended
-     */
-    @Json(name = "changes")
-    CHANGES,
+	/**
+	* A list that indicates where changes have been made or recommended
+	*/
+	@Json(name = "changes")
+	CHANGES,
 }

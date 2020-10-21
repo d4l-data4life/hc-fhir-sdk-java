@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set defines a set of codes that can be used to where the patient left the hospital.
  *
@@ -26,72 +27,69 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDischargeDisposition {
 
-    /**
-     * The patient was dicharged and has indicated that they are going to return home afterwards.
-     */
-    @Json(name = "home")
-    HOME,
+	/**
+	* The patient was dicharged and has indicated that they are going to return home afterwards.
+	*/
+	@Json(name = "home")
+	HOME,
 
-    /**
-     * The patient was discharged and has indicated that they are going to return home afterwards,
-     * but not the patient's home - e.g. a family member's home.
-     */
-    @Json(name = "alt-home")
-    ALT_HOME,
+	/**
+	* The patient was discharged and has indicated that they are going to return home afterwards, but not the patient's home - e.g. a family member's home.
+	*/
+	@Json(name = "alt-home")
+	ALT_HOME,
 
-    /**
-     * The patient was transferred to another healthcare facility.
-     */
-    @Json(name = "other-hcf")
-    OTHER_HCF,
+	/**
+	* The patient was transferred to another healthcare facility.
+	*/
+	@Json(name = "other-hcf")
+	OTHER_HCF,
 
-    /**
-     * The patient has been discharged into palliative care.
-     */
-    @Json(name = "hosp")
-    HOSP,
+	/**
+	* The patient has been discharged into palliative care.
+	*/
+	@Json(name = "hosp")
+	HOSP,
 
-    /**
-     * The patient has been discharged into long-term care where is likely to be monitored through
-     * an ongoing episode-of-care.
-     */
-    @Json(name = "long")
-    LONG,
+	/**
+	* The patient has been discharged into long-term care where is likely to be monitored through an ongoing episode-of-care.
+	*/
+	@Json(name = "long")
+	LONG,
 
-    /**
-     * The patient self discharged against medical advice.
-     */
-    @Json(name = "aadvice")
-    AADVICE,
+	/**
+	* The patient self discharged against medical advice.
+	*/
+	@Json(name = "aadvice")
+	AADVICE,
 
-    /**
-     * The patient has deceased during this encounter.
-     */
-    @Json(name = "exp")
-    EXP,
+	/**
+	* The patient has deceased during this encounter.
+	*/
+	@Json(name = "exp")
+	EXP,
 
-    /**
-     * The patient has been transferred to a psychiatric facility.
-     */
-    @Json(name = "psy")
-    PSY,
+	/**
+	* The patient has been transferred to a psychiatric facility.
+	*/
+	@Json(name = "psy")
+	PSY,
 
-    /**
-     * The patient was discharged and is to receive post acute care rehabilitation services.
-     */
-    @Json(name = "rehab")
-    REHAB,
+	/**
+	* The patient was discharged and is to receive post acute care rehabilitation services.
+	*/
+	@Json(name = "rehab")
+	REHAB,
 
-    /**
-     * The patient has been discharged to a skilled nursing facility for the patient to receive
-     * additional care.
-     */
-    @Json(name = "snf")
-    SNF,
+	/**
+	* The patient has been discharged to a skilled nursing facility for the patient to receive additional care.
+	*/
+	@Json(name = "snf")
+	SNF,
 
-    /**
-     * The discharge disposition has not otherwise defined.
-     */
-    @Json(name = "oth")
-    OTH,
+	/**
+	* The discharge disposition has not otherwise defined.
+	*/
+	@Json(name = "oth")
+	OTH,
 }

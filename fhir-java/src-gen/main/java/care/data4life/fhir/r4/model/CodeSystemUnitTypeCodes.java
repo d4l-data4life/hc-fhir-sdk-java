@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes a smattering of Unit type codes.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemUnitTypeCodes {
 
-    /**
-     * A single individual
-     */
-    @Json(name = "individual")
-    INDIVIDUAL,
+	/**
+	* A single individual
+	*/
+	@Json(name = "individual")
+	INDIVIDUAL,
 
-    /**
-     * A family, typically includes self, spouse(s) and children to a defined age
-     */
-    @Json(name = "family")
-    FAMILY,
+	/**
+	* A family, typically includes self, spouse(s) and children to a defined age
+	*/
+	@Json(name = "family")
+	FAMILY,
 }

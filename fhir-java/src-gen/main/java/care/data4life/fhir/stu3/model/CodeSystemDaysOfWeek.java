@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The days of the week.
  *
@@ -26,45 +27,45 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDaysOfWeek {
 
-    /**
-     * Monday
-     */
-    @Json(name = "mon")
-    MON,
+	/**
+	* Monday
+	*/
+	@Json(name = "mon")
+	MON,
 
-    /**
-     * Tuesday
-     */
-    @Json(name = "tue")
-    TUE,
+	/**
+	* Tuesday
+	*/
+	@Json(name = "tue")
+	TUE,
 
-    /**
-     * Wednesday
-     */
-    @Json(name = "wed")
-    WED,
+	/**
+	* Wednesday
+	*/
+	@Json(name = "wed")
+	WED,
 
-    /**
-     * Thursday
-     */
-    @Json(name = "thu")
-    THU,
+	/**
+	* Thursday
+	*/
+	@Json(name = "thu")
+	THU,
 
-    /**
-     * Friday
-     */
-    @Json(name = "fri")
-    FRI,
+	/**
+	* Friday
+	*/
+	@Json(name = "fri")
+	FRI,
 
-    /**
-     * Saturday
-     */
-    @Json(name = "sat")
-    SAT,
+	/**
+	* Saturday
+	*/
+	@Json(name = "sat")
+	SAT,
 
-    /**
-     * Sunday
-     */
-    @Json(name = "sun")
-    SUN,
+	/**
+	* Sunday
+	*/
+	@Json(name = "sun")
+	SUN,
 }

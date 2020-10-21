@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A code that indicates how the server supports conditional read.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConditionalReadStatus {
 
-    /**
-     * No support for conditional deletes.
-     */
-    @Json(name = "not-supported")
-    NOT_SUPPORTED,
+	/**
+	* No support for conditional deletes.
+	*/
+	@Json(name = "not-supported")
+	NOT_SUPPORTED,
 
-    /**
-     * Conditional reads are supported, but only with the If-Modified-Since HTTP Header.
-     */
-    @Json(name = "modified-since")
-    MODIFIED_SINCE,
+	/**
+	* Conditional reads are supported, but only with the If-Modified-Since HTTP Header.
+	*/
+	@Json(name = "modified-since")
+	MODIFIED_SINCE,
 
-    /**
-     * Conditional reads are supported, but only with the If-None-Match HTTP Header.
-     */
-    @Json(name = "not-match")
-    NOT_MATCH,
+	/**
+	* Conditional reads are supported, but only with the If-None-Match HTTP Header.
+	*/
+	@Json(name = "not-match")
+	NOT_MATCH,
 
-    /**
-     * Conditional reads are supported, with both If-Modified-Since and If-None-Match HTTP Headers.
-     */
-    @Json(name = "full-support")
-    FULL_SUPPORT,
+	/**
+	* Conditional reads are supported, with both If-Modified-Since and If-None-Match HTTP Headers.
+	*/
+	@Json(name = "full-support")
+	FULL_SUPPORT,
 }

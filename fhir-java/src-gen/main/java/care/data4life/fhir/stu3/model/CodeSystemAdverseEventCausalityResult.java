@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * TODO
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAdverseEventCausalityResult {
 
-    /**
-     * result1
-     */
-    @Json(name = "result1")
-    RESULT1,
+	/**
+	* result1
+	*/
+	@Json(name = "result1")
+	RESULT1,
 
-    /**
-     * result2
-     */
-    @Json(name = "result2")
-    RESULT2,
+	/**
+	* result2
+	*/
+	@Json(name = "result2")
+	RESULT2,
 }

@@ -19,47 +19,47 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This example value set defines a set of codes that can be used to indicate the role of a
- * Practitioner.
+ * This example value set defines a set of codes that can be used to indicate the role of a Practitioner.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/practitioner-role">PractitionerRole</a>
  */
 public enum CodeSystemPractitionerRole {
 
-    /**
-     * A qualified/registered medical practitioner
-     */
-    @Json(name = "doctor")
-    DOCTOR,
+	/**
+	* A qualified/registered medical practitioner
+	*/
+	@Json(name = "doctor")
+	DOCTOR,
 
-    /**
-     * A practitioner with nursing experience that may be qualified/registered
-     */
-    @Json(name = "nurse")
-    NURSE,
+	/**
+	* A practitioner with nursing experience that may be qualified/registered
+	*/
+	@Json(name = "nurse")
+	NURSE,
 
-    /**
-     * A qualified/registered/licensed pharmacist
-     */
-    @Json(name = "pharmacist")
-    PHARMACIST,
+	/**
+	* A qualified/registered/licensed pharmacist
+	*/
+	@Json(name = "pharmacist")
+	PHARMACIST,
 
-    /**
-     * A practitioner that may perform research
-     */
-    @Json(name = "researcher")
-    RESEARCHER,
+	/**
+	* A practitioner that may perform research
+	*/
+	@Json(name = "researcher")
+	RESEARCHER,
 
-    /**
-     * Someone who is able to provide educational services
-     */
-    @Json(name = "teacher")
-    TEACHER,
+	/**
+	* Someone who is able to provide educational services
+	*/
+	@Json(name = "teacher")
+	TEACHER,
 
-    /**
-     * Someone who is qualified in Information and Communication Technologies
-     */
-    @Json(name = "ict")
-    ICT,
+	/**
+	* Someone who is qualified in Information and Communication Technologies
+	*/
+	@Json(name = "ict")
+	ICT,
 }

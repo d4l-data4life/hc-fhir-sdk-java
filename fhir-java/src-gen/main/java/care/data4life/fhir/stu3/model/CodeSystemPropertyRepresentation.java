@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * How a property is represented when serialized.
  *
@@ -26,33 +27,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemPropertyRepresentation {
 
-    /**
-     * In XML, this property is represented as an attribute not an element.
-     */
-    @Json(name = "xmlAttr")
-    XMLATTR,
+	/**
+	* In XML, this property is represented as an attribute not an element.
+	*/
+	@Json(name = "xmlAttr")
+	XMLATTR,
 
-    /**
-     * This element is represented using the XML text attribute (primitives only)
-     */
-    @Json(name = "xmlText")
-    XMLTEXT,
+	/**
+	* This element is represented using the XML text attribute (primitives only)
+	*/
+	@Json(name = "xmlText")
+	XMLTEXT,
 
-    /**
-     * The type of this element is indicated using xsi:type
-     */
-    @Json(name = "typeAttr")
-    TYPEATTR,
+	/**
+	* The type of this element is indicated using xsi:type
+	*/
+	@Json(name = "typeAttr")
+	TYPEATTR,
 
-    /**
-     * Use CDA narrative instead of XHTML
-     */
-    @Json(name = "cdaText")
-    CDATEXT,
+	/**
+	* Use CDA narrative instead of XHTML
+	*/
+	@Json(name = "cdaText")
+	CDATEXT,
 
-    /**
-     * The property is represented using XHTML
-     */
-    @Json(name = "xhtml")
-    XHTML,
+	/**
+	* The property is represented using XHTML
+	*/
+	@Json(name = "xhtml")
+	XHTML,
 }

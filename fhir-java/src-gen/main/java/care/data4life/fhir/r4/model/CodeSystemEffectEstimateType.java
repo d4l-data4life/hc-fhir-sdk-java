@@ -19,54 +19,53 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * Whether the effect estimate is an absolute effect estimate (absolute difference) or a relative
- * effect estimate (relative difference), and the specific type of effect estimate (eg relative risk
- * or median difference).
+ * Whether the effect estimate is an absolute effect estimate (absolute difference) or a relative effect estimate (relative difference), and the specific type of effect estimate (eg relative risk or median difference).
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/effect-estimate-type">EffectEstimateType</a>
  */
 public enum CodeSystemEffectEstimateType {
 
-    /**
-     * relative risk (a type of relative effect estimate).
-     */
-    @Json(name = "relative-RR")
-    RELATIVE_RR,
+	/**
+	* relative risk (a type of relative effect estimate).
+	*/
+	@Json(name = "relative-RR")
+	RELATIVE_RR,
 
-    /**
-     * odds ratio (a type of relative effect estimate).
-     */
-    @Json(name = "relative-OR")
-    RELATIVE_OR,
+	/**
+	* odds ratio (a type of relative effect estimate).
+	*/
+	@Json(name = "relative-OR")
+	RELATIVE_OR,
 
-    /**
-     * hazard ratio (a type of relative effect estimate).
-     */
-    @Json(name = "relative-HR")
-    RELATIVE_HR,
+	/**
+	* hazard ratio (a type of relative effect estimate).
+	*/
+	@Json(name = "relative-HR")
+	RELATIVE_HR,
 
-    /**
-     * absolute risk difference (a type of absolute effect estimate).
-     */
-    @Json(name = "absolute-ARD")
-    ABSOLUTE_ARD,
+	/**
+	* absolute risk difference (a type of absolute effect estimate).
+	*/
+	@Json(name = "absolute-ARD")
+	ABSOLUTE_ARD,
 
-    /**
-     * mean difference (a type of absolute effect estimate).
-     */
-    @Json(name = "absolute-MeanDiff")
-    ABSOLUTE_MEANDIFF,
+	/**
+	* mean difference (a type of absolute effect estimate).
+	*/
+	@Json(name = "absolute-MeanDiff")
+	ABSOLUTE_MEANDIFF,
 
-    /**
-     * standardized mean difference (a type of absolute effect estimate).
-     */
-    @Json(name = "absolute-SMD")
-    ABSOLUTE_SMD,
+	/**
+	* standardized mean difference (a type of absolute effect estimate).
+	*/
+	@Json(name = "absolute-SMD")
+	ABSOLUTE_SMD,
 
-    /**
-     * median difference (a type of absolute effect estimate).
-     */
-    @Json(name = "absolute-MedianDiff")
-    ABSOLUTE_MEDIANDIFF,
+	/**
+	* median difference (a type of absolute effect estimate).
+	*/
+	@Json(name = "absolute-MedianDiff")
+	ABSOLUTE_MEDIANDIFF,
 }

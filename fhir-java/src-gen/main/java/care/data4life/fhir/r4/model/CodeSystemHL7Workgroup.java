@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * An HL7 administrative unit that owns artifacts in the FHIR specification.
  *
@@ -26,147 +27,147 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemHL7Workgroup {
 
-    /**
-     * Community Based Collaborative Care (http://www.hl7.org/Special/committees/cbcc/index.cfm).
-     */
-    @Json(name = "cbcc")
-    CBCC,
+	/**
+	* Community Based Collaborative Care (http://www.hl7.org/Special/committees/cbcc/index.cfm).
+	*/
+	@Json(name = "cbcc")
+	CBCC,
 
-    /**
-     * Clinical Decision Support (http://www.hl7.org/Special/committees/dss/index.cfm).
-     */
-    @Json(name = "cds")
-    CDS,
+	/**
+	* Clinical Decision Support (http://www.hl7.org/Special/committees/dss/index.cfm).
+	*/
+	@Json(name = "cds")
+	CDS,
 
-    /**
-     * Clinical Quality Information (http://www.hl7.org/Special/committees/cqi/index.cfm).
-     */
-    @Json(name = "cqi")
-    CQI,
+	/**
+	* Clinical Quality Information (http://www.hl7.org/Special/committees/cqi/index.cfm).
+	*/
+	@Json(name = "cqi")
+	CQI,
 
-    /**
-     * Clinical Genomics (http://www.hl7.org/Special/committees/clingenomics/index.cfm).
-     */
-    @Json(name = "cg")
-    CG,
+	/**
+	* Clinical Genomics (http://www.hl7.org/Special/committees/clingenomics/index.cfm).
+	*/
+	@Json(name = "cg")
+	CG,
 
-    /**
-     * Health Care Devices (http://www.hl7.org/Special/committees/healthcaredevices/index.cfm).
-     */
-    @Json(name = "dev")
-    DEV,
+	/**
+	* Health Care Devices (http://www.hl7.org/Special/committees/healthcaredevices/index.cfm).
+	*/
+	@Json(name = "dev")
+	DEV,
 
-    /**
-     * Electronic Health Records (http://www.hl7.org/special/committees/ehr/index.cfm).
-     */
-    @Json(name = "ehr")
-    EHR,
+	/**
+	* Electronic Health Records (http://www.hl7.org/special/committees/ehr/index.cfm).
+	*/
+	@Json(name = "ehr")
+	EHR,
 
-    /**
-     * FHIR Infrastructure (http://www.hl7.org/Special/committees/fiwg/index.cfm).
-     */
-    @Json(name = "fhir")
-    FHIR,
+	/**
+	* FHIR Infrastructure (http://www.hl7.org/Special/committees/fiwg/index.cfm).
+	*/
+	@Json(name = "fhir")
+	FHIR,
 
-    /**
-     * Financial Management (http://www.hl7.org/Special/committees/fm/index.cfm).
-     */
-    @Json(name = "fm")
-    FM,
+	/**
+	* Financial Management (http://www.hl7.org/Special/committees/fm/index.cfm).
+	*/
+	@Json(name = "fm")
+	FM,
 
-    /**
-     * Health Standards Integration (http://www.hl7.org/Special/committees/hsi/index.cfm).
-     */
-    @Json(name = "hsi")
-    HSI,
+	/**
+	* Health Standards Integration (http://www.hl7.org/Special/committees/hsi/index.cfm).
+	*/
+	@Json(name = "hsi")
+	HSI,
 
-    /**
-     * Imaging Integration (http://www.hl7.org/Special/committees/imagemgt/index.cfm).
-     */
-    @Json(name = "ii")
-    II,
+	/**
+	* Imaging Integration (http://www.hl7.org/Special/committees/imagemgt/index.cfm).
+	*/
+	@Json(name = "ii")
+	II,
 
-    /**
-     * Infrastructure And Messaging (http://www.hl7.org/special/committees/inm/index.cfm).
-     */
-    @Json(name = "inm")
-    INM,
+	/**
+	* Infrastructure And Messaging (http://www.hl7.org/special/committees/inm/index.cfm).
+	*/
+	@Json(name = "inm")
+	INM,
 
-    /**
-     * Implementable Technology Specifications (http://www.hl7.org/special/committees/xml/index.cfm).
-     */
-    @Json(name = "its")
-    ITS,
+	/**
+	* Implementable Technology Specifications (http://www.hl7.org/special/committees/xml/index.cfm).
+	*/
+	@Json(name = "its")
+	ITS,
 
-    /**
-     * Modeling and Methodology (http://www.hl7.org/Special/committees/mnm/index.cfm).
-     */
-    @Json(name = "mnm")
-    MNM,
+	/**
+	* Modeling and Methodology (http://www.hl7.org/Special/committees/mnm/index.cfm).
+	*/
+	@Json(name = "mnm")
+	MNM,
 
-    /**
-     * Orders and Observations (http://www.hl7.org/Special/committees/orders/index.cfm).
-     */
-    @Json(name = "oo")
-    OO,
+	/**
+	* Orders and Observations (http://www.hl7.org/Special/committees/orders/index.cfm).
+	*/
+	@Json(name = "oo")
+	OO,
 
-    /**
-     * Patient Administration (http://www.hl7.org/Special/committees/pafm/index.cfm).
-     */
-    @Json(name = "pa")
-    PA,
+	/**
+	* Patient Administration (http://www.hl7.org/Special/committees/pafm/index.cfm).
+	*/
+	@Json(name = "pa")
+	PA,
 
-    /**
-     * Patient Care (http://www.hl7.org/Special/committees/patientcare/index.cfm).
-     */
-    @Json(name = "pc")
-    PC,
+	/**
+	* Patient Care (http://www.hl7.org/Special/committees/patientcare/index.cfm).
+	*/
+	@Json(name = "pc")
+	PC,
 
-    /**
-     * Public Health and Emergency Response (http://www.hl7.org/Special/committees/pher/index.cfm).
-     */
-    @Json(name = "pher")
-    PHER,
+	/**
+	* Public Health and Emergency Response (http://www.hl7.org/Special/committees/pher/index.cfm).
+	*/
+	@Json(name = "pher")
+	PHER,
 
-    /**
-     * Pharmacy (http://www.hl7.org/Special/committees/medication/index.cfm).
-     */
-    @Json(name = "phx")
-    PHX,
+	/**
+	* Pharmacy (http://www.hl7.org/Special/committees/medication/index.cfm).
+	*/
+	@Json(name = "phx")
+	PHX,
 
-    /**
-     * Biomedical Research and Regulation (http://www.hl7.org/Special/committees/rcrim/index.cfm).
-     */
-    @Json(name = "brr")
-    BRR,
+	/**
+	* Biomedical Research and Regulation (http://www.hl7.org/Special/committees/rcrim/index.cfm).
+	*/
+	@Json(name = "brr")
+	BRR,
 
-    /**
-     * Structured Documents (http://www.hl7.org/Special/committees/structure/index.cfm).
-     */
-    @Json(name = "sd")
-    SD,
+	/**
+	* Structured Documents (http://www.hl7.org/Special/committees/structure/index.cfm).
+	*/
+	@Json(name = "sd")
+	SD,
 
-    /**
-     * Security (http://www.hl7.org/Special/committees/secure/index.cfm).
-     */
-    @Json(name = "sec")
-    SEC,
+	/**
+	* Security (http://www.hl7.org/Special/committees/secure/index.cfm).
+	*/
+	@Json(name = "sec")
+	SEC,
 
-    /**
-     * US Realm Taskforce (http://www.hl7.org/Special/committees/usrealm/index.cfm).
-     */
-    @Json(name = "us")
-    US,
+	/**
+	* US Realm Taskforce (http://www.hl7.org/Special/committees/usrealm/index.cfm).
+	*/
+	@Json(name = "us")
+	US,
 
-    /**
-     * Vocabulary (http://www.hl7.org/Special/committees/Vocab/index.cfm).
-     */
-    @Json(name = "vocab")
-    VOCAB,
+	/**
+	* Vocabulary (http://www.hl7.org/Special/committees/Vocab/index.cfm).
+	*/
+	@Json(name = "vocab")
+	VOCAB,
 
-    /**
-     * Application Implementation and Design (http://www.hl7.org/Special/committees/java/index.cfm).
-     */
-    @Json(name = "aid")
-    AID,
+	/**
+	* Application Implementation and Design (http://www.hl7.org/Special/committees/java/index.cfm).
+	*/
+	@Json(name = "aid")
+	AID,
 }

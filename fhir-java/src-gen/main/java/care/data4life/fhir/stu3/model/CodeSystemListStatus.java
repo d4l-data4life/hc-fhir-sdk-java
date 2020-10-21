@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The current state of the list
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemListStatus {
 
-    /**
-     * The list is considered to be an active part of the patient's record.
-     */
-    @Json(name = "current")
-    CURRENT,
+	/**
+	* The list is considered to be an active part of the patient's record.
+	*/
+	@Json(name = "current")
+	CURRENT,
 
-    /**
-     * The list is "old" and should no longer be considered accurate or relevant.
-     */
-    @Json(name = "retired")
-    RETIRED,
+	/**
+	* The list is "old" and should no longer be considered accurate or relevant.
+	*/
+	@Json(name = "retired")
+	RETIRED,
 
-    /**
-     * The list was never accurate.  It is retained for medico-legal purposes only.
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* The list was never accurate.  It is retained for medico-legal purposes only.
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The kind of dose or rate specified.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDoseAndRateType {
 
-    /**
-     * The dose specified is calculated by the prescriber or the system.
-     */
-    @Json(name = "calculated")
-    CALCULATED,
+	/**
+	* The dose specified is calculated by the prescriber or the system.
+	*/
+	@Json(name = "calculated")
+	CALCULATED,
 
-    /**
-     * The dose specified is as ordered by the prescriber.
-     */
-    @Json(name = "ordered")
-    ORDERED,
+	/**
+	* The dose specified is as ordered by the prescriber.
+	*/
+	@Json(name = "ordered")
+	ORDERED,
 }

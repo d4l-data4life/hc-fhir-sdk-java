@@ -18,77 +18,79 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Signature.java
- * <p>
- * A signature along with supporting context. The signature may be a digital signature that is
- * cryptographic in nature, or some other signature acceptable to the domain. This other signature
- * may be as simple as a graphical image representing a hand-written signature, or a signature
- * ceremony Different signature approaches have different utilities.
+ *
+ * A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Signature">Signature</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Signature) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Signature) on 2020-10-19
  */
-public class Signature extends Element {
+public class Signature extends Element  {
 
-    public static final String resourceType = "Signature";
-
-    // Indication of the reason the entity signed the object(s).
+	public static final String resourceType = "Signature";
+  
+	// Indication of the reason the entity signed the object(s).
     @Json(name = "type")
-    public List<Coding> type;
-
-    // When the signature was created.
+	public List<Coding> type;
+  
+	// When the signature was created.
     @Json(name = "when")
-    public FhirInstant when;
-
-    // Who signed.
+	public FhirInstant when;
+  
+	// Who signed.
     @Json(name = "who")
-    public Reference who;
-
-    // The party represented.
+	public Reference who;
+  
+	// The party represented.
     @Json(name = "onBehalfOf")
-    @Nullable
-    public Reference onBehalfOf;
-
-    // The technical format of the signed resources.
+	@Nullable
+	public Reference onBehalfOf;
+  
+	// The technical format of the signed resources.
     @Json(name = "targetFormat")
-    @Nullable
-    public String targetFormat;
-
-    // The technical format of the signature.
+	@Nullable
+	public String targetFormat;
+  
+	// The technical format of the signature.
     @Json(name = "sigFormat")
-    @Nullable
-    public String sigFormat;
-
-    // The actual signature content (XML DigSig. JWS, picture, etc.).
+	@Nullable
+	public String sigFormat;
+  
+	// The actual signature content (XML DigSig. JWS, picture, etc.).
     @Json(name = "data")
-    @Nullable
-    public String data;
+	@Nullable
+	public String data;
 
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param type List of Coding
+	 *
+	 * @param when FhirInstant
+	 *
+	 * @param who Reference
+	 *
+	 */
+	public Signature(List<Coding> type, FhirInstant when, Reference who) {
+		this.type = type;
+		this.when = when;
+		this.who = who;
+	}@Override
+	public String getResourceType() {
+		return Signature.resourceType;
+	}
 
-    /**
-     * Constructor for all required properties.
-     *
-     * @param type List of Coding
-     * @param when FhirInstant
-     * @param who  Reference
-     */
-    public Signature(List<Coding> type, FhirInstant when, Reference who) {
-        this.type = type;
-        this.when = when;
-        this.who = who;
-    }
-
-    @Override
-    public String getResourceType() {
-        return Signature.resourceType;
-    }
 
 
 }

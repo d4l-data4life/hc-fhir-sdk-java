@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes sample Payment Type codes.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemPaymentTypeCodes {
 
-    /**
-     * The amount is partial or complete settlement of the amounts due.
-     */
-    @Json(name = "payment")
-    PAYMENT,
+	/**
+	* The amount is partial or complete settlement of the amounts due.
+	*/
+	@Json(name = "payment")
+	PAYMENT,
 
-    /**
-     * The amount is an adjustment regarding claims already paid.
-     */
-    @Json(name = "adjustment")
-    ADJUSTMENT,
+	/**
+	* The amount is an adjustment regarding claims already paid.
+	*/
+	@Json(name = "adjustment")
+	ADJUSTMENT,
 
-    /**
-     * The amount is an advance against future claims.
-     */
-    @Json(name = "advance")
-    ADVANCE,
+	/**
+	* The amount is an advance against future claims.
+	*/
+	@Json(name = "advance")
+	ADVANCE,
 }

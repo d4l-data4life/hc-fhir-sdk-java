@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Substance category codes
  *
@@ -26,51 +27,45 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSubstanceCategoryCodes {
 
-    /**
-     * A substance that causes an allergic reaction.
-     */
-    @Json(name = "allergen")
-    ALLERGEN,
+	/**
+	* A substance that causes an allergic reaction.
+	*/
+	@Json(name = "allergen")
+	ALLERGEN,
 
-    /**
-     * A substance that is produced by or extracted from a biological source.
-     */
-    @Json(name = "biological")
-    BIOLOGICAL,
+	/**
+	* A substance that is produced by or extracted from a biological source.
+	*/
+	@Json(name = "biological")
+	BIOLOGICAL,
 
-    /**
-     * A substance that comes directly from a human or an animal (e.g. blood, urine, feces, tears,
-     * etc.).
-     */
-    @Json(name = "body")
-    BODY,
+	/**
+	* A substance that comes directly from a human or an animal (e.g. blood, urine, feces, tears, etc.).
+	*/
+	@Json(name = "body")
+	BODY,
 
-    /**
-     * Any organic or inorganic substance of a particular molecular identity, including -- (i) any
-     * combination of such substances occurring in whole or in part as a result of a chemical
-     * reaction or occurring in nature and (ii) any element or uncombined radical
-     * (http://www.epa.gov/opptintr/import-export/pubs/importguide.pdf).
-     */
-    @Json(name = "chemical")
-    CHEMICAL,
+	/**
+	* Any organic or inorganic substance of a particular molecular identity, including -- (i) any combination of such substances occurring in whole or in part as a result of a chemical reaction or occurring in nature and (ii) any element or uncombined radical (http://www.epa.gov/opptintr/import-export/pubs/importguide.pdf).
+	*/
+	@Json(name = "chemical")
+	CHEMICAL,
 
-    /**
-     * A food, dietary ingredient, or dietary supplement for human or animal.
-     */
-    @Json(name = "food")
-    FOOD,
+	/**
+	* A food, dietary ingredient, or dietary supplement for human or animal.
+	*/
+	@Json(name = "food")
+	FOOD,
 
-    /**
-     * A substance intended for use in the diagnosis, cure, mitigation, treatment, or prevention of
-     * disease in man or other animals (Federal Food Drug and Cosmetic Act).
-     */
-    @Json(name = "drug")
-    DRUG,
+	/**
+	* A substance intended for use in the diagnosis, cure, mitigation, treatment, or prevention of disease in man or other animals (Federal Food Drug and Cosmetic Act).
+	*/
+	@Json(name = "drug")
+	DRUG,
 
-    /**
-     * A finished product which is not normally ingested, absorbed or injected (e.g. steel, iron,
-     * wood, plastic and paper).
-     */
-    @Json(name = "material")
-    MATERIAL,
+	/**
+	* A finished product which is not normally ingested, absorbed or injected (e.g. steel, iron, wood, plastic and paper).
+	*/
+	@Json(name = "material")
+	MATERIAL,
 }

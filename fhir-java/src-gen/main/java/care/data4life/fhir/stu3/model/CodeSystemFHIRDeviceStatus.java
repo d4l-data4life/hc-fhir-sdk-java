@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The availability status of the device.
  *
@@ -26,29 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemFHIRDeviceStatus {
 
-    /**
-     * The Device is available for use.  Note: This means for *implanted devices*  the device is
-     * implanted in the patient.
-     */
-    @Json(name = "active")
-    ACTIVE,
+	/**
+	* The Device is available for use.  Note: This means for *implanted devices*  the device is implanted in the patient.
+	*/
+	@Json(name = "active")
+	ACTIVE,
 
-    /**
-     * The Device is no longer available for use (e.g. lost, expired, damaged).  Note: This means
-     * for *implanted devices*  the device has been removed from the patient.
-     */
-    @Json(name = "inactive")
-    INACTIVE,
+	/**
+	* The Device is no longer available for use (e.g. lost, expired, damaged).  Note: This means for *implanted devices*  the device has been removed from the patient.
+	*/
+	@Json(name = "inactive")
+	INACTIVE,
 
-    /**
-     * The Device was entered in error and voided.
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* The Device was entered in error and voided.
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 
-    /**
-     * The status of the device has not been determined.
-     */
-    @Json(name = "unknown")
-    UNKNOWN,
+	/**
+	* The status of the device has not been determined.
+	*/
+	@Json(name = "unknown")
+	UNKNOWN,
 }

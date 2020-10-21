@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Codes for general categories of communications such as alerts, instructions, etc.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCommunicationCategory {
 
-    /**
-     * The communication conveys an alert.
-     */
-    @Json(name = "alert")
-    ALERT,
+	/**
+	* The communication conveys an alert.
+	*/
+	@Json(name = "alert")
+	ALERT,
 
-    /**
-     * The communication conveys a notification.
-     */
-    @Json(name = "notification")
-    NOTIFICATION,
+	/**
+	* The communication conveys a notification.
+	*/
+	@Json(name = "notification")
+	NOTIFICATION,
 
-    /**
-     * The communication conveys a reminder.
-     */
-    @Json(name = "reminder")
-    REMINDER,
+	/**
+	* The communication conveys a reminder.
+	*/
+	@Json(name = "reminder")
+	REMINDER,
 
-    /**
-     * The communication conveys an instruction.
-     */
-    @Json(name = "instruction")
-    INSTRUCTION,
+	/**
+	* The communication conveys an instruction.
+	*/
+	@Json(name = "instruction")
+	INSTRUCTION,
 }

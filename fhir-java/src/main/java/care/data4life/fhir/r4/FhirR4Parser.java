@@ -14,39 +14,29 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir.r4.model;
+package care.data4life.fhir.r4;
 
-import com.squareup.moshi.Json;
+import care.data4life.fhir.FhirException;
+import care.data4life.fhir.FhirParser;
+import care.data4life.fhir.json.FhirJsonParser;
+import care.data4life.fhir.r4.json.FhirR4MoshiJsonParser;
+import care.data4life.fhir.r4.model.FhirR4Base;
 
-import javax.annotation.Nullable;
+public final class FhirR4Parser implements FhirParser<FhirR4Base> {
 
-/**
- * Canonical.java
- * <p>
- * A URI that is a reference to a canonical URL on a FHIR resource
- *
- * @see <a href="http://hl7.org/fhir/StructureDefinition/canonical">Canonical</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/canonical) on
- * 2020-10-15
- */
-public class Canonical {
+    private FhirJsonParser jsonParser;
 
-    public static final String resourceType = "Canonical";
-
-    // Primitive value for canonical.
-    @Json(name = "value")
-    @Nullable
-    public Canonical value;
-
-
-    public Canonical() {
+    public FhirR4Parser() {
+        this.jsonParser = new FhirR4MoshiJsonParser();
     }
 
     @Override
-    public String getResourceType() {
-        return Canonical.resourceType;
+    public <T extends FhirR4Base> T toFhir(Class<T> fhirType, String fhirJson) throws FhirException {
+        return (T) jsonParser.fromJson(fhirType, fhirJson);
     }
 
-
+    @Override
+    public <T extends FhirR4Base> String fromFhir(T fhirObject) throws FhirException {
+        return jsonParser.toJson(fhirObject);
+    }
 }

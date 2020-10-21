@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The validation status of the target
  *
@@ -26,39 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemStatus {
 
-    /**
-     * ***TODO***
-     */
-    @Json(name = "attested")
-    ATTESTED,
+	/**
+	* ***TODO***
+	*/
+	@Json(name = "attested")
+	ATTESTED,
 
-    /**
-     * ***TODO***
-     */
-    @Json(name = "validated")
-    VALIDATED,
+	/**
+	* ***TODO***
+	*/
+	@Json(name = "validated")
+	VALIDATED,
 
-    /**
-     * ***TODO***
-     */
-    @Json(name = "in-process")
-    IN_PROCESS,
+	/**
+	* ***TODO***
+	*/
+	@Json(name = "in-process")
+	IN_PROCESS,
 
-    /**
-     * ***TODO***
-     */
-    @Json(name = "req-revalid")
-    REQ_REVALID,
+	/**
+	* ***TODO***
+	*/
+	@Json(name = "req-revalid")
+	REQ_REVALID,
 
-    /**
-     * ***TODO***
-     */
-    @Json(name = "val-fail")
-    VAL_FAIL,
+	/**
+	* ***TODO***
+	*/
+	@Json(name = "val-fail")
+	VAL_FAIL,
 
-    /**
-     * ***TODO***
-     */
-    @Json(name = "reval-fail")
-    REVAL_FAIL,
+	/**
+	* ***TODO***
+	*/
+	@Json(name = "reval-fail")
+	REVAL_FAIL,
 }

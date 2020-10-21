@@ -18,40 +18,45 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
  * Money.java
- * <p>
- * An amount of economic utility in some recognized currency
  *
+ * An amount of economic utility in some recognized currency
+ * 
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Money">Money</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Money) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Money) on 2020-10-19
  */
-public class Money extends Element {
+public class Money extends Element  {
 
-    public static final String resourceType = "Money";
-
-    // Numerical value (with implicit precision).
+	public static final String resourceType = "Money";
+  
+	// Numerical value (with implicit precision).
     @Json(name = "value")
-    @Nullable
-    public FhirDecimal value;
-
-    // ISO 4217 Currency Code.
+	@Nullable
+	public FhirDecimal value;
+  
+	// ISO 4217 Currency Code.
     @Json(name = "currency")
-    @Nullable
-    public String currency;
+	@Nullable
+	public String currency;
 
+    
+	public Money() {
+	}
+	@Override
+	public String getResourceType() {
+		return Money.resourceType;
+	}
 
-    public Money() {
-    }
-
-    @Override
-    public String getResourceType() {
-        return Money.resourceType;
-    }
 
 
 }

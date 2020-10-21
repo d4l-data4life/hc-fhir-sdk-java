@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The type of knowledge asset this library contains
  *
@@ -26,28 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemLibraryType {
 
-    /**
-     * The resource is a shareable library of formalized knowledge
-     */
-    @Json(name = "logic-library")
-    LOGIC_LIBRARY,
+	/**
+	* The resource is a shareable library of formalized knowledge
+	*/
+	@Json(name = "logic-library")
+	LOGIC_LIBRARY,
 
-    /**
-     * The resource is a definition of an information model
-     */
-    @Json(name = "model-definition")
-    MODEL_DEFINITION,
+	/**
+	* The resource is a definition of an information model
+	*/
+	@Json(name = "model-definition")
+	MODEL_DEFINITION,
 
-    /**
-     * The resource is a collection of knowledge assets
-     */
-    @Json(name = "asset-collection")
-    ASSET_COLLECTION,
+	/**
+	* The resource is a collection of knowledge assets
+	*/
+	@Json(name = "asset-collection")
+	ASSET_COLLECTION,
 
-    /**
-     * The resource defines the dependencies, parameters, and data requirements for a particular
-     * module or evaluation context
-     */
-    @Json(name = "module-definition")
-    MODULE_DEFINITION,
+	/**
+	* The resource defines the dependencies, parameters, and data requirements for a particular module or evaluation context
+	*/
+	@Json(name = "module-definition")
+	MODULE_DEFINITION,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The gender of a person used for administrative purposes.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAdministrativeGender {
 
-    /**
-     * Male.
-     */
-    @Json(name = "male")
-    MALE,
+	/**
+	* Male.
+	*/
+	@Json(name = "male")
+	MALE,
 
-    /**
-     * Female.
-     */
-    @Json(name = "female")
-    FEMALE,
+	/**
+	* Female.
+	*/
+	@Json(name = "female")
+	FEMALE,
 
-    /**
-     * Other.
-     */
-    @Json(name = "other")
-    OTHER,
+	/**
+	* Other.
+	*/
+	@Json(name = "other")
+	OTHER,
 
-    /**
-     * Unknown.
-     */
-    @Json(name = "unknown")
-    UNKNOWN,
+	/**
+	* Unknown.
+	*/
+	@Json(name = "unknown")
+	UNKNOWN,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Copy Number Event.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCopyNumberEvent {
 
-    /**
-     * amplification.
-     */
-    @Json(name = "amp")
-    AMP,
+	/**
+	* amplification.
+	*/
+	@Json(name = "amp")
+	AMP,
 
-    /**
-     * deletion.
-     */
-    @Json(name = "del")
-    DEL,
+	/**
+	* deletion.
+	*/
+	@Json(name = "del")
+	DEL,
 
-    /**
-     * loss of function.
-     */
-    @Json(name = "lof")
-    LOF,
+	/**
+	* loss of function.
+	*/
+	@Json(name = "lof")
+	LOF,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Possible group measure aggregates (E.g. Mean, Median).
  *
@@ -26,39 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGroupMeasure {
 
-    /**
-     * Aggregated using Mean of participant values.
-     */
-    @Json(name = "mean")
-    MEAN,
+	/**
+	* Aggregated using Mean of participant values.
+	*/
+	@Json(name = "mean")
+	MEAN,
 
-    /**
-     * Aggregated using Median of participant values.
-     */
-    @Json(name = "median")
-    MEDIAN,
+	/**
+	* Aggregated using Median of participant values.
+	*/
+	@Json(name = "median")
+	MEDIAN,
 
-    /**
-     * Aggregated using Mean of study mean values.
-     */
-    @Json(name = "mean-of-mean")
-    MEAN_OF_MEAN,
+	/**
+	* Aggregated using Mean of study mean values.
+	*/
+	@Json(name = "mean-of-mean")
+	MEAN_OF_MEAN,
 
-    /**
-     * Aggregated using Mean of study median values.
-     */
-    @Json(name = "mean-of-median")
-    MEAN_OF_MEDIAN,
+	/**
+	* Aggregated using Mean of study median values.
+	*/
+	@Json(name = "mean-of-median")
+	MEAN_OF_MEDIAN,
 
-    /**
-     * Aggregated using Median of study mean values.
-     */
-    @Json(name = "median-of-mean")
-    MEDIAN_OF_MEAN,
+	/**
+	* Aggregated using Median of study mean values.
+	*/
+	@Json(name = "median-of-mean")
+	MEDIAN_OF_MEAN,
 
-    /**
-     * Aggregated using Median of study median values.
-     */
-    @Json(name = "median-of-median")
-    MEDIAN_OF_MEDIAN,
+	/**
+	* Aggregated using Median of study median values.
+	*/
+	@Json(name = "median-of-median")
+	MEDIAN_OF_MEDIAN,
 }

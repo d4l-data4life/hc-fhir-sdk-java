@@ -19,23 +19,23 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This value set defines the set of codes for describing the type or mode of the patient's
- * preferred language.
+ * This value set defines the set of codes for describing the type or mode of the patient's preferred language.
  *
  * @see <a href="http://hl7.org/fhir/language-preference-type">LanguagePreferenceType</a>
  */
 public enum CodeSystemLanguagePreferenceType {
 
-    /**
-     * The patient prefers to verbally communicate with the associated language.
-     */
-    @Json(name = "verbal")
-    VERBAL,
+	/**
+	* The patient prefers to verbally communicate with the associated language.
+	*/
+	@Json(name = "verbal")
+	VERBAL,
 
-    /**
-     * The patient prefers to communicate in writing with the associated language.
-     */
-    @Json(name = "written")
-    WRITTEN,
+	/**
+	* The patient prefers to communicate in writing with the associated language.
+	*/
+	@Json(name = "written")
+	WRITTEN,
 }

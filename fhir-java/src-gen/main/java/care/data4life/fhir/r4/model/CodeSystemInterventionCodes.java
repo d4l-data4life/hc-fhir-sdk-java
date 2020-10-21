@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes sample Intervention codes.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemInterventionCodes {
 
-    /**
-     * Unknown
-     */
-    @Json(name = "unknown")
-    UNKNOWN,
+	/**
+	* Unknown
+	*/
+	@Json(name = "unknown")
+	UNKNOWN,
 
-    /**
-     * Other
-     */
-    @Json(name = "other")
-    OTHER,
+	/**
+	* Other
+	*/
+	@Json(name = "other")
+	OTHER,
 }

@@ -19,47 +19,47 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for
- * details.
+ * HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.
  *
  * @see <a href="http://hl7.org/fhir/http-verb">HTTPVerb</a>
  */
 public enum CodeSystemHTTPVerb {
 
-    /**
-     * HTTP GET Command.
-     */
-    @Json(name = "GET")
-    GET,
+	/**
+	* HTTP GET Command.
+	*/
+	@Json(name = "GET")
+	GET,
 
-    /**
-     * HTTP HEAD Command.
-     */
-    @Json(name = "HEAD")
-    HEAD,
+	/**
+	* HTTP HEAD Command.
+	*/
+	@Json(name = "HEAD")
+	HEAD,
 
-    /**
-     * HTTP POST Command.
-     */
-    @Json(name = "POST")
-    POST,
+	/**
+	* HTTP POST Command.
+	*/
+	@Json(name = "POST")
+	POST,
 
-    /**
-     * HTTP PUT Command.
-     */
-    @Json(name = "PUT")
-    PUT,
+	/**
+	* HTTP PUT Command.
+	*/
+	@Json(name = "PUT")
+	PUT,
 
-    /**
-     * HTTP DELETE Command.
-     */
-    @Json(name = "DELETE")
-    DELETE,
+	/**
+	* HTTP DELETE Command.
+	*/
+	@Json(name = "DELETE")
+	DELETE,
 
-    /**
-     * HTTP PATCH Command.
-     */
-    @Json(name = "PATCH")
-    PATCH,
+	/**
+	* HTTP PATCH Command.
+	*/
+	@Json(name = "PATCH")
+	PATCH,
 }

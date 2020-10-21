@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Criterion for rejection of the specimen by laboratory.
  *
@@ -26,33 +27,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemRejectionCriterion {
 
-    /**
-     * blood specimen hemolized.
-     */
-    @Json(name = "hemolized")
-    HEMOLIZED,
+	/**
+	* blood specimen hemolized.
+	*/
+	@Json(name = "hemolized")
+	HEMOLIZED,
 
-    /**
-     * insufficient quantity of specimen.
-     */
-    @Json(name = "insufficient")
-    INSUFFICIENT,
+	/**
+	* insufficient quantity of specimen.
+	*/
+	@Json(name = "insufficient")
+	INSUFFICIENT,
 
-    /**
-     * specimen container broken.
-     */
-    @Json(name = "broken")
-    BROKEN,
+	/**
+	* specimen container broken.
+	*/
+	@Json(name = "broken")
+	BROKEN,
 
-    /**
-     * specimen clotted.
-     */
-    @Json(name = "clotted")
-    CLOTTED,
+	/**
+	* specimen clotted.
+	*/
+	@Json(name = "clotted")
+	CLOTTED,
 
-    /**
-     * specimen temperature inappropriate.
-     */
-    @Json(name = "wrong-temperature")
-    WRONG_TEMPERATURE,
+	/**
+	* specimen temperature inappropriate.
+	*/
+	@Json(name = "wrong-temperature")
+	WRONG_TEMPERATURE,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes sample Contract Action codes.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContractActionCodes {
 
-    /**
-     * Definition for Action A
-     */
-    @Json(name = "action-a")
-    ACTION_A,
+	/**
+	* Definition for Action A
+	*/
+	@Json(name = "action-a")
+	ACTION_A,
 
-    /**
-     * Definition for Action B
-     */
-    @Json(name = "action-b")
-    ACTION_B,
+	/**
+	* Definition for Action B
+	*/
+	@Json(name = "action-b")
+	ACTION_B,
 }

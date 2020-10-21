@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Example codes for grouping goals to use for filtering or presentation.
  *
@@ -26,33 +27,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGoalCategory {
 
-    /**
-     * Goals related to the consumption of food and/or beverages.
-     */
-    @Json(name = "dietary")
-    DIETARY,
+	/**
+	* Goals related to the consumption of food and/or beverages.
+	*/
+	@Json(name = "dietary")
+	DIETARY,
 
-    /**
-     * Goals related to the personal protection of the subject.
-     */
-    @Json(name = "safety")
-    SAFETY,
+	/**
+	* Goals related to the personal protection of the subject.
+	*/
+	@Json(name = "safety")
+	SAFETY,
 
-    /**
-     * Goals related to the manner in which the subject acts.
-     */
-    @Json(name = "behavioral")
-    BEHAVIORAL,
+	/**
+	* Goals related to the manner in which the subject acts.
+	*/
+	@Json(name = "behavioral")
+	BEHAVIORAL,
 
-    /**
-     * Goals related to the practice of nursing or established by nurses.
-     */
-    @Json(name = "nursing")
-    NURSING,
+	/**
+	* Goals related to the practice of nursing or established by nurses.
+	*/
+	@Json(name = "nursing")
+	NURSING,
 
-    /**
-     * Goals related to the mobility and/or motor capability of the subject.
-     */
-    @Json(name = "physiotherapy")
-    PHYSIOTHERAPY,
+	/**
+	* Goals related to the mobility and/or motor capability of the subject.
+	*/
+	@Json(name = "physiotherapy")
+	PHYSIOTHERAPY,
 }

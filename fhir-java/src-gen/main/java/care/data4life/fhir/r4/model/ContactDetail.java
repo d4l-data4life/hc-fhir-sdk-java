@@ -18,42 +18,45 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * ContactDetail.java
- * <p>
+ *
  * Specifies contact information for a person or organization.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ContactDetail">ContactDetail</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ContactDetail) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ContactDetail) on 2020-10-19
  */
-public class ContactDetail extends Element {
+public class ContactDetail extends Element  {
 
-    public static final String resourceType = "ContactDetail";
-
-    // Name of an individual to contact.
+	public static final String resourceType = "ContactDetail";
+  
+	// Name of an individual to contact.
     @Json(name = "name")
-    @Nullable
-    public String name;
-
-    // Contact details for individual or organization.
+	@Nullable
+	public String name;
+  
+	// Contact details for individual or organization.
     @Json(name = "telecom")
-    @Nullable
-    public List<ContactPoint> telecom;
+	@Nullable
+	public List<ContactPoint> telecom;
 
+    
+	public ContactDetail() {
+	}
+	@Override
+	public String getResourceType() {
+		return ContactDetail.resourceType;
+	}
 
-    public ContactDetail() {
-    }
-
-    @Override
-    public String getResourceType() {
-        return ContactDetail.resourceType;
-    }
 
 
 }

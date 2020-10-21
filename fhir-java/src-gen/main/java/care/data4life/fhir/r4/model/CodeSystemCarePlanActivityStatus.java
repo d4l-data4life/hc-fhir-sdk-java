@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Codes that reflect the current state of a care plan activity within its overall life cycle.
  *
@@ -26,61 +27,57 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCarePlanActivityStatus {
 
-    /**
-     * Care plan activity is planned but no action has yet been taken.
-     */
-    @Json(name = "not-started")
-    NOT_STARTED,
+	/**
+	* Care plan activity is planned but no action has yet been taken.
+	*/
+	@Json(name = "not-started")
+	NOT_STARTED,
 
-    /**
-     * Appointment or other booking has occurred but activity has not yet begun.
-     */
-    @Json(name = "scheduled")
-    SCHEDULED,
+	/**
+	* Appointment or other booking has occurred but activity has not yet begun.
+	*/
+	@Json(name = "scheduled")
+	SCHEDULED,
 
-    /**
-     * Care plan activity has been started but is not yet complete.
-     */
-    @Json(name = "in-progress")
-    IN_PROGRESS,
+	/**
+	* Care plan activity has been started but is not yet complete.
+	*/
+	@Json(name = "in-progress")
+	IN_PROGRESS,
 
-    /**
-     * Care plan activity was started but has temporarily ceased with an expectation of resumption
-     * at a future time.
-     */
-    @Json(name = "on-hold")
-    ON_HOLD,
+	/**
+	* Care plan activity was started but has temporarily ceased with an expectation of resumption at a future time.
+	*/
+	@Json(name = "on-hold")
+	ON_HOLD,
 
-    /**
-     * Care plan activity has been completed (more or less) as planned.
-     */
-    @Json(name = "completed")
-    COMPLETED,
+	/**
+	* Care plan activity has been completed (more or less) as planned.
+	*/
+	@Json(name = "completed")
+	COMPLETED,
 
-    /**
-     * The planned care plan activity has been withdrawn.
-     */
-    @Json(name = "cancelled")
-    CANCELLED,
+	/**
+	* The planned care plan activity has been withdrawn.
+	*/
+	@Json(name = "cancelled")
+	CANCELLED,
 
-    /**
-     * The planned care plan activity has been ended prior to completion after the activity was
-     * started.
-     */
-    @Json(name = "stopped")
-    STOPPED,
+	/**
+	* The planned care plan activity has been ended prior to completion after the activity was started.
+	*/
+	@Json(name = "stopped")
+	STOPPED,
 
-    /**
-     * The current state of the care plan activity is not known.  Note: This concept is not to be
-     * used for "other" - one of the listed statuses is presumed to apply, but the authoring/source
-     * system does not know which one.
-     */
-    @Json(name = "unknown")
-    UNKNOWN,
+	/**
+	* The current state of the care plan activity is not known.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which one.
+	*/
+	@Json(name = "unknown")
+	UNKNOWN,
 
-    /**
-     * Care plan activity was entered in error and voided.
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* Care plan activity was entered in error and voided.
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 }

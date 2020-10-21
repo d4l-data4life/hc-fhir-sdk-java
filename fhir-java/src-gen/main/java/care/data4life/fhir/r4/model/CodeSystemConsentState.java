@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Indicates the state of the consent.
  *
@@ -26,39 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConsentState {
 
-    /**
-     * The consent is in development or awaiting use but is not yet intended to be acted upon.
-     */
-    @Json(name = "draft")
-    DRAFT,
+	/**
+	* The consent is in development or awaiting use but is not yet intended to be acted upon.
+	*/
+	@Json(name = "draft")
+	DRAFT,
 
-    /**
-     * The consent has been proposed but not yet agreed to by all parties. The negotiation stage.
-     */
-    @Json(name = "proposed")
-    PROPOSED,
+	/**
+	* The consent has been proposed but not yet agreed to by all parties. The negotiation stage.
+	*/
+	@Json(name = "proposed")
+	PROPOSED,
 
-    /**
-     * The consent is to be followed and enforced.
-     */
-    @Json(name = "active")
-    ACTIVE,
+	/**
+	* The consent is to be followed and enforced.
+	*/
+	@Json(name = "active")
+	ACTIVE,
 
-    /**
-     * The consent has been rejected by one or more of the parties.
-     */
-    @Json(name = "rejected")
-    REJECTED,
+	/**
+	* The consent has been rejected by one or more of the parties.
+	*/
+	@Json(name = "rejected")
+	REJECTED,
 
-    /**
-     * The consent is terminated or replaced.
-     */
-    @Json(name = "inactive")
-    INACTIVE,
+	/**
+	* The consent is terminated or replaced.
+	*/
+	@Json(name = "inactive")
+	INACTIVE,
 
-    /**
-     * The consent was created wrongly (e.g. wrong patient) and should be ignored.
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* The consent was created wrongly (e.g. wrong patient) and should be ignored.
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 }

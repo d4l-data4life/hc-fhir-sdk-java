@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Structure Definition Use Codes / Keywords
  *
@@ -26,39 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDefinitionUseCodes {
 
-    /**
-     * This structure is defined as part of the base FHIR Specification
-     */
-    @Json(name = "fhir-structure")
-    FHIR_STRUCTURE,
+	/**
+	* This structure is defined as part of the base FHIR Specification
+	*/
+	@Json(name = "fhir-structure")
+	FHIR_STRUCTURE,
 
-    /**
-     * This structure is intended to be treated like a FHIR resource (e.g. on the FHIR API)
-     */
-    @Json(name = "custom-resource")
-    CUSTOM_RESOURCE,
+	/**
+	* This structure is intended to be treated like a FHIR resource (e.g. on the FHIR API)
+	*/
+	@Json(name = "custom-resource")
+	CUSTOM_RESOURCE,
 
-    /**
-     * This structure captures an analysis of a domain
-     */
-    @Json(name = "dam")
-    DAM,
+	/**
+	* This structure captures an analysis of a domain
+	*/
+	@Json(name = "dam")
+	DAM,
 
-    /**
-     * This structure represents and existing structure (e.g. CDA, HL7 v2)
-     */
-    @Json(name = "wire-format")
-    WIRE_FORMAT,
+	/**
+	* This structure represents and existing structure (e.g. CDA, HL7 v2)
+	*/
+	@Json(name = "wire-format")
+	WIRE_FORMAT,
 
-    /**
-     * This structure captures an analysis of a domain
-     */
-    @Json(name = "archetype")
-    ARCHETYPE,
+	/**
+	* This structure captures an analysis of a domain
+	*/
+	@Json(name = "archetype")
+	ARCHETYPE,
 
-    /**
-     * This structure is a template (n.b: 'template' has many meanings)
-     */
-    @Json(name = "template")
-    TEMPLATE,
+	/**
+	* This structure is a template (n.b: 'template' has many meanings)
+	*/
+	@Json(name = "template")
+	TEMPLATE,
 }

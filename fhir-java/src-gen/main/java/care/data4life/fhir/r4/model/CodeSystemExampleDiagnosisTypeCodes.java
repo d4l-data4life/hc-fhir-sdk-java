@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes example Diagnosis Type codes.
  *
@@ -26,81 +27,75 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExampleDiagnosisTypeCodes {
 
-    /**
-     * The diagnosis given as the reason why the patient was admitted to the hospital.
-     */
-    @Json(name = "admitting")
-    ADMITTING,
+	/**
+	* The diagnosis given as the reason why the patient was admitted to the hospital.
+	*/
+	@Json(name = "admitting")
+	ADMITTING,
 
-    /**
-     * A diagnosis made on the basis of medical signs and patient-reported symptoms, rather than
-     * diagnostic tests.
-     */
-    @Json(name = "clinical")
-    CLINICAL,
+	/**
+	* A diagnosis made on the basis of medical signs and patient-reported symptoms, rather than diagnostic tests.
+	*/
+	@Json(name = "clinical")
+	CLINICAL,
 
-    /**
-     * One of a set of the possible diagnoses that could be connected to the signs, symptoms, and
-     * lab findings.
-     */
-    @Json(name = "differential")
-    DIFFERENTIAL,
+	/**
+	* One of a set of the possible diagnoses that could be connected to the signs, symptoms, and lab findings.
+	*/
+	@Json(name = "differential")
+	DIFFERENTIAL,
 
-    /**
-     * The diagnosis given when the patient is discharged from the hospital.
-     */
-    @Json(name = "discharge")
-    DISCHARGE,
+	/**
+	* The diagnosis given when the patient is discharged from the hospital.
+	*/
+	@Json(name = "discharge")
+	DISCHARGE,
 
-    /**
-     * A diagnosis based significantly on laboratory reports or test results, rather than the
-     * physical examination of the patient.
-     */
-    @Json(name = "laboratory")
-    LABORATORY,
+	/**
+	* A diagnosis based significantly on laboratory reports or test results, rather than the physical examination of the patient.
+	*/
+	@Json(name = "laboratory")
+	LABORATORY,
 
-    /**
-     * A diagnosis which identifies people's responses to situations in their lives, such as a
-     * readiness to change or a willingness to accept assistance.
-     */
-    @Json(name = "nursing")
-    NURSING,
+	/**
+	* A diagnosis which identifies people's responses to situations in their lives, such as a readiness to change or a willingness to accept assistance.
+	*/
+	@Json(name = "nursing")
+	NURSING,
 
-    /**
-     * A diagnosis determined prior to birth.
-     */
-    @Json(name = "prenatal")
-    PRENATAL,
+	/**
+	* A diagnosis determined prior to birth.
+	*/
+	@Json(name = "prenatal")
+	PRENATAL,
 
-    /**
-     * The single medical diagnosis that is most relevant to the patient's chief complaint or need
-     * for treatment.
-     */
-    @Json(name = "principal")
-    PRINCIPAL,
+	/**
+	* The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment.
+	*/
+	@Json(name = "principal")
+	PRINCIPAL,
 
-    /**
-     * A diagnosis based primarily on the results from medical imaging studies.
-     */
-    @Json(name = "radiology")
-    RADIOLOGY,
+	/**
+	* A diagnosis based primarily on the results from medical imaging studies.
+	*/
+	@Json(name = "radiology")
+	RADIOLOGY,
 
-    /**
-     * A diagnosis determined using telemedicine techniques.
-     */
-    @Json(name = "remote")
-    REMOTE,
+	/**
+	* A diagnosis determined using telemedicine techniques.
+	*/
+	@Json(name = "remote")
+	REMOTE,
 
-    /**
-     * The labeling of an illness in a specific historical event using modern knowledge, methods and
-     * disease classifications.
-     */
-    @Json(name = "retrospective")
-    RETROSPECTIVE,
+	/**
+	* The labeling of an illness in a specific historical event using modern knowledge, methods and disease classifications.
+	*/
+	@Json(name = "retrospective")
+	RETROSPECTIVE,
 
-    /**
-     * A diagnosis determined by the patient.
-     */
-    @Json(name = "self")
-    SELF,
+	/**
+	* A diagnosis determined by the patient.
+	*/
+	@Json(name = "self")
+	SELF,
 }

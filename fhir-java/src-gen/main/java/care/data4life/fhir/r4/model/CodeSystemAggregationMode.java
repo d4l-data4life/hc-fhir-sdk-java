@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * How resource references can be aggregated.
  *
@@ -26,23 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAggregationMode {
 
-    /**
-     * The reference is a local reference to a contained resource.
-     */
-    @Json(name = "contained")
-    CONTAINED,
+	/**
+	* The reference is a local reference to a contained resource.
+	*/
+	@Json(name = "contained")
+	CONTAINED,
 
-    /**
-     * The reference to a resource that has to be resolved externally to the resource that includes
-     * the reference.
-     */
-    @Json(name = "referenced")
-    REFERENCED,
+	/**
+	* The reference to a resource that has to be resolved externally to the resource that includes the reference.
+	*/
+	@Json(name = "referenced")
+	REFERENCED,
 
-    /**
-     * The resource the reference points to will be found in the same bundle as the resource that
-     * includes the reference.
-     */
-    @Json(name = "bundled")
-    BUNDLED,
+	/**
+	* The resource the reference points to will be found in the same bundle as the resource that includes the reference.
+	*/
+	@Json(name = "bundled")
+	BUNDLED,
 }

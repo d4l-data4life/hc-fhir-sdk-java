@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The quality rating of the subcomponent of a quality of evidence rating.
  *
@@ -26,69 +27,69 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCertaintySubcomponentRating {
 
-    /**
-     * no change to quality rating.
-     */
-    @Json(name = "no-change")
-    NO_CHANGE,
+	/**
+	* no change to quality rating.
+	*/
+	@Json(name = "no-change")
+	NO_CHANGE,
 
-    /**
-     * reduce quality rating by 1.
-     */
-    @Json(name = "downcode1")
-    DOWNCODE1,
+	/**
+	* reduce quality rating by 1.
+	*/
+	@Json(name = "downcode1")
+	DOWNCODE1,
 
-    /**
-     * reduce quality rating by 2.
-     */
-    @Json(name = "downcode2")
-    DOWNCODE2,
+	/**
+	* reduce quality rating by 2.
+	*/
+	@Json(name = "downcode2")
+	DOWNCODE2,
 
-    /**
-     * reduce quality rating by 3.
-     */
-    @Json(name = "downcode3")
-    DOWNCODE3,
+	/**
+	* reduce quality rating by 3.
+	*/
+	@Json(name = "downcode3")
+	DOWNCODE3,
 
-    /**
-     * increase quality rating by 1.
-     */
-    @Json(name = "upcode1")
-    UPCODE1,
+	/**
+	* increase quality rating by 1.
+	*/
+	@Json(name = "upcode1")
+	UPCODE1,
 
-    /**
-     * increase quality rating by 2.
-     */
-    @Json(name = "upcode2")
-    UPCODE2,
+	/**
+	* increase quality rating by 2.
+	*/
+	@Json(name = "upcode2")
+	UPCODE2,
 
-    /**
-     * no serious concern.
-     */
-    @Json(name = "no-concern")
-    NO_CONCERN,
+	/**
+	* no serious concern.
+	*/
+	@Json(name = "no-concern")
+	NO_CONCERN,
 
-    /**
-     * serious concern.
-     */
-    @Json(name = "serious-concern")
-    SERIOUS_CONCERN,
+	/**
+	* serious concern.
+	*/
+	@Json(name = "serious-concern")
+	SERIOUS_CONCERN,
 
-    /**
-     * critical concern.
-     */
-    @Json(name = "critical-concern")
-    CRITICAL_CONCERN,
+	/**
+	* critical concern.
+	*/
+	@Json(name = "critical-concern")
+	CRITICAL_CONCERN,
 
-    /**
-     * possible reason for increasing quality rating was checked and found to bepresent.
-     */
-    @Json(name = "present")
-    PRESENT,
+	/**
+	* possible reason for increasing quality rating was checked and found to bepresent.
+	*/
+	@Json(name = "present")
+	PRESENT,
 
-    /**
-     * possible reason for increasing quality rating was checked and found to be absent.
-     */
-    @Json(name = "absent")
-    ABSENT,
+	/**
+	* possible reason for increasing quality rating was checked and found to be absent.
+	*/
+	@Json(name = "absent")
+	ABSENT,
 }

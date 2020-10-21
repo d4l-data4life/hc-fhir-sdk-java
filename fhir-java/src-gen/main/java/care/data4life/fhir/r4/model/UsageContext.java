@@ -18,74 +18,82 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
  * UsageContext.java
- * <p>
- * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize
- * an artifact. This metadata can either be specific to the applicable population (e.g., age
- * category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
+ *
+ * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/UsageContext">UsageContext</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/UsageContext) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/UsageContext) on 2020-10-19
  */
-public class UsageContext extends Element {
+public class UsageContext extends Element  {
 
-    public static final String resourceType = "UsageContext";
-
-    // Type of context being specified.
+	public static final String resourceType = "UsageContext";
+  
+	// Type of context being specified.
     @Json(name = "code")
-    public Coding code;
-
-    // Value that defines the context.
+	public Coding code;
+  
+	// Value that defines the context.
     @Json(name = "valueCodeableConcept")
-    @Nullable
-    public CodeableConcept valueCodeableConcept;
-
-    // Value that defines the context.
+	@Nullable
+	public CodeableConcept valueCodeableConcept;
+  
+	// Value that defines the context.
     @Json(name = "valueQuantity")
-    @Nullable
-    public Quantity valueQuantity;
-
-    // Value that defines the context.
+	@Nullable
+	public Quantity valueQuantity;
+  
+	// Value that defines the context.
     @Json(name = "valueRange")
-    @Nullable
-    public Range valueRange;
-
-    // Value that defines the context.
+	@Nullable
+	public Range valueRange;
+  
+	// Value that defines the context.
     @Json(name = "valueReference")
-    @Nullable
-    public Reference valueReference;
+	@Nullable
+	public Reference valueReference;
 
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param code Coding
+	 *
+	 * @param value as one of CodeableConcept, Quantity, Range, Reference*
+	 *
+	 */
+	public UsageContext(Coding code, Object value) {
+		this.code = code;
+		if (value instanceof CodeableConcept) {
+			this.valueCodeableConcept = (CodeableConcept) value;
+		}
+		else if (value instanceof Quantity) {
+			this.valueQuantity = (Quantity) value;
+		}
+		else if (value instanceof Range) {
+			this.valueRange = (Range) value;
+		}
+		else if (value instanceof Reference) {
+			this.valueReference = (Reference) value;
+		}
+		else {
+			//FIXME Type: (of: value)) for property (value) is invalid, ignoring")
+		}
+	}@Override
+	public String getResourceType() {
+		return UsageContext.resourceType;
+	}
 
-    /**
-     * Constructor for all required properties.
-     *
-     * @param code  Coding
-     * @param value as one of CodeableConcept, Quantity, Range, Reference*
-     */
-    public UsageContext(Coding code, Object value) {
-        this.code = code;
-        if (value instanceof CodeableConcept) {
-            this.valueCodeableConcept = (CodeableConcept) value;
-        } else if (value instanceof Quantity) {
-            this.valueQuantity = (Quantity) value;
-        } else if (value instanceof Range) {
-            this.valueRange = (Range) value;
-        } else if (value instanceof Reference) {
-            this.valueReference = (Reference) value;
-        } else {
-            //FIXME Type: (of: value)) for property (value) is invalid, ignoring")
-        }
-    }
-
-    @Override
-    public String getResourceType() {
-        return UsageContext.resourceType;
-    }
 
 
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Codes identifying groupings of parameters; e.g. Cardiovascular.
  *
@@ -26,57 +27,57 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDeviceComponentParameterGroup {
 
-    /**
-     * Haemodynamic Parameter Group - MDC_PGRP_HEMO
-     */
-    @Json(name = "haemodynamic")
-    HAEMODYNAMIC,
+	/**
+	* Haemodynamic Parameter Group - MDC_PGRP_HEMO
+	*/
+	@Json(name = "haemodynamic")
+	HAEMODYNAMIC,
 
-    /**
-     * ECG Parameter Group - MDC_PGRP_ECG
-     */
-    @Json(name = "ecg")
-    ECG,
+	/**
+	* ECG Parameter Group - MDC_PGRP_ECG
+	*/
+	@Json(name = "ecg")
+	ECG,
 
-    /**
-     * Respiratory Parameter Group - MDC_PGRP_RESP
-     */
-    @Json(name = "respiratory")
-    RESPIRATORY,
+	/**
+	* Respiratory Parameter Group - MDC_PGRP_RESP
+	*/
+	@Json(name = "respiratory")
+	RESPIRATORY,
 
-    /**
-     * Ventilation Parameter Group - MDC_PGRP_VENT
-     */
-    @Json(name = "ventilation")
-    VENTILATION,
+	/**
+	* Ventilation Parameter Group - MDC_PGRP_VENT
+	*/
+	@Json(name = "ventilation")
+	VENTILATION,
 
-    /**
-     * Neurological Parameter Group - MDC_PGRP_NEURO
-     */
-    @Json(name = "neurological")
-    NEUROLOGICAL,
+	/**
+	* Neurological Parameter Group - MDC_PGRP_NEURO
+	*/
+	@Json(name = "neurological")
+	NEUROLOGICAL,
 
-    /**
-     * Drug Delivery Parameter Group - MDC_PGRP_DRUG
-     */
-    @Json(name = "drug-delivery")
-    DRUG_DELIVERY,
+	/**
+	* Drug Delivery Parameter Group - MDC_PGRP_DRUG
+	*/
+	@Json(name = "drug-delivery")
+	DRUG_DELIVERY,
 
-    /**
-     * Fluid Chemistry Parameter Group - MDC_PGRP_FLUID
-     */
-    @Json(name = "fluid-chemistry")
-    FLUID_CHEMISTRY,
+	/**
+	* Fluid Chemistry Parameter Group - MDC_PGRP_FLUID
+	*/
+	@Json(name = "fluid-chemistry")
+	FLUID_CHEMISTRY,
 
-    /**
-     * Blood Chemistry Parameter Group - MDC_PGRP_BLOOD_CHEM
-     */
-    @Json(name = "blood-chemistry")
-    BLOOD_CHEMISTRY,
+	/**
+	* Blood Chemistry Parameter Group - MDC_PGRP_BLOOD_CHEM
+	*/
+	@Json(name = "blood-chemistry")
+	BLOOD_CHEMISTRY,
 
-    /**
-     * Miscellaneous Parameter Group - MDC_PGRP_MISC
-     */
-    @Json(name = "miscellaneous")
-    MISCELLANEOUS,
+	/**
+	* Miscellaneous Parameter Group - MDC_PGRP_MISC
+	*/
+	@Json(name = "miscellaneous")
+	MISCELLANEOUS,
 }

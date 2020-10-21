@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value sets refers to a Category of supply.
  *
@@ -26,16 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSupplyType {
 
-    /**
-     * Supply is stored and requested from central supply.
-     */
-    @Json(name = "central")
-    CENTRAL,
+	/**
+	* Supply is stored and requested from central supply.
+	*/
+	@Json(name = "central")
+	CENTRAL,
 
-    /**
-     * Supply is not onsite and must be requested from an outside vendor using a non-stock
-     * requisition.
-     */
-    @Json(name = "nonstock")
-    NONSTOCK,
+	/**
+	* Supply is not onsite and must be requested from an outside vendor using a non-stock requisition.
+	*/
+	@Json(name = "nonstock")
+	NONSTOCK,
 }

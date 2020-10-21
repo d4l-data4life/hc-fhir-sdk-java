@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The result if validation fails
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemFailureAction {
 
-    /**
-     * fatal
-     */
-    @Json(name = "fatal")
-    FATAL,
+	/**
+	* fatal
+	*/
+	@Json(name = "fatal")
+	FATAL,
 
-    /**
-     * warn
-     */
-    @Json(name = "warn")
-    WARN,
+	/**
+	* warn
+	*/
+	@Json(name = "warn")
+	WARN,
 
-    /**
-     * recOnly
-     */
-    @Json(name = "rec-only")
-    REC_ONLY,
+	/**
+	* recOnly
+	*/
+	@Json(name = "rec-only")
+	REC_ONLY,
 
-    /**
-     * none
-     */
-    @Json(name = "none")
-    NONE,
+	/**
+	* none
+	*/
+	@Json(name = "none")
+	NONE,
 }

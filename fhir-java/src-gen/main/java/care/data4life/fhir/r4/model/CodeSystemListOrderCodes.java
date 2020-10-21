@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Base values for the order of the items in a list resource.
  *
@@ -26,55 +27,51 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemListOrderCodes {
 
-    /**
-     * The list was sorted by a user. The criteria the user used are not specified.
-     */
-    @Json(name = "user")
-    USER,
+	/**
+	* The list was sorted by a user. The criteria the user used are not specified.
+	*/
+	@Json(name = "user")
+	USER,
 
-    /**
-     * The list was sorted by the system. The criteria the user used are not specified; define
-     * additional codes to specify a particular order (or use other defined codes).
-     */
-    @Json(name = "system")
-    SYSTEM,
+	/**
+	* The list was sorted by the system. The criteria the user used are not specified; define additional codes to specify a particular order (or use other defined codes).
+	*/
+	@Json(name = "system")
+	SYSTEM,
 
-    /**
-     * The list is sorted by the data of the event. This can be used when the list has items which
-     * are dates with past or future events.
-     */
-    @Json(name = "event-date")
-    EVENT_DATE,
+	/**
+	* The list is sorted by the data of the event. This can be used when the list has items which are dates with past or future events.
+	*/
+	@Json(name = "event-date")
+	EVENT_DATE,
 
-    /**
-     * The list is sorted by the date the item was added to the list. Note that the date added to
-     * the list is not explicit in the list itself.
-     */
-    @Json(name = "entry-date")
-    ENTRY_DATE,
+	/**
+	* The list is sorted by the date the item was added to the list. Note that the date added to the list is not explicit in the list itself.
+	*/
+	@Json(name = "entry-date")
+	ENTRY_DATE,
 
-    /**
-     * The list is sorted by priority. The exact method in which priority has been determined is not
-     * specified.
-     */
-    @Json(name = "priority")
-    PRIORITY,
+	/**
+	* The list is sorted by priority. The exact method in which priority has been determined is not specified.
+	*/
+	@Json(name = "priority")
+	PRIORITY,
 
-    /**
-     * The list is sorted alphabetically by an unspecified property of the items in the list.
-     */
-    @Json(name = "alphabetic")
-    ALPHABETIC,
+	/**
+	* The list is sorted alphabetically by an unspecified property of the items in the list.
+	*/
+	@Json(name = "alphabetic")
+	ALPHABETIC,
 
-    /**
-     * The list is sorted categorically by an unspecified property of the items in the list.
-     */
-    @Json(name = "category")
-    CATEGORY,
+	/**
+	* The list is sorted categorically by an unspecified property of the items in the list.
+	*/
+	@Json(name = "category")
+	CATEGORY,
 
-    /**
-     * The list is sorted by patient, with items for each patient grouped together.
-     */
-    @Json(name = "patient")
-    PATIENT,
+	/**
+	* The list is sorted by patient, with items for each patient grouped together.
+	*/
+	@Json(name = "patient")
+	PATIENT,
 }

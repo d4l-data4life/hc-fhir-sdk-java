@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Declares what the source of a parameter is.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExpansionParameterSource {
 
-    /**
-     * The parameter was supplied by the client in the $expand request.
-     */
-    @Json(name = "input")
-    INPUT,
+	/**
+	* The parameter was supplied by the client in the $expand request.
+	*/
+	@Json(name = "input")
+	INPUT,
 
-    /**
-     * The parameter was added by the expansion engine on the server.
-     */
-    @Json(name = "server")
-    SERVER,
+	/**
+	* The parameter was added by the expansion engine on the server.
+	*/
+	@Json(name = "server")
+	SERVER,
 
-    /**
-     * The parameter was added from one the code systems used in the $expand operation.
-     */
-    @Json(name = "codesystem")
-    CODESYSTEM,
+	/**
+	* The parameter was added from one the code systems used in the $expand operation.
+	*/
+	@Json(name = "codesystem")
+	CODESYSTEM,
 }

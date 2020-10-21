@@ -19,36 +19,35 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This value set includes all medication refused, medication not administered, and
- * non-administration of necessary drug or medicine codes from SNOMED CT - provided as an exemplar
- * value set.
+ * This value set includes all medication refused, medication not administered, and non-administration of necessary drug or medicine codes from SNOMED CT - provided as an exemplar value set.
  *
  * @see <a href="http://hl7.org/fhir/reason-medication-not-given">SNOMEDCTReasonMedicationNotGivenCodes</a>
  */
 public enum CodeSystemSNOMEDCTReasonMedicationNotGivenCodes {
 
-    /**
-     * No reason known.
-     */
-    @Json(name = "a")
-    A,
+	/**
+	* No reason known.
+	*/
+	@Json(name = "a")
+	A,
 
-    /**
-     * The patient was not available when the dose was scheduled.
-     */
-    @Json(name = "b")
-    B,
+	/**
+	* The patient was not available when the dose was scheduled.
+	*/
+	@Json(name = "b")
+	B,
 
-    /**
-     * The patient was asleep when the dose was scheduled.
-     */
-    @Json(name = "c")
-    C,
+	/**
+	* The patient was asleep when the dose was scheduled.
+	*/
+	@Json(name = "c")
+	C,
 
-    /**
-     * The patient was given the medication and immediately vomited it back.
-     */
-    @Json(name = "d")
-    D,
+	/**
+	* The patient was given the medication and immediately vomited it back.
+	*/
+	@Json(name = "d")
+	D,
 }

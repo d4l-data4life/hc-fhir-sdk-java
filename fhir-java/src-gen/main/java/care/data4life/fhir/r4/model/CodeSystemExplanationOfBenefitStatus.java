@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A code specifying the state of the resource instance.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExplanationOfBenefitStatus {
 
-    /**
-     * The resource instance is currently in-force.
-     */
-    @Json(name = "active")
-    ACTIVE,
+	/**
+	* The resource instance is currently in-force.
+	*/
+	@Json(name = "active")
+	ACTIVE,
 
-    /**
-     * The resource instance is withdrawn, rescinded or reversed.
-     */
-    @Json(name = "cancelled")
-    CANCELLED,
+	/**
+	* The resource instance is withdrawn, rescinded or reversed.
+	*/
+	@Json(name = "cancelled")
+	CANCELLED,
 
-    /**
-     * A new resource instance the contents of which is not complete.
-     */
-    @Json(name = "draft")
-    DRAFT,
+	/**
+	* A new resource instance the contents of which is not complete.
+	*/
+	@Json(name = "draft")
+	DRAFT,
 
-    /**
-     * The resource instance was entered in error.
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* The resource instance was entered in error.
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 }

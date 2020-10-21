@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Describes the typical color of representation.
  *
@@ -26,51 +27,51 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDeviceMetricColor {
 
-    /**
-     * Color for representation - black.
-     */
-    @Json(name = "black")
-    BLACK,
+	/**
+	* Color for representation - black.
+	*/
+	@Json(name = "black")
+	BLACK,
 
-    /**
-     * Color for representation - red.
-     */
-    @Json(name = "red")
-    RED,
+	/**
+	* Color for representation - red.
+	*/
+	@Json(name = "red")
+	RED,
 
-    /**
-     * Color for representation - green.
-     */
-    @Json(name = "green")
-    GREEN,
+	/**
+	* Color for representation - green.
+	*/
+	@Json(name = "green")
+	GREEN,
 
-    /**
-     * Color for representation - yellow.
-     */
-    @Json(name = "yellow")
-    YELLOW,
+	/**
+	* Color for representation - yellow.
+	*/
+	@Json(name = "yellow")
+	YELLOW,
 
-    /**
-     * Color for representation - blue.
-     */
-    @Json(name = "blue")
-    BLUE,
+	/**
+	* Color for representation - blue.
+	*/
+	@Json(name = "blue")
+	BLUE,
 
-    /**
-     * Color for representation - magenta.
-     */
-    @Json(name = "magenta")
-    MAGENTA,
+	/**
+	* Color for representation - magenta.
+	*/
+	@Json(name = "magenta")
+	MAGENTA,
 
-    /**
-     * Color for representation - cyan.
-     */
-    @Json(name = "cyan")
-    CYAN,
+	/**
+	* Color for representation - cyan.
+	*/
+	@Json(name = "cyan")
+	CYAN,
 
-    /**
-     * Color for representation - white.
-     */
-    @Json(name = "white")
-    WHITE,
+	/**
+	* Color for representation - white.
+	*/
+	@Json(name = "white")
+	WHITE,
 }

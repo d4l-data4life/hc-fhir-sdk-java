@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Type of the validation primary source
  *
@@ -26,57 +27,57 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemPrimarySourceType {
 
-    /**
-     * licBoard
-     */
-    @Json(name = "lic-board")
-    LIC_BOARD,
+	/**
+	* licBoard
+	*/
+	@Json(name = "lic-board")
+	LIC_BOARD,
 
-    /**
-     * prim
-     */
-    @Json(name = "prim")
-    PRIM,
+	/**
+	* prim
+	*/
+	@Json(name = "prim")
+	PRIM,
 
-    /**
-     * contEd
-     */
-    @Json(name = "cont-ed")
-    CONT_ED,
+	/**
+	* contEd
+	*/
+	@Json(name = "cont-ed")
+	CONT_ED,
 
-    /**
-     * postServ
-     */
-    @Json(name = "post-serv")
-    POST_SERV,
+	/**
+	* postServ
+	*/
+	@Json(name = "post-serv")
+	POST_SERV,
 
-    /**
-     * relOwn
-     */
-    @Json(name = "rel-own")
-    REL_OWN,
+	/**
+	* relOwn
+	*/
+	@Json(name = "rel-own")
+	REL_OWN,
 
-    /**
-     * regAuth
-     */
-    @Json(name = "reg-auth")
-    REG_AUTH,
+	/**
+	* regAuth
+	*/
+	@Json(name = "reg-auth")
+	REG_AUTH,
 
-    /**
-     * legal
-     */
-    @Json(name = "legal")
-    LEGAL,
+	/**
+	* legal
+	*/
+	@Json(name = "legal")
+	LEGAL,
 
-    /**
-     * issuer
-     */
-    @Json(name = "issuer")
-    ISSUER,
+	/**
+	* issuer
+	*/
+	@Json(name = "issuer")
+	ISSUER,
 
-    /**
-     * authSource
-     */
-    @Json(name = "auth-source")
-    AUTH_SOURCE,
+	/**
+	* authSource
+	*/
+	@Json(name = "auth-source")
+	AUTH_SOURCE,
 }

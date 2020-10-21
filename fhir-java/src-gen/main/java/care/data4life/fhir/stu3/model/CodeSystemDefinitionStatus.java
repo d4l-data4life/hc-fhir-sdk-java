@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Codes identifying the lifecycle stage of a definition
  *
@@ -26,29 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDefinitionStatus {
 
-    /**
-     * The definition is in the design stage and is not yet considered to be "ready for use"
-     */
-    @Json(name = "draft")
-    DRAFT,
+	/**
+	* The definition is in the design stage and is not yet considered to be "ready for use"
+	*/
+	@Json(name = "draft")
+	DRAFT,
 
-    /**
-     * The definition is considered ready for use
-     */
-    @Json(name = "active")
-    ACTIVE,
+	/**
+	* The definition is considered ready for use
+	*/
+	@Json(name = "active")
+	ACTIVE,
 
-    /**
-     * The definition should no longer be used
-     */
-    @Json(name = "withdrawn")
-    WITHDRAWN,
+	/**
+	* The definition should no longer be used
+	*/
+	@Json(name = "withdrawn")
+	WITHDRAWN,
 
-    /**
-     * The authoring system does not know which of the status values currently applies for this
-     * request.  Note: This concept is not to be used for "other" - one of the listed statuses is
-     * presumed to apply, it's just not known which one.
-     */
-    @Json(name = "unknown")
-    UNKNOWN,
+	/**
+	* The authoring system does not know which of the status values currently applies for this request.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+	*/
+	@Json(name = "unknown")
+	UNKNOWN,
 }

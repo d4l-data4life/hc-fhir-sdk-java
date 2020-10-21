@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A coded concept defining if the medication is in active use
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationStatus {
 
-    /**
-     * The medication is available for use
-     */
-    @Json(name = "active")
-    ACTIVE,
+	/**
+	* The medication is available for use
+	*/
+	@Json(name = "active")
+	ACTIVE,
 
-    /**
-     * The medication is not available for use
-     */
-    @Json(name = "inactive")
-    INACTIVE,
+	/**
+	* The medication is not available for use
+	*/
+	@Json(name = "inactive")
+	INACTIVE,
 
-    /**
-     * The medication was entered in error
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* The medication was entered in error
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 }

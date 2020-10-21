@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes a smattering of Pharmacy Service codes.
  *
@@ -26,39 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExamplePharmacyServiceCodes {
 
-    /**
-     * Smoking cessation
-     */
-    @Json(name = "smokecess")
-    SMOKECESS,
+	/**
+	* Smoking cessation
+	*/
+	@Json(name = "smokecess")
+	SMOKECESS,
 
-    /**
-     * Flu Shot
-     */
-    @Json(name = "flushot")
-    FLUSHOT,
+	/**
+	* Flu Shot
+	*/
+	@Json(name = "flushot")
+	FLUSHOT,
 
-    /**
-     * The wholesale price of the medication.
-     */
-    @Json(name = "drugcost")
-    DRUGCOST,
+	/**
+	* The wholesale price of the medication.
+	*/
+	@Json(name = "drugcost")
+	DRUGCOST,
 
-    /**
-     * The additional cost assessed on the drug.
-     */
-    @Json(name = "markup")
-    MARKUP,
+	/**
+	* The additional cost assessed on the drug.
+	*/
+	@Json(name = "markup")
+	MARKUP,
 
-    /**
-     * The professional fee charged for dispensing the product or service.
-     */
-    @Json(name = "dispensefee")
-    DISPENSEFEE,
+	/**
+	* The professional fee charged for dispensing the product or service.
+	*/
+	@Json(name = "dispensefee")
+	DISPENSEFEE,
 
-    /**
-     * The professional fee charged for compounding the medication.
-     */
-    @Json(name = "compoundfee")
-    COMPOUNDFEE,
+	/**
+	* The professional fee charged for compounding the medication.
+	*/
+	@Json(name = "compoundfee")
+	COMPOUNDFEE,
 }

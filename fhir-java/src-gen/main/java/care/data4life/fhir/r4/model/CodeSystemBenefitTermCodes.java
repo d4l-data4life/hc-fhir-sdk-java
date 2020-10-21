@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes a smattering of Benefit Term codes.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemBenefitTermCodes {
 
-    /**
-     * Annual, renewing on the anniversary
-     */
-    @Json(name = "annual")
-    ANNUAL,
+	/**
+	* Annual, renewing on the anniversary
+	*/
+	@Json(name = "annual")
+	ANNUAL,
 
-    /**
-     * Per day
-     */
-    @Json(name = "day")
-    DAY,
+	/**
+	* Per day
+	*/
+	@Json(name = "day")
+	DAY,
 
-    /**
-     * For the total term, lifetime, of the policy or coverage
-     */
-    @Json(name = "lifetime")
-    LIFETIME,
+	/**
+	* For the total term, lifetime, of the policy or coverage
+	*/
+	@Json(name = "lifetime")
+	LIFETIME,
 }

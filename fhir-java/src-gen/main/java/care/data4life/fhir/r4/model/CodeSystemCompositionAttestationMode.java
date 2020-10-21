@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The way in which a person authenticated a composition.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCompositionAttestationMode {
 
-    /**
-     * The person authenticated the content in their personal capacity.
-     */
-    @Json(name = "personal")
-    PERSONAL,
+	/**
+	* The person authenticated the content in their personal capacity.
+	*/
+	@Json(name = "personal")
+	PERSONAL,
 
-    /**
-     * The person authenticated the content in their professional capacity.
-     */
-    @Json(name = "professional")
-    PROFESSIONAL,
+	/**
+	* The person authenticated the content in their professional capacity.
+	*/
+	@Json(name = "professional")
+	PROFESSIONAL,
 
-    /**
-     * The person authenticated the content and accepted legal responsibility for its content.
-     */
-    @Json(name = "legal")
-    LEGAL,
+	/**
+	* The person authenticated the content and accepted legal responsibility for its content.
+	*/
+	@Json(name = "legal")
+	LEGAL,
 
-    /**
-     * The organization authenticated the content as consistent with their policies and procedures.
-     */
-    @Json(name = "official")
-    OFFICIAL,
+	/**
+	* The organization authenticated the content as consistent with their policies and procedures.
+	*/
+	@Json(name = "official")
+	OFFICIAL,
 }

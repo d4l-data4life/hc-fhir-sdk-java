@@ -19,48 +19,47 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This value set is provided as an example. The value set to instantiate this attribute should be
- * drawn from a robust terminology code system that consists of or contains concepts to support the
- * procedure performance process.
+ * This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the procedure performance process.
  *
  * @see <a href="http://hl7.org/fhir/procedure-progress-status-code">ProcedureProgressStatusCodes</a>
  */
 public enum CodeSystemProcedureProgressStatusCodes {
 
-    /**
-     * A patient is in the Operating Room.
-     */
-    @Json(name = "in-operating-room")
-    IN_OPERATING_ROOM,
+	/**
+	* A patient is in the Operating Room.
+	*/
+	@Json(name = "in-operating-room")
+	IN_OPERATING_ROOM,
 
-    /**
-     * The patient is prepared for a procedure.
-     */
-    @Json(name = "prepared")
-    PREPARED,
+	/**
+	* The patient is prepared for a procedure.
+	*/
+	@Json(name = "prepared")
+	PREPARED,
 
-    /**
-     * The patient is under anesthesia.
-     */
-    @Json(name = "anesthesia-induced")
-    ANESTHESIA_INDUCED,
+	/**
+	* The patient is under anesthesia.
+	*/
+	@Json(name = "anesthesia-induced")
+	ANESTHESIA_INDUCED,
 
-    /**
-     * The patient has open incision(s).
-     */
-    @Json(name = "open-incision")
-    OPEN_INCISION,
+	/**
+	* The patient has open incision(s).
+	*/
+	@Json(name = "open-incision")
+	OPEN_INCISION,
 
-    /**
-     * The patient has incision(s) closed.
-     */
-    @Json(name = "closed-incision")
-    CLOSED_INCISION,
+	/**
+	* The patient has incision(s) closed.
+	*/
+	@Json(name = "closed-incision")
+	CLOSED_INCISION,
 
-    /**
-     * The patient is in the recovery room.
-     */
-    @Json(name = "in-recovery-room")
-    IN_RECOVERY_ROOM,
+	/**
+	* The patient is in the recovery room.
+	*/
+	@Json(name = "in-recovery-room")
+	IN_RECOVERY_ROOM,
 }

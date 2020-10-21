@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes the four Consent scope codes.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConsentScopeCodes {
 
-    /**
-     * Actions to be taken if they are no longer able to make decisions for themselves
-     */
-    @Json(name = "adr")
-    ADR,
+	/**
+	* Actions to be taken if they are no longer able to make decisions for themselves
+	*/
+	@Json(name = "adr")
+	ADR,
 
-    /**
-     * Consent to participate in research protocol and information sharing required
-     */
-    @Json(name = "research")
-    RESEARCH,
+	/**
+	* Consent to participate in research protocol and information sharing required
+	*/
+	@Json(name = "research")
+	RESEARCH,
 
-    /**
-     * Agreement to collect, access, use or disclose (share) information
-     */
-    @Json(name = "patient-privacy")
-    PATIENT_PRIVACY,
+	/**
+	* Agreement to collect, access, use or disclose (share) information
+	*/
+	@Json(name = "patient-privacy")
+	PATIENT_PRIVACY,
 
-    /**
-     * Consent to undergo a specific treatment
-     */
-    @Json(name = "treatment")
-    TREATMENT,
+	/**
+	* Consent to undergo a specific treatment
+	*/
+	@Json(name = "treatment")
+	TREATMENT,
 }

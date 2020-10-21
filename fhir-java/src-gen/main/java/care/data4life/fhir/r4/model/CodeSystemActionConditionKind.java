@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Defines the kinds of conditions that can appear on actions.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemActionConditionKind {
 
-    /**
-     * The condition describes whether or not a given action is applicable.
-     */
-    @Json(name = "applicability")
-    APPLICABILITY,
+	/**
+	* The condition describes whether or not a given action is applicable.
+	*/
+	@Json(name = "applicability")
+	APPLICABILITY,
 
-    /**
-     * The condition is a starting condition for the action.
-     */
-    @Json(name = "start")
-    START,
+	/**
+	* The condition is a starting condition for the action.
+	*/
+	@Json(name = "start")
+	START,
 
-    /**
-     * The condition is a stop, or exit condition for the action.
-     */
-    @Json(name = "stop")
-    STOP,
+	/**
+	* The condition is a stop, or exit condition for the action.
+	*/
+	@Json(name = "stop")
+	STOP,
 }

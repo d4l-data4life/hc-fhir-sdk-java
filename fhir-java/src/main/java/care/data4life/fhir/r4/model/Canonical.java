@@ -16,35 +16,39 @@
 
 package care.data4life.fhir.r4.model;
 
-import com.squareup.moshi.Json;
-
-import javax.annotation.Nullable;
-
 /**
- * Url.java
+ * Canonical.java
  * <p>
- * A URI that is a literal reference
+ * A URI that is a reference to a canonical URL on a FHIR resource
  *
- * @see <a href="http://hl7.org/fhir/StructureDefinition/url">Url</a>
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/canonical">Canonical</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/url) on 2020-10-15
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/canonical) on
+ * 2020-10-15
  */
-public class Url {
+public class Canonical extends Element {
 
-    public static final String resourceType = "Url";
+    public static final String resourceType = "Canonical";
 
-    // Primitive value for url.
-    @Json(name = "value")
-    @Nullable
-    public Url value;
+    public String url;
 
+    public String version;
 
-    public Url() {
+    public Canonical() {
+    }
+
+    public Canonical(String url) {
+        this.url = url;
+    }
+
+    public Canonical(String url, String version) {
+        this.url = url;
+        this.version = version;
     }
 
     @Override
     public String getResourceType() {
-        return Url.resourceType;
+        return Canonical.resourceType;
     }
 
 

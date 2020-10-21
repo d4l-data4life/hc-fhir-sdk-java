@@ -19,29 +19,29 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This value set includes example Onset Type codes which are used to identify the event for which
- * the onset, starting date, is required.
+ * This value set includes example Onset Type codes which are used to identify the event for which the onset, starting date, is required.
  *
  * @see <a href="http://hl7.org/fhir/ex-onsettype">ExampleOnsetTypeReasonCodes</a>
  */
 public enum CodeSystemExampleOnsetTypeReasonCodes {
 
-    /**
-     * Date of last examination.
-     */
-    @Json(name = "lxm")
-    LXM,
+	/**
+	* Date of last examination.
+	*/
+	@Json(name = "lxm")
+	LXM,
 
-    /**
-     * Date when symptoms were first noticed.
-     */
-    @Json(name = "sym")
-    SYM,
+	/**
+	* Date when symptoms were first noticed.
+	*/
+	@Json(name = "sym")
+	SYM,
 
-    /**
-     * Start date of last menstruation.
-     */
-    @Json(name = "lmn")
-    LMN,
+	/**
+	* Start date of last menstruation.
+	*/
+	@Json(name = "lmn")
+	LMN,
 }

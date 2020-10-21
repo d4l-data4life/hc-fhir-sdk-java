@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Codes indicating the degree of authority/intentionality associated with a care plan
  *
@@ -26,32 +27,29 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCarePlanIntent {
 
-    /**
-     * The care plan is a suggestion made by someone/something that doesn't have an intention to
-     * ensure it occurs and without providing an authorization to act
-     */
-    @Json(name = "proposal")
-    PROPOSAL,
+	/**
+	* The care plan is a suggestion made by someone/something that doesn't have an intention to ensure it occurs and without providing an authorization to act
+	*/
+	@Json(name = "proposal")
+	PROPOSAL,
 
-    /**
-     * The care plan represents an intention to ensure something occurs without providing an
-     * authorization for others to act
-     */
-    @Json(name = "plan")
-    PLAN,
+	/**
+	* The care plan represents an intention to ensure something occurs without providing an authorization for others to act
+	*/
+	@Json(name = "plan")
+	PLAN,
 
-    /**
-     * The care plan represents a request/demand and authorization for action
-     */
-    @Json(name = "order")
-    ORDER,
+	/**
+	* The care plan represents a request/demand and authorization for action
+	*/
+	@Json(name = "order")
+	ORDER,
 
-    /**
-     * The care plan represents a component or option for a RequestGroup that establishes timing,
-     * conditionality and/or other constraints among a set of requests.
-     * <p>
-     * Refer to [[[RequestGroup]]] for additional information on how this status is used
-     */
-    @Json(name = "option")
-    OPTION,
+	/**
+	* The care plan represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.
+
+Refer to [[[RequestGroup]]] for additional information on how this status is used
+	*/
+	@Json(name = "option")
+	OPTION,
 }

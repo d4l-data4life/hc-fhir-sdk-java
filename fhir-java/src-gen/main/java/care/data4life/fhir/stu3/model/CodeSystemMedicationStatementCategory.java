@@ -19,39 +19,35 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * A coded concept identifying where the medication included in the medicationstatement is expected
- * to be consumed or administered
+ * A coded concept identifying where the medication included in the medicationstatement is expected to be consumed or administered
  *
  * @see <a href="http://hl7.org/fhir/medication-statement-category">MedicationStatementCategory</a>
  */
 public enum CodeSystemMedicationStatementCategory {
 
-    /**
-     * Includes orders for medications to be administered or consumed in an inpatient or acute care
-     * setting
-     */
-    @Json(name = "inpatient")
-    INPATIENT,
+	/**
+	* Includes orders for medications to be administered or consumed in an inpatient or acute care setting
+	*/
+	@Json(name = "inpatient")
+	INPATIENT,
 
-    /**
-     * Includes orders for medications to be administered or consumed in an outpatient setting (for
-     * example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
-     */
-    @Json(name = "outpatient")
-    OUTPATIENT,
+	/**
+	* Includes orders for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+	*/
+	@Json(name = "outpatient")
+	OUTPATIENT,
 
-    /**
-     * Includes orders for medications to be administered or consumed by the patient in their home
-     * (this would include long term care or nursing homes, hospices, etc)
-     */
-    @Json(name = "community")
-    COMMUNITY,
+	/**
+	* Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc)
+	*/
+	@Json(name = "community")
+	COMMUNITY,
 
-    /**
-     * Includes statements about medication use, including over the counter medication, provided by
-     * the patient, agent or another provider
-     */
-    @Json(name = "patientspecified")
-    PATIENTSPECIFIED,
+	/**
+	* Includes statements about medication use, including over the counter medication, provided by the patient, agent or another provider
+	*/
+	@Json(name = "patientspecified")
+	PATIENTSPECIFIED,
 }

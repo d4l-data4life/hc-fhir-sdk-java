@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The type of participant for the action
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemActionParticipantType {
 
-    /**
-     * The participant is the patient under evaluation
-     */
-    @Json(name = "patient")
-    PATIENT,
+	/**
+	* The participant is the patient under evaluation
+	*/
+	@Json(name = "patient")
+	PATIENT,
 
-    /**
-     * The participant is a practitioner involved in the patient's care
-     */
-    @Json(name = "practitioner")
-    PRACTITIONER,
+	/**
+	* The participant is a practitioner involved in the patient's care
+	*/
+	@Json(name = "practitioner")
+	PRACTITIONER,
 
-    /**
-     * The participant is a person related to the patient
-     */
-    @Json(name = "related-person")
-    RELATED_PERSON,
+	/**
+	* The participant is a person related to the patient
+	*/
+	@Json(name = "related-person")
+	RELATED_PERSON,
 }

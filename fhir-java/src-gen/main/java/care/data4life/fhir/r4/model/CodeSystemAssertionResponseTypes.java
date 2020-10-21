@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The type of response code to use for assertion.
  *
@@ -26,75 +27,75 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAssertionResponseTypes {
 
-    /**
-     * Response code is 200.
-     */
-    @Json(name = "okay")
-    OKAY,
+	/**
+	* Response code is 200.
+	*/
+	@Json(name = "okay")
+	OKAY,
 
-    /**
-     * Response code is 201.
-     */
-    @Json(name = "created")
-    CREATED,
+	/**
+	* Response code is 201.
+	*/
+	@Json(name = "created")
+	CREATED,
 
-    /**
-     * Response code is 204.
-     */
-    @Json(name = "noContent")
-    NOCONTENT,
+	/**
+	* Response code is 204.
+	*/
+	@Json(name = "noContent")
+	NOCONTENT,
 
-    /**
-     * Response code is 304.
-     */
-    @Json(name = "notModified")
-    NOTMODIFIED,
+	/**
+	* Response code is 304.
+	*/
+	@Json(name = "notModified")
+	NOTMODIFIED,
 
-    /**
-     * Response code is 400.
-     */
-    @Json(name = "bad")
-    BAD,
+	/**
+	* Response code is 400.
+	*/
+	@Json(name = "bad")
+	BAD,
 
-    /**
-     * Response code is 403.
-     */
-    @Json(name = "forbidden")
-    FORBIDDEN,
+	/**
+	* Response code is 403.
+	*/
+	@Json(name = "forbidden")
+	FORBIDDEN,
 
-    /**
-     * Response code is 404.
-     */
-    @Json(name = "notFound")
-    NOTFOUND,
+	/**
+	* Response code is 404.
+	*/
+	@Json(name = "notFound")
+	NOTFOUND,
 
-    /**
-     * Response code is 405.
-     */
-    @Json(name = "methodNotAllowed")
-    METHODNOTALLOWED,
+	/**
+	* Response code is 405.
+	*/
+	@Json(name = "methodNotAllowed")
+	METHODNOTALLOWED,
 
-    /**
-     * Response code is 409.
-     */
-    @Json(name = "conflict")
-    CONFLICT,
+	/**
+	* Response code is 409.
+	*/
+	@Json(name = "conflict")
+	CONFLICT,
 
-    /**
-     * Response code is 410.
-     */
-    @Json(name = "gone")
-    GONE,
+	/**
+	* Response code is 410.
+	*/
+	@Json(name = "gone")
+	GONE,
 
-    /**
-     * Response code is 412.
-     */
-    @Json(name = "preconditionFailed")
-    PRECONDITIONFAILED,
+	/**
+	* Response code is 412.
+	*/
+	@Json(name = "preconditionFailed")
+	PRECONDITIONFAILED,
 
-    /**
-     * Response code is 422.
-     */
-    @Json(name = "unprocessable")
-    UNPROCESSABLE,
+	/**
+	* Response code is 422.
+	*/
+	@Json(name = "unprocessable")
+	UNPROCESSABLE,
 }

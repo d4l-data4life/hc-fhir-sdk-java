@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Whether the application produces or consumes documents.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDocumentMode {
 
-    /**
-     * The application produces documents of the specified type.
-     */
-    @Json(name = "producer")
-    PRODUCER,
+	/**
+	* The application produces documents of the specified type.
+	*/
+	@Json(name = "producer")
+	PRODUCER,
 
-    /**
-     * The application consumes documents of the specified type.
-     */
-    @Json(name = "consumer")
-    CONSUMER,
+	/**
+	* The application consumes documents of the specified type.
+	*/
+	@Json(name = "consumer")
+	CONSUMER,
 }

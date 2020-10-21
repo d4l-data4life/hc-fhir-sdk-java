@@ -18,44 +18,52 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
+import javax.annotation.Nullable;
+
 /**
  * Narrative.java
- * <p>
- * A human-readable formatted text, including images
  *
+ * A human-readable formatted text, including images
+ * 
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Narrative">Narrative</a>
- * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Narrative) on
- * 2020-10-15
+ *
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Narrative) on 2020-10-19
  */
-public class Narrative extends Element {
+public class Narrative extends Element  {
 
-    public static final String resourceType = "Narrative";
-
-    // The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.
+	public static final String resourceType = "Narrative";
+  
+	// The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.
     @Json(name = "status")
-    public CodeSystemNarrativeStatus status;
-
-    // Limited xhtml content.
+	public CodeSystemNarrativeStatus status;
+  
+	// Limited xhtml content.
     @Json(name = "div")
-    public String div;
+	public String div;
 
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param status CodeSystemNarrativeStatus
+	 *
+	 * @param div String
+	 *
+	 */
+	public Narrative(CodeSystemNarrativeStatus status, String div) {
+		this.status = status;
+		this.div = div;
+	}@Override
+	public String getResourceType() {
+		return Narrative.resourceType;
+	}
 
-    /**
-     * Constructor for all required properties.
-     *
-     * @param status CodeSystemNarrativeStatus
-     * @param div    String
-     */
-    public Narrative(CodeSystemNarrativeStatus status, String div) {
-        this.status = status;
-        this.div = div;
-    }
-
-    @Override
-    public String getResourceType() {
-        return Narrative.resourceType;
-    }
 
 
 }

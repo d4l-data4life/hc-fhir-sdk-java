@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Is the Participant required to attend the appointment.
  *
@@ -26,23 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemParticipantRequired {
 
-    /**
-     * The participant is required to attend the appointment.
-     */
-    @Json(name = "required")
-    REQUIRED,
+	/**
+	* The participant is required to attend the appointment.
+	*/
+	@Json(name = "required")
+	REQUIRED,
 
-    /**
-     * The participant may optionally attend the appointment.
-     */
-    @Json(name = "optional")
-    OPTIONAL,
+	/**
+	* The participant may optionally attend the appointment.
+	*/
+	@Json(name = "optional")
+	OPTIONAL,
 
-    /**
-     * The participant is excluded from the appointment, and might not be informed of the
-     * appointment taking place. (Appointment is about them, not for them - such as 2 doctors
-     * discussing results about a patient's test).
-     */
-    @Json(name = "information-only")
-    INFORMATION_ONLY,
+	/**
+	* The participant is excluded from the appointment, and might not be informed of the appointment taking place. (Appointment is about them, not for them - such as 2 doctors discussing results about a patient's test).
+	*/
+	@Json(name = "information-only")
+	INFORMATION_ONLY,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The type of operator to use for assertion.
  *
@@ -26,69 +27,69 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAssertionOperatorType {
 
-    /**
-     * Default value. Equals comparison.
-     */
-    @Json(name = "equals")
-    EQUALS,
+	/**
+	* Default value. Equals comparison.
+	*/
+	@Json(name = "equals")
+	EQUALS,
 
-    /**
-     * Not equals comparison.
-     */
-    @Json(name = "notEquals")
-    NOTEQUALS,
+	/**
+	* Not equals comparison.
+	*/
+	@Json(name = "notEquals")
+	NOTEQUALS,
 
-    /**
-     * Compare value within a known set of values.
-     */
-    @Json(name = "in")
-    IN,
+	/**
+	* Compare value within a known set of values.
+	*/
+	@Json(name = "in")
+	IN,
 
-    /**
-     * Compare value not within a known set of values.
-     */
-    @Json(name = "notIn")
-    NOTIN,
+	/**
+	* Compare value not within a known set of values.
+	*/
+	@Json(name = "notIn")
+	NOTIN,
 
-    /**
-     * Compare value to be greater than a known value.
-     */
-    @Json(name = "greaterThan")
-    GREATERTHAN,
+	/**
+	* Compare value to be greater than a known value.
+	*/
+	@Json(name = "greaterThan")
+	GREATERTHAN,
 
-    /**
-     * Compare value to be less than a known value.
-     */
-    @Json(name = "lessThan")
-    LESSTHAN,
+	/**
+	* Compare value to be less than a known value.
+	*/
+	@Json(name = "lessThan")
+	LESSTHAN,
 
-    /**
-     * Compare value is empty.
-     */
-    @Json(name = "empty")
-    EMPTY,
+	/**
+	* Compare value is empty.
+	*/
+	@Json(name = "empty")
+	EMPTY,
 
-    /**
-     * Compare value is not empty.
-     */
-    @Json(name = "notEmpty")
-    NOTEMPTY,
+	/**
+	* Compare value is not empty.
+	*/
+	@Json(name = "notEmpty")
+	NOTEMPTY,
 
-    /**
-     * Compare value string contains a known value.
-     */
-    @Json(name = "contains")
-    CONTAINS,
+	/**
+	* Compare value string contains a known value.
+	*/
+	@Json(name = "contains")
+	CONTAINS,
 
-    /**
-     * Compare value string does not contain a known value.
-     */
-    @Json(name = "notContains")
-    NOTCONTAINS,
+	/**
+	* Compare value string does not contain a known value.
+	*/
+	@Json(name = "notContains")
+	NOTCONTAINS,
 
-    /**
-     * Evaluate the fluentpath expression as a boolean condition.
-     */
-    @Json(name = "eval")
-    EVAL,
+	/**
+	* Evaluate the fluentpath expression as a boolean condition.
+	*/
+	@Json(name = "eval")
+	EVAL,
 }

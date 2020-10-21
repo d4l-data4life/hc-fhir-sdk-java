@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Color of the container cap.
  *
@@ -26,75 +27,75 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContainerCap {
 
-    /**
-     * red cap.
-     */
-    @Json(name = "red")
-    RED,
+	/**
+	* red cap.
+	*/
+	@Json(name = "red")
+	RED,
 
-    /**
-     * yellow cap.
-     */
-    @Json(name = "yellow")
-    YELLOW,
+	/**
+	* yellow cap.
+	*/
+	@Json(name = "yellow")
+	YELLOW,
 
-    /**
-     * dark yellow cap.
-     */
-    @Json(name = "dark-yellow")
-    DARK_YELLOW,
+	/**
+	* dark yellow cap.
+	*/
+	@Json(name = "dark-yellow")
+	DARK_YELLOW,
 
-    /**
-     * grey cap.
-     */
-    @Json(name = "grey")
-    GREY,
+	/**
+	* grey cap.
+	*/
+	@Json(name = "grey")
+	GREY,
 
-    /**
-     * light blue cap.
-     */
-    @Json(name = "light-blue")
-    LIGHT_BLUE,
+	/**
+	* light blue cap.
+	*/
+	@Json(name = "light-blue")
+	LIGHT_BLUE,
 
-    /**
-     * black cap.
-     */
-    @Json(name = "black")
-    BLACK,
+	/**
+	* black cap.
+	*/
+	@Json(name = "black")
+	BLACK,
 
-    /**
-     * green cap.
-     */
-    @Json(name = "green")
-    GREEN,
+	/**
+	* green cap.
+	*/
+	@Json(name = "green")
+	GREEN,
 
-    /**
-     * light green cap.
-     */
-    @Json(name = "light-green")
-    LIGHT_GREEN,
+	/**
+	* light green cap.
+	*/
+	@Json(name = "light-green")
+	LIGHT_GREEN,
 
-    /**
-     * lavender cap.
-     */
-    @Json(name = "lavender")
-    LAVENDER,
+	/**
+	* lavender cap.
+	*/
+	@Json(name = "lavender")
+	LAVENDER,
 
-    /**
-     * brown cap.
-     */
-    @Json(name = "brown")
-    BROWN,
+	/**
+	* brown cap.
+	*/
+	@Json(name = "brown")
+	BROWN,
 
-    /**
-     * white cap.
-     */
-    @Json(name = "white")
-    WHITE,
+	/**
+	* white cap.
+	*/
+	@Json(name = "white")
+	WHITE,
 
-    /**
-     * pink cap.
-     */
-    @Json(name = "pink")
-    PINK,
+	/**
+	* pink cap.
+	*/
+	@Json(name = "pink")
+	PINK,
 }

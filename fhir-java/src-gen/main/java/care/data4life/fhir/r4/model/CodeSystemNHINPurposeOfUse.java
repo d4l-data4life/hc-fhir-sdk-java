@@ -19,174 +19,173 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This value set is suitable for use with the provenance resource. It is derived from, but not
- * compatible with, the HL7 v3 Purpose of use Code system.
+ * This value set is suitable for use with the provenance resource. It is derived from, but not compatible with, the HL7 v3 Purpose of use Code system.
  *
  * @see <a href="http://healthit.gov/nhin/purposeofuse">NHINPurposeOfUse</a>
  */
 public enum CodeSystemNHINPurposeOfUse {
 
-    /**
-     * Treatment
-     */
-    @Json(name = "TREATMENT")
-    TREATMENT,
+	/**
+	* Treatment
+	*/
+	@Json(name = "TREATMENT")
+	TREATMENT,
 
-    /**
-     * Payment
-     */
-    @Json(name = "PAYMENT")
-    PAYMENT,
+	/**
+	* Payment
+	*/
+	@Json(name = "PAYMENT")
+	PAYMENT,
 
-    /**
-     * Healthcare Operations
-     */
-    @Json(name = "OPERATIONS")
-    OPERATIONS,
+	/**
+	* Healthcare Operations
+	*/
+	@Json(name = "OPERATIONS")
+	OPERATIONS,
 
-    /**
-     * System Administration
-     */
-    @Json(name = "SYSADMIN")
-    SYSADMIN,
+	/**
+	* System Administration
+	*/
+	@Json(name = "SYSADMIN")
+	SYSADMIN,
 
-    /**
-     * Fraud detection
-     */
-    @Json(name = "FRAUD")
-    FRAUD,
+	/**
+	* Fraud detection
+	*/
+	@Json(name = "FRAUD")
+	FRAUD,
 
-    /**
-     * Use or disclosure of Psychotherapy Notes
-     */
-    @Json(name = "PSYCHOTHERAPY")
-    PSYCHOTHERAPY,
+	/**
+	* Use or disclosure of Psychotherapy Notes
+	*/
+	@Json(name = "PSYCHOTHERAPY")
+	PSYCHOTHERAPY,
 
-    /**
-     * Use or disclosure by the covered entity for its own training programs
-     */
-    @Json(name = "TRAINING")
-    TRAINING,
+	/**
+	* Use or disclosure by the covered entity for its own training programs
+	*/
+	@Json(name = "TRAINING")
+	TRAINING,
 
-    /**
-     * Use or disclosure by the covered entity to defend itself in a legal action
-     */
-    @Json(name = "LEGAL")
-    LEGAL,
+	/**
+	* Use or disclosure by the covered entity to defend itself in a legal action
+	*/
+	@Json(name = "LEGAL")
+	LEGAL,
 
-    /**
-     * Marketing
-     */
-    @Json(name = "MARKETING")
-    MARKETING,
+	/**
+	* Marketing
+	*/
+	@Json(name = "MARKETING")
+	MARKETING,
 
-    /**
-     * Use and disclosure for facility directories
-     */
-    @Json(name = "DIRECTORY")
-    DIRECTORY,
+	/**
+	* Use and disclosure for facility directories
+	*/
+	@Json(name = "DIRECTORY")
+	DIRECTORY,
 
-    /**
-     * Disclose to a family member, other relative, or a close personal friend of the individual
-     */
-    @Json(name = "FAMILY")
-    FAMILY,
+	/**
+	* Disclose to a family member, other relative, or a close personal friend of the individual
+	*/
+	@Json(name = "FAMILY")
+	FAMILY,
 
-    /**
-     * Uses and disclosures with the individual present.
-     */
-    @Json(name = "PRESENT")
-    PRESENT,
+	/**
+	* Uses and disclosures with the individual present.
+	*/
+	@Json(name = "PRESENT")
+	PRESENT,
 
-    /**
-     * Permission cannot practicably be provided because of the individual's incapacity or an
-     * emergency.
-     */
-    @Json(name = "EMERGENCY")
-    EMERGENCY,
+	/**
+	* Permission cannot practicably be provided because of the individual's incapacity or an emergency.
+	*/
+	@Json(name = "EMERGENCY")
+	EMERGENCY,
 
-    /**
-     * Use and disclosures for disaster relief purposes.
-     */
-    @Json(name = "DISASTER")
-    DISASTER,
+	/**
+	* Use and disclosures for disaster relief purposes.
+	*/
+	@Json(name = "DISASTER")
+	DISASTER,
 
-    /**
-     * Uses and disclosures for public health activities.
-     */
-    @Json(name = "PUBLICHEALTH")
-    PUBLICHEALTH,
+	/**
+	* Uses and disclosures for public health activities.
+	*/
+	@Json(name = "PUBLICHEALTH")
+	PUBLICHEALTH,
 
-    /**
-     * Disclosures about victims of abuse, neglect or domestic violence.
-     */
-    @Json(name = "ABUSE")
-    ABUSE,
+	/**
+	* Disclosures about victims of abuse, neglect or domestic violence.
+	*/
+	@Json(name = "ABUSE")
+	ABUSE,
 
-    /**
-     * Uses and disclosures for health oversight activities.
-     */
-    @Json(name = "OVERSIGHT")
-    OVERSIGHT,
+	/**
+	* Uses and disclosures for health oversight activities.
+	*/
+	@Json(name = "OVERSIGHT")
+	OVERSIGHT,
 
-    /**
-     * Disclosures for judicial and administrative proceedings.
-     */
-    @Json(name = "JUDICIAL")
-    JUDICIAL,
+	/**
+	* Disclosures for judicial and administrative proceedings.
+	*/
+	@Json(name = "JUDICIAL")
+	JUDICIAL,
 
-    /**
-     * Disclosures for law enforcement purposes.
-     */
-    @Json(name = "LAW")
-    LAW,
+	/**
+	* Disclosures for law enforcement purposes.
+	*/
+	@Json(name = "LAW")
+	LAW,
 
-    /**
-     * Uses and disclosures about decedents.
-     */
-    @Json(name = "DECEASED")
-    DECEASED,
+	/**
+	* Uses and disclosures about decedents.
+	*/
+	@Json(name = "DECEASED")
+	DECEASED,
 
-    /**
-     * Uses and disclosures for cadaveric organ,  eye or tissue donation purposes
-     */
-    @Json(name = "DONATION")
-    DONATION,
+	/**
+	* Uses and disclosures for cadaveric organ,  eye or tissue donation purposes
+	*/
+	@Json(name = "DONATION")
+	DONATION,
 
-    /**
-     * Uses and disclosures for research purposes.
-     */
-    @Json(name = "RESEARCH")
-    RESEARCH,
+	/**
+	* Uses and disclosures for research purposes.
+	*/
+	@Json(name = "RESEARCH")
+	RESEARCH,
 
-    /**
-     * Uses and disclosures to avert a serious threat to health or safety.
-     */
-    @Json(name = "THREAT")
-    THREAT,
+	/**
+	* Uses and disclosures to avert a serious threat to health or safety.
+	*/
+	@Json(name = "THREAT")
+	THREAT,
 
-    /**
-     * Uses and disclosures for specialized government functions.
-     */
-    @Json(name = "GOVERNMENT")
-    GOVERNMENT,
+	/**
+	* Uses and disclosures for specialized government functions.
+	*/
+	@Json(name = "GOVERNMENT")
+	GOVERNMENT,
 
-    /**
-     * Disclosures for workers' compensation.
-     */
-    @Json(name = "WORKERSCOMP")
-    WORKERSCOMP,
+	/**
+	* Disclosures for workers' compensation.
+	*/
+	@Json(name = "WORKERSCOMP")
+	WORKERSCOMP,
 
-    /**
-     * Disclosures for insurance or disability coverage determination
-     */
-    @Json(name = "COVERAGE")
-    COVERAGE,
+	/**
+	* Disclosures for insurance or disability coverage determination
+	*/
+	@Json(name = "COVERAGE")
+	COVERAGE,
 
-    /**
-     * Request of the Individual
-     */
-    @Json(name = "REQUEST")
-    REQUEST,
+	/**
+	* Request of the Individual
+	*/
+	@Json(name = "REQUEST")
+	REQUEST,
 }

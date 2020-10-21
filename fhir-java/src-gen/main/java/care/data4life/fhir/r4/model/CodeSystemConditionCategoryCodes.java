@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Preferred value set for Condition Categories.
  *
@@ -26,16 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConditionCategoryCodes {
 
-    /**
-     * An item on a problem list that can be managed over time and can be expressed by a
-     * practitioner (e.g. physician, nurse), patient, or related person.
-     */
-    @Json(name = "problem-list-item")
-    PROBLEM_LIST_ITEM,
+	/**
+	* An item on a problem list that can be managed over time and can be expressed by a practitioner (e.g. physician, nurse), patient, or related person.
+	*/
+	@Json(name = "problem-list-item")
+	PROBLEM_LIST_ITEM,
 
-    /**
-     * A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter.
-     */
-    @Json(name = "encounter-diagnosis")
-    ENCOUNTER_DIAGNOSIS,
+	/**
+	* A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter.
+	*/
+	@Json(name = "encounter-diagnosis")
+	ENCOUNTER_DIAGNOSIS,
 }

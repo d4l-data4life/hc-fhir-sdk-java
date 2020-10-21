@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The kind of medication order
  *
@@ -26,30 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationRequestIntent {
 
-    /**
-     * The request is a suggestion made by someone/something that doesn't have an intention to
-     * ensure it occurs and without providing an authorization to act
-     */
-    @Json(name = "proposal")
-    PROPOSAL,
+	/**
+	* The request is a suggestion made by someone/something that doesn't have an intention to ensure it occurs and without providing an authorization to act
+	*/
+	@Json(name = "proposal")
+	PROPOSAL,
 
-    /**
-     * The request represents an intension to ensure something occurs without providing an
-     * authorization for others to act
-     */
-    @Json(name = "plan")
-    PLAN,
+	/**
+	* The request represents an intension to ensure something occurs without providing an authorization for others to act
+	*/
+	@Json(name = "plan")
+	PLAN,
 
-    /**
-     * The request represents a request/demand and authorization for action
-     */
-    @Json(name = "order")
-    ORDER,
+	/**
+	* The request represents a request/demand and authorization for action
+	*/
+	@Json(name = "order")
+	ORDER,
 
-    /**
-     * The request represents an instance for the particular order, for example a medication
-     * administration record.
-     */
-    @Json(name = "instance-order")
-    INSTANCE_ORDER,
+	/**
+	* The request represents an instance for the particular order, for example a medication administration record.
+	*/
+	@Json(name = "instance-order")
+	INSTANCE_ORDER,
 }

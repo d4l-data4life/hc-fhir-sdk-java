@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Defines the type of structure that a definition is describing.
  *
@@ -26,29 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemStructureDefinitionKind {
 
-    /**
-     * A primitive type that has a value and an extension. These can be used throughout Resource and
-     * extension definitions. Only the base specification can define primitive types.
-     */
-    @Json(name = "primitive-type")
-    PRIMITIVE_TYPE,
+	/**
+	* A primitive type that has a value and an extension. These can be used throughout Resource and extension definitions. Only the base specification can define primitive types.
+	*/
+	@Json(name = "primitive-type")
+	PRIMITIVE_TYPE,
 
-    /**
-     * A  complex structure that defines a set of data elements. These can be used throughout
-     * Resource and extension definitions, and in logical models.
-     */
-    @Json(name = "complex-type")
-    COMPLEX_TYPE,
+	/**
+	* A  complex structure that defines a set of data elements. These can be used throughout Resource and extension definitions, and in logical models.
+	*/
+	@Json(name = "complex-type")
+	COMPLEX_TYPE,
 
-    /**
-     * A resource defined by the FHIR specification.
-     */
-    @Json(name = "resource")
-    RESOURCE,
+	/**
+	* A resource defined by the FHIR specification.
+	*/
+	@Json(name = "resource")
+	RESOURCE,
 
-    /**
-     * A conceptual package of data that will be mapped to resources for implementation.
-     */
-    @Json(name = "logical")
-    LOGICAL,
+	/**
+	* A conceptual package of data that will be mapped to resources for implementation.
+	*/
+	@Json(name = "logical")
+	LOGICAL,
 }

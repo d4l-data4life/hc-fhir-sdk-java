@@ -18,52 +18,55 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * DomainResource.java
- * <p>
+ *
  * A resource that includes narrative, extensions, and contained resources.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DomainResource">DomainResource</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DomainResource) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DomainResource) on 2020-10-19
  */
-public class DomainResource extends Resource {
+public class DomainResource extends Resource  {
 
-    public static final String resourceType = "DomainResource";
-
-    // Text summary of the resource, for human interpretation.
+	public static final String resourceType = "DomainResource";
+  
+	// Text summary of the resource, for human interpretation.
     @Json(name = "text")
-    @Nullable
-    public Narrative text;
-
-    // Contained, inline Resources.
+	@Nullable
+	public Narrative text;
+  
+	// Contained, inline Resources.
     @Json(name = "contained")
-    @Nullable
-    public List<Resource> contained;
-
-    // Additional content defined by implementations.
+	@Nullable
+	public List<Resource> contained;
+  
+	// Additional content defined by implementations.
     @Json(name = "extension")
-    @Nullable
-    public List<Extension> extension;
-
-    // Extensions that cannot be ignored.
+	@Nullable
+	public List<Extension> extension;
+  
+	// Extensions that cannot be ignored.
     @Json(name = "modifierExtension")
-    @Nullable
-    public List<Extension> modifierExtension;
+	@Nullable
+	public List<Extension> modifierExtension;
 
+    
+	public DomainResource() {
+	}
+	@Override
+	public String getResourceType() {
+		return DomainResource.resourceType;
+	}
 
-    public DomainResource() {
-    }
-
-    @Override
-    public String getResourceType() {
-        return DomainResource.resourceType;
-    }
 
 
 }

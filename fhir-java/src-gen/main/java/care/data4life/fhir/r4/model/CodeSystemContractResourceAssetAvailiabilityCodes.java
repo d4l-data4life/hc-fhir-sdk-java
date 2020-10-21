@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set has asset availability codes.
  *
@@ -26,9 +27,9 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContractResourceAssetAvailiabilityCodes {
 
-    /**
-     * To be completed
-     */
-    @Json(name = "lease")
-    LEASE,
+	/**
+	* To be completed
+	*/
+	@Json(name = "lease")
+	LEASE,
 }

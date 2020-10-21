@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Defines the types of relationships between actions.
  *
@@ -26,57 +27,57 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemActionRelationshipType {
 
-    /**
-     * The action must be performed before the start of the related action.
-     */
-    @Json(name = "before-start")
-    BEFORE_START,
+	/**
+	* The action must be performed before the start of the related action.
+	*/
+	@Json(name = "before-start")
+	BEFORE_START,
 
-    /**
-     * The action must be performed before the related action.
-     */
-    @Json(name = "before")
-    BEFORE,
+	/**
+	* The action must be performed before the related action.
+	*/
+	@Json(name = "before")
+	BEFORE,
 
-    /**
-     * The action must be performed before the end of the related action.
-     */
-    @Json(name = "before-end")
-    BEFORE_END,
+	/**
+	* The action must be performed before the end of the related action.
+	*/
+	@Json(name = "before-end")
+	BEFORE_END,
 
-    /**
-     * The action must be performed concurrent with the start of the related action.
-     */
-    @Json(name = "concurrent-with-start")
-    CONCURRENT_WITH_START,
+	/**
+	* The action must be performed concurrent with the start of the related action.
+	*/
+	@Json(name = "concurrent-with-start")
+	CONCURRENT_WITH_START,
 
-    /**
-     * The action must be performed concurrent with the related action.
-     */
-    @Json(name = "concurrent")
-    CONCURRENT,
+	/**
+	* The action must be performed concurrent with the related action.
+	*/
+	@Json(name = "concurrent")
+	CONCURRENT,
 
-    /**
-     * The action must be performed concurrent with the end of the related action.
-     */
-    @Json(name = "concurrent-with-end")
-    CONCURRENT_WITH_END,
+	/**
+	* The action must be performed concurrent with the end of the related action.
+	*/
+	@Json(name = "concurrent-with-end")
+	CONCURRENT_WITH_END,
 
-    /**
-     * The action must be performed after the start of the related action.
-     */
-    @Json(name = "after-start")
-    AFTER_START,
+	/**
+	* The action must be performed after the start of the related action.
+	*/
+	@Json(name = "after-start")
+	AFTER_START,
 
-    /**
-     * The action must be performed after the related action.
-     */
-    @Json(name = "after")
-    AFTER,
+	/**
+	* The action must be performed after the related action.
+	*/
+	@Json(name = "after")
+	AFTER,
 
-    /**
-     * The action must be performed after the end of the related action.
-     */
-    @Json(name = "after-end")
-    AFTER_END,
+	/**
+	* The action must be performed after the end of the related action.
+	*/
+	@Json(name = "after-end")
+	AFTER_END,
 }

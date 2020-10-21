@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The protocol used for message transport.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMessageTransport {
 
-    /**
-     * The application sends or receives messages using HTTP POST (may be over http: or https:).
-     */
-    @Json(name = "http")
-    HTTP,
+	/**
+	* The application sends or receives messages using HTTP POST (may be over http: or https:).
+	*/
+	@Json(name = "http")
+	HTTP,
 
-    /**
-     * The application sends or receives messages using File Transfer Protocol.
-     */
-    @Json(name = "ftp")
-    FTP,
+	/**
+	* The application sends or receives messages using File Transfer Protocol.
+	*/
+	@Json(name = "ftp")
+	FTP,
 
-    /**
-     * The application sends or receives messages using HL7's Minimal Lower Level Protocol.
-     */
-    @Json(name = "mllp")
-    MLLP,
+	/**
+	* The application sends or receives messages using HL7's Minimal Lower Level Protocol.
+	*/
+	@Json(name = "mllp")
+	MLLP,
 }

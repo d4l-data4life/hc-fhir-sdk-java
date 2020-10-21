@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The possible sort directions, ascending or descending.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSortDirection {
 
-    /**
-     * Sort by the value ascending, so that lower values appear first.
-     */
-    @Json(name = "ascending")
-    ASCENDING,
+	/**
+	* Sort by the value ascending, so that lower values appear first.
+	*/
+	@Json(name = "ascending")
+	ASCENDING,
 
-    /**
-     * Sort by the value descending, so that lower values appear last.
-     */
-    @Json(name = "descending")
-    DESCENDING,
+	/**
+	* Sort by the value descending, so that lower values appear last.
+	*/
+	@Json(name = "descending")
+	DESCENDING,
 }

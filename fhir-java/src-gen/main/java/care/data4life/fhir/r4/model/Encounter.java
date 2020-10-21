@@ -18,460 +18,452 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Encounter.java
- * <p>
- * An interaction between a patient and healthcare provider(s) for the purpose of providing
- * healthcare service(s) or assessing the health status of a patient.
+ *
+ * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2020-10-19
  */
-public class Encounter extends DomainResource {
+public class Encounter extends DomainResource  {
 
-    public static final String resourceType = "Encounter";
-
-    // Identifier(s) by which this encounter is known.
+	public static final String resourceType = "Encounter";
+  
+	// Identifier(s) by which this encounter is known.
     @Json(name = "identifier")
-    @Nullable
-    public List<Identifier> identifier;
-
-    // None
+	@Nullable
+	public List<Identifier> identifier;
+  
+	// None
     @Json(name = "status")
-    public CodeSystemEncounterStatus status;
-
-    // List of past encounter statuses.
+	public CodeSystemEncounterStatus status;
+  
+	// List of past encounter statuses.
     @Json(name = "statusHistory")
-    @Nullable
-    public List<EncounterStatusHistory> statusHistory;
-
-    // Classification of patient encounter.
+	@Nullable
+	public List<EncounterStatusHistory> statusHistory;
+  
+	// Classification of patient encounter.
     @Json(name = "class")
-    public Coding clazz;
-
-    // List of past encounter classes.
+	public Coding clazz;
+  
+	// List of past encounter classes.
     @Json(name = "classHistory")
-    @Nullable
-    public List<EncounterClassHistory> classHistory;
-
-    // Specific type of encounter.
+	@Nullable
+	public List<EncounterClassHistory> classHistory;
+  
+	// Specific type of encounter.
     @Json(name = "type")
-    @Nullable
-    public List<CodeableConcept> type;
-
-    // Specific type of service.
+	@Nullable
+	public List<CodeableConcept> type;
+  
+	// Specific type of service.
     @Json(name = "serviceType")
-    @Nullable
-    public CodeableConcept serviceType;
-
-    // Indicates the urgency of the encounter.
+	@Nullable
+	public CodeableConcept serviceType;
+  
+	// Indicates the urgency of the encounter.
     @Json(name = "priority")
-    @Nullable
-    public CodeableConcept priority;
-
-    // The patient or group present at the encounter.
+	@Nullable
+	public CodeableConcept priority;
+  
+	// The patient or group present at the encounter.
     @Json(name = "subject")
-    @Nullable
-    public Reference subject;
-
-    // Episode(s) of care that this encounter should be recorded against.
+	@Nullable
+	public Reference subject;
+  
+	// Episode(s) of care that this encounter should be recorded against.
     @Json(name = "episodeOfCare")
-    @Nullable
-    public List<Reference> episodeOfCare;
-
-    // The ServiceRequest that initiated this encounter.
+	@Nullable
+	public List<Reference> episodeOfCare;
+  
+	// The ServiceRequest that initiated this encounter.
     @Json(name = "basedOn")
-    @Nullable
-    public List<Reference> basedOn;
-
-    // List of participants involved in the encounter.
+	@Nullable
+	public List<Reference> basedOn;
+  
+	// List of participants involved in the encounter.
     @Json(name = "participant")
-    @Nullable
-    public List<EncounterParticipant> participant;
-
-    // The appointment that scheduled this encounter.
+	@Nullable
+	public List<EncounterParticipant> participant;
+  
+	// The appointment that scheduled this encounter.
     @Json(name = "appointment")
-    @Nullable
-    public List<Reference> appointment;
-
-    // The start and end time of the encounter.
+	@Nullable
+	public List<Reference> appointment;
+  
+	// The start and end time of the encounter.
     @Json(name = "period")
-    @Nullable
-    public Period period;
-
-    // Quantity of time the encounter lasted (less time absent).
+	@Nullable
+	public Period period;
+  
+	// Quantity of time the encounter lasted (less time absent).
     @Json(name = "length")
-    @Nullable
-    public Duration length;
-
-    // Coded reason the encounter takes place.
+	@Nullable
+	public Duration length;
+  
+	// Coded reason the encounter takes place.
     @Json(name = "reasonCode")
-    @Nullable
-    public List<CodeableConcept> reasonCode;
-
-    // Reason the encounter takes place (reference).
+	@Nullable
+	public List<CodeableConcept> reasonCode;
+  
+	// Reason the encounter takes place (reference).
     @Json(name = "reasonReference")
-    @Nullable
-    public List<Reference> reasonReference;
-
-    // The list of diagnosis relevant to this encounter.
+	@Nullable
+	public List<Reference> reasonReference;
+  
+	// The list of diagnosis relevant to this encounter.
     @Json(name = "diagnosis")
-    @Nullable
-    public List<EncounterDiagnosis> diagnosis;
-
-    // The set of accounts that may be used for billing for this Encounter.
+	@Nullable
+	public List<EncounterDiagnosis> diagnosis;
+  
+	// The set of accounts that may be used for billing for this Encounter.
     @Json(name = "account")
-    @Nullable
-    public List<Reference> account;
-
-    // Details about the admission to a healthcare service.
+	@Nullable
+	public List<Reference> account;
+  
+	// Details about the admission to a healthcare service.
     @Json(name = "hospitalization")
-    @Nullable
-    public EncounterHospitalization hospitalization;
-
-    // List of locations where the patient has been.
+	@Nullable
+	public EncounterHospitalization hospitalization;
+  
+	// List of locations where the patient has been.
     @Json(name = "location")
-    @Nullable
-    public List<EncounterLocation> location;
-
-    // The organization (facility) responsible for this encounter.
+	@Nullable
+	public List<EncounterLocation> location;
+  
+	// The organization (facility) responsible for this encounter.
     @Json(name = "serviceProvider")
-    @Nullable
-    public Reference serviceProvider;
-
-    // Another Encounter this encounter is part of.
+	@Nullable
+	public Reference serviceProvider;
+  
+	// Another Encounter this encounter is part of.
     @Json(name = "partOf")
-    @Nullable
-    public Reference partOf;
-
-
-    /**
-     * Constructor for all required properties.
-     *
-     * @param status CodeSystemEncounterStatus
-     * @param clazz  Coding
-     */
-    public Encounter(CodeSystemEncounterStatus status, Coding clazz) {
-        this.status = status;
-        this.clazz = clazz;
-    }
-
-    @Override
-    public String getResourceType() {
-        return Encounter.resourceType;
-    }
-
-
-    /**
-     * Encounter.java
-     * <p>
-     * The class history permits the tracking of the encounters transitions without needing to go
-     * through the resource history.  This would be used for a case where an admission starts of as
-     * an emergency encounter, then transitions into an inpatient scenario. Doing this and not
-     * restarting a new encounter ensures that any lab/diagnostic results can more easily follow the
-     * patient and not require re-processing and not get lost or cancelled during a kind of
-     * discharge from emergency to inpatient.
-     *
-     * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2020-10-15
-     */
-    public static class EncounterClassHistory extends BackboneElement {
-
-        public static final String resourceType = "EncounterClassHistory";
-
-        // inpatient | outpatient | ambulatory | emergency +.
-        @Json(name = "class")
-        public Coding clazz;
-
-        // The time that the episode was in the specified class.
-        @Json(name = "period")
-        public Period period;
-
-
-        /**
-         * Constructor for all required properties.
-         *
-         * @param clazz  Coding
-         * @param period Period
-         */
-        public EncounterClassHistory(Coding clazz, Period period) {
-            this.clazz = clazz;
-            this.period = period;
-        }
-
-        @Override
-        public String getResourceType() {
-            return EncounterClassHistory.resourceType;
-        }
-
-
-    }
-
-
-    /**
-     * Encounter.java
-     * <p>
-     * The list of diagnosis relevant to this encounter
-     *
-     * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2020-10-15
-     */
-    public static class EncounterDiagnosis extends BackboneElement {
-
-        public static final String resourceType = "EncounterDiagnosis";
-
-        // The diagnosis or procedure relevant to the encounter.
-        @Json(name = "condition")
-        public Reference condition;
-
-        // Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …).
-        @Json(name = "use")
-        @Nullable
-        public CodeableConcept use;
-
-        // Ranking of the diagnosis (for each role type).
-        @Json(name = "rank")
-        @Nullable
-        public Integer rank;
-
-
-        /**
-         * Constructor for all required properties.
-         *
-         * @param condition Reference
-         */
-        public EncounterDiagnosis(Reference condition) {
-            this.condition = condition;
-        }
-
-        @Override
-        public String getResourceType() {
-            return EncounterDiagnosis.resourceType;
-        }
-
-
-    }
-
-
-    /**
-     * Encounter.java
-     * <p>
-     * Details about the admission to a healthcare service
-     *
-     * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2020-10-15
-     */
-    public static class EncounterHospitalization extends BackboneElement {
-
-        public static final String resourceType = "EncounterHospitalization";
-
-        // Pre-admission identifier.
-        @Json(name = "preAdmissionIdentifier")
-        @Nullable
-        public Identifier preAdmissionIdentifier;
-
-        // The location/organization from which the patient came before admission.
-        @Json(name = "origin")
-        @Nullable
-        public Reference origin;
-
-        // From where patient was admitted (physician referral, transfer).
-        @Json(name = "admitSource")
-        @Nullable
-        public CodeableConcept admitSource;
-
-        // The type of hospital re-admission that has occurred (if any). If the value is absent, then this is not identified as a readmission.
-        @Json(name = "reAdmission")
-        @Nullable
-        public CodeableConcept reAdmission;
-
-        // Diet preferences reported by the patient.
-        @Json(name = "dietPreference")
-        @Nullable
-        public List<CodeableConcept> dietPreference;
-
-        // Special courtesies (VIP, board member).
-        @Json(name = "specialCourtesy")
-        @Nullable
-        public List<CodeableConcept> specialCourtesy;
-
-        // Wheelchair, translator, stretcher, etc..
-        @Json(name = "specialArrangement")
-        @Nullable
-        public List<CodeableConcept> specialArrangement;
-
-        // Location/organization to which the patient is discharged.
-        @Json(name = "destination")
-        @Nullable
-        public Reference destination;
-
-        // Category or kind of location after discharge.
-        @Json(name = "dischargeDisposition")
-        @Nullable
-        public CodeableConcept dischargeDisposition;
-
-
-        public EncounterHospitalization() {
-        }
-
-        @Override
-        public String getResourceType() {
-            return EncounterHospitalization.resourceType;
-        }
-
-
-    }
-
-
-    /**
-     * Encounter.java
-     * <p>
-     * List of locations where  the patient has been during this encounter.
-     *
-     * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2020-10-15
-     */
-    public static class EncounterLocation extends BackboneElement {
-
-        public static final String resourceType = "EncounterLocation";
-
-        // Location the encounter takes place.
-        @Json(name = "location")
-        public Reference location;
-
-        // The status of the participants' presence at the specified location during the period specified. If the participant is no longer at the location, then the period will have an end date/time.
-        @Json(name = "status")
-        @Nullable
-        public CodeSystemEncounterLocationStatus status;
-
-        // The physical type of the location (usually the level in the location hierachy - bed room ward etc.).
-        @Json(name = "physicalType")
-        @Nullable
-        public CodeableConcept physicalType;
-
-        // Time period during which the patient was present at the location.
-        @Json(name = "period")
-        @Nullable
-        public Period period;
-
-
-        /**
-         * Constructor for all required properties.
-         *
-         * @param location Reference
-         */
-        public EncounterLocation(Reference location) {
-            this.location = location;
-        }
-
-        @Override
-        public String getResourceType() {
-            return EncounterLocation.resourceType;
-        }
-
-
-    }
-
-
-    /**
-     * Encounter.java
-     * <p>
-     * The list of people responsible for providing the service.
-     *
-     * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2020-10-15
-     */
-    public static class EncounterParticipant extends BackboneElement {
-
-        public static final String resourceType = "EncounterParticipant";
-
-        // Role of participant in encounter.
-        @Json(name = "type")
-        @Nullable
-        public List<CodeableConcept> type;
-
-        // Period of time during the encounter that the participant participated.
-        @Json(name = "period")
-        @Nullable
-        public Period period;
-
-        // Persons involved in the encounter other than the patient.
-        @Json(name = "individual")
-        @Nullable
-        public Reference individual;
-
-
-        public EncounterParticipant() {
-        }
-
-        @Override
-        public String getResourceType() {
-            return EncounterParticipant.resourceType;
-        }
-
-
-    }
-
-
-    /**
-     * Encounter.java
-     * <p>
-     * The status history permits the encounter resource to contain the status history without
-     * needing to read through the historical versions of the resource, or even have the server
-     * store them.
-     *
-     * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2020-10-15
-     */
-    public static class EncounterStatusHistory extends BackboneElement {
-
-        public static final String resourceType = "EncounterStatusHistory";
-
-        // None
-        @Json(name = "status")
-        public CodeSystemEncounterStatus status;
-
-        // The time that the episode was in the specified status.
-        @Json(name = "period")
-        public Period period;
-
-
-        /**
-         * Constructor for all required properties.
-         *
-         * @param status CodeSystemEncounterStatus
-         * @param period Period
-         */
-        public EncounterStatusHistory(CodeSystemEncounterStatus status, Period period) {
-            this.status = status;
-            this.period = period;
-        }
-
-        @Override
-        public String getResourceType() {
-            return EncounterStatusHistory.resourceType;
-        }
-
-
-    }
+	@Nullable
+	public Reference partOf;
+
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param status CodeSystemEncounterStatus
+	 *
+	 * @param clazz Coding
+	 *
+	 */
+	public Encounter(CodeSystemEncounterStatus status, Coding clazz) {
+		this.status = status;
+		this.clazz = clazz;
+	}@Override
+	public String getResourceType() {
+		return Encounter.resourceType;
+	}
+
+
+
+
+/**
+ * Encounter.java
+ *
+ * The class history permits the tracking of the encounters transitions without needing to go  through the resource history.  This would be used for a case where an admission starts of as an emergency encounter, then transitions into an inpatient scenario. Doing this and not restarting a new encounter ensures that any lab/diagnostic results can more easily follow the patient and not require re-processing and not get lost or cancelled during a kind of discharge from emergency to inpatient.
+ *
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2020-10-19
+ */
+public static class EncounterClassHistory extends BackboneElement  {
+
+	public static final String resourceType = "EncounterClassHistory";
+  
+	// inpatient | outpatient | ambulatory | emergency +.
+    @Json(name = "class")
+	public Coding clazz;
+  
+	// The time that the episode was in the specified class.
+    @Json(name = "period")
+	public Period period;
+
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param clazz Coding
+	 *
+	 * @param period Period
+	 *
+	 */
+	public EncounterClassHistory(Coding clazz, Period period) {
+		this.clazz = clazz;
+		this.period = period;
+	}@Override
+	public String getResourceType() {
+		return EncounterClassHistory.resourceType;
+	}
+
+
+}
+
+
+
+/**
+ * Encounter.java
+ *
+ * The list of diagnosis relevant to this encounter
+ * 
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2020-10-19
+ */
+public static class EncounterDiagnosis extends BackboneElement  {
+
+	public static final String resourceType = "EncounterDiagnosis";
+  
+	// The diagnosis or procedure relevant to the encounter.
+    @Json(name = "condition")
+	public Reference condition;
+  
+	// Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …).
+    @Json(name = "use")
+	@Nullable
+	public CodeableConcept use;
+  
+	// Ranking of the diagnosis (for each role type).
+    @Json(name = "rank")
+	@Nullable
+	public Integer rank;
+
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param condition Reference
+	 *
+	 */
+	public EncounterDiagnosis(Reference condition) {
+		this.condition = condition;
+	}@Override
+	public String getResourceType() {
+		return EncounterDiagnosis.resourceType;
+	}
+
+
+}
+
+
+
+/**
+ * Encounter.java
+ *
+ * Details about the admission to a healthcare service
+ * 
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2020-10-19
+ */
+public static class EncounterHospitalization extends BackboneElement  {
+
+	public static final String resourceType = "EncounterHospitalization";
+  
+	// Pre-admission identifier.
+    @Json(name = "preAdmissionIdentifier")
+	@Nullable
+	public Identifier preAdmissionIdentifier;
+  
+	// The location/organization from which the patient came before admission.
+    @Json(name = "origin")
+	@Nullable
+	public Reference origin;
+  
+	// From where patient was admitted (physician referral, transfer).
+    @Json(name = "admitSource")
+	@Nullable
+	public CodeableConcept admitSource;
+  
+	// The type of hospital re-admission that has occurred (if any). If the value is absent, then this is not identified as a readmission.
+    @Json(name = "reAdmission")
+	@Nullable
+	public CodeableConcept reAdmission;
+  
+	// Diet preferences reported by the patient.
+    @Json(name = "dietPreference")
+	@Nullable
+	public List<CodeableConcept> dietPreference;
+  
+	// Special courtesies (VIP, board member).
+    @Json(name = "specialCourtesy")
+	@Nullable
+	public List<CodeableConcept> specialCourtesy;
+  
+	// Wheelchair, translator, stretcher, etc..
+    @Json(name = "specialArrangement")
+	@Nullable
+	public List<CodeableConcept> specialArrangement;
+  
+	// Location/organization to which the patient is discharged.
+    @Json(name = "destination")
+	@Nullable
+	public Reference destination;
+  
+	// Category or kind of location after discharge.
+    @Json(name = "dischargeDisposition")
+	@Nullable
+	public CodeableConcept dischargeDisposition;
+
+    
+	public EncounterHospitalization() {
+	}
+	@Override
+	public String getResourceType() {
+		return EncounterHospitalization.resourceType;
+	}
+
+
+}
+
+
+
+/**
+ * Encounter.java
+ *
+ * List of locations where  the patient has been during this encounter.
+ *
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2020-10-19
+ */
+public static class EncounterLocation extends BackboneElement  {
+
+	public static final String resourceType = "EncounterLocation";
+  
+	// Location the encounter takes place.
+    @Json(name = "location")
+	public Reference location;
+  
+	// The status of the participants' presence at the specified location during the period specified. If the participant is no longer at the location, then the period will have an end date/time.
+    @Json(name = "status")
+	@Nullable
+	public CodeSystemEncounterLocationStatus status;
+  
+	// The physical type of the location (usually the level in the location hierachy - bed room ward etc.).
+    @Json(name = "physicalType")
+	@Nullable
+	public CodeableConcept physicalType;
+  
+	// Time period during which the patient was present at the location.
+    @Json(name = "period")
+	@Nullable
+	public Period period;
+
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param location Reference
+	 *
+	 */
+	public EncounterLocation(Reference location) {
+		this.location = location;
+	}@Override
+	public String getResourceType() {
+		return EncounterLocation.resourceType;
+	}
+
+
+}
+
+
+
+/**
+ * Encounter.java
+ *
+ * The list of people responsible for providing the service.
+ *
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2020-10-19
+ */
+public static class EncounterParticipant extends BackboneElement  {
+
+	public static final String resourceType = "EncounterParticipant";
+  
+	// Role of participant in encounter.
+    @Json(name = "type")
+	@Nullable
+	public List<CodeableConcept> type;
+  
+	// Period of time during the encounter that the participant participated.
+    @Json(name = "period")
+	@Nullable
+	public Period period;
+  
+	// Persons involved in the encounter other than the patient.
+    @Json(name = "individual")
+	@Nullable
+	public Reference individual;
+
+    
+	public EncounterParticipant() {
+	}
+	@Override
+	public String getResourceType() {
+		return EncounterParticipant.resourceType;
+	}
+
+
+}
+
+
+
+/**
+ * Encounter.java
+ *
+ * The status history permits the encounter resource to contain the status history without needing to read through the historical versions of the resource, or even have the server store them.
+ *
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2020-10-19
+ */
+public static class EncounterStatusHistory extends BackboneElement  {
+
+	public static final String resourceType = "EncounterStatusHistory";
+  
+	// None
+    @Json(name = "status")
+	public CodeSystemEncounterStatus status;
+  
+	// The time that the episode was in the specified status.
+    @Json(name = "period")
+	public Period period;
+
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param status CodeSystemEncounterStatus
+	 *
+	 * @param period Period
+	 *
+	 */
+	public EncounterStatusHistory(CodeSystemEncounterStatus status, Period period) {
+		this.status = status;
+		this.period = period;
+	}@Override
+	public String getResourceType() {
+		return EncounterStatusHistory.resourceType;
+	}
+
+
+}
 
 
 }

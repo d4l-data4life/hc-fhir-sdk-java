@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Describes the type of a metric calibration.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDeviceMetricCalibrationType {
 
-    /**
-     * Metric calibration method has not been identified.
-     */
-    @Json(name = "unspecified")
-    UNSPECIFIED,
+	/**
+	* Metric calibration method has not been identified.
+	*/
+	@Json(name = "unspecified")
+	UNSPECIFIED,
 
-    /**
-     * Offset metric calibration method.
-     */
-    @Json(name = "offset")
-    OFFSET,
+	/**
+	* Offset metric calibration method.
+	*/
+	@Json(name = "offset")
+	OFFSET,
 
-    /**
-     * Gain metric calibration method.
-     */
-    @Json(name = "gain")
-    GAIN,
+	/**
+	* Gain metric calibration method.
+	*/
+	@Json(name = "gain")
+	GAIN,
 
-    /**
-     * Two-point metric calibration method.
-     */
-    @Json(name = "two-point")
-    TWO_POINT,
+	/**
+	* Two-point metric calibration method.
+	*/
+	@Json(name = "two-point")
+	TWO_POINT,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes example Payment Type codes.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExamplePaymentTypeCodes {
 
-    /**
-     * Complete (final) payment of the benefit under the Claim less any adjustments.
-     */
-    @Json(name = "complete")
-    COMPLETE,
+	/**
+	* Complete (final) payment of the benefit under the Claim less any adjustments.
+	*/
+	@Json(name = "complete")
+	COMPLETE,
 
-    /**
-     * Partial payment of the benefit under the Claim less any adjustments.
-     */
-    @Json(name = "partial")
-    PARTIAL,
+	/**
+	* Partial payment of the benefit under the Claim less any adjustments.
+	*/
+	@Json(name = "partial")
+	PARTIAL,
 }

@@ -19,32 +19,29 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * A coded concept identifying where the medication ordered is expected to be consumed or
- * administered
+ * A coded concept identifying where the medication ordered is expected to be consumed or administered
  *
  * @see <a href="http://hl7.org/fhir/medication-request-category">MedicationRequestCategory</a>
  */
 public enum CodeSystemMedicationRequestCategory {
 
-    /**
-     * Includes orders for medications to be administered or consumed in an inpatient or acute care
-     * setting
-     */
-    @Json(name = "inpatient")
-    INPATIENT,
+	/**
+	* Includes orders for medications to be administered or consumed in an inpatient or acute care setting
+	*/
+	@Json(name = "inpatient")
+	INPATIENT,
 
-    /**
-     * Includes orders for medications to be administered or consumed in an outpatient setting (for
-     * example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
-     */
-    @Json(name = "outpatient")
-    OUTPATIENT,
+	/**
+	* Includes orders for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+	*/
+	@Json(name = "outpatient")
+	OUTPATIENT,
 
-    /**
-     * Includes orders for medications to be administered or consumed by the patient in their home
-     * (this would include long term care or nursing homes, hospices, etc)
-     */
-    @Json(name = "community")
-    COMMUNITY,
+	/**
+	* Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc)
+	*/
+	@Json(name = "community")
+	COMMUNITY,
 }

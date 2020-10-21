@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Identifies the style of unique identifier used to identify a namespace.
  *
@@ -26,29 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemNamingSystemIdentifierType {
 
-    /**
-     * An ISO object identifier; e.g. 1.2.3.4.5.
-     */
-    @Json(name = "oid")
-    OID,
+	/**
+	* An ISO object identifier; e.g. 1.2.3.4.5.
+	*/
+	@Json(name = "oid")
+	OID,
 
-    /**
-     * A universally unique identifier of the form a5afddf4-e880-459b-876e-e4591b0acc11.
-     */
-    @Json(name = "uuid")
-    UUID,
+	/**
+	* A universally unique identifier of the form a5afddf4-e880-459b-876e-e4591b0acc11.
+	*/
+	@Json(name = "uuid")
+	UUID,
 
-    /**
-     * A uniform resource identifier (ideally a URL - uniform resource locator); e.g.
-     * http://unitsofmeasure.org.
-     */
-    @Json(name = "uri")
-    URI,
+	/**
+	* A uniform resource identifier (ideally a URL - uniform resource locator); e.g. http://unitsofmeasure.org.
+	*/
+	@Json(name = "uri")
+	URI,
 
-    /**
-     * Some other type of unique identifier; e.g. HL7-assigned reserved string such as LN for
-     * LOINC.
-     */
-    @Json(name = "other")
-    OTHER,
+	/**
+	* Some other type of unique identifier; e.g. HL7-assigned reserved string such as LN for LOINC.
+	*/
+	@Json(name = "other")
+	OTHER,
 }

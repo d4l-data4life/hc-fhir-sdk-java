@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A coded concept listing the base codes.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemVisionBase {
 
-    /**
-     * top.
-     */
-    @Json(name = "up")
-    UP,
+	/**
+	* top.
+	*/
+	@Json(name = "up")
+	UP,
 
-    /**
-     * bottom.
-     */
-    @Json(name = "down")
-    DOWN,
+	/**
+	* bottom.
+	*/
+	@Json(name = "down")
+	DOWN,
 
-    /**
-     * inner edge.
-     */
-    @Json(name = "in")
-    IN,
+	/**
+	* inner edge.
+	*/
+	@Json(name = "in")
+	IN,
 
-    /**
-     * outer edge.
-     */
-    @Json(name = "out")
-    OUT,
+	/**
+	* outer edge.
+	*/
+	@Json(name = "out")
+	OUT,
 }

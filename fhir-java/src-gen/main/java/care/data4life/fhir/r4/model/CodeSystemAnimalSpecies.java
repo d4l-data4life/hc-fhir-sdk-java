@@ -19,29 +19,29 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This example value set defines a set of codes that can be used to indicate species of animal
- * patients.
+ * This example value set defines a set of codes that can be used to indicate species of animal patients.
  *
  * @see <a href="http://hl7.org/fhir/animal-species">AnimalSpecies</a>
  */
 public enum CodeSystemAnimalSpecies {
 
-    /**
-     * Canis lupus familiaris
-     */
-    @Json(name = "canislf")
-    CANISLF,
+	/**
+	* Canis lupus familiaris
+	*/
+	@Json(name = "canislf")
+	CANISLF,
 
-    /**
-     * Ovis aries
-     */
-    @Json(name = "ovisa")
-    OVISA,
+	/**
+	* Ovis aries
+	*/
+	@Json(name = "ovisa")
+	OVISA,
 
-    /**
-     * Serinus canaria domestica
-     */
-    @Json(name = "serinuscd")
-    SERINUSCD,
+	/**
+	* Serinus canaria domestica
+	*/
+	@Json(name = "serinuscd")
+	SERINUSCD,
 }

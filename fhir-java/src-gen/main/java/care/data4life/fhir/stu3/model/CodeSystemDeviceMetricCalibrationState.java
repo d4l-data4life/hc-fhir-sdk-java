@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Describes the state of a metric calibration.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDeviceMetricCalibrationState {
 
-    /**
-     * The metric has not been calibrated.
-     */
-    @Json(name = "not-calibrated")
-    NOT_CALIBRATED,
+	/**
+	* The metric has not been calibrated.
+	*/
+	@Json(name = "not-calibrated")
+	NOT_CALIBRATED,
 
-    /**
-     * The metric needs to be calibrated.
-     */
-    @Json(name = "calibration-required")
-    CALIBRATION_REQUIRED,
+	/**
+	* The metric needs to be calibrated.
+	*/
+	@Json(name = "calibration-required")
+	CALIBRATION_REQUIRED,
 
-    /**
-     * The metric has been calibrated.
-     */
-    @Json(name = "calibrated")
-    CALIBRATED,
+	/**
+	* The metric has been calibrated.
+	*/
+	@Json(name = "calibrated")
+	CALIBRATED,
 
-    /**
-     * The state of calibration of this metric is unspecified.
-     */
-    @Json(name = "unspecified")
-    UNSPECIFIED,
+	/**
+	* The state of calibration of this metric is unspecified.
+	*/
+	@Json(name = "unspecified")
+	UNSPECIFIED,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes smattering of Payment Adjustment Reason codes.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemPaymentAdjustmentReasonCodes {
 
-    /**
-     * Prior Payment Reversal
-     */
-    @Json(name = "a001")
-    A001,
+	/**
+	* Prior Payment Reversal
+	*/
+	@Json(name = "a001")
+	A001,
 
-    /**
-     * Prior Overpayment
-     */
-    @Json(name = "a002")
-    A002,
+	/**
+	* Prior Overpayment
+	*/
+	@Json(name = "a002")
+	A002,
 }

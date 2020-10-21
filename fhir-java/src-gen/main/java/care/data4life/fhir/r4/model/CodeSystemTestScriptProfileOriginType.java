@@ -19,23 +19,23 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This value set defines a set of codes that are used to indicate the profile type of a test system
- * when acting as the origin within a TestScript.
+ * This value set defines a set of codes that are used to indicate the profile type of a test system when acting as the origin within a TestScript.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types">TestScriptProfileOriginType</a>
  */
 public enum CodeSystemTestScriptProfileOriginType {
 
-    /**
-     * General FHIR client used to initiate operations against a FHIR server.
-     */
-    @Json(name = "FHIR-Client")
-    FHIR_CLIENT,
+	/**
+	* General FHIR client used to initiate operations against a FHIR server.
+	*/
+	@Json(name = "FHIR-Client")
+	FHIR_CLIENT,
 
-    /**
-     * A FHIR client acting as a Structured Data Capture Form Filler.
-     */
-    @Json(name = "FHIR-SDC-FormFiller")
-    FHIR_SDC_FORMFILLER,
+	/**
+	* A FHIR client acting as a Structured Data Capture Form Filler.
+	*/
+	@Json(name = "FHIR-SDC-FormFiller")
+	FHIR_SDC_FORMFILLER,
 }

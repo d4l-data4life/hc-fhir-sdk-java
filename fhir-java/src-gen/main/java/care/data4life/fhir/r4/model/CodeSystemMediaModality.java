@@ -19,60 +19,59 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * Detailed information about the type of the image - its kind, purpose, or the kind of equipment
- * used to generate it.
+ * Detailed information about the type of the image - its kind, purpose, or the kind of equipment used to generate it.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/media-modality">MediaModality</a>
  */
 public enum CodeSystemMediaModality {
 
-    /**
-     * A diagram. Often used in diagnostic reports
-     */
-    @Json(name = "diagram")
-    DIAGRAM,
+	/**
+	* A diagram. Often used in diagnostic reports
+	*/
+	@Json(name = "diagram")
+	DIAGRAM,
 
-    /**
-     * A digital record of a fax document
-     */
-    @Json(name = "fax")
-    FAX,
+	/**
+	* A digital record of a fax document
+	*/
+	@Json(name = "fax")
+	FAX,
 
-    /**
-     * A digital scan of a document. This is reserved for when there is not enough metadata to
-     * create a document reference
-     */
-    @Json(name = "scan")
-    SCAN,
+	/**
+	* A digital scan of a document. This is reserved for when there is not enough metadata to create a document reference
+	*/
+	@Json(name = "scan")
+	SCAN,
 
-    /**
-     * A retinal image used for identification purposes
-     */
-    @Json(name = "retina")
-    RETINA,
+	/**
+	* A retinal image used for identification purposes
+	*/
+	@Json(name = "retina")
+	RETINA,
 
-    /**
-     * A finger print scan used for identification purposes
-     */
-    @Json(name = "fingerprint")
-    FINGERPRINT,
+	/**
+	* A finger print scan used for identification purposes
+	*/
+	@Json(name = "fingerprint")
+	FINGERPRINT,
 
-    /**
-     * An iris scan used for identification purposes
-     */
-    @Json(name = "iris")
-    IRIS,
+	/**
+	* An iris scan used for identification purposes
+	*/
+	@Json(name = "iris")
+	IRIS,
 
-    /**
-     * A palm scan used for identification purposes
-     */
-    @Json(name = "palm")
-    PALM,
+	/**
+	* A palm scan used for identification purposes
+	*/
+	@Json(name = "palm")
+	PALM,
 
-    /**
-     * A face scan used for identification purposes
-     */
-    @Json(name = "face")
-    FACE,
+	/**
+	* A face scan used for identification purposes
+	*/
+	@Json(name = "face")
+	FACE,
 }

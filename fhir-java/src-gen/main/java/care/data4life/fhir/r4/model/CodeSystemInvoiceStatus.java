@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Codes identifying the lifecycle stage of an Invoice.
  *
@@ -26,33 +27,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemInvoiceStatus {
 
-    /**
-     * the invoice has been prepared but not yet finalized.
-     */
-    @Json(name = "draft")
-    DRAFT,
+	/**
+	* the invoice has been prepared but not yet finalized.
+	*/
+	@Json(name = "draft")
+	DRAFT,
 
-    /**
-     * the invoice has been finalized and sent to the recipient.
-     */
-    @Json(name = "issued")
-    ISSUED,
+	/**
+	* the invoice has been finalized and sent to the recipient.
+	*/
+	@Json(name = "issued")
+	ISSUED,
 
-    /**
-     * the invoice has been balaced / completely paid.
-     */
-    @Json(name = "balanced")
-    BALANCED,
+	/**
+	* the invoice has been balaced / completely paid.
+	*/
+	@Json(name = "balanced")
+	BALANCED,
 
-    /**
-     * the invoice was cancelled.
-     */
-    @Json(name = "cancelled")
-    CANCELLED,
+	/**
+	* the invoice was cancelled.
+	*/
+	@Json(name = "cancelled")
+	CANCELLED,
 
-    /**
-     * the invoice was determined as entered in error before it was issued.
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* the invoice was determined as entered in error before it was issued.
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 }

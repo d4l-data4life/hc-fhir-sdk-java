@@ -19,23 +19,23 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or
- * HGPS systems
+ * A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems
  *
  * @see <a href="http://hl7.org/fhir/recommendation-strength">StrengthOfRecommendationRating</a>
  */
 public enum CodeSystemStrengthOfRecommendationRating {
 
-    /**
-     * Strong recommendation
-     */
-    @Json(name = "strong")
-    STRONG,
+	/**
+	* Strong recommendation
+	*/
+	@Json(name = "strong")
+	STRONG,
 
-    /**
-     * Weak recommendation
-     */
-    @Json(name = "weak")
-    WEAK,
+	/**
+	* Weak recommendation
+	*/
+	@Json(name = "weak")
+	WEAK,
 }

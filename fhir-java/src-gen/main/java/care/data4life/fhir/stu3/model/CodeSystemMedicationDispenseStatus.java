@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A coded concept specifying the state of the dispense event.
  *
@@ -26,42 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationDispenseStatus {
 
-    /**
-     * The core event has not started yet, but some staging activities have begun (e.g. initial
-     * compounding or packaging of medication). Preparation stages may be tracked for billing
-     * purposes.
-     */
-    @Json(name = "preparation")
-    PREPARATION,
+	/**
+	* The core event has not started yet, but some staging activities have begun (e.g. initial compounding or packaging of medication). Preparation stages may be tracked for billing purposes.
+	*/
+	@Json(name = "preparation")
+	PREPARATION,
 
-    /**
-     * The dispense has started but has not yet completed.
-     */
-    @Json(name = "in-progress")
-    IN_PROGRESS,
+	/**
+	* The dispense has started but has not yet completed.
+	*/
+	@Json(name = "in-progress")
+	IN_PROGRESS,
 
-    /**
-     * Actions implied by the administration have been temporarily halted, but are expected to
-     * continue later. May also be called "suspended"
-     */
-    @Json(name = "on-hold")
-    ON_HOLD,
+	/**
+	* Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called "suspended"
+	*/
+	@Json(name = "on-hold")
+	ON_HOLD,
 
-    /**
-     * All actions that are implied by the dispense have occurred.
-     */
-    @Json(name = "completed")
-    COMPLETED,
+	/**
+	* All actions that are implied by the dispense have occurred.
+	*/
+	@Json(name = "completed")
+	COMPLETED,
 
-    /**
-     * The dispense was entered in error and therefore nullified.
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* The dispense was entered in error and therefore nullified.
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 
-    /**
-     * Actions implied by the dispense have been permanently halted, before all of them occurred.
-     */
-    @Json(name = "stopped")
-    STOPPED,
+	/**
+	* Actions implied by the dispense have been permanently halted, before all of them occurred.
+	*/
+	@Json(name = "stopped")
+	STOPPED,
 }

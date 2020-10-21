@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A Master Patient Index (MPI) assessment of whether a candidate patient record is a match or not.
  *
@@ -26,31 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMatchGrade {
 
-    /**
-     * This record meets the matching criteria to be automatically considered as a full match.
-     */
-    @Json(name = "certain")
-    CERTAIN,
+	/**
+	* This record meets the matching criteria to be automatically considered as a full match.
+	*/
+	@Json(name = "certain")
+	CERTAIN,
 
-    /**
-     * This record is a close match, but not a certain match. Additional review (e.g. by a human)
-     * may be required before using this as a match.
-     */
-    @Json(name = "probable")
-    PROBABLE,
+	/**
+	* This record is a close match, but not a certain match. Additional review (e.g. by a human) may be required before using this as a match.
+	*/
+	@Json(name = "probable")
+	PROBABLE,
 
-    /**
-     * This record may be a matching one. Additional review (e.g. by a human) SHOULD be performed
-     * before using this as a match.
-     */
-    @Json(name = "possible")
-    POSSIBLE,
+	/**
+	* This record may be a matching one. Additional review (e.g. by a human) SHOULD be performed before using this as a match.
+	*/
+	@Json(name = "possible")
+	POSSIBLE,
 
-    /**
-     * This record is known not to be a match. Note that usually non-matching records are not
-     * returned, but in some cases records previously or likely considered as a match may
-     * specifically be negated by the matching engine
-     */
-    @Json(name = "certainly-not")
-    CERTAINLY_NOT,
+	/**
+	* This record is known not to be a match. Note that usually non-matching records are not returned, but in some cases records previously or likely considered as a match may specifically be negated by the matching engine
+	*/
+	@Json(name = "certainly-not")
+	CERTAINLY_NOT,
 }

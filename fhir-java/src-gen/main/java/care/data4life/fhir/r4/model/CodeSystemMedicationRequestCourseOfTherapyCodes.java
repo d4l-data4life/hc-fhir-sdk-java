@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * MedicationRequest Course of Therapy Codes
  *
@@ -26,23 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationRequestCourseOfTherapyCodes {
 
-    /**
-     * A medication which is expected to be continued beyond the present order and which the patient
-     * should be assumed to be taking unless explicitly stopped.
-     */
-    @Json(name = "continuous")
-    CONTINUOUS,
+	/**
+	* A medication which is expected to be continued beyond the present order and which the patient should be assumed to be taking unless explicitly stopped.
+	*/
+	@Json(name = "continuous")
+	CONTINUOUS,
 
-    /**
-     * A medication which the patient is only expected to consume for the duration of the current
-     * order and which is not expected to be renewed.
-     */
-    @Json(name = "acute")
-    ACUTE,
+	/**
+	* A medication which the patient is only expected to consume for the duration of the current order and which is not expected to be renewed.
+	*/
+	@Json(name = "acute")
+	ACUTE,
 
-    /**
-     * A medication which is expected to be used on a part time basis at certain times of the year
-     */
-    @Json(name = "seasonal")
-    SEASONAL,
+	/**
+	* A medication which is expected to be used on a part time basis at certain times of the year
+	*/
+	@Json(name = "seasonal")
+	SEASONAL,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Whether the cost applies to in-network or out-of-network providers.
  *
@@ -26,23 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemBenefitCostApplicability {
 
-    /**
-     * Provider is contracted with the health insurance company to provide services to plan members
-     * for specific pre-negotiated rates
-     */
-    @Json(name = "in-network")
-    IN_NETWORK,
+	/**
+	* Provider is contracted with the health insurance company to provide services to plan members for specific pre-negotiated rates
+	*/
+	@Json(name = "in-network")
+	IN_NETWORK,
 
-    /**
-     * Provider is  not contracted with the health insurance company to provide services to plan
-     * members for specific pre-negotiated rates
-     */
-    @Json(name = "out-of-network")
-    OUT_OF_NETWORK,
+	/**
+	* Provider is  not contracted with the health insurance company to provide services to plan members for specific pre-negotiated rates
+	*/
+	@Json(name = "out-of-network")
+	OUT_OF_NETWORK,
 
-    /**
-     * Other applicability
-     */
-    @Json(name = "other")
-    OTHER,
+	/**
+	* Other applicability
+	*/
+	@Json(name = "other")
+	OTHER,
 }

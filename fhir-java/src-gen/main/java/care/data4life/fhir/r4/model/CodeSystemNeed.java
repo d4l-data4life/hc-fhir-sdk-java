@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The frequency with which the target must be validated
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemNeed {
 
-    /**
-     * ***TODO***
-     */
-    @Json(name = "none")
-    NONE,
+	/**
+	* ***TODO***
+	*/
+	@Json(name = "none")
+	NONE,
 
-    /**
-     * ***TODO***
-     */
-    @Json(name = "initial")
-    INITIAL,
+	/**
+	* ***TODO***
+	*/
+	@Json(name = "initial")
+	INITIAL,
 
-    /**
-     * ***TODO***
-     */
-    @Json(name = "periodic")
-    PERIODIC,
+	/**
+	* ***TODO***
+	*/
+	@Json(name = "periodic")
+	PERIODIC,
 }

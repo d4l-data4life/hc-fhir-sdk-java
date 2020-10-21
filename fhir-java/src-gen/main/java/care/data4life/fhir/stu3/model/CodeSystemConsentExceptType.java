@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * How an exception statement is applied, such as adding additional consent or removing consent
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConsentExceptType {
 
-    /**
-     * Consent is denied for actions meeting these rules
-     */
-    @Json(name = "deny")
-    DENY,
+	/**
+	* Consent is denied for actions meeting these rules
+	*/
+	@Json(name = "deny")
+	DENY,
 
-    /**
-     * Consent is provided for actions meeting these rules
-     */
-    @Json(name = "permit")
-    PERMIT,
+	/**
+	* Consent is provided for actions meeting these rules
+	*/
+	@Json(name = "permit")
+	PERMIT,
 }

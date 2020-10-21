@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A code to indicate if the substance is actively used
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemFHIRSubstanceStatus {
 
-    /**
-     * The substance is considered for use or reference
-     */
-    @Json(name = "active")
-    ACTIVE,
+	/**
+	* The substance is considered for use or reference
+	*/
+	@Json(name = "active")
+	ACTIVE,
 
-    /**
-     * The substance is considered for reference, but not for use
-     */
-    @Json(name = "inactive")
-    INACTIVE,
+	/**
+	* The substance is considered for reference, but not for use
+	*/
+	@Json(name = "inactive")
+	INACTIVE,
 
-    /**
-     * The substance was entered in error
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* The substance was entered in error
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 }

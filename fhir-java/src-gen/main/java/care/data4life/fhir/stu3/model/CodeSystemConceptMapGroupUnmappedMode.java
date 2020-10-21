@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Defines which action to take if there is no match in the group.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConceptMapGroupUnmappedMode {
 
-    /**
-     * Use the code as provided in the $translate request
-     */
-    @Json(name = "provided")
-    PROVIDED,
+	/**
+	* Use the code as provided in the $translate request
+	*/
+	@Json(name = "provided")
+	PROVIDED,
 
-    /**
-     * Use the code explicitly provided in the group.unmapped
-     */
-    @Json(name = "fixed")
-    FIXED,
+	/**
+	* Use the code explicitly provided in the group.unmapped
+	*/
+	@Json(name = "fixed")
+	FIXED,
 
-    /**
-     * Use the map identified by the canonical URL in URL
-     */
-    @Json(name = "other-map")
-    OTHER_MAP,
+	/**
+	* Use the map identified by the canonical URL in URL
+	*/
+	@Json(name = "other-map")
+	OTHER_MAP,
 }

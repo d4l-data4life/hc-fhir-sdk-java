@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A code that specifies a type of context being specified by a usage context
  *
@@ -26,65 +27,51 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemUsageContextType {
 
-    /**
-     * The gender of the patient. For this context type, the value should be a code taken from the
-     * http://hl7.org/fhir/ValueSet/administrative-gender value set
-     */
-    @Json(name = "gender")
-    GENDER,
+	/**
+	* The gender of the patient. For this context type, the value should be a code taken from the http://hl7.org/fhir/ValueSet/administrative-gender value set
+	*/
+	@Json(name = "gender")
+	GENDER,
 
-    /**
-     * The age of the patient. For this context type, the value should be a range the specifies the
-     * applicable ages or a code from the MeSH value set http://hl7.org/fhir/ValueSet/v3-AgeGroupObservationValue
-     */
-    @Json(name = "age")
-    AGE,
+	/**
+	* The age of the patient. For this context type, the value should be a range the specifies the applicable ages or a code from the MeSH value set http://hl7.org/fhir/ValueSet/v3-AgeGroupObservationValue
+	*/
+	@Json(name = "age")
+	AGE,
 
-    /**
-     * The clinical concept(s) addressed by the artifact. For example, disease, diagnostic test
-     * interpretation, medication ordering as in http://hl7.org/fhir/ValueSet/condition-code.
-     */
-    @Json(name = "focus")
-    FOCUS,
+	/**
+	* The clinical concept(s) addressed by the artifact. For example, disease, diagnostic test interpretation, medication ordering as in http://hl7.org/fhir/ValueSet/condition-code.
+	*/
+	@Json(name = "focus")
+	FOCUS,
 
-    /**
-     * The clinical specialty of the context in which the patient is being treated - For example,
-     * PCP, Patient, Cardiologist, Behavioral Professional, Oral Health Professional, Prescriber,
-     * etc... taken from the NUCC Health Care provider taxonomy value set
-     * http://hl7.org/fhir/ValueSet/provider-taxonomy.
-     */
-    @Json(name = "user")
-    USER,
+	/**
+	* The clinical specialty of the context in which the patient is being treated - For example, PCP, Patient, Cardiologist, Behavioral Professional, Oral Health Professional, Prescriber, etc... taken from the NUCC Health Care provider taxonomy value set http://hl7.org/fhir/ValueSet/provider-taxonomy.
+	*/
+	@Json(name = "user")
+	USER,
 
-    /**
-     * The settings in which the artifact is intended for use. For example, admission, pre-op, etc.
-     * For example, the ActEncounterCode value set http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
-     */
-    @Json(name = "workflow")
-    WORKFLOW,
+	/**
+	* The settings in which the artifact is intended for use. For example, admission, pre-op, etc. For example, the ActEncounterCode value set http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
+	*/
+	@Json(name = "workflow")
+	WORKFLOW,
 
-    /**
-     * The context for the clinical task(s) represented by this artifact. Can be any task context
-     * represented by the HL7 ActTaskCode value set http://hl7.org/fhir/ValueSet/v3-ActTaskCode.
-     * General categories include: order entry, patient documentation and patient information
-     * review.
-     */
-    @Json(name = "task")
-    TASK,
+	/**
+	* The context for the clinical task(s) represented by this artifact. Can be any task context represented by the HL7 ActTaskCode value set http://hl7.org/fhir/ValueSet/v3-ActTaskCode. General categories include: order entry, patient documentation and patient information review.
+	*/
+	@Json(name = "task")
+	TASK,
 
-    /**
-     * The venue in which an artifact could be used. For example, Outpatient, Inpatient, Home,
-     * Nursing home. The code value may originate from either the HL7 ActEncounterCode
-     * http://hl7.org/fhir/ValueSet/v3-ActEncounterCode or NUCC non-individual provider codes
-     * http://hl7.org/fhir/ValueSet/provider-taxonomy
-     */
-    @Json(name = "venue")
-    VENUE,
+	/**
+	* The venue in which an artifact could be used. For example, Outpatient, Inpatient, Home, Nursing home. The code value may originate from either the HL7 ActEncounterCode http://hl7.org/fhir/ValueSet/v3-ActEncounterCode or NUCC non-individual provider codes http://hl7.org/fhir/ValueSet/provider-taxonomy
+	*/
+	@Json(name = "venue")
+	VENUE,
 
-    /**
-     * The species to which an artifact applies. For example, SNOMED - 387961004 | Kingdom Animalia
-     * (organism).
-     */
-    @Json(name = "species")
-    SPECIES,
+	/**
+	* The species to which an artifact applies. For example, SNOMED - 387961004 | Kingdom Animalia (organism).
+	*/
+	@Json(name = "species")
+	SPECIES,
 }

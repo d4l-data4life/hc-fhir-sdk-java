@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Type if a sequence -- DNA, RNA, or amino acid sequence
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSequenceType {
 
-    /**
-     * Amino acid sequence
-     */
-    @Json(name = "aa")
-    AA,
+	/**
+	* Amino acid sequence
+	*/
+	@Json(name = "aa")
+	AA,
 
-    /**
-     * DNA Sequence
-     */
-    @Json(name = "dna")
-    DNA,
+	/**
+	* DNA Sequence
+	*/
+	@Json(name = "dna")
+	DNA,
 
-    /**
-     * RNA Sequence
-     */
-    @Json(name = "rna")
-    RNA,
+	/**
+	* RNA Sequence
+	*/
+	@Json(name = "rna")
+	RNA,
 }

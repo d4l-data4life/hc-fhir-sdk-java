@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The purpose of the Claim: predetermination, preauthorization, claim.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemUse {
 
-    /**
-     * The treatment is complete and this represents a Claim for the services.
-     */
-    @Json(name = "claim")
-    CLAIM,
+	/**
+	* The treatment is complete and this represents a Claim for the services.
+	*/
+	@Json(name = "claim")
+	CLAIM,
 
-    /**
-     * The treatment is proposed and this represents a Pre-authorization for the services.
-     */
-    @Json(name = "preauthorization")
-    PREAUTHORIZATION,
+	/**
+	* The treatment is proposed and this represents a Pre-authorization for the services.
+	*/
+	@Json(name = "preauthorization")
+	PREAUTHORIZATION,
 
-    /**
-     * The treatment is proposed and this represents a Pre-determination for the services.
-     */
-    @Json(name = "predetermination")
-    PREDETERMINATION,
+	/**
+	* The treatment is proposed and this represents a Pre-determination for the services.
+	*/
+	@Json(name = "predetermination")
+	PREDETERMINATION,
 }

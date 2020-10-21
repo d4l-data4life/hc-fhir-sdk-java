@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * HTTP verbs (in the HTTP command line).
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemHTTPVerb {
 
-    /**
-     * HTTP GET
-     */
-    @Json(name = "GET")
-    GET,
+	/**
+	* HTTP GET
+	*/
+	@Json(name = "GET")
+	GET,
 
-    /**
-     * HTTP POST
-     */
-    @Json(name = "POST")
-    POST,
+	/**
+	* HTTP POST
+	*/
+	@Json(name = "POST")
+	POST,
 
-    /**
-     * HTTP PUT
-     */
-    @Json(name = "PUT")
-    PUT,
+	/**
+	* HTTP PUT
+	*/
+	@Json(name = "PUT")
+	PUT,
 
-    /**
-     * HTTP DELETE
-     */
-    @Json(name = "DELETE")
-    DELETE,
+	/**
+	* HTTP DELETE
+	*/
+	@Json(name = "DELETE")
+	DELETE,
 }

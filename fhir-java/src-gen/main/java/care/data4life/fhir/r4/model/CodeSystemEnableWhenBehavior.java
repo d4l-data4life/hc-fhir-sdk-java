@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Controls how multiple enableWhen values are interpreted -  whether all or any must be true.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemEnableWhenBehavior {
 
-    /**
-     * Enable the question when all the enableWhen criteria are satisfied.
-     */
-    @Json(name = "all")
-    ALL,
+	/**
+	* Enable the question when all the enableWhen criteria are satisfied.
+	*/
+	@Json(name = "all")
+	ALL,
 
-    /**
-     * Enable the question when any of the enableWhen criteria are satisfied.
-     */
-    @Json(name = "any")
-    ANY,
+	/**
+	* Enable the question when any of the enableWhen criteria are satisfied.
+	*/
+	@Json(name = "any")
+	ANY,
 }

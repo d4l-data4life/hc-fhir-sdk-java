@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Distinguishes groups from questions and display text and indicates data type for questions.
  *
@@ -26,113 +27,105 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemQuestionnaireItemType {
 
-    /**
-     * An item with no direct answer but should have at least one child item.
-     */
-    @Json(name = "group")
-    GROUP,
+	/**
+	* An item with no direct answer but should have at least one child item.
+	*/
+	@Json(name = "group")
+	GROUP,
 
-    /**
-     * Text for display that will not capture an answer or have child items.
-     */
-    @Json(name = "display")
-    DISPLAY,
+	/**
+	* Text for display that will not capture an answer or have child items.
+	*/
+	@Json(name = "display")
+	DISPLAY,
 
-    /**
-     * An item that defines a specific answer to be captured, and which may have child items. (the
-     * answer provided in the QuestionnaireResponse should be of the defined datatype).
-     */
-    @Json(name = "question")
-    QUESTION,
+	/**
+	* An item that defines a specific answer to be captured, and which may have child items. (the answer provided in the QuestionnaireResponse should be of the defined datatype).
+	*/
+	@Json(name = "question")
+	QUESTION,
 
-    /**
-     * Question with a yes/no answer (valueBoolean).
-     */
-    @Json(name = "boolean")
-    BOOLEAN,
+	/**
+	* Question with a yes/no answer (valueBoolean).
+	*/
+	@Json(name = "boolean")
+	BOOLEAN,
 
-    /**
-     * Question with is a real number answer (valueDecimal).
-     */
-    @Json(name = "decimal")
-    DECIMAL,
+	/**
+	* Question with is a real number answer (valueDecimal).
+	*/
+	@Json(name = "decimal")
+	DECIMAL,
 
-    /**
-     * Question with an integer answer (valueInteger).
-     */
-    @Json(name = "integer")
-    INTEGER,
+	/**
+	* Question with an integer answer (valueInteger).
+	*/
+	@Json(name = "integer")
+	INTEGER,
 
-    /**
-     * Question with a date answer (valueDate).
-     */
-    @Json(name = "date")
-    DATE,
+	/**
+	* Question with a date answer (valueDate).
+	*/
+	@Json(name = "date")
+	DATE,
 
-    /**
-     * Question with a date and time answer (valueDateTime).
-     */
-    @Json(name = "dateTime")
-    DATETIME,
+	/**
+	* Question with a date and time answer (valueDateTime).
+	*/
+	@Json(name = "dateTime")
+	DATETIME,
 
-    /**
-     * Question with a time (hour:minute:second) answer independent of date. (valueTime).
-     */
-    @Json(name = "time")
-    TIME,
+	/**
+	* Question with a time (hour:minute:second) answer independent of date. (valueTime).
+	*/
+	@Json(name = "time")
+	TIME,
 
-    /**
-     * Question with a short (few words to short sentence) free-text entry answer (valueString).
-     */
-    @Json(name = "string")
-    STRING,
+	/**
+	* Question with a short (few words to short sentence) free-text entry answer (valueString).
+	*/
+	@Json(name = "string")
+	STRING,
 
-    /**
-     * Question with a long (potentially multi-paragraph) free-text entry answer (valueString).
-     */
-    @Json(name = "text")
-    TEXT,
+	/**
+	* Question with a long (potentially multi-paragraph) free-text entry answer (valueString).
+	*/
+	@Json(name = "text")
+	TEXT,
 
-    /**
-     * Question with a URL (website, FTP site, etc.) answer (valueUri).
-     */
-    @Json(name = "url")
-    URL,
+	/**
+	* Question with a URL (website, FTP site, etc.) answer (valueUri).
+	*/
+	@Json(name = "url")
+	URL,
 
-    /**
-     * Question with a Coding drawn from a list of possible answers (specified in either the
-     * answerOption property, or via the valueset referenced in the answerValueSet property) as an
-     * answer (valueCoding).
-     */
-    @Json(name = "choice")
-    CHOICE,
+	/**
+	* Question with a Coding drawn from a list of possible answers (specified in either the answerOption property, or via the valueset referenced in the answerValueSet property) as an answer (valueCoding).
+	*/
+	@Json(name = "choice")
+	CHOICE,
 
-    /**
-     * Answer is a Coding drawn from a list of possible answers (as with the choice type) or a
-     * free-text entry in a string (valueCoding or valueString).
-     */
-    @Json(name = "open-choice")
-    OPEN_CHOICE,
+	/**
+	* Answer is a Coding drawn from a list of possible answers (as with the choice type) or a free-text entry in a string (valueCoding or valueString).
+	*/
+	@Json(name = "open-choice")
+	OPEN_CHOICE,
 
-    /**
-     * Question with binary content such as an image, PDF, etc. as an answer (valueAttachment).
-     */
-    @Json(name = "attachment")
-    ATTACHMENT,
+	/**
+	* Question with binary content such as an image, PDF, etc. as an answer (valueAttachment).
+	*/
+	@Json(name = "attachment")
+	ATTACHMENT,
 
-    /**
-     * Question with a reference to another resource (practitioner, organization, etc.) as an answer
-     * (valueReference).
-     */
-    @Json(name = "reference")
-    REFERENCE,
+	/**
+	* Question with a reference to another resource (practitioner, organization, etc.) as an answer (valueReference).
+	*/
+	@Json(name = "reference")
+	REFERENCE,
 
-    /**
-     * Question with a combination of a numeric value and unit, potentially with a comparator (<, >,
-     * etc.) as an answer. (valueQuantity) There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit'
-     * that can be used to define what unit should be captured (or the unit that has a ucum
-     * conversion from the provided unit).
-     */
-    @Json(name = "quantity")
-    QUANTITY,
+	/**
+	* Question with a combination of a numeric value and unit, potentially with a comparator (<, >, etc.) as an answer. (valueQuantity) There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to define what unit should be captured (or the unit that has a ucum conversion from the provided unit).
+	*/
+	@Json(name = "quantity")
+	QUANTITY,
 }

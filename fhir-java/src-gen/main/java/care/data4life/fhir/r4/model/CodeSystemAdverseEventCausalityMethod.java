@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * TODO.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAdverseEventCausalityMethod {
 
-    /**
-     * probabilityScale
-     */
-    @Json(name = "ProbabilityScale")
-    PROBABILITYSCALE,
+	/**
+	* probabilityScale
+	*/
+	@Json(name = "ProbabilityScale")
+	PROBABILITYSCALE,
 
-    /**
-     * bayesian
-     */
-    @Json(name = "Bayesian")
-    BAYESIAN,
+	/**
+	* bayesian
+	*/
+	@Json(name = "Bayesian")
+	BAYESIAN,
 
-    /**
-     * checklist
-     */
-    @Json(name = "Checklist")
-    CHECKLIST,
+	/**
+	* checklist
+	*/
+	@Json(name = "Checklist")
+	CHECKLIST,
 }

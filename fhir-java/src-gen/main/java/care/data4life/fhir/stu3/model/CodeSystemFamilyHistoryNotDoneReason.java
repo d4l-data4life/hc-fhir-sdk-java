@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Codes describing the reason why a family member history was not done.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemFamilyHistoryNotDoneReason {
 
-    /**
-     * Patient does not know the subject, e.g. the biological parent of an adopted patient.
-     */
-    @Json(name = "subject-unknown")
-    SUBJECT_UNKNOWN,
+	/**
+	* Patient does not know the subject, e.g. the biological parent of an adopted patient.
+	*/
+	@Json(name = "subject-unknown")
+	SUBJECT_UNKNOWN,
 
-    /**
-     * The patient withheld or refused to share the information.
-     */
-    @Json(name = "withheld")
-    WITHHELD,
+	/**
+	* The patient withheld or refused to share the information.
+	*/
+	@Json(name = "withheld")
+	WITHHELD,
 
-    /**
-     * Information cannot be obtained; e.g. unconscious patient
-     */
-    @Json(name = "unable-to-obtain")
-    UNABLE_TO_OBTAIN,
+	/**
+	* Information cannot be obtained; e.g. unconscious patient
+	*/
+	@Json(name = "unable-to-obtain")
+	UNABLE_TO_OBTAIN,
 
-    /**
-     * Patient does not have the information now, but can provide the information at a later date.
-     */
-    @Json(name = "deferred")
-    DEFERRED,
+	/**
+	* Patient does not have the information now, but can provide the information at a later date.
+	*/
+	@Json(name = "deferred")
+	DEFERRED,
 }

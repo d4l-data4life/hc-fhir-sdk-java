@@ -47,7 +47,7 @@ public class {{ class.name }}Test {
 
     @Test
 	public void test{{ class.name }}{{ loop.index }}() throws Exception {
-		String sourceJson = FileHelper.loadString("{{ tcase.filename }}");
+		String sourceJson = FileHelper.loadString("stu3/{{ tcase.filename }}");
 		{{ class.name }} data = parser.toFhir({{ class.name }}.class , sourceJson);
 		{% for onetest in tcase.tests -%}
 		{%- if onetest.enum %}

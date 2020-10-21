@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Direction in which lists of possible answers should be displayed.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemChoiceListOrientation {
 
-    /**
-     * List choices along the horizontal axis.
-     */
-    @Json(name = "horizontal")
-    HORIZONTAL,
+	/**
+	* List choices along the horizontal axis.
+	*/
+	@Json(name = "horizontal")
+	HORIZONTAL,
 
-    /**
-     * List choices down the vertical axis.
-     */
-    @Json(name = "vertical")
-    VERTICAL,
+	/**
+	* List choices down the vertical axis.
+	*/
+	@Json(name = "vertical")
+	VERTICAL,
 }

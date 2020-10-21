@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * TODO (and should this be required?).
  *
@@ -26,39 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAdverseEventOutcome {
 
-    /**
-     * resolved
-     */
-    @Json(name = "resolved")
-    RESOLVED,
+	/**
+	* resolved
+	*/
+	@Json(name = "resolved")
+	RESOLVED,
 
-    /**
-     * recovering
-     */
-    @Json(name = "recovering")
-    RECOVERING,
+	/**
+	* recovering
+	*/
+	@Json(name = "recovering")
+	RECOVERING,
 
-    /**
-     * ongoing
-     */
-    @Json(name = "ongoing")
-    ONGOING,
+	/**
+	* ongoing
+	*/
+	@Json(name = "ongoing")
+	ONGOING,
 
-    /**
-     * resolvedWithSequelae
-     */
-    @Json(name = "resolvedWithSequelae")
-    RESOLVEDWITHSEQUELAE,
+	/**
+	* resolvedWithSequelae
+	*/
+	@Json(name = "resolvedWithSequelae")
+	RESOLVEDWITHSEQUELAE,
 
-    /**
-     * fatal
-     */
-    @Json(name = "fatal")
-    FATAL,
+	/**
+	* fatal
+	*/
+	@Json(name = "fatal")
+	FATAL,
 
-    /**
-     * unknown
-     */
-    @Json(name = "unknown")
-    UNKNOWN,
+	/**
+	* unknown
+	*/
+	@Json(name = "unknown")
+	UNKNOWN,
 }

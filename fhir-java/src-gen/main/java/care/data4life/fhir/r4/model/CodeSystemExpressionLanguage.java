@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The media type of the expression language.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExpressionLanguage {
 
-    /**
-     * Clinical Quality Language.
-     */
-    @Json(name = "text/cql")
-    TEXT_CQL,
+	/**
+	* Clinical Quality Language.
+	*/
+	@Json(name = "text/cql")
+	TEXT_CQL,
 
-    /**
-     * FHIRPath.
-     */
-    @Json(name = "text/fhirpath")
-    TEXT_FHIRPATH,
+	/**
+	* FHIRPath.
+	*/
+	@Json(name = "text/fhirpath")
+	TEXT_FHIRPATH,
 
-    /**
-     * FHIR's RESTful query syntax - typically independent of base URL.
-     */
-    @Json(name = "application/x-fhir-query")
-    APPLICATION_X_FHIR_QUERY,
+	/**
+	* FHIR's RESTful query syntax - typically independent of base URL.
+	*/
+	@Json(name = "application/x-fhir-query")
+	APPLICATION_X_FHIR_QUERY,
 }

@@ -19,54 +19,53 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This value set defines a set of codes that can be used to indicate dietary preferences or
- * restrictions a patient may have.
+ * This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/diet">Diet</a>
  */
 public enum CodeSystemDiet {
 
-    /**
-     * Food without meat, poultry or seafood.
-     */
-    @Json(name = "vegetarian")
-    VEGETARIAN,
+	/**
+	* Food without meat, poultry or seafood.
+	*/
+	@Json(name = "vegetarian")
+	VEGETARIAN,
 
-    /**
-     * Excludes dairy products.
-     */
-    @Json(name = "dairy-free")
-    DAIRY_FREE,
+	/**
+	* Excludes dairy products.
+	*/
+	@Json(name = "dairy-free")
+	DAIRY_FREE,
 
-    /**
-     * Excludes ingredients containing nuts.
-     */
-    @Json(name = "nut-free")
-    NUT_FREE,
+	/**
+	* Excludes ingredients containing nuts.
+	*/
+	@Json(name = "nut-free")
+	NUT_FREE,
 
-    /**
-     * Excludes ingredients containing gluten.
-     */
-    @Json(name = "gluten-free")
-    GLUTEN_FREE,
+	/**
+	* Excludes ingredients containing gluten.
+	*/
+	@Json(name = "gluten-free")
+	GLUTEN_FREE,
 
-    /**
-     * Food without meat, poultry, seafood, eggs, dairy products and other animal-derived
-     * substances.
-     */
-    @Json(name = "vegan")
-    VEGAN,
+	/**
+	* Food without meat, poultry, seafood, eggs, dairy products and other animal-derived substances.
+	*/
+	@Json(name = "vegan")
+	VEGAN,
 
-    /**
-     * Foods that conform to Islamic law.
-     */
-    @Json(name = "halal")
-    HALAL,
+	/**
+	* Foods that conform to Islamic law.
+	*/
+	@Json(name = "halal")
+	HALAL,
 
-    /**
-     * Foods that conform to Jewish dietary law.
-     */
-    @Json(name = "kosher")
-    KOSHER,
+	/**
+	* Foods that conform to Jewish dietary law.
+	*/
+	@Json(name = "kosher")
+	KOSHER,
 }

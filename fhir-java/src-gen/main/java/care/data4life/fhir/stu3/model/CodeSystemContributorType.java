@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The type of contributor
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContributorType {
 
-    /**
-     * An author of the content of the module
-     */
-    @Json(name = "author")
-    AUTHOR,
+	/**
+	* An author of the content of the module
+	*/
+	@Json(name = "author")
+	AUTHOR,
 
-    /**
-     * An editor of the content of the module
-     */
-    @Json(name = "editor")
-    EDITOR,
+	/**
+	* An editor of the content of the module
+	*/
+	@Json(name = "editor")
+	EDITOR,
 
-    /**
-     * A reviewer of the content of the module
-     */
-    @Json(name = "reviewer")
-    REVIEWER,
+	/**
+	* A reviewer of the content of the module
+	*/
+	@Json(name = "reviewer")
+	REVIEWER,
 
-    /**
-     * An endorser of the content of the module
-     */
-    @Json(name = "endorser")
-    ENDORSER,
+	/**
+	* An endorser of the content of the module
+	*/
+	@Json(name = "endorser")
+	ENDORSER,
 }

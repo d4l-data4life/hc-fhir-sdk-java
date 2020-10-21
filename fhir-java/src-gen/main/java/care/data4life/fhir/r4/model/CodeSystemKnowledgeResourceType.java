@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A list of all the knowledge resource types defined in this version of the FHIR specification.
  *
@@ -26,59 +27,57 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemKnowledgeResourceType {
 
-    /**
-     * The definition of a specific activity to be taken, independent of any particular patient or
-     * context.
-     */
-    @Json(name = "ActivityDefinition")
-    ACTIVITYDEFINITION,
+	/**
+	* The definition of a specific activity to be taken, independent of any particular patient or context.
+	*/
+	@Json(name = "ActivityDefinition")
+	ACTIVITYDEFINITION,
 
-    /**
-     * A set of codes drawn from one or more code systems.
-     */
-    @Json(name = "CodeSystem")
-    CODESYSTEM,
+	/**
+	* A set of codes drawn from one or more code systems.
+	*/
+	@Json(name = "CodeSystem")
+	CODESYSTEM,
 
-    /**
-     * A map from one set of concepts to one or more other concepts.
-     */
-    @Json(name = "ConceptMap")
-    CONCEPTMAP,
+	/**
+	* A map from one set of concepts to one or more other concepts.
+	*/
+	@Json(name = "ConceptMap")
+	CONCEPTMAP,
 
-    /**
-     * Represents a library of quality improvement components.
-     */
-    @Json(name = "Library")
-    LIBRARY,
+	/**
+	* Represents a library of quality improvement components.
+	*/
+	@Json(name = "Library")
+	LIBRARY,
 
-    /**
-     * A quality measure definition.
-     */
-    @Json(name = "Measure")
-    MEASURE,
+	/**
+	* A quality measure definition.
+	*/
+	@Json(name = "Measure")
+	MEASURE,
 
-    /**
-     * The definition of a plan for a series of actions, independent of any specific patient or
-     * context.
-     */
-    @Json(name = "PlanDefinition")
-    PLANDEFINITION,
+	/**
+	* The definition of a plan for a series of actions, independent of any specific patient or context.
+	*/
+	@Json(name = "PlanDefinition")
+	PLANDEFINITION,
 
-    /**
-     * Structural Definition.
-     */
-    @Json(name = "StructureDefinition")
-    STRUCTUREDEFINITION,
+	/**
+	* Structural Definition.
+	*/
+	@Json(name = "StructureDefinition")
+	STRUCTUREDEFINITION,
 
-    /**
-     * A Map of relationships between 2 structures that can be used to transform data.
-     */
-    @Json(name = "StructureMap")
-    STRUCTUREMAP,
+	/**
+	* A Map of relationships between 2 structures that can be used to transform data.
+	*/
+	@Json(name = "StructureMap")
+	STRUCTUREMAP,
 
-    /**
-     * A set of codes drawn from one or more code systems.
-     */
-    @Json(name = "ValueSet")
-    VALUESET,
+	/**
+	* A set of codes drawn from one or more code systems.
+	*/
+	@Json(name = "ValueSet")
+	VALUESET,
 }

@@ -19,25 +19,23 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * Whether the results by exposure is describing the results for the primary exposure of interest
- * (exposure) or the alternative state (exposureAlternative).
+ * Whether the results by exposure is describing the results for the primary exposure of interest (exposure) or the alternative state (exposureAlternative).
  *
  * @see <a href="http://hl7.org/fhir/exposure-state">ExposureState</a>
  */
 public enum CodeSystemExposureState {
 
-    /**
-     * used when the results by exposure is describing the results for the primary exposure of
-     * interest.
-     */
-    @Json(name = "exposure")
-    EXPOSURE,
+	/**
+	* used when the results by exposure is describing the results for the primary exposure of interest.
+	*/
+	@Json(name = "exposure")
+	EXPOSURE,
 
-    /**
-     * used when the results by exposure is describing the results for the alternative exposure
-     * state, control state or comparator state.
-     */
-    @Json(name = "exposure-alternative")
-    EXPOSURE_ALTERNATIVE,
+	/**
+	* used when the results by exposure is describing the results for the alternative exposure state, control state or comparator state.
+	*/
+	@Json(name = "exposure-alternative")
+	EXPOSURE_ALTERNATIVE,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Indicates whether the account is available to be used.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAccountStatus {
 
-    /**
-     * This account is active and may be used.
-     */
-    @Json(name = "active")
-    ACTIVE,
+	/**
+	* This account is active and may be used.
+	*/
+	@Json(name = "active")
+	ACTIVE,
 
-    /**
-     * This account is inactive and should not be used to track financial information.
-     */
-    @Json(name = "inactive")
-    INACTIVE,
+	/**
+	* This account is inactive and should not be used to track financial information.
+	*/
+	@Json(name = "inactive")
+	INACTIVE,
 
-    /**
-     * This instance should not have been part of this patient's medical record.
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* This instance should not have been part of this patient's medical record.
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * MedicationDispense Performer Function Codes
  *
@@ -26,28 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationDispensePerformerFunctionCodes {
 
-    /**
-     * Recorded the details of the request
-     */
-    @Json(name = "dataenterer")
-    DATAENTERER,
+	/**
+	* Recorded the details of the request
+	*/
+	@Json(name = "dataenterer")
+	DATAENTERER,
 
-    /**
-     * Prepared the medication.
-     */
-    @Json(name = "packager")
-    PACKAGER,
+	/**
+	* Prepared the medication.
+	*/
+	@Json(name = "packager")
+	PACKAGER,
 
-    /**
-     * Performed initial quality assurance on the prepared medication
-     */
-    @Json(name = "checker")
-    CHECKER,
+	/**
+	* Performed initial quality assurance on the prepared medication
+	*/
+	@Json(name = "checker")
+	CHECKER,
 
-    /**
-     * Performed the final quality assurance on the prepared medication against the request.
-     * Typically, this is a pharmacist function.
-     */
-    @Json(name = "finalchecker")
-    FINALCHECKER,
+	/**
+	* Performed the final quality assurance on the prepared medication against the request. Typically, this is a pharmacist function.
+	*/
+	@Json(name = "finalchecker")
+	FINALCHECKER,
 }

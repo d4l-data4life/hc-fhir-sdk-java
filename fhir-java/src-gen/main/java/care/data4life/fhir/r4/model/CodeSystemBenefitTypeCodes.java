@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes a smattering of Benefit type codes.
  *
@@ -26,75 +27,75 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemBenefitTypeCodes {
 
-    /**
-     * Maximum benefit allowable.
-     */
-    @Json(name = "benefit")
-    BENEFIT,
+	/**
+	* Maximum benefit allowable.
+	*/
+	@Json(name = "benefit")
+	BENEFIT,
 
-    /**
-     * Cost to be incurred before benefits are applied
-     */
-    @Json(name = "deductible")
-    DEDUCTIBLE,
+	/**
+	* Cost to be incurred before benefits are applied
+	*/
+	@Json(name = "deductible")
+	DEDUCTIBLE,
 
-    /**
-     * Service visit
-     */
-    @Json(name = "visit")
-    VISIT,
+	/**
+	* Service visit
+	*/
+	@Json(name = "visit")
+	VISIT,
 
-    /**
-     * Type of room
-     */
-    @Json(name = "room")
-    ROOM,
+	/**
+	* Type of room
+	*/
+	@Json(name = "room")
+	ROOM,
 
-    /**
-     * Copayment per service
-     */
-    @Json(name = "copay")
-    COPAY,
+	/**
+	* Copayment per service
+	*/
+	@Json(name = "copay")
+	COPAY,
 
-    /**
-     * Copayment percentage per service
-     */
-    @Json(name = "copay-percent")
-    COPAY_PERCENT,
+	/**
+	* Copayment percentage per service
+	*/
+	@Json(name = "copay-percent")
+	COPAY_PERCENT,
 
-    /**
-     * Copayment maximum per service
-     */
-    @Json(name = "copay-maximum")
-    COPAY_MAXIMUM,
+	/**
+	* Copayment maximum per service
+	*/
+	@Json(name = "copay-maximum")
+	COPAY_MAXIMUM,
 
-    /**
-     * Vision Exam
-     */
-    @Json(name = "vision-exam")
-    VISION_EXAM,
+	/**
+	* Vision Exam
+	*/
+	@Json(name = "vision-exam")
+	VISION_EXAM,
 
-    /**
-     * Frames and lenses
-     */
-    @Json(name = "vision-glasses")
-    VISION_GLASSES,
+	/**
+	* Frames and lenses
+	*/
+	@Json(name = "vision-glasses")
+	VISION_GLASSES,
 
-    /**
-     * Contact Lenses
-     */
-    @Json(name = "vision-contacts")
-    VISION_CONTACTS,
+	/**
+	* Contact Lenses
+	*/
+	@Json(name = "vision-contacts")
+	VISION_CONTACTS,
 
-    /**
-     * Medical Primary Health Coverage
-     */
-    @Json(name = "medical-primarycare")
-    MEDICAL_PRIMARYCARE,
+	/**
+	* Medical Primary Health Coverage
+	*/
+	@Json(name = "medical-primarycare")
+	MEDICAL_PRIMARYCARE,
 
-    /**
-     * Pharmacy Dispense Coverage
-     */
-    @Json(name = "pharmacy-dispense")
-    PHARMACY_DISPENSE,
+	/**
+	* Pharmacy Dispense Coverage
+	*/
+	@Json(name = "pharmacy-dispense")
+	PHARMACY_DISPENSE,
 }

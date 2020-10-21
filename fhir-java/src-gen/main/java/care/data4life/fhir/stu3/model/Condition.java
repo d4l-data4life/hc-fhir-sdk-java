@@ -18,238 +18,237 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Condition.java
- * <p>
- * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept
- * that has risen to a level of concern.
+ *
+ * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
- * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
- * 2020-10-15
+ *
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on 2020-10-19
  */
-public class Condition extends DomainResource {
+public class Condition extends DomainResource  {
 
-    public static final String resourceType = "Condition";
-
-    // External Ids for this condition.
+	public static final String resourceType = "Condition";
+  
+	// External Ids for this condition.
     @Json(name = "identifier")
-    @Nullable
-    public List<Identifier> identifier;
-
-    // active | recurrence | inactive | remission | resolved.
+	@Nullable
+	public List<Identifier> identifier;
+  
+	// active | recurrence | inactive | remission | resolved.
     @Json(name = "clinicalStatus")
-    @Nullable
-    public String clinicalStatus;
-
-    // The verification status to support the clinical status of the condition.
+	@Nullable
+	public String clinicalStatus;
+  
+	// The verification status to support the clinical status of the condition.
     @Json(name = "verificationStatus")
-    @Nullable
-    public CodeSystemConditionVerificationStatus verificationStatus;
-
-    // problem-list-item | encounter-diagnosis.
+	@Nullable
+	public CodeSystemConditionVerificationStatus verificationStatus;
+  
+	// problem-list-item | encounter-diagnosis.
     @Json(name = "category")
-    @Nullable
-    public List<CodeableConcept> category;
-
-    // Subjective severity of condition.
+	@Nullable
+	public List<CodeableConcept> category;
+  
+	// Subjective severity of condition.
     @Json(name = "severity")
-    @Nullable
-    public CodeableConcept severity;
-
-    // Identification of the condition, problem or diagnosis.
+	@Nullable
+	public CodeableConcept severity;
+  
+	// Identification of the condition, problem or diagnosis.
     @Json(name = "code")
-    @Nullable
-    public CodeableConcept code;
-
-    // Anatomical location, if relevant.
+	@Nullable
+	public CodeableConcept code;
+  
+	// Anatomical location, if relevant.
     @Json(name = "bodySite")
-    @Nullable
-    public List<CodeableConcept> bodySite;
-
-    // Who has the condition?.
+	@Nullable
+	public List<CodeableConcept> bodySite;
+  
+	// Who has the condition?.
     @Json(name = "subject")
-    public Reference subject;
-
-    // Encounter or episode when condition first asserted.
+	public Reference subject;
+  
+	// Encounter or episode when condition first asserted.
     @Json(name = "context")
-    @Nullable
-    public Reference context;
-
-    // Estimated or actual date,  date-time, or age.
+	@Nullable
+	public Reference context;
+  
+	// Estimated or actual date,  date-time, or age.
     @Json(name = "onsetDateTime")
-    @Nullable
-    public FhirDateTime onsetDateTime;
-
-    // Estimated or actual date,  date-time, or age.
+	@Nullable
+	public FhirDateTime onsetDateTime;
+  
+	// Estimated or actual date,  date-time, or age.
     @Json(name = "onsetAge")
-    @Nullable
-    public Age onsetAge;
-
-    // Estimated or actual date,  date-time, or age.
+	@Nullable
+	public Age onsetAge;
+  
+	// Estimated or actual date,  date-time, or age.
     @Json(name = "onsetPeriod")
-    @Nullable
-    public Period onsetPeriod;
-
-    // Estimated or actual date,  date-time, or age.
+	@Nullable
+	public Period onsetPeriod;
+  
+	// Estimated or actual date,  date-time, or age.
     @Json(name = "onsetRange")
-    @Nullable
-    public Range onsetRange;
-
-    // Estimated or actual date,  date-time, or age.
+	@Nullable
+	public Range onsetRange;
+  
+	// Estimated or actual date,  date-time, or age.
     @Json(name = "onsetString")
-    @Nullable
-    public String onsetString;
-
-    // If/when in resolution/remission.
+	@Nullable
+	public String onsetString;
+  
+	// If/when in resolution/remission.
     @Json(name = "abatementDateTime")
-    @Nullable
-    public FhirDateTime abatementDateTime;
-
-    // If/when in resolution/remission.
+	@Nullable
+	public FhirDateTime abatementDateTime;
+  
+	// If/when in resolution/remission.
     @Json(name = "abatementAge")
-    @Nullable
-    public Age abatementAge;
-
-    // If/when in resolution/remission.
+	@Nullable
+	public Age abatementAge;
+  
+	// If/when in resolution/remission.
     @Json(name = "abatementBoolean")
-    @Nullable
-    public Boolean abatementBoolean;
-
-    // If/when in resolution/remission.
+	@Nullable
+	public Boolean abatementBoolean;
+  
+	// If/when in resolution/remission.
     @Json(name = "abatementPeriod")
-    @Nullable
-    public Period abatementPeriod;
-
-    // If/when in resolution/remission.
+	@Nullable
+	public Period abatementPeriod;
+  
+	// If/when in resolution/remission.
     @Json(name = "abatementRange")
-    @Nullable
-    public Range abatementRange;
-
-    // If/when in resolution/remission.
+	@Nullable
+	public Range abatementRange;
+  
+	// If/when in resolution/remission.
     @Json(name = "abatementString")
-    @Nullable
-    public String abatementString;
-
-    // Date record was believed accurate.
+	@Nullable
+	public String abatementString;
+  
+	// Date record was believed accurate.
     @Json(name = "assertedDate")
-    @Nullable
-    public FhirDateTime assertedDate;
-
-    // Person who asserts this condition.
+	@Nullable
+	public FhirDateTime assertedDate;
+  
+	// Person who asserts this condition.
     @Json(name = "asserter")
-    @Nullable
-    public Reference asserter;
-
-    // Stage/grade, usually assessed formally.
+	@Nullable
+	public Reference asserter;
+  
+	// Stage/grade, usually assessed formally.
     @Json(name = "stage")
-    @Nullable
-    public ConditionStage stage;
-
-    // Supporting evidence.
+	@Nullable
+	public ConditionStage stage;
+  
+	// Supporting evidence.
     @Json(name = "evidence")
-    @Nullable
-    public List<ConditionEvidence> evidence;
-
-    // Additional information about the Condition.
+	@Nullable
+	public List<ConditionEvidence> evidence;
+  
+	// Additional information about the Condition.
     @Json(name = "note")
-    @Nullable
-    public List<Annotation> note;
+	@Nullable
+	public List<Annotation> note;
+
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param subject Reference
+	 *
+	 */
+	public Condition(Reference subject) {
+		this.subject = subject;
+	}@Override
+	public String getResourceType() {
+		return Condition.resourceType;
+	}
 
 
-    /**
-     * Constructor for all required properties.
-     *
-     * @param subject Reference
-     */
-    public Condition(Reference subject) {
-        this.subject = subject;
-    }
-
-    @Override
-    public String getResourceType() {
-        return Condition.resourceType;
-    }
 
 
-    /**
-     * Condition.java
-     * <p>
-     * Supporting Evidence / manifestations that are the basis on which this condition is suspected
-     * or confirmed.
-     *
-     * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
-     * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
-     * 2020-10-15
-     */
-    public static class ConditionEvidence extends BackboneElement {
+/**
+ * Condition.java
+ *
+ * Supporting Evidence / manifestations that are the basis on which this condition is suspected or confirmed.
+ *
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
+ *
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on 2020-10-19
+ */
+public static class ConditionEvidence extends BackboneElement  {
 
-        public static final String resourceType = "ConditionEvidence";
+	public static final String resourceType = "ConditionEvidence";
+  
+	// Manifestation/symptom.
+    @Json(name = "code")
+	@Nullable
+	public List<CodeableConcept> code;
+  
+	// Supporting information found elsewhere.
+    @Json(name = "detail")
+	@Nullable
+	public List<Reference> detail;
 
-        // Manifestation/symptom.
-        @Json(name = "code")
-        @Nullable
-        public List<CodeableConcept> code;
-
-        // Supporting information found elsewhere.
-        @Json(name = "detail")
-        @Nullable
-        public List<Reference> detail;
-
-
-        public ConditionEvidence() {
-        }
-
-        @Override
-        public String getResourceType() {
-            return ConditionEvidence.resourceType;
-        }
+    
+	public ConditionEvidence() {
+	}
+	@Override
+	public String getResourceType() {
+		return ConditionEvidence.resourceType;
+	}
 
 
-    }
+}
 
 
-    /**
-     * Condition.java
-     * <p>
-     * Clinical stage or grade of a condition. May include formal severity assessments.
-     *
-     * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
-     * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
-     * 2020-10-15
-     */
-    public static class ConditionStage extends BackboneElement {
 
-        public static final String resourceType = "ConditionStage";
+/**
+ * Condition.java
+ *
+ * Clinical stage or grade of a condition. May include formal severity assessments.
+ *
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
+ *
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on 2020-10-19
+ */
+public static class ConditionStage extends BackboneElement  {
 
-        // Simple summary (disease specific).
-        @Json(name = "summary")
-        @Nullable
-        public CodeableConcept summary;
+	public static final String resourceType = "ConditionStage";
+  
+	// Simple summary (disease specific).
+    @Json(name = "summary")
+	@Nullable
+	public CodeableConcept summary;
+  
+	// Formal record of assessment.
+    @Json(name = "assessment")
+	@Nullable
+	public List<Reference> assessment;
 
-        // Formal record of assessment.
-        @Json(name = "assessment")
-        @Nullable
-        public List<Reference> assessment;
+    
+	public ConditionStage() {
+	}
+	@Override
+	public String getResourceType() {
+		return ConditionStage.resourceType;
+	}
 
 
-        public ConditionStage() {
-        }
-
-        @Override
-        public String getResourceType() {
-            return ConditionStage.resourceType;
-        }
-
-
-    }
+}
 
 
 }

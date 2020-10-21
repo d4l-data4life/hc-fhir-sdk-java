@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Codes that convey the current status of the research study.
  *
@@ -26,76 +27,70 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemResearchStudyStatus {
 
-    /**
-     * Study is opened for accrual.
-     */
-    @Json(name = "active")
-    ACTIVE,
+	/**
+	* Study is opened for accrual.
+	*/
+	@Json(name = "active")
+	ACTIVE,
 
-    /**
-     * Study is completed prematurely and will not resume; patients are no longer examined nor
-     * treated.
-     */
-    @Json(name = "administratively-completed")
-    ADMINISTRATIVELY_COMPLETED,
+	/**
+	* Study is completed prematurely and will not resume; patients are no longer examined nor treated.
+	*/
+	@Json(name = "administratively-completed")
+	ADMINISTRATIVELY_COMPLETED,
 
-    /**
-     * Protocol is approved by the review board.
-     */
-    @Json(name = "approved")
-    APPROVED,
+	/**
+	* Protocol is approved by the review board.
+	*/
+	@Json(name = "approved")
+	APPROVED,
 
-    /**
-     * Study is closed for accrual; patients can be examined and treated.
-     */
-    @Json(name = "closed-to-accrual")
-    CLOSED_TO_ACCRUAL,
+	/**
+	* Study is closed for accrual; patients can be examined and treated.
+	*/
+	@Json(name = "closed-to-accrual")
+	CLOSED_TO_ACCRUAL,
 
-    /**
-     * Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all
-     * study subjects have completed treatment or intervention but are still being followed
-     * according to the primary objective of the study.
-     */
-    @Json(name = "closed-to-accrual-and-intervention")
-    CLOSED_TO_ACCRUAL_AND_INTERVENTION,
+	/**
+	* Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have completed treatment or intervention but are still being followed according to the primary objective of the study.
+	*/
+	@Json(name = "closed-to-accrual-and-intervention")
+	CLOSED_TO_ACCRUAL_AND_INTERVENTION,
 
-    /**
-     * Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all
-     * study subjects have completed treatment or intervention but are still being followed
-     * according to the primary objective of the study.
-     */
-    @Json(name = "completed")
-    COMPLETED,
+	/**
+	* Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have completed treatment
+or intervention but are still being followed according to the primary objective of the study.
+	*/
+	@Json(name = "completed")
+	COMPLETED,
 
-    /**
-     * Protocol was disapproved by the review board.
-     */
-    @Json(name = "disapproved")
-    DISAPPROVED,
+	/**
+	* Protocol was disapproved by the review board.
+	*/
+	@Json(name = "disapproved")
+	DISAPPROVED,
 
-    /**
-     * Protocol is submitted to the review board for approval.
-     */
-    @Json(name = "in-review")
-    IN_REVIEW,
+	/**
+	* Protocol is submitted to the review board for approval.
+	*/
+	@Json(name = "in-review")
+	IN_REVIEW,
 
-    /**
-     * Study is temporarily closed for accrual; can be potentially resumed in the future; patients
-     * can be examined and treated.
-     */
-    @Json(name = "temporarily-closed-to-accrual")
-    TEMPORARILY_CLOSED_TO_ACCRUAL,
+	/**
+	* Study is temporarily closed for accrual; can be potentially resumed in the future; patients can be examined and treated.
+	*/
+	@Json(name = "temporarily-closed-to-accrual")
+	TEMPORARILY_CLOSED_TO_ACCRUAL,
 
-    /**
-     * Study is temporarily closed for accrual and intervention and potentially can be resumed in
-     * the future.
-     */
-    @Json(name = "temporarily-closed-to-accrual-and-intervention")
-    TEMPORARILY_CLOSED_TO_ACCRUAL_AND_INTERVENTION,
+	/**
+	* Study is temporarily closed for accrual and intervention and potentially can be resumed in the future.
+	*/
+	@Json(name = "temporarily-closed-to-accrual-and-intervention")
+	TEMPORARILY_CLOSED_TO_ACCRUAL_AND_INTERVENTION,
 
-    /**
-     * Protocol was withdrawn by the lead organization.
-     */
-    @Json(name = "withdrawn")
-    WITHDRAWN,
+	/**
+	* Protocol was withdrawn by the lead organization.
+	*/
+	@Json(name = "withdrawn")
+	WITHDRAWN,
 }

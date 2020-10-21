@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A list of all the request resource types defined in this version of the FHIR specification.
  *
@@ -26,96 +27,93 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemRequestResourceType {
 
-    /**
-     * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or
-     * device(s) for a specific date/time. This may result in one or more Encounter(s).
-     */
-    @Json(name = "Appointment")
-    APPOINTMENT,
+	/**
+	* A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
+	*/
+	@Json(name = "Appointment")
+	APPOINTMENT,
 
-    /**
-     * A reply to an appointment request for a patient and/or practitioner(s), such as a
-     * confirmation or rejection.
-     */
-    @Json(name = "AppointmentResponse")
-    APPOINTMENTRESPONSE,
+	/**
+	* A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
+	*/
+	@Json(name = "AppointmentResponse")
+	APPOINTMENTRESPONSE,
 
-    /**
-     * Healthcare plan for patient or group.
-     */
-    @Json(name = "CarePlan")
-    CAREPLAN,
+	/**
+	* Healthcare plan for patient or group.
+	*/
+	@Json(name = "CarePlan")
+	CAREPLAN,
 
-    /**
-     * Claim, Pre-determination or Pre-authorization.
-     */
-    @Json(name = "Claim")
-    CLAIM,
+	/**
+	* Claim, Pre-determination or Pre-authorization.
+	*/
+	@Json(name = "Claim")
+	CLAIM,
 
-    /**
-     * A request for information to be sent to a receiver.
-     */
-    @Json(name = "CommunicationRequest")
-    COMMUNICATIONREQUEST,
+	/**
+	* A request for information to be sent to a receiver.
+	*/
+	@Json(name = "CommunicationRequest")
+	COMMUNICATIONREQUEST,
 
-    /**
-     * Legal Agreement.
-     */
-    @Json(name = "Contract")
-    CONTRACT,
+	/**
+	* Legal Agreement.
+	*/
+	@Json(name = "Contract")
+	CONTRACT,
 
-    /**
-     * Medical device request.
-     */
-    @Json(name = "DeviceRequest")
-    DEVICEREQUEST,
+	/**
+	* Medical device request.
+	*/
+	@Json(name = "DeviceRequest")
+	DEVICEREQUEST,
 
-    /**
-     * Enrollment request.
-     */
-    @Json(name = "EnrollmentRequest")
-    ENROLLMENTREQUEST,
+	/**
+	* Enrollment request.
+	*/
+	@Json(name = "EnrollmentRequest")
+	ENROLLMENTREQUEST,
 
-    /**
-     * Guidance or advice relating to an immunization.
-     */
-    @Json(name = "ImmunizationRecommendation")
-    IMMUNIZATIONRECOMMENDATION,
+	/**
+	* Guidance or advice relating to an immunization.
+	*/
+	@Json(name = "ImmunizationRecommendation")
+	IMMUNIZATIONRECOMMENDATION,
 
-    /**
-     * Ordering of medication for patient or group.
-     */
-    @Json(name = "MedicationRequest")
-    MEDICATIONREQUEST,
+	/**
+	* Ordering of medication for patient or group.
+	*/
+	@Json(name = "MedicationRequest")
+	MEDICATIONREQUEST,
 
-    /**
-     * Diet, formula or nutritional supplement request.
-     */
-    @Json(name = "NutritionOrder")
-    NUTRITIONORDER,
+	/**
+	* Diet, formula or nutritional supplement request.
+	*/
+	@Json(name = "NutritionOrder")
+	NUTRITIONORDER,
 
-    /**
-     * A record of a request for service such as diagnostic investigations, treatments, or
-     * operations to be performed.
-     */
-    @Json(name = "ServiceRequest")
-    SERVICEREQUEST,
+	/**
+	* A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
+	*/
+	@Json(name = "ServiceRequest")
+	SERVICEREQUEST,
 
-    /**
-     * Request for a medication, substance or device.
-     */
-    @Json(name = "SupplyRequest")
-    SUPPLYREQUEST,
+	/**
+	* Request for a medication, substance or device.
+	*/
+	@Json(name = "SupplyRequest")
+	SUPPLYREQUEST,
 
-    /**
-     * A task to be performed.
-     */
-    @Json(name = "Task")
-    TASK,
+	/**
+	* A task to be performed.
+	*/
+	@Json(name = "Task")
+	TASK,
 
-    /**
-     * Prescription for vision correction products for a patient.
-     */
-    @Json(name = "VisionPrescription")
-    VISIONPRESCRIPTION,
+	/**
+	* Prescription for vision correction products for a patient.
+	*/
+	@Json(name = "VisionPrescription")
+	VISIONPRESCRIPTION,
 }

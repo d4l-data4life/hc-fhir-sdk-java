@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Defines expectations around whether an action or action group is required.
  *
@@ -26,24 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemActionRequiredBehavior {
 
-    /**
-     * An action with this behavior must be included in the actions processed by the end user; the
-     * end user SHALL NOT choose not to include this action.
-     */
-    @Json(name = "must")
-    MUST,
+	/**
+	* An action with this behavior must be included in the actions processed by the end user; the end user SHALL NOT choose not to include this action.
+	*/
+	@Json(name = "must")
+	MUST,
 
-    /**
-     * An action with this behavior may be included in the set of actions processed by the end
-     * user.
-     */
-    @Json(name = "could")
-    COULD,
+	/**
+	* An action with this behavior may be included in the set of actions processed by the end user.
+	*/
+	@Json(name = "could")
+	COULD,
 
-    /**
-     * An action with this behavior must be included in the set of actions processed by the end
-     * user, unless the end user provides documentation as to why the action was not included.
-     */
-    @Json(name = "must-unless-documented")
-    MUST_UNLESS_DOCUMENTED,
+	/**
+	* An action with this behavior must be included in the set of actions processed by the end user, unless the end user provides documentation as to why the action was not included.
+	*/
+	@Json(name = "must-unless-documented")
+	MUST_UNLESS_DOCUMENTED,
 }

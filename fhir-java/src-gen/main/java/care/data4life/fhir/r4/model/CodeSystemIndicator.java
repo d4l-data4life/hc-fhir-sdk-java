@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set captures the set of indicator codes defined by the CDS Hooks specification.
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemIndicator {
 
-    /**
-     * info
-     */
-    @Json(name = "info")
-    INFO,
+	/**
+	* info
+	*/
+	@Json(name = "info")
+	INFO,
 
-    /**
-     * warning
-     */
-    @Json(name = "warning")
-    WARNING,
+	/**
+	* warning
+	*/
+	@Json(name = "warning")
+	WARNING,
 
-    /**
-     * critical
-     */
-    @Json(name = "critical")
-    CRITICAL,
+	/**
+	* critical
+	*/
+	@Json(name = "critical")
+	CRITICAL,
 }

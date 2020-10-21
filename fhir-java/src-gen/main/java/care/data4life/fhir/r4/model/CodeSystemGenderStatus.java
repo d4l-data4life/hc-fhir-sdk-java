@@ -19,29 +19,29 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This example value set defines a set of codes that can be used to indicate the current state of
- * the animal's reproductive organs.
+ * This example value set defines a set of codes that can be used to indicate the current state of the animal's reproductive organs.
  *
  * @see <a href="http://hl7.org/fhir/animal-genderstatus">GenderStatus</a>
  */
 public enum CodeSystemGenderStatus {
 
-    /**
-     * The animal has been sterilized, castrated or otherwise made infertile.
-     */
-    @Json(name = "neutered")
-    NEUTERED,
+	/**
+	* The animal has been sterilized, castrated or otherwise made infertile.
+	*/
+	@Json(name = "neutered")
+	NEUTERED,
 
-    /**
-     * The animal's reproductive organs are intact.
-     */
-    @Json(name = "intact")
-    INTACT,
+	/**
+	* The animal's reproductive organs are intact.
+	*/
+	@Json(name = "intact")
+	INTACT,
 
-    /**
-     * Unable to determine whether the animal has been neutered.
-     */
-    @Json(name = "unknown")
-    UNKNOWN,
+	/**
+	* Unable to determine whether the animal has been neutered.
+	*/
+	@Json(name = "unknown")
+	UNKNOWN,
 }

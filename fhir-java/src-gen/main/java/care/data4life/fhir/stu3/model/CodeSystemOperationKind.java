@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Whether an operation is a normal operation or a query.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemOperationKind {
 
-    /**
-     * This operation is invoked as an operation.
-     */
-    @Json(name = "operation")
-    OPERATION,
+	/**
+	* This operation is invoked as an operation.
+	*/
+	@Json(name = "operation")
+	OPERATION,
 
-    /**
-     * This operation is a named query, invoked using the search mechanism.
-     */
-    @Json(name = "query")
-    QUERY,
+	/**
+	* This operation is a named query, invoked using the search mechanism.
+	*/
+	@Json(name = "query")
+	QUERY,
 }

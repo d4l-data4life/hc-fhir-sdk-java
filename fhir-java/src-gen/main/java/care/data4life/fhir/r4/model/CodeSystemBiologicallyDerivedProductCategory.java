@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Biologically Derived Product Category.
  *
@@ -26,34 +27,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemBiologicallyDerivedProductCategory {
 
-    /**
-     * A collection of tissues joined in a structural unit to serve a common function.
-     */
-    @Json(name = "organ")
-    ORGAN,
+	/**
+	* A collection of tissues joined in a structural unit to serve a common function.
+	*/
+	@Json(name = "organ")
+	ORGAN,
 
-    /**
-     * An ensemble of similar cells and their extracellular matrix from the same origin that
-     * together carry out a specific function.
-     */
-    @Json(name = "tissue")
-    TISSUE,
+	/**
+	* An ensemble of similar cells and their extracellular matrix from the same origin that together carry out a specific function.
+	*/
+	@Json(name = "tissue")
+	TISSUE,
 
-    /**
-     * Body fluid.
-     */
-    @Json(name = "fluid")
-    FLUID,
+	/**
+	* Body fluid.
+	*/
+	@Json(name = "fluid")
+	FLUID,
 
-    /**
-     * Collection of cells.
-     */
-    @Json(name = "cells")
-    CELLS,
+	/**
+	* Collection of cells.
+	*/
+	@Json(name = "cells")
+	CELLS,
 
-    /**
-     * Biological agent of unspecified type.
-     */
-    @Json(name = "biologicalAgent")
-    BIOLOGICALAGENT,
+	/**
+	* Biological agent of unspecified type.
+	*/
+	@Json(name = "biologicalAgent")
+	BIOLOGICALAGENT,
 }

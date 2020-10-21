@@ -19,45 +19,41 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * The value set to instantiate this attribute should be drawn from a terminologically robust code
- * system that consists of or contains concepts to support describing the source of the data when
- * the report of the immunization event is not based on information from the person, entity or
- * organization who administered the vaccine. This value set is provided as a suggestive example.
+ * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the data when the report of the immunization event is not based on information from the person, entity or organization who administered the vaccine. This value set is provided as a suggestive example.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/immunization-origin">ImmunizationOriginCodes</a>
  */
 public enum CodeSystemImmunizationOriginCodes {
 
-    /**
-     * The data for the immunization event originated with another provider.
-     */
-    @Json(name = "provider")
-    PROVIDER,
+	/**
+	* The data for the immunization event originated with another provider.
+	*/
+	@Json(name = "provider")
+	PROVIDER,
 
-    /**
-     * The data for the immunization event originated with a written record for the patient.
-     */
-    @Json(name = "record")
-    RECORD,
+	/**
+	* The data for the immunization event originated with a written record for the patient.
+	*/
+	@Json(name = "record")
+	RECORD,
 
-    /**
-     * The data for the immunization event originated from the recollection of the patient or
-     * parent/guardian of the patient.
-     */
-    @Json(name = "recall")
-    RECALL,
+	/**
+	* The data for the immunization event originated from the recollection of the patient or parent/guardian of the patient.
+	*/
+	@Json(name = "recall")
+	RECALL,
 
-    /**
-     * The data for the immunization event originated with a school record for the patient.
-     */
-    @Json(name = "school")
-    SCHOOL,
+	/**
+	* The data for the immunization event originated with a school record for the patient.
+	*/
+	@Json(name = "school")
+	SCHOOL,
 
-    /**
-     * The data for the immunization event originated with an immunization information system (IIS)
-     * or registry operating within the jurisdiction.
-     */
-    @Json(name = "jurisdiction")
-    JURISDICTION,
+	/**
+	* The data for the immunization event originated with an immunization information system (IIS) or registry operating within the jurisdiction.
+	*/
+	@Json(name = "jurisdiction")
+	JURISDICTION,
 }

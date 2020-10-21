@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * How a resource reference is interpreted when testing consent restrictions
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConsentDataMeaning {
 
-    /**
-     * The consent applies directly to the instance of the resource
-     */
-    @Json(name = "instance")
-    INSTANCE,
+	/**
+	* The consent applies directly to the instance of the resource
+	*/
+	@Json(name = "instance")
+	INSTANCE,
 
-    /**
-     * The consent applies directly to the instance of the resource and instances it refers to
-     */
-    @Json(name = "related")
-    RELATED,
+	/**
+	* The consent applies directly to the instance of the resource and instances it refers to
+	*/
+	@Json(name = "related")
+	RELATED,
 
-    /**
-     * The consent applies directly to the instance of the resource and instances that refer to it
-     */
-    @Json(name = "dependents")
-    DEPENDENTS,
+	/**
+	* The consent applies directly to the instance of the resource and instances that refer to it
+	*/
+	@Json(name = "dependents")
+	DEPENDENTS,
 
-    /**
-     * The consent applies to instances of resources that are authored by
-     */
-    @Json(name = "authoredby")
-    AUTHOREDBY,
+	/**
+	* The consent applies to instances of resources that are authored by
+	*/
+	@Json(name = "authoredby")
+	AUTHOREDBY,
 }

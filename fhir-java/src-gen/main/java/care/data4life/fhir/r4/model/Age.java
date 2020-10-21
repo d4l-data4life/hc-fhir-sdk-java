@@ -16,27 +16,37 @@
 
 package care.data4life.fhir.r4.model;
 
+import com.squareup.moshi.Json;
+
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
+import javax.annotation.Nullable;
+
 /**
  * Age.java
- * <p>
- * A duration of time during which an organism (or a process) has existed
  *
+ * A duration of time during which an organism (or a process) has existed
+ * 
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Age">Age</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Age) on 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Age) on 2020-10-19
  */
-public class Age extends Quantity {
+public class Age extends Quantity  {
 
-    public static final String resourceType = "Age";
+	public static final String resourceType = "Age";
 
+    
+	public Age() {
+	}
+	@Override
+	public String getResourceType() {
+		return Age.resourceType;
+	}
 
-    public Age() {
-    }
-
-    @Override
-    public String getResourceType() {
-        return Age.resourceType;
-    }
 
 
 }

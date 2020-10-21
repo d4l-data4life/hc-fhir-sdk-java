@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes Coverage Class codes.
  *
@@ -26,69 +27,69 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCoverageClassCodes {
 
-    /**
-     * An employee group
-     */
-    @Json(name = "group")
-    GROUP,
+	/**
+	* An employee group
+	*/
+	@Json(name = "group")
+	GROUP,
 
-    /**
-     * A sub-group of an employee group
-     */
-    @Json(name = "subgroup")
-    SUBGROUP,
+	/**
+	* A sub-group of an employee group
+	*/
+	@Json(name = "subgroup")
+	SUBGROUP,
 
-    /**
-     * A specific suite of benefits.
-     */
-    @Json(name = "plan")
-    PLAN,
+	/**
+	* A specific suite of benefits.
+	*/
+	@Json(name = "plan")
+	PLAN,
 
-    /**
-     * A subset of a specific suite of benefits.
-     */
-    @Json(name = "subplan")
-    SUBPLAN,
+	/**
+	* A subset of a specific suite of benefits.
+	*/
+	@Json(name = "subplan")
+	SUBPLAN,
 
-    /**
-     * A class of benefits.
-     */
-    @Json(name = "class")
-    CLASS,
+	/**
+	* A class of benefits.
+	*/
+	@Json(name = "class")
+	CLASS,
 
-    /**
-     * A subset of a class of benefits.
-     */
-    @Json(name = "subclass")
-    SUBCLASS,
+	/**
+	* A subset of a class of benefits.
+	*/
+	@Json(name = "subclass")
+	SUBCLASS,
 
-    /**
-     * A sequence number associated with a short-term continuance of the coverage.
-     */
-    @Json(name = "sequence")
-    SEQUENCE,
+	/**
+	* A sequence number associated with a short-term continuance of the coverage.
+	*/
+	@Json(name = "sequence")
+	SEQUENCE,
 
-    /**
-     * Pharmacy benefit manager's Business Identification Number.
-     */
-    @Json(name = "rxbin")
-    RXBIN,
+	/**
+	* Pharmacy benefit manager's Business Identification Number.
+	*/
+	@Json(name = "rxbin")
+	RXBIN,
 
-    /**
-     * A Pharmacy Benefit Manager specified Processor Control Number.
-     */
-    @Json(name = "rxpcn")
-    RXPCN,
+	/**
+	* A Pharmacy Benefit Manager specified Processor Control Number.
+	*/
+	@Json(name = "rxpcn")
+	RXPCN,
 
-    /**
-     * A Pharmacy Benefit Manager specified Member ID.
-     */
-    @Json(name = "rxid")
-    RXID,
+	/**
+	* A Pharmacy Benefit Manager specified Member ID.
+	*/
+	@Json(name = "rxid")
+	RXID,
 
-    /**
-     * A Pharmacy Benefit Manager specified Group number.
-     */
-    @Json(name = "rxgroup")
-    RXGROUP,
+	/**
+	* A Pharmacy Benefit Manager specified Group number.
+	*/
+	@Json(name = "rxgroup")
+	RXGROUP,
 }

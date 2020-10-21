@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A list of all the event resource types defined in this version of the FHIR specification.
  *
@@ -26,214 +27,207 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemEventResourceType {
 
-    /**
-     * Item containing charge code(s) associated with the provision of healthcare provider
-     * products.
-     */
-    @Json(name = "ChargeItem")
-    CHARGEITEM,
+	/**
+	* Item containing charge code(s) associated with the provision of healthcare provider products.
+	*/
+	@Json(name = "ChargeItem")
+	CHARGEITEM,
 
-    /**
-     * Remittance resource.
-     */
-    @Json(name = "ClaimResponse")
-    CLAIMRESPONSE,
+	/**
+	* Remittance resource.
+	*/
+	@Json(name = "ClaimResponse")
+	CLAIMRESPONSE,
 
-    /**
-     * A clinical assessment performed when planning treatments and management strategies for a
-     * patient.
-     */
-    @Json(name = "ClinicalImpression")
-    CLINICALIMPRESSION,
+	/**
+	* A clinical assessment performed when planning treatments and management strategies for a patient.
+	*/
+	@Json(name = "ClinicalImpression")
+	CLINICALIMPRESSION,
 
-    /**
-     * A record of information transmitted from a sender to a receiver.
-     */
-    @Json(name = "Communication")
-    COMMUNICATION,
+	/**
+	* A record of information transmitted from a sender to a receiver.
+	*/
+	@Json(name = "Communication")
+	COMMUNICATION,
 
-    /**
-     * A set of resources composed into a single coherent clinical statement with clinical
-     * attestation.
-     */
-    @Json(name = "Composition")
-    COMPOSITION,
+	/**
+	* A set of resources composed into a single coherent clinical statement with clinical attestation.
+	*/
+	@Json(name = "Composition")
+	COMPOSITION,
 
-    /**
-     * Detailed information about conditions, problems or diagnoses.
-     */
-    @Json(name = "Condition")
-    CONDITION,
+	/**
+	* Detailed information about conditions, problems or diagnoses.
+	*/
+	@Json(name = "Condition")
+	CONDITION,
 
-    /**
-     * A healthcare consumer's policy choices to permits or denies recipients or roles to perform
-     * actions for specific purposes and periods of time.
-     */
-    @Json(name = "Consent")
-    CONSENT,
+	/**
+	* A healthcare consumer's policy choices to permits or denies recipients or roles to perform actions for specific purposes and periods of time.
+	*/
+	@Json(name = "Consent")
+	CONSENT,
 
-    /**
-     * Insurance or medical plan or a payment agreement.
-     */
-    @Json(name = "Coverage")
-    COVERAGE,
+	/**
+	* Insurance or medical plan or a payment agreement.
+	*/
+	@Json(name = "Coverage")
+	COVERAGE,
 
-    /**
-     * Record of use of a device.
-     */
-    @Json(name = "DeviceUseStatement")
-    DEVICEUSESTATEMENT,
+	/**
+	* Record of use of a device.
+	*/
+	@Json(name = "DeviceUseStatement")
+	DEVICEUSESTATEMENT,
 
-    /**
-     * A Diagnostic report - a combination of request information, atomic results, images,
-     * interpretation, as well as formatted reports.
-     */
-    @Json(name = "DiagnosticReport")
-    DIAGNOSTICREPORT,
+	/**
+	* A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports.
+	*/
+	@Json(name = "DiagnosticReport")
+	DIAGNOSTICREPORT,
 
-    /**
-     * A list that defines a set of documents.
-     */
-    @Json(name = "DocumentManifest")
-    DOCUMENTMANIFEST,
+	/**
+	* A list that defines a set of documents.
+	*/
+	@Json(name = "DocumentManifest")
+	DOCUMENTMANIFEST,
 
-    /**
-     * A reference to a document.
-     */
-    @Json(name = "DocumentReference")
-    DOCUMENTREFERENCE,
+	/**
+	* A reference to a document.
+	*/
+	@Json(name = "DocumentReference")
+	DOCUMENTREFERENCE,
 
-    /**
-     * An interaction during which services are provided to the patient.
-     */
-    @Json(name = "Encounter")
-    ENCOUNTER,
+	/**
+	* An interaction during which services are provided to the patient.
+	*/
+	@Json(name = "Encounter")
+	ENCOUNTER,
 
-    /**
-     * EnrollmentResponse resource.
-     */
-    @Json(name = "EnrollmentResponse")
-    ENROLLMENTRESPONSE,
+	/**
+	* EnrollmentResponse resource.
+	*/
+	@Json(name = "EnrollmentResponse")
+	ENROLLMENTRESPONSE,
 
-    /**
-     * An association of a Patient with an Organization and  Healthcare Provider(s) for a period of
-     * time that the Organization assumes some level of responsibility.
-     */
-    @Json(name = "EpisodeOfCare")
-    EPISODEOFCARE,
+	/**
+	* An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility.
+	*/
+	@Json(name = "EpisodeOfCare")
+	EPISODEOFCARE,
 
-    /**
-     * Explanation of Benefit resource.
-     */
-    @Json(name = "ExplanationOfBenefit")
-    EXPLANATIONOFBENEFIT,
+	/**
+	* Explanation of Benefit resource.
+	*/
+	@Json(name = "ExplanationOfBenefit")
+	EXPLANATIONOFBENEFIT,
 
-    /**
-     * Information about patient's relatives, relevant for patient.
-     */
-    @Json(name = "FamilyMemberHistory")
-    FAMILYMEMBERHISTORY,
+	/**
+	* Information about patient's relatives, relevant for patient.
+	*/
+	@Json(name = "FamilyMemberHistory")
+	FAMILYMEMBERHISTORY,
 
-    /**
-     * The formal response to a guidance request.
-     */
-    @Json(name = "GuidanceResponse")
-    GUIDANCERESPONSE,
+	/**
+	* The formal response to a guidance request.
+	*/
+	@Json(name = "GuidanceResponse")
+	GUIDANCERESPONSE,
 
-    /**
-     * A set of images produced in single study (one or more series of references images).
-     */
-    @Json(name = "ImagingStudy")
-    IMAGINGSTUDY,
+	/**
+	* A set of images produced in single study (one or more series of references images).
+	*/
+	@Json(name = "ImagingStudy")
+	IMAGINGSTUDY,
 
-    /**
-     * Immunization event information.
-     */
-    @Json(name = "Immunization")
-    IMMUNIZATION,
+	/**
+	* Immunization event information.
+	*/
+	@Json(name = "Immunization")
+	IMMUNIZATION,
 
-    /**
-     * Results of a measure evaluation.
-     */
-    @Json(name = "MeasureReport")
-    MEASUREREPORT,
+	/**
+	* Results of a measure evaluation.
+	*/
+	@Json(name = "MeasureReport")
+	MEASUREREPORT,
 
-    /**
-     * A photo, video, or audio recording acquired or used in healthcare. The actual content may be
-     * inline or provided by direct reference.
-     */
-    @Json(name = "Media")
-    MEDIA,
+	/**
+	* A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.
+	*/
+	@Json(name = "Media")
+	MEDIA,
 
-    /**
-     * Administration of medication to a patient.
-     */
-    @Json(name = "MedicationAdministration")
-    MEDICATIONADMINISTRATION,
+	/**
+	* Administration of medication to a patient.
+	*/
+	@Json(name = "MedicationAdministration")
+	MEDICATIONADMINISTRATION,
 
-    /**
-     * Dispensing a medication to a named patient.
-     */
-    @Json(name = "MedicationDispense")
-    MEDICATIONDISPENSE,
+	/**
+	* Dispensing a medication to a named patient.
+	*/
+	@Json(name = "MedicationDispense")
+	MEDICATIONDISPENSE,
 
-    /**
-     * Record of medication being taken by a patient.
-     */
-    @Json(name = "MedicationStatement")
-    MEDICATIONSTATEMENT,
+	/**
+	* Record of medication being taken by a patient.
+	*/
+	@Json(name = "MedicationStatement")
+	MEDICATIONSTATEMENT,
 
-    /**
-     * Measurements and simple assertions.
-     */
-    @Json(name = "Observation")
-    OBSERVATION,
+	/**
+	* Measurements and simple assertions.
+	*/
+	@Json(name = "Observation")
+	OBSERVATION,
 
-    /**
-     * PaymentNotice request.
-     */
-    @Json(name = "PaymentNotice")
-    PAYMENTNOTICE,
+	/**
+	* PaymentNotice request.
+	*/
+	@Json(name = "PaymentNotice")
+	PAYMENTNOTICE,
 
-    /**
-     * PaymentReconciliation resource.
-     */
-    @Json(name = "PaymentReconciliation")
-    PAYMENTRECONCILIATION,
+	/**
+	* PaymentReconciliation resource.
+	*/
+	@Json(name = "PaymentReconciliation")
+	PAYMENTRECONCILIATION,
 
-    /**
-     * An action that is being or was performed on a patient.
-     */
-    @Json(name = "Procedure")
-    PROCEDURE,
+	/**
+	* An action that is being or was performed on a patient.
+	*/
+	@Json(name = "Procedure")
+	PROCEDURE,
 
-    /**
-     * ProcessResponse resource.
-     */
-    @Json(name = "ProcessResponse")
-    PROCESSRESPONSE,
+	/**
+	* ProcessResponse resource.
+	*/
+	@Json(name = "ProcessResponse")
+	PROCESSRESPONSE,
 
-    /**
-     * A structured set of questions and their answers.
-     */
-    @Json(name = "QuestionnaireResponse")
-    QUESTIONNAIRERESPONSE,
+	/**
+	* A structured set of questions and their answers.
+	*/
+	@Json(name = "QuestionnaireResponse")
+	QUESTIONNAIRERESPONSE,
 
-    /**
-     * Potential outcomes for a subject with likelihood.
-     */
-    @Json(name = "RiskAssessment")
-    RISKASSESSMENT,
+	/**
+	* Potential outcomes for a subject with likelihood.
+	*/
+	@Json(name = "RiskAssessment")
+	RISKASSESSMENT,
 
-    /**
-     * Delivery of bulk Supplies.
-     */
-    @Json(name = "SupplyDelivery")
-    SUPPLYDELIVERY,
+	/**
+	* Delivery of bulk Supplies.
+	*/
+	@Json(name = "SupplyDelivery")
+	SUPPLYDELIVERY,
 
-    /**
-     * A task to be performed.
-     */
-    @Json(name = "Task")
-    TASK,
+	/**
+	* A task to be performed.
+	*/
+	@Json(name = "Task")
+	TASK,
 }

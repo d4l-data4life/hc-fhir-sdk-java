@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Status of the validation of the target against the primary source
  *
@@ -26,21 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemValidationStatus {
 
-    /**
-     * successful
-     */
-    @Json(name = "successful")
-    SUCCESSFUL,
+	/**
+	* successful
+	*/
+	@Json(name = "successful")
+	SUCCESSFUL,
 
-    /**
-     * failed
-     */
-    @Json(name = "failed")
-    FAILED,
+	/**
+	* failed
+	*/
+	@Json(name = "failed")
+	FAILED,
 
-    /**
-     * The validations status has not been determined yet
-     */
-    @Json(name = "unknown")
-    UNKNOWN,
+	/**
+	* The validations status has not been determined yet
+	*/
+	@Json(name = "unknown")
+	UNKNOWN,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Identifies whether a useContext represents a context or classification for the element
  *
@@ -26,16 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemClassificationOrContext {
 
-    /**
-     * Indicates the useContext is a classification - e.g. Administrative, financial, etc.
-     */
-    @Json(name = "classification")
-    CLASSIFICATION,
+	/**
+	* Indicates the useContext is a classification - e.g. Administrative, financial, etc.
+	*/
+	@Json(name = "classification")
+	CLASSIFICATION,
 
-    /**
-     * Indicates the useContext is a context - a domain of use - e.g. Particular country,
-     * organization or system
-     */
-    @Json(name = "context")
-    CONTEXT,
+	/**
+	* Indicates the useContext is a context - a domain of use - e.g. Particular country, organization or system
+	*/
+	@Json(name = "context")
+	CONTEXT,
 }

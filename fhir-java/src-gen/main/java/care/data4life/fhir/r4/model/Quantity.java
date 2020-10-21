@@ -18,57 +18,60 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
  * Quantity.java
- * <p>
- * A measured amount (or an amount that can potentially be measured). Note that measured amounts
- * include amounts that are not precisely quantified, including amounts involving arbitrary units
- * and floating currencies.
+ *
+ * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/MoneyQuantity">Quantity</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MoneyQuantity) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MoneyQuantity) on 2020-10-19
  */
-public class Quantity extends Element {
+public class Quantity extends Element  {
 
-    public static final String resourceType = "Quantity";
-
-    // Numerical value (with implicit precision).
+	public static final String resourceType = "Quantity";
+  
+	// Numerical value (with implicit precision).
     @Json(name = "value")
-    @Nullable
-    public FhirDecimal value;
-
-    // How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
+	@Nullable
+	public FhirDecimal value;
+  
+	// How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
     @Json(name = "comparator")
-    @Nullable
-    public CodeSystemQuantityComparator comparator;
-
-    // Unit representation.
+	@Nullable
+	public CodeSystemQuantityComparator comparator;
+  
+	// Unit representation.
     @Json(name = "unit")
-    @Nullable
-    public String unit;
-
-    // System that defines coded unit form.
+	@Nullable
+	public String unit;
+  
+	// System that defines coded unit form.
     @Json(name = "system")
-    @Nullable
-    public String system;
-
-    // Coded form of the unit.
+	@Nullable
+	public String system;
+  
+	// Coded form of the unit.
     @Json(name = "code")
-    @Nullable
-    public String code;
+	@Nullable
+	public String code;
 
+    
+	public Quantity() {
+	}
+	@Override
+	public String getResourceType() {
+		return Quantity.resourceType;
+	}
 
-    public Quantity() {
-    }
-
-    @Override
-    public String getResourceType() {
-        return Quantity.resourceType;
-    }
 
 
 }

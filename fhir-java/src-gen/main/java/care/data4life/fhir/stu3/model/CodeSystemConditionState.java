@@ -19,29 +19,29 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * Enumeration indicating whether the condition is currently active, inactive, or has been
- * resolved.
+ * Enumeration indicating whether the condition is currently active, inactive, or has been resolved.
  *
  * @see <a href="http://hl7.org/fhir/condition-state">ConditionState</a>
  */
 public enum CodeSystemConditionState {
 
-    /**
-     * The condition is active.
-     */
-    @Json(name = "active")
-    ACTIVE,
+	/**
+	* The condition is active.
+	*/
+	@Json(name = "active")
+	ACTIVE,
 
-    /**
-     * The condition is inactive, but not resolved.
-     */
-    @Json(name = "inactive")
-    INACTIVE,
+	/**
+	* The condition is inactive, but not resolved.
+	*/
+	@Json(name = "inactive")
+	INACTIVE,
 
-    /**
-     * The condition is resolved.
-     */
-    @Json(name = "resolved")
-    RESOLVED,
+	/**
+	* The condition is resolved.
+	*/
+	@Json(name = "resolved")
+	RESOLVED,
 }

@@ -18,55 +18,60 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
  * Annotation.java
- * <p>
+ *
  * A  text note which also  contains information about who made the statement and when.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Annotation">Annotation</a>
- * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Annotation) on
- * 2020-10-15
+ *
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Annotation) on 2020-10-19
  */
-public class Annotation extends Element {
+public class Annotation extends Element  {
 
-    public static final String resourceType = "Annotation";
-
-    // Individual responsible for the annotation.
+	public static final String resourceType = "Annotation";
+  
+	// Individual responsible for the annotation.
     @Json(name = "authorReference")
-    @Nullable
-    public Reference authorReference;
-
-    // Individual responsible for the annotation.
+	@Nullable
+	public Reference authorReference;
+  
+	// Individual responsible for the annotation.
     @Json(name = "authorString")
-    @Nullable
-    public String authorString;
-
-    // When the annotation was made.
+	@Nullable
+	public String authorString;
+  
+	// When the annotation was made.
     @Json(name = "time")
-    @Nullable
-    public FhirDateTime time;
-
-    // The annotation  - text content.
+	@Nullable
+	public FhirDateTime time;
+  
+	// The annotation  - text content.
     @Json(name = "text")
-    public String text;
+	public String text;
 
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param text String
+	 *
+	 */
+	public Annotation(String text) {
+		this.text = text;
+	}@Override
+	public String getResourceType() {
+		return Annotation.resourceType;
+	}
 
-    /**
-     * Constructor for all required properties.
-     *
-     * @param text String
-     */
-    public Annotation(String text) {
-        this.text = text;
-    }
-
-    @Override
-    public String getResourceType() {
-        return Annotation.resourceType;
-    }
 
 
 }

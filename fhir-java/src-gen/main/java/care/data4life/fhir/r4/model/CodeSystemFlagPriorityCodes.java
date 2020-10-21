@@ -19,35 +19,35 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This value set is provided as an exemplar. The value set is driven by IHE Table B.8-4: Abnormal
- * Flags, Alert Priority.
+ * This value set is provided as an exemplar. The value set is driven by IHE Table B.8-4: Abnormal Flags, Alert Priority.
  *
  * @see <a href="http://hl7.org/fhir/flag-priority-code">FlagPriorityCodes</a>
  */
 public enum CodeSystemFlagPriorityCodes {
 
-    /**
-     * No alarm.
-     */
-    @Json(name = "PN")
-    PN,
+	/**
+	* No alarm.
+	*/
+	@Json(name = "PN")
+	PN,
 
-    /**
-     * Low priority.
-     */
-    @Json(name = "PL")
-    PL,
+	/**
+	* Low priority.
+	*/
+	@Json(name = "PL")
+	PL,
 
-    /**
-     * Medium priority.
-     */
-    @Json(name = "PM")
-    PM,
+	/**
+	* Medium priority.
+	*/
+	@Json(name = "PM")
+	PM,
 
-    /**
-     * High priority.
-     */
-    @Json(name = "PH")
-    PH,
+	/**
+	* High priority.
+	*/
+	@Json(name = "PH")
+	PH,
 }

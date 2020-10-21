@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * MedicationKnowledge Package Type Codes
  *
@@ -26,135 +27,135 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationKnowledgePackageTypeCodes {
 
-    /**
-     * amp
-     */
-    @Json(name = "amp")
-    AMP,
+	/**
+	* amp
+	*/
+	@Json(name = "amp")
+	AMP,
 
-    /**
-     * bag
-     */
-    @Json(name = "bag")
-    BAG,
+	/**
+	* bag
+	*/
+	@Json(name = "bag")
+	BAG,
 
-    /**
-     * blstrpk
-     */
-    @Json(name = "blstrpk")
-    BLSTRPK,
+	/**
+	* blstrpk
+	*/
+	@Json(name = "blstrpk")
+	BLSTRPK,
 
-    /**
-     * bot
-     */
-    @Json(name = "bot")
-    BOT,
+	/**
+	* bot
+	*/
+	@Json(name = "bot")
+	BOT,
 
-    /**
-     * box
-     */
-    @Json(name = "box")
-    BOX,
+	/**
+	* box
+	*/
+	@Json(name = "box")
+	BOX,
 
-    /**
-     * can
-     */
-    @Json(name = "can")
-    CAN,
+	/**
+	* can
+	*/
+	@Json(name = "can")
+	CAN,
 
-    /**
-     * cart
-     */
-    @Json(name = "cart")
-    CART,
+	/**
+	* cart
+	*/
+	@Json(name = "cart")
+	CART,
 
-    /**
-     * disk
-     */
-    @Json(name = "disk")
-    DISK,
+	/**
+	* disk
+	*/
+	@Json(name = "disk")
+	DISK,
 
-    /**
-     * doset
-     */
-    @Json(name = "doset")
-    DOSET,
+	/**
+	* doset
+	*/
+	@Json(name = "doset")
+	DOSET,
 
-    /**
-     * jar
-     */
-    @Json(name = "jar")
-    JAR,
+	/**
+	* jar
+	*/
+	@Json(name = "jar")
+	JAR,
 
-    /**
-     * jug
-     */
-    @Json(name = "jug")
-    JUG,
+	/**
+	* jug
+	*/
+	@Json(name = "jug")
+	JUG,
 
-    /**
-     * minim
-     */
-    @Json(name = "minim")
-    MINIM,
+	/**
+	* minim
+	*/
+	@Json(name = "minim")
+	MINIM,
 
-    /**
-     * nebamp
-     */
-    @Json(name = "nebamp")
-    NEBAMP,
+	/**
+	* nebamp
+	*/
+	@Json(name = "nebamp")
+	NEBAMP,
 
-    /**
-     * ovul
-     */
-    @Json(name = "ovul")
-    OVUL,
+	/**
+	* ovul
+	*/
+	@Json(name = "ovul")
+	OVUL,
 
-    /**
-     * pch
-     */
-    @Json(name = "pch")
-    PCH,
+	/**
+	* pch
+	*/
+	@Json(name = "pch")
+	PCH,
 
-    /**
-     * pkt
-     */
-    @Json(name = "pkt")
-    PKT,
+	/**
+	* pkt
+	*/
+	@Json(name = "pkt")
+	PKT,
 
-    /**
-     * sash
-     */
-    @Json(name = "sash")
-    SASH,
+	/**
+	* sash
+	*/
+	@Json(name = "sash")
+	SASH,
 
-    /**
-     * strip
-     */
-    @Json(name = "strip")
-    STRIP,
+	/**
+	* strip
+	*/
+	@Json(name = "strip")
+	STRIP,
 
-    /**
-     * tin
-     */
-    @Json(name = "tin")
-    TIN,
+	/**
+	* tin
+	*/
+	@Json(name = "tin")
+	TIN,
 
-    /**
-     * tub
-     */
-    @Json(name = "tub")
-    TUB,
+	/**
+	* tub
+	*/
+	@Json(name = "tub")
+	TUB,
 
-    /**
-     * tube
-     */
-    @Json(name = "tube")
-    TUBE,
+	/**
+	* tube
+	*/
+	@Json(name = "tube")
+	TUBE,
 
-    /**
-     * vial
-     */
-    @Json(name = "vial")
-    VIAL,
+	/**
+	* vial
+	*/
+	@Json(name = "vial")
+	VIAL,
 }

@@ -18,88 +18,93 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Signature.java
- * <p>
- * A digital signature along with supporting context. The signature may be electronic/cryptographic
- * in nature, or a graphical image representing a hand-written signature, or a signature process.
- * Different signature approaches have different utilities.
+ *
+ * A digital signature along with supporting context. The signature may be electronic/cryptographic in nature, or a graphical image representing a hand-written signature, or a signature process. Different signature approaches have different utilities.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Signature">Signature</a>
- * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Signature) on
- * 2020-10-15
+ *
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Signature) on 2020-10-19
  */
-public class Signature extends Element {
+public class Signature extends Element  {
 
-    public static final String resourceType = "Signature";
-
-    // Indication of the reason the entity signed the object(s).
+	public static final String resourceType = "Signature";
+  
+	// Indication of the reason the entity signed the object(s).
     @Json(name = "type")
-    public List<Coding> type;
-
-    // When the signature was created.
+	public List<Coding> type;
+  
+	// When the signature was created.
     @Json(name = "when")
-    public FhirInstant when;
-
-    // Who signed.
+	public FhirInstant when;
+  
+	// Who signed.
     @Json(name = "whoUri")
-    @Nullable
-    public String whoUri;
-
-    // Who signed.
+	@Nullable
+	public String whoUri;
+  
+	// Who signed.
     @Json(name = "whoReference")
-    @Nullable
-    public Reference whoReference;
-
-    // The party represented.
+	@Nullable
+	public Reference whoReference;
+  
+	// The party represented.
     @Json(name = "onBehalfOfUri")
-    @Nullable
-    public String onBehalfOfUri;
-
-    // The party represented.
+	@Nullable
+	public String onBehalfOfUri;
+  
+	// The party represented.
     @Json(name = "onBehalfOfReference")
-    @Nullable
-    public Reference onBehalfOfReference;
-
-    // The technical format of the signature.
+	@Nullable
+	public Reference onBehalfOfReference;
+  
+	// The technical format of the signature.
     @Json(name = "contentType")
-    @Nullable
-    public String contentType;
-
-    // The actual signature content (XML DigSig. JWT, picture, etc.).
+	@Nullable
+	public String contentType;
+  
+	// The actual signature content (XML DigSig. JWT, picture, etc.).
     @Json(name = "blob")
-    @Nullable
-    public String blob;
+	@Nullable
+	public String blob;
 
+    
+	/**
+	 * Constructor for all required properties.
+	 *
+	 * @param type List of Coding
+	 *
+	 * @param when FhirInstant
+	 *
+	 * @param who as one of Reference, String*
+	 *
+	 */
+	public Signature(List<Coding> type, FhirInstant when, Object who) {
+		this.type = type;
+		this.when = when;
+		if (who instanceof Reference) {
+			this.whoReference = (Reference) who;
+		}
+		else if (who instanceof String) {
+			this.whoUri = (String) who;
+		}
+		else {
+			//FIXME Type: (of: who)) for property (who) is invalid, ignoring")
+		}
+	}@Override
+	public String getResourceType() {
+		return Signature.resourceType;
+	}
 
-    /**
-     * Constructor for all required properties.
-     *
-     * @param type List of Coding
-     * @param when FhirInstant
-     * @param who  as one of Reference, String*
-     */
-    public Signature(List<Coding> type, FhirInstant when, Object who) {
-        this.type = type;
-        this.when = when;
-        if (who instanceof Reference) {
-            this.whoReference = (Reference) who;
-        } else if (who instanceof String) {
-            this.whoUri = (String) who;
-        } else {
-            //FIXME Type: (of: who)) for property (who) is invalid, ignoring")
-        }
-    }
-
-    @Override
-    public String getResourceType() {
-        return Signature.resourceType;
-    }
 
 
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * How an extension context is interpreted.
  *
@@ -26,25 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExtensionContextType {
 
-    /**
-     * The context is all elements that match the FHIRPath query found in the expression.
-     */
-    @Json(name = "fhirpath")
-    FHIRPATH,
+	/**
+	* The context is all elements that match the FHIRPath query found in the expression.
+	*/
+	@Json(name = "fhirpath")
+	FHIRPATH,
 
-    /**
-     * The context is any element that has an ElementDefinition.id that matches that found in the
-     * expression. This includes ElementDefinition Ids that have slicing identifiers. The full path
-     * for the element is [url]#[elementid]. If there is no #, the Element id is one defined in the
-     * base specification.
-     */
-    @Json(name = "element")
-    ELEMENT,
+	/**
+	* The context is any element that has an ElementDefinition.id that matches that found in the expression. This includes ElementDefinition Ids that have slicing identifiers. The full path for the element is [url]#[elementid]. If there is no #, the Element id is one defined in the base specification.
+	*/
+	@Json(name = "element")
+	ELEMENT,
 
-    /**
-     * The context is a particular extension from a particular StructureDefinition, and the
-     * expression is just a uri that identifies the extension.
-     */
-    @Json(name = "extension")
-    EXTENSION,
+	/**
+	* The context is a particular extension from a particular StructureDefinition, and the expression is just a uri that identifies the extension.
+	*/
+	@Json(name = "extension")
+	EXTENSION,
 }

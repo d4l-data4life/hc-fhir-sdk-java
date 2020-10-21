@@ -19,35 +19,35 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * A coded concept identifying level of certainty if patient has taken or has not taken the
- * medication
+ * A coded concept identifying level of certainty if patient has taken or has not taken the medication
  *
  * @see <a href="http://hl7.org/fhir/medication-statement-taken">MedicationStatementTaken</a>
  */
 public enum CodeSystemMedicationStatementTaken {
 
-    /**
-     * Positive assertion that patient has taken medication
-     */
-    @Json(name = "y")
-    Y,
+	/**
+	* Positive assertion that patient has taken medication
+	*/
+	@Json(name = "y")
+	Y,
 
-    /**
-     * Negative assertion that patient has not taken medication
-     */
-    @Json(name = "n")
-    N,
+	/**
+	* Negative assertion that patient has not taken medication
+	*/
+	@Json(name = "n")
+	N,
 
-    /**
-     * Unknown assertion if patient has taken medication
-     */
-    @Json(name = "unk")
-    UNK,
+	/**
+	* Unknown assertion if patient has taken medication
+	*/
+	@Json(name = "unk")
+	UNK,
 
-    /**
-     * Patient reporting does not apply
-     */
-    @Json(name = "na")
-    NA,
+	/**
+	* Patient reporting does not apply
+	*/
+	@Json(name = "na")
+	NA,
 }

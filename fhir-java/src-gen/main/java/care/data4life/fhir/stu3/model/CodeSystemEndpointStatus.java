@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The status of the endpoint
  *
@@ -26,40 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemEndpointStatus {
 
-    /**
-     * This endpoint is expected to be active and can be used
-     */
-    @Json(name = "active")
-    ACTIVE,
+	/**
+	* This endpoint is expected to be active and can be used
+	*/
+	@Json(name = "active")
+	ACTIVE,
 
-    /**
-     * This endpoint is temporarily unavailable
-     */
-    @Json(name = "suspended")
-    SUSPENDED,
+	/**
+	* This endpoint is temporarily unavailable
+	*/
+	@Json(name = "suspended")
+	SUSPENDED,
 
-    /**
-     * This endpoint has exceeded connectivity thresholds and is considered in an error state and
-     * should no longer be attempted to connect to until corrective action is taken
-     */
-    @Json(name = "error")
-    ERROR,
+	/**
+	* This endpoint has exceeded connectivity thresholds and is considered in an error state and should no longer be attempted to connect to until corrective action is taken
+	*/
+	@Json(name = "error")
+	ERROR,
 
-    /**
-     * This endpoint is no longer to be used
-     */
-    @Json(name = "off")
-    OFF,
+	/**
+	* This endpoint is no longer to be used
+	*/
+	@Json(name = "off")
+	OFF,
 
-    /**
-     * This instance should not have been part of this patient's medical record.
-     */
-    @Json(name = "entered-in-error")
-    ENTERED_IN_ERROR,
+	/**
+	* This instance should not have been part of this patient's medical record.
+	*/
+	@Json(name = "entered-in-error")
+	ENTERED_IN_ERROR,
 
-    /**
-     * This endpoint is not intended for production usage.
-     */
-    @Json(name = "test")
-    TEST,
+	/**
+	* This endpoint is not intended for production usage.
+	*/
+	@Json(name = "test")
+	TEST,
 }

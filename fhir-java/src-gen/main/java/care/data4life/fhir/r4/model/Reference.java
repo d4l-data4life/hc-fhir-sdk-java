@@ -18,50 +18,55 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
  * Reference.java
- * <p>
- * A reference from one resource to another
  *
+ * A reference from one resource to another
+ * 
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Reference">Reference</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Reference) on
- * 2020-10-15
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Reference) on 2020-10-19
  */
-public class Reference extends Element {
+public class Reference extends Element  {
 
-    public static final String resourceType = "Reference";
-
-    // Literal reference, Relative, internal or absolute URL.
+	public static final String resourceType = "Reference";
+  
+	// Literal reference, Relative, internal or absolute URL.
     @Json(name = "reference")
-    @Nullable
-    public String reference;
-
-    // Type the reference refers to (e.g. "Patient").
+	@Nullable
+	public String reference;
+  
+	// Type the reference refers to (e.g. "Patient").
     @Json(name = "type")
-    @Nullable
-    public String type;
-
-    // Logical reference, when literal reference is not known.
+	@Nullable
+	public String type;
+  
+	// Logical reference, when literal reference is not known.
     @Json(name = "identifier")
-    @Nullable
-    public Identifier identifier;
-
-    // Text alternative for the resource.
+	@Nullable
+	public Identifier identifier;
+  
+	// Text alternative for the resource.
     @Json(name = "display")
-    @Nullable
-    public String display;
+	@Nullable
+	public String display;
 
+    
+	public Reference() {
+	}
+	@Override
+	public String getResourceType() {
+		return Reference.resourceType;
+	}
 
-    public Reference() {
-    }
-
-    @Override
-    public String getResourceType() {
-        return Reference.resourceType;
-    }
 
 
 }

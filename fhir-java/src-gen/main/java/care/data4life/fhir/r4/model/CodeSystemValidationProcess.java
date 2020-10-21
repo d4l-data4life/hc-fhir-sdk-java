@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The primary process by which the target is validated
  *
@@ -26,39 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemValidationProcess {
 
-    /**
-     * editCheck
-     */
-    @Json(name = "edit-check")
-    EDIT_CHECK,
+	/**
+	* editCheck
+	*/
+	@Json(name = "edit-check")
+	EDIT_CHECK,
 
-    /**
-     * valueset
-     */
-    @Json(name = "valueset")
-    VALUESET,
+	/**
+	* valueset
+	*/
+	@Json(name = "valueset")
+	VALUESET,
 
-    /**
-     * primary
-     */
-    @Json(name = "primary")
-    PRIMARY,
+	/**
+	* primary
+	*/
+	@Json(name = "primary")
+	PRIMARY,
 
-    /**
-     * multi
-     */
-    @Json(name = "multi")
-    MULTI,
+	/**
+	* multi
+	*/
+	@Json(name = "multi")
+	MULTI,
 
-    /**
-     * standalone
-     */
-    @Json(name = "standalone")
-    STANDALONE,
+	/**
+	* standalone
+	*/
+	@Json(name = "standalone")
+	STANDALONE,
 
-    /**
-     * inContext
-     */
-    @Json(name = "in-context")
-    IN_CONTEXT,
+	/**
+	* inContext
+	*/
+	@Json(name = "in-context")
+	IN_CONTEXT,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * If this is the default rule set to apply for the source type, or this combination of types
  *
@@ -26,22 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemStructureMapGroupTypeMode {
 
-    /**
-     * This group is not a default group for the types
-     */
-    @Json(name = "none")
-    NONE,
+	/**
+	* This group is not a default group for the types
+	*/
+	@Json(name = "none")
+	NONE,
 
-    /**
-     * This group is a default mapping group for the specified types and for the primary source
-     * type
-     */
-    @Json(name = "types")
-    TYPES,
+	/**
+	* This group is a default mapping group for the specified types and for the primary source type
+	*/
+	@Json(name = "types")
+	TYPES,
 
-    /**
-     * This group is a default mapping group for the specified types
-     */
-    @Json(name = "type-and-types")
-    TYPE_AND_TYPES,
+	/**
+	* This group is a default mapping group for the specified types
+	*/
+	@Json(name = "type-and-types")
+	TYPE_AND_TYPES,
 }

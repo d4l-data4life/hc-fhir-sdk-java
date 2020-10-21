@@ -14,29 +14,38 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir.r4;
+package care.data4life.fhir.r4.model;
 
-import care.data4life.fhir.FhirException;
-import care.data4life.fhir.FhirParser;
-import care.data4life.fhir.json.FhirJsonParser;
-import care.data4life.fhir.r4.json.FhirR4MoshiJsonParser;
-import care.data4life.fhir.r4.model.FhirR4Base;
+import com.squareup.moshi.Json;
 
-public final class Fhir4Parser implements FhirParser<FhirR4Base> {
+import javax.annotation.Nullable;
 
-    private FhirJsonParser jsonParser;
+/**
+ * Url.java
+ * <p>
+ * A URI that is a literal reference
+ *
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/url">Url</a>
+ * <p>
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/url) on 2020-10-15
+ */
+public class Url extends Element {
 
-    public Fhir4Parser() {
-        this.jsonParser = new FhirR4MoshiJsonParser();
+    public static final String resourceType = "Url";
+
+    // Primitive value for url.
+    @Json(name = "value")
+    @Nullable
+    public String url;
+
+
+    public Url() {
     }
 
     @Override
-    public <T extends FhirR4Base> T toFhir(Class<T> fhirType, String fhirJson) throws FhirException {
-        return (T) jsonParser.fromJson(fhirType, fhirJson);
+    public String getResourceType() {
+        return Url.resourceType;
     }
 
-    @Override
-    public <T extends FhirR4Base> String fromFhir(T fhirObject) throws FhirException {
-        return jsonParser.toJson(fhirObject);
-    }
+
 }

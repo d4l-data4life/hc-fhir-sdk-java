@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * This value set includes sample Program Reason Span codes.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExampleProgramReasonCodes {
 
-    /**
-     * Child Asthma Program
-     */
-    @Json(name = "as")
-    AS,
+	/**
+	* Child Asthma Program
+	*/
+	@Json(name = "as")
+	AS,
 
-    /**
-     * Hemodialysis Program.
-     */
-    @Json(name = "hd")
-    HD,
+	/**
+	* Hemodialysis Program.
+	*/
+	@Json(name = "hd")
+	HD,
 
-    /**
-     * Autism Screening Program.
-     */
-    @Json(name = "auscr")
-    AUSCR,
+	/**
+	* Autism Screening Program.
+	*/
+	@Json(name = "auscr")
+	AUSCR,
 
-    /**
-     * No program code applies.
-     */
-    @Json(name = "none")
-    NONE,
+	/**
+	* No program code applies.
+	*/
+	@Json(name = "none")
+	NONE,
 }

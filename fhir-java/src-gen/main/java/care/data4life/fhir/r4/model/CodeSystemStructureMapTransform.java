@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * How data is copied/created.
  *
@@ -26,112 +27,105 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemStructureMapTransform {
 
-    /**
-     * create(type : string) - type is passed through to the application on the standard API, and
-     * must be known by it.
-     */
-    @Json(name = "create")
-    CREATE,
+	/**
+	* create(type : string) - type is passed through to the application on the standard API, and must be known by it.
+	*/
+	@Json(name = "create")
+	CREATE,
 
-    /**
-     * copy(source).
-     */
-    @Json(name = "copy")
-    COPY,
+	/**
+	* copy(source).
+	*/
+	@Json(name = "copy")
+	COPY,
 
-    /**
-     * truncate(source, length) - source must be stringy type.
-     */
-    @Json(name = "truncate")
-    TRUNCATE,
+	/**
+	* truncate(source, length) - source must be stringy type.
+	*/
+	@Json(name = "truncate")
+	TRUNCATE,
 
-    /**
-     * escape(source, fmt1, fmt2) - change source from one kind of escaping to another (plain, java,
-     * xml, json). note that this is for when the string itself is escaped.
-     */
-    @Json(name = "escape")
-    ESCAPE,
+	/**
+	* escape(source, fmt1, fmt2) - change source from one kind of escaping to another (plain, java, xml, json). note that this is for when the string itself is escaped.
+	*/
+	@Json(name = "escape")
+	ESCAPE,
 
-    /**
-     * cast(source, type?) - case source from one type to another. target type can be left as
-     * implicit if there is one and only one target type known.
-     */
-    @Json(name = "cast")
-    CAST,
+	/**
+	* cast(source, type?) - case source from one type to another. target type can be left as implicit if there is one and only one target type known.
+	*/
+	@Json(name = "cast")
+	CAST,
 
-    /**
-     * append(source...) - source is element or string.
-     */
-    @Json(name = "append")
-    APPEND,
+	/**
+	* append(source...) - source is element or string.
+	*/
+	@Json(name = "append")
+	APPEND,
 
-    /**
-     * translate(source, uri_of_map) - use the translate operation.
-     */
-    @Json(name = "translate")
-    TRANSLATE,
+	/**
+	* translate(source, uri_of_map) - use the translate operation.
+	*/
+	@Json(name = "translate")
+	TRANSLATE,
 
-    /**
-     * reference(source : object) - return a string that references the provided tree properly.
-     */
-    @Json(name = "reference")
-    REFERENCE,
+	/**
+	* reference(source : object) - return a string that references the provided tree properly.
+	*/
+	@Json(name = "reference")
+	REFERENCE,
 
-    /**
-     * Perform a date operation. *Parameters to be documented*.
-     */
-    @Json(name = "dateOp")
-    DATEOP,
+	/**
+	* Perform a date operation. *Parameters to be documented*.
+	*/
+	@Json(name = "dateOp")
+	DATEOP,
 
-    /**
-     * Generate a random UUID (in lowercase). No Parameters.
-     */
-    @Json(name = "uuid")
-    UUID,
+	/**
+	* Generate a random UUID (in lowercase). No Parameters.
+	*/
+	@Json(name = "uuid")
+	UUID,
 
-    /**
-     * Return the appropriate string to put in a reference that refers to the resource provided as a
-     * parameter.
-     */
-    @Json(name = "pointer")
-    POINTER,
+	/**
+	* Return the appropriate string to put in a reference that refers to the resource provided as a parameter.
+	*/
+	@Json(name = "pointer")
+	POINTER,
 
-    /**
-     * Execute the supplied FHIRPath expression and use the value returned by that.
-     */
-    @Json(name = "evaluate")
-    EVALUATE,
+	/**
+	* Execute the supplied FHIRPath expression and use the value returned by that.
+	*/
+	@Json(name = "evaluate")
+	EVALUATE,
 
-    /**
-     * Create a CodeableConcept. Parameters = (text) or (system. Code[, display]).
-     */
-    @Json(name = "cc")
-    CC,
+	/**
+	* Create a CodeableConcept. Parameters = (text) or (system. Code[, display]).
+	*/
+	@Json(name = "cc")
+	CC,
 
-    /**
-     * Create a Coding. Parameters = (system. Code[, display]).
-     */
-    @Json(name = "c")
-    C,
+	/**
+	* Create a Coding. Parameters = (system. Code[, display]).
+	*/
+	@Json(name = "c")
+	C,
 
-    /**
-     * Create a quantity. Parameters = (text) or (value, unit, [system, code]) where text is the
-     * natural representation e.g. [comparator]value[space]unit.
-     */
-    @Json(name = "qty")
-    QTY,
+	/**
+	* Create a quantity. Parameters = (text) or (value, unit, [system, code]) where text is the natural representation e.g. [comparator]value[space]unit.
+	*/
+	@Json(name = "qty")
+	QTY,
 
-    /**
-     * Create an identifier. Parameters = (system, value[, type]) where type is a code from the
-     * identifier type value set.
-     */
-    @Json(name = "id")
-    ID,
+	/**
+	* Create an identifier. Parameters = (system, value[, type]) where type is a code from the identifier type value set.
+	*/
+	@Json(name = "id")
+	ID,
 
-    /**
-     * Create a contact details. Parameters = (value) or (system, value). If no system is provided,
-     * the system should be inferred from the content of the value.
-     */
-    @Json(name = "cp")
-    CP,
+	/**
+	* Create a contact details. Parameters = (value) or (system, value). If no system is provided, the system should be inferred from the content of the value.
+	*/
+	@Json(name = "cp")
+	CP,
 }

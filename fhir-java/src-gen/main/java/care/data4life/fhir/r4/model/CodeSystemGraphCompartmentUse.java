@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Defines how a compartment rule is used.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGraphCompartmentUse {
 
-    /**
-     * This compartment rule is a condition for whether the rule applies.
-     */
-    @Json(name = "condition")
-    CONDITION,
+	/**
+	* This compartment rule is a condition for whether the rule applies.
+	*/
+	@Json(name = "condition")
+	CONDITION,
 
-    /**
-     * This compartment rule is enforced on any relationships that meet the conditions.
-     */
-    @Json(name = "requirement")
-    REQUIREMENT,
+	/**
+	* This compartment rule is enforced on any relationships that meet the conditions.
+	*/
+	@Json(name = "requirement")
+	REQUIREMENT,
 }

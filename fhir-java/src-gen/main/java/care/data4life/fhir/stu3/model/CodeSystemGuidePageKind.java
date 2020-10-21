@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The kind of an included page.
  *
@@ -26,54 +27,51 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGuidePageKind {
 
-    /**
-     * This is a page of content that is included in the implementation guide. It has no particular
-     * function.
-     */
-    @Json(name = "page")
-    PAGE,
+	/**
+	* This is a page of content that is included in the implementation guide. It has no particular function.
+	*/
+	@Json(name = "page")
+	PAGE,
 
-    /**
-     * This is a page that represents a human readable rendering of an example.
-     */
-    @Json(name = "example")
-    EXAMPLE,
+	/**
+	* This is a page that represents a human readable rendering of an example.
+	*/
+	@Json(name = "example")
+	EXAMPLE,
 
-    /**
-     * This is a page that represents a list of resources of one or more types.
-     */
-    @Json(name = "list")
-    LIST,
+	/**
+	* This is a page that represents a list of resources of one or more types.
+	*/
+	@Json(name = "list")
+	LIST,
 
-    /**
-     * This is a page showing where an included guide is injected.
-     */
-    @Json(name = "include")
-    INCLUDE,
+	/**
+	* This is a page showing where an included guide is injected.
+	*/
+	@Json(name = "include")
+	INCLUDE,
 
-    /**
-     * This is a page that lists the resources of a given type, and also creates pages for all the
-     * listed types as other pages in the section.
-     */
-    @Json(name = "directory")
-    DIRECTORY,
+	/**
+	* This is a page that lists the resources of a given type, and also creates pages for all the listed types as other pages in the section.
+	*/
+	@Json(name = "directory")
+	DIRECTORY,
 
-    /**
-     * This is a page that creates the listed resources as a dictionary.
-     */
-    @Json(name = "dictionary")
-    DICTIONARY,
+	/**
+	* This is a page that creates the listed resources as a dictionary.
+	*/
+	@Json(name = "dictionary")
+	DICTIONARY,
 
-    /**
-     * This is a generated page that contains the table of contents.
-     */
-    @Json(name = "toc")
-    TOC,
+	/**
+	* This is a generated page that contains the table of contents.
+	*/
+	@Json(name = "toc")
+	TOC,
 
-    /**
-     * This is a page that represents a presented resource. This is typically used for generated
-     * conformance resource presentations.
-     */
-    @Json(name = "resource")
-    RESOURCE,
+	/**
+	* This is a page that represents a presented resource. This is typically used for generated conformance resource presentations.
+	*/
+	@Json(name = "resource")
+	RESOURCE,
 }

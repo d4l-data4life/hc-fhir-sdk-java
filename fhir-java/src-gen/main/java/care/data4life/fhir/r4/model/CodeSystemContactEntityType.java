@@ -19,47 +19,47 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This example value set defines a set of codes that can be used to indicate the purpose for which
- * you would contact a contact party.
+ * This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/contactentity-type">ContactEntityType</a>
  */
 public enum CodeSystemContactEntityType {
 
-    /**
-     * Contact details for information regarding to billing/general finance enquiries.
-     */
-    @Json(name = "BILL")
-    BILL,
+	/**
+	* Contact details for information regarding to billing/general finance enquiries.
+	*/
+	@Json(name = "BILL")
+	BILL,
 
-    /**
-     * Contact details for administrative enquiries.
-     */
-    @Json(name = "ADMIN")
-    ADMIN,
+	/**
+	* Contact details for administrative enquiries.
+	*/
+	@Json(name = "ADMIN")
+	ADMIN,
 
-    /**
-     * Contact details for issues related to Human Resources, such as staff matters, OH&S etc.
-     */
-    @Json(name = "HR")
-    HR,
+	/**
+	* Contact details for issues related to Human Resources, such as staff matters, OH&S etc.
+	*/
+	@Json(name = "HR")
+	HR,
 
-    /**
-     * Contact details for dealing with issues related to insurance claims/adjudication/payment.
-     */
-    @Json(name = "PAYOR")
-    PAYOR,
+	/**
+	* Contact details for dealing with issues related to insurance claims/adjudication/payment.
+	*/
+	@Json(name = "PAYOR")
+	PAYOR,
 
-    /**
-     * Generic information contact for patients.
-     */
-    @Json(name = "PATINF")
-    PATINF,
+	/**
+	* Generic information contact for patients.
+	*/
+	@Json(name = "PATINF")
+	PATINF,
 
-    /**
-     * Dedicated contact point for matters relating to press enquiries.
-     */
-    @Json(name = "PRESS")
-    PRESS,
+	/**
+	* Dedicated contact point for matters relating to press enquiries.
+	*/
+	@Json(name = "PRESS")
+	PRESS,
 }

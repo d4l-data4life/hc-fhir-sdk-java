@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A coded concept describing where the medication administered is expected to occur
  *
@@ -26,23 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationAdministrationCategory {
 
-    /**
-     * Includes administrations in an inpatient or acute care setting
-     */
-    @Json(name = "inpatient")
-    INPATIENT,
+	/**
+	* Includes administrations in an inpatient or acute care setting
+	*/
+	@Json(name = "inpatient")
+	INPATIENT,
 
-    /**
-     * Includes administrations in an outpatient setting (for example, Emergency Department,
-     * Outpatient Clinic, Outpatient Surgery, Doctor's office)
-     */
-    @Json(name = "outpatient")
-    OUTPATIENT,
+	/**
+	* Includes administrations in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+	*/
+	@Json(name = "outpatient")
+	OUTPATIENT,
 
-    /**
-     * Includes administrations by the patient in their home (this would include long term care or
-     * nursing homes, hospices, etc)
-     */
-    @Json(name = "community")
-    COMMUNITY,
+	/**
+	* Includes administrations by the patient in their home (this would include long term care or nursing homes, hospices, etc)
+	*/
+	@Json(name = "community")
+	COMMUNITY,
 }

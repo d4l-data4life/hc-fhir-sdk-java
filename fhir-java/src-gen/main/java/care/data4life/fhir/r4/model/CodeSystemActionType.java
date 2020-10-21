@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The type of action to be performed.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemActionType {
 
-    /**
-     * The action is to create a new resource.
-     */
-    @Json(name = "create")
-    CREATE,
+	/**
+	* The action is to create a new resource.
+	*/
+	@Json(name = "create")
+	CREATE,
 
-    /**
-     * The action is to update an existing resource.
-     */
-    @Json(name = "update")
-    UPDATE,
+	/**
+	* The action is to update an existing resource.
+	*/
+	@Json(name = "update")
+	UPDATE,
 
-    /**
-     * The action is to remove an existing resource.
-     */
-    @Json(name = "remove")
-    REMOVE,
+	/**
+	* The action is to remove an existing resource.
+	*/
+	@Json(name = "remove")
+	REMOVE,
 
-    /**
-     * The action is to fire a specific event.
-     */
-    @Json(name = "fire-event")
-    FIRE_EVENT,
+	/**
+	* The action is to fire a specific event.
+	*/
+	@Json(name = "fire-event")
+	FIRE_EVENT,
 }

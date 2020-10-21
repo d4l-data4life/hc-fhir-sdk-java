@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The subcomponent classification of quality of evidence rating systems.
  *
@@ -26,51 +27,51 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCertaintySubcomponentType {
 
-    /**
-     * methodologic concerns reducing internal validity.
-     */
-    @Json(name = "RiskOfBias")
-    RISKOFBIAS,
+	/**
+	* methodologic concerns reducing internal validity.
+	*/
+	@Json(name = "RiskOfBias")
+	RISKOFBIAS,
 
-    /**
-     * concerns that findings are not similar enough to support certainty.
-     */
-    @Json(name = "Inconsistency")
-    INCONSISTENCY,
+	/**
+	* concerns that findings are not similar enough to support certainty.
+	*/
+	@Json(name = "Inconsistency")
+	INCONSISTENCY,
 
-    /**
-     * concerns reducing external validity.
-     */
-    @Json(name = "Indirectness")
-    INDIRECTNESS,
+	/**
+	* concerns reducing external validity.
+	*/
+	@Json(name = "Indirectness")
+	INDIRECTNESS,
 
-    /**
-     * High quality evidence.
-     */
-    @Json(name = "Imprecision")
-    IMPRECISION,
+	/**
+	* High quality evidence.
+	*/
+	@Json(name = "Imprecision")
+	IMPRECISION,
 
-    /**
-     * likelihood that what is published misrepresents what is available to publish.
-     */
-    @Json(name = "PublicationBias")
-    PUBLICATIONBIAS,
+	/**
+	* likelihood that what is published misrepresents what is available to publish.
+	*/
+	@Json(name = "PublicationBias")
+	PUBLICATIONBIAS,
 
-    /**
-     * higher certainty due to dose response relationship.
-     */
-    @Json(name = "DoseResponseGradient")
-    DOSERESPONSEGRADIENT,
+	/**
+	* higher certainty due to dose response relationship.
+	*/
+	@Json(name = "DoseResponseGradient")
+	DOSERESPONSEGRADIENT,
 
-    /**
-     * higher certainty due to risk of bias in opposite direction.
-     */
-    @Json(name = "PlausibleConfounding")
-    PLAUSIBLECONFOUNDING,
+	/**
+	* higher certainty due to risk of bias in opposite direction.
+	*/
+	@Json(name = "PlausibleConfounding")
+	PLAUSIBLECONFOUNDING,
 
-    /**
-     * higher certainty due to large effect size.
-     */
-    @Json(name = "LargeEffect")
-    LARGEEFFECT,
+	/**
+	* higher certainty due to large effect size.
+	*/
+	@Json(name = "LargeEffect")
+	LARGEEFFECT,
 }

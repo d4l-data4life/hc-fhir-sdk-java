@@ -19,23 +19,23 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
- * This value set defines a set of codes that can be used to indicate how an individual participates
- * in an encounter.
+ * This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/participant-type">ParticipantType</a>
  */
 public enum CodeSystemParticipantType {
 
-    /**
-     * A translator who is facilitating communication with the patient during the encounter.
-     */
-    @Json(name = "translator")
-    TRANSLATOR,
+	/**
+	* A translator who is facilitating communication with the patient during the encounter.
+	*/
+	@Json(name = "translator")
+	TRANSLATOR,
 
-    /**
-     * A person to be contacted in case of an emergency during the encounter.
-     */
-    @Json(name = "emergency")
-    EMERGENCY,
+	/**
+	* A person to be contacted in case of an emergency during the encounter.
+	*/
+	@Json(name = "emergency")
+	EMERGENCY,
 }

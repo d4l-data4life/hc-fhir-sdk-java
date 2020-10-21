@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Type for access of external URI.
  *
@@ -26,36 +27,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemRepositoryType {
 
-    /**
-     * When URL is clicked, the resource can be seen directly (by webpage or by download link
-     * format).
-     */
-    @Json(name = "directlink")
-    DIRECTLINK,
+	/**
+	* When URL is clicked, the resource can be seen directly (by webpage or by download link format).
+	*/
+	@Json(name = "directlink")
+	DIRECTLINK,
 
-    /**
-     * When the API method (e.g. [base_url]/[parameter]) related with the URL of the website is
-     * executed, the resource can be seen directly (usually in JSON or XML format).
-     */
-    @Json(name = "openapi")
-    OPENAPI,
+	/**
+	* When the API method (e.g. [base_url]/[parameter]) related with the URL of the website is executed, the resource can be seen directly (usually in JSON or XML format).
+	*/
+	@Json(name = "openapi")
+	OPENAPI,
 
-    /**
-     * When logged into the website, the resource can be seen.
-     */
-    @Json(name = "login")
-    LOGIN,
+	/**
+	* When logged into the website, the resource can be seen.
+	*/
+	@Json(name = "login")
+	LOGIN,
 
-    /**
-     * When logged in and  follow the API in the website related with URL, the resource can be
-     * seen.
-     */
-    @Json(name = "oauth")
-    OAUTH,
+	/**
+	* When logged in and  follow the API in the website related with URL, the resource can be seen.
+	*/
+	@Json(name = "oauth")
+	OAUTH,
 
-    /**
-     * Some other complicated or particular way to get resource from URL.
-     */
-    @Json(name = "other")
-    OTHER,
+	/**
+	* Some other complicated or particular way to get resource from URL.
+	*/
+	@Json(name = "other")
+	OTHER,
 }

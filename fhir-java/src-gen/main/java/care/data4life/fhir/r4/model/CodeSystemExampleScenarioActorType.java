@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The type of actor - system or human.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExampleScenarioActorType {
 
-    /**
-     * A person.
-     */
-    @Json(name = "person")
-    PERSON,
+	/**
+	* A person.
+	*/
+	@Json(name = "person")
+	PERSON,
 
-    /**
-     * A system.
-     */
-    @Json(name = "entity")
-    ENTITY,
+	/**
+	* A system.
+	*/
+	@Json(name = "entity")
+	ENTITY,
 }

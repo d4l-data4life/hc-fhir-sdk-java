@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Overall categorization of the event, e.g. real or potential
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAdverseEventCategory {
 
-    /**
-     * AE
-     */
-    @Json(name = "AE")
-    AE,
+	/**
+	* AE
+	*/
+	@Json(name = "AE")
+	AE,
 
-    /**
-     * PAE
-     */
-    @Json(name = "PAE")
-    PAE,
+	/**
+	* PAE
+	*/
+	@Json(name = "PAE")
+	PAE,
 }

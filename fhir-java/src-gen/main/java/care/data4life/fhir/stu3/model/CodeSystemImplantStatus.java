@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A set codes that define the functional status of an implanted device.
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemImplantStatus {
 
-    /**
-     * The implanted device is working normally
-     */
-    @Json(name = "functional")
-    FUNCTIONAL,
+	/**
+	* The implanted device is working normally
+	*/
+	@Json(name = "functional")
+	FUNCTIONAL,
 
-    /**
-     * The implanted device is not working
-     */
-    @Json(name = "non-functional")
-    NON_FUNCTIONAL,
+	/**
+	* The implanted device is not working
+	*/
+	@Json(name = "non-functional")
+	NON_FUNCTIONAL,
 
-    /**
-     * The implanted device has been turned off
-     */
-    @Json(name = "disabled")
-    DISABLED,
+	/**
+	* The implanted device has been turned off
+	*/
+	@Json(name = "disabled")
+	DISABLED,
 
-    /**
-     * the functional status of the implant has not been determined
-     */
-    @Json(name = "unknown")
-    UNKNOWN,
+	/**
+	* the functional status of the implant has not been determined
+	*/
+	@Json(name = "unknown")
+	UNKNOWN,
 }

@@ -24,6 +24,7 @@ import java.net.URL;
 
 import care.data4life.fhir.FhirException;
 import care.data4life.fhir.json.FhirJsonParser;
+import care.data4life.fhir.r4.model.Canonical;
 import care.data4life.fhir.r4.model.FhirDate;
 import care.data4life.fhir.r4.model.FhirDateTime;
 import care.data4life.fhir.r4.model.FhirDecimal;
@@ -50,6 +51,7 @@ public class FhirR4MoshiJsonParser implements FhirJsonParser<FhirR4Base> {
                 .add(FhirDecimal.class, new FhirDecimalJsonAdapter().nullSafe())
                 .add(FhirInstant.class, new FhirInstantJsonAdapter().nullSafe())
                 .add(FhirTime.class, new FhirTimeJsonAdapter().nullSafe())
+                .add(Canonical.class, new CanonicalJsonAdapter())
                 .build();
     }
 

@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A code describing where the dispensed medication is expected to be consumed or administered
  *
@@ -26,24 +27,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationDispenseCategory {
 
-    /**
-     * Includes dispenses for medications to be administered or consumed in an inpatient or acute
-     * care setting
-     */
-    @Json(name = "inpatient")
-    INPATIENT,
+	/**
+	* Includes dispenses for medications to be administered or consumed in an inpatient or acute care setting
+	*/
+	@Json(name = "inpatient")
+	INPATIENT,
 
-    /**
-     * Includes dispenses for medications to be administered or consumed in an outpatient setting
-     * (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
-     */
-    @Json(name = "outpatient")
-    OUTPATIENT,
+	/**
+	* Includes dispenses for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+	*/
+	@Json(name = "outpatient")
+	OUTPATIENT,
 
-    /**
-     * Includes dispenses for medications to be administered or consumed by the patient in their
-     * home (this would include long term care or nursing homes, hospices, etc)
-     */
-    @Json(name = "community")
-    COMMUNITY,
+	/**
+	* Includes dispenses for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc)
+	*/
+	@Json(name = "community")
+	COMMUNITY,
 }

@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * Complete, proposed, exploratory, other
  *
@@ -26,27 +27,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemUse {
 
-    /**
-     * The treatment is complete and this represents a Claim for the services.
-     */
-    @Json(name = "complete")
-    COMPLETE,
+	/**
+	* The treatment is complete and this represents a Claim for the services.
+	*/
+	@Json(name = "complete")
+	COMPLETE,
 
-    /**
-     * The treatment is proposed and this represents a Pre-authorization for the services.
-     */
-    @Json(name = "proposed")
-    PROPOSED,
+	/**
+	* The treatment is proposed and this represents a Pre-authorization for the services.
+	*/
+	@Json(name = "proposed")
+	PROPOSED,
 
-    /**
-     * The treatment is proposed and this represents a Pre-determination for the services.
-     */
-    @Json(name = "exploratory")
-    EXPLORATORY,
+	/**
+	* The treatment is proposed and this represents a Pre-determination for the services.
+	*/
+	@Json(name = "exploratory")
+	EXPLORATORY,
 
-    /**
-     * A locally defined or otherwise resolved status.
-     */
-    @Json(name = "other")
-    OTHER,
+	/**
+	* A locally defined or otherwise resolved status.
+	*/
+	@Json(name = "other")
+	OTHER,
 }

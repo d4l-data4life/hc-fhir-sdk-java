@@ -19,6 +19,7 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * A set of generally useful codes defined so they can be included in value sets.
  *
@@ -26,40 +27,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSpecialValues {
 
-    /**
-     * Boolean true.
-     */
-    @Json(name = "true")
-    TRUE,
+	/**
+	* Boolean true.
+	*/
+	@Json(name = "true")
+	TRUE,
 
-    /**
-     * Boolean false.
-     */
-    @Json(name = "false")
-    FALSE,
+	/**
+	* Boolean false.
+	*/
+	@Json(name = "false")
+	FALSE,
 
-    /**
-     * The content is greater than zero, but too small to be quantified.
-     */
-    @Json(name = "trace")
-    TRACE,
+	/**
+	* The content is greater than zero, but too small to be quantified.
+	*/
+	@Json(name = "trace")
+	TRACE,
 
-    /**
-     * The specific quantity is not known, but is known to be non-zero and is not specified because
-     * it makes up the bulk of the material.
-     */
-    @Json(name = "sufficient")
-    SUFFICIENT,
+	/**
+	* The specific quantity is not known, but is known to be non-zero and is not specified because it makes up the bulk of the material.
+	*/
+	@Json(name = "sufficient")
+	SUFFICIENT,
 
-    /**
-     * The value is no longer available.
-     */
-    @Json(name = "withdrawn")
-    WITHDRAWN,
+	/**
+	* The value is no longer available.
+	*/
+	@Json(name = "withdrawn")
+	WITHDRAWN,
 
-    /**
-     * The are no known applicable values in this context.
-     */
-    @Json(name = "nil-known")
-    NIL_KNOWN,
+	/**
+	* The are no known applicable values in this context.
+	*/
+	@Json(name = "nil-known")
+	NIL_KNOWN,
 }

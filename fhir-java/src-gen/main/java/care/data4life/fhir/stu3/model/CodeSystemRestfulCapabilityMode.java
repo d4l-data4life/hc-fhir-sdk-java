@@ -19,6 +19,7 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
+
 /**
  * The mode of a RESTful capability statement.
  *
@@ -26,15 +27,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemRestfulCapabilityMode {
 
-    /**
-     * The application acts as a client for this resource.
-     */
-    @Json(name = "client")
-    CLIENT,
+	/**
+	* The application acts as a client for this resource.
+	*/
+	@Json(name = "client")
+	CLIENT,
 
-    /**
-     * The application acts as a server for this resource.
-     */
-    @Json(name = "server")
-    SERVER,
+	/**
+	* The application acts as a server for this resource.
+	*/
+	@Json(name = "server")
+	SERVER,
 }
