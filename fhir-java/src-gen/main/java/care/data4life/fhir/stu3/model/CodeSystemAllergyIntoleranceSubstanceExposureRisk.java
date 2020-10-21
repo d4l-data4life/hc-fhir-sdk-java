@@ -19,23 +19,23 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * The risk of an adverse reaction (allergy or intolerance) for this patient upon exposure to the substance (including pharmaceutical products).
+ * The risk of an adverse reaction (allergy or intolerance) for this patient upon exposure to the
+ * substance (including pharmaceutical products).
  *
  * @see <a href="http://hl7.org/fhir/allerg-intol-substance-exp-risk">AllergyIntoleranceSubstanceExposureRisk</a>
  */
 public enum CodeSystemAllergyIntoleranceSubstanceExposureRisk {
 
-	/**
-	* Known risk of allergy or intolerance reaction upon exposure to the specified substance.
-	*/
-	@Json(name = "known-reaction-risk")
-	KNOWN_REACTION_RISK,
+    /**
+     * Known risk of allergy or intolerance reaction upon exposure to the specified substance.
+     */
+    @Json(name = "known-reaction-risk")
+    KNOWN_REACTION_RISK,
 
-	/**
-	* No known risk of allergy or intolerance reaction upon exposure to the specified substance.
-	*/
-	@Json(name = "no-known-reaction-risk")
-	NO_KNOWN_REACTION_RISK,
+    /**
+     * No known risk of allergy or intolerance reaction upon exposure to the specified substance.
+     */
+    @Json(name = "no-known-reaction-risk")
+    NO_KNOWN_REACTION_RISK,
 }

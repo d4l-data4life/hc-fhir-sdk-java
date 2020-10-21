@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes representing the likelihood of a particular outcome in a risk assessment.
  *
@@ -27,33 +26,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemRiskProbability {
 
-	/**
-	* The specified outcome is exceptionally unlikely.
-	*/
-	@Json(name = "negligible")
-	NEGLIGIBLE,
+    /**
+     * The specified outcome is exceptionally unlikely.
+     */
+    @Json(name = "negligible")
+    NEGLIGIBLE,
 
-	/**
-	* The specified outcome is possible but unlikely.
-	*/
-	@Json(name = "low")
-	LOW,
+    /**
+     * The specified outcome is possible but unlikely.
+     */
+    @Json(name = "low")
+    LOW,
 
-	/**
-	* The specified outcome has a reasonable likelihood of occurrence.
-	*/
-	@Json(name = "moderate")
-	MODERATE,
+    /**
+     * The specified outcome has a reasonable likelihood of occurrence.
+     */
+    @Json(name = "moderate")
+    MODERATE,
 
-	/**
-	* The specified outcome is more likely to occur than not.
-	*/
-	@Json(name = "high")
-	HIGH,
+    /**
+     * The specified outcome is more likely to occur than not.
+     */
+    @Json(name = "high")
+    HIGH,
 
-	/**
-	* The specified outcome is effectively guaranteed.
-	*/
-	@Json(name = "certain")
-	CERTAIN,
+    /**
+     * The specified outcome is effectively guaranteed.
+     */
+    @Json(name = "certain")
+    CERTAIN,
 }

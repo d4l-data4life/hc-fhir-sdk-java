@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Contract Term Type codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContractTermTypeCodes {
 
-	/**
-	* Based on specialized statutes that deal with particular subjects.
-	*/
-	@Json(name = "statutory")
-	STATUTORY,
+    /**
+     * Based on specialized statutes that deal with particular subjects.
+     */
+    @Json(name = "statutory")
+    STATUTORY,
 
-	/**
-	* Execution of the term in the contract is conditional on the execution of other actions.
-	*/
-	@Json(name = "subject-to")
-	SUBJECT_TO,
+    /**
+     * Execution of the term in the contract is conditional on the execution of other actions.
+     */
+    @Json(name = "subject-to")
+    SUBJECT_TO,
 }

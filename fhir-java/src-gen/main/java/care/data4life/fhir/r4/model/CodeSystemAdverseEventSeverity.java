@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The severity of the adverse event itself, in direct relation to the subject.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAdverseEventSeverity {
 
-	/**
-	* mild
-	*/
-	@Json(name = "mild")
-	MILD,
+    /**
+     * mild
+     */
+    @Json(name = "mild")
+    MILD,
 
-	/**
-	* moderate
-	*/
-	@Json(name = "moderate")
-	MODERATE,
+    /**
+     * moderate
+     */
+    @Json(name = "moderate")
+    MODERATE,
 
-	/**
-	* severe
-	*/
-	@Json(name = "severe")
-	SEVERE,
+    /**
+     * severe
+     */
+    @Json(name = "severe")
+    SEVERE,
 }

@@ -19,59 +19,62 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * This example value set defines a set of codes that can be used to indicate the role of one Organization in relation to another.
+ * This example value set defines a set of codes that can be used to indicate the role of one
+ * Organization in relation to another.
  *
  * @see <a href="http://hl7.org/fhir/organization-role">OrganizationAffiliationRole</a>
  */
 public enum CodeSystemOrganizationAffiliationRole {
 
-	/**
-	* provider
-	*/
-	@Json(name = "provider")
-	PROVIDER,
+    /**
+     * provider
+     */
+    @Json(name = "provider")
+    PROVIDER,
 
-	/**
-	* An organization such as a public health agency, community/social services provider, etc.
-	*/
-	@Json(name = "agency")
-	AGENCY,
+    /**
+     * An organization such as a public health agency, community/social services provider, etc.
+     */
+    @Json(name = "agency")
+    AGENCY,
 
-	/**
-	* An organization providing research-related services such as conducting research, recruiting research participants, analyzing data, etc.
-	*/
-	@Json(name = "research")
-	RESEARCH,
+    /**
+     * An organization providing research-related services such as conducting research, recruiting
+     * research participants, analyzing data, etc.
+     */
+    @Json(name = "research")
+    RESEARCH,
 
-	/**
-	* An organization providing reimbursement, payment, or related services
-	*/
-	@Json(name = "payer")
-	PAYER,
+    /**
+     * An organization providing reimbursement, payment, or related services
+     */
+    @Json(name = "payer")
+    PAYER,
 
-	/**
-	* An organization providing diagnostic testing/laboratory services
-	*/
-	@Json(name = "diagnostics")
-	DIAGNOSTICS,
+    /**
+     * An organization providing diagnostic testing/laboratory services
+     */
+    @Json(name = "diagnostics")
+    DIAGNOSTICS,
 
-	/**
-	* An organization that provides medical supplies (e.g. medical devices, equipment, pharmaceutical products, etc.)
-	*/
-	@Json(name = "supplier")
-	SUPPLIER,
+    /**
+     * An organization that provides medical supplies (e.g. medical devices, equipment,
+     * pharmaceutical products, etc.)
+     */
+    @Json(name = "supplier")
+    SUPPLIER,
 
-	/**
-	* An organization that facilitates electronic clinical data exchange between entities
-	*/
-	@Json(name = "HIE/HIO")
-	HIE_HIO,
+    /**
+     * An organization that facilitates electronic clinical data exchange between entities
+     */
+    @Json(name = "HIE/HIO")
+    HIE_HIO,
 
-	/**
-	* A type of non-ownership relationship between entities (encompasses partnerships, collaboration, joint ventures, etc.)
-	*/
-	@Json(name = "member")
-	MEMBER,
+    /**
+     * A type of non-ownership relationship between entities (encompasses partnerships,
+     * collaboration, joint ventures, etc.)
+     */
+    @Json(name = "member")
+    MEMBER,
 }

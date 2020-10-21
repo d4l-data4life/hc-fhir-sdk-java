@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The intended usage for supplemental data elements in the measure
  *
@@ -27,15 +26,16 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMeasureDataUsage {
 
-	/**
-	* The data is intended to be provided as additional information alongside the measure results
-	*/
-	@Json(name = "supplemental-data")
-	SUPPLEMENTAL_DATA,
+    /**
+     * The data is intended to be provided as additional information alongside the measure results
+     */
+    @Json(name = "supplemental-data")
+    SUPPLEMENTAL_DATA,
 
-	/**
-	* The data is intended to be used to calculate and apply a risk adjustment model for the measure
-	*/
-	@Json(name = "risk-adjustment-factor")
-	RISK_ADJUSTMENT_FACTOR,
+    /**
+     * The data is intended to be used to calculate and apply a risk adjustment model for the
+     * measure
+     */
+    @Json(name = "risk-adjustment-factor")
+    RISK_ADJUSTMENT_FACTOR,
 }

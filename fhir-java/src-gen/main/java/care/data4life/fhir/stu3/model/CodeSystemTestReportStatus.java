@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The current status of the test report.
  *
@@ -27,33 +26,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemTestReportStatus {
 
-	/**
-	* All test operations have completed
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * All test operations have completed
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* A test operations is currently executing
-	*/
-	@Json(name = "in-progress")
-	IN_PROGRESS,
+    /**
+     * A test operations is currently executing
+     */
+    @Json(name = "in-progress")
+    IN_PROGRESS,
 
-	/**
-	* A test operation is waiting for an external client request
-	*/
-	@Json(name = "waiting")
-	WAITING,
+    /**
+     * A test operation is waiting for an external client request
+     */
+    @Json(name = "waiting")
+    WAITING,
 
-	/**
-	* The test script execution was manually stopped
-	*/
-	@Json(name = "stopped")
-	STOPPED,
+    /**
+     * The test script execution was manually stopped
+     */
+    @Json(name = "stopped")
+    STOPPED,
 
-	/**
-	* This test report was entered or created in error
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * This test report was entered or created in error
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

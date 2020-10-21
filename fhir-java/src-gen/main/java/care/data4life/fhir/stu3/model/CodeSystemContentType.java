@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The content or mime type.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContentType {
 
-	/**
-	* XML content-type corresponding to the application/fhir+xml mime-type.
-	*/
-	@Json(name = "xml")
-	XML,
+    /**
+     * XML content-type corresponding to the application/fhir+xml mime-type.
+     */
+    @Json(name = "xml")
+    XML,
 
-	/**
-	* JSON content-type corresponding to the application/fhir+json mime-type.
-	*/
-	@Json(name = "json")
-	JSON,
+    /**
+     * JSON content-type corresponding to the application/fhir+json mime-type.
+     */
+    @Json(name = "json")
+    JSON,
 
-	/**
-	* RDF content-type corresponding to the text/turtle mime-type.
-	*/
-	@Json(name = "ttl")
-	TTL,
+    /**
+     * RDF content-type corresponding to the text/turtle mime-type.
+     */
+    @Json(name = "ttl")
+    TTL,
 
-	/**
-	* Prevent the use of the corresponding http header.
-	*/
-	@Json(name = "none")
-	NONE,
+    /**
+     * Prevent the use of the corresponding http header.
+     */
+    @Json(name = "none")
+    NONE,
 }

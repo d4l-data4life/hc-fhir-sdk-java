@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Type for quality report
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemQualityType {
 
-	/**
-	* INDEL Comparison
-	*/
-	@Json(name = "indel")
-	INDEL,
+    /**
+     * INDEL Comparison
+     */
+    @Json(name = "indel")
+    INDEL,
 
-	/**
-	* SNP Comparison
-	*/
-	@Json(name = "snp")
-	SNP,
+    /**
+     * SNP Comparison
+     */
+    @Json(name = "snp")
+    SNP,
 
-	/**
-	* UNKNOWN Comparison
-	*/
-	@Json(name = "unknown")
-	UNKNOWN,
+    /**
+     * UNKNOWN Comparison
+     */
+    @Json(name = "unknown")
+    UNKNOWN,
 }

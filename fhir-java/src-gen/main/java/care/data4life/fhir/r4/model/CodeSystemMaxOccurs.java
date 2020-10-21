@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Flags an element as having unlimited repetitions.
  *
@@ -27,9 +26,9 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMaxOccurs {
 
-	/**
-	* Element can repeat an unlimited number of times.
-	*/
-	@Json(name = "*")
-	MAX,
+    /**
+     * Element can repeat an unlimited number of times.
+     */
+    @Json(name = "*")
+    MAX,
 }

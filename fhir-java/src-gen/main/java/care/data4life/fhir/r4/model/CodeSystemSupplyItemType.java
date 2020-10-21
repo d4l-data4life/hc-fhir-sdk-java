@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value sets refers to a specific supply item.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSupplyItemType {
 
-	/**
-	* Supply is a kind of medication.
-	*/
-	@Json(name = "medication")
-	MEDICATION,
+    /**
+     * Supply is a kind of medication.
+     */
+    @Json(name = "medication")
+    MEDICATION,
 
-	/**
-	* What is supplied (or requested) is a device.
-	*/
-	@Json(name = "device")
-	DEVICE,
+    /**
+     * What is supplied (or requested) is a device.
+     */
+    @Json(name = "device")
+    DEVICE,
 }

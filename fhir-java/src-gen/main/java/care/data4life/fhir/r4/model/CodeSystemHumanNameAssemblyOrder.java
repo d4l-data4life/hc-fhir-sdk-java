@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * A code that represents the preferred display order of the components of a human name.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemHumanNameAssemblyOrder {
 
-	/**
-	* NL1
-	*/
-	@Json(name = "NL1")
-	NL1,
+    /**
+     * NL1
+     */
+    @Json(name = "NL1")
+    NL1,
 
-	/**
-	* NL2
-	*/
-	@Json(name = "NL2")
-	NL2,
+    /**
+     * NL2
+     */
+    @Json(name = "NL2")
+    NL2,
 
-	/**
-	* NL3
-	*/
-	@Json(name = "NL3")
-	NL3,
+    /**
+     * NL3
+     */
+    @Json(name = "NL3")
+    NL3,
 
-	/**
-	* NL4
-	*/
-	@Json(name = "NL4")
-	NL4,
+    /**
+     * NL4
+     */
+    @Json(name = "NL4")
+    NL4,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes example Diagnosis on Admission codes.
  *
@@ -27,27 +26,29 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExampleDiagnosisOnAdmissionCodes {
 
-	/**
-	* Diagnosis was present at time of inpatient admission.
-	*/
-	@Json(name = "y")
-	Y,
+    /**
+     * Diagnosis was present at time of inpatient admission.
+     */
+    @Json(name = "y")
+    Y,
 
-	/**
-	* Diagnosis was not present at time of inpatient admission.
-	*/
-	@Json(name = "n")
-	N,
+    /**
+     * Diagnosis was not present at time of inpatient admission.
+     */
+    @Json(name = "n")
+    N,
 
-	/**
-	* Documentation insufficient to determine if condition was present at the time of inpatient admission.
-	*/
-	@Json(name = "u")
-	U,
+    /**
+     * Documentation insufficient to determine if condition was present at the time of inpatient
+     * admission.
+     */
+    @Json(name = "u")
+    U,
 
-	/**
-	* Clinically undetermined. Provider unable to clinically determine whether the condition was present at the time of inpatient admission.
-	*/
-	@Json(name = "w")
-	W,
+    /**
+     * Clinically undetermined. Provider unable to clinically determine whether the condition was
+     * present at the time of inpatient admission.
+     */
+    @Json(name = "w")
+    W,
 }

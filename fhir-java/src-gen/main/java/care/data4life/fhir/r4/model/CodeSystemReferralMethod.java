@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The methods of referral can be used when referring to a specific HealthCareService resource.
  *
@@ -27,33 +26,37 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemReferralMethod {
 
-	/**
-	* Referrals may be accepted by fax.
-	*/
-	@Json(name = "fax")
-	FAX,
+    /**
+     * Referrals may be accepted by fax.
+     */
+    @Json(name = "fax")
+    FAX,
 
-	/**
-	* Referrals may be accepted over the phone from a practitioner.
-	*/
-	@Json(name = "phone")
-	PHONE,
+    /**
+     * Referrals may be accepted over the phone from a practitioner.
+     */
+    @Json(name = "phone")
+    PHONE,
 
-	/**
-	* Referrals may be accepted via a secure messaging system. To determine the types of secure messaging systems supported, refer to the identifiers collection. Callers will need to understand the specific identifier system used to know that they are able to transmit messages.
-	*/
-	@Json(name = "elec")
-	ELEC,
+    /**
+     * Referrals may be accepted via a secure messaging system. To determine the types of secure
+     * messaging systems supported, refer to the identifiers collection. Callers will need to
+     * understand the specific identifier system used to know that they are able to transmit
+     * messages.
+     */
+    @Json(name = "elec")
+    ELEC,
 
-	/**
-	* Referrals may be accepted via a secure email. To send please encrypt with the services public key.
-	*/
-	@Json(name = "semail")
-	SEMAIL,
+    /**
+     * Referrals may be accepted via a secure email. To send please encrypt with the services public
+     * key.
+     */
+    @Json(name = "semail")
+    SEMAIL,
 
-	/**
-	* Referrals may be accepted via regular postage (or hand delivered).
-	*/
-	@Json(name = "mail")
-	MAIL,
+    /**
+     * Referrals may be accepted via regular postage (or hand delivered).
+     */
+    @Json(name = "mail")
+    MAIL,
 }

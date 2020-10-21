@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The status of a resource narrative
  *
@@ -27,27 +26,32 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemNarrativeStatus {
 
-	/**
-	* The contents of the narrative are entirely generated from the structured data in the content.
-	*/
-	@Json(name = "generated")
-	GENERATED,
+    /**
+     * The contents of the narrative are entirely generated from the structured data in the
+     * content.
+     */
+    @Json(name = "generated")
+    GENERATED,
 
-	/**
-	* The contents of the narrative are entirely generated from the structured data in the content and some of the content is generated from extensions
-	*/
-	@Json(name = "extensions")
-	EXTENSIONS,
+    /**
+     * The contents of the narrative are entirely generated from the structured data in the content
+     * and some of the content is generated from extensions
+     */
+    @Json(name = "extensions")
+    EXTENSIONS,
 
-	/**
-	* The contents of the narrative may contain additional information not found in the structured data. Note that there is no computable way to determine what the extra information is, other than by human inspection
-	*/
-	@Json(name = "additional")
-	ADDITIONAL,
+    /**
+     * The contents of the narrative may contain additional information not found in the structured
+     * data. Note that there is no computable way to determine what the extra information is, other
+     * than by human inspection
+     */
+    @Json(name = "additional")
+    ADDITIONAL,
 
-	/**
-	* The contents of the narrative are some equivalent of "No human-readable text provided in this case"
-	*/
-	@Json(name = "empty")
-	EMPTY,
+    /**
+     * The contents of the narrative are some equivalent of "No human-readable text provided in this
+     * case"
+     */
+    @Json(name = "empty")
+    EMPTY,
 }

@@ -18,45 +18,43 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * CodeableConcept.java
- *
- * A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
+ * <p>
+ * A concept that may be defined by a formal reference to a terminology or ontology or may be
+ * provided by text.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeableConcept">CodeableConcept</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeableConcept) on 2020-10-19
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeableConcept) on
+ * 2020-10-21
  */
-public class CodeableConcept extends Element  {
+public class CodeableConcept extends Element {
 
-	public static final String resourceType = "CodeableConcept";
-  
-	// Code defined by a terminology system.
+    public static final String resourceType = "CodeableConcept";
+
+    // Code defined by a terminology system.
     @Json(name = "coding")
-	@Nullable
-	public List<Coding> coding;
-  
-	// Plain text representation of the concept.
+    @Nullable
+    public List<Coding> coding;
+
+    // Plain text representation of the concept.
     @Json(name = "text")
-	@Nullable
-	public String text;
+    @Nullable
+    public String text;
 
-    
-	public CodeableConcept() {
-	}
-	@Override
-	public String getResourceType() {
-		return CodeableConcept.resourceType;
-	}
 
+    public CodeableConcept() {
+    }
+
+    @Override
+    public String getResourceType() {
+        return CodeableConcept.resourceType;
+    }
 
 
 }

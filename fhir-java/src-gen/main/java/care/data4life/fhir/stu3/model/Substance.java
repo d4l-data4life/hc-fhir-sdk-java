@@ -18,171 +18,169 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Substance.java
- *
+ * <p>
  * A homogeneous material with a definite composition
- * 
- * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
  *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Substance) on 2020-10-19
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Substance) on
+ * 2020-10-21
  */
-public class Substance extends DomainResource  {
+public class Substance extends DomainResource {
 
-	public static final String resourceType = "Substance";
-  
-	// Unique identifier.
+    public static final String resourceType = "Substance";
+
+    // Unique identifier.
     @Json(name = "identifier")
-	@Nullable
-	public List<Identifier> identifier;
-  
-	// A code to indicate if the substance is actively used.
+    @Nullable
+    public List<Identifier> identifier;
+
+    // A code to indicate if the substance is actively used.
     @Json(name = "status")
-	@Nullable
-	public CodeSystemFHIRSubstanceStatus status;
-  
-	// What class/type of substance this is.
+    @Nullable
+    public CodeSystemFHIRSubstanceStatus status;
+
+    // What class/type of substance this is.
     @Json(name = "category")
-	@Nullable
-	public List<CodeableConcept> category;
-  
-	// What substance this is.
+    @Nullable
+    public List<CodeableConcept> category;
+
+    // What substance this is.
     @Json(name = "code")
-	public CodeableConcept code;
-  
-	// Textual description of the substance, comments.
+    public CodeableConcept code;
+
+    // Textual description of the substance, comments.
     @Json(name = "description")
-	@Nullable
-	public String description;
-  
-	// If this describes a specific package/container of the substance.
+    @Nullable
+    public String description;
+
+    // If this describes a specific package/container of the substance.
     @Json(name = "instance")
-	@Nullable
-	public List<SubstanceInstance> instance;
-  
-	// Composition information about the substance.
+    @Nullable
+    public List<SubstanceInstance> instance;
+
+    // Composition information about the substance.
     @Json(name = "ingredient")
-	@Nullable
-	public List<SubstanceIngredient> ingredient;
-
-    
-	/**
-	 * Constructor for all required properties.
-	 *
-	 * @param code CodeableConcept
-	 *
-	 */
-	public Substance(CodeableConcept code) {
-		this.code = code;
-	}@Override
-	public String getResourceType() {
-		return Substance.resourceType;
-	}
+    @Nullable
+    public List<SubstanceIngredient> ingredient;
 
 
+    /**
+     * Constructor for all required properties.
+     *
+     * @param code CodeableConcept
+     */
+    public Substance(CodeableConcept code) {
+        this.code = code;
+    }
+
+    @Override
+    public String getResourceType() {
+        return Substance.resourceType;
+    }
 
 
-/**
- * Substance.java
- *
- * A substance can be composed of other substances.
- *
- * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Substance) on 2020-10-19
- */
-public static class SubstanceIngredient extends BackboneElement  {
+    /**
+     * Substance.java
+     * <p>
+     * A substance can be composed of other substances.
+     *
+     * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
+     * <p>
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Substance) on
+     * 2020-10-21
+     */
+    public static class SubstanceIngredient extends BackboneElement {
 
-	public static final String resourceType = "SubstanceIngredient";
-  
-	// Optional amount (concentration).
-    @Json(name = "quantity")
-	@Nullable
-	public Ratio quantity;
-  
-	// A component of the substance.
-    @Json(name = "substanceCodeableConcept")
-	@Nullable
-	public CodeableConcept substanceCodeableConcept;
-  
-	// A component of the substance.
-    @Json(name = "substanceReference")
-	@Nullable
-	public Reference substanceReference;
+        public static final String resourceType = "SubstanceIngredient";
 
-    
-	/**
-	 * Constructor for all required properties.
-	 *
-	 * @param substance as one of CodeableConcept, Reference*
-	 *
-	 */
-	public SubstanceIngredient(Object substance) {
-		if (substance instanceof CodeableConcept) {
-			this.substanceCodeableConcept = (CodeableConcept) substance;
-		}
-		else if (substance instanceof Reference) {
-			this.substanceReference = (Reference) substance;
-		}
-		else {
-			//FIXME Type: (of: substance)) for property (substance) is invalid, ignoring")
-		}
-	}@Override
-	public String getResourceType() {
-		return SubstanceIngredient.resourceType;
-	}
+        // Optional amount (concentration).
+        @Json(name = "quantity")
+        @Nullable
+        public Ratio quantity;
+
+        // A component of the substance.
+        @Json(name = "substanceCodeableConcept")
+        @Nullable
+        public CodeableConcept substanceCodeableConcept;
+
+        // A component of the substance.
+        @Json(name = "substanceReference")
+        @Nullable
+        public Reference substanceReference;
 
 
-}
+        /**
+         * Constructor for all required properties.
+         *
+         * @param substance as one of CodeableConcept, Reference*
+         */
+        public SubstanceIngredient(Object substance) {
+            if (substance instanceof CodeableConcept) {
+                this.substanceCodeableConcept = (CodeableConcept) substance;
+            } else if (substance instanceof Reference) {
+                this.substanceReference = (Reference) substance;
+            } else {
+                //FIXME Type: (of: substance)) for property (substance) is invalid, ignoring")
+            }
+        }
+
+        @Override
+        public String getResourceType() {
+            return SubstanceIngredient.resourceType;
+        }
 
 
-
-/**
- * Substance.java
- *
- * Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance.
- *
- * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Substance) on 2020-10-19
- */
-public static class SubstanceInstance extends BackboneElement  {
-
-	public static final String resourceType = "SubstanceInstance";
-  
-	// Identifier of the package/container.
-    @Json(name = "identifier")
-	@Nullable
-	public Identifier identifier;
-  
-	// When no longer valid to use.
-    @Json(name = "expiry")
-	@Nullable
-	public FhirDateTime expiry;
-  
-	// Amount of substance in the package.
-    @Json(name = "quantity")
-	@Nullable
-	public Quantity quantity;
-
-    
-	public SubstanceInstance() {
-	}
-	@Override
-	public String getResourceType() {
-		return SubstanceInstance.resourceType;
-	}
+    }
 
 
-}
+    /**
+     * Substance.java
+     * <p>
+     * Substance may be used to describe a kind of substance, or a specific package/container of the
+     * substance: an instance.
+     *
+     * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
+     * <p>
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Substance) on
+     * 2020-10-21
+     */
+    public static class SubstanceInstance extends BackboneElement {
+
+        public static final String resourceType = "SubstanceInstance";
+
+        // Identifier of the package/container.
+        @Json(name = "identifier")
+        @Nullable
+        public Identifier identifier;
+
+        // When no longer valid to use.
+        @Json(name = "expiry")
+        @Nullable
+        public FhirDateTime expiry;
+
+        // Amount of substance in the package.
+        @Json(name = "quantity")
+        @Nullable
+        public Quantity quantity;
+
+
+        public SubstanceInstance() {
+        }
+
+        @Override
+        public String getResourceType() {
+            return SubstanceInstance.resourceType;
+        }
+
+
+    }
 
 
 }

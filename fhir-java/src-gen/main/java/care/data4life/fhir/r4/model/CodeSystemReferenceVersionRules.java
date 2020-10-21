@@ -19,29 +19,29 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Whether a reference needs to be version specific or version independent, or whether either can be used.
+ * Whether a reference needs to be version specific or version independent, or whether either can be
+ * used.
  *
  * @see <a href="http://hl7.org/fhir/reference-version-rules">ReferenceVersionRules</a>
  */
 public enum CodeSystemReferenceVersionRules {
 
-	/**
-	* The reference may be either version independent or version specific.
-	*/
-	@Json(name = "either")
-	EITHER,
+    /**
+     * The reference may be either version independent or version specific.
+     */
+    @Json(name = "either")
+    EITHER,
 
-	/**
-	* The reference must be version independent.
-	*/
-	@Json(name = "independent")
-	INDEPENDENT,
+    /**
+     * The reference must be version independent.
+     */
+    @Json(name = "independent")
+    INDEPENDENT,
 
-	/**
-	* The reference must be version specific.
-	*/
-	@Json(name = "specific")
-	SPECIFIC,
+    /**
+     * The reference must be version specific.
+     */
+    @Json(name = "specific")
+    SPECIFIC,
 }

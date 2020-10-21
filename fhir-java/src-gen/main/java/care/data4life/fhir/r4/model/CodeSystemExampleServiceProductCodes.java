@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes a smattering of Service/Product codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExampleServiceProductCodes {
 
-	/**
-	* Exam
-	*/
-	@Json(name = "exam")
-	EXAM,
+    /**
+     * Exam
+     */
+    @Json(name = "exam")
+    EXAM,
 
-	/**
-	* Flu shot
-	*/
-	@Json(name = "flushot")
-	FLUSHOT,
+    /**
+     * Flu shot
+     */
+    @Json(name = "flushot")
+    FLUSHOT,
 }

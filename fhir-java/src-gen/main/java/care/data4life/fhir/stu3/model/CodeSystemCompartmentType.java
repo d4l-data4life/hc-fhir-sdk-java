@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Which compartment a compartment definition describes
  *
@@ -27,33 +26,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCompartmentType {
 
-	/**
-	* The compartment definition is for the patient compartment
-	*/
-	@Json(name = "Patient")
-	PATIENT,
+    /**
+     * The compartment definition is for the patient compartment
+     */
+    @Json(name = "Patient")
+    PATIENT,
 
-	/**
-	* The compartment definition is for the encounter compartment
-	*/
-	@Json(name = "Encounter")
-	ENCOUNTER,
+    /**
+     * The compartment definition is for the encounter compartment
+     */
+    @Json(name = "Encounter")
+    ENCOUNTER,
 
-	/**
-	* The compartment definition is for the related-person compartment
-	*/
-	@Json(name = "RelatedPerson")
-	RELATEDPERSON,
+    /**
+     * The compartment definition is for the related-person compartment
+     */
+    @Json(name = "RelatedPerson")
+    RELATEDPERSON,
 
-	/**
-	* The compartment definition is for the practitioner compartment
-	*/
-	@Json(name = "Practitioner")
-	PRACTITIONER,
+    /**
+     * The compartment definition is for the practitioner compartment
+     */
+    @Json(name = "Practitioner")
+    PRACTITIONER,
 
-	/**
-	* The compartment definition is for the device compartment
-	*/
-	@Json(name = "Device")
-	DEVICE,
+    /**
+     * The compartment definition is for the device compartment
+     */
+    @Json(name = "Device")
+    DEVICE,
 }

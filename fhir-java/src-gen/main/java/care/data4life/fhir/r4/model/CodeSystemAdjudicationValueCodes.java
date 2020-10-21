@@ -19,59 +19,59 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * This value set includes a smattering of Adjudication Value codes which includes codes to indicate the amounts eligible under the plan, the amount of benefit, copays etc.
+ * This value set includes a smattering of Adjudication Value codes which includes codes to indicate
+ * the amounts eligible under the plan, the amount of benefit, copays etc.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/adjudication">AdjudicationValueCodes</a>
  */
 public enum CodeSystemAdjudicationValueCodes {
 
-	/**
-	* The total submitted amount for the claim or group or line item.
-	*/
-	@Json(name = "submitted")
-	SUBMITTED,
+    /**
+     * The total submitted amount for the claim or group or line item.
+     */
+    @Json(name = "submitted")
+    SUBMITTED,
 
-	/**
-	* Patient Co-Payment
-	*/
-	@Json(name = "copay")
-	COPAY,
+    /**
+     * Patient Co-Payment
+     */
+    @Json(name = "copay")
+    COPAY,
 
-	/**
-	* Amount of the change which is considered for adjudication.
-	*/
-	@Json(name = "eligible")
-	ELIGIBLE,
+    /**
+     * Amount of the change which is considered for adjudication.
+     */
+    @Json(name = "eligible")
+    ELIGIBLE,
 
-	/**
-	* Amount deducted from the eligible amount prior to adjudication.
-	*/
-	@Json(name = "deductible")
-	DEDUCTIBLE,
+    /**
+     * Amount deducted from the eligible amount prior to adjudication.
+     */
+    @Json(name = "deductible")
+    DEDUCTIBLE,
 
-	/**
-	* The amount of deductible which could not allocated to other line items.
-	*/
-	@Json(name = "unallocdeduct")
-	UNALLOCDEDUCT,
+    /**
+     * The amount of deductible which could not allocated to other line items.
+     */
+    @Json(name = "unallocdeduct")
+    UNALLOCDEDUCT,
 
-	/**
-	* Eligible Percentage.
-	*/
-	@Json(name = "eligpercent")
-	ELIGPERCENT,
+    /**
+     * Eligible Percentage.
+     */
+    @Json(name = "eligpercent")
+    ELIGPERCENT,
 
-	/**
-	* The amount of tax.
-	*/
-	@Json(name = "tax")
-	TAX,
+    /**
+     * The amount of tax.
+     */
+    @Json(name = "tax")
+    TAX,
 
-	/**
-	* Amount payable under the coverage
-	*/
-	@Json(name = "benefit")
-	BENEFIT,
+    /**
+     * Amount payable under the coverage
+     */
+    @Json(name = "benefit")
+    BENEFIT,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Describes the operational status of the DeviceMetric.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDeviceMetricOperationalStatus {
 
-	/**
-	* The DeviceMetric is operating and will generate DeviceObservations.
-	*/
-	@Json(name = "on")
-	ON,
+    /**
+     * The DeviceMetric is operating and will generate DeviceObservations.
+     */
+    @Json(name = "on")
+    ON,
 
-	/**
-	* The DeviceMetric is not operating.
-	*/
-	@Json(name = "off")
-	OFF,
+    /**
+     * The DeviceMetric is not operating.
+     */
+    @Json(name = "off")
+    OFF,
 
-	/**
-	* The DeviceMetric is operating, but will not generate any DeviceObservations.
-	*/
-	@Json(name = "standby")
-	STANDBY,
+    /**
+     * The DeviceMetric is operating, but will not generate any DeviceObservations.
+     */
+    @Json(name = "standby")
+    STANDBY,
 
-	/**
-	* The DeviceMetric was entered in error.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The DeviceMetric was entered in error.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

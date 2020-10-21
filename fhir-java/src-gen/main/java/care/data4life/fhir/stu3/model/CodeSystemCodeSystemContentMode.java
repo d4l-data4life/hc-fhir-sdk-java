@@ -19,35 +19,35 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * How much of the content of the code system - the concepts and codes it defines - are represented in a code system resource
+ * How much of the content of the code system - the concepts and codes it defines - are represented
+ * in a code system resource
  *
  * @see <a href="http://hl7.org/fhir/codesystem-content-mode">CodeSystemContentMode</a>
  */
 public enum CodeSystemCodeSystemContentMode {
 
-	/**
-	* None of the concepts defined by the code system are included in the code system resource
-	*/
-	@Json(name = "not-present")
-	NOT_PRESENT,
+    /**
+     * None of the concepts defined by the code system are included in the code system resource
+     */
+    @Json(name = "not-present")
+    NOT_PRESENT,
 
-	/**
-	* A few representative concepts are included in the code system resource
-	*/
-	@Json(name = "example")
-	EXAMPLE,
+    /**
+     * A few representative concepts are included in the code system resource
+     */
+    @Json(name = "example")
+    EXAMPLE,
 
-	/**
-	* A subset of the code system concepts are included in the code system resource
-	*/
-	@Json(name = "fragment")
-	FRAGMENT,
+    /**
+     * A subset of the code system concepts are included in the code system resource
+     */
+    @Json(name = "fragment")
+    FRAGMENT,
 
-	/**
-	* All the concepts defined by the code system are included in the code system resource
-	*/
-	@Json(name = "complete")
-	COMPLETE,
+    /**
+     * All the concepts defined by the code system are included in the code system resource
+     */
+    @Json(name = "complete")
+    COMPLETE,
 }

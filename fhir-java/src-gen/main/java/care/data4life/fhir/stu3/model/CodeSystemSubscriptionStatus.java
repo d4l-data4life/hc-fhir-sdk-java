@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The status of a subscription.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSubscriptionStatus {
 
-	/**
-	* The client has requested the subscription, and the server has not yet set it up.
-	*/
-	@Json(name = "requested")
-	REQUESTED,
+    /**
+     * The client has requested the subscription, and the server has not yet set it up.
+     */
+    @Json(name = "requested")
+    REQUESTED,
 
-	/**
-	* The subscription is active.
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * The subscription is active.
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* The server has an error executing the notification.
-	*/
-	@Json(name = "error")
-	ERROR,
+    /**
+     * The server has an error executing the notification.
+     */
+    @Json(name = "error")
+    ERROR,
 
-	/**
-	* Too many errors have occurred or the subscription has expired.
-	*/
-	@Json(name = "off")
-	OFF,
+    /**
+     * Too many errors have occurred or the subscription has expired.
+     */
+    @Json(name = "off")
+    OFF,
 }

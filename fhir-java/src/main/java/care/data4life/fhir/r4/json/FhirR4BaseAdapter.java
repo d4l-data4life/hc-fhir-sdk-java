@@ -29,8 +29,8 @@ import java.util.Map;
 
 import javax.annotation.Nullable;
 
-import care.data4life.fhir.r4.model.FhirR4Base;
 import care.data4life.fhir.r4.model.DomainResource;
+import care.data4life.fhir.r4.model.FhirR4Base;
 import care.data4life.fhir.r4.model.Resource;
 
 public class FhirR4BaseAdapter extends JsonAdapter<FhirR4Base> {

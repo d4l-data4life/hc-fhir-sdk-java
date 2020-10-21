@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set contract specific codes for scope.
  *
@@ -27,9 +26,9 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContractResourceScopeCodes {
 
-	/**
-	* To be completed
-	*/
-	@Json(name = "policy")
-	POLICY,
+    /**
+     * To be completed
+     */
+    @Json(name = "policy")
+    POLICY,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Overall seriousness of this event for the patient
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAdverseEventSeriousness {
 
-	/**
-	* mild
-	*/
-	@Json(name = "Mild")
-	MILD,
+    /**
+     * mild
+     */
+    @Json(name = "Mild")
+    MILD,
 
-	/**
-	* moderate
-	*/
-	@Json(name = "Moderate")
-	MODERATE,
+    /**
+     * moderate
+     */
+    @Json(name = "Moderate")
+    MODERATE,
 
-	/**
-	* severe
-	*/
-	@Json(name = "Severe")
-	SEVERE,
+    /**
+     * severe
+     */
+    @Json(name = "Severe")
+    SEVERE,
 }

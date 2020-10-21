@@ -18,81 +18,74 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
-
 import javax.annotation.Nullable;
 
 /**
  * SampledData.java
- *
- * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
+ * <p>
+ * A series of measurements taken by a device, with upper and lower limits. There may be more than
+ * one dimension in the data.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/SampledData">SampledData</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/SampledData) on 2020-10-19
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/SampledData) on
+ * 2020-10-21
  */
-public class SampledData extends Element  {
+public class SampledData extends Element {
 
-	public static final String resourceType = "SampledData";
-  
-	// Zero value and units.
+    public static final String resourceType = "SampledData";
+
+    // Zero value and units.
     @Json(name = "origin")
-	public Quantity origin;
-  
-	// Number of milliseconds between samples.
+    public Quantity origin;
+
+    // Number of milliseconds between samples.
     @Json(name = "period")
-	public FhirDecimal period;
-  
-	// Multiply data by this before adding to origin.
+    public FhirDecimal period;
+
+    // Multiply data by this before adding to origin.
     @Json(name = "factor")
-	@Nullable
-	public FhirDecimal factor;
-  
-	// Lower limit of detection.
+    @Nullable
+    public FhirDecimal factor;
+
+    // Lower limit of detection.
     @Json(name = "lowerLimit")
-	@Nullable
-	public FhirDecimal lowerLimit;
-  
-	// Upper limit of detection.
+    @Nullable
+    public FhirDecimal lowerLimit;
+
+    // Upper limit of detection.
     @Json(name = "upperLimit")
-	@Nullable
-	public FhirDecimal upperLimit;
-  
-	// Number of sample points at each time point.
+    @Nullable
+    public FhirDecimal upperLimit;
+
+    // Number of sample points at each time point.
     @Json(name = "dimensions")
-	public Integer dimensions;
-  
-	// Decimal values with spaces, or "E" | "U" | "L".
+    public Integer dimensions;
+
+    // Decimal values with spaces, or "E" | "U" | "L".
     @Json(name = "data")
-	public String data;
+    public String data;
 
-    
-	/**
-	 * Constructor for all required properties.
-	 *
-	 * @param origin Quantity
-	 *
-	 * @param period FhirDecimal
-	 *
-	 * @param dimensions Integer
-	 *
-	 * @param data String
-	 *
-	 */
-	public SampledData(Quantity origin, FhirDecimal period, Integer dimensions, String data) {
-		this.origin = origin;
-		this.period = period;
-		this.dimensions = dimensions;
-		this.data = data;
-	}@Override
-	public String getResourceType() {
-		return SampledData.resourceType;
-	}
 
+    /**
+     * Constructor for all required properties.
+     *
+     * @param origin     Quantity
+     * @param period     FhirDecimal
+     * @param dimensions Integer
+     * @param data       String
+     */
+    public SampledData(Quantity origin, FhirDecimal period, Integer dimensions, String data) {
+        this.origin = origin;
+        this.period = period;
+        this.dimensions = dimensions;
+        this.data = data;
+    }
+
+    @Override
+    public String getResourceType() {
+        return SampledData.resourceType;
+    }
 
 
 }

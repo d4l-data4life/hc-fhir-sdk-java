@@ -18,45 +18,41 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Element.java
- *
+ * <p>
  * Base definition for all elements in a resource.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Element">Element</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Element) on 2020-10-19
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Element) on 2020-10-21
  */
 public class Element extends FhirStu3Base {
 
-	public static final String resourceType = "Element";
-  
-	// xml:id (or equivalent in JSON).
+    public static final String resourceType = "Element";
+
+    // xml:id (or equivalent in JSON).
     @Json(name = "id")
-	@Nullable
-	public String id;
-  
-	// Additional Content defined by implementations.
+    @Nullable
+    public String id;
+
+    // Additional Content defined by implementations.
     @Json(name = "extension")
-	@Nullable
-	public List<Extension> extension;
+    @Nullable
+    public List<Extension> extension;
 
-    
-	public Element() {
-	}
-	@Override
-	public String getResourceType() {
-		return Element.resourceType;
-	}
 
+    public Element() {
+    }
+
+    @Override
+    public String getResourceType() {
+        return Element.resourceType;
+    }
 
 
 }

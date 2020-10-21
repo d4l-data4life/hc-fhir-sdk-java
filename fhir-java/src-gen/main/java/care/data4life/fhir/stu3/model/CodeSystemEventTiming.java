@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Real world event relating to the schedule.
  *
@@ -27,33 +26,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemEventTiming {
 
-	/**
-	* event occurs during the morning
-	*/
-	@Json(name = "MORN")
-	MORN,
+    /**
+     * event occurs during the morning
+     */
+    @Json(name = "MORN")
+    MORN,
 
-	/**
-	* event occurs during the afternoon
-	*/
-	@Json(name = "AFT")
-	AFT,
+    /**
+     * event occurs during the afternoon
+     */
+    @Json(name = "AFT")
+    AFT,
 
-	/**
-	* event occurs during the evening
-	*/
-	@Json(name = "EVE")
-	EVE,
+    /**
+     * event occurs during the evening
+     */
+    @Json(name = "EVE")
+    EVE,
 
-	/**
-	* event occurs during the night
-	*/
-	@Json(name = "NIGHT")
-	NIGHT,
+    /**
+     * event occurs during the night
+     */
+    @Json(name = "NIGHT")
+    NIGHT,
 
-	/**
-	* event occurs [offset] after subject goes to sleep
-	*/
-	@Json(name = "PHS")
-	PHS,
+    /**
+     * event occurs [offset] after subject goes to sleep
+     */
+    @Json(name = "PHS")
+    PHS,
 }

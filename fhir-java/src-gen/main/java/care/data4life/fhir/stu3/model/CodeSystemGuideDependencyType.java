@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * How a dependency is represented when the guide is published.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGuideDependencyType {
 
-	/**
-	* The guide is referred to by URL.
-	*/
-	@Json(name = "reference")
-	REFERENCE,
+    /**
+     * The guide is referred to by URL.
+     */
+    @Json(name = "reference")
+    REFERENCE,
 
-	/**
-	* The guide is embedded in this guide when published.
-	*/
-	@Json(name = "inclusion")
-	INCLUSION,
+    /**
+     * The guide is embedded in this guide when published.
+     */
+    @Json(name = "inclusion")
+    INCLUSION,
 }

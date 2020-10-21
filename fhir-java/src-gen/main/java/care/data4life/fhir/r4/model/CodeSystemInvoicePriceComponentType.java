@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes indicating the kind of the price component.
  *
@@ -27,39 +26,41 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemInvoicePriceComponentType {
 
-	/**
-	* the amount is the base price used for calculating the total price before applying surcharges, discount or taxes.
-	*/
-	@Json(name = "base")
-	BASE,
+    /**
+     * the amount is the base price used for calculating the total price before applying surcharges,
+     * discount or taxes.
+     */
+    @Json(name = "base")
+    BASE,
 
-	/**
-	* the amount is a surcharge applied on the base price.
-	*/
-	@Json(name = "surcharge")
-	SURCHARGE,
+    /**
+     * the amount is a surcharge applied on the base price.
+     */
+    @Json(name = "surcharge")
+    SURCHARGE,
 
-	/**
-	* the amount is a deduction applied on the base price.
-	*/
-	@Json(name = "deduction")
-	DEDUCTION,
+    /**
+     * the amount is a deduction applied on the base price.
+     */
+    @Json(name = "deduction")
+    DEDUCTION,
 
-	/**
-	* the amount is a discount applied on the base price.
-	*/
-	@Json(name = "discount")
-	DISCOUNT,
+    /**
+     * the amount is a discount applied on the base price.
+     */
+    @Json(name = "discount")
+    DISCOUNT,
 
-	/**
-	* the amount is the tax component of the total price.
-	*/
-	@Json(name = "tax")
-	TAX,
+    /**
+     * the amount is the tax component of the total price.
+     */
+    @Json(name = "tax")
+    TAX,
 
-	/**
-	* the amount is of informational character, it has not been applied in the calculation of the total price.
-	*/
-	@Json(name = "informational")
-	INFORMATIONAL,
+    /**
+     * the amount is of informational character, it has not been applied in the calculation of the
+     * total price.
+     */
+    @Json(name = "informational")
+    INFORMATIONAL,
 }

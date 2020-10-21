@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes CoverageEligibilityResponse Auth Support codes.
  *
@@ -27,51 +26,52 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCoverageEligibilityResponseAuthSupportCodes {
 
-	/**
-	* A request or authorization for laboratory diagnostic tests.
-	*/
-	@Json(name = "laborder")
-	LABORDER,
+    /**
+     * A request or authorization for laboratory diagnostic tests.
+     */
+    @Json(name = "laborder")
+    LABORDER,
 
-	/**
-	* A report on laboratory diagnostic test(s).
-	*/
-	@Json(name = "labreport")
-	LABREPORT,
+    /**
+     * A report on laboratory diagnostic test(s).
+     */
+    @Json(name = "labreport")
+    LABREPORT,
 
-	/**
-	* A request or authorization for diagnostic imaging.
-	*/
-	@Json(name = "diagnosticimageorder")
-	DIAGNOSTICIMAGEORDER,
+    /**
+     * A request or authorization for diagnostic imaging.
+     */
+    @Json(name = "diagnosticimageorder")
+    DIAGNOSTICIMAGEORDER,
 
-	/**
-	* A report on diagnostic image(s).
-	*/
-	@Json(name = "diagnosticimagereport")
-	DIAGNOSTICIMAGEREPORT,
+    /**
+     * A report on diagnostic image(s).
+     */
+    @Json(name = "diagnosticimagereport")
+    DIAGNOSTICIMAGEREPORT,
 
-	/**
-	* A report from a licensed professional regarding the siutation, condition or proposed treatment.
-	*/
-	@Json(name = "professionalreport")
-	PROFESSIONALREPORT,
+    /**
+     * A report from a licensed professional regarding the siutation, condition or proposed
+     * treatment.
+     */
+    @Json(name = "professionalreport")
+    PROFESSIONALREPORT,
 
-	/**
-	* A formal accident report as would be filed with police or a simlar official body.
-	*/
-	@Json(name = "accidentreport")
-	ACCIDENTREPORT,
+    /**
+     * A formal accident report as would be filed with police or a simlar official body.
+     */
+    @Json(name = "accidentreport")
+    ACCIDENTREPORT,
 
-	/**
-	* A physical model of the affected area.
-	*/
-	@Json(name = "model")
-	MODEL,
+    /**
+     * A physical model of the affected area.
+     */
+    @Json(name = "model")
+    MODEL,
 
-	/**
-	* A photograph of the affected area.
-	*/
-	@Json(name = "picture")
-	PICTURE,
+    /**
+     * A photograph of the affected area.
+     */
+    @Json(name = "picture")
+    PICTURE,
 }

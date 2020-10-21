@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes identifying the category of observation range.
  *
@@ -27,21 +26,22 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemObservationRangeCategory {
 
-	/**
-	* Reference (Normal) Range for Ordinal and Continuous Observations.
-	*/
-	@Json(name = "reference")
-	REFERENCE,
+    /**
+     * Reference (Normal) Range for Ordinal and Continuous Observations.
+     */
+    @Json(name = "reference")
+    REFERENCE,
 
-	/**
-	* Critical Range for Ordinal and Continuous Observations.
-	*/
-	@Json(name = "critical")
-	CRITICAL,
+    /**
+     * Critical Range for Ordinal and Continuous Observations.
+     */
+    @Json(name = "critical")
+    CRITICAL,
 
-	/**
-	* Absolute Range for Ordinal and Continuous Observations. Results outside this range are not possible.
-	*/
-	@Json(name = "absolute")
-	ABSOLUTE,
+    /**
+     * Absolute Range for Ordinal and Continuous Observations. Results outside this range are not
+     * possible.
+     */
+    @Json(name = "absolute")
+    ABSOLUTE,
 }

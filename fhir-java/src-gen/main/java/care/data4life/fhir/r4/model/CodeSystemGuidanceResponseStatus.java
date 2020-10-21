@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The status of a guidance response.
  *
@@ -27,39 +26,40 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGuidanceResponseStatus {
 
-	/**
-	* The request was processed successfully.
-	*/
-	@Json(name = "success")
-	SUCCESS,
+    /**
+     * The request was processed successfully.
+     */
+    @Json(name = "success")
+    SUCCESS,
 
-	/**
-	* The request was processed successfully, but more data may result in a more complete evaluation.
-	*/
-	@Json(name = "data-requested")
-	DATA_REQUESTED,
+    /**
+     * The request was processed successfully, but more data may result in a more complete
+     * evaluation.
+     */
+    @Json(name = "data-requested")
+    DATA_REQUESTED,
 
-	/**
-	* The request was processed, but more data is required to complete the evaluation.
-	*/
-	@Json(name = "data-required")
-	DATA_REQUIRED,
+    /**
+     * The request was processed, but more data is required to complete the evaluation.
+     */
+    @Json(name = "data-required")
+    DATA_REQUIRED,
 
-	/**
-	* The request is currently being processed.
-	*/
-	@Json(name = "in-progress")
-	IN_PROGRESS,
+    /**
+     * The request is currently being processed.
+     */
+    @Json(name = "in-progress")
+    IN_PROGRESS,
 
-	/**
-	* The request was not processed successfully.
-	*/
-	@Json(name = "failure")
-	FAILURE,
+    /**
+     * The request was not processed successfully.
+     */
+    @Json(name = "failure")
+    FAILURE,
 
-	/**
-	* The response was entered in error.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The response was entered in error.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

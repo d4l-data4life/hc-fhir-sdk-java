@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Medication Status Codes
  *
@@ -27,27 +26,31 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationUsageCategoryCodes {
 
-	/**
-	* Includes orders for medications to be administered or consumed in an inpatient or acute care setting
-	*/
-	@Json(name = "inpatient")
-	INPATIENT,
+    /**
+     * Includes orders for medications to be administered or consumed in an inpatient or acute care
+     * setting
+     */
+    @Json(name = "inpatient")
+    INPATIENT,
 
-	/**
-	* Includes orders for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
-	*/
-	@Json(name = "outpatient")
-	OUTPATIENT,
+    /**
+     * Includes orders for medications to be administered or consumed in an outpatient setting (for
+     * example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+     */
+    @Json(name = "outpatient")
+    OUTPATIENT,
 
-	/**
-	* Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
-	*/
-	@Json(name = "community")
-	COMMUNITY,
+    /**
+     * Includes orders for medications to be administered or consumed by the patient in their home
+     * (this would include long term care or nursing homes, hospices, etc.).
+     */
+    @Json(name = "community")
+    COMMUNITY,
 
-	/**
-	* Includes statements about medication use, including over the counter medication, provided by the patient, agent or another provider
-	*/
-	@Json(name = "patientspecified")
-	PATIENTSPECIFIED,
+    /**
+     * Includes statements about medication use, including over the counter medication, provided by
+     * the patient, agent or another provider
+     */
+    @Json(name = "patientspecified")
+    PATIENTSPECIFIED,
 }

@@ -19,59 +19,64 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * A coded concept specifying the state of the prescribing event. Describes the lifecycle of the prescription
+ * A coded concept specifying the state of the prescribing event. Describes the lifecycle of the
+ * prescription
  *
  * @see <a href="http://hl7.org/fhir/medication-request-status">MedicationRequestStatus</a>
  */
 public enum CodeSystemMedicationRequestStatus {
 
-	/**
-	* The prescription is 'actionable', but not all actions that are implied by it have occurred yet.
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * The prescription is 'actionable', but not all actions that are implied by it have occurred
+     * yet.
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* Actions implied by the prescription are to be temporarily halted, but are expected to continue later.  May also be called "suspended".
-	*/
-	@Json(name = "on-hold")
-	ON_HOLD,
+    /**
+     * Actions implied by the prescription are to be temporarily halted, but are expected to
+     * continue later.  May also be called "suspended".
+     */
+    @Json(name = "on-hold")
+    ON_HOLD,
 
-	/**
-	* The prescription has been withdrawn.
-	*/
-	@Json(name = "cancelled")
-	CANCELLED,
+    /**
+     * The prescription has been withdrawn.
+     */
+    @Json(name = "cancelled")
+    CANCELLED,
 
-	/**
-	* All actions that are implied by the prescription have occurred.
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * All actions that are implied by the prescription have occurred.
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* The prescription was entered in error.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The prescription was entered in error.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 
-	/**
-	* Actions implied by the prescription are to be permanently halted, before all of them occurred.
-	*/
-	@Json(name = "stopped")
-	STOPPED,
+    /**
+     * Actions implied by the prescription are to be permanently halted, before all of them
+     * occurred.
+     */
+    @Json(name = "stopped")
+    STOPPED,
 
-	/**
-	* The prescription is not yet 'actionable', i.e. it is a work in progress, requires sign-off or verification, and needs to be run through decision support process.
-	*/
-	@Json(name = "draft")
-	DRAFT,
+    /**
+     * The prescription is not yet 'actionable', i.e. it is a work in progress, requires sign-off or
+     * verification, and needs to be run through decision support process.
+     */
+    @Json(name = "draft")
+    DRAFT,
 
-	/**
-	* The authoring system does not know which of the status values currently applies for this request
-	*/
-	@Json(name = "unknown")
-	UNKNOWN,
+    /**
+     * The authoring system does not know which of the status values currently applies for this
+     * request
+     */
+    @Json(name = "unknown")
+    UNKNOWN,
 }

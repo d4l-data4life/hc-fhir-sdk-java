@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The type of the measure report
  *
@@ -27,21 +26,24 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMeasureReportType {
 
-	/**
-	* An individual report that provides information on the performance for a given measure with respect to a single patient
-	*/
-	@Json(name = "individual")
-	INDIVIDUAL,
+    /**
+     * An individual report that provides information on the performance for a given measure with
+     * respect to a single patient
+     */
+    @Json(name = "individual")
+    INDIVIDUAL,
 
-	/**
-	* A patient list report that includes a listing of patients that satisfied each population criteria in the measure
-	*/
-	@Json(name = "patient-list")
-	PATIENT_LIST,
+    /**
+     * A patient list report that includes a listing of patients that satisfied each population
+     * criteria in the measure
+     */
+    @Json(name = "patient-list")
+    PATIENT_LIST,
 
-	/**
-	* A summary report that returns the number of patients in each population criteria for the measure
-	*/
-	@Json(name = "summary")
-	SUMMARY,
+    /**
+     * A summary report that returns the number of patients in each population criteria for the
+     * measure
+     */
+    @Json(name = "summary")
+    SUMMARY,
 }

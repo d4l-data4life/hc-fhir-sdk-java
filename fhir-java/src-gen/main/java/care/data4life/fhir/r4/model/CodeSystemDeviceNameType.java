@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The type of name the device is referred by.
  *
@@ -27,39 +26,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDeviceNameType {
 
-	/**
-	* UDI Label name.
-	*/
-	@Json(name = "udi-label-name")
-	UDI_LABEL_NAME,
+    /**
+     * UDI Label name.
+     */
+    @Json(name = "udi-label-name")
+    UDI_LABEL_NAME,
 
-	/**
-	* User Friendly name.
-	*/
-	@Json(name = "user-friendly-name")
-	USER_FRIENDLY_NAME,
+    /**
+     * User Friendly name.
+     */
+    @Json(name = "user-friendly-name")
+    USER_FRIENDLY_NAME,
 
-	/**
-	* Patient Reported name.
-	*/
-	@Json(name = "patient-reported-name")
-	PATIENT_REPORTED_NAME,
+    /**
+     * Patient Reported name.
+     */
+    @Json(name = "patient-reported-name")
+    PATIENT_REPORTED_NAME,
 
-	/**
-	* Manufacturer name.
-	*/
-	@Json(name = "manufacturer-name")
-	MANUFACTURER_NAME,
+    /**
+     * Manufacturer name.
+     */
+    @Json(name = "manufacturer-name")
+    MANUFACTURER_NAME,
 
-	/**
-	* Model name.
-	*/
-	@Json(name = "model-name")
-	MODEL_NAME,
+    /**
+     * Model name.
+     */
+    @Json(name = "model-name")
+    MODEL_NAME,
 
-	/**
-	* other.
-	*/
-	@Json(name = "other")
-	OTHER,
+    /**
+     * other.
+     */
+    @Json(name = "other")
+    OTHER,
 }

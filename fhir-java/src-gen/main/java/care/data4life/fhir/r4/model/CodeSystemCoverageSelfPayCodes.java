@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes Coverage SelfPay codes.
  *
@@ -27,9 +26,9 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCoverageSelfPayCodes {
 
-	/**
-	* An individual or organization is paying directly for goods and services.
-	*/
-	@Json(name = "pay")
-	PAY,
+    /**
+     * An individual or organization is paying directly for goods and services.
+     */
+    @Json(name = "pay")
+    PAY,
 }

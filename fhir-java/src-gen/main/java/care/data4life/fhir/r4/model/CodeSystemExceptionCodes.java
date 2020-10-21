@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Exception codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExceptionCodes {
 
-	/**
-	* Fulltime Student
-	*/
-	@Json(name = "student")
-	STUDENT,
+    /**
+     * Fulltime Student
+     */
+    @Json(name = "student")
+    STUDENT,
 
-	/**
-	* Disabled
-	*/
-	@Json(name = "disabled")
-	DISABLED,
+    /**
+     * Disabled
+     */
+    @Json(name = "disabled")
+    DISABLED,
 }

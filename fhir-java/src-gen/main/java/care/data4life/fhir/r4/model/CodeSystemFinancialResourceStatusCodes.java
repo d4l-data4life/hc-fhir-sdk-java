@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes Status codes.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemFinancialResourceStatusCodes {
 
-	/**
-	* The instance is currently in-force.
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * The instance is currently in-force.
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* The instance is withdrawn, rescinded or reversed.
-	*/
-	@Json(name = "cancelled")
-	CANCELLED,
+    /**
+     * The instance is withdrawn, rescinded or reversed.
+     */
+    @Json(name = "cancelled")
+    CANCELLED,
 
-	/**
-	* A new instance the contents of which is not complete.
-	*/
-	@Json(name = "draft")
-	DRAFT,
+    /**
+     * A new instance the contents of which is not complete.
+     */
+    @Json(name = "draft")
+    DRAFT,
 
-	/**
-	* The instance was entered in error.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The instance was entered in error.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

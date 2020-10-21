@@ -18,80 +18,78 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * TriggerDefinition.java
- *
- * A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.
+ * <p>
+ * A description of a triggering event. Triggering events can be named events, data events, or
+ * periodic, as determined by the type element.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/TriggerDefinition">TriggerDefinition</a>
- *
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/TriggerDefinition) on 2020-10-19
+ * <p>
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/TriggerDefinition)
+ * on 2020-10-21
  */
-public class TriggerDefinition extends Element  {
+public class TriggerDefinition extends Element {
 
-	public static final String resourceType = "TriggerDefinition";
-  
-	// The type of triggering event.
+    public static final String resourceType = "TriggerDefinition";
+
+    // The type of triggering event.
     @Json(name = "type")
-	public CodeSystemTriggerType type;
-  
-	// Name or URI that identifies the event.
+    public CodeSystemTriggerType type;
+
+    // Name or URI that identifies the event.
     @Json(name = "name")
-	@Nullable
-	public String name;
-  
-	// Timing of the event.
+    @Nullable
+    public String name;
+
+    // Timing of the event.
     @Json(name = "timingTiming")
-	@Nullable
-	public Timing timingTiming;
-  
-	// Timing of the event.
+    @Nullable
+    public Timing timingTiming;
+
+    // Timing of the event.
     @Json(name = "timingReference")
-	@Nullable
-	public Reference timingReference;
-  
-	// Timing of the event.
+    @Nullable
+    public Reference timingReference;
+
+    // Timing of the event.
     @Json(name = "timingDate")
-	@Nullable
-	public FhirDate timingDate;
-  
-	// Timing of the event.
+    @Nullable
+    public FhirDate timingDate;
+
+    // Timing of the event.
     @Json(name = "timingDateTime")
-	@Nullable
-	public FhirDateTime timingDateTime;
-  
-	// Triggering data of the event (multiple = 'and').
+    @Nullable
+    public FhirDateTime timingDateTime;
+
+    // Triggering data of the event (multiple = 'and').
     @Json(name = "data")
-	@Nullable
-	public List<DataRequirement> data;
-  
-	// Whether the event triggers (boolean expression).
+    @Nullable
+    public List<DataRequirement> data;
+
+    // Whether the event triggers (boolean expression).
     @Json(name = "condition")
-	@Nullable
-	public Expression condition;
+    @Nullable
+    public Expression condition;
 
-    
-	/**
-	 * Constructor for all required properties.
-	 *
-	 * @param type CodeSystemTriggerType
-	 *
-	 */
-	public TriggerDefinition(CodeSystemTriggerType type) {
-		this.type = type;
-	}@Override
-	public String getResourceType() {
-		return TriggerDefinition.resourceType;
-	}
 
+    /**
+     * Constructor for all required properties.
+     *
+     * @param type CodeSystemTriggerType
+     */
+    public TriggerDefinition(CodeSystemTriggerType type) {
+        this.type = type;
+    }
+
+    @Override
+    public String getResourceType() {
+        return TriggerDefinition.resourceType;
+    }
 
 
 }

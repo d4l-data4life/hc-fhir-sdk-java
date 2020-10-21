@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Example use codes for the List resource - typical kinds of use.
  *
@@ -27,57 +26,58 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExampleUseCodesForList {
 
-	/**
-	* A list of alerts for the patient.
-	*/
-	@Json(name = "alerts")
-	ALERTS,
+    /**
+     * A list of alerts for the patient.
+     */
+    @Json(name = "alerts")
+    ALERTS,
 
-	/**
-	* A list of part adverse reactions.
-	*/
-	@Json(name = "adverserxns")
-	ADVERSERXNS,
+    /**
+     * A list of part adverse reactions.
+     */
+    @Json(name = "adverserxns")
+    ADVERSERXNS,
 
-	/**
-	* A list of Allergies for the patient.
-	*/
-	@Json(name = "allergies")
-	ALLERGIES,
+    /**
+     * A list of Allergies for the patient.
+     */
+    @Json(name = "allergies")
+    ALLERGIES,
 
-	/**
-	* A list of medication statements for the patient.
-	*/
-	@Json(name = "medications")
-	MEDICATIONS,
+    /**
+     * A list of medication statements for the patient.
+     */
+    @Json(name = "medications")
+    MEDICATIONS,
 
-	/**
-	* A list of problems that the patient is known of have (or have had in the past).
-	*/
-	@Json(name = "problems")
-	PROBLEMS,
+    /**
+     * A list of problems that the patient is known of have (or have had in the past).
+     */
+    @Json(name = "problems")
+    PROBLEMS,
 
-	/**
-	* A list of items that constitute a set of work to be performed (typically this code would be specialized for more specific uses, such as a ward round list).
-	*/
-	@Json(name = "worklist")
-	WORKLIST,
+    /**
+     * A list of items that constitute a set of work to be performed (typically this code would be
+     * specialized for more specific uses, such as a ward round list).
+     */
+    @Json(name = "worklist")
+    WORKLIST,
 
-	/**
-	* A list of items waiting for an event (perhaps a surgical patient waiting list).
-	*/
-	@Json(name = "waiting")
-	WAITING,
+    /**
+     * A list of items waiting for an event (perhaps a surgical patient waiting list).
+     */
+    @Json(name = "waiting")
+    WAITING,
 
-	/**
-	* A set of protocols to be followed.
-	*/
-	@Json(name = "protocols")
-	PROTOCOLS,
+    /**
+     * A set of protocols to be followed.
+     */
+    @Json(name = "protocols")
+    PROTOCOLS,
 
-	/**
-	* A set of care plans that apply in a particular context of care.
-	*/
-	@Json(name = "plans")
-	PLANS,
+    /**
+     * A set of care plans that apply in a particular context of care.
+     */
+    @Json(name = "plans")
+    PLANS,
 }

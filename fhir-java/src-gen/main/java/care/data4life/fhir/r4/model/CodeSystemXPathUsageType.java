@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * How a search parameter relates to the set of elements returned by evaluating its xpath query.
  *
@@ -27,33 +26,35 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemXPathUsageType {
 
-	/**
-	* The search parameter is derived directly from the selected nodes based on the type definitions.
-	*/
-	@Json(name = "normal")
-	NORMAL,
+    /**
+     * The search parameter is derived directly from the selected nodes based on the type
+     * definitions.
+     */
+    @Json(name = "normal")
+    NORMAL,
 
-	/**
-	* The search parameter is derived by a phonetic transform from the selected nodes.
-	*/
-	@Json(name = "phonetic")
-	PHONETIC,
+    /**
+     * The search parameter is derived by a phonetic transform from the selected nodes.
+     */
+    @Json(name = "phonetic")
+    PHONETIC,
 
-	/**
-	* The search parameter is based on a spatial transform of the selected nodes.
-	*/
-	@Json(name = "nearby")
-	NEARBY,
+    /**
+     * The search parameter is based on a spatial transform of the selected nodes.
+     */
+    @Json(name = "nearby")
+    NEARBY,
 
-	/**
-	* The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle.
-	*/
-	@Json(name = "distance")
-	DISTANCE,
+    /**
+     * The search parameter is based on a spatial transform of the selected nodes, using physical
+     * distance from the middle.
+     */
+    @Json(name = "distance")
+    DISTANCE,
 
-	/**
-	* The interpretation of the xpath statement is unknown (and can't be automated).
-	*/
-	@Json(name = "other")
-	OTHER,
+    /**
+     * The interpretation of the xpath statement is unknown (and can't be automated).
+     */
+    @Json(name = "other")
+    OTHER,
 }

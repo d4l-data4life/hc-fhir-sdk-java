@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Contract Actor Role codes.
  *
@@ -27,15 +26,16 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContractActorRoleCodes {
 
-	/**
-	* Someone who provides health care related services to people or animals including both clinical and support services.
-	*/
-	@Json(name = "practitioner")
-	PRACTITIONER,
+    /**
+     * Someone who provides health care related services to people or animals including both
+     * clinical and support services.
+     */
+    @Json(name = "practitioner")
+    PRACTITIONER,
 
-	/**
-	* A receiver, human or animal, of health care related goods and services.
-	*/
-	@Json(name = "patient")
-	PATIENT,
+    /**
+     * A receiver, human or animal, of health care related goods and services.
+     */
+    @Json(name = "patient")
+    PATIENT,
 }

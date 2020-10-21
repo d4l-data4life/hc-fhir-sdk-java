@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The mode of a message capability statement.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemEventCapabilityMode {
 
-	/**
-	* The application sends requests and receives responses.
-	*/
-	@Json(name = "sender")
-	SENDER,
+    /**
+     * The application sends requests and receives responses.
+     */
+    @Json(name = "sender")
+    SENDER,
 
-	/**
-	* The application receives requests and sends responses.
-	*/
-	@Json(name = "receiver")
-	RECEIVER,
+    /**
+     * The application receives requests and sends responses.
+     */
+    @Json(name = "receiver")
+    RECEIVER,
 }

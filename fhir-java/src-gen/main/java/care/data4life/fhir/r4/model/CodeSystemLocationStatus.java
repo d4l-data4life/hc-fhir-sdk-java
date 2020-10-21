@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Indicates whether the location is still in use.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemLocationStatus {
 
-	/**
-	* The location is operational.
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * The location is operational.
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* The location is temporarily closed.
-	*/
-	@Json(name = "suspended")
-	SUSPENDED,
+    /**
+     * The location is temporarily closed.
+     */
+    @Json(name = "suspended")
+    SUSPENDED,
 
-	/**
-	* The location is no longer used.
-	*/
-	@Json(name = "inactive")
-	INACTIVE,
+    /**
+     * The location is no longer used.
+     */
+    @Json(name = "inactive")
+    INACTIVE,
 }

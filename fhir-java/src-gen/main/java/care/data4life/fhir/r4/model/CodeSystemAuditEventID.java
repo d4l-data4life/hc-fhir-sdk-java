@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Event Types for Audit Events - defined by DICOM with some FHIR specific additions.
  *
@@ -27,9 +26,9 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAuditEventID {
 
-	/**
-	* Audit Event: Execution of a RESTful operation as defined by FHIR.
-	*/
-	@Json(name = "rest")
-	REST,
+    /**
+     * Audit Event: Execution of a RESTful operation as defined by FHIR.
+     */
+    @Json(name = "rest")
+    REST,
 }

@@ -18,45 +18,39 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
-
 import javax.annotation.Nullable;
 
 /**
  * Range.java
- *
+ * <p>
  * A set of ordered Quantities defined by a low and high limit.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Range">Range</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Range) on 2020-10-19
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Range) on 2020-10-21
  */
-public class Range extends Element  {
+public class Range extends Element {
 
-	public static final String resourceType = "Range";
-  
-	// Low limit.
+    public static final String resourceType = "Range";
+
+    // Low limit.
     @Json(name = "low")
-	@Nullable
-	public Quantity low;
-  
-	// High limit.
+    @Nullable
+    public Quantity low;
+
+    // High limit.
     @Json(name = "high")
-	@Nullable
-	public Quantity high;
+    @Nullable
+    public Quantity high;
 
-    
-	public Range() {
-	}
-	@Override
-	public String getResourceType() {
-		return Range.resourceType;
-	}
 
+    public Range() {
+    }
+
+    @Override
+    public String getResourceType() {
+        return Range.resourceType;
+    }
 
 
 }

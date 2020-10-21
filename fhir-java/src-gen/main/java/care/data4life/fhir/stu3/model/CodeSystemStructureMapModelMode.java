@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * How the referenced structure is used in this mapping
  *
@@ -27,27 +26,31 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemStructureMapModelMode {
 
-	/**
-	* This structure describes an instance passed to the mapping engine that is used a source of data
-	*/
-	@Json(name = "source")
-	SOURCE,
+    /**
+     * This structure describes an instance passed to the mapping engine that is used a source of
+     * data
+     */
+    @Json(name = "source")
+    SOURCE,
 
-	/**
-	* This structure describes an instance that the mapping engine may ask for that is used a source of data
-	*/
-	@Json(name = "queried")
-	QUERIED,
+    /**
+     * This structure describes an instance that the mapping engine may ask for that is used a
+     * source of data
+     */
+    @Json(name = "queried")
+    QUERIED,
 
-	/**
-	* This structure describes an instance passed to the mapping engine that is used a target of data
-	*/
-	@Json(name = "target")
-	TARGET,
+    /**
+     * This structure describes an instance passed to the mapping engine that is used a target of
+     * data
+     */
+    @Json(name = "target")
+    TARGET,
 
-	/**
-	* This structure describes an instance that the mapping engine may ask to create that is used a target of data
-	*/
-	@Json(name = "produced")
-	PRODUCED,
+    /**
+     * This structure describes an instance that the mapping engine may ask to create that is used a
+     * target of data
+     */
+    @Json(name = "produced")
+    PRODUCED,
 }

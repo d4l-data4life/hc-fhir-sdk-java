@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Real world event relating to the schedule.
  *
@@ -27,75 +26,87 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemEventTiming {
 
-	/**
-	* Event occurs during the morning. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "MORN")
-	MORN,
+    /**
+     * Event occurs during the morning. The exact time is unspecified and established by institution
+     * convention or patient interpretation.
+     */
+    @Json(name = "MORN")
+    MORN,
 
-	/**
-	* Event occurs during the early morning. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "MORN.early")
-	MORN_EARLY,
+    /**
+     * Event occurs during the early morning. The exact time is unspecified and established by
+     * institution convention or patient interpretation.
+     */
+    @Json(name = "MORN.early")
+    MORN_EARLY,
 
-	/**
-	* Event occurs during the late morning. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "MORN.late")
-	MORN_LATE,
+    /**
+     * Event occurs during the late morning. The exact time is unspecified and established by
+     * institution convention or patient interpretation.
+     */
+    @Json(name = "MORN.late")
+    MORN_LATE,
 
-	/**
-	* Event occurs around 12:00pm. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "NOON")
-	NOON,
+    /**
+     * Event occurs around 12:00pm. The exact time is unspecified and established by institution
+     * convention or patient interpretation.
+     */
+    @Json(name = "NOON")
+    NOON,
 
-	/**
-	* Event occurs during the afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "AFT")
-	AFT,
+    /**
+     * Event occurs during the afternoon. The exact time is unspecified and established by
+     * institution convention or patient interpretation.
+     */
+    @Json(name = "AFT")
+    AFT,
 
-	/**
-	* Event occurs during the early afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "AFT.early")
-	AFT_EARLY,
+    /**
+     * Event occurs during the early afternoon. The exact time is unspecified and established by
+     * institution convention or patient interpretation.
+     */
+    @Json(name = "AFT.early")
+    AFT_EARLY,
 
-	/**
-	* Event occurs during the late afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "AFT.late")
-	AFT_LATE,
+    /**
+     * Event occurs during the late afternoon. The exact time is unspecified and established by
+     * institution convention or patient interpretation.
+     */
+    @Json(name = "AFT.late")
+    AFT_LATE,
 
-	/**
-	* Event occurs during the evening. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "EVE")
-	EVE,
+    /**
+     * Event occurs during the evening. The exact time is unspecified and established by institution
+     * convention or patient interpretation.
+     */
+    @Json(name = "EVE")
+    EVE,
 
-	/**
-	* Event occurs during the early evening. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "EVE.early")
-	EVE_EARLY,
+    /**
+     * Event occurs during the early evening. The exact time is unspecified and established by
+     * institution convention or patient interpretation.
+     */
+    @Json(name = "EVE.early")
+    EVE_EARLY,
 
-	/**
-	* Event occurs during the late evening. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "EVE.late")
-	EVE_LATE,
+    /**
+     * Event occurs during the late evening. The exact time is unspecified and established by
+     * institution convention or patient interpretation.
+     */
+    @Json(name = "EVE.late")
+    EVE_LATE,
 
-	/**
-	* Event occurs during the night. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "NIGHT")
-	NIGHT,
+    /**
+     * Event occurs during the night. The exact time is unspecified and established by institution
+     * convention or patient interpretation.
+     */
+    @Json(name = "NIGHT")
+    NIGHT,
 
-	/**
-	* Event occurs [offset] after subject goes to sleep. The exact time is unspecified and established by institution convention or patient interpretation.
-	*/
-	@Json(name = "PHS")
-	PHS,
+    /**
+     * Event occurs [offset] after subject goes to sleep. The exact time is unspecified and
+     * established by institution convention or patient interpretation.
+     */
+    @Json(name = "PHS")
+    PHS,
 }

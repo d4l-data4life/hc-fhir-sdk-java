@@ -26,7 +26,7 @@ package care.data4life.fhir.r4.model;
  * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/canonical) on
  * 2020-10-15
  */
-public class Canonical extends Element {
+public class Canonical {
 
     public static final String resourceType = "Canonical";
 
@@ -46,10 +46,8 @@ public class Canonical extends Element {
         this.version = version;
     }
 
-    @Override
     public String getResourceType() {
-        return Canonical.resourceType;
+        return resourceType;
     }
-
 
 }

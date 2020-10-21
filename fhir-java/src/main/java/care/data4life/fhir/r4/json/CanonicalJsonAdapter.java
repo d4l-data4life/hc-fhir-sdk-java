@@ -51,6 +51,8 @@ public class CanonicalJsonAdapter extends JsonAdapter<Canonical> {
                 writer.value("|");
                 writer.value(value.version);
             }
+        } else {
+            writer.nullValue();
         }
     }
 }

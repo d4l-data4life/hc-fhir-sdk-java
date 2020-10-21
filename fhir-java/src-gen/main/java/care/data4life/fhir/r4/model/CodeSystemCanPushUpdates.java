@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Ability of the primary source to push updates/alerts
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCanPushUpdates {
 
-	/**
-	* yes
-	*/
-	@Json(name = "yes")
-	YES,
+    /**
+     * yes
+     */
+    @Json(name = "yes")
+    YES,
 
-	/**
-	* no
-	*/
-	@Json(name = "no")
-	NO,
+    /**
+     * no
+     */
+    @Json(name = "no")
+    NO,
 
-	/**
-	* undetermined
-	*/
-	@Json(name = "undetermined")
-	UNDETERMINED,
+    /**
+     * undetermined
+     */
+    @Json(name = "undetermined")
+    UNDETERMINED,
 }

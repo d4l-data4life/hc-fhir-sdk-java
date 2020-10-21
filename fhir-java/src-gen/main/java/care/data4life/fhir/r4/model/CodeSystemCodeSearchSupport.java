@@ -19,23 +19,25 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * The degree to which the server supports the code search parameter on ValueSet, if it is supported.
+ * The degree to which the server supports the code search parameter on ValueSet, if it is
+ * supported.
  *
  * @see <a href="http://hl7.org/fhir/code-search-support">CodeSearchSupport</a>
  */
 public enum CodeSystemCodeSearchSupport {
 
-	/**
-	* The search for code on ValueSet only includes codes explicitly detailed on includes or expansions.
-	*/
-	@Json(name = "explicit")
-	EXPLICIT,
+    /**
+     * The search for code on ValueSet only includes codes explicitly detailed on includes or
+     * expansions.
+     */
+    @Json(name = "explicit")
+    EXPLICIT,
 
-	/**
-	* The search for code on ValueSet only includes all codes based on the expansion of the value set.
-	*/
-	@Json(name = "all")
-	ALL,
+    /**
+     * The search for code on ValueSet only includes all codes based on the expansion of the value
+     * set.
+     */
+    @Json(name = "all")
+    ALL,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The lifecycle status of a Value Set or Concept Map.
  *
@@ -27,27 +26,30 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemPublicationStatus {
 
-	/**
-	* This resource is still under development and is not yet considered to be ready for normal use.
-	*/
-	@Json(name = "draft")
-	DRAFT,
+    /**
+     * This resource is still under development and is not yet considered to be ready for normal
+     * use.
+     */
+    @Json(name = "draft")
+    DRAFT,
 
-	/**
-	* This resource is ready for normal use.
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * This resource is ready for normal use.
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* This resource has been withdrawn or superseded and should no longer be used.
-	*/
-	@Json(name = "retired")
-	RETIRED,
+    /**
+     * This resource has been withdrawn or superseded and should no longer be used.
+     */
+    @Json(name = "retired")
+    RETIRED,
 
-	/**
-	* The authoring system does not know which of the status values currently applies for this resource.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
-	*/
-	@Json(name = "unknown")
-	UNKNOWN,
+    /**
+     * The authoring system does not know which of the status values currently applies for this
+     * resource.  Note: This concept is not to be used for "other" - one of the listed statuses is
+     * presumed to apply, it's just not known which one.
+     */
+    @Json(name = "unknown")
+    UNKNOWN,
 }

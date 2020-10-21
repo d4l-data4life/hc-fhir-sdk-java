@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * High-level categorization of the type of activity.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemActivityDefinitionCategory {
 
-	/**
-	* The activity is intended to provide or is related to treatment of the patient.
-	*/
-	@Json(name = "treatment")
-	TREATMENT,
+    /**
+     * The activity is intended to provide or is related to treatment of the patient.
+     */
+    @Json(name = "treatment")
+    TREATMENT,
 
-	/**
-	* The activity is intended to provide or is related to education of the patient.
-	*/
-	@Json(name = "education")
-	EDUCATION,
+    /**
+     * The activity is intended to provide or is related to education of the patient.
+     */
+    @Json(name = "education")
+    EDUCATION,
 
-	/**
-	* The activity is intended to perform or is related to assessment of the patient.
-	*/
-	@Json(name = "assessment")
-	ASSESSMENT,
+    /**
+     * The activity is intended to perform or is related to assessment of the patient.
+     */
+    @Json(name = "assessment")
+    ASSESSMENT,
 }

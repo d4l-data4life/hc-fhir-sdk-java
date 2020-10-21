@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Defines how concepts are processed into the expansion when it's for UI presentation.
  *
@@ -27,21 +26,22 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExpansionProcessingRule {
 
-	/**
-	* The expansion (when in UI mode) includes all codes *and* any defined groups (in extensions).
-	*/
-	@Json(name = "all-codes")
-	ALL_CODES,
+    /**
+     * The expansion (when in UI mode) includes all codes *and* any defined groups (in extensions).
+     */
+    @Json(name = "all-codes")
+    ALL_CODES,
 
-	/**
-	* The expanion (when in UI mode) lists the groups, and then any codes that have not been included in a group.
-	*/
-	@Json(name = "ungrouped")
-	UNGROUPED,
+    /**
+     * The expanion (when in UI mode) lists the groups, and then any codes that have not been
+     * included in a group.
+     */
+    @Json(name = "ungrouped")
+    UNGROUPED,
 
-	/**
-	* The expansion (when in UI mode) only includes the defined groups.
-	*/
-	@Json(name = "groups-only")
-	GROUPS_ONLY,
+    /**
+     * The expansion (when in UI mode) only includes the defined groups.
+     */
+    @Json(name = "groups-only")
+    GROUPS_ONLY,
 }

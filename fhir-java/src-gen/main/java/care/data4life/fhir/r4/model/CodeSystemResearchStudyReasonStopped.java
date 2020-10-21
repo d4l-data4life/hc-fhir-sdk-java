@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes for why the study ended prematurely.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemResearchStudyReasonStopped {
 
-	/**
-	* The study prematurely ended because the accrual goal was met.
-	*/
-	@Json(name = "accrual-goal-met")
-	ACCRUAL_GOAL_MET,
+    /**
+     * The study prematurely ended because the accrual goal was met.
+     */
+    @Json(name = "accrual-goal-met")
+    ACCRUAL_GOAL_MET,
 
-	/**
-	* The study prematurely ended due to toxicity.
-	*/
-	@Json(name = "closed-due-to-toxicity")
-	CLOSED_DUE_TO_TOXICITY,
+    /**
+     * The study prematurely ended due to toxicity.
+     */
+    @Json(name = "closed-due-to-toxicity")
+    CLOSED_DUE_TO_TOXICITY,
 
-	/**
-	* The study prematurely ended due to lack of study progress.
-	*/
-	@Json(name = "closed-due-to-lack-of-study-progress")
-	CLOSED_DUE_TO_LACK_OF_STUDY_PROGRESS,
+    /**
+     * The study prematurely ended due to lack of study progress.
+     */
+    @Json(name = "closed-due-to-lack-of-study-progress")
+    CLOSED_DUE_TO_LACK_OF_STUDY_PROGRESS,
 
-	/**
-	* The study prematurely ended temporarily per study design.
-	*/
-	@Json(name = "temporarily-closed-per-study-design")
-	TEMPORARILY_CLOSED_PER_STUDY_DESIGN,
+    /**
+     * The study prematurely ended temporarily per study design.
+     */
+    @Json(name = "temporarily-closed-per-study-design")
+    TEMPORARILY_CLOSED_PER_STUDY_DESIGN,
 }

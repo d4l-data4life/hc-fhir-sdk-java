@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Performer Role codes.
  *
@@ -27,33 +26,35 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemPerformerRoleCodes {
 
-	/**
-	* An entity or an entity's delegatee who is the grantee in an agreement such as a consent for services, advanced directive, or a privacy consent directive in accordance with jurisdictional, organizational, or patient policy.
-	*/
-	@Json(name = "consenter")
-	CONSENTER,
+    /**
+     * An entity or an entity's delegatee who is the grantee in an agreement such as a consent for
+     * services, advanced directive, or a privacy consent directive in accordance with
+     * jurisdictional, organizational, or patient policy.
+     */
+    @Json(name = "consenter")
+    CONSENTER,
 
-	/**
-	* An entity which accepts certain rights or authority from a grantor.
-	*/
-	@Json(name = "grantee")
-	GRANTEE,
+    /**
+     * An entity which accepts certain rights or authority from a grantor.
+     */
+    @Json(name = "grantee")
+    GRANTEE,
 
-	/**
-	* An entity which agrees to confer certain rights or authority to a grantee.
-	*/
-	@Json(name = "grantor")
-	GRANTOR,
+    /**
+     * An entity which agrees to confer certain rights or authority to a grantee.
+     */
+    @Json(name = "grantor")
+    GRANTOR,
 
-	/**
-	* A party to whom some right or authority is granted by a delegator.
-	*/
-	@Json(name = "delegatee")
-	DELEGATEE,
+    /**
+     * A party to whom some right or authority is granted by a delegator.
+     */
+    @Json(name = "delegatee")
+    DELEGATEE,
 
-	/**
-	* A party that grants all or some portion its right or authority to another party.
-	*/
-	@Json(name = "delegator")
-	DELEGATOR,
+    /**
+     * A party that grants all or some portion its right or authority to another party.
+     */
+    @Json(name = "delegator")
+    DELEGATOR,
 }

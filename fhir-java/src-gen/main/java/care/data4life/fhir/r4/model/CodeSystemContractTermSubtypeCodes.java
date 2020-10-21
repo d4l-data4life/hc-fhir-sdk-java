@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Contract Term SubType codes.
  *
@@ -27,21 +26,22 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContractTermSubtypeCodes {
 
-	/**
-	* Terms that go to the very root of a contract.
-	*/
-	@Json(name = "condition")
-	CONDITION,
+    /**
+     * Terms that go to the very root of a contract.
+     */
+    @Json(name = "condition")
+    CONDITION,
 
-	/**
-	* Less imperative than a condition, so the contract will survive a breach
-	*/
-	@Json(name = "warranty")
-	WARRANTY,
+    /**
+     * Less imperative than a condition, so the contract will survive a breach
+     */
+    @Json(name = "warranty")
+    WARRANTY,
 
-	/**
-	* Breach of which might or might not go to the root of the contract depending upon the nature of the breach
-	*/
-	@Json(name = "innominate")
-	INNOMINATE,
+    /**
+     * Breach of which might or might not go to the root of the contract depending upon the nature
+     * of the breach
+     */
+    @Json(name = "innominate")
+    INNOMINATE,
 }

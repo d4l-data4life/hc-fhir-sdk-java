@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The type of participant.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemTestReportParticipantType {
 
-	/**
-	* The test execution engine.
-	*/
-	@Json(name = "test-engine")
-	TEST_ENGINE,
+    /**
+     * The test execution engine.
+     */
+    @Json(name = "test-engine")
+    TEST_ENGINE,
 
-	/**
-	* A FHIR Client
-	*/
-	@Json(name = "client")
-	CLIENT,
+    /**
+     * A FHIR Client
+     */
+    @Json(name = "client")
+    CLIENT,
 
-	/**
-	* A FHIR Server
-	*/
-	@Json(name = "server")
-	SERVER,
+    /**
+     * A FHIR Server
+     */
+    @Json(name = "server")
+    SERVER,
 }

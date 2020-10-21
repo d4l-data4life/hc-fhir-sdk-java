@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Claim Care Team Role codes.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemClaimCareTeamRoleCodes {
 
-	/**
-	* The primary care provider.
-	*/
-	@Json(name = "primary")
-	PRIMARY,
+    /**
+     * The primary care provider.
+     */
+    @Json(name = "primary")
+    PRIMARY,
 
-	/**
-	* Assisting care provider.
-	*/
-	@Json(name = "assist")
-	ASSIST,
+    /**
+     * Assisting care provider.
+     */
+    @Json(name = "assist")
+    ASSIST,
 
-	/**
-	* Supervising care provider.
-	*/
-	@Json(name = "supervisor")
-	SUPERVISOR,
+    /**
+     * Supervising care provider.
+     */
+    @Json(name = "supervisor")
+    SUPERVISOR,
 
-	/**
-	* Other role on the care team.
-	*/
-	@Json(name = "other")
-	OTHER,
+    /**
+     * Other role on the care team.
+     */
+    @Json(name = "other")
+    OTHER,
 }

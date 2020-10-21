@@ -19,47 +19,47 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Example Message Reasons. These are the set of codes that might be used an updating an encounter using admin-update.
+ * Example Message Reasons. These are the set of codes that might be used an updating an encounter
+ * using admin-update.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/message-reasons-encounter">ExampleMessageReasonCodes</a>
  */
 public enum CodeSystemExampleMessageReasonCodes {
 
-	/**
-	* The patient has been admitted.
-	*/
-	@Json(name = "admit")
-	ADMIT,
+    /**
+     * The patient has been admitted.
+     */
+    @Json(name = "admit")
+    ADMIT,
 
-	/**
-	* The patient has been discharged.
-	*/
-	@Json(name = "discharge")
-	DISCHARGE,
+    /**
+     * The patient has been discharged.
+     */
+    @Json(name = "discharge")
+    DISCHARGE,
 
-	/**
-	* The patient has temporarily left the institution.
-	*/
-	@Json(name = "absent")
-	ABSENT,
+    /**
+     * The patient has temporarily left the institution.
+     */
+    @Json(name = "absent")
+    ABSENT,
 
-	/**
-	* The patient has returned from a temporary absence.
-	*/
-	@Json(name = "return")
-	RETURN,
+    /**
+     * The patient has returned from a temporary absence.
+     */
+    @Json(name = "return")
+    RETURN,
 
-	/**
-	* The patient has been moved to a new location.
-	*/
-	@Json(name = "moved")
-	MOVED,
+    /**
+     * The patient has been moved to a new location.
+     */
+    @Json(name = "moved")
+    MOVED,
 
-	/**
-	* Encounter details have been updated (e.g. to correct a coding error).
-	*/
-	@Json(name = "edit")
-	EDIT,
+    /**
+     * Encounter details have been updated (e.g. to correct a coding error).
+     */
+    @Json(name = "edit")
+    EDIT,
 }

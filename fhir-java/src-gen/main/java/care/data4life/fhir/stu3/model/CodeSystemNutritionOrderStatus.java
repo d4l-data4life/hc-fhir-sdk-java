@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes specifying the state of the request. Describes the lifecycle of the nutrition order.
  *
@@ -27,57 +26,59 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemNutritionOrderStatus {
 
-	/**
-	* The request has been proposed.
-	*/
-	@Json(name = "proposed")
-	PROPOSED,
+    /**
+     * The request has been proposed.
+     */
+    @Json(name = "proposed")
+    PROPOSED,
 
-	/**
-	* The request is in preliminary form prior to being sent.
-	*/
-	@Json(name = "draft")
-	DRAFT,
+    /**
+     * The request is in preliminary form prior to being sent.
+     */
+    @Json(name = "draft")
+    DRAFT,
 
-	/**
-	* The request has been planned.
-	*/
-	@Json(name = "planned")
-	PLANNED,
+    /**
+     * The request has been planned.
+     */
+    @Json(name = "planned")
+    PLANNED,
 
-	/**
-	* The request has been placed.
-	*/
-	@Json(name = "requested")
-	REQUESTED,
+    /**
+     * The request has been placed.
+     */
+    @Json(name = "requested")
+    REQUESTED,
 
-	/**
-	* The request is 'actionable', but not all actions that are implied by it have occurred yet.
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * The request is 'actionable', but not all actions that are implied by it have occurred yet.
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* Actions implied by the request have been temporarily halted, but are expected to continue later. May also be called "suspended".
-	*/
-	@Json(name = "on-hold")
-	ON_HOLD,
+    /**
+     * Actions implied by the request have been temporarily halted, but are expected to continue
+     * later. May also be called "suspended".
+     */
+    @Json(name = "on-hold")
+    ON_HOLD,
 
-	/**
-	* All actions that are implied by the order have occurred and no continuation is planned (this will rarely be made explicit).
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * All actions that are implied by the order have occurred and no continuation is planned (this
+     * will rarely be made explicit).
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* The request has been withdrawn and is no longer actionable.
-	*/
-	@Json(name = "cancelled")
-	CANCELLED,
+    /**
+     * The request has been withdrawn and is no longer actionable.
+     */
+    @Json(name = "cancelled")
+    CANCELLED,
 
-	/**
-	* The request was entered in error and voided.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The request was entered in error and voided.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

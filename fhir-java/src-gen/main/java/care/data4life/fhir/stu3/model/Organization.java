@@ -18,131 +18,131 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Organization.java
- *
- * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, etc.
+ * <p>
+ * A formally or informally recognized grouping of people or organizations formed for the purpose of
+ * achieving some form of collective action.  Includes companies, institutions, corporations,
+ * departments, community groups, healthcare practice groups, etc.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Organization) on 2020-10-19
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Organization) on
+ * 2020-10-21
  */
-public class Organization extends DomainResource  {
+public class Organization extends DomainResource {
 
-	public static final String resourceType = "Organization";
-  
-	// Identifies this organization  across multiple systems.
+    public static final String resourceType = "Organization";
+
+    // Identifies this organization  across multiple systems.
     @Json(name = "identifier")
-	@Nullable
-	public List<Identifier> identifier;
-  
-	// Whether the organization's record is still in active use.
+    @Nullable
+    public List<Identifier> identifier;
+
+    // Whether the organization's record is still in active use.
     @Json(name = "active")
-	@Nullable
-	public Boolean active;
-  
-	// Kind of organization.
+    @Nullable
+    public Boolean active;
+
+    // Kind of organization.
     @Json(name = "type")
-	@Nullable
-	public List<CodeableConcept> type;
-  
-	// Name used for the organization.
+    @Nullable
+    public List<CodeableConcept> type;
+
+    // Name used for the organization.
     @Json(name = "name")
-	@Nullable
-	public String name;
-  
-	// A list of alternate names that the organization is known as, or was known as in the past.
+    @Nullable
+    public String name;
+
+    // A list of alternate names that the organization is known as, or was known as in the past.
     @Json(name = "alias")
-	@Nullable
-	public List<String> alias;
-  
-	// A contact detail for the organization.
+    @Nullable
+    public List<String> alias;
+
+    // A contact detail for the organization.
     @Json(name = "telecom")
-	@Nullable
-	public List<ContactPoint> telecom;
-  
-	// An address for the organization.
+    @Nullable
+    public List<ContactPoint> telecom;
+
+    // An address for the organization.
     @Json(name = "address")
-	@Nullable
-	public List<Address> address;
-  
-	// The organization of which this organization forms a part.
+    @Nullable
+    public List<Address> address;
+
+    // The organization of which this organization forms a part.
     @Json(name = "partOf")
-	@Nullable
-	public Reference partOf;
-  
-	// Contact for the organization for a certain purpose.
+    @Nullable
+    public Reference partOf;
+
+    // Contact for the organization for a certain purpose.
     @Json(name = "contact")
-	@Nullable
-	public List<OrganizationContact> contact;
-  
-	// Technical endpoints providing access to services operated for the organization.
+    @Nullable
+    public List<OrganizationContact> contact;
+
+    // Technical endpoints providing access to services operated for the organization.
     @Json(name = "endpoint")
-	@Nullable
-	public List<Reference> endpoint;
-
-    
-	public Organization() {
-	}
-	@Override
-	public String getResourceType() {
-		return Organization.resourceType;
-	}
+    @Nullable
+    public List<Reference> endpoint;
 
 
+    public Organization() {
+    }
+
+    @Override
+    public String getResourceType() {
+        return Organization.resourceType;
+    }
 
 
-/**
- * Organization.java
- *
- * Contact for the organization for a certain purpose
- * 
- * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Organization) on 2020-10-19
- */
-public static class OrganizationContact extends BackboneElement  {
+    /**
+     * Organization.java
+     * <p>
+     * Contact for the organization for a certain purpose
+     *
+     * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
+     * <p>
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Organization) on
+     * 2020-10-21
+     */
+    public static class OrganizationContact extends BackboneElement {
 
-	public static final String resourceType = "OrganizationContact";
-  
-	// The type of contact.
-    @Json(name = "purpose")
-	@Nullable
-	public CodeableConcept purpose;
-  
-	// A name associated with the contact.
-    @Json(name = "name")
-	@Nullable
-	public HumanName name;
-  
-	// Contact details (telephone, email, etc.)  for a contact.
-    @Json(name = "telecom")
-	@Nullable
-	public List<ContactPoint> telecom;
-  
-	// Visiting or postal addresses for the contact.
-    @Json(name = "address")
-	@Nullable
-	public Address address;
+        public static final String resourceType = "OrganizationContact";
 
-    
-	public OrganizationContact() {
-	}
-	@Override
-	public String getResourceType() {
-		return OrganizationContact.resourceType;
-	}
+        // The type of contact.
+        @Json(name = "purpose")
+        @Nullable
+        public CodeableConcept purpose;
+
+        // A name associated with the contact.
+        @Json(name = "name")
+        @Nullable
+        public HumanName name;
+
+        // Contact details (telephone, email, etc.)  for a contact.
+        @Json(name = "telecom")
+        @Nullable
+        public List<ContactPoint> telecom;
+
+        // Visiting or postal addresses for the contact.
+        @Json(name = "address")
+        @Nullable
+        public Address address;
 
 
-}
+        public OrganizationContact() {
+        }
+
+        @Override
+        public String getResourceType() {
+            return OrganizationContact.resourceType;
+        }
+
+
+    }
 
 
 }

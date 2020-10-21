@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * A code that indicates how transactions are supported.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemTransactionMode {
 
-	/**
-	* Neither batch or transaction is supported.
-	*/
-	@Json(name = "not-supported")
-	NOT_SUPPORTED,
+    /**
+     * Neither batch or transaction is supported.
+     */
+    @Json(name = "not-supported")
+    NOT_SUPPORTED,
 
-	/**
-	* Batches are  supported.
-	*/
-	@Json(name = "batch")
-	BATCH,
+    /**
+     * Batches are  supported.
+     */
+    @Json(name = "batch")
+    BATCH,
 
-	/**
-	* Transactions are supported.
-	*/
-	@Json(name = "transaction")
-	TRANSACTION,
+    /**
+     * Transactions are supported.
+     */
+    @Json(name = "transaction")
+    TRANSACTION,
 
-	/**
-	* Both batches and transactions are supported.
-	*/
-	@Json(name = "both")
-	BOTH,
+    /**
+     * Both batches and transactions are supported.
+     */
+    @Json(name = "both")
+    BOTH,
 }

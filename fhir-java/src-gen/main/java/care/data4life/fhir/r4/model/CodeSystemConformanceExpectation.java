@@ -19,35 +19,38 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Indicates the degree of adherence to a specified behavior or capability expected for a system to be deemed conformant with a specification.
+ * Indicates the degree of adherence to a specified behavior or capability expected for a system to
+ * be deemed conformant with a specification.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/conformance-expectation">ConformanceExpectation</a>
  */
 public enum CodeSystemConformanceExpectation {
 
-	/**
-	* Support for the specified capability is required to be considered conformant.
-	*/
-	@Json(name = "SHALL")
-	SHALL,
+    /**
+     * Support for the specified capability is required to be considered conformant.
+     */
+    @Json(name = "SHALL")
+    SHALL,
 
-	/**
-	* Support for the specified capability is strongly encouraged, and failure to support it should only occur after careful consideration.
-	*/
-	@Json(name = "SHOULD")
-	SHOULD,
+    /**
+     * Support for the specified capability is strongly encouraged, and failure to support it should
+     * only occur after careful consideration.
+     */
+    @Json(name = "SHOULD")
+    SHOULD,
 
-	/**
-	* Support for the specified capability is not necessary to be considered conformant, and the requirement should be considered strictly optional.
-	*/
-	@Json(name = "MAY")
-	MAY,
+    /**
+     * Support for the specified capability is not necessary to be considered conformant, and the
+     * requirement should be considered strictly optional.
+     */
+    @Json(name = "MAY")
+    MAY,
 
-	/**
-	* Support for the specified capability is strongly discouraged and should occur only after careful consideration.
-	*/
-	@Json(name = "SHOULD-NOT")
-	SHOULD_NOT,
+    /**
+     * Support for the specified capability is strongly discouraged and should occur only after
+     * careful consideration.
+     */
+    @Json(name = "SHOULD-NOT")
+    SHOULD_NOT,
 }

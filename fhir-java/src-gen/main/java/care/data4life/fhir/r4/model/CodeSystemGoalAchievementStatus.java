@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Describes the progression, or lack thereof, towards the goal against the target.
  *
@@ -27,57 +26,58 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGoalAchievementStatus {
 
-	/**
-	* The goal is being sought but has not yet been reached. (Also applies if the goal was reached in the past but there has been regression and the goal is again being sought).
-	*/
-	@Json(name = "in-progress")
-	IN_PROGRESS,
+    /**
+     * The goal is being sought but has not yet been reached. (Also applies if the goal was reached
+     * in the past but there has been regression and the goal is again being sought).
+     */
+    @Json(name = "in-progress")
+    IN_PROGRESS,
 
-	/**
-	* The goal is being sought, and is progressing.
-	*/
-	@Json(name = "improving")
-	IMPROVING,
+    /**
+     * The goal is being sought, and is progressing.
+     */
+    @Json(name = "improving")
+    IMPROVING,
 
-	/**
-	* The goal is being sought, but is regressing.
-	*/
-	@Json(name = "worsening")
-	WORSENING,
+    /**
+     * The goal is being sought, but is regressing.
+     */
+    @Json(name = "worsening")
+    WORSENING,
 
-	/**
-	* The goal is being sought, but the trend is flat.
-	*/
-	@Json(name = "no-change")
-	NO_CHANGE,
+    /**
+     * The goal is being sought, but the trend is flat.
+     */
+    @Json(name = "no-change")
+    NO_CHANGE,
 
-	/**
-	* The goal has been met.
-	*/
-	@Json(name = "achieved")
-	ACHIEVED,
+    /**
+     * The goal has been met.
+     */
+    @Json(name = "achieved")
+    ACHIEVED,
 
-	/**
-	* The goal has been met, but ongoing activity is needed to sustain the goal objective.
-	*/
-	@Json(name = "sustaining")
-	SUSTAINING,
+    /**
+     * The goal has been met, but ongoing activity is needed to sustain the goal objective.
+     */
+    @Json(name = "sustaining")
+    SUSTAINING,
 
-	/**
-	* The goal has not been met and there might or might not have been progress towards target.
-	*/
-	@Json(name = "not-achieved")
-	NOT_ACHIEVED,
+    /**
+     * The goal has not been met and there might or might not have been progress towards target.
+     */
+    @Json(name = "not-achieved")
+    NOT_ACHIEVED,
 
-	/**
-	* The goal has not been met and little to no progress towards target.
-	*/
-	@Json(name = "no-progress")
-	NO_PROGRESS,
+    /**
+     * The goal has not been met and little to no progress towards target.
+     */
+    @Json(name = "no-progress")
+    NO_PROGRESS,
 
-	/**
-	* The goal is not possible to be met.
-	*/
-	@Json(name = "not-attainable")
-	NOT_ATTAINABLE,
+    /**
+     * The goal is not possible to be met.
+     */
+    @Json(name = "not-attainable")
+    NOT_ATTAINABLE,
 }

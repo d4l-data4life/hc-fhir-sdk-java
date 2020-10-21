@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Indicates the progression of a study subject through a study
  *
@@ -27,39 +26,43 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemResearchSubjectStatus {
 
-	/**
-	* The subject has been identified as a potential participant in the study but has not yet agreed to participate
-	*/
-	@Json(name = "candidate")
-	CANDIDATE,
+    /**
+     * The subject has been identified as a potential participant in the study but has not yet
+     * agreed to participate
+     */
+    @Json(name = "candidate")
+    CANDIDATE,
 
-	/**
-	* The subject has agreed to participate in the study but has not yet begun performing any action within the study
-	*/
-	@Json(name = "enrolled")
-	ENROLLED,
+    /**
+     * The subject has agreed to participate in the study but has not yet begun performing any
+     * action within the study
+     */
+    @Json(name = "enrolled")
+    ENROLLED,
 
-	/**
-	* The subject is currently being monitored and/or subject to treatment as part of the study
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * The subject is currently being monitored and/or subject to treatment as part of the study
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* The subject has temporarily discontinued monitoring/treatment as part of the study
-	*/
-	@Json(name = "suspended")
-	SUSPENDED,
+    /**
+     * The subject has temporarily discontinued monitoring/treatment as part of the study
+     */
+    @Json(name = "suspended")
+    SUSPENDED,
 
-	/**
-	* The subject has permanently ended participation in the study prior to completion of the intended monitoring/treatment
-	*/
-	@Json(name = "withdrawn")
-	WITHDRAWN,
+    /**
+     * The subject has permanently ended participation in the study prior to completion of the
+     * intended monitoring/treatment
+     */
+    @Json(name = "withdrawn")
+    WITHDRAWN,
 
-	/**
-	* All intended monitoring/treatment of the subject has been completed and their engagement with the study is now ended
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * All intended monitoring/treatment of the subject has been completed and their engagement with
+     * the study is now ended
+     */
+    @Json(name = "completed")
+    COMPLETED,
 }

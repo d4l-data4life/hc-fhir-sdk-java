@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Status of the supply delivery.
  *
@@ -27,27 +26,29 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSupplyDeliveryStatus {
 
-	/**
-	* Supply has been requested, but not delivered.
-	*/
-	@Json(name = "in-progress")
-	IN_PROGRESS,
+    /**
+     * Supply has been requested, but not delivered.
+     */
+    @Json(name = "in-progress")
+    IN_PROGRESS,
 
-	/**
-	* Supply has been delivered ("completed").
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * Supply has been delivered ("completed").
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* Delivery was not completed.
-	*/
-	@Json(name = "abandoned")
-	ABANDONED,
+    /**
+     * Delivery was not completed.
+     */
+    @Json(name = "abandoned")
+    ABANDONED,
 
-	/**
-	* This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be "cancelled" rather than "entered-in-error".)
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * This electronic record should never have existed, though it is possible that real-world
+     * decisions were based on it. (If real-world activity has occurred, the status should be
+     * "cancelled" rather than "entered-in-error".)
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

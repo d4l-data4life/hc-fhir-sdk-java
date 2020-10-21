@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes a sample set of Payment Status codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemPaymentStatusCodes {
 
-	/**
-	* The payment has been sent physically or electronically.
-	*/
-	@Json(name = "paid")
-	PAID,
+    /**
+     * The payment has been sent physically or electronically.
+     */
+    @Json(name = "paid")
+    PAID,
 
-	/**
-	* The payment has been received by the payee.
-	*/
-	@Json(name = "cleared")
-	CLEARED,
+    /**
+     * The payment has been received by the payee.
+     */
+    @Json(name = "cleared")
+    CLEARED,
 }

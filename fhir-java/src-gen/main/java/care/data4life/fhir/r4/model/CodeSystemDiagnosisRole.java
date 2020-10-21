@@ -19,53 +19,53 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.
+ * This value set defines a set of codes that can be used to express the role of a diagnosis on the
+ * Encounter or EpisodeOfCare record.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/diagnosis-role">DiagnosisRole</a>
  */
 public enum CodeSystemDiagnosisRole {
 
-	/**
-	* AD
-	*/
-	@Json(name = "AD")
-	AD,
+    /**
+     * AD
+     */
+    @Json(name = "AD")
+    AD,
 
-	/**
-	* DD
-	*/
-	@Json(name = "DD")
-	DD,
+    /**
+     * DD
+     */
+    @Json(name = "DD")
+    DD,
 
-	/**
-	* CC
-	*/
-	@Json(name = "CC")
-	CC,
+    /**
+     * CC
+     */
+    @Json(name = "CC")
+    CC,
 
-	/**
-	* CM
-	*/
-	@Json(name = "CM")
-	CM,
+    /**
+     * CM
+     */
+    @Json(name = "CM")
+    CM,
 
-	/**
-	* preOp
-	*/
-	@Json(name = "pre-op")
-	PRE_OP,
+    /**
+     * preOp
+     */
+    @Json(name = "pre-op")
+    PRE_OP,
 
-	/**
-	* postOp
-	*/
-	@Json(name = "post-op")
-	POST_OP,
+    /**
+     * postOp
+     */
+    @Json(name = "post-op")
+    POST_OP,
 
-	/**
-	* billing
-	*/
-	@Json(name = "billing")
-	BILLING,
+    /**
+     * billing
+     */
+    @Json(name = "billing")
+    BILLING,
 }

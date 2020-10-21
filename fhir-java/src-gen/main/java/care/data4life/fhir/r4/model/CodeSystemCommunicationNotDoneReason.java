@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes for the reason why a communication did not happen.
  *
@@ -27,39 +26,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCommunicationNotDoneReason {
 
-	/**
-	* The communication was not done due to an unknown reason.
-	*/
-	@Json(name = "unknown")
-	UNKNOWN,
+    /**
+     * The communication was not done due to an unknown reason.
+     */
+    @Json(name = "unknown")
+    UNKNOWN,
 
-	/**
-	* The communication was not done due to a system error.
-	*/
-	@Json(name = "system-error")
-	SYSTEM_ERROR,
+    /**
+     * The communication was not done due to a system error.
+     */
+    @Json(name = "system-error")
+    SYSTEM_ERROR,
 
-	/**
-	* The communication was not done due to an invalid phone number.
-	*/
-	@Json(name = "invalid-phone-number")
-	INVALID_PHONE_NUMBER,
+    /**
+     * The communication was not done due to an invalid phone number.
+     */
+    @Json(name = "invalid-phone-number")
+    INVALID_PHONE_NUMBER,
 
-	/**
-	* The communication was not done due to the recipient being unavailable.
-	*/
-	@Json(name = "recipient-unavailable")
-	RECIPIENT_UNAVAILABLE,
+    /**
+     * The communication was not done due to the recipient being unavailable.
+     */
+    @Json(name = "recipient-unavailable")
+    RECIPIENT_UNAVAILABLE,
 
-	/**
-	* The communication was not done due to a family objection.
-	*/
-	@Json(name = "family-objection")
-	FAMILY_OBJECTION,
+    /**
+     * The communication was not done due to a family objection.
+     */
+    @Json(name = "family-objection")
+    FAMILY_OBJECTION,
 
-	/**
-	* The communication was not done due to a patient objection.
-	*/
-	@Json(name = "patient-objection")
-	PATIENT_OBJECTION,
+    /**
+     * The communication was not done due to a patient objection.
+     */
+    @Json(name = "patient-objection")
+    PATIENT_OBJECTION,
 }

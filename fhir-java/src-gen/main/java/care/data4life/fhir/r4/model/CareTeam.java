@@ -18,146 +18,145 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * CareTeam.java
- *
- * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.
+ * <p>
+ * The Care Team includes all the people and organizations who plan to participate in the
+ * coordination and delivery of care for a patient.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
- *
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on 2020-10-19
+ * <p>
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on
+ * 2020-10-21
  */
-public class CareTeam extends DomainResource  {
+public class CareTeam extends DomainResource {
 
-	public static final String resourceType = "CareTeam";
-  
-	// External Ids for this team.
+    public static final String resourceType = "CareTeam";
+
+    // External Ids for this team.
     @Json(name = "identifier")
-	@Nullable
-	public List<Identifier> identifier;
-  
-	// Indicates the current state of the care team.
+    @Nullable
+    public List<Identifier> identifier;
+
+    // Indicates the current state of the care team.
     @Json(name = "status")
-	@Nullable
-	public CodeSystemCareTeamStatus status;
-  
-	// Type of team.
+    @Nullable
+    public CodeSystemCareTeamStatus status;
+
+    // Type of team.
     @Json(name = "category")
-	@Nullable
-	public List<CodeableConcept> category;
-  
-	// Name of the team, such as crisis assessment team.
+    @Nullable
+    public List<CodeableConcept> category;
+
+    // Name of the team, such as crisis assessment team.
     @Json(name = "name")
-	@Nullable
-	public String name;
-  
-	// Who care team is for.
+    @Nullable
+    public String name;
+
+    // Who care team is for.
     @Json(name = "subject")
-	@Nullable
-	public Reference subject;
-  
-	// Encounter created as part of.
+    @Nullable
+    public Reference subject;
+
+    // Encounter created as part of.
     @Json(name = "encounter")
-	@Nullable
-	public Reference encounter;
-  
-	// Time period team covers.
+    @Nullable
+    public Reference encounter;
+
+    // Time period team covers.
     @Json(name = "period")
-	@Nullable
-	public Period period;
-  
-	// Members of the team.
+    @Nullable
+    public Period period;
+
+    // Members of the team.
     @Json(name = "participant")
-	@Nullable
-	public List<CareTeamParticipant> participant;
-  
-	// Why the care team exists.
+    @Nullable
+    public List<CareTeamParticipant> participant;
+
+    // Why the care team exists.
     @Json(name = "reasonCode")
-	@Nullable
-	public List<CodeableConcept> reasonCode;
-  
-	// Why the care team exists.
+    @Nullable
+    public List<CodeableConcept> reasonCode;
+
+    // Why the care team exists.
     @Json(name = "reasonReference")
-	@Nullable
-	public List<Reference> reasonReference;
-  
-	// Organization responsible for the care team.
+    @Nullable
+    public List<Reference> reasonReference;
+
+    // Organization responsible for the care team.
     @Json(name = "managingOrganization")
-	@Nullable
-	public List<Reference> managingOrganization;
-  
-	// A contact detail for the care team (that applies to all members).
+    @Nullable
+    public List<Reference> managingOrganization;
+
+    // A contact detail for the care team (that applies to all members).
     @Json(name = "telecom")
-	@Nullable
-	public List<ContactPoint> telecom;
-  
-	// Comments made about the CareTeam.
+    @Nullable
+    public List<ContactPoint> telecom;
+
+    // Comments made about the CareTeam.
     @Json(name = "note")
-	@Nullable
-	public List<Annotation> note;
-
-    
-	public CareTeam() {
-	}
-	@Override
-	public String getResourceType() {
-		return CareTeam.resourceType;
-	}
+    @Nullable
+    public List<Annotation> note;
 
 
+    public CareTeam() {
+    }
+
+    @Override
+    public String getResourceType() {
+        return CareTeam.resourceType;
+    }
 
 
-/**
- * CareTeam.java
- *
- * Identifies all people and organizations who are expected to be involved in the care team.
- *
- * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
- *
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on 2020-10-19
- */
-public static class CareTeamParticipant extends BackboneElement  {
+    /**
+     * CareTeam.java
+     * <p>
+     * Identifies all people and organizations who are expected to be involved in the care team.
+     *
+     * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on
+     * 2020-10-21
+     */
+    public static class CareTeamParticipant extends BackboneElement {
 
-	public static final String resourceType = "CareTeamParticipant";
-  
-	// Type of involvement.
-    @Json(name = "role")
-	@Nullable
-	public List<CodeableConcept> role;
-  
-	// Who is involved.
-    @Json(name = "member")
-	@Nullable
-	public Reference member;
-  
-	// Organization of the practitioner.
-    @Json(name = "onBehalfOf")
-	@Nullable
-	public Reference onBehalfOf;
-  
-	// Time period of participant.
-    @Json(name = "period")
-	@Nullable
-	public Period period;
+        public static final String resourceType = "CareTeamParticipant";
 
-    
-	public CareTeamParticipant() {
-	}
-	@Override
-	public String getResourceType() {
-		return CareTeamParticipant.resourceType;
-	}
+        // Type of involvement.
+        @Json(name = "role")
+        @Nullable
+        public List<CodeableConcept> role;
+
+        // Who is involved.
+        @Json(name = "member")
+        @Nullable
+        public Reference member;
+
+        // Organization of the practitioner.
+        @Json(name = "onBehalfOf")
+        @Nullable
+        public Reference onBehalfOf;
+
+        // Time period of participant.
+        @Json(name = "period")
+        @Nullable
+        public Period period;
 
 
-}
+        public CareTeamParticipant() {
+        }
+
+        @Override
+        public String getResourceType() {
+            return CareTeamParticipant.resourceType;
+        }
+
+
+    }
 
 
 }

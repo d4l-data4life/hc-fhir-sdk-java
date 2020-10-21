@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes that reflect the current state of a goal and whether the goal is still being targeted.
  *
@@ -27,57 +26,58 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGoalLifecycleStatus {
 
-	/**
-	* A goal is proposed for this patient.
-	*/
-	@Json(name = "proposed")
-	PROPOSED,
+    /**
+     * A goal is proposed for this patient.
+     */
+    @Json(name = "proposed")
+    PROPOSED,
 
-	/**
-	* A goal is planned for this patient.
-	*/
-	@Json(name = "planned")
-	PLANNED,
+    /**
+     * A goal is planned for this patient.
+     */
+    @Json(name = "planned")
+    PLANNED,
 
-	/**
-	* A proposed goal was accepted or acknowledged.
-	*/
-	@Json(name = "accepted")
-	ACCEPTED,
+    /**
+     * A proposed goal was accepted or acknowledged.
+     */
+    @Json(name = "accepted")
+    ACCEPTED,
 
-	/**
-	* The goal is being sought actively.
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * The goal is being sought actively.
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* The goal remains a long term objective but is no longer being actively pursued for a temporary period of time.
-	*/
-	@Json(name = "on-hold")
-	ON_HOLD,
+    /**
+     * The goal remains a long term objective but is no longer being actively pursued for a
+     * temporary period of time.
+     */
+    @Json(name = "on-hold")
+    ON_HOLD,
 
-	/**
-	* The goal is no longer being sought.
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * The goal is no longer being sought.
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* The goal has been abandoned.
-	*/
-	@Json(name = "cancelled")
-	CANCELLED,
+    /**
+     * The goal has been abandoned.
+     */
+    @Json(name = "cancelled")
+    CANCELLED,
 
-	/**
-	* The goal was entered in error and voided.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The goal was entered in error and voided.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 
-	/**
-	* A proposed goal was rejected.
-	*/
-	@Json(name = "rejected")
-	REJECTED,
+    /**
+     * A proposed goal was rejected.
+     */
+    @Json(name = "rejected")
+    REJECTED,
 }

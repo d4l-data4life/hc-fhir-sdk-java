@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Missing Tooth Reason codes.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMissingToothReasonCodes {
 
-	/**
-	* Extraction
-	*/
-	@Json(name = "e")
-	E,
+    /**
+     * Extraction
+     */
+    @Json(name = "e")
+    E,
 
-	/**
-	* Congenital
-	*/
-	@Json(name = "c")
-	C,
+    /**
+     * Congenital
+     */
+    @Json(name = "c")
+    C,
 
-	/**
-	* Unknown
-	*/
-	@Json(name = "u")
-	U,
+    /**
+     * Unknown
+     */
+    @Json(name = "u")
+    U,
 
-	/**
-	* Other
-	*/
-	@Json(name = "o")
-	O,
+    /**
+     * Other
+     */
+    @Json(name = "o")
+    O,
 }

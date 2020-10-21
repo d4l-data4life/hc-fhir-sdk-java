@@ -19,41 +19,43 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Identifies the modes of usage of a questionnaire that should enable a particular questionnaire item.
+ * Identifies the modes of usage of a questionnaire that should enable a particular questionnaire
+ * item.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode">QuestionnaireItemUsageMode</a>
  */
 public enum CodeSystemQuestionnaireItemUsageMode {
 
-	/**
-	* Render the item regardless of usage mode.
-	*/
-	@Json(name = "capture-display")
-	CAPTURE_DISPLAY,
+    /**
+     * Render the item regardless of usage mode.
+     */
+    @Json(name = "capture-display")
+    CAPTURE_DISPLAY,
 
-	/**
-	* Render the item only when capturing data.
-	*/
-	@Json(name = "capture")
-	CAPTURE,
+    /**
+     * Render the item only when capturing data.
+     */
+    @Json(name = "capture")
+    CAPTURE,
 
-	/**
-	* Render the item only when displaying a completed form.
-	*/
-	@Json(name = "display")
-	DISPLAY,
+    /**
+     * Render the item only when displaying a completed form.
+     */
+    @Json(name = "display")
+    DISPLAY,
 
-	/**
-	* Render the item only when displaying a completed form and the item has been answered (or has child items that have been answered).
-	*/
-	@Json(name = "display-non-empty")
-	DISPLAY_NON_EMPTY,
+    /**
+     * Render the item only when displaying a completed form and the item has been answered (or has
+     * child items that have been answered).
+     */
+    @Json(name = "display-non-empty")
+    DISPLAY_NON_EMPTY,
 
-	/**
-	* Render the item when capturing data or when displaying a completed form and the item has been answered (or has child items that have been answered).
-	*/
-	@Json(name = "capture-display-non-empty")
-	CAPTURE_DISPLAY_NON_EMPTY,
+    /**
+     * Render the item when capturing data or when displaying a completed form and the item has been
+     * answered (or has child items that have been answered).
+     */
+    @Json(name = "capture-display-non-empty")
+    CAPTURE_DISPLAY_NON_EMPTY,
 }

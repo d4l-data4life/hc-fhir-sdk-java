@@ -18,45 +18,39 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
-
 import javax.annotation.Nullable;
 
 /**
  * Ratio.java
- *
+ * <p>
  * A relationship of two Quantity values - expressed as a numerator and a denominator.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Ratio">Ratio</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Ratio) on 2020-10-19
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Ratio) on 2020-10-21
  */
-public class Ratio extends Element  {
+public class Ratio extends Element {
 
-	public static final String resourceType = "Ratio";
-  
-	// Numerator value.
+    public static final String resourceType = "Ratio";
+
+    // Numerator value.
     @Json(name = "numerator")
-	@Nullable
-	public Quantity numerator;
-  
-	// Denominator value.
+    @Nullable
+    public Quantity numerator;
+
+    // Denominator value.
     @Json(name = "denominator")
-	@Nullable
-	public Quantity denominator;
+    @Nullable
+    public Quantity denominator;
 
-    
-	public Ratio() {
-	}
-	@Override
-	public String getResourceType() {
-		return Ratio.resourceType;
-	}
 
+    public Ratio() {
+    }
+
+    @Override
+    public String getResourceType() {
+        return Ratio.resourceType;
+    }
 
 
 }

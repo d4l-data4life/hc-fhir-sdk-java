@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Contract Type codes.
  *
@@ -27,33 +26,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContractTypeCodes {
 
-	/**
-	* Privacy policy.
-	*/
-	@Json(name = "privacy")
-	PRIVACY,
+    /**
+     * Privacy policy.
+     */
+    @Json(name = "privacy")
+    PRIVACY,
 
-	/**
-	* Information disclosure policy.
-	*/
-	@Json(name = "disclosure")
-	DISCLOSURE,
+    /**
+     * Information disclosure policy.
+     */
+    @Json(name = "disclosure")
+    DISCLOSURE,
 
-	/**
-	* Health Insurance policy.
-	*/
-	@Json(name = "healthinsurance")
-	HEALTHINSURANCE,
+    /**
+     * Health Insurance policy.
+     */
+    @Json(name = "healthinsurance")
+    HEALTHINSURANCE,
 
-	/**
-	* Contract to supply goods or services.
-	*/
-	@Json(name = "supply")
-	SUPPLY,
+    /**
+     * Contract to supply goods or services.
+     */
+    @Json(name = "supply")
+    SUPPLY,
 
-	/**
-	* Consent Directive.
-	*/
-	@Json(name = "consent")
-	CONSENT,
+    /**
+     * Consent Directive.
+     */
+    @Json(name = "consent")
+    CONSENT,
 }

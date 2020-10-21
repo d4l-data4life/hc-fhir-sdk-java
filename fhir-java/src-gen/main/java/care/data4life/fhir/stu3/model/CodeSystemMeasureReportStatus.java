@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The status of the measure report
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMeasureReportStatus {
 
-	/**
-	* The report is complete and ready for use
-	*/
-	@Json(name = "complete")
-	COMPLETE,
+    /**
+     * The report is complete and ready for use
+     */
+    @Json(name = "complete")
+    COMPLETE,
 
-	/**
-	* The report is currently being generated
-	*/
-	@Json(name = "pending")
-	PENDING,
+    /**
+     * The report is currently being generated
+     */
+    @Json(name = "pending")
+    PENDING,
 
-	/**
-	* An error occurred attempting to generate the report
-	*/
-	@Json(name = "error")
-	ERROR,
+    /**
+     * An error occurred attempting to generate the report
+     */
+    @Json(name = "error")
+    ERROR,
 }

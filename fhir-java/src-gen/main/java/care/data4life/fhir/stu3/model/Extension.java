@@ -18,235 +18,230 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
-
 import javax.annotation.Nullable;
 
 /**
  * Extension.java
- *
+ * <p>
  * Optional Extension Element - found in all resources.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Extension">Extension</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Extension) on 2020-10-19
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Extension) on
+ * 2020-10-21
  */
-public class Extension extends Element  {
+public class Extension extends Element {
 
-	public static final String resourceType = "Extension";
-  
-	// identifies the meaning of the extension.
+    public static final String resourceType = "Extension";
+
+    // identifies the meaning of the extension.
     @Json(name = "url")
-	public String url;
-  
-	// Value of extension.
+    public String url;
+
+    // Value of extension.
     @Json(name = "valueBase64Binary")
-	@Nullable
-	public String valueBase64Binary;
-  
-	// Value of extension.
+    @Nullable
+    public String valueBase64Binary;
+
+    // Value of extension.
     @Json(name = "valueBoolean")
-	@Nullable
-	public Boolean valueBoolean;
-  
-	// Value of extension.
+    @Nullable
+    public Boolean valueBoolean;
+
+    // Value of extension.
     @Json(name = "valueCode")
-	@Nullable
-	public String valueCode;
-  
-	// Value of extension.
+    @Nullable
+    public String valueCode;
+
+    // Value of extension.
     @Json(name = "valueDate")
-	@Nullable
-	public FhirDate valueDate;
-  
-	// Value of extension.
+    @Nullable
+    public FhirDate valueDate;
+
+    // Value of extension.
     @Json(name = "valueDateTime")
-	@Nullable
-	public FhirDateTime valueDateTime;
-  
-	// Value of extension.
+    @Nullable
+    public FhirDateTime valueDateTime;
+
+    // Value of extension.
     @Json(name = "valueDecimal")
-	@Nullable
-	public FhirDecimal valueDecimal;
-  
-	// Value of extension.
+    @Nullable
+    public FhirDecimal valueDecimal;
+
+    // Value of extension.
     @Json(name = "valueId")
-	@Nullable
-	public String valueId;
-  
-	// Value of extension.
+    @Nullable
+    public String valueId;
+
+    // Value of extension.
     @Json(name = "valueInstant")
-	@Nullable
-	public FhirInstant valueInstant;
-  
-	// Value of extension.
+    @Nullable
+    public FhirInstant valueInstant;
+
+    // Value of extension.
     @Json(name = "valueInteger")
-	@Nullable
-	public Integer valueInteger;
-  
-	// Value of extension.
+    @Nullable
+    public Integer valueInteger;
+
+    // Value of extension.
     @Json(name = "valueMarkdown")
-	@Nullable
-	public String valueMarkdown;
-  
-	// Value of extension.
+    @Nullable
+    public String valueMarkdown;
+
+    // Value of extension.
     @Json(name = "valueOid")
-	@Nullable
-	public String valueOid;
-  
-	// Value of extension.
+    @Nullable
+    public String valueOid;
+
+    // Value of extension.
     @Json(name = "valuePositiveInt")
-	@Nullable
-	public Integer valuePositiveInt;
-  
-	// Value of extension.
+    @Nullable
+    public Integer valuePositiveInt;
+
+    // Value of extension.
     @Json(name = "valueString")
-	@Nullable
-	public String valueString;
-  
-	// Value of extension.
+    @Nullable
+    public String valueString;
+
+    // Value of extension.
     @Json(name = "valueTime")
-	@Nullable
-	public FhirTime valueTime;
-  
-	// Value of extension.
+    @Nullable
+    public FhirTime valueTime;
+
+    // Value of extension.
     @Json(name = "valueUnsignedInt")
-	@Nullable
-	public Integer valueUnsignedInt;
-  
-	// Value of extension.
+    @Nullable
+    public Integer valueUnsignedInt;
+
+    // Value of extension.
     @Json(name = "valueUri")
-	@Nullable
-	public String valueUri;
-  
-	// Value of extension.
+    @Nullable
+    public String valueUri;
+
+    // Value of extension.
     @Json(name = "valueAddress")
-	@Nullable
-	public Address valueAddress;
-  
-	// Value of extension.
+    @Nullable
+    public Address valueAddress;
+
+    // Value of extension.
     @Json(name = "valueAge")
-	@Nullable
-	public Age valueAge;
-  
-	// Value of extension.
+    @Nullable
+    public Age valueAge;
+
+    // Value of extension.
     @Json(name = "valueAnnotation")
-	@Nullable
-	public Annotation valueAnnotation;
-  
-	// Value of extension.
+    @Nullable
+    public Annotation valueAnnotation;
+
+    // Value of extension.
     @Json(name = "valueAttachment")
-	@Nullable
-	public Attachment valueAttachment;
-  
-	// Value of extension.
+    @Nullable
+    public Attachment valueAttachment;
+
+    // Value of extension.
     @Json(name = "valueCodeableConcept")
-	@Nullable
-	public CodeableConcept valueCodeableConcept;
-  
-	// Value of extension.
+    @Nullable
+    public CodeableConcept valueCodeableConcept;
+
+    // Value of extension.
     @Json(name = "valueCoding")
-	@Nullable
-	public Coding valueCoding;
-  
-	// Value of extension.
+    @Nullable
+    public Coding valueCoding;
+
+    // Value of extension.
     @Json(name = "valueContactPoint")
-	@Nullable
-	public ContactPoint valueContactPoint;
-  
-	// Value of extension.
+    @Nullable
+    public ContactPoint valueContactPoint;
+
+    // Value of extension.
     @Json(name = "valueCount")
-	@Nullable
-	public Count valueCount;
-  
-	// Value of extension.
+    @Nullable
+    public Count valueCount;
+
+    // Value of extension.
     @Json(name = "valueDistance")
-	@Nullable
-	public Distance valueDistance;
-  
-	// Value of extension.
+    @Nullable
+    public Distance valueDistance;
+
+    // Value of extension.
     @Json(name = "valueDuration")
-	@Nullable
-	public Duration valueDuration;
-  
-	// Value of extension.
+    @Nullable
+    public Duration valueDuration;
+
+    // Value of extension.
     @Json(name = "valueHumanName")
-	@Nullable
-	public HumanName valueHumanName;
-  
-	// Value of extension.
+    @Nullable
+    public HumanName valueHumanName;
+
+    // Value of extension.
     @Json(name = "valueIdentifier")
-	@Nullable
-	public Identifier valueIdentifier;
-  
-	// Value of extension.
+    @Nullable
+    public Identifier valueIdentifier;
+
+    // Value of extension.
     @Json(name = "valueMoney")
-	@Nullable
-	public Money valueMoney;
-  
-	// Value of extension.
+    @Nullable
+    public Money valueMoney;
+
+    // Value of extension.
     @Json(name = "valuePeriod")
-	@Nullable
-	public Period valuePeriod;
-  
-	// Value of extension.
+    @Nullable
+    public Period valuePeriod;
+
+    // Value of extension.
     @Json(name = "valueQuantity")
-	@Nullable
-	public Quantity valueQuantity;
-  
-	// Value of extension.
+    @Nullable
+    public Quantity valueQuantity;
+
+    // Value of extension.
     @Json(name = "valueRange")
-	@Nullable
-	public Range valueRange;
-  
-	// Value of extension.
+    @Nullable
+    public Range valueRange;
+
+    // Value of extension.
     @Json(name = "valueRatio")
-	@Nullable
-	public Ratio valueRatio;
-  
-	// Value of extension.
+    @Nullable
+    public Ratio valueRatio;
+
+    // Value of extension.
     @Json(name = "valueReference")
-	@Nullable
-	public Reference valueReference;
-  
-	// Value of extension.
+    @Nullable
+    public Reference valueReference;
+
+    // Value of extension.
     @Json(name = "valueSampledData")
-	@Nullable
-	public SampledData valueSampledData;
-  
-	// Value of extension.
+    @Nullable
+    public SampledData valueSampledData;
+
+    // Value of extension.
     @Json(name = "valueSignature")
-	@Nullable
-	public Signature valueSignature;
-  
-	// Value of extension.
+    @Nullable
+    public Signature valueSignature;
+
+    // Value of extension.
     @Json(name = "valueTiming")
-	@Nullable
-	public Timing valueTiming;
-  
-	// Value of extension.
+    @Nullable
+    public Timing valueTiming;
+
+    // Value of extension.
     @Json(name = "valueMeta")
-	@Nullable
-	public Meta valueMeta;
+    @Nullable
+    public Meta valueMeta;
 
-    
-	/**
-	 * Constructor for all required properties.
-	 *
-	 * @param url String
-	 *
-	 */
-	public Extension(String url) {
-		this.url = url;
-	}@Override
-	public String getResourceType() {
-		return Extension.resourceType;
-	}
 
+    /**
+     * Constructor for all required properties.
+     *
+     * @param url String
+     */
+    public Extension(String url) {
+        this.url = url;
+    }
+
+    @Override
+    public String getResourceType() {
+        return Extension.resourceType;
+    }
 
 
 }

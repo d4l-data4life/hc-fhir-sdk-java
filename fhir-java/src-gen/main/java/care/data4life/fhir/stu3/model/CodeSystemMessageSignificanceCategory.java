@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The impact of the content of a message.
  *
@@ -27,21 +26,24 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMessageSignificanceCategory {
 
-	/**
-	* The message represents/requests a change that should not be processed more than once; e.g., making a booking for an appointment.
-	*/
-	@Json(name = "Consequence")
-	CONSEQUENCE,
+    /**
+     * The message represents/requests a change that should not be processed more than once; e.g.,
+     * making a booking for an appointment.
+     */
+    @Json(name = "Consequence")
+    CONSEQUENCE,
 
-	/**
-	* The message represents a response to query for current information. Retrospective processing is wrong and/or wasteful.
-	*/
-	@Json(name = "Currency")
-	CURRENCY,
+    /**
+     * The message represents a response to query for current information. Retrospective processing
+     * is wrong and/or wasteful.
+     */
+    @Json(name = "Currency")
+    CURRENCY,
 
-	/**
-	* The content is not necessarily intended to be current, and it can be reprocessed, though there may be version issues created by processing old notifications.
-	*/
-	@Json(name = "Notification")
-	NOTIFICATION,
+    /**
+     * The content is not necessarily intended to be current, and it can be reprocessed, though
+     * there may be version issues created by processing old notifications.
+     */
+    @Json(name = "Notification")
+    NOTIFICATION,
 }

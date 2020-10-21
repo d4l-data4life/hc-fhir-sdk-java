@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes that convey the current status of the research study
  *
@@ -27,39 +26,42 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemResearchStudyStatus {
 
-	/**
-	* The study is undergoing design but the process of selecting study subjects and capturing data has not yet begun.
-	*/
-	@Json(name = "draft")
-	DRAFT,
+    /**
+     * The study is undergoing design but the process of selecting study subjects and capturing data
+     * has not yet begun.
+     */
+    @Json(name = "draft")
+    DRAFT,
 
-	/**
-	* The study is currently being executed
-	*/
-	@Json(name = "in-progress")
-	IN_PROGRESS,
+    /**
+     * The study is currently being executed
+     */
+    @Json(name = "in-progress")
+    IN_PROGRESS,
 
-	/**
-	* Execution of the study has been temporarily paused
-	*/
-	@Json(name = "suspended")
-	SUSPENDED,
+    /**
+     * Execution of the study has been temporarily paused
+     */
+    @Json(name = "suspended")
+    SUSPENDED,
 
-	/**
-	* The study was terminated prior to the final determination of results
-	*/
-	@Json(name = "stopped")
-	STOPPED,
+    /**
+     * The study was terminated prior to the final determination of results
+     */
+    @Json(name = "stopped")
+    STOPPED,
 
-	/**
-	* The information sought by the study has been gathered and compiled and no further work is being performed
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * The information sought by the study has been gathered and compiled and no further work is
+     * being performed
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* This study never actually existed.  The record is retained for tracking purposes in the event decisions may have been made based on this erroneous information.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * This study never actually existed.  The record is retained for tracking purposes in the event
+     * decisions may have been made based on this erroneous information.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

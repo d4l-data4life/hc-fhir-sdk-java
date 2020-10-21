@@ -19,35 +19,35 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * A code that indicates whether an application accepts unknown elements or extensions when reading resources.
+ * A code that indicates whether an application accepts unknown elements or extensions when reading
+ * resources.
  *
  * @see <a href="http://hl7.org/fhir/unknown-content-code">UnknownContentCode</a>
  */
 public enum CodeSystemUnknownContentCode {
 
-	/**
-	* The application does not accept either unknown elements or extensions.
-	*/
-	@Json(name = "no")
-	NO,
+    /**
+     * The application does not accept either unknown elements or extensions.
+     */
+    @Json(name = "no")
+    NO,
 
-	/**
-	* The application accepts unknown extensions, but not unknown elements.
-	*/
-	@Json(name = "extensions")
-	EXTENSIONS,
+    /**
+     * The application accepts unknown extensions, but not unknown elements.
+     */
+    @Json(name = "extensions")
+    EXTENSIONS,
 
-	/**
-	* The application accepts unknown elements, but not unknown extensions.
-	*/
-	@Json(name = "elements")
-	ELEMENTS,
+    /**
+     * The application accepts unknown elements, but not unknown extensions.
+     */
+    @Json(name = "elements")
+    ELEMENTS,
 
-	/**
-	* The application accepts unknown elements and extensions.
-	*/
-	@Json(name = "both")
-	BOTH,
+    /**
+     * The application accepts unknown elements and extensions.
+     */
+    @Json(name = "both")
+    BOTH,
 }

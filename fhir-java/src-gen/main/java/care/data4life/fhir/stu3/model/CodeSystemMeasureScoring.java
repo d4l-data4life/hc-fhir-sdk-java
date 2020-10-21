@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The scoring type of the measure
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMeasureScoring {
 
-	/**
-	* The measure score is defined using a proportion
-	*/
-	@Json(name = "proportion")
-	PROPORTION,
+    /**
+     * The measure score is defined using a proportion
+     */
+    @Json(name = "proportion")
+    PROPORTION,
 
-	/**
-	* The measure score is defined using a ratio
-	*/
-	@Json(name = "ratio")
-	RATIO,
+    /**
+     * The measure score is defined using a ratio
+     */
+    @Json(name = "ratio")
+    RATIO,
 
-	/**
-	* The score is defined by a calculation of some quantity
-	*/
-	@Json(name = "continuous-variable")
-	CONTINUOUS_VARIABLE,
+    /**
+     * The score is defined by a calculation of some quantity
+     */
+    @Json(name = "continuous-variable")
+    CONTINUOUS_VARIABLE,
 
-	/**
-	* The measure is a cohort definition
-	*/
-	@Json(name = "cohort")
-	COHORT,
+    /**
+     * The measure is a cohort definition
+     */
+    @Json(name = "cohort")
+    COHORT,
 }

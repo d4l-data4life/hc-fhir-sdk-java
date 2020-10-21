@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample UDI codes.
  *
@@ -27,9 +26,9 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemUDICodes {
 
-	/**
-	* GUDID (FDA) US Repository
-	*/
-	@Json(name = "gudid")
-	GUDID,
+    /**
+     * GUDID (FDA) US Repository
+     */
+    @Json(name = "gudid")
+    GUDID,
 }

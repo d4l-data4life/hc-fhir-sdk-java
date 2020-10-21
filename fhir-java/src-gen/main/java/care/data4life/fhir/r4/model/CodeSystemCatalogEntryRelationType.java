@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The type of relations between entries.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCatalogEntryRelationType {
 
-	/**
-	* the related entry represents an activity that may be triggered by the current item.
-	*/
-	@Json(name = "triggers")
-	TRIGGERS,
+    /**
+     * the related entry represents an activity that may be triggered by the current item.
+     */
+    @Json(name = "triggers")
+    TRIGGERS,
 
-	/**
-	* the related entry represents an item that replaces the current retired item.
-	*/
-	@Json(name = "is-replaced-by")
-	IS_REPLACED_BY,
+    /**
+     * the related entry represents an item that replaces the current retired item.
+     */
+    @Json(name = "is-replaced-by")
+    IS_REPLACED_BY,
 }

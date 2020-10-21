@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Consent Action codes.
  *
@@ -27,33 +26,34 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConsentActionCodes {
 
-	/**
-	* Gather retrieved information for storage
-	*/
-	@Json(name = "collect")
-	COLLECT,
+    /**
+     * Gather retrieved information for storage
+     */
+    @Json(name = "collect")
+    COLLECT,
 
-	/**
-	* Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)
-	*/
-	@Json(name = "access")
-	ACCESS,
+    /**
+     * Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for
+     * collection, use or disclosure (view-only access)
+     */
+    @Json(name = "access")
+    ACCESS,
 
-	/**
-	* Utilize the retrieved information
-	*/
-	@Json(name = "use")
-	USE,
+    /**
+     * Utilize the retrieved information
+     */
+    @Json(name = "use")
+    USE,
 
-	/**
-	* Transfer retrieved information
-	*/
-	@Json(name = "disclose")
-	DISCLOSE,
+    /**
+     * Transfer retrieved information
+     */
+    @Json(name = "disclose")
+    DISCLOSE,
 
-	/**
-	* Allow retrieval of a patient's information for the purpose of update or rectify
-	*/
-	@Json(name = "correct")
-	CORRECT,
+    /**
+     * Allow retrieval of a patient's information for the purpose of update or rectify
+     */
+    @Json(name = "correct")
+    CORRECT,
 }

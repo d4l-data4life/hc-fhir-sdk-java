@@ -16,37 +16,28 @@
 
 package care.data4life.fhir.r4.model;
 
-import com.squareup.moshi.Json;
-
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
-
-import javax.annotation.Nullable;
-
 /**
  * Duration.java
- *
+ * <p>
  * A length of time
- * 
- * @see <a href="http://hl7.org/fhir/StructureDefinition/Duration">Duration</a>
  *
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Duration) on 2020-10-19
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Duration">Duration</a>
+ * <p>
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Duration) on
+ * 2020-10-21
  */
-public class Duration extends Quantity  {
+public class Duration extends Quantity {
 
-	public static final String resourceType = "Duration";
+    public static final String resourceType = "Duration";
 
-    
-	public Duration() {
-	}
-	@Override
-	public String getResourceType() {
-		return Duration.resourceType;
-	}
 
+    public Duration() {
+    }
+
+    @Override
+    public String getResourceType() {
+        return Duration.resourceType;
+    }
 
 
 }

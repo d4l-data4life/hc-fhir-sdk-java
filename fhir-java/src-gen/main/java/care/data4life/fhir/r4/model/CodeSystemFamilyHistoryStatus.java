@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * A code that identifies the status of the family history record.
  *
@@ -27,27 +26,28 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemFamilyHistoryStatus {
 
-	/**
-	* Some health information is known and captured, but not complete - see notes for details.
-	*/
-	@Json(name = "partial")
-	PARTIAL,
+    /**
+     * Some health information is known and captured, but not complete - see notes for details.
+     */
+    @Json(name = "partial")
+    PARTIAL,
 
-	/**
-	* All available related health information is captured as of the date (and possibly time) when the family member history was taken.
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * All available related health information is captured as of the date (and possibly time) when
+     * the family member history was taken.
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* This instance should not have been part of this patient's medical record.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * This instance should not have been part of this patient's medical record.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 
-	/**
-	* Health information for this family member is unavailable/unknown.
-	*/
-	@Json(name = "health-unknown")
-	HEALTH_UNKNOWN,
+    /**
+     * Health information for this family member is unavailable/unknown.
+     */
+    @Json(name = "health-unknown")
+    HEALTH_UNKNOWN,
 }

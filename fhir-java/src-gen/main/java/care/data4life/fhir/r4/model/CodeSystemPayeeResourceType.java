@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The type of payee Resource.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemPayeeResourceType {
 
-	/**
-	* Organization resource.
-	*/
-	@Json(name = "organization")
-	ORGANIZATION,
+    /**
+     * Organization resource.
+     */
+    @Json(name = "organization")
+    ORGANIZATION,
 
-	/**
-	* Patient resource.
-	*/
-	@Json(name = "patient")
-	PATIENT,
+    /**
+     * Patient resource.
+     */
+    @Json(name = "patient")
+    PATIENT,
 
-	/**
-	* Practitioner resource.
-	*/
-	@Json(name = "practitioner")
-	PRACTITIONER,
+    /**
+     * Practitioner resource.
+     */
+    @Json(name = "practitioner")
+    PRACTITIONER,
 
-	/**
-	* RelatedPerson resource.
-	*/
-	@Json(name = "relatedperson")
-	RELATEDPERSON,
+    /**
+     * RelatedPerson resource.
+     */
+    @Json(name = "relatedperson")
+    RELATEDPERSON,
 }

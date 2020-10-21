@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The type of direction to use for assertion.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAssertionDirectionType {
 
-	/**
-	* The assertion is evaluated on the response. This is the default value.
-	*/
-	@Json(name = "response")
-	RESPONSE,
+    /**
+     * The assertion is evaluated on the response. This is the default value.
+     */
+    @Json(name = "response")
+    RESPONSE,
 
-	/**
-	* The assertion is evaluated on the request.
-	*/
-	@Json(name = "request")
-	REQUEST,
+    /**
+     * The assertion is evaluated on the request.
+     */
+    @Json(name = "request")
+    REQUEST,
 }

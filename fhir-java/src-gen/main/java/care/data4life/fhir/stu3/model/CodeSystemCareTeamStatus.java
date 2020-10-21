@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Indicates the status of the care team.
  *
@@ -27,33 +26,35 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCareTeamStatus {
 
-	/**
-	* The care team has been drafted and proposed, but not yet participating in the coordination and delivery of care.
-	*/
-	@Json(name = "proposed")
-	PROPOSED,
+    /**
+     * The care team has been drafted and proposed, but not yet participating in the coordination
+     * and delivery of care.
+     */
+    @Json(name = "proposed")
+    PROPOSED,
 
-	/**
-	* The care team is currently participating in the coordination and delivery of care.
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * The care team is currently participating in the coordination and delivery of care.
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* The care team is temporarily on hold or suspended and not participating in the coordination and delivery of care.
-	*/
-	@Json(name = "suspended")
-	SUSPENDED,
+    /**
+     * The care team is temporarily on hold or suspended and not participating in the coordination
+     * and delivery of care.
+     */
+    @Json(name = "suspended")
+    SUSPENDED,
 
-	/**
-	* The care team was, but is no longer, participating in the coordination and delivery of care.
-	*/
-	@Json(name = "inactive")
-	INACTIVE,
+    /**
+     * The care team was, but is no longer, participating in the coordination and delivery of care.
+     */
+    @Json(name = "inactive")
+    INACTIVE,
 
-	/**
-	* The care team should have never existed.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The care team should have never existed.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

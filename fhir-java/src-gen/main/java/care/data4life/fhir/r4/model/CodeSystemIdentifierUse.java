@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Identifies the purpose for this identifier, if known .
  *
@@ -27,33 +26,38 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemIdentifierUse {
 
-	/**
-	* The identifier recommended for display and use in real-world interactions.
-	*/
-	@Json(name = "usual")
-	USUAL,
+    /**
+     * The identifier recommended for display and use in real-world interactions.
+     */
+    @Json(name = "usual")
+    USUAL,
 
-	/**
-	* The identifier considered to be most trusted for the identification of this item. Sometimes also known as "primary" and "main". The determination of "official" is subjective and implementation guides often provide additional guidelines for use.
-	*/
-	@Json(name = "official")
-	OFFICIAL,
+    /**
+     * The identifier considered to be most trusted for the identification of this item. Sometimes
+     * also known as "primary" and "main". The determination of "official" is subjective and
+     * implementation guides often provide additional guidelines for use.
+     */
+    @Json(name = "official")
+    OFFICIAL,
 
-	/**
-	* A temporary identifier.
-	*/
-	@Json(name = "temp")
-	TEMP,
+    /**
+     * A temporary identifier.
+     */
+    @Json(name = "temp")
+    TEMP,
 
-	/**
-	* An identifier that was assigned in secondary use - it serves to identify the object in a relative context, but cannot be consistently assigned to the same object again in a different context.
-	*/
-	@Json(name = "secondary")
-	SECONDARY,
+    /**
+     * An identifier that was assigned in secondary use - it serves to identify the object in a
+     * relative context, but cannot be consistently assigned to the same object again in a different
+     * context.
+     */
+    @Json(name = "secondary")
+    SECONDARY,
 
-	/**
-	* The identifier id no longer considered valid, but may be relevant for search purposes.  E.g. Changes to identifier schemes, account merges, etc.
-	*/
-	@Json(name = "old")
-	OLD,
+    /**
+     * The identifier id no longer considered valid, but may be relevant for search purposes.  E.g.
+     * Changes to identifier schemes, account merges, etc.
+     */
+    @Json(name = "old")
+    OLD,
 }

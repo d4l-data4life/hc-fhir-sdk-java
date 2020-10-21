@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Biologically Derived Product Status.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemBiologicallyDerivedProductStatus {
 
-	/**
-	* Product is currently available for use.
-	*/
-	@Json(name = "available")
-	AVAILABLE,
+    /**
+     * Product is currently available for use.
+     */
+    @Json(name = "available")
+    AVAILABLE,
 
-	/**
-	* Product is not currently available for use.
-	*/
-	@Json(name = "unavailable")
-	UNAVAILABLE,
+    /**
+     * Product is not currently available for use.
+     */
+    @Json(name = "unavailable")
+    UNAVAILABLE,
 }

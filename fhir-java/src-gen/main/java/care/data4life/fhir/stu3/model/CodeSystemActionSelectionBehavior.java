@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Defines selection behavior of a group
  *
@@ -27,39 +26,41 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemActionSelectionBehavior {
 
-	/**
-	* Any number of the actions in the group may be chosen, from zero to all
-	*/
-	@Json(name = "any")
-	ANY,
+    /**
+     * Any number of the actions in the group may be chosen, from zero to all
+     */
+    @Json(name = "any")
+    ANY,
 
-	/**
-	* All the actions in the group must be selected as a single unit
-	*/
-	@Json(name = "all")
-	ALL,
+    /**
+     * All the actions in the group must be selected as a single unit
+     */
+    @Json(name = "all")
+    ALL,
 
-	/**
-	* All the actions in the group are meant to be chosen as a single unit: either all must be selected by the end user, or none may be selected
-	*/
-	@Json(name = "all-or-none")
-	ALL_OR_NONE,
+    /**
+     * All the actions in the group are meant to be chosen as a single unit: either all must be
+     * selected by the end user, or none may be selected
+     */
+    @Json(name = "all-or-none")
+    ALL_OR_NONE,
 
-	/**
-	* The end user must choose one and only one of the selectable actions in the group. The user may not choose none of the actions in the group
-	*/
-	@Json(name = "exactly-one")
-	EXACTLY_ONE,
+    /**
+     * The end user must choose one and only one of the selectable actions in the group. The user
+     * may not choose none of the actions in the group
+     */
+    @Json(name = "exactly-one")
+    EXACTLY_ONE,
 
-	/**
-	* The end user may choose zero or at most one of the actions in the group
-	*/
-	@Json(name = "at-most-one")
-	AT_MOST_ONE,
+    /**
+     * The end user may choose zero or at most one of the actions in the group
+     */
+    @Json(name = "at-most-one")
+    AT_MOST_ONE,
 
-	/**
-	* The end user must choose a minimum of one, and as many additional as desired
-	*/
-	@Json(name = "one-or-more")
-	ONE_OR_MORE,
+    /**
+     * The end user must choose a minimum of one, and as many additional as desired
+     */
+    @Json(name = "one-or-more")
+    ONE_OR_MORE,
 }

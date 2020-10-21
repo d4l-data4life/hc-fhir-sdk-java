@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * How an element value is interpreted when discrimination is evaluated.
  *
@@ -27,33 +26,37 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDiscriminatorType {
 
-	/**
-	* The slices have different values in the nominated element.
-	*/
-	@Json(name = "value")
-	VALUE,
+    /**
+     * The slices have different values in the nominated element.
+     */
+    @Json(name = "value")
+    VALUE,
 
-	/**
-	* The slices are differentiated by the presence or absence of the nominated element.
-	*/
-	@Json(name = "exists")
-	EXISTS,
+    /**
+     * The slices are differentiated by the presence or absence of the nominated element.
+     */
+    @Json(name = "exists")
+    EXISTS,
 
-	/**
-	* The slices have different values in the nominated element, as determined by testing them against the applicable ElementDefinition.pattern[x].
-	*/
-	@Json(name = "pattern")
-	PATTERN,
+    /**
+     * The slices have different values in the nominated element, as determined by testing them
+     * against the applicable ElementDefinition.pattern[x].
+     */
+    @Json(name = "pattern")
+    PATTERN,
 
-	/**
-	* The slices are differentiated by type of the nominated element.
-	*/
-	@Json(name = "type")
-	TYPE,
+    /**
+     * The slices are differentiated by type of the nominated element.
+     */
+    @Json(name = "type")
+    TYPE,
 
-	/**
-	* The slices are differentiated by conformance of the nominated element to a specified profile. Note that if the path specifies .resolve() then the profile is the target profile on the reference. In this case, validation by the possible profiles is required to differentiate the slices.
-	*/
-	@Json(name = "profile")
-	PROFILE,
+    /**
+     * The slices are differentiated by conformance of the nominated element to a specified profile.
+     * Note that if the path specifies .resolve() then the profile is the target profile on the
+     * reference. In this case, validation by the possible profiles is required to differentiate the
+     * slices.
+     */
+    @Json(name = "profile")
+    PROFILE,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Tags to put on a resource after subscriptions have been sent.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSubscriptionTag {
 
-	/**
-	* The message has been queued for processing on a destination systems.
-	*/
-	@Json(name = "queued")
-	QUEUED,
+    /**
+     * The message has been queued for processing on a destination systems.
+     */
+    @Json(name = "queued")
+    QUEUED,
 
-	/**
-	* The message has been delivered to its intended recipient.
-	*/
-	@Json(name = "delivered")
-	DELIVERED,
+    /**
+     * The message has been delivered to its intended recipient.
+     */
+    @Json(name = "delivered")
+    DELIVERED,
 }

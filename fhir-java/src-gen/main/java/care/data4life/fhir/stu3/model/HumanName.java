@@ -18,70 +18,67 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * HumanName.java
- *
+ * <p>
  * A human's name with the ability to identify parts and usage.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/HumanName">HumanName</a>
- *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/HumanName) on 2020-10-19
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/HumanName) on
+ * 2020-10-21
  */
-public class HumanName extends Element  {
+public class HumanName extends Element {
 
-	public static final String resourceType = "HumanName";
-  
-	// Identifies the purpose for this name.
+    public static final String resourceType = "HumanName";
+
+    // Identifies the purpose for this name.
     @Json(name = "use")
-	@Nullable
-	public CodeSystemNameUse use;
-  
-	// Text representation of the full name.
+    @Nullable
+    public CodeSystemNameUse use;
+
+    // Text representation of the full name.
     @Json(name = "text")
-	@Nullable
-	public String text;
-  
-	// Family name (often called 'Surname').
+    @Nullable
+    public String text;
+
+    // Family name (often called 'Surname').
     @Json(name = "family")
-	@Nullable
-	public String family;
-  
-	// Given names (not always 'first'). Includes middle names.
+    @Nullable
+    public String family;
+
+    // Given names (not always 'first'). Includes middle names.
     @Json(name = "given")
-	@Nullable
-	public List<String> given;
-  
-	// Parts that come before the name.
+    @Nullable
+    public List<String> given;
+
+    // Parts that come before the name.
     @Json(name = "prefix")
-	@Nullable
-	public List<String> prefix;
-  
-	// Parts that come after the name.
+    @Nullable
+    public List<String> prefix;
+
+    // Parts that come after the name.
     @Json(name = "suffix")
-	@Nullable
-	public List<String> suffix;
-  
-	// Time period when name was/is in use.
+    @Nullable
+    public List<String> suffix;
+
+    // Time period when name was/is in use.
     @Json(name = "period")
-	@Nullable
-	public Period period;
+    @Nullable
+    public Period period;
 
-    
-	public HumanName() {
-	}
-	@Override
-	public String getResourceType() {
-		return HumanName.resourceType;
-	}
 
+    public HumanName() {
+    }
+
+    @Override
+    public String getResourceType() {
+        return HumanName.resourceType;
+    }
 
 
 }

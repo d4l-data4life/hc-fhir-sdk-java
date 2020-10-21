@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Contract Subtype codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemContractSubtypeCodes {
 
-	/**
-	* Canadian health information disclosure policy.
-	*/
-	@Json(name = "disclosure-ca")
-	DISCLOSURE_CA,
+    /**
+     * Canadian health information disclosure policy.
+     */
+    @Json(name = "disclosure-ca")
+    DISCLOSURE_CA,
 
-	/**
-	* United States health information disclosure policy.
-	*/
-	@Json(name = "disclosure-us")
-	DISCLOSURE_US,
+    /**
+     * United States health information disclosure policy.
+     */
+    @Json(name = "disclosure-us")
+    DISCLOSURE_US,
 }

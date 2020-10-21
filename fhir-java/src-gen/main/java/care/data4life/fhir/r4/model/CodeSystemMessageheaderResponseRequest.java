@@ -19,35 +19,35 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * HL7-defined table of codes which identify conditions under which acknowledgments are required to be returned in response to a message.
+ * HL7-defined table of codes which identify conditions under which acknowledgments are required to
+ * be returned in response to a message.
  *
  * @see <a href="http://hl7.org/fhir/messageheader-response-request">MessageheaderResponseRequest</a>
  */
 public enum CodeSystemMessageheaderResponseRequest {
 
-	/**
-	* initiator expects a response for this message.
-	*/
-	@Json(name = "always")
-	ALWAYS,
+    /**
+     * initiator expects a response for this message.
+     */
+    @Json(name = "always")
+    ALWAYS,
 
-	/**
-	* initiator expects a response only if in error.
-	*/
-	@Json(name = "on-error")
-	ON_ERROR,
+    /**
+     * initiator expects a response only if in error.
+     */
+    @Json(name = "on-error")
+    ON_ERROR,
 
-	/**
-	* initiator does not expect a response.
-	*/
-	@Json(name = "never")
-	NEVER,
+    /**
+     * initiator does not expect a response.
+     */
+    @Json(name = "never")
+    NEVER,
 
-	/**
-	* initiator expects a response only if successful.
-	*/
-	@Json(name = "on-success")
-	ON_SUCCESS,
+    /**
+     * initiator expects a response only if successful.
+     */
+    @Json(name = "on-success")
+    ON_SUCCESS,
 }

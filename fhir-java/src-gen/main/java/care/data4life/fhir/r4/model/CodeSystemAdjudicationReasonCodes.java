@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes smattering of Adjudication Reason codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAdjudicationReasonCodes {
 
-	/**
-	* Not covered
-	*/
-	@Json(name = "ar001")
-	AR001,
+    /**
+     * Not covered
+     */
+    @Json(name = "ar001")
+    AR001,
 
-	/**
-	* Plan Limit Reached
-	*/
-	@Json(name = "ar002")
-	AR002,
+    /**
+     * Plan Limit Reached
+     */
+    @Json(name = "ar002")
+    AR002,
 }

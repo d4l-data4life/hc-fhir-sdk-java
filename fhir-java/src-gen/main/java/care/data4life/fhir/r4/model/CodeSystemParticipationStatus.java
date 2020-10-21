@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The Participation status of an appointment.
  *
@@ -27,27 +26,30 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemParticipationStatus {
 
-	/**
-	* The participant has accepted the appointment.
-	*/
-	@Json(name = "accepted")
-	ACCEPTED,
+    /**
+     * The participant has accepted the appointment.
+     */
+    @Json(name = "accepted")
+    ACCEPTED,
 
-	/**
-	* The participant has declined the appointment and will not participate in the appointment.
-	*/
-	@Json(name = "declined")
-	DECLINED,
+    /**
+     * The participant has declined the appointment and will not participate in the appointment.
+     */
+    @Json(name = "declined")
+    DECLINED,
 
-	/**
-	* The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.
-	*/
-	@Json(name = "tentative")
-	TENTATIVE,
+    /**
+     * The participant has  tentatively accepted the appointment. This could be automatically
+     * created by a system and requires further processing before it can be accepted. There is no
+     * commitment that attendance will occur.
+     */
+    @Json(name = "tentative")
+    TENTATIVE,
 
-	/**
-	* The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.
-	*/
-	@Json(name = "needs-action")
-	NEEDS_ACTION,
+    /**
+     * The participant needs to indicate if they accept the appointment by changing this status to
+     * one of the other statuses.
+     */
+    @Json(name = "needs-action")
+    NEEDS_ACTION,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes Claim Type codes.
  *
@@ -27,33 +26,34 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemClaimTypeCodes {
 
-	/**
-	* Hospital, clinic and typically inpatient claims.
-	*/
-	@Json(name = "institutional")
-	INSTITUTIONAL,
+    /**
+     * Hospital, clinic and typically inpatient claims.
+     */
+    @Json(name = "institutional")
+    INSTITUTIONAL,
 
-	/**
-	* Dental, Denture and Hygiene claims.
-	*/
-	@Json(name = "oral")
-	ORAL,
+    /**
+     * Dental, Denture and Hygiene claims.
+     */
+    @Json(name = "oral")
+    ORAL,
 
-	/**
-	* Pharmacy claims for goods and services.
-	*/
-	@Json(name = "pharmacy")
-	PHARMACY,
+    /**
+     * Pharmacy claims for goods and services.
+     */
+    @Json(name = "pharmacy")
+    PHARMACY,
 
-	/**
-	* Typically, outpatient claims from Physician, Psychological, Chiropractor, Physiotherapy, Speech Pathology, rehabilitative, consulting.
-	*/
-	@Json(name = "professional")
-	PROFESSIONAL,
+    /**
+     * Typically, outpatient claims from Physician, Psychological, Chiropractor, Physiotherapy,
+     * Speech Pathology, rehabilitative, consulting.
+     */
+    @Json(name = "professional")
+    PROFESSIONAL,
 
-	/**
-	* Vision claims for professional services and products such as glasses and contact lenses.
-	*/
-	@Json(name = "vision")
-	VISION,
+    /**
+     * Vision claims for professional services and products such as glasses and contact lenses.
+     */
+    @Json(name = "vision")
+    VISION,
 }

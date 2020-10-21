@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The allowable request method or HTTP operation codes.
  *
@@ -27,39 +26,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemTestScriptRequestMethodCode {
 
-	/**
-	* HTTP DELETE operation
-	*/
-	@Json(name = "delete")
-	DELETE,
+    /**
+     * HTTP DELETE operation
+     */
+    @Json(name = "delete")
+    DELETE,
 
-	/**
-	* HTTP GET operation
-	*/
-	@Json(name = "get")
-	GET,
+    /**
+     * HTTP GET operation
+     */
+    @Json(name = "get")
+    GET,
 
-	/**
-	* HTTP OPTIONS operation
-	*/
-	@Json(name = "options")
-	OPTIONS,
+    /**
+     * HTTP OPTIONS operation
+     */
+    @Json(name = "options")
+    OPTIONS,
 
-	/**
-	* HTTP PATCH operation
-	*/
-	@Json(name = "patch")
-	PATCH,
+    /**
+     * HTTP PATCH operation
+     */
+    @Json(name = "patch")
+    PATCH,
 
-	/**
-	* HTTP POST operation
-	*/
-	@Json(name = "post")
-	POST,
+    /**
+     * HTTP POST operation
+     */
+    @Json(name = "post")
+    POST,
 
-	/**
-	* HTTP PUT operation
-	*/
-	@Json(name = "put")
-	PUT,
+    /**
+     * HTTP PUT operation
+     */
+    @Json(name = "put")
+    PUT,
 }

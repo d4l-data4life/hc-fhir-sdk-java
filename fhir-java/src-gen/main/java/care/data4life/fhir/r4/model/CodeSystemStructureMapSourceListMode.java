@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * If field is a list, how to manage the source.
  *
@@ -27,33 +26,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemStructureMapSourceListMode {
 
-	/**
-	* Only process this rule for the first in the list.
-	*/
-	@Json(name = "first")
-	FIRST,
+    /**
+     * Only process this rule for the first in the list.
+     */
+    @Json(name = "first")
+    FIRST,
 
-	/**
-	* Process this rule for all but the first.
-	*/
-	@Json(name = "not_first")
-	NOT_FIRST,
+    /**
+     * Process this rule for all but the first.
+     */
+    @Json(name = "not_first")
+    NOT_FIRST,
 
-	/**
-	* Only process this rule for the last in the list.
-	*/
-	@Json(name = "last")
-	LAST,
+    /**
+     * Only process this rule for the last in the list.
+     */
+    @Json(name = "last")
+    LAST,
 
-	/**
-	* Process this rule for all but the last.
-	*/
-	@Json(name = "not_last")
-	NOT_LAST,
+    /**
+     * Process this rule for all but the last.
+     */
+    @Json(name = "not_last")
+    NOT_LAST,
 
-	/**
-	* Only process this rule is there is only item.
-	*/
-	@Json(name = "only_one")
-	ONLY_ONE,
+    /**
+     * Only process this rule is there is only item.
+     */
+    @Json(name = "only_one")
+    ONLY_ONE,
 }

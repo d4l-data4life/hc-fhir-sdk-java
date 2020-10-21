@@ -19,35 +19,35 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * This value set defines a set of codes that are used to indicate the profile type of a test system when acting as the destination within a TestScript.
+ * This value set defines a set of codes that are used to indicate the profile type of a test system
+ * when acting as the destination within a TestScript.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types">TestScriptProfileDestinationType</a>
  */
 public enum CodeSystemTestScriptProfileDestinationType {
 
-	/**
-	* General FHIR server used to respond to operations sent from a FHIR client.
-	*/
-	@Json(name = "FHIR-Server")
-	FHIR_SERVER,
+    /**
+     * General FHIR server used to respond to operations sent from a FHIR client.
+     */
+    @Json(name = "FHIR-Server")
+    FHIR_SERVER,
 
-	/**
-	* A FHIR server acting as a Structured Data Capture Form Manager.
-	*/
-	@Json(name = "FHIR-SDC-FormManager")
-	FHIR_SDC_FORMMANAGER,
+    /**
+     * A FHIR server acting as a Structured Data Capture Form Manager.
+     */
+    @Json(name = "FHIR-SDC-FormManager")
+    FHIR_SDC_FORMMANAGER,
 
-	/**
-	* A FHIR server acting as a Structured Data Capture Form Processor.
-	*/
-	@Json(name = "FHIR-SDC-FormProcessor")
-	FHIR_SDC_FORMPROCESSOR,
+    /**
+     * A FHIR server acting as a Structured Data Capture Form Processor.
+     */
+    @Json(name = "FHIR-SDC-FormProcessor")
+    FHIR_SDC_FORMPROCESSOR,
 
-	/**
-	* A FHIR server acting as a Structured Data Capture Form Receiver.
-	*/
-	@Json(name = "FHIR-SDC-FormReceiver")
-	FHIR_SDC_FORMRECEIVER,
+    /**
+     * A FHIR server acting as a Structured Data Capture Form Receiver.
+     */
+    @Json(name = "FHIR-SDC-FormReceiver")
+    FHIR_SDC_FORMRECEIVER,
 }

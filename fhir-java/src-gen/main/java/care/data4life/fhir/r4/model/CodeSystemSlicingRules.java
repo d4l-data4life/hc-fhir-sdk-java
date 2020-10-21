@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * How slices are interpreted when evaluating an instance.
  *
@@ -27,21 +26,23 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSlicingRules {
 
-	/**
-	* No additional content is allowed other than that described by the slices in this profile.
-	*/
-	@Json(name = "closed")
-	CLOSED,
+    /**
+     * No additional content is allowed other than that described by the slices in this profile.
+     */
+    @Json(name = "closed")
+    CLOSED,
 
-	/**
-	* Additional content is allowed anywhere in the list.
-	*/
-	@Json(name = "open")
-	OPEN,
+    /**
+     * Additional content is allowed anywhere in the list.
+     */
+    @Json(name = "open")
+    OPEN,
 
-	/**
-	* Additional content is allowed, but only at the end of the list. Note that using this requires that the slices be ordered, which makes it hard to share uses. This should only be done where absolutely required.
-	*/
-	@Json(name = "openAtEnd")
-	OPENATEND,
+    /**
+     * Additional content is allowed, but only at the end of the list. Note that using this requires
+     * that the slices be ordered, which makes it hard to share uses. This should only be done where
+     * absolutely required.
+     */
+    @Json(name = "openAtEnd")
+    OPENATEND,
 }

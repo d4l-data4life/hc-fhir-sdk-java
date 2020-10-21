@@ -19,29 +19,30 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose is considered to be subpotent. This value set is provided as a suggestive example.
+ * The value set to instantiate this attribute should be drawn from a terminologically robust code
+ * system that consists of or contains concepts to support describing the reason why a dose is
+ * considered to be subpotent. This value set is provided as a suggestive example.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason">ImmunizationSubpotentReason</a>
  */
 public enum CodeSystemImmunizationSubpotentReason {
 
-	/**
-	* The full volume of the dose was not administered to the patient.
-	*/
-	@Json(name = "partial")
-	PARTIAL,
+    /**
+     * The full volume of the dose was not administered to the patient.
+     */
+    @Json(name = "partial")
+    PARTIAL,
 
-	/**
-	* The vaccine experienced a cold chain break.
-	*/
-	@Json(name = "coldchainbreak")
-	COLDCHAINBREAK,
+    /**
+     * The vaccine experienced a cold chain break.
+     */
+    @Json(name = "coldchainbreak")
+    COLDCHAINBREAK,
 
-	/**
-	* The vaccine was recalled by the manufacturer.
-	*/
-	@Json(name = "recall")
-	RECALL,
+    /**
+     * The vaccine was recalled by the manufacturer.
+     */
+    @Json(name = "recall")
+    RECALL,
 }

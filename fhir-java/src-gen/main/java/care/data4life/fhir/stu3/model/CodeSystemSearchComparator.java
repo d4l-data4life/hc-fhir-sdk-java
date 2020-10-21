@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * What Search Comparator Codes are supported in search
  *
@@ -27,57 +26,57 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSearchComparator {
 
-	/**
-	* the value for the parameter in the resource is equal to the provided value
-	*/
-	@Json(name = "eq")
-	EQ,
+    /**
+     * the value for the parameter in the resource is equal to the provided value
+     */
+    @Json(name = "eq")
+    EQ,
 
-	/**
-	* the value for the parameter in the resource is not equal to the provided value
-	*/
-	@Json(name = "ne")
-	NE,
+    /**
+     * the value for the parameter in the resource is not equal to the provided value
+     */
+    @Json(name = "ne")
+    NE,
 
-	/**
-	* the value for the parameter in the resource is greater than the provided value
-	*/
-	@Json(name = "gt")
-	GT,
+    /**
+     * the value for the parameter in the resource is greater than the provided value
+     */
+    @Json(name = "gt")
+    GT,
 
-	/**
-	* the value for the parameter in the resource is less than the provided value
-	*/
-	@Json(name = "lt")
-	LT,
+    /**
+     * the value for the parameter in the resource is less than the provided value
+     */
+    @Json(name = "lt")
+    LT,
 
-	/**
-	* the value for the parameter in the resource is greater or equal to the provided value
-	*/
-	@Json(name = "ge")
-	GE,
+    /**
+     * the value for the parameter in the resource is greater or equal to the provided value
+     */
+    @Json(name = "ge")
+    GE,
 
-	/**
-	* the value for the parameter in the resource is less or equal to the provided value
-	*/
-	@Json(name = "le")
-	LE,
+    /**
+     * the value for the parameter in the resource is less or equal to the provided value
+     */
+    @Json(name = "le")
+    LE,
 
-	/**
-	* the value for the parameter in the resource starts after the provided value
-	*/
-	@Json(name = "sa")
-	SA,
+    /**
+     * the value for the parameter in the resource starts after the provided value
+     */
+    @Json(name = "sa")
+    SA,
 
-	/**
-	* the value for the parameter in the resource ends before the provided value
-	*/
-	@Json(name = "eb")
-	EB,
+    /**
+     * the value for the parameter in the resource ends before the provided value
+     */
+    @Json(name = "eb")
+    EB,
 
-	/**
-	* the value for the parameter in the resource is approximately the same to the provided value.
-	*/
-	@Json(name = "ap")
-	AP,
+    /**
+     * the value for the parameter in the resource is approximately the same to the provided value.
+     */
+    @Json(name = "ap")
+    AP,
 }

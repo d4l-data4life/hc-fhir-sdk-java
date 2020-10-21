@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * BiologicallyDerived Product Storage Scale.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemBiologicallyDerivedProductStorageScale {
 
-	/**
-	* Fahrenheit temperature scale.
-	*/
-	@Json(name = "farenheit")
-	FARENHEIT,
+    /**
+     * Fahrenheit temperature scale.
+     */
+    @Json(name = "farenheit")
+    FARENHEIT,
 
-	/**
-	* Celsius or centigrade temperature scale.
-	*/
-	@Json(name = "celsius")
-	CELSIUS,
+    /**
+     * Celsius or centigrade temperature scale.
+     */
+    @Json(name = "celsius")
+    CELSIUS,
 
-	/**
-	* Kelvin absolute thermodynamic temperature scale.
-	*/
-	@Json(name = "kelvin")
-	KELVIN,
+    /**
+     * Kelvin absolute thermodynamic temperature scale.
+     */
+    @Json(name = "kelvin")
+    KELVIN,
 }

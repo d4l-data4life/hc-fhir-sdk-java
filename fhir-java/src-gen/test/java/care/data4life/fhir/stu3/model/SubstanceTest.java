@@ -17,169 +17,165 @@
 package care.data4life.fhir.stu3.model;
 
 
-import javax.annotation.Nullable;
-
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
-
-import java.util.Date;
 
 import care.data4life.fhir.stu3.FhirStu3Parser;
 import care.data4life.fhir.test.util.FileHelper;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * SubstanceTest.java
- *
+ * <p>
  * A homogeneous material with a definite composition.
- *
- *
- * "Generated from FHIR 3.0.1.11917 on 2020-10-19
+ * <p>
+ * <p>
+ * "Generated from FHIR 3.0.1.11917 on 2020-10-21
  */
 public class SubstanceTest {
 
-	FhirStu3Parser parser = new FhirStu3Parser();
+    FhirStu3Parser parser = new FhirStu3Parser();
 
     @Test
-	public void testSubstance1() throws Exception {
-		String sourceJson = FileHelper.loadString("stu3/substance-example-silver-nitrate-product.json");
-		Substance data = parser.toFhir(Substance.class , sourceJson);
-		
-		assertEquals(data.category.get(0).coding.get(0).code, "chemical");
-		assertEquals(data.category.get(0).coding.get(0).display, "Chemical");
-		assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org.fhir/substance-category");
-		assertEquals(data.code.coding.get(0).code, "333346007");
-		assertEquals(data.code.coding.get(0).display, "Silver nitrate 20% solution (product)");
-		assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
-		assertEquals(data.description, "Solution for silver nitrate stain");
-		assertEquals(data.id, "f204");
-		assertEquals(data.identifier.get(0).system, "http://acme.org/identifiers/substances");
-		assertEquals(data.identifier.get(0).value, "15970");
-		assertEquals(data.instance.get(0).expiry.toString(), "2018-01-01");
-		assertEquals(data.instance.get(0).identifier.system, "http://acme.org/identifiers/substances/lot");
-		assertEquals(data.instance.get(0).identifier.value, "AB94687");
-		assertEquals(data.instance.get(0).quantity.code, "mL");
-		assertEquals(data.instance.get(0).quantity.system, "http://unitsofmeasure.org");
-		assertEquals(data.instance.get(0).quantity.unit, "mL");
-		assertEquals(data.instance.get(0).quantity.value.toString(), "100");
-		assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+    public void testSubstance1() throws Exception {
+        String sourceJson = FileHelper.loadString("stu3/substance-example-silver-nitrate-product.json");
+        Substance data = parser.toFhir(Substance.class, sourceJson);
 
-		String json = parser.fromFhir(data);
+        assertEquals(data.category.get(0).coding.get(0).code, "chemical");
+        assertEquals(data.category.get(0).coding.get(0).display, "Chemical");
+        assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org.fhir/substance-category");
+        assertEquals(data.code.coding.get(0).code, "333346007");
+        assertEquals(data.code.coding.get(0).display, "Silver nitrate 20% solution (product)");
+        assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
+        assertEquals(data.description, "Solution for silver nitrate stain");
+        assertEquals(data.id, "f204");
+        assertEquals(data.identifier.get(0).system, "http://acme.org/identifiers/substances");
+        assertEquals(data.identifier.get(0).value, "15970");
+        assertEquals(data.instance.get(0).expiry.toString(), "2018-01-01");
+        assertEquals(data.instance.get(0).identifier.system, "http://acme.org/identifiers/substances/lot");
+        assertEquals(data.instance.get(0).identifier.value, "AB94687");
+        assertEquals(data.instance.get(0).quantity.code, "mL");
+        assertEquals(data.instance.get(0).quantity.system, "http://unitsofmeasure.org");
+        assertEquals(data.instance.get(0).quantity.unit, "mL");
+        assertEquals(data.instance.get(0).quantity.value.toString(), "100");
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
-		JSONAssert.assertEquals(sourceJson, json, false);
-	}
+        String json = parser.fromFhir(data);
 
-    @Test
-	public void testSubstance2() throws Exception {
-		String sourceJson = FileHelper.loadString("stu3/substance-example-amoxicillin-clavulanate.json");
-		Substance data = parser.toFhir(Substance.class , sourceJson);
-		
-		assertEquals(data.category.get(0).coding.get(0).code, "drug");
-		assertEquals(data.category.get(0).coding.get(0).display, "Drug or Medicament");
-		assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org.fhir/substance-category");
-		assertEquals(data.code.coding.get(0).code, "392259005");
-		assertEquals(data.code.coding.get(0).display, "Amoxicillin + clavulanate potassium 875mg/125mg tablet (product)");
-		assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
-		assertEquals(data.contained.get(0).id, "ingr1");
-		assertEquals(data.contained.get(1).id, "ingr2");
-		assertEquals(data.description, "Augmentin 875");
-		assertEquals(data.id, "f205");
-		assertEquals(data.ingredient.get(0).quantity.denominator.code, "mg");
-		assertEquals(data.ingredient.get(0).quantity.denominator.system, "http://unitsofmeasure.org");
-		assertEquals(data.ingredient.get(0).quantity.denominator.unit, "mg");
-		assertEquals(data.ingredient.get(0).quantity.denominator.value.toString(), "1000");
-		assertEquals(data.ingredient.get(0).quantity.numerator.code, "mg");
-		assertEquals(data.ingredient.get(0).quantity.numerator.system, "http://unitsofmeasure.org");
-		assertEquals(data.ingredient.get(0).quantity.numerator.unit, "mg");
-		assertEquals(data.ingredient.get(0).quantity.numerator.value.toString(), "875");
-		assertEquals(data.ingredient.get(0).substanceReference.reference, "#ingr1");
-		assertEquals(data.ingredient.get(1).quantity.denominator.code, "mg");
-		assertEquals(data.ingredient.get(1).quantity.denominator.system, "http://unitsofmeasure.org");
-		assertEquals(data.ingredient.get(1).quantity.denominator.unit, "mg");
-		assertEquals(data.ingredient.get(1).quantity.denominator.value.toString(), "1000");
-		assertEquals(data.ingredient.get(1).quantity.numerator.code, "mg");
-		assertEquals(data.ingredient.get(1).quantity.numerator.system, "http://unitsofmeasure.org");
-		assertEquals(data.ingredient.get(1).quantity.numerator.unit, "mg");
-		assertEquals(data.ingredient.get(1).quantity.numerator.value.toString(), "125");
-		assertEquals(data.ingredient.get(1).substanceReference.reference, "#ingr2");
-		assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
-
-		String json = parser.fromFhir(data);
-
-		JSONAssert.assertEquals(sourceJson, json, false);
-	}
+        JSONAssert.assertEquals(sourceJson, json, false);
+    }
 
     @Test
-	public void testSubstance3() throws Exception {
-		String sourceJson = FileHelper.loadString("stu3/substance-example-f203-potassium.json");
-		Substance data = parser.toFhir(Substance.class , sourceJson);
-		
-		assertEquals(data.category.get(0).coding.get(0).code, "chemical");
-		assertEquals(data.category.get(0).coding.get(0).display, "Chemical");
-		assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org.fhir/substance-category");
-		assertEquals(data.code.coding.get(0).code, "88480006");
-		assertEquals(data.code.coding.get(0).display, "Potassium");
-		assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
-		assertEquals(data.id, "f203");
-		assertEquals(data.identifier.get(0).system, "http://acme.org/identifiers/substances");
-		assertEquals(data.identifier.get(0).value, "1234");
-		assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+    public void testSubstance2() throws Exception {
+        String sourceJson = FileHelper.loadString("stu3/substance-example-amoxicillin-clavulanate.json");
+        Substance data = parser.toFhir(Substance.class, sourceJson);
 
-		String json = parser.fromFhir(data);
+        assertEquals(data.category.get(0).coding.get(0).code, "drug");
+        assertEquals(data.category.get(0).coding.get(0).display, "Drug or Medicament");
+        assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org.fhir/substance-category");
+        assertEquals(data.code.coding.get(0).code, "392259005");
+        assertEquals(data.code.coding.get(0).display, "Amoxicillin + clavulanate potassium 875mg/125mg tablet (product)");
+        assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
+        assertEquals(data.contained.get(0).id, "ingr1");
+        assertEquals(data.contained.get(1).id, "ingr2");
+        assertEquals(data.description, "Augmentin 875");
+        assertEquals(data.id, "f205");
+        assertEquals(data.ingredient.get(0).quantity.denominator.code, "mg");
+        assertEquals(data.ingredient.get(0).quantity.denominator.system, "http://unitsofmeasure.org");
+        assertEquals(data.ingredient.get(0).quantity.denominator.unit, "mg");
+        assertEquals(data.ingredient.get(0).quantity.denominator.value.toString(), "1000");
+        assertEquals(data.ingredient.get(0).quantity.numerator.code, "mg");
+        assertEquals(data.ingredient.get(0).quantity.numerator.system, "http://unitsofmeasure.org");
+        assertEquals(data.ingredient.get(0).quantity.numerator.unit, "mg");
+        assertEquals(data.ingredient.get(0).quantity.numerator.value.toString(), "875");
+        assertEquals(data.ingredient.get(0).substanceReference.reference, "#ingr1");
+        assertEquals(data.ingredient.get(1).quantity.denominator.code, "mg");
+        assertEquals(data.ingredient.get(1).quantity.denominator.system, "http://unitsofmeasure.org");
+        assertEquals(data.ingredient.get(1).quantity.denominator.unit, "mg");
+        assertEquals(data.ingredient.get(1).quantity.denominator.value.toString(), "1000");
+        assertEquals(data.ingredient.get(1).quantity.numerator.code, "mg");
+        assertEquals(data.ingredient.get(1).quantity.numerator.system, "http://unitsofmeasure.org");
+        assertEquals(data.ingredient.get(1).quantity.numerator.unit, "mg");
+        assertEquals(data.ingredient.get(1).quantity.numerator.value.toString(), "125");
+        assertEquals(data.ingredient.get(1).substanceReference.reference, "#ingr2");
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
-		JSONAssert.assertEquals(sourceJson, json, false);
-	}
+        String json = parser.fromFhir(data);
 
-    @Test
-	public void testSubstance4() throws Exception {
-		String sourceJson = FileHelper.loadString("stu3/substance-example-f201-dust.json");
-		Substance data = parser.toFhir(Substance.class , sourceJson);
-		
-		assertEquals(data.code.coding.get(0).code, "406466009");
-		assertEquals(data.code.coding.get(0).display, "House dust allergen");
-		assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
-		assertEquals(data.id, "f201");
-		assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
-
-		String json = parser.fromFhir(data);
-
-		JSONAssert.assertEquals(sourceJson, json, false);
-	}
-
-    @Test
-	public void testSubstance5() throws Exception {
-		String sourceJson = FileHelper.loadString("stu3/substance-example.json");
-		Substance data = parser.toFhir(Substance.class , sourceJson);
-		
-		assertEquals(data.category.get(0).coding.get(0).code, "allergen");
-		assertEquals(data.category.get(0).coding.get(0).display, "Allergen");
-		assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org.fhir/substance-category");
-		assertEquals(data.code.text, "apitoxin (Honey Bee Venom)");
-		assertEquals(data.id, "example");
-		assertEquals(data.identifier.get(0).system, "http://acme.org/identifiers/substances");
-		assertEquals(data.identifier.get(0).value, "1463");
-		assertEquals(data.status, CodeSystemFHIRSubstanceStatus.ACTIVE);
-		assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
-
-		String json = parser.fromFhir(data);
-
-		JSONAssert.assertEquals(sourceJson, json, false);
-	}
+        JSONAssert.assertEquals(sourceJson, json, false);
+    }
 
     @Test
-	public void testSubstance6() throws Exception {
-		String sourceJson = FileHelper.loadString("stu3/substance-example-f202-staphylococcus.json");
-		Substance data = parser.toFhir(Substance.class , sourceJson);
-		
-		assertEquals(data.code.coding.get(0).code, "3092008");
-		assertEquals(data.code.coding.get(0).display, "Staphylococcus Aureus");
-		assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
-		assertEquals(data.id, "f202");
-		assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+    public void testSubstance3() throws Exception {
+        String sourceJson = FileHelper.loadString("stu3/substance-example-f203-potassium.json");
+        Substance data = parser.toFhir(Substance.class, sourceJson);
 
-		String json = parser.fromFhir(data);
+        assertEquals(data.category.get(0).coding.get(0).code, "chemical");
+        assertEquals(data.category.get(0).coding.get(0).display, "Chemical");
+        assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org.fhir/substance-category");
+        assertEquals(data.code.coding.get(0).code, "88480006");
+        assertEquals(data.code.coding.get(0).display, "Potassium");
+        assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
+        assertEquals(data.id, "f203");
+        assertEquals(data.identifier.get(0).system, "http://acme.org/identifiers/substances");
+        assertEquals(data.identifier.get(0).value, "1234");
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
-		JSONAssert.assertEquals(sourceJson, json, false);
-	}
+        String json = parser.fromFhir(data);
+
+        JSONAssert.assertEquals(sourceJson, json, false);
+    }
+
+    @Test
+    public void testSubstance4() throws Exception {
+        String sourceJson = FileHelper.loadString("stu3/substance-example-f201-dust.json");
+        Substance data = parser.toFhir(Substance.class, sourceJson);
+
+        assertEquals(data.code.coding.get(0).code, "406466009");
+        assertEquals(data.code.coding.get(0).display, "House dust allergen");
+        assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
+        assertEquals(data.id, "f201");
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+
+        String json = parser.fromFhir(data);
+
+        JSONAssert.assertEquals(sourceJson, json, false);
+    }
+
+    @Test
+    public void testSubstance5() throws Exception {
+        String sourceJson = FileHelper.loadString("stu3/substance-example.json");
+        Substance data = parser.toFhir(Substance.class, sourceJson);
+
+        assertEquals(data.category.get(0).coding.get(0).code, "allergen");
+        assertEquals(data.category.get(0).coding.get(0).display, "Allergen");
+        assertEquals(data.category.get(0).coding.get(0).system, "http://hl7.org.fhir/substance-category");
+        assertEquals(data.code.text, "apitoxin (Honey Bee Venom)");
+        assertEquals(data.id, "example");
+        assertEquals(data.identifier.get(0).system, "http://acme.org/identifiers/substances");
+        assertEquals(data.identifier.get(0).value, "1463");
+        assertEquals(data.status, CodeSystemFHIRSubstanceStatus.ACTIVE);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+
+        String json = parser.fromFhir(data);
+
+        JSONAssert.assertEquals(sourceJson, json, false);
+    }
+
+    @Test
+    public void testSubstance6() throws Exception {
+        String sourceJson = FileHelper.loadString("stu3/substance-example-f202-staphylococcus.json");
+        Substance data = parser.toFhir(Substance.class, sourceJson);
+
+        assertEquals(data.code.coding.get(0).code, "3092008");
+        assertEquals(data.code.coding.get(0).display, "Staphylococcus Aureus");
+        assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
+        assertEquals(data.id, "f202");
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
+
+        String json = parser.fromFhir(data);
+
+        JSONAssert.assertEquals(sourceJson, json, false);
+    }
 }

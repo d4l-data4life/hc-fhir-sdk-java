@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * SHALL applications comply with this constraint?
  *
@@ -27,15 +26,16 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConstraintSeverity {
 
-	/**
-	* If the constraint is violated, the resource is not conformant.
-	*/
-	@Json(name = "error")
-	ERROR,
+    /**
+     * If the constraint is violated, the resource is not conformant.
+     */
+    @Json(name = "error")
+    ERROR,
 
-	/**
-	* If the constraint is violated, the resource is conformant, but it is not necessarily following best practice.
-	*/
-	@Json(name = "warning")
-	WARNING,
+    /**
+     * If the constraint is violated, the resource is conformant, but it is not necessarily
+     * following best practice.
+     */
+    @Json(name = "warning")
+    WARNING,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The presentation types of notes.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemNoteType {
 
-	/**
-	* Display the note.
-	*/
-	@Json(name = "display")
-	DISPLAY,
+    /**
+     * Display the note.
+     */
+    @Json(name = "display")
+    DISPLAY,
 
-	/**
-	* Print the note on the form.
-	*/
-	@Json(name = "print")
-	PRINT,
+    /**
+     * Print the note on the form.
+     */
+    @Json(name = "print")
+    PRINT,
 
-	/**
-	* Print the note for the operator.
-	*/
-	@Json(name = "printoper")
-	PRINTOPER,
+    /**
+     * Print the note for the operator.
+     */
+    @Json(name = "printoper")
+    PRINTOPER,
 }

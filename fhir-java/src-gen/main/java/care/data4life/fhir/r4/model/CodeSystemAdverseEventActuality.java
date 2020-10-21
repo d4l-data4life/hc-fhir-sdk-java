@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Overall nature of the adverse event, e.g. real or potential.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAdverseEventActuality {
 
-	/**
-	* The adverse event actually happened regardless of whether anyone was affected or harmed.
-	*/
-	@Json(name = "actual")
-	ACTUAL,
+    /**
+     * The adverse event actually happened regardless of whether anyone was affected or harmed.
+     */
+    @Json(name = "actual")
+    ACTUAL,
 
-	/**
-	* A potential adverse event.
-	*/
-	@Json(name = "potential")
-	POTENTIAL,
+    /**
+     * A potential adverse event.
+     */
+    @Json(name = "potential")
+    POTENTIAL,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Indicates the level of importance associated with reaching or sustaining a goal.
  *
@@ -27,21 +26,24 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGoalPriority {
 
-	/**
-	* Indicates that the goal is of considerable importance and should be a primary focus of care delivery.
-	*/
-	@Json(name = "high-priority")
-	HIGH_PRIORITY,
+    /**
+     * Indicates that the goal is of considerable importance and should be a primary focus of care
+     * delivery.
+     */
+    @Json(name = "high-priority")
+    HIGH_PRIORITY,
 
-	/**
-	* Indicates that the goal has a reasonable degree of importance and that concrete action should be taken towards the goal.  Attainment is not as critical as high-priority goals.
-	*/
-	@Json(name = "medium-priority")
-	MEDIUM_PRIORITY,
+    /**
+     * Indicates that the goal has a reasonable degree of importance and that concrete action should
+     * be taken towards the goal.  Attainment is not as critical as high-priority goals.
+     */
+    @Json(name = "medium-priority")
+    MEDIUM_PRIORITY,
 
-	/**
-	* The goal is desirable but is not sufficiently important to devote significant resources to.  Achievement of the goal may be sought when incidental to achieving other goals.
-	*/
-	@Json(name = "low-priority")
-	LOW_PRIORITY,
+    /**
+     * The goal is desirable but is not sufficiently important to devote significant resources to.
+     * Achievement of the goal may be sought when incidental to achieving other goals.
+     */
+    @Json(name = "low-priority")
+    LOW_PRIORITY,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Whether the media is a photo, video, or audio
  *
@@ -27,21 +26,22 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDigitalMediaType {
 
-	/**
-	* The media consists of one or more unmoving images, including photographs, computer-generated graphs and charts, and scanned documents
-	*/
-	@Json(name = "photo")
-	PHOTO,
+    /**
+     * The media consists of one or more unmoving images, including photographs, computer-generated
+     * graphs and charts, and scanned documents
+     */
+    @Json(name = "photo")
+    PHOTO,
 
-	/**
-	* The media consists of a series of frames that capture a moving image
-	*/
-	@Json(name = "video")
-	VIDEO,
+    /**
+     * The media consists of a series of frames that capture a moving image
+     */
+    @Json(name = "video")
+    VIDEO,
 
-	/**
-	* The media consists of a sound recording
-	*/
-	@Json(name = "audio")
-	AUDIO,
+    /**
+     * The media consists of a sound recording
+     */
+    @Json(name = "audio")
+    AUDIO,
 }

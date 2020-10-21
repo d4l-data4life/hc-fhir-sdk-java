@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The status of the document reference.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDocumentReferenceStatus {
 
-	/**
-	* This is the current reference for this document.
-	*/
-	@Json(name = "current")
-	CURRENT,
+    /**
+     * This is the current reference for this document.
+     */
+    @Json(name = "current")
+    CURRENT,
 
-	/**
-	* This reference has been superseded by another reference.
-	*/
-	@Json(name = "superseded")
-	SUPERSEDED,
+    /**
+     * This reference has been superseded by another reference.
+     */
+    @Json(name = "superseded")
+    SUPERSEDED,
 
-	/**
-	* This reference was created in error.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * This reference was created in error.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

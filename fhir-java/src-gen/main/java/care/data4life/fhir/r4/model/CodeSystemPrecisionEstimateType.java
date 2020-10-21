@@ -19,35 +19,35 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Method of reporting variability of estimates, such as confidence intervals, interquartile range or standard deviation.
+ * Method of reporting variability of estimates, such as confidence intervals, interquartile range
+ * or standard deviation.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/precision-estimate-type">PrecisionEstimateType</a>
  */
 public enum CodeSystemPrecisionEstimateType {
 
-	/**
-	* confidence interval.
-	*/
-	@Json(name = "CI")
-	CI,
+    /**
+     * confidence interval.
+     */
+    @Json(name = "CI")
+    CI,
 
-	/**
-	* interquartile range.
-	*/
-	@Json(name = "IQR")
-	IQR,
+    /**
+     * interquartile range.
+     */
+    @Json(name = "IQR")
+    IQR,
 
-	/**
-	* standard deviation.
-	*/
-	@Json(name = "SD")
-	SD,
+    /**
+     * standard deviation.
+     */
+    @Json(name = "SD")
+    SD,
 
-	/**
-	* standard error.
-	*/
-	@Json(name = "SE")
-	SE,
+    /**
+     * standard error.
+     */
+    @Json(name = "SE")
+    SE,
 }

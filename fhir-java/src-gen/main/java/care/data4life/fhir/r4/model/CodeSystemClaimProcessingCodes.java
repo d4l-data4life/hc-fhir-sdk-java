@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes Claim Processing Outcome codes.
  *
@@ -27,27 +26,28 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemClaimProcessingCodes {
 
-	/**
-	* The Claim/Pre-authorization/Pre-determination has been received but processing has not begun.
-	*/
-	@Json(name = "queued")
-	QUEUED,
+    /**
+     * The Claim/Pre-authorization/Pre-determination has been received but processing has not
+     * begun.
+     */
+    @Json(name = "queued")
+    QUEUED,
 
-	/**
-	* The processing has completed without errors
-	*/
-	@Json(name = "complete")
-	COMPLETE,
+    /**
+     * The processing has completed without errors
+     */
+    @Json(name = "complete")
+    COMPLETE,
 
-	/**
-	* One or more errors have been detected in the Claim
-	*/
-	@Json(name = "error")
-	ERROR,
+    /**
+     * One or more errors have been detected in the Claim
+     */
+    @Json(name = "error")
+    ERROR,
 
-	/**
-	* No errors have been detected in the Claim and some of the adjudication has been performed.
-	*/
-	@Json(name = "partial")
-	PARTIAL,
+    /**
+     * No errors have been detected in the Claim and some of the adjudication has been performed.
+     */
+    @Json(name = "partial")
+    PARTIAL,
 }

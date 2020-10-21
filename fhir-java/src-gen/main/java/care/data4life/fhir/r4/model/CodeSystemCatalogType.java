@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The type of catalog.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCatalogType {
 
-	/**
-	* Medication Catalog.
-	*/
-	@Json(name = "medication")
-	MEDICATION,
+    /**
+     * Medication Catalog.
+     */
+    @Json(name = "medication")
+    MEDICATION,
 
-	/**
-	* Device Catalog.
-	*/
-	@Json(name = "device")
-	DEVICE,
+    /**
+     * Device Catalog.
+     */
+    @Json(name = "device")
+    DEVICE,
 
-	/**
-	* Protocol List.
-	*/
-	@Json(name = "protocol")
-	PROTOCOL,
+    /**
+     * Protocol List.
+     */
+    @Json(name = "protocol")
+    PROTOCOL,
 }

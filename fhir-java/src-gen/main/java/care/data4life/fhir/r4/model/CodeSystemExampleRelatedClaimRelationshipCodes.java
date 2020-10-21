@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Related Claim Relationship codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExampleRelatedClaimRelationshipCodes {
 
-	/**
-	* A prior claim instance for the same intended suite of services.
-	*/
-	@Json(name = "prior")
-	PRIOR,
+    /**
+     * A prior claim instance for the same intended suite of services.
+     */
+    @Json(name = "prior")
+    PRIOR,
 
-	/**
-	* A claim for a different suite of services which is related the suite claimed here.
-	*/
-	@Json(name = "associated")
-	ASSOCIATED,
+    /**
+     * A claim for a different suite of services which is related the suite claimed here.
+     */
+    @Json(name = "associated")
+    ASSOCIATED,
 }

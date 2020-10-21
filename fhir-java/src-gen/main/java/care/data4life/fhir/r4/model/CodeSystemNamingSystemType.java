@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Identifies the purpose of the naming system.
  *
@@ -27,21 +26,22 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemNamingSystemType {
 
-	/**
-	* The naming system is used to define concepts and symbols to represent those concepts; e.g. UCUM, LOINC, NDC code, local lab codes, etc.
-	*/
-	@Json(name = "codesystem")
-	CODESYSTEM,
+    /**
+     * The naming system is used to define concepts and symbols to represent those concepts; e.g.
+     * UCUM, LOINC, NDC code, local lab codes, etc.
+     */
+    @Json(name = "codesystem")
+    CODESYSTEM,
 
-	/**
-	* The naming system is used to manage identifiers (e.g. license numbers, order numbers, etc.).
-	*/
-	@Json(name = "identifier")
-	IDENTIFIER,
+    /**
+     * The naming system is used to manage identifiers (e.g. license numbers, order numbers, etc.).
+     */
+    @Json(name = "identifier")
+    IDENTIFIER,
 
-	/**
-	* The naming system is used as the root for other identifiers and naming systems.
-	*/
-	@Json(name = "root")
-	ROOT,
+    /**
+     * The naming system is used as the root for other identifiers and naming systems.
+     */
+    @Json(name = "root")
+    ROOT,
 }

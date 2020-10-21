@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The current status of the task.
  *
@@ -27,75 +26,79 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemTaskStatus {
 
-	/**
-	* The task is not yet ready to be acted upon.
-	*/
-	@Json(name = "draft")
-	DRAFT,
+    /**
+     * The task is not yet ready to be acted upon.
+     */
+    @Json(name = "draft")
+    DRAFT,
 
-	/**
-	* The task is ready to be acted upon and action is sought.
-	*/
-	@Json(name = "requested")
-	REQUESTED,
+    /**
+     * The task is ready to be acted upon and action is sought.
+     */
+    @Json(name = "requested")
+    REQUESTED,
 
-	/**
-	* A potential performer has claimed ownership of the task and is evaluating whether to perform it.
-	*/
-	@Json(name = "received")
-	RECEIVED,
+    /**
+     * A potential performer has claimed ownership of the task and is evaluating whether to perform
+     * it.
+     */
+    @Json(name = "received")
+    RECEIVED,
 
-	/**
-	* The potential performer has agreed to execute the task but has not yet started work.
-	*/
-	@Json(name = "accepted")
-	ACCEPTED,
+    /**
+     * The potential performer has agreed to execute the task but has not yet started work.
+     */
+    @Json(name = "accepted")
+    ACCEPTED,
 
-	/**
-	* The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action.
-	*/
-	@Json(name = "rejected")
-	REJECTED,
+    /**
+     * The potential performer who claimed ownership of the task has decided not to execute it prior
+     * to performing any action.
+     */
+    @Json(name = "rejected")
+    REJECTED,
 
-	/**
-	* The task is ready to be performed, but no action has yet been taken.  Used in place of requested/received/accepted/rejected when request assignment and acceptance is a given.
-	*/
-	@Json(name = "ready")
-	READY,
+    /**
+     * The task is ready to be performed, but no action has yet been taken.  Used in place of
+     * requested/received/accepted/rejected when request assignment and acceptance is a given.
+     */
+    @Json(name = "ready")
+    READY,
 
-	/**
-	* The task was not completed.
-	*/
-	@Json(name = "cancelled")
-	CANCELLED,
+    /**
+     * The task was not completed.
+     */
+    @Json(name = "cancelled")
+    CANCELLED,
 
-	/**
-	* The task has been started but is not yet complete.
-	*/
-	@Json(name = "in-progress")
-	IN_PROGRESS,
+    /**
+     * The task has been started but is not yet complete.
+     */
+    @Json(name = "in-progress")
+    IN_PROGRESS,
 
-	/**
-	* The task has been started but work has been paused.
-	*/
-	@Json(name = "on-hold")
-	ON_HOLD,
+    /**
+     * The task has been started but work has been paused.
+     */
+    @Json(name = "on-hold")
+    ON_HOLD,
 
-	/**
-	* The task was attempted but could not be completed due to some error.
-	*/
-	@Json(name = "failed")
-	FAILED,
+    /**
+     * The task was attempted but could not be completed due to some error.
+     */
+    @Json(name = "failed")
+    FAILED,
 
-	/**
-	* The task has been completed.
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * The task has been completed.
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* The task should never have existed and is retained only because of the possibility it may have used.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The task should never have existed and is retained only because of the possibility it may
+     * have used.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

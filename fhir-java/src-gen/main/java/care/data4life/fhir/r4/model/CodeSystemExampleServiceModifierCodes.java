@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Service Modifier codes which may support differential payment.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExampleServiceModifierCodes {
 
-	/**
-	* Services provided on the side of the road or such other non-conventional setting.
-	*/
-	@Json(name = "sr")
-	SR,
+    /**
+     * Services provided on the side of the road or such other non-conventional setting.
+     */
+    @Json(name = "sr")
+    SR,
 
-	/**
-	* Services provided outside or normal business hours.
-	*/
-	@Json(name = "ah")
-	AH,
+    /**
+     * Services provided outside or normal business hours.
+     */
+    @Json(name = "ah")
+    AH,
 }

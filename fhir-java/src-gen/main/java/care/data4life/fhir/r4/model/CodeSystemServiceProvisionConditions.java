@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The code(s) that detail the conditions under which the healthcare service is available/offered.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemServiceProvisionConditions {
 
-	/**
-	* This service is available for no patient cost.
-	*/
-	@Json(name = "free")
-	FREE,
+    /**
+     * This service is available for no patient cost.
+     */
+    @Json(name = "free")
+    FREE,
 
-	/**
-	* There are discounts available on this service for qualifying patients.
-	*/
-	@Json(name = "disc")
-	DISC,
+    /**
+     * There are discounts available on this service for qualifying patients.
+     */
+    @Json(name = "disc")
+    DISC,
 
-	/**
-	* Fees apply for this service.
-	*/
-	@Json(name = "cost")
-	COST,
+    /**
+     * Fees apply for this service.
+     */
+    @Json(name = "cost")
+    COST,
 }

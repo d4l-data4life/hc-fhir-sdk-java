@@ -19,41 +19,41 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * This example value set defines a set of codes that can be used to indicate the specialty of a Practitioner.
+ * This example value set defines a set of codes that can be used to indicate the specialty of a
+ * Practitioner.
  *
  * @see <a href="http://hl7.org/fhir/practitioner-specialty">PractitionerSpecialty</a>
  */
 public enum CodeSystemPractitionerSpecialty {
 
-	/**
-	* cardio
-	*/
-	@Json(name = "cardio")
-	CARDIO,
+    /**
+     * cardio
+     */
+    @Json(name = "cardio")
+    CARDIO,
 
-	/**
-	* dent
-	*/
-	@Json(name = "dent")
-	DENT,
+    /**
+     * dent
+     */
+    @Json(name = "dent")
+    DENT,
 
-	/**
-	* dietary
-	*/
-	@Json(name = "dietary")
-	DIETARY,
+    /**
+     * dietary
+     */
+    @Json(name = "dietary")
+    DIETARY,
 
-	/**
-	* midw
-	*/
-	@Json(name = "midw")
-	MIDW,
+    /**
+     * midw
+     */
+    @Json(name = "midw")
+    MIDW,
 
-	/**
-	* sysarch
-	*/
-	@Json(name = "sysarch")
-	SYSARCH,
+    /**
+     * sysarch
+     */
+    @Json(name = "sysarch")
+    SYSARCH,
 }

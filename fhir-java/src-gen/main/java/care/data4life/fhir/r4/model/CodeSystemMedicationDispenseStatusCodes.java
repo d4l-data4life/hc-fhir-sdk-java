@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * MedicationDispense Status Codes
  *
@@ -27,57 +26,62 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationDispenseStatusCodes {
 
-	/**
-	* The core event has not started yet, but some staging activities have begun (e.g. initial compounding or packaging of medication). Preparation stages may be tracked for billing purposes.
-	*/
-	@Json(name = "preparation")
-	PREPARATION,
+    /**
+     * The core event has not started yet, but some staging activities have begun (e.g. initial
+     * compounding or packaging of medication). Preparation stages may be tracked for billing
+     * purposes.
+     */
+    @Json(name = "preparation")
+    PREPARATION,
 
-	/**
-	* The dispensed product is ready for pickup.
-	*/
-	@Json(name = "in-progress")
-	IN_PROGRESS,
+    /**
+     * The dispensed product is ready for pickup.
+     */
+    @Json(name = "in-progress")
+    IN_PROGRESS,
 
-	/**
-	* The dispensed product was not and will never be picked up by the patient.
-	*/
-	@Json(name = "cancelled")
-	CANCELLED,
+    /**
+     * The dispensed product was not and will never be picked up by the patient.
+     */
+    @Json(name = "cancelled")
+    CANCELLED,
 
-	/**
-	* The dispense process is paused while waiting for an external event to reactivate the dispense.  For example, new stock has arrived or the prescriber has called.
-	*/
-	@Json(name = "on-hold")
-	ON_HOLD,
+    /**
+     * The dispense process is paused while waiting for an external event to reactivate the
+     * dispense.  For example, new stock has arrived or the prescriber has called.
+     */
+    @Json(name = "on-hold")
+    ON_HOLD,
 
-	/**
-	* The dispensed product has been picked up.
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * The dispensed product has been picked up.
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* The dispense was entered in error and therefore nullified.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The dispense was entered in error and therefore nullified.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 
-	/**
-	* Actions implied by the dispense have been permanently halted, before all of them occurred.
-	*/
-	@Json(name = "stopped")
-	STOPPED,
+    /**
+     * Actions implied by the dispense have been permanently halted, before all of them occurred.
+     */
+    @Json(name = "stopped")
+    STOPPED,
 
-	/**
-	* The dispense was declined and not performed.
-	*/
-	@Json(name = "declined")
-	DECLINED,
+    /**
+     * The dispense was declined and not performed.
+     */
+    @Json(name = "declined")
+    DECLINED,
 
-	/**
-	* The authoring system does not know which of the status values applies for this medication dispense.  Note: this concept is not to be used for other - one of the listed statuses is presumed to apply, it's just now known which one.
-	*/
-	@Json(name = "unknown")
-	UNKNOWN,
+    /**
+     * The authoring system does not know which of the status values applies for this medication
+     * dispense.  Note: this concept is not to be used for other - one of the listed statuses is
+     * presumed to apply, it's just now known which one.
+     */
+    @Json(name = "unknown")
+    UNKNOWN,
 }

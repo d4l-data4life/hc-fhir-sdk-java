@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Types of security services used with FHIR.
  *
@@ -27,39 +26,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemRestfulSecurityService {
 
-	/**
-	* Oauth (unspecified version see oauth.net).
-	*/
-	@Json(name = "OAuth")
-	OAUTH,
+    /**
+     * Oauth (unspecified version see oauth.net).
+     */
+    @Json(name = "OAuth")
+    OAUTH,
 
-	/**
-	* OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org/).
-	*/
-	@Json(name = "SMART-on-FHIR")
-	SMART_ON_FHIR,
+    /**
+     * OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org/).
+     */
+    @Json(name = "SMART-on-FHIR")
+    SMART_ON_FHIR,
 
-	/**
-	* Microsoft NTLM Authentication.
-	*/
-	@Json(name = "NTLM")
-	NTLM,
+    /**
+     * Microsoft NTLM Authentication.
+     */
+    @Json(name = "NTLM")
+    NTLM,
 
-	/**
-	* Basic authentication defined in HTTP specification.
-	*/
-	@Json(name = "Basic")
-	BASIC,
+    /**
+     * Basic authentication defined in HTTP specification.
+     */
+    @Json(name = "Basic")
+    BASIC,
 
-	/**
-	* see http://www.ietf.org/rfc/rfc4120.txt.
-	*/
-	@Json(name = "Kerberos")
-	KERBEROS,
+    /**
+     * see http://www.ietf.org/rfc/rfc4120.txt.
+     */
+    @Json(name = "Kerberos")
+    KERBEROS,
 
-	/**
-	* SSL where client must have a certificate registered with the server.
-	*/
-	@Json(name = "Certificates")
-	CERTIFICATES,
+    /**
+     * SSL where client must have a certificate registered with the server.
+     */
+    @Json(name = "Certificates")
+    CERTIFICATES,
 }

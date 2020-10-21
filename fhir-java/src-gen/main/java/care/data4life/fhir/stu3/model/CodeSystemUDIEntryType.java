@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes to identify how UDI data was entered
  *
@@ -27,39 +26,40 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemUDIEntryType {
 
-	/**
-	* A Barcode scanner captured the data from the device label
-	*/
-	@Json(name = "barcode")
-	BARCODE,
+    /**
+     * A Barcode scanner captured the data from the device label
+     */
+    @Json(name = "barcode")
+    BARCODE,
 
-	/**
-	* An RFID chip reader captured the data from the device label
-	*/
-	@Json(name = "rfid")
-	RFID,
+    /**
+     * An RFID chip reader captured the data from the device label
+     */
+    @Json(name = "rfid")
+    RFID,
 
-	/**
-	* The data was read from the label by a person and manually entered. (e.g.  via a keyboard)
-	*/
-	@Json(name = "manual")
-	MANUAL,
+    /**
+     * The data was read from the label by a person and manually entered. (e.g.  via a keyboard)
+     */
+    @Json(name = "manual")
+    MANUAL,
 
-	/**
-	* The data originated from a patient's implant card and read by an operator.
-	*/
-	@Json(name = "card")
-	CARD,
+    /**
+     * The data originated from a patient's implant card and read by an operator.
+     */
+    @Json(name = "card")
+    CARD,
 
-	/**
-	* The data originated from a patient source and not directly scanned or read from a label or card.
-	*/
-	@Json(name = "self-reported")
-	SELF_REPORTED,
+    /**
+     * The data originated from a patient source and not directly scanned or read from a label or
+     * card.
+     */
+    @Json(name = "self-reported")
+    SELF_REPORTED,
 
-	/**
-	* The method of data capture has not been determined
-	*/
-	@Json(name = "unknown")
-	UNKNOWN,
+    /**
+     * The method of data capture has not been determined
+     */
+    @Json(name = "unknown")
+    UNKNOWN,
 }

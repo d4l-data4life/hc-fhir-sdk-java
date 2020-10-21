@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Whether an operation parameter is an input or an output parameter.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemOperationParameterUse {
 
-	/**
-	* This is an input parameter.
-	*/
-	@Json(name = "in")
-	IN,
+    /**
+     * This is an input parameter.
+     */
+    @Json(name = "in")
+    IN,
 
-	/**
-	* This is an output parameter.
-	*/
-	@Json(name = "out")
-	OUT,
+    /**
+     * This is an output parameter.
+     */
+    @Json(name = "out")
+    OUT,
 }

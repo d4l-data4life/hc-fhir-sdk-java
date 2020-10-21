@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The clinical status of the allergy or intolerance.
  *
@@ -27,21 +26,22 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAllergyIntoleranceClinicalStatus {
 
-	/**
-	* An active record of a risk of a reaction to the identified substance.
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * An active record of a risk of a reaction to the identified substance.
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* An inactivated record of a risk of a reaction to the identified substance.
-	*/
-	@Json(name = "inactive")
-	INACTIVE,
+    /**
+     * An inactivated record of a risk of a reaction to the identified substance.
+     */
+    @Json(name = "inactive")
+    INACTIVE,
 
-	/**
-	* A reaction to the identified substance has been clinically reassessed by testing or re-exposure and considered to be resolved.
-	*/
-	@Json(name = "resolved")
-	RESOLVED,
+    /**
+     * A reaction to the identified substance has been clinically reassessed by testing or
+     * re-exposure and considered to be resolved.
+     */
+    @Json(name = "resolved")
+    RESOLVED,
 }

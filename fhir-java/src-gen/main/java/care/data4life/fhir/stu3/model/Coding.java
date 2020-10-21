@@ -18,60 +18,54 @@ package care.data4life.fhir.stu3.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
-
 import javax.annotation.Nullable;
 
 /**
  * Coding.java
- *
+ * <p>
  * A reference to a code defined by a terminology system
- * 
- * @see <a href="http://hl7.org/fhir/StructureDefinition/Coding">Coding</a>
  *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Coding) on 2020-10-19
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Coding">Coding</a>
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Coding) on 2020-10-21
  */
-public class Coding extends Element  {
+public class Coding extends Element {
 
-	public static final String resourceType = "Coding";
-  
-	// Identity of the terminology system.
+    public static final String resourceType = "Coding";
+
+    // Identity of the terminology system.
     @Json(name = "system")
-	@Nullable
-	public String system;
-  
-	// Version of the system - if relevant.
+    @Nullable
+    public String system;
+
+    // Version of the system - if relevant.
     @Json(name = "version")
-	@Nullable
-	public String version;
-  
-	// Symbol in syntax defined by the system.
+    @Nullable
+    public String version;
+
+    // Symbol in syntax defined by the system.
     @Json(name = "code")
-	@Nullable
-	public String code;
-  
-	// Representation defined by the system.
+    @Nullable
+    public String code;
+
+    // Representation defined by the system.
     @Json(name = "display")
-	@Nullable
-	public String display;
-  
-	// If this coding was chosen directly by the user.
+    @Nullable
+    public String display;
+
+    // If this coding was chosen directly by the user.
     @Json(name = "userSelected")
-	@Nullable
-	public Boolean userSelected;
+    @Nullable
+    public Boolean userSelected;
 
-    
-	public Coding() {
-	}
-	@Override
-	public String getResourceType() {
-		return Coding.resourceType;
-	}
 
+    public Coding() {
+    }
+
+    @Override
+    public String getResourceType() {
+        return Coding.resourceType;
+    }
 
 
 }

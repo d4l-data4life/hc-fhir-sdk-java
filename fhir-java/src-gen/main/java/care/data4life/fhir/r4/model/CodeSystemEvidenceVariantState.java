@@ -19,29 +19,29 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Used for results by exposure in variant states such as low-risk, medium-risk and high-risk states.
+ * Used for results by exposure in variant states such as low-risk, medium-risk and high-risk
+ * states.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/evidence-variant-state">EvidenceVariantState</a>
  */
 public enum CodeSystemEvidenceVariantState {
 
-	/**
-	* low risk estimate.
-	*/
-	@Json(name = "low-risk")
-	LOW_RISK,
+    /**
+     * low risk estimate.
+     */
+    @Json(name = "low-risk")
+    LOW_RISK,
 
-	/**
-	* medium risk estimate.
-	*/
-	@Json(name = "medium-risk")
-	MEDIUM_RISK,
+    /**
+     * medium risk estimate.
+     */
+    @Json(name = "medium-risk")
+    MEDIUM_RISK,
 
-	/**
-	* high risk estimate.
-	*/
-	@Json(name = "high-risk")
-	HIGH_RISK,
+    /**
+     * high risk estimate.
+     */
+    @Json(name = "high-risk")
+    HIGH_RISK,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * MedicationKnowledge Characteristic Codes
  *
@@ -27,45 +26,45 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationKnowledgeCharacteristicCodes {
 
-	/**
-	* Identyifying marks on product
-	*/
-	@Json(name = "imprintcd")
-	IMPRINTCD,
+    /**
+     * Identyifying marks on product
+     */
+    @Json(name = "imprintcd")
+    IMPRINTCD,
 
-	/**
-	* Description of size of the product
-	*/
-	@Json(name = "size")
-	SIZE,
+    /**
+     * Description of size of the product
+     */
+    @Json(name = "size")
+    SIZE,
 
-	/**
-	* Description of the shape of the product
-	*/
-	@Json(name = "shape")
-	SHAPE,
+    /**
+     * Description of the shape of the product
+     */
+    @Json(name = "shape")
+    SHAPE,
 
-	/**
-	* Description of the color of the product
-	*/
-	@Json(name = "color")
-	COLOR,
+    /**
+     * Description of the color of the product
+     */
+    @Json(name = "color")
+    COLOR,
 
-	/**
-	* Description of the coating of the product
-	*/
-	@Json(name = "coating")
-	COATING,
+    /**
+     * Description of the coating of the product
+     */
+    @Json(name = "coating")
+    COATING,
 
-	/**
-	* Description of the scoring of the product
-	*/
-	@Json(name = "scoring")
-	SCORING,
+    /**
+     * Description of the scoring of the product
+     */
+    @Json(name = "scoring")
+    SCORING,
 
-	/**
-	* Description of the Logo of the product
-	*/
-	@Json(name = "logo")
-	LOGO,
+    /**
+     * Description of the Logo of the product
+     */
+    @Json(name = "logo")
+    LOGO,
 }

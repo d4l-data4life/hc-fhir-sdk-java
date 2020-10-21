@@ -19,41 +19,42 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * EnteralFormulaAdditiveType: Codes for the type of modular component such as protein, carbohydrate or fiber to be provided in addition to or mixed with the base formula. This value set is provided as a suggestive example.
+ * EnteralFormulaAdditiveType: Codes for the type of modular component such as protein, carbohydrate
+ * or fiber to be provided in addition to or mixed with the base formula. This value set is provided
+ * as a suggestive example.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/entformula-additive">EnteralFormulaAdditiveTypeCode</a>
  */
 public enum CodeSystemEnteralFormulaAdditiveTypeCode {
 
-	/**
-	* Modular lipid enteral formula component
-	*/
-	@Json(name = "lipid")
-	LIPID,
+    /**
+     * Modular lipid enteral formula component
+     */
+    @Json(name = "lipid")
+    LIPID,
 
-	/**
-	* Modular protein enteral formula component
-	*/
-	@Json(name = "protein")
-	PROTEIN,
+    /**
+     * Modular protein enteral formula component
+     */
+    @Json(name = "protein")
+    PROTEIN,
 
-	/**
-	* Modular carbohydrate enteral formula component
-	*/
-	@Json(name = "carbohydrate")
-	CARBOHYDRATE,
+    /**
+     * Modular carbohydrate enteral formula component
+     */
+    @Json(name = "carbohydrate")
+    CARBOHYDRATE,
 
-	/**
-	* Modular fiber enteral formula component
-	*/
-	@Json(name = "fiber")
-	FIBER,
+    /**
+     * Modular fiber enteral formula component
+     */
+    @Json(name = "fiber")
+    FIBER,
 
-	/**
-	* Added water
-	*/
-	@Json(name = "water")
-	WATER,
+    /**
+     * Added water
+     */
+    @Json(name = "water")
+    WATER,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample additional material type codes.
  *
@@ -27,39 +26,39 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAdditionalMaterialCodes {
 
-	/**
-	* XRay
-	*/
-	@Json(name = "xray")
-	XRAY,
+    /**
+     * XRay
+     */
+    @Json(name = "xray")
+    XRAY,
 
-	/**
-	* Image
-	*/
-	@Json(name = "image")
-	IMAGE,
+    /**
+     * Image
+     */
+    @Json(name = "image")
+    IMAGE,
 
-	/**
-	* Email
-	*/
-	@Json(name = "email")
-	EMAIL,
+    /**
+     * Email
+     */
+    @Json(name = "email")
+    EMAIL,
 
-	/**
-	* Model
-	*/
-	@Json(name = "model")
-	MODEL,
+    /**
+     * Model
+     */
+    @Json(name = "model")
+    MODEL,
 
-	/**
-	* Document
-	*/
-	@Json(name = "document")
-	DOCUMENT,
+    /**
+     * Document
+     */
+    @Json(name = "document")
+    DOCUMENT,
 
-	/**
-	* Other
-	*/
-	@Json(name = "other")
-	OTHER,
+    /**
+     * Other
+     */
+    @Json(name = "other")
+    OTHER,
 }

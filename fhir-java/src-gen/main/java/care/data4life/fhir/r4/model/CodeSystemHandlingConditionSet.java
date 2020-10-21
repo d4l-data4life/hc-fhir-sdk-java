@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Set of handling instructions prior testing of the specimen.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemHandlingConditionSet {
 
-	/**
-	* room temperature.
-	*/
-	@Json(name = "room")
-	ROOM,
+    /**
+     * room temperature.
+     */
+    @Json(name = "room")
+    ROOM,
 
-	/**
-	* refrigerated temperature.
-	*/
-	@Json(name = "refrigerated")
-	REFRIGERATED,
+    /**
+     * refrigerated temperature.
+     */
+    @Json(name = "refrigerated")
+    REFRIGERATED,
 
-	/**
-	* frozen temperature.
-	*/
-	@Json(name = "frozen")
-	FROZEN,
+    /**
+     * frozen temperature.
+     */
+    @Json(name = "frozen")
+    FROZEN,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * What the target is validated against
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemValidationType {
 
-	/**
-	* nothing
-	*/
-	@Json(name = "nothing")
-	NOTHING,
+    /**
+     * nothing
+     */
+    @Json(name = "nothing")
+    NOTHING,
 
-	/**
-	* primary
-	*/
-	@Json(name = "primary")
-	PRIMARY,
+    /**
+     * primary
+     */
+    @Json(name = "primary")
+    PRIMARY,
 
-	/**
-	* multiple
-	*/
-	@Json(name = "multiple")
-	MULTIPLE,
+    /**
+     * multiple
+     */
+    @Json(name = "multiple")
+    MULTIPLE,
 }

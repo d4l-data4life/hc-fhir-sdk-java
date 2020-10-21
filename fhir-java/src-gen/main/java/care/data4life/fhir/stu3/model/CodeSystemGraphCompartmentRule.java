@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * How a compartment must be linked
  *
@@ -27,27 +26,28 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGraphCompartmentRule {
 
-	/**
-	* The compartment must be identical (the same literal reference)
-	*/
-	@Json(name = "identical")
-	IDENTICAL,
+    /**
+     * The compartment must be identical (the same literal reference)
+     */
+    @Json(name = "identical")
+    IDENTICAL,
 
-	/**
-	* The compartment must be the same - the record must be about the same patient, but the reference may be different
-	*/
-	@Json(name = "matching")
-	MATCHING,
+    /**
+     * The compartment must be the same - the record must be about the same patient, but the
+     * reference may be different
+     */
+    @Json(name = "matching")
+    MATCHING,
 
-	/**
-	* The compartment must be different
-	*/
-	@Json(name = "different")
-	DIFFERENT,
+    /**
+     * The compartment must be different
+     */
+    @Json(name = "different")
+    DIFFERENT,
 
-	/**
-	* The compartment rule is defined in the accompanying FHIRPath expression
-	*/
-	@Json(name = "custom")
-	CUSTOM,
+    /**
+     * The compartment rule is defined in the accompanying FHIRPath expression
+     */
+    @Json(name = "custom")
+    CUSTOM,
 }

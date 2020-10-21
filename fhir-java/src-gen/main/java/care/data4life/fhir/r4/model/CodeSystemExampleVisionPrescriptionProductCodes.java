@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes a smattering of Prescription Product codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExampleVisionPrescriptionProductCodes {
 
-	/**
-	* A lens to be fitted to a frame to comprise a pair of glasses.
-	*/
-	@Json(name = "lens")
-	LENS,
+    /**
+     * A lens to be fitted to a frame to comprise a pair of glasses.
+     */
+    @Json(name = "lens")
+    LENS,
 
-	/**
-	* A lens to be fitted for wearing directly on an eye.
-	*/
-	@Json(name = "contact")
-	CONTACT,
+    /**
+     * A lens to be fitted for wearing directly on an eye.
+     */
+    @Json(name = "contact")
+    CONTACT,
 }

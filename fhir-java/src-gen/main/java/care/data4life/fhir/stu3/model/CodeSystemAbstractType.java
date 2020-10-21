@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * A type defined by FHIR that is an abstract type
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAbstractType {
 
-	/**
-	* A place holder that means any kind of data type
-	*/
-	@Json(name = "Type")
-	TYPE,
+    /**
+     * A place holder that means any kind of data type
+     */
+    @Json(name = "Type")
+    TYPE,
 
-	/**
-	* A place holder that means any kind of resource
-	*/
-	@Json(name = "Any")
-	ANY,
+    /**
+     * A place holder that means any kind of resource
+     */
+    @Json(name = "Any")
+    ANY,
 }

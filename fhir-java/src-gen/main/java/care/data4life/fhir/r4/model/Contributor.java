@@ -18,57 +18,54 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Contributor.java
- *
- * A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.
+ * <p>
+ * A contributor to the content of a knowledge asset, including authors, editors, reviewers, and
+ * endorsers.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Contributor">Contributor</a>
- *
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Contributor) on 2020-10-19
+ * <p>
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Contributor) on
+ * 2020-10-21
  */
-public class Contributor extends Element  {
+public class Contributor extends Element {
 
-	public static final String resourceType = "Contributor";
-  
-	// The type of contributor.
+    public static final String resourceType = "Contributor";
+
+    // The type of contributor.
     @Json(name = "type")
-	public CodeSystemContributorType type;
-  
-	// Who contributed the content.
+    public CodeSystemContributorType type;
+
+    // Who contributed the content.
     @Json(name = "name")
-	public String name;
-  
-	// Contact details of the contributor.
+    public String name;
+
+    // Contact details of the contributor.
     @Json(name = "contact")
-	@Nullable
-	public List<ContactDetail> contact;
+    @Nullable
+    public List<ContactDetail> contact;
 
-    
-	/**
-	 * Constructor for all required properties.
-	 *
-	 * @param type CodeSystemContributorType
-	 *
-	 * @param name String
-	 *
-	 */
-	public Contributor(CodeSystemContributorType type, String name) {
-		this.type = type;
-		this.name = name;
-	}@Override
-	public String getResourceType() {
-		return Contributor.resourceType;
-	}
 
+    /**
+     * Constructor for all required properties.
+     *
+     * @param type CodeSystemContributorType
+     * @param name String
+     */
+    public Contributor(CodeSystemContributorType type, String name) {
+        this.type = type;
+        this.name = name;
+    }
+
+    @Override
+    public String getResourceType() {
+        return Contributor.resourceType;
+    }
 
 
 }

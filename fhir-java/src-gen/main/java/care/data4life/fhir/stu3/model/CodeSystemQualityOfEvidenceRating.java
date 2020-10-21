@@ -19,35 +19,35 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM systems
+ * A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM
+ * systems
  *
  * @see <a href="http://hl7.org/fhir/evidence-quality">QualityOfEvidenceRating</a>
  */
 public enum CodeSystemQualityOfEvidenceRating {
 
-	/**
-	* High quality evidence
-	*/
-	@Json(name = "high")
-	HIGH,
+    /**
+     * High quality evidence
+     */
+    @Json(name = "high")
+    HIGH,
 
-	/**
-	* Moderate quality evidence
-	*/
-	@Json(name = "moderate")
-	MODERATE,
+    /**
+     * Moderate quality evidence
+     */
+    @Json(name = "moderate")
+    MODERATE,
 
-	/**
-	* Low quality evidence
-	*/
-	@Json(name = "low")
-	LOW,
+    /**
+     * Low quality evidence
+     */
+    @Json(name = "low")
+    LOW,
 
-	/**
-	* Very low quality evidence
-	*/
-	@Json(name = "very-low")
-	VERY_LOW,
+    /**
+     * Very low quality evidence
+     */
+    @Json(name = "very-low")
+    VERY_LOW,
 }

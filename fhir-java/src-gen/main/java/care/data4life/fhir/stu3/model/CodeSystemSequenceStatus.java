@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes providing the status of the variant test result
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSequenceStatus {
 
-	/**
-	* the variant is detected
-	*/
-	@Json(name = "positive")
-	POSITIVE,
+    /**
+     * the variant is detected
+     */
+    @Json(name = "positive")
+    POSITIVE,
 
-	/**
-	* no variant is detected
-	*/
-	@Json(name = "negative")
-	NEGATIVE,
+    /**
+     * no variant is detected
+     */
+    @Json(name = "negative")
+    NEGATIVE,
 
-	/**
-	* result of the variant is missing
-	*/
-	@Json(name = "absent")
-	ABSENT,
+    /**
+     * result of the variant is missing
+     */
+    @Json(name = "absent")
+    ABSENT,
 }

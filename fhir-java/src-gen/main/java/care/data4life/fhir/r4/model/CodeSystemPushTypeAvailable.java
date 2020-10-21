@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Type of alerts/updates the primary source can send
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemPushTypeAvailable {
 
-	/**
-	* specific
-	*/
-	@Json(name = "specific")
-	SPECIFIC,
+    /**
+     * specific
+     */
+    @Json(name = "specific")
+    SPECIFIC,
 
-	/**
-	* any
-	*/
-	@Json(name = "any")
-	ANY,
+    /**
+     * any
+     */
+    @Json(name = "any")
+    ANY,
 
-	/**
-	* source
-	*/
-	@Json(name = "source")
-	SOURCE,
+    /**
+     * source
+     */
+    @Json(name = "source")
+    SOURCE,
 }

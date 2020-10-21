@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The results of executing an action.
  *
@@ -27,33 +26,33 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemTestReportActionResult {
 
-	/**
-	* The action was successful.
-	*/
-	@Json(name = "pass")
-	PASS,
+    /**
+     * The action was successful.
+     */
+    @Json(name = "pass")
+    PASS,
 
-	/**
-	* The action was skipped.
-	*/
-	@Json(name = "skip")
-	SKIP,
+    /**
+     * The action was skipped.
+     */
+    @Json(name = "skip")
+    SKIP,
 
-	/**
-	* The action failed.
-	*/
-	@Json(name = "fail")
-	FAIL,
+    /**
+     * The action failed.
+     */
+    @Json(name = "fail")
+    FAIL,
 
-	/**
-	* The action passed but with warnings.
-	*/
-	@Json(name = "warning")
-	WARNING,
+    /**
+     * The action passed but with warnings.
+     */
+    @Json(name = "warning")
+    WARNING,
 
-	/**
-	* The action encountered a fatal error and the engine was unable to process.
-	*/
-	@Json(name = "error")
-	ERROR,
+    /**
+     * The action encountered a fatal error and the engine was unable to process.
+     */
+    @Json(name = "error")
+    ERROR,
 }

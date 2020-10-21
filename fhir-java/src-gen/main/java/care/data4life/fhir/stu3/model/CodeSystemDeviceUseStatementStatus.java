@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * A coded concept indicating the current status of a the Device Usage
  *
@@ -27,39 +26,40 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDeviceUseStatementStatus {
 
-	/**
-	* The device is still being used.
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * The device is still being used.
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* The device is no longer being used.
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * The device is no longer being used.
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* The statement was recorded incorrectly.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The statement was recorded incorrectly.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 
-	/**
-	* The device may be used at some time in the future.
-	*/
-	@Json(name = "intended")
-	INTENDED,
+    /**
+     * The device may be used at some time in the future.
+     */
+    @Json(name = "intended")
+    INTENDED,
 
-	/**
-	* Actions implied by the statement have been permanently halted, before all of them occurred.
-	*/
-	@Json(name = "stopped")
-	STOPPED,
+    /**
+     * Actions implied by the statement have been permanently halted, before all of them occurred.
+     */
+    @Json(name = "stopped")
+    STOPPED,
 
-	/**
-	* Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called "suspended".
-	*/
-	@Json(name = "on-hold")
-	ON_HOLD,
+    /**
+     * Actions implied by the statement have been temporarily halted, but are expected to continue
+     * later. May also be called "suspended".
+     */
+    @Json(name = "on-hold")
+    ON_HOLD,
 }

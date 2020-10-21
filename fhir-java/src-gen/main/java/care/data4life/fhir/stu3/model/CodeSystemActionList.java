@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * List of allowable action which this resource can request.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemActionList {
 
-	/**
-	* Cancel, reverse or nullify the target resource.
-	*/
-	@Json(name = "cancel")
-	CANCEL,
+    /**
+     * Cancel, reverse or nullify the target resource.
+     */
+    @Json(name = "cancel")
+    CANCEL,
 
-	/**
-	* Check for previously un-read/ not-retrieved resources.
-	*/
-	@Json(name = "poll")
-	POLL,
+    /**
+     * Check for previously un-read/ not-retrieved resources.
+     */
+    @Json(name = "poll")
+    POLL,
 
-	/**
-	* Re-process the target resource.
-	*/
-	@Json(name = "reprocess")
-	REPROCESS,
+    /**
+     * Re-process the target resource.
+     */
+    @Json(name = "reprocess")
+    REPROCESS,
 
-	/**
-	* Retrieve the processing status of the target resource.
-	*/
-	@Json(name = "status")
-	STATUS,
+    /**
+     * Retrieve the processing status of the target resource.
+     */
+    @Json(name = "status")
+    STATUS,
 }

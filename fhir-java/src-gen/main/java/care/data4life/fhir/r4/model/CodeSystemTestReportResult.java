@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The reported execution result.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemTestReportResult {
 
-	/**
-	* All test operations successfully passed all asserts.
-	*/
-	@Json(name = "pass")
-	PASS,
+    /**
+     * All test operations successfully passed all asserts.
+     */
+    @Json(name = "pass")
+    PASS,
 
-	/**
-	* One or more test operations failed one or more asserts.
-	*/
-	@Json(name = "fail")
-	FAIL,
+    /**
+     * One or more test operations failed one or more asserts.
+     */
+    @Json(name = "fail")
+    FAIL,
 
-	/**
-	* One or more test operations is pending execution completion.
-	*/
-	@Json(name = "pending")
-	PENDING,
+    /**
+     * One or more test operations is pending execution completion.
+     */
+    @Json(name = "pending")
+    PENDING,
 }

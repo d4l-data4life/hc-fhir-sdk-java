@@ -19,59 +19,59 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Codes for device specification types such as serial number, part number, hardware revision, software revision, etc.
+ * Codes for device specification types such as serial number, part number, hardware revision,
+ * software revision, etc.
  *
  * @see <a href="http://hl7.org/fhir/specification-type">DeviceSpecificationSpecType</a>
  */
 public enum CodeSystemDeviceSpecificationSpecType {
 
-	/**
-	* Unspecified Production Specification - MDC_ID_PROD_SPEC_UNSPECIFIED
-	*/
-	@Json(name = "unspecified")
-	UNSPECIFIED,
+    /**
+     * Unspecified Production Specification - MDC_ID_PROD_SPEC_UNSPECIFIED
+     */
+    @Json(name = "unspecified")
+    UNSPECIFIED,
 
-	/**
-	* Serial Number - MDC_ID_PROD_SPEC_SERIAL
-	*/
-	@Json(name = "serial-number")
-	SERIAL_NUMBER,
+    /**
+     * Serial Number - MDC_ID_PROD_SPEC_SERIAL
+     */
+    @Json(name = "serial-number")
+    SERIAL_NUMBER,
 
-	/**
-	* Part Number - MDC_ID_PROD_SPEC_PART
-	*/
-	@Json(name = "part-number")
-	PART_NUMBER,
+    /**
+     * Part Number - MDC_ID_PROD_SPEC_PART
+     */
+    @Json(name = "part-number")
+    PART_NUMBER,
 
-	/**
-	* Hardware Revision - MDC_ID_PROD_SPEC_HW
-	*/
-	@Json(name = "hardware-revision")
-	HARDWARE_REVISION,
+    /**
+     * Hardware Revision - MDC_ID_PROD_SPEC_HW
+     */
+    @Json(name = "hardware-revision")
+    HARDWARE_REVISION,
 
-	/**
-	* Software Revision - MDC_ID_PROD_SPEC_SW
-	*/
-	@Json(name = "software-revision")
-	SOFTWARE_REVISION,
+    /**
+     * Software Revision - MDC_ID_PROD_SPEC_SW
+     */
+    @Json(name = "software-revision")
+    SOFTWARE_REVISION,
 
-	/**
-	* Firmware Revision - MDC_ID_PROD_SPEC_FW
-	*/
-	@Json(name = "firmware-revision")
-	FIRMWARE_REVISION,
+    /**
+     * Firmware Revision - MDC_ID_PROD_SPEC_FW
+     */
+    @Json(name = "firmware-revision")
+    FIRMWARE_REVISION,
 
-	/**
-	* Protocol Revision - MDC_ID_PROD_SPEC_PROTOCOL
-	*/
-	@Json(name = "protocol-revision")
-	PROTOCOL_REVISION,
+    /**
+     * Protocol Revision - MDC_ID_PROD_SPEC_PROTOCOL
+     */
+    @Json(name = "protocol-revision")
+    PROTOCOL_REVISION,
 
-	/**
-	* GMDN - MDC_ID_PROD_SPEC_GMDN
-	*/
-	@Json(name = "gmdn")
-	GMDN,
+    /**
+     * GMDN - MDC_ID_PROD_SPEC_GMDN
+     */
+    @Json(name = "gmdn")
+    GMDN,
 }

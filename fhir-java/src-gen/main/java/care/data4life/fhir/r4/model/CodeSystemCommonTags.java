@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Common Tag Codes defined by FHIR project
  *
@@ -27,9 +26,9 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCommonTags {
 
-	/**
-	* This request is intended to be acted upon, not merely stored
-	*/
-	@Json(name = "actionable")
-	ACTIONABLE,
+    /**
+     * This request is intended to be acted upon, not merely stored
+     */
+    @Json(name = "actionable")
+    ACTIONABLE,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Different measurement principle supported by the device.
  *
@@ -27,69 +26,69 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMeasmntPrinciple {
 
-	/**
-	* Measurement principle isn't in the list.
-	*/
-	@Json(name = "other")
-	OTHER,
+    /**
+     * Measurement principle isn't in the list.
+     */
+    @Json(name = "other")
+    OTHER,
 
-	/**
-	* Measurement is done using the chemical principle.
-	*/
-	@Json(name = "chemical")
-	CHEMICAL,
+    /**
+     * Measurement is done using the chemical principle.
+     */
+    @Json(name = "chemical")
+    CHEMICAL,
 
-	/**
-	* Measurement is done using the electrical principle.
-	*/
-	@Json(name = "electrical")
-	ELECTRICAL,
+    /**
+     * Measurement is done using the electrical principle.
+     */
+    @Json(name = "electrical")
+    ELECTRICAL,
 
-	/**
-	* Measurement is done using the impedance principle.
-	*/
-	@Json(name = "impedance")
-	IMPEDANCE,
+    /**
+     * Measurement is done using the impedance principle.
+     */
+    @Json(name = "impedance")
+    IMPEDANCE,
 
-	/**
-	* Measurement is done using the nuclear principle.
-	*/
-	@Json(name = "nuclear")
-	NUCLEAR,
+    /**
+     * Measurement is done using the nuclear principle.
+     */
+    @Json(name = "nuclear")
+    NUCLEAR,
 
-	/**
-	* Measurement is done using the optical principle.
-	*/
-	@Json(name = "optical")
-	OPTICAL,
+    /**
+     * Measurement is done using the optical principle.
+     */
+    @Json(name = "optical")
+    OPTICAL,
 
-	/**
-	* Measurement is done using the thermal principle.
-	*/
-	@Json(name = "thermal")
-	THERMAL,
+    /**
+     * Measurement is done using the thermal principle.
+     */
+    @Json(name = "thermal")
+    THERMAL,
 
-	/**
-	* Measurement is done using the biological principle.
-	*/
-	@Json(name = "biological")
-	BIOLOGICAL,
+    /**
+     * Measurement is done using the biological principle.
+     */
+    @Json(name = "biological")
+    BIOLOGICAL,
 
-	/**
-	* Measurement is done using the mechanical principle.
-	*/
-	@Json(name = "mechanical")
-	MECHANICAL,
+    /**
+     * Measurement is done using the mechanical principle.
+     */
+    @Json(name = "mechanical")
+    MECHANICAL,
 
-	/**
-	* Measurement is done using the acoustical principle.
-	*/
-	@Json(name = "acoustical")
-	ACOUSTICAL,
+    /**
+     * Measurement is done using the acoustical principle.
+     */
+    @Json(name = "acoustical")
+    ACOUSTICAL,
 
-	/**
-	* Measurement is done using the manual principle.
-	*/
-	@Json(name = "manual")
-	MANUAL,
+    /**
+     * Measurement is done using the manual principle.
+     */
+    @Json(name = "manual")
+    MANUAL,
 }

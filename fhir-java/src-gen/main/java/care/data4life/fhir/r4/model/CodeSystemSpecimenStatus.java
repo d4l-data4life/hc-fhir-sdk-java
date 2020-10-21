@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes providing the status/availability of a specimen.
  *
@@ -27,27 +26,28 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemSpecimenStatus {
 
-	/**
-	* The physical specimen is present and in good condition.
-	*/
-	@Json(name = "available")
-	AVAILABLE,
+    /**
+     * The physical specimen is present and in good condition.
+     */
+    @Json(name = "available")
+    AVAILABLE,
 
-	/**
-	* There is no physical specimen because it is either lost, destroyed or consumed.
-	*/
-	@Json(name = "unavailable")
-	UNAVAILABLE,
+    /**
+     * There is no physical specimen because it is either lost, destroyed or consumed.
+     */
+    @Json(name = "unavailable")
+    UNAVAILABLE,
 
-	/**
-	* The specimen cannot be used because of a quality issue such as a broken container, contamination, or too old.
-	*/
-	@Json(name = "unsatisfactory")
-	UNSATISFACTORY,
+    /**
+     * The specimen cannot be used because of a quality issue such as a broken container,
+     * contamination, or too old.
+     */
+    @Json(name = "unsatisfactory")
+    UNSATISFACTORY,
 
-	/**
-	* The specimen was entered in error and therefore nullified.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The specimen was entered in error and therefore nullified.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

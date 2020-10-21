@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * How the Quantity should be understood and represented.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemQuantityComparator {
 
-	/**
-	* The actual value is less than the given value.
-	*/
-	@Json(name = "<")
-	LESS_THAN,
+    /**
+     * The actual value is less than the given value.
+     */
+    @Json(name = "<")
+    LESS_THAN,
 
-	/**
-	* The actual value is less than or equal to the given value.
-	*/
-	@Json(name = "<=")
-	LESS_OR_EQUAL,
+    /**
+     * The actual value is less than or equal to the given value.
+     */
+    @Json(name = "<=")
+    LESS_OR_EQUAL,
 
-	/**
-	* The actual value is greater than or equal to the given value.
-	*/
-	@Json(name = ">=")
-	GREATER_OR_EQUAL,
+    /**
+     * The actual value is greater than or equal to the given value.
+     */
+    @Json(name = ">=")
+    GREATER_OR_EQUAL,
 
-	/**
-	* The actual value is greater than the given value.
-	*/
-	@Json(name = ">")
-	GREATER_THAN,
+    /**
+     * The actual value is greater than the given value.
+     */
+    @Json(name = ">")
+    GREATER_THAN,
 }

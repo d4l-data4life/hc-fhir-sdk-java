@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The workflow state of a clinical impression.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemClinicalImpressionStatus {
 
-	/**
-	* The assessment is still on-going and results are not yet final.
-	*/
-	@Json(name = "draft")
-	DRAFT,
+    /**
+     * The assessment is still on-going and results are not yet final.
+     */
+    @Json(name = "draft")
+    DRAFT,
 
-	/**
-	* The assessment is done and the results are final.
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * The assessment is done and the results are final.
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* This assessment was never actually done and the record is erroneous (e.g. Wrong patient).
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * This assessment was never actually done and the record is erroneous (e.g. Wrong patient).
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

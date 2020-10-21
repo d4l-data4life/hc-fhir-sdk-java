@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * How the system supports versioning for a resource.
  *
@@ -27,21 +26,22 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemResourceVersionPolicy {
 
-	/**
-	* VersionId meta-property is not supported (server) or used (client).
-	*/
-	@Json(name = "no-version")
-	NO_VERSION,
+    /**
+     * VersionId meta-property is not supported (server) or used (client).
+     */
+    @Json(name = "no-version")
+    NO_VERSION,
 
-	/**
-	* VersionId meta-property is supported (server) or used (client).
-	*/
-	@Json(name = "versioned")
-	VERSIONED,
+    /**
+     * VersionId meta-property is supported (server) or used (client).
+     */
+    @Json(name = "versioned")
+    VERSIONED,
 
-	/**
-	* VersionId must be correct for updates (server) or will be specified (If-match header) for updates (client).
-	*/
-	@Json(name = "versioned-update")
-	VERSIONED_UPDATE,
+    /**
+     * VersionId must be correct for updates (server) or will be specified (If-match header) for
+     * updates (client).
+     */
+    @Json(name = "versioned-update")
+    VERSIONED_UPDATE,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * How to interpret the context
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemStructureMapContextType {
 
-	/**
-	* The context specifies a type
-	*/
-	@Json(name = "type")
-	TYPE,
+    /**
+     * The context specifies a type
+     */
+    @Json(name = "type")
+    TYPE,
 
-	/**
-	* The context specifies a variable
-	*/
-	@Json(name = "variable")
-	VARIABLE,
+    /**
+     * The context specifies a variable
+     */
+    @Json(name = "variable")
+    VARIABLE,
 }

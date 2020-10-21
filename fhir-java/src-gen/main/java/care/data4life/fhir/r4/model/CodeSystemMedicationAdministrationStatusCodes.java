@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * MedicationAdministration Status Codes
  *
@@ -27,45 +26,50 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationAdministrationStatusCodes {
 
-	/**
-	* The administration has started but has not yet completed.
-	*/
-	@Json(name = "in-progress")
-	IN_PROGRESS,
+    /**
+     * The administration has started but has not yet completed.
+     */
+    @Json(name = "in-progress")
+    IN_PROGRESS,
 
-	/**
-	* The administration was terminated prior to any impact on the subject (though preparatory actions may have been taken)
-	*/
-	@Json(name = "not-done")
-	NOT_DONE,
+    /**
+     * The administration was terminated prior to any impact on the subject (though preparatory
+     * actions may have been taken)
+     */
+    @Json(name = "not-done")
+    NOT_DONE,
 
-	/**
-	* Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called 'suspended'.
-	*/
-	@Json(name = "on-hold")
-	ON_HOLD,
+    /**
+     * Actions implied by the administration have been temporarily halted, but are expected to
+     * continue later. May also be called 'suspended'.
+     */
+    @Json(name = "on-hold")
+    ON_HOLD,
 
-	/**
-	* All actions that are implied by the administration have occurred.
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * All actions that are implied by the administration have occurred.
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* The administration was entered in error and therefore nullified.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The administration was entered in error and therefore nullified.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 
-	/**
-	* Actions implied by the administration have been permanently halted, before all of them occurred.
-	*/
-	@Json(name = "stopped")
-	STOPPED,
+    /**
+     * Actions implied by the administration have been permanently halted, before all of them
+     * occurred.
+     */
+    @Json(name = "stopped")
+    STOPPED,
 
-	/**
-	* The authoring system does not know which of the status values currently applies for this request. Note: This concept is not to be used for 'other' - one of the listed statuses is presumed to apply, it's just not known which one.
-	*/
-	@Json(name = "unknown")
-	UNKNOWN,
+    /**
+     * The authoring system does not know which of the status values currently applies for this
+     * request. Note: This concept is not to be used for 'other' - one of the listed statuses is
+     * presumed to apply, it's just not known which one.
+     */
+    @Json(name = "unknown")
+    UNKNOWN,
 }

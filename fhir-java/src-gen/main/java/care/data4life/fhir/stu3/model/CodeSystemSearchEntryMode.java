@@ -19,29 +19,29 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Why an entry is in the result set - whether it's included as a match or because of an _include requirement.
+ * Why an entry is in the result set - whether it's included as a match or because of an _include
+ * requirement.
  *
  * @see <a href="http://hl7.org/fhir/search-entry-mode">SearchEntryMode</a>
  */
 public enum CodeSystemSearchEntryMode {
 
-	/**
-	* This resource matched the search specification.
-	*/
-	@Json(name = "match")
-	MATCH,
+    /**
+     * This resource matched the search specification.
+     */
+    @Json(name = "match")
+    MATCH,
 
-	/**
-	* This resource is returned because it is referred to from another resource in the search set.
-	*/
-	@Json(name = "include")
-	INCLUDE,
+    /**
+     * This resource is returned because it is referred to from another resource in the search set.
+     */
+    @Json(name = "include")
+    INCLUDE,
 
-	/**
-	* An OperationOutcome that provides additional information about the processing of a search.
-	*/
-	@Json(name = "outcome")
-	OUTCOME,
+    /**
+     * An OperationOutcome that provides additional information about the processing of a search.
+     */
+    @Json(name = "outcome")
+    OUTCOME,
 }

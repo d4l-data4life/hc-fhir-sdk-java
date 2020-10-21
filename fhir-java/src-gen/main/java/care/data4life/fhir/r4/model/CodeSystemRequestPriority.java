@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Identifies the level of importance to be assigned to actioning the request.
  *
@@ -27,27 +26,27 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemRequestPriority {
 
-	/**
-	* The request has normal priority.
-	*/
-	@Json(name = "routine")
-	ROUTINE,
+    /**
+     * The request has normal priority.
+     */
+    @Json(name = "routine")
+    ROUTINE,
 
-	/**
-	* The request should be actioned promptly - higher priority than routine.
-	*/
-	@Json(name = "urgent")
-	URGENT,
+    /**
+     * The request should be actioned promptly - higher priority than routine.
+     */
+    @Json(name = "urgent")
+    URGENT,
 
-	/**
-	* The request should be actioned as soon as possible - higher priority than urgent.
-	*/
-	@Json(name = "asap")
-	ASAP,
+    /**
+     * The request should be actioned as soon as possible - higher priority than urgent.
+     */
+    @Json(name = "asap")
+    ASAP,
 
-	/**
-	* The request should be actioned immediately - highest possible priority.  E.g. an emergency.
-	*/
-	@Json(name = "stat")
-	STAT,
+    /**
+     * The request should be actioned immediately - highest possible priority.  E.g. an emergency.
+     */
+    @Json(name = "stat")
+    STAT,
 }

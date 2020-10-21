@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Types of relationships between two goals
  *
@@ -27,33 +26,34 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemGoalRelationshipType {
 
-	/**
-	* Indicates that the target goal is one which must be met before striving for the current goal
-	*/
-	@Json(name = "predecessor")
-	PREDECESSOR,
+    /**
+     * Indicates that the target goal is one which must be met before striving for the current goal
+     */
+    @Json(name = "predecessor")
+    PREDECESSOR,
 
-	/**
-	* Indicates that the target goal is a desired objective once the current goal is met
-	*/
-	@Json(name = "successor")
-	SUCCESSOR,
+    /**
+     * Indicates that the target goal is a desired objective once the current goal is met
+     */
+    @Json(name = "successor")
+    SUCCESSOR,
 
-	/**
-	* Indicates that this goal has been replaced by the target goal
-	*/
-	@Json(name = "replacement")
-	REPLACEMENT,
+    /**
+     * Indicates that this goal has been replaced by the target goal
+     */
+    @Json(name = "replacement")
+    REPLACEMENT,
 
-	/**
-	* Indicates that the target goal is considered to be a "piece" of attaining this goal.
-	*/
-	@Json(name = "milestone")
-	MILESTONE,
+    /**
+     * Indicates that the target goal is considered to be a "piece" of attaining this goal.
+     */
+    @Json(name = "milestone")
+    MILESTONE,
 
-	/**
-	* Indicates that the relationship is not covered by one of the pre-defined codes.  (An extension may convey more information about the meaning of the relationship.)
-	*/
-	@Json(name = "other")
-	OTHER,
+    /**
+     * Indicates that the relationship is not covered by one of the pre-defined codes.  (An
+     * extension may convey more information about the meaning of the relationship.)
+     */
+    @Json(name = "other")
+    OTHER,
 }

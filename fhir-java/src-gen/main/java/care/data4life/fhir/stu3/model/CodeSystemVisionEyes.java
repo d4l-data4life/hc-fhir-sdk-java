@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * A coded concept listing the eye codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemVisionEyes {
 
-	/**
-	* Right Eye
-	*/
-	@Json(name = "right")
-	RIGHT,
+    /**
+     * Right Eye
+     */
+    @Json(name = "right")
+    RIGHT,
 
-	/**
-	* Left Eye
-	*/
-	@Json(name = "left")
-	LEFT,
+    /**
+     * Left Eye
+     */
+    @Json(name = "left")
+    LEFT,
 }

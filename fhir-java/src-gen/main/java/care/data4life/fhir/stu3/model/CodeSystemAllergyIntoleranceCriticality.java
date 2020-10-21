@@ -19,29 +19,31 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance.
+ * Estimate of the potential clinical harm, or seriousness, of a reaction to an identified
+ * substance.
  *
  * @see <a href="http://hl7.org/fhir/allergy-intolerance-criticality">AllergyIntoleranceCriticality</a>
  */
 public enum CodeSystemAllergyIntoleranceCriticality {
 
-	/**
-	* Worst case result of a future exposure is not assessed to be life-threatening or having high potential for organ system failure.
-	*/
-	@Json(name = "low")
-	LOW,
+    /**
+     * Worst case result of a future exposure is not assessed to be life-threatening or having high
+     * potential for organ system failure.
+     */
+    @Json(name = "low")
+    LOW,
 
-	/**
-	* Worst case result of a future exposure is assessed to be life-threatening or having high potential for organ system failure.
-	*/
-	@Json(name = "high")
-	HIGH,
+    /**
+     * Worst case result of a future exposure is assessed to be life-threatening or having high
+     * potential for organ system failure.
+     */
+    @Json(name = "high")
+    HIGH,
 
-	/**
-	* Unable to assess the worst case result of a future exposure.
-	*/
-	@Json(name = "unable-to-assess")
-	UNABLE_TO_ASSESS,
+    /**
+     * Unable to assess the worst case result of a future exposure.
+     */
+    @Json(name = "unable-to-assess")
+    UNABLE_TO_ASSESS,
 }

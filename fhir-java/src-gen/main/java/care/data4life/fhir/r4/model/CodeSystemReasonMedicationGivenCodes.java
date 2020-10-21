@@ -19,29 +19,30 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process.
+ * This value set is provided as an example. The value set to instantiate this attribute should be
+ * drawn from a robust terminology code system that consists of or contains concepts to support the
+ * medication process.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/reason-medication-given">ReasonMedicationGivenCodes</a>
  */
 public enum CodeSystemReasonMedicationGivenCodes {
 
-	/**
-	* No reason known.
-	*/
-	@Json(name = "a")
-	A,
+    /**
+     * No reason known.
+     */
+    @Json(name = "a")
+    A,
 
-	/**
-	* The administration was following an ordered protocol.
-	*/
-	@Json(name = "b")
-	B,
+    /**
+     * The administration was following an ordered protocol.
+     */
+    @Json(name = "b")
+    B,
 
-	/**
-	* The administration was needed to treat an emergency.
-	*/
-	@Json(name = "c")
-	C,
+    /**
+     * The administration was needed to treat an emergency.
+     */
+    @Json(name = "c")
+    C,
 }

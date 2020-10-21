@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Describes the category of the metric.
  *
@@ -27,27 +26,28 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDeviceMetricCategory {
 
-	/**
-	* DeviceObservations generated for this DeviceMetric are measured.
-	*/
-	@Json(name = "measurement")
-	MEASUREMENT,
+    /**
+     * DeviceObservations generated for this DeviceMetric are measured.
+     */
+    @Json(name = "measurement")
+    MEASUREMENT,
 
-	/**
-	* DeviceObservations generated for this DeviceMetric is a setting that will influence the behavior of the Device.
-	*/
-	@Json(name = "setting")
-	SETTING,
+    /**
+     * DeviceObservations generated for this DeviceMetric is a setting that will influence the
+     * behavior of the Device.
+     */
+    @Json(name = "setting")
+    SETTING,
 
-	/**
-	* DeviceObservations generated for this DeviceMetric are calculated.
-	*/
-	@Json(name = "calculation")
-	CALCULATION,
+    /**
+     * DeviceObservations generated for this DeviceMetric are calculated.
+     */
+    @Json(name = "calculation")
+    CALCULATION,
 
-	/**
-	* The category of this DeviceMetric is unspecified.
-	*/
-	@Json(name = "unspecified")
-	UNSPECIFIED,
+    /**
+     * The category of this DeviceMetric is unspecified.
+     */
+    @Json(name = "unspecified")
+    UNSPECIFIED,
 }

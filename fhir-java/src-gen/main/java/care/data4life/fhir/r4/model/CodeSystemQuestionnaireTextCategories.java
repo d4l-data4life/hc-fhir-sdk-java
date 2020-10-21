@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes defining the purpose of a Questionnaire item of type 'text'.
  *
@@ -27,21 +26,25 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemQuestionnaireTextCategories {
 
-	/**
-	* The text provides guidance on how to populate or use a portion of the questionnaire (or the questionnaire as a whole).
-	*/
-	@Json(name = "instructions")
-	INSTRUCTIONS,
+    /**
+     * The text provides guidance on how to populate or use a portion of the questionnaire (or the
+     * questionnaire as a whole).
+     */
+    @Json(name = "instructions")
+    INSTRUCTIONS,
 
-	/**
-	* The text provides guidance on how the information should be or will be handled from a security/confidentiality/access control perspective when completed
-	*/
-	@Json(name = "security")
-	SECURITY,
+    /**
+     * The text provides guidance on how the information should be or will be handled from a
+     * security/confidentiality/access control perspective when completed
+     */
+    @Json(name = "security")
+    SECURITY,
 
-	/**
-	* The text provides additional guidance on populating the containing item.  Help text isn't necessarily expected to be rendered as part of the form, but may instead be made available through fly-over, pop-up button, link to a "help" page, etc.
-	*/
-	@Json(name = "help")
-	HELP,
+    /**
+     * The text provides additional guidance on populating the containing item.  Help text isn't
+     * necessarily expected to be rendered as part of the form, but may instead be made available
+     * through fly-over, pop-up button, link to a "help" page, etc.
+     */
+    @Json(name = "help")
+    HELP,
 }

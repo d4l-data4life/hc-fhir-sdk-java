@@ -19,47 +19,49 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Whether the risk estimate is dichotomous, continuous or qualitative and the specific type of risk estimate (eg proportion or median).
+ * Whether the risk estimate is dichotomous, continuous or qualitative and the specific type of risk
+ * estimate (eg proportion or median).
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/risk-estimate-type">RiskEstimateType</a>
  */
 public enum CodeSystemRiskEstimateType {
 
-	/**
-	* dichotomous measure (present or absent) reported as a ratio compared to the denominator of 1 (A percentage is a proportion with denominator of 100).
-	*/
-	@Json(name = "proportion")
-	PROPORTION,
+    /**
+     * dichotomous measure (present or absent) reported as a ratio compared to the denominator of 1
+     * (A percentage is a proportion with denominator of 100).
+     */
+    @Json(name = "proportion")
+    PROPORTION,
 
-	/**
-	* A special use case where the proportion is derived from a formula rather than derived from summary evidence.
-	*/
-	@Json(name = "derivedProportion")
-	DERIVEDPROPORTION,
+    /**
+     * A special use case where the proportion is derived from a formula rather than derived from
+     * summary evidence.
+     */
+    @Json(name = "derivedProportion")
+    DERIVEDPROPORTION,
 
-	/**
-	* continuous numerical measure reported as an average.
-	*/
-	@Json(name = "mean")
-	MEAN,
+    /**
+     * continuous numerical measure reported as an average.
+     */
+    @Json(name = "mean")
+    MEAN,
 
-	/**
-	* continuous numerical measure reported as the middle of the range.
-	*/
-	@Json(name = "median")
-	MEDIAN,
+    /**
+     * continuous numerical measure reported as the middle of the range.
+     */
+    @Json(name = "median")
+    MEDIAN,
 
-	/**
-	* descriptive measure reported as total number of items.
-	*/
-	@Json(name = "count")
-	COUNT,
+    /**
+     * descriptive measure reported as total number of items.
+     */
+    @Json(name = "count")
+    COUNT,
 
-	/**
-	* descriptive measure reported as narrative.
-	*/
-	@Json(name = "descriptive")
-	DESCRIPTIVE,
+    /**
+     * descriptive measure reported as narrative.
+     */
+    @Json(name = "descriptive")
+    DESCRIPTIVE,
 }

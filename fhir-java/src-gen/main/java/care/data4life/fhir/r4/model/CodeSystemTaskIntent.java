@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Distinguishes whether the task is a proposal, plan or full order.
  *
@@ -27,9 +26,11 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemTaskIntent {
 
-	/**
-	* The intent is not known.  When dealing with Task, it's not always known (or relevant) how the task was initiated - i.e. whether it was proposed, planned, ordered or just done spontaneously.
-	*/
-	@Json(name = "unknown")
-	UNKNOWN,
+    /**
+     * The intent is not known.  When dealing with Task, it's not always known (or relevant) how the
+     * task was initiated - i.e. whether it was proposed, planned, ordered or just done
+     * spontaneously.
+     */
+    @Json(name = "unknown")
+    UNKNOWN,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Defines behavior for an action or a group for how many times that item may be repeated
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemActionCardinalityBehavior {
 
-	/**
-	* The action may only be selected one time
-	*/
-	@Json(name = "single")
-	SINGLE,
+    /**
+     * The action may only be selected one time
+     */
+    @Json(name = "single")
+    SINGLE,
 
-	/**
-	* The action may be selected multiple times
-	*/
-	@Json(name = "multiple")
-	MULTIPLE,
+    /**
+     * The action may be selected multiple times
+     */
+    @Json(name = "multiple")
+    MULTIPLE,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes example Procedure Type codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExampleProcedureTypeCodes {
 
-	/**
-	* The first procedure in a series required to produce and overall patient outcome.
-	*/
-	@Json(name = "primary")
-	PRIMARY,
+    /**
+     * The first procedure in a series required to produce and overall patient outcome.
+     */
+    @Json(name = "primary")
+    PRIMARY,
 
-	/**
-	* The second procedure in a series required to produce and overall patient outcome.
-	*/
-	@Json(name = "secondary")
-	SECONDARY,
+    /**
+     * The second procedure in a series required to produce and overall patient outcome.
+     */
+    @Json(name = "secondary")
+    SECONDARY,
 }

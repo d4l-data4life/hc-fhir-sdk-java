@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * How a rule statement is applied, such as adding additional consent or removing consent.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConsentProvisionType {
 
-	/**
-	* Consent is denied for actions meeting these rules.
-	*/
-	@Json(name = "deny")
-	DENY,
+    /**
+     * Consent is denied for actions meeting these rules.
+     */
+    @Json(name = "deny")
+    DENY,
 
-	/**
-	* Consent is provided for actions meeting these rules.
-	*/
-	@Json(name = "permit")
-	PERMIT,
+    /**
+     * Consent is provided for actions meeting these rules.
+     */
+    @Json(name = "permit")
+    PERMIT,
 }

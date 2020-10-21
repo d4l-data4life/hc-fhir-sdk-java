@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes the financial processing priority codes.
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemProcessPriorityCodes {
 
-	/**
-	* Immediately in real time.
-	*/
-	@Json(name = "stat")
-	STAT,
+    /**
+     * Immediately in real time.
+     */
+    @Json(name = "stat")
+    STAT,
 
-	/**
-	* With best effort.
-	*/
-	@Json(name = "normal")
-	NORMAL,
+    /**
+     * With best effort.
+     */
+    @Json(name = "normal")
+    NORMAL,
 
-	/**
-	* Later, when possible.
-	*/
-	@Json(name = "deferred")
-	DEFERRED,
+    /**
+     * Later, when possible.
+     */
+    @Json(name = "deferred")
+    DEFERRED,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The possible types of research elements (E.g. Population, Exposure, Outcome).
  *
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemResearchElementType {
 
-	/**
-	* The element defines the population that forms the basis for research.
-	*/
-	@Json(name = "population")
-	POPULATION,
+    /**
+     * The element defines the population that forms the basis for research.
+     */
+    @Json(name = "population")
+    POPULATION,
 
-	/**
-	* The element defines an exposure within the population that is being researched.
-	*/
-	@Json(name = "exposure")
-	EXPOSURE,
+    /**
+     * The element defines an exposure within the population that is being researched.
+     */
+    @Json(name = "exposure")
+    EXPOSURE,
 
-	/**
-	* The element defines an outcome within the population that is being researched.
-	*/
-	@Json(name = "outcome")
-	OUTCOME,
+    /**
+     * The element defines an outcome within the population that is being researched.
+     */
+    @Json(name = "outcome")
+    OUTCOME,
 }

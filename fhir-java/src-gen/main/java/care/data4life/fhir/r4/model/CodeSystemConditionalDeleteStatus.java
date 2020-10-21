@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * A code that indicates how the server supports conditional delete.
  *
@@ -27,21 +26,22 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConditionalDeleteStatus {
 
-	/**
-	* No support for conditional deletes.
-	*/
-	@Json(name = "not-supported")
-	NOT_SUPPORTED,
+    /**
+     * No support for conditional deletes.
+     */
+    @Json(name = "not-supported")
+    NOT_SUPPORTED,
 
-	/**
-	* Conditional deletes are supported, but only single resources at a time.
-	*/
-	@Json(name = "single")
-	SINGLE,
+    /**
+     * Conditional deletes are supported, but only single resources at a time.
+     */
+    @Json(name = "single")
+    SINGLE,
 
-	/**
-	* Conditional deletes are supported, and multiple resources can be deleted in a single interaction.
-	*/
-	@Json(name = "multiple")
-	MULTIPLE,
+    /**
+     * Conditional deletes are supported, and multiple resources can be deleted in a single
+     * interaction.
+     */
+    @Json(name = "multiple")
+    MULTIPLE,
 }

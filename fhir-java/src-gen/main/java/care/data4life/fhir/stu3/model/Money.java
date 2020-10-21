@@ -16,37 +16,27 @@
 
 package care.data4life.fhir.stu3.model;
 
-import com.squareup.moshi.Json;
-
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
-
-import javax.annotation.Nullable;
-
 /**
  * Money.java
- *
+ * <p>
  * An amount of economic utility in some recognized currency
- * 
- * @see <a href="http://hl7.org/fhir/StructureDefinition/Money">Money</a>
  *
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Money) on 2020-10-19
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/Money">Money</a>
+ * <p>
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Money) on 2020-10-21
  */
-public class Money extends Quantity  {
+public class Money extends Quantity {
 
-	public static final String resourceType = "Money";
+    public static final String resourceType = "Money";
 
-    
-	public Money() {
-	}
-	@Override
-	public String getResourceType() {
-		return Money.resourceType;
-	}
 
+    public Money() {
+    }
+
+    @Override
+    public String getResourceType() {
+        return Money.resourceType;
+    }
 
 
 }

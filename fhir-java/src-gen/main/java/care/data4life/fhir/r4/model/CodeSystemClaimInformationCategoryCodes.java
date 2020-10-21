@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes sample Information Category codes.
  *
@@ -27,87 +26,89 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemClaimInformationCategoryCodes {
 
-	/**
-	* Codes conveying additional situation and condition information.
-	*/
-	@Json(name = "info")
-	INFO,
+    /**
+     * Codes conveying additional situation and condition information.
+     */
+    @Json(name = "info")
+    INFO,
 
-	/**
-	* Discharge status and discharge to locations.
-	*/
-	@Json(name = "discharge")
-	DISCHARGE,
+    /**
+     * Discharge status and discharge to locations.
+     */
+    @Json(name = "discharge")
+    DISCHARGE,
 
-	/**
-	* Period, start or end dates of aspects of the Condition.
-	*/
-	@Json(name = "onset")
-	ONSET,
+    /**
+     * Period, start or end dates of aspects of the Condition.
+     */
+    @Json(name = "onset")
+    ONSET,
 
-	/**
-	* Nature and date of the related event e.g. Last exam, service, X-ray etc.
-	*/
-	@Json(name = "related")
-	RELATED,
+    /**
+     * Nature and date of the related event e.g. Last exam, service, X-ray etc.
+     */
+    @Json(name = "related")
+    RELATED,
 
-	/**
-	* Insurance policy exceptions.
-	*/
-	@Json(name = "exception")
-	EXCEPTION,
+    /**
+     * Insurance policy exceptions.
+     */
+    @Json(name = "exception")
+    EXCEPTION,
 
-	/**
-	* Materials being forwarded, e.g. Models, molds, images, documents.
-	*/
-	@Json(name = "material")
-	MATERIAL,
+    /**
+     * Materials being forwarded, e.g. Models, molds, images, documents.
+     */
+    @Json(name = "material")
+    MATERIAL,
 
-	/**
-	* Materials attached such as images, documents and resources.
-	*/
-	@Json(name = "attachment")
-	ATTACHMENT,
+    /**
+     * Materials attached such as images, documents and resources.
+     */
+    @Json(name = "attachment")
+    ATTACHMENT,
 
-	/**
-	* Teeth which are missing for any reason, for example: prior extraction, never developed.
-	*/
-	@Json(name = "missingtooth")
-	MISSINGTOOTH,
+    /**
+     * Teeth which are missing for any reason, for example: prior extraction, never developed.
+     */
+    @Json(name = "missingtooth")
+    MISSINGTOOTH,
 
-	/**
-	* The type of prosthesis and date of supply if a previously supplied prosthesis.
-	*/
-	@Json(name = "prosthesis")
-	PROSTHESIS,
+    /**
+     * The type of prosthesis and date of supply if a previously supplied prosthesis.
+     */
+    @Json(name = "prosthesis")
+    PROSTHESIS,
 
-	/**
-	* Other information identified by the type.system.
-	*/
-	@Json(name = "other")
-	OTHER,
+    /**
+     * Other information identified by the type.system.
+     */
+    @Json(name = "other")
+    OTHER,
 
-	/**
-	* An indication that the patient was hospitalized, the period if known otherwise a Yes/No (boolean).
-	*/
-	@Json(name = "hospitalized")
-	HOSPITALIZED,
+    /**
+     * An indication that the patient was hospitalized, the period if known otherwise a Yes/No
+     * (boolean).
+     */
+    @Json(name = "hospitalized")
+    HOSPITALIZED,
 
-	/**
-	* An indication that the patient was unable to work, the period if known otherwise a Yes/No (boolean).
-	*/
-	@Json(name = "employmentimpacted")
-	EMPLOYMENTIMPACTED,
+    /**
+     * An indication that the patient was unable to work, the period if known otherwise a Yes/No
+     * (boolean).
+     */
+    @Json(name = "employmentimpacted")
+    EMPLOYMENTIMPACTED,
 
-	/**
-	* The external cause of an illness or injury.
-	*/
-	@Json(name = "externalcause")
-	EXTERNALCAUSE,
+    /**
+     * The external cause of an illness or injury.
+     */
+    @Json(name = "externalcause")
+    EXTERNALCAUSE,
 
-	/**
-	* The reason for the patient visit.
-	*/
-	@Json(name = "patientreasonforvisit")
-	PATIENTREASONFORVISIT,
+    /**
+     * The reason for the patient visit.
+     */
+    @Json(name = "patientreasonforvisit")
+    PATIENTREASONFORVISIT,
 }

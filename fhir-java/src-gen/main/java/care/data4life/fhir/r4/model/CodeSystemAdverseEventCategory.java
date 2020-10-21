@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Overall categorization of the event, e.g. product-related or situational.
  *
@@ -27,87 +26,88 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemAdverseEventCategory {
 
-	/**
-	* The adverse event pertains to a product problem.
-	*/
-	@Json(name = "product-problem")
-	PRODUCT_PROBLEM,
+    /**
+     * The adverse event pertains to a product problem.
+     */
+    @Json(name = "product-problem")
+    PRODUCT_PROBLEM,
 
-	/**
-	* The adverse event pertains to product quality.
-	*/
-	@Json(name = "product-quality")
-	PRODUCT_QUALITY,
+    /**
+     * The adverse event pertains to product quality.
+     */
+    @Json(name = "product-quality")
+    PRODUCT_QUALITY,
 
-	/**
-	* The adverse event pertains to a product use error.
-	*/
-	@Json(name = "product-use-error")
-	PRODUCT_USE_ERROR,
+    /**
+     * The adverse event pertains to a product use error.
+     */
+    @Json(name = "product-use-error")
+    PRODUCT_USE_ERROR,
 
-	/**
-	* The adverse event pertains to a wrong dose.
-	*/
-	@Json(name = "wrong-dose")
-	WRONG_DOSE,
+    /**
+     * The adverse event pertains to a wrong dose.
+     */
+    @Json(name = "wrong-dose")
+    WRONG_DOSE,
 
-	/**
-	* The adverse event pertains to incorrect perscribing information.
-	*/
-	@Json(name = "incorrect-prescribing-information")
-	INCORRECT_PRESCRIBING_INFORMATION,
+    /**
+     * The adverse event pertains to incorrect perscribing information.
+     */
+    @Json(name = "incorrect-prescribing-information")
+    INCORRECT_PRESCRIBING_INFORMATION,
 
-	/**
-	* The adverse event pertains to a wrong technique.
-	*/
-	@Json(name = "wrong-technique")
-	WRONG_TECHNIQUE,
+    /**
+     * The adverse event pertains to a wrong technique.
+     */
+    @Json(name = "wrong-technique")
+    WRONG_TECHNIQUE,
 
-	/**
-	* The adverse event pertains to a wrong route of administration.
-	*/
-	@Json(name = "wrong-route-of-administration")
-	WRONG_ROUTE_OF_ADMINISTRATION,
+    /**
+     * The adverse event pertains to a wrong route of administration.
+     */
+    @Json(name = "wrong-route-of-administration")
+    WRONG_ROUTE_OF_ADMINISTRATION,
 
-	/**
-	* The adverse event pertains to a wrong rate.
-	*/
-	@Json(name = "wrong-rate")
-	WRONG_RATE,
+    /**
+     * The adverse event pertains to a wrong rate.
+     */
+    @Json(name = "wrong-rate")
+    WRONG_RATE,
 
-	/**
-	* The adverse event pertains to a wrong duration.
-	*/
-	@Json(name = "wrong-duration")
-	WRONG_DURATION,
+    /**
+     * The adverse event pertains to a wrong duration.
+     */
+    @Json(name = "wrong-duration")
+    WRONG_DURATION,
 
-	/**
-	* The adverse event pertains to a wrong time.
-	*/
-	@Json(name = "wrong-time")
-	WRONG_TIME,
+    /**
+     * The adverse event pertains to a wrong time.
+     */
+    @Json(name = "wrong-time")
+    WRONG_TIME,
 
-	/**
-	* The adverse event pertains to an expired drug.
-	*/
-	@Json(name = "expired-drug")
-	EXPIRED_DRUG,
+    /**
+     * The adverse event pertains to an expired drug.
+     */
+    @Json(name = "expired-drug")
+    EXPIRED_DRUG,
 
-	/**
-	* The adverse event pertains to a medical device use error.
-	*/
-	@Json(name = "medical-device-use-error")
-	MEDICAL_DEVICE_USE_ERROR,
+    /**
+     * The adverse event pertains to a medical device use error.
+     */
+    @Json(name = "medical-device-use-error")
+    MEDICAL_DEVICE_USE_ERROR,
 
-	/**
-	* The adverse event pertains to a problem with a different manufacturer of the same medication.
-	*/
-	@Json(name = "problem-different-manufacturer")
-	PROBLEM_DIFFERENT_MANUFACTURER,
+    /**
+     * The adverse event pertains to a problem with a different manufacturer of the same
+     * medication.
+     */
+    @Json(name = "problem-different-manufacturer")
+    PROBLEM_DIFFERENT_MANUFACTURER,
 
-	/**
-	* The adverse event pertains to an unsafe physical environment.
-	*/
-	@Json(name = "unsafe-physical-environment")
-	UNSAFE_PHYSICAL_ENVIRONMENT,
+    /**
+     * The adverse event pertains to an unsafe physical environment.
+     */
+    @Json(name = "unsafe-physical-environment")
+    UNSAFE_PHYSICAL_ENVIRONMENT,
 }

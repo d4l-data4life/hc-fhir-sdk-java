@@ -19,29 +19,30 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or entered in error.
+ * Indicates whether this flag is active and needs to be displayed to a user, or whether it is no
+ * longer needed or entered in error.
  *
  * @see <a href="http://hl7.org/fhir/flag-status">FlagStatus</a>
  */
 public enum CodeSystemFlagStatus {
 
-	/**
-	* A current flag that should be displayed to a user. A system may use the category to determine which roles should view the flag.
-	*/
-	@Json(name = "active")
-	ACTIVE,
+    /**
+     * A current flag that should be displayed to a user. A system may use the category to determine
+     * which roles should view the flag.
+     */
+    @Json(name = "active")
+    ACTIVE,
 
-	/**
-	* The flag does not need to be displayed any more.
-	*/
-	@Json(name = "inactive")
-	INACTIVE,
+    /**
+     * The flag does not need to be displayed any more.
+     */
+    @Json(name = "inactive")
+    INACTIVE,
 
-	/**
-	* The flag was added in error, and should no longer be displayed.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The flag was added in error, and should no longer be displayed.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

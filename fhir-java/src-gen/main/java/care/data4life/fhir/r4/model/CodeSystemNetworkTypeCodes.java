@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes a smattering of Network type codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemNetworkTypeCodes {
 
-	/**
-	* Services rendered by a Network provider
-	*/
-	@Json(name = "in")
-	IN,
+    /**
+     * Services rendered by a Network provider
+     */
+    @Json(name = "in")
+    IN,
 
-	/**
-	* Services rendered by a provider who is not in the Network
-	*/
-	@Json(name = "out")
-	OUT,
+    /**
+     * Services rendered by a provider who is not in the Network
+     */
+    @Json(name = "out")
+    OUT,
 }

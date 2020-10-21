@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * This value set includes Example Coverage Financial Exception Codes.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemExampleCoverageFinancialExceptionCodes {
 
-	/**
-	* Retired persons have all copays and deductibles reduced.
-	*/
-	@Json(name = "retired")
-	RETIRED,
+    /**
+     * Retired persons have all copays and deductibles reduced.
+     */
+    @Json(name = "retired")
+    RETIRED,
 
-	/**
-	* Children in the foster care have all copays and deductibles waived.
-	*/
-	@Json(name = "foster")
-	FOSTER,
+    /**
+     * Children in the foster care have all copays and deductibles waived.
+     */
+    @Json(name = "foster")
+    FOSTER,
 }

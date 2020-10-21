@@ -19,29 +19,29 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * The possible types of variables for exposures or outcomes (E.g. Dichotomous, Continuous, Descriptive).
+ * The possible types of variables for exposures or outcomes (E.g. Dichotomous, Continuous,
+ * Descriptive).
  *
  * @see <a href="http://hl7.org/fhir/variable-type">EvidenceVariableType</a>
  */
 public enum CodeSystemEvidenceVariableType {
 
-	/**
-	* The variable is dichotomous, such as present or absent.
-	*/
-	@Json(name = "dichotomous")
-	DICHOTOMOUS,
+    /**
+     * The variable is dichotomous, such as present or absent.
+     */
+    @Json(name = "dichotomous")
+    DICHOTOMOUS,
 
-	/**
-	* The variable is a continuous result such as a quantity.
-	*/
-	@Json(name = "continuous")
-	CONTINUOUS,
+    /**
+     * The variable is a continuous result such as a quantity.
+     */
+    @Json(name = "continuous")
+    CONTINUOUS,
 
-	/**
-	* The variable is described narratively rather than quantitatively.
-	*/
-	@Json(name = "descriptive")
-	DESCRIPTIVE,
+    /**
+     * The variable is described narratively rather than quantitatively.
+     */
+    @Json(name = "descriptive")
+    DESCRIPTIVE,
 }

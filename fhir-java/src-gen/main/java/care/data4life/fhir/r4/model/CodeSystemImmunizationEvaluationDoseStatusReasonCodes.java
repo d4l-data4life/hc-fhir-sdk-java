@@ -19,41 +19,45 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why an administered dose has been assigned a particular status. Often, this reason describes why a dose is considered invalid. This value set is provided as a suggestive example.
+ * The value set to instantiate this attribute should be drawn from a terminologically robust code
+ * system that consists of or contains concepts to support describing the reason why an administered
+ * dose has been assigned a particular status. Often, this reason describes why a dose is considered
+ * invalid. This value set is provided as a suggestive example.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason">ImmunizationEvaluationDoseStatusReasonCodes</a>
  */
 public enum CodeSystemImmunizationEvaluationDoseStatusReasonCodes {
 
-	/**
-	* The product was stored in a manner inconsistent with manufacturer guidelines potentially reducing the effectiveness of the product.
-	*/
-	@Json(name = "advstorage")
-	ADVSTORAGE,
+    /**
+     * The product was stored in a manner inconsistent with manufacturer guidelines potentially
+     * reducing the effectiveness of the product.
+     */
+    @Json(name = "advstorage")
+    ADVSTORAGE,
 
-	/**
-	* The product was stored at a temperature inconsistent with manufacturer guidelines potentially reducing the effectiveness of the product.
-	*/
-	@Json(name = "coldchbrk")
-	COLDCHBRK,
+    /**
+     * The product was stored at a temperature inconsistent with manufacturer guidelines potentially
+     * reducing the effectiveness of the product.
+     */
+    @Json(name = "coldchbrk")
+    COLDCHBRK,
 
-	/**
-	* The product was administered after the expiration date associated with lot of vaccine.
-	*/
-	@Json(name = "explot")
-	EXPLOT,
+    /**
+     * The product was administered after the expiration date associated with lot of vaccine.
+     */
+    @Json(name = "explot")
+    EXPLOT,
 
-	/**
-	* The product was administered at a time inconsistent with the documented schedule.
-	*/
-	@Json(name = "outsidesched")
-	OUTSIDESCHED,
+    /**
+     * The product was administered at a time inconsistent with the documented schedule.
+     */
+    @Json(name = "outsidesched")
+    OUTSIDESCHED,
 
-	/**
-	* The product administered has been recalled by the manufacturer.
-	*/
-	@Json(name = "prodrecall")
-	PRODRECALL,
+    /**
+     * The product administered has been recalled by the manufacturer.
+     */
+    @Json(name = "prodrecall")
+    PRODRECALL,
 }

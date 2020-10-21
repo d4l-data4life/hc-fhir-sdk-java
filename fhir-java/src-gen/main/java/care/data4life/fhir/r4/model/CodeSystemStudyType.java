@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Types of research studies (types of research methods).
  *
@@ -27,45 +26,45 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemStudyType {
 
-	/**
-	* randomized controlled trial.
-	*/
-	@Json(name = "RCT")
-	RCT,
+    /**
+     * randomized controlled trial.
+     */
+    @Json(name = "RCT")
+    RCT,
 
-	/**
-	* controlled (but not randomized) trial.
-	*/
-	@Json(name = "CCT")
-	CCT,
+    /**
+     * controlled (but not randomized) trial.
+     */
+    @Json(name = "CCT")
+    CCT,
 
-	/**
-	* observational study comparing cohorts.
-	*/
-	@Json(name = "cohort")
-	COHORT,
+    /**
+     * observational study comparing cohorts.
+     */
+    @Json(name = "cohort")
+    COHORT,
 
-	/**
-	* case-control study.
-	*/
-	@Json(name = "case-control")
-	CASE_CONTROL,
+    /**
+     * case-control study.
+     */
+    @Json(name = "case-control")
+    CASE_CONTROL,
 
-	/**
-	* uncontrolled cohort or case series.
-	*/
-	@Json(name = "series")
-	SERIES,
+    /**
+     * uncontrolled cohort or case series.
+     */
+    @Json(name = "series")
+    SERIES,
 
-	/**
-	* a single case report.
-	*/
-	@Json(name = "case-report")
-	CASE_REPORT,
+    /**
+     * a single case report.
+     */
+    @Json(name = "case-report")
+    CASE_REPORT,
 
-	/**
-	* a combination of 1 or more types of studies.
-	*/
-	@Json(name = "mixed")
-	MIXED,
+    /**
+     * a combination of 1 or more types of studies.
+     */
+    @Json(name = "mixed")
+    MIXED,
 }

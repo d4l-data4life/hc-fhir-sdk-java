@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Indicates where the activity is at in its overall life cycle.
  *
@@ -27,45 +26,46 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemCarePlanActivityStatus {
 
-	/**
-	* Activity is planned but no action has yet been taken.
-	*/
-	@Json(name = "not-started")
-	NOT_STARTED,
+    /**
+     * Activity is planned but no action has yet been taken.
+     */
+    @Json(name = "not-started")
+    NOT_STARTED,
 
-	/**
-	* Appointment or other booking has occurred but activity has not yet begun.
-	*/
-	@Json(name = "scheduled")
-	SCHEDULED,
+    /**
+     * Appointment or other booking has occurred but activity has not yet begun.
+     */
+    @Json(name = "scheduled")
+    SCHEDULED,
 
-	/**
-	* Activity has been started but is not yet complete.
-	*/
-	@Json(name = "in-progress")
-	IN_PROGRESS,
+    /**
+     * Activity has been started but is not yet complete.
+     */
+    @Json(name = "in-progress")
+    IN_PROGRESS,
 
-	/**
-	* Activity was started but has temporarily ceased with an expectation of resumption at a future time.
-	*/
-	@Json(name = "on-hold")
-	ON_HOLD,
+    /**
+     * Activity was started but has temporarily ceased with an expectation of resumption at a future
+     * time.
+     */
+    @Json(name = "on-hold")
+    ON_HOLD,
 
-	/**
-	* The activities have been completed (more or less) as planned.
-	*/
-	@Json(name = "completed")
-	COMPLETED,
+    /**
+     * The activities have been completed (more or less) as planned.
+     */
+    @Json(name = "completed")
+    COMPLETED,
 
-	/**
-	* The activities have been ended prior to completion (perhaps even before they were started).
-	*/
-	@Json(name = "cancelled")
-	CANCELLED,
+    /**
+     * The activities have been ended prior to completion (perhaps even before they were started).
+     */
+    @Json(name = "cancelled")
+    CANCELLED,
 
-	/**
-	* The authoring system doesn't know the current state of the activity.
-	*/
-	@Json(name = "unknown")
-	UNKNOWN,
+    /**
+     * The authoring system doesn't know the current state of the activity.
+     */
+    @Json(name = "unknown")
+    UNKNOWN,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.stu3.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Indicates the potential degree of impact of the identified issue on the patient.
  *
@@ -27,21 +26,23 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemDetectedIssueSeverity {
 
-	/**
-	* Indicates the issue may be life-threatening or has the potential to cause permanent injury.
-	*/
-	@Json(name = "high")
-	HIGH,
+    /**
+     * Indicates the issue may be life-threatening or has the potential to cause permanent injury.
+     */
+    @Json(name = "high")
+    HIGH,
 
-	/**
-	* Indicates the issue may result in noticeable adverse consequences but is unlikely to be life-threatening or cause permanent injury.
-	*/
-	@Json(name = "moderate")
-	MODERATE,
+    /**
+     * Indicates the issue may result in noticeable adverse consequences but is unlikely to be
+     * life-threatening or cause permanent injury.
+     */
+    @Json(name = "moderate")
+    MODERATE,
 
-	/**
-	* Indicates the issue may result in some adverse consequences but is unlikely to substantially affect the situation of the subject.
-	*/
-	@Json(name = "low")
-	LOW,
+    /**
+     * Indicates the issue may result in some adverse consequences but is unlikely to substantially
+     * affect the situation of the subject.
+     */
+    @Json(name = "low")
+    LOW,
 }

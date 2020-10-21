@@ -19,29 +19,29 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.
+ * Clinical assessment of the severity of a reaction event as a whole, potentially considering
+ * multiple different manifestations.
  *
  * @see <a href="http://hl7.org/fhir/reaction-event-severity">AllergyIntoleranceSeverity</a>
  */
 public enum CodeSystemAllergyIntoleranceSeverity {
 
-	/**
-	* Causes mild physiological effects.
-	*/
-	@Json(name = "mild")
-	MILD,
+    /**
+     * Causes mild physiological effects.
+     */
+    @Json(name = "mild")
+    MILD,
 
-	/**
-	* Causes moderate physiological effects.
-	*/
-	@Json(name = "moderate")
-	MODERATE,
+    /**
+     * Causes moderate physiological effects.
+     */
+    @Json(name = "moderate")
+    MODERATE,
 
-	/**
-	* Causes severe physiological effects.
-	*/
-	@Json(name = "severe")
-	SEVERE,
+    /**
+     * Causes severe physiological effects.
+     */
+    @Json(name = "severe")
+    SEVERE,
 }

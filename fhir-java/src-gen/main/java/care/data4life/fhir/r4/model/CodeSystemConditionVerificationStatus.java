@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * The verification status to support or decline the clinical status of the condition or diagnosis.
  *
@@ -27,39 +26,42 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemConditionVerificationStatus {
 
-	/**
-	* There is not sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
-	*/
-	@Json(name = "unconfirmed")
-	UNCONFIRMED,
+    /**
+     * There is not sufficient diagnostic and/or clinical evidence to treat this as a confirmed
+     * condition.
+     */
+    @Json(name = "unconfirmed")
+    UNCONFIRMED,
 
-	/**
-	* This is a tentative diagnosis - still a candidate that is under consideration.
-	*/
-	@Json(name = "provisional")
-	PROVISIONAL,
+    /**
+     * This is a tentative diagnosis - still a candidate that is under consideration.
+     */
+    @Json(name = "provisional")
+    PROVISIONAL,
 
-	/**
-	* One of a set of potential (and typically mutually exclusive) diagnoses asserted to further guide the diagnostic process and preliminary treatment.
-	*/
-	@Json(name = "differential")
-	DIFFERENTIAL,
+    /**
+     * One of a set of potential (and typically mutually exclusive) diagnoses asserted to further
+     * guide the diagnostic process and preliminary treatment.
+     */
+    @Json(name = "differential")
+    DIFFERENTIAL,
 
-	/**
-	* There is sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
-	*/
-	@Json(name = "confirmed")
-	CONFIRMED,
+    /**
+     * There is sufficient diagnostic and/or clinical evidence to treat this as a confirmed
+     * condition.
+     */
+    @Json(name = "confirmed")
+    CONFIRMED,
 
-	/**
-	* This condition has been ruled out by diagnostic and clinical evidence.
-	*/
-	@Json(name = "refuted")
-	REFUTED,
+    /**
+     * This condition has been ruled out by diagnostic and clinical evidence.
+     */
+    @Json(name = "refuted")
+    REFUTED,
 
-	/**
-	* The statement was entered in error and is not valid.
-	*/
-	@Json(name = "entered-in-error")
-	ENTERED_IN_ERROR,
+    /**
+     * The statement was entered in error and is not valid.
+     */
+    @Json(name = "entered-in-error")
+    ENTERED_IN_ERROR,
 }

@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Codes for the kind of study objective.
  *
@@ -27,21 +26,24 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemResearchStudyObjectiveType {
 
-	/**
-	* The main question to be answered, and the one that drives any statistical planning for the study—e.g., calculation of the sample size to provide the appropriate power for statistical testing.
-	*/
-	@Json(name = "primary")
-	PRIMARY,
+    /**
+     * The main question to be answered, and the one that drives any statistical planning for the
+     * study—e.g., calculation of the sample size to provide the appropriate power for statistical
+     * testing.
+     */
+    @Json(name = "primary")
+    PRIMARY,
 
-	/**
-	* Question to be answered in the study that is of lesser importance than the primary objective.
-	*/
-	@Json(name = "secondary")
-	SECONDARY,
+    /**
+     * Question to be answered in the study that is of lesser importance than the primary
+     * objective.
+     */
+    @Json(name = "secondary")
+    SECONDARY,
 
-	/**
-	* Exploratory questions to be answered in the study.
-	*/
-	@Json(name = "exploratory")
-	EXPLORATORY,
+    /**
+     * Exploratory questions to be answered in the study.
+     */
+    @Json(name = "exploratory")
+    EXPLORATORY,
 }

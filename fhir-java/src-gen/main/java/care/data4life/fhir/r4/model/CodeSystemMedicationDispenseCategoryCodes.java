@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * MedicationDispense Category Codes
  *
@@ -27,27 +26,31 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemMedicationDispenseCategoryCodes {
 
-	/**
-	* Includes dispenses for medications to be administered or consumed in an inpatient or acute care setting.
-	*/
-	@Json(name = "inpatient")
-	INPATIENT,
+    /**
+     * Includes dispenses for medications to be administered or consumed in an inpatient or acute
+     * care setting.
+     */
+    @Json(name = "inpatient")
+    INPATIENT,
 
-	/**
-	* Includes dispenses for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office).
-	*/
-	@Json(name = "outpatient")
-	OUTPATIENT,
+    /**
+     * Includes dispenses for medications to be administered or consumed in an outpatient setting
+     * (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office).
+     */
+    @Json(name = "outpatient")
+    OUTPATIENT,
 
-	/**
-	* Includes dispenses for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
-	*/
-	@Json(name = "community")
-	COMMUNITY,
+    /**
+     * Includes dispenses for medications to be administered or consumed by the patient in their
+     * home (this would include long term care or nursing homes, hospices, etc.).
+     */
+    @Json(name = "community")
+    COMMUNITY,
 
-	/**
-	* Includes dispenses for medications created when the patient is being released from a facility.
-	*/
-	@Json(name = "discharge")
-	DISCHARGE,
+    /**
+     * Includes dispenses for medications created when the patient is being released from a
+     * facility.
+     */
+    @Json(name = "discharge")
+    DISCHARGE,
 }

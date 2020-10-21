@@ -21,6 +21,7 @@ classmap = {
     'oid': 'String',
     'uuid': 'String',
     'uri': 'String',
+    'url': 'String',
 
     'base64Binary': 'String',
 

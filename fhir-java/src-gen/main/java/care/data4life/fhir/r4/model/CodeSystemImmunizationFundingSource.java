@@ -19,23 +19,24 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
- * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the vaccine administered. This value set is provided as a suggestive example.
+ * The value set to instantiate this attribute should be drawn from a terminologically robust code
+ * system that consists of or contains concepts to support describing the source of the vaccine
+ * administered. This value set is provided as a suggestive example.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/immunization-funding-source">ImmunizationFundingSource</a>
  */
 public enum CodeSystemImmunizationFundingSource {
 
-	/**
-	* The vaccine was purchased with private funds.
-	*/
-	@Json(name = "private")
-	PRIVATE,
+    /**
+     * The vaccine was purchased with private funds.
+     */
+    @Json(name = "private")
+    PRIVATE,
 
-	/**
-	* The vaccine was purchased with public funds.
-	*/
-	@Json(name = "public")
-	PUBLIC,
+    /**
+     * The vaccine was purchased with public funds.
+     */
+    @Json(name = "public")
+    PUBLIC,
 }

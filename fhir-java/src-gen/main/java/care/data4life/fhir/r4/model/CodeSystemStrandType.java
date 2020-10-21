@@ -19,7 +19,6 @@ package care.data4life.fhir.r4.model;
 import com.squareup.moshi.Json;
 
 
-
 /**
  * Type for strand.
  *
@@ -27,15 +26,15 @@ import com.squareup.moshi.Json;
  */
 public enum CodeSystemStrandType {
 
-	/**
-	* Watson strand of reference sequence.
-	*/
-	@Json(name = "watson")
-	WATSON,
+    /**
+     * Watson strand of reference sequence.
+     */
+    @Json(name = "watson")
+    WATSON,
 
-	/**
-	* Crick strand of reference sequence.
-	*/
-	@Json(name = "crick")
-	CRICK,
+    /**
+     * Crick strand of reference sequence.
+     */
+    @Json(name = "crick")
+    CRICK,
 }
