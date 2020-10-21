@@ -99,9 +99,7 @@ module Fastlane
               "UsageContext",
               "ReferralRequest",
               "ValueSet",
-              "Procedure",
-              "Encounter",
-              "Location"
+              "Procedure"
           ]
 
           # FIXME

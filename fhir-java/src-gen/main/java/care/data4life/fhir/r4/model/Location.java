@@ -14,7 +14,7 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir.stu3.model;
+package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
@@ -25,12 +25,13 @@ import javax.annotation.Nullable;
 /**
  * Location.java
  * <p>
- * Details and position information for a physical place where services are provided  and resources
- * and participants may be stored, found, contained or accommodated.
+ * Details and position information for a physical place where services are provided and resources
+ * and participants may be stored, found, contained, or accommodated.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Location">Location</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Location) on 2020-10-21
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on
+ * 2020-10-21
  */
 public class Location extends DomainResource {
 
@@ -46,7 +47,7 @@ public class Location extends DomainResource {
     @Nullable
     public CodeSystemLocationStatus status;
 
-    // The Operational status of the location (typically only for a bed/room).
+    // The operational status of the location (typically only for a bed/room).
     @Json(name = "operationalStatus")
     @Nullable
     public Coding operationalStatus;
@@ -56,7 +57,7 @@ public class Location extends DomainResource {
     @Nullable
     public String name;
 
-    // A list of alternate names that the location is known as, or was known as in the past.
+    // A list of alternate names that the location is known as, or was known as, in the past.
     @Json(name = "alias")
     @Nullable
     public List<String> alias;
@@ -74,7 +75,7 @@ public class Location extends DomainResource {
     // Type of function performed.
     @Json(name = "type")
     @Nullable
-    public CodeableConcept type;
+    public List<CodeableConcept> type;
 
     // Contact details of the location.
     @Json(name = "telecom")
@@ -101,10 +102,20 @@ public class Location extends DomainResource {
     @Nullable
     public Reference managingOrganization;
 
-    // Another Location this one is physically part of.
+    // Another Location this one is physically a part of.
     @Json(name = "partOf")
     @Nullable
     public Reference partOf;
+
+    // What days/times during a week is this location usually open.
+    @Json(name = "hoursOfOperation")
+    @Nullable
+    public List<LocationHoursOfOperation> hoursOfOperation;
+
+    // Description of availability exceptions.
+    @Json(name = "availabilityExceptions")
+    @Nullable
+    public String availabilityExceptions;
 
     // Technical endpoints providing access to services operated for the location.
     @Json(name = "endpoint")
@@ -124,12 +135,59 @@ public class Location extends DomainResource {
     /**
      * Location.java
      * <p>
+     * What days/times during a week is this location usually open
+     *
+     * @see <a href="http://hl7.org/fhir/StructureDefinition/Location">Location</a>
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on
+     * 2020-10-21
+     */
+    public static class LocationHoursOfOperation extends BackboneElement {
+
+        public static final String resourceType = "LocationHoursOfOperation";
+
+        // Indicates which days of the week are available between the start and end Times.
+        @Json(name = "daysOfWeek")
+        @Nullable
+        public List<CodeSystemDaysOfWeek> daysOfWeek;
+
+        // The Location is open all day.
+        @Json(name = "allDay")
+        @Nullable
+        public Boolean allDay;
+
+        // Time that the Location opens.
+        @Json(name = "openingTime")
+        @Nullable
+        public FhirTime openingTime;
+
+        // Time that the Location closes.
+        @Json(name = "closingTime")
+        @Nullable
+        public FhirTime closingTime;
+
+
+        public LocationHoursOfOperation() {
+        }
+
+        @Override
+        public String getResourceType() {
+            return LocationHoursOfOperation.resourceType;
+        }
+
+
+    }
+
+
+    /**
+     * Location.java
+     * <p>
      * The absolute geographic location of the Location, expressed using the WGS84 datum (This is
      * the same co-ordinate system used in KML).
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Location">Location</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Location) on
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on
      * 2020-10-21
      */
     public static class LocationPosition extends BackboneElement {

@@ -100,7 +100,7 @@ module Fastlane
               "ReferralRequest",
               "ValueSet",
               "Procedure",
-              "Encounter", "Contributor", "DataRequirement", "Expression", "ParameterDefinition", "RelatedArtifact", "TriggerDefinition"
+              "Encounter", "Contributor", "DataRequirement", "Expression", "ParameterDefinition", "RelatedArtifact", "TriggerDefinition", "Location", "ServiceRequest"
           ]
 
           # FIXME

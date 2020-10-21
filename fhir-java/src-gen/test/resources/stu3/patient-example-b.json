@@ -32,22 +32,6 @@
     }
   ],
   "gender": "other",
-  "_gender": {
-    "extension": [
-      {
-        "url": "http://example.org/Profile/administrative-status",
-        "valueCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/v2/0001",
-              "code": "A",
-              "display": "Ambiguous"
-            }
-          ]
-        }
-      }
-    ]
-  },
   "photo": [
     {
       "contentType": "image/gif",

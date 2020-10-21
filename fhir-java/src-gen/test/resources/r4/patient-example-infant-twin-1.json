@@ -40,14 +40,6 @@
   ],
   "gender": "female",
   "birthDate": "2017-05-15",
-  "_birthDate": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
-        "valueDateTime": "2017-05-15T17:11:00+01:00"
-      }
-    ]
-  },
   "multipleBirthInteger": 1,
   "contact": [
     {
