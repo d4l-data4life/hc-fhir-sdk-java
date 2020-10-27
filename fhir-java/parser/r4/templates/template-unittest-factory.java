@@ -54,7 +54,11 @@ public class {{ class.name }}FhirElementFactory {
         "ReferralRequest",
         "Specimen",
         "Substance",
-        "ValueSet"] %}
+        "ValueSet",
+        "Procedure",
+        "Encounter",
+        "Location",
+        "ServiceRequest"] %}
 
         @Tests
         public void getFhirTypeForClassTest () throws Exception {
