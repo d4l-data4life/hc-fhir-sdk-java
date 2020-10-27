@@ -31,35 +31,74 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Goal">Goal</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Goal) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Goal) on 2020-10-27
  */
 public class Goal extends DomainResource {
 
     public static final String resourceType = "Goal";
 
-    // Issues addressed by this goal.
-    @Json(name = "addresses")
+    // External Ids for this goal.
+    @Json(name = "identifier")
     @Nullable
-    public List<Reference> addresses;
+    public List<Identifier> identifier;
+
+    // Indicates whether the goal has been reached and is still considered relevant.
+    @Json(name = "status")
+    public CodeSystemGoalStatus status;
 
     // E.g. Treatment, dietary, behavioral, etc..
     @Json(name = "category")
     @Nullable
     public List<CodeableConcept> category;
 
+    // high-priority | medium-priority | low-priority.
+    @Json(name = "priority")
+    @Nullable
+    public CodeableConcept priority;
+
     // Code or text describing goal.
     @Json(name = "description")
     public CodeableConcept description;
+
+    // Who this goal is intended for.
+    @Json(name = "subject")
+    @Nullable
+    public Reference subject;
+
+    // When goal pursuit begins.
+    @Json(name = "startDate")
+    @Nullable
+    public FhirDate startDate;
+
+    // When goal pursuit begins.
+    @Json(name = "startCodeableConcept")
+    @Nullable
+    public CodeableConcept startCodeableConcept;
+
+    // Target outcome for the goal.
+    @Json(name = "target")
+    @Nullable
+    public GoalTarget target;
+
+    // When goal status took effect.
+    @Json(name = "statusDate")
+    @Nullable
+    public FhirDate statusDate;
+
+    // Reason for current status.
+    @Json(name = "statusReason")
+    @Nullable
+    public String statusReason;
 
     // Who's responsible for creating Goal?.
     @Json(name = "expressedBy")
     @Nullable
     public Reference expressedBy;
 
-    // External Ids for this goal.
-    @Json(name = "identifier")
+    // Issues addressed by this goal.
+    @Json(name = "addresses")
     @Nullable
-    public List<Identifier> identifier;
+    public List<Reference> addresses;
 
     // Comments about the goal.
     @Json(name = "note")
@@ -76,60 +115,23 @@ public class Goal extends DomainResource {
     @Nullable
     public List<Reference> outcomeReference;
 
-    // high-priority | medium-priority | low-priority.
-    @Json(name = "priority")
-    @Nullable
-    public CodeableConcept priority;
-
-    // When goal pursuit begins.
-    @Json(name = "startCodeableConcept")
-    @Nullable
-    public CodeableConcept startCodeableConcept;
-
-    // When goal pursuit begins.
-    @Json(name = "startDate")
-    @Nullable
-    public FhirDate startDate;
-
-    // Indicates whether the goal has been reached and is still considered relevant.
-    @Json(name = "status")
-    public CodeSystems.GoalStatus status;
-
-    // When goal status took effect.
-    @Json(name = "statusDate")
-    @Nullable
-    public FhirDate statusDate;
-
-    // Reason for current status.
-    @Json(name = "statusReason")
-    @Nullable
-    public String statusReason;
-
-    // Who this goal is intended for.
-    @Json(name = "subject")
-    @Nullable
-    public Reference subject;
-
-    // Target outcome for the goal.
-    @Json(name = "target")
-    @Nullable
-    public GoalTarget target;
 
     /**
      * Constructor for all required properties.
      *
+     * @param status      CodeSystemGoalStatus
      * @param description CodeableConcept
-     * @param status      CodeSystems.GoalStatus
      */
-    public Goal(CodeableConcept description, CodeSystems.GoalStatus status) {
-        this.description = description;
+    public Goal(CodeSystemGoalStatus status, CodeableConcept description) {
         this.status = status;
+        this.description = description;
     }
 
     @Override
     public String getResourceType() {
         return Goal.resourceType;
     }
+
 
     /**
      * Goal.java
@@ -138,16 +140,16 @@ public class Goal extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Goal">Goal</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Goal) on 2020-07-29
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Goal) on 2020-10-27
      */
     public static class GoalTarget extends BackboneElement {
 
         public static final String resourceType = "GoalTarget";
 
-        // The target value to be achieved.
-        @Json(name = "detailCodeableConcept")
+        // The parameter whose value is being tracked.
+        @Json(name = "measure")
         @Nullable
-        public CodeableConcept detailCodeableConcept;
+        public CodeableConcept measure;
 
         // The target value to be achieved.
         @Json(name = "detailQuantity")
@@ -159,6 +161,11 @@ public class Goal extends DomainResource {
         @Nullable
         public Range detailRange;
 
+        // The target value to be achieved.
+        @Json(name = "detailCodeableConcept")
+        @Nullable
+        public CodeableConcept detailCodeableConcept;
+
         // Reach goal on or before.
         @Json(name = "dueDate")
         @Nullable
@@ -169,10 +176,6 @@ public class Goal extends DomainResource {
         @Nullable
         public Duration dueDuration;
 
-        // The parameter whose value is being tracked.
-        @Json(name = "measure")
-        @Nullable
-        public CodeableConcept measure;
 
         public GoalTarget() {
         }
@@ -181,5 +184,9 @@ public class Goal extends DomainResource {
         public String getResourceType() {
             return GoalTarget.resourceType;
         }
+
+
     }
+
+
 }

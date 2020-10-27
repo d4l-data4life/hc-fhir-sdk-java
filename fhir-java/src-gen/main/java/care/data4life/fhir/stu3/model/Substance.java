@@ -30,11 +30,21 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Substance) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class Substance extends DomainResource {
 
     public static final String resourceType = "Substance";
+
+    // Unique identifier.
+    @Json(name = "identifier")
+    @Nullable
+    public List<Identifier> identifier;
+
+    // A code to indicate if the substance is actively used.
+    @Json(name = "status")
+    @Nullable
+    public CodeSystemFHIRSubstanceStatus status;
 
     // What class/type of substance this is.
     @Json(name = "category")
@@ -50,25 +60,16 @@ public class Substance extends DomainResource {
     @Nullable
     public String description;
 
-    // Unique identifier.
-    @Json(name = "identifier")
+    // If this describes a specific package/container of the substance.
+    @Json(name = "instance")
     @Nullable
-    public List<Identifier> identifier;
+    public List<SubstanceInstance> instance;
 
     // Composition information about the substance.
     @Json(name = "ingredient")
     @Nullable
     public List<SubstanceIngredient> ingredient;
 
-    // If this describes a specific package/container of the substance.
-    @Json(name = "instance")
-    @Nullable
-    public List<SubstanceInstance> instance;
-
-    // A code to indicate if the substance is actively used.
-    @Json(name = "status")
-    @Nullable
-    public CodeSystems.FHIRSubstanceStatus status;
 
     /**
      * Constructor for all required properties.
@@ -84,6 +85,7 @@ public class Substance extends DomainResource {
         return Substance.resourceType;
     }
 
+
     /**
      * Substance.java
      * <p>
@@ -92,7 +94,7 @@ public class Substance extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Substance) on
-     * 2020-07-29
+     * 2020-10-27
      */
     public static class SubstanceIngredient extends BackboneElement {
 
@@ -113,6 +115,7 @@ public class Substance extends DomainResource {
         @Nullable
         public Reference substanceReference;
 
+
         /**
          * Constructor for all required properties.
          *
@@ -132,7 +135,10 @@ public class Substance extends DomainResource {
         public String getResourceType() {
             return SubstanceIngredient.resourceType;
         }
+
+
     }
+
 
     /**
      * Substance.java
@@ -143,26 +149,27 @@ public class Substance extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Substance) on
-     * 2020-07-29
+     * 2020-10-27
      */
     public static class SubstanceInstance extends BackboneElement {
 
         public static final String resourceType = "SubstanceInstance";
-
-        // When no longer valid to use.
-        @Json(name = "expiry")
-        @Nullable
-        public FhirDateTime expiry;
 
         // Identifier of the package/container.
         @Json(name = "identifier")
         @Nullable
         public Identifier identifier;
 
+        // When no longer valid to use.
+        @Json(name = "expiry")
+        @Nullable
+        public FhirDateTime expiry;
+
         // Amount of substance in the package.
         @Json(name = "quantity")
         @Nullable
         public Quantity quantity;
+
 
         public SubstanceInstance() {
         }
@@ -171,5 +178,9 @@ public class Substance extends DomainResource {
         public String getResourceType() {
             return SubstanceInstance.resourceType;
         }
+
+
     }
+
+
 }

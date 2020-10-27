@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/BackboneElement">BackboneElement</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/BackboneElement) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class BackboneElement extends Element {
 
@@ -42,6 +42,7 @@ public class BackboneElement extends Element {
     @Nullable
     public List<Extension> modifierExtension;
 
+
     public BackboneElement() {
     }
 
@@ -49,4 +50,6 @@ public class BackboneElement extends Element {
     public String getResourceType() {
         return BackboneElement.resourceType;
     }
+
+
 }

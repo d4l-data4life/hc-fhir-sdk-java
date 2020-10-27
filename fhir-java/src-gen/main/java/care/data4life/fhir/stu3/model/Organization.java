@@ -32,26 +32,51 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Organization) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class Organization extends DomainResource {
 
     public static final String resourceType = "Organization";
+
+    // Identifies this organization  across multiple systems.
+    @Json(name = "identifier")
+    @Nullable
+    public List<Identifier> identifier;
 
     // Whether the organization's record is still in active use.
     @Json(name = "active")
     @Nullable
     public Boolean active;
 
-    // An address for the organization.
-    @Json(name = "address")
+    // Kind of organization.
+    @Json(name = "type")
     @Nullable
-    public List<Address> address;
+    public List<CodeableConcept> type;
+
+    // Name used for the organization.
+    @Json(name = "name")
+    @Nullable
+    public String name;
 
     // A list of alternate names that the organization is known as, or was known as in the past.
     @Json(name = "alias")
     @Nullable
     public List<String> alias;
+
+    // A contact detail for the organization.
+    @Json(name = "telecom")
+    @Nullable
+    public List<ContactPoint> telecom;
+
+    // An address for the organization.
+    @Json(name = "address")
+    @Nullable
+    public List<Address> address;
+
+    // The organization of which this organization forms a part.
+    @Json(name = "partOf")
+    @Nullable
+    public Reference partOf;
 
     // Contact for the organization for a certain purpose.
     @Json(name = "contact")
@@ -63,30 +88,6 @@ public class Organization extends DomainResource {
     @Nullable
     public List<Reference> endpoint;
 
-    // Identifies this organization  across multiple systems.
-    @Json(name = "identifier")
-    @Nullable
-    public List<Identifier> identifier;
-
-    // Name used for the organization.
-    @Json(name = "name")
-    @Nullable
-    public String name;
-
-    // The organization of which this organization forms a part.
-    @Json(name = "partOf")
-    @Nullable
-    public Reference partOf;
-
-    // A contact detail for the organization.
-    @Json(name = "telecom")
-    @Nullable
-    public List<ContactPoint> telecom;
-
-    // Kind of organization.
-    @Json(name = "type")
-    @Nullable
-    public List<CodeableConcept> type;
 
     public Organization() {
     }
@@ -96,6 +97,7 @@ public class Organization extends DomainResource {
         return Organization.resourceType;
     }
 
+
     /**
      * Organization.java
      * <p>
@@ -104,31 +106,32 @@ public class Organization extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Organization) on
-     * 2020-07-29
+     * 2020-10-27
      */
     public static class OrganizationContact extends BackboneElement {
 
         public static final String resourceType = "OrganizationContact";
-
-        // Visiting or postal addresses for the contact.
-        @Json(name = "address")
-        @Nullable
-        public Address address;
-
-        // A name associated with the contact.
-        @Json(name = "name")
-        @Nullable
-        public HumanName name;
 
         // The type of contact.
         @Json(name = "purpose")
         @Nullable
         public CodeableConcept purpose;
 
+        // A name associated with the contact.
+        @Json(name = "name")
+        @Nullable
+        public HumanName name;
+
         // Contact details (telephone, email, etc.)  for a contact.
         @Json(name = "telecom")
         @Nullable
         public List<ContactPoint> telecom;
+
+        // Visiting or postal addresses for the contact.
+        @Json(name = "address")
+        @Nullable
+        public Address address;
+
 
         public OrganizationContact() {
         }
@@ -137,5 +140,9 @@ public class Organization extends DomainResource {
         public String getResourceType() {
             return OrganizationContact.resourceType;
         }
+
+
     }
+
+
 }

@@ -16,6 +16,7 @@
 
 package care.data4life.fhir.stu3.model;
 
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
@@ -33,7 +34,7 @@ import static org.junit.Assert.assertTrue;
  * A value set specifies a set of codes drawn from one or more code systems.
  * <p>
  * <p>
- * "Generated from FHIR 3.0.1.11917 on 2020-07-29
+ * "Generated from FHIR 3.0.1.11917 on 2020-10-27
  */
 public class ValueSetTest {
 
@@ -41,7 +42,7 @@ public class ValueSetTest {
 
     @Test
     public void testValueSet1() throws Exception {
-        String sourceJson = FileHelper.loadString("valueset-example.json");
+        String sourceJson = FileHelper.loadString("stu3/valueset-example.json");
         ValueSet data = parser.toFhir(ValueSet.class, sourceJson);
 
         assertEquals(data.compose.inactive, true);
@@ -50,31 +51,27 @@ public class ValueSetTest {
         assertEquals(data.compose.include.get(0).concept.get(1).code, "2093-3");
         assertEquals(data.compose.include.get(0).concept.get(1).display, "Cholesterol [Mass/Volume]");
         assertEquals(data.compose.include.get(0).concept.get(2).code, "35200-5");
-        assertEquals(data.compose.include.get(0).concept.get(2).display,
-                "Cholesterol [Mass Or Moles/Volume]");
+        assertEquals(data.compose.include.get(0).concept.get(2).display, "Cholesterol [Mass Or Moles/Volume]");
         assertEquals(data.compose.include.get(0).concept.get(3).code, "9342-7");
         assertEquals(data.compose.include.get(0).concept.get(3).display, "Cholesterol [Percentile]");
         assertEquals(data.compose.include.get(0).system, "http://loinc.org");
         assertEquals(data.compose.include.get(0).version, "2.36");
         assertEquals(data.compose.lockedDate.toString(), "2012-06-13");
         assertEquals(data.contact.get(0).name, "FHIR project team");
-        assertEquals(data.contact.get(0).telecom.get(0).system, CodeSystems.ContactPointSystem.URL);
+        assertEquals(data.contact.get(0).telecom.get(0).system, CodeSystemContactPointSystem.URL);
         assertEquals(data.contact.get(0).telecom.get(0).value, "http://hl7.org/fhir");
-        assertEquals(data.copyright,
-                "This content from LOINC ® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.");
+        assertEquals(data.copyright, "This content from LOINC ® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.");
         assertEquals(data.date.toString(), "2015-06-22");
-        assertEquals(data.description,
-                "This is an example value set that includes all the LOINC codes for serum/plasma cholesterol from v2.36.");
+        assertEquals(data.description, "This is an example value set that includes all the LOINC codes for serum/plasma cholesterol from v2.36.");
         assertEquals(data.experimental, true);
         assertEquals(data.id, "example-extensional");
         assertEquals(data.identifier.get(0).system, "http://acme.com/identifiers/valuesets");
         assertEquals(data.identifier.get(0).value, "loinc-cholesterol-int");
-        assertEquals(data.meta.profile.get(0),
-                "http://hl7.org/fhir/StructureDefinition/shareablevalueset");
+        assertEquals(data.meta.profile.get(0), "http://hl7.org/fhir/StructureDefinition/shareablevalueset");
         assertEquals(data.name, "LOINC Codes for Cholesterol in Serum/Plasma");
         assertEquals(data.publisher, "HL7 International");
-        assertEquals(data.status, CodeSystems.PublicationStatus.DRAFT);
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.status, CodeSystemPublicationStatus.DRAFT);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
         assertEquals(data.url, "http://hl7.org/fhir/ValueSet/example-extensional");
         assertEquals(data.version, "20150622");
 
@@ -85,68 +82,56 @@ public class ValueSetTest {
 
     @Test
     public void testValueSet2() throws Exception {
-        String sourceJson = FileHelper.loadString("valueset-example-expansion.json");
+        String sourceJson = FileHelper.loadString("stu3/valueset-example-expansion.json");
         ValueSet data = parser.toFhir(ValueSet.class, sourceJson);
 
-        assertEquals(data.compose.include.get(0).filter.get(0).op, CodeSystems.FilterOperator.EQUAL);
+        assertEquals(data.compose.include.get(0).filter.get(0).op, CodeSystemFilterOperator.EQUAL);
         assertEquals(data.compose.include.get(0).filter.get(0).property, "parent");
         assertEquals(data.compose.include.get(0).filter.get(0).value, "LP43571-6");
         assertEquals(data.compose.include.get(0).system, "http://loinc.org");
-        assertEquals(data.contact.get(0).telecom.get(0).system, CodeSystems.ContactPointSystem.URL);
+        assertEquals(data.contact.get(0).telecom.get(0).system, CodeSystemContactPointSystem.URL);
         assertEquals(data.contact.get(0).telecom.get(0).value, "http://hl7.org/fhir");
-        assertEquals(data.copyright,
-                "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.");
+        assertEquals(data.copyright, "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.");
         assertEquals(data.date.toString(), "2015-06-22");
-        assertEquals(data.description,
-                "This is an example value set that includes all the LOINC codes for serum/plasma cholesterol from v2.36.");
+        assertEquals(data.description, "This is an example value set that includes all the LOINC codes for serum/plasma cholesterol from v2.36.");
         assertEquals(data.expansion.contains.get(0).code, "14647-2");
-        assertEquals(data.expansion.contains.get(0).display,
-                "Cholesterol [Moles/volume] in Serum or Plasma");
+        assertEquals(data.expansion.contains.get(0).display, "Cholesterol [Moles/volume] in Serum or Plasma");
         assertEquals(data.expansion.contains.get(0).system, "http://loinc.org");
         assertEquals(data.expansion.contains.get(0).version, "2.50");
         assertEquals(data.expansion.contains.get(1).abstrakt, true);
         assertEquals(data.expansion.contains.get(1).contains.get(0).code, "2093-3");
-        assertEquals(data.expansion.contains.get(1).contains.get(0).display,
-                "Cholesterol [Mass/volume] in Serum or Plasma");
+        assertEquals(data.expansion.contains.get(1).contains.get(0).display, "Cholesterol [Mass/volume] in Serum or Plasma");
         assertEquals(data.expansion.contains.get(1).contains.get(0).system, "http://loinc.org");
         assertEquals(data.expansion.contains.get(1).contains.get(0).version, "2.50");
         assertEquals(data.expansion.contains.get(1).contains.get(1).code, "48620-9");
-        assertEquals(data.expansion.contains.get(1).contains.get(1).display,
-                "Cholesterol [Mass/volume] in Serum or Plasma ultracentrifugate");
+        assertEquals(data.expansion.contains.get(1).contains.get(1).display, "Cholesterol [Mass/volume] in Serum or Plasma ultracentrifugate");
         assertEquals(data.expansion.contains.get(1).contains.get(1).system, "http://loinc.org");
         assertEquals(data.expansion.contains.get(1).contains.get(1).version, "2.50");
         assertEquals(data.expansion.contains.get(1).contains.get(2).code, "9342-7");
-        assertEquals(data.expansion.contains.get(1).contains.get(2).display,
-                "Cholesterol [Percentile]");
+        assertEquals(data.expansion.contains.get(1).contains.get(2).display, "Cholesterol [Percentile]");
         assertEquals(data.expansion.contains.get(1).contains.get(2).system, "http://loinc.org");
         assertEquals(data.expansion.contains.get(1).contains.get(2).version, "2.50");
         assertEquals(data.expansion.contains.get(1).display, "Cholesterol codes");
         assertEquals(data.expansion.contains.get(2).abstrakt, true);
         assertEquals(data.expansion.contains.get(2).contains.get(0).code, "2096-6");
-        assertEquals(data.expansion.contains.get(2).contains.get(0).display,
-                "Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma");
+        assertEquals(data.expansion.contains.get(2).contains.get(0).display, "Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma");
         assertEquals(data.expansion.contains.get(2).contains.get(0).system, "http://loinc.org");
         assertEquals(data.expansion.contains.get(2).contains.get(0).version, "2.50");
         assertEquals(data.expansion.contains.get(2).contains.get(1).code, "35200-5");
-        assertEquals(data.expansion.contains.get(2).contains.get(1).display,
-                "Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma");
+        assertEquals(data.expansion.contains.get(2).contains.get(1).display, "Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma");
         assertEquals(data.expansion.contains.get(2).contains.get(1).system, "http://loinc.org");
         assertEquals(data.expansion.contains.get(2).contains.get(1).version, "2.50");
         assertEquals(data.expansion.contains.get(2).contains.get(2).code, "48089-7");
-        assertEquals(data.expansion.contains.get(2).contains.get(2).display,
-                "Cholesterol/Apolipoprotein B [Molar ratio] in Serum or Plasma");
+        assertEquals(data.expansion.contains.get(2).contains.get(2).display, "Cholesterol/Apolipoprotein B [Molar ratio] in Serum or Plasma");
         assertEquals(data.expansion.contains.get(2).contains.get(2).system, "http://loinc.org");
         assertEquals(data.expansion.contains.get(2).contains.get(2).version, "2.50");
         assertEquals(data.expansion.contains.get(2).contains.get(3).code, "55838-7");
-        assertEquals(data.expansion.contains.get(2).contains.get(3).display,
-                "Cholesterol/Phospholipid [Molar ratio] in Serum or Plasma");
+        assertEquals(data.expansion.contains.get(2).contains.get(3).display, "Cholesterol/Phospholipid [Molar ratio] in Serum or Plasma");
         assertEquals(data.expansion.contains.get(2).contains.get(3).system, "http://loinc.org");
         assertEquals(data.expansion.contains.get(2).contains.get(3).version, "2.50");
         assertEquals(data.expansion.contains.get(2).display, "Cholesterol Ratios");
-        assertEquals(data.expansion.extension.get(0).url,
-                "http://hl7.org/fhir/StructureDefinition/valueset-expansionSource");
-        assertEquals(data.expansion.extension.get(0).valueUri,
-                "http://hl7.org/fhir/ValueSet/example-extensional");
+        assertEquals(data.expansion.extension.get(0).url, "http://hl7.org/fhir/StructureDefinition/valueset-expansionSource");
+        assertEquals(data.expansion.extension.get(0).valueUri, "http://hl7.org/fhir/ValueSet/example-extensional");
         assertEquals(data.expansion.identifier, "urn:uuid:42316ff8-2714-4680-9980-f37a6d1a71bc");
         assertTrue(data.expansion.offset == 0);
         assertEquals(data.expansion.parameter.get(0).name, "version");
@@ -155,12 +140,11 @@ public class ValueSetTest {
         assertTrue(data.expansion.total == 8);
         assertEquals(data.experimental, true);
         assertEquals(data.id, "example-expansion");
-        assertEquals(data.meta.profile.get(0),
-                "http://hl7.org/fhir/StructureDefinition/shareablevalueset");
+        assertEquals(data.meta.profile.get(0), "http://hl7.org/fhir/StructureDefinition/shareablevalueset");
         assertEquals(data.name, "LOINC Codes for Cholesterol in Serum/Plasma");
         assertEquals(data.publisher, "FHIR Project team");
-        assertEquals(data.status, CodeSystems.PublicationStatus.DRAFT);
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.status, CodeSystemPublicationStatus.DRAFT);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
         assertEquals(data.url, "http://hl7.org/fhir/ValueSet/example-expansion");
         assertEquals(data.version, "20150622");
 
@@ -171,12 +155,11 @@ public class ValueSetTest {
 
     @Test
     public void testValueSet3() throws Exception {
-        String sourceJson = FileHelper.loadString("valueset-example-inactive.json");
+        String sourceJson = FileHelper.loadString("stu3/valueset-example-inactive.json");
         ValueSet data = parser.toFhir(ValueSet.class, sourceJson);
 
         assertEquals(data.compose.inactive, true);
-        assertEquals(data.compose.include.get(0).filter.get(0).op,
-                CodeSystems.FilterOperator.DESCENDENT_OF);
+        assertEquals(data.compose.include.get(0).filter.get(0).op, CodeSystemFilterOperator.DESCENDENT_OF);
         assertEquals(data.compose.include.get(0).filter.get(0).property, "concept");
         assertEquals(data.compose.include.get(0).filter.get(0).value, "_ActMoodPredicate");
         assertEquals(data.compose.include.get(0).system, "http://hl7.org/fhir/v3/ActMood");
@@ -188,12 +171,10 @@ public class ValueSetTest {
         assertEquals(data.expansion.contains.get(1).code, "EXPEC");
         assertEquals(data.expansion.contains.get(1).contains.get(0).code, "GOL");
         assertEquals(data.expansion.contains.get(1).contains.get(0).display, "goal");
-        assertEquals(data.expansion.contains.get(1).contains.get(0).system,
-                "http://hl7.org/fhir/v3/ActMood");
+        assertEquals(data.expansion.contains.get(1).contains.get(0).system, "http://hl7.org/fhir/v3/ActMood");
         assertEquals(data.expansion.contains.get(1).contains.get(1).code, "RSK");
         assertEquals(data.expansion.contains.get(1).contains.get(1).display, "risk");
-        assertEquals(data.expansion.contains.get(1).contains.get(1).system,
-                "http://hl7.org/fhir/v3/ActMood");
+        assertEquals(data.expansion.contains.get(1).contains.get(1).system, "http://hl7.org/fhir/v3/ActMood");
         assertEquals(data.expansion.contains.get(1).display, "expectation");
         assertEquals(data.expansion.contains.get(1).system, "http://hl7.org/fhir/v3/ActMood");
         assertEquals(data.expansion.contains.get(2).code, "OPT");
@@ -203,8 +184,8 @@ public class ValueSetTest {
         assertEquals(data.expansion.timestamp.toString(), "2017-02-26T10:00:00Z");
         assertEquals(data.id, "inactive");
         assertEquals(data.name, "Example-inactive");
-        assertEquals(data.status, CodeSystems.PublicationStatus.DRAFT);
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.status, CodeSystemPublicationStatus.DRAFT);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
         assertEquals(data.title, "Example with inactive codes");
         assertEquals(data.url, "http://hl7.org/fhir/ValueSet/inactive");
 
@@ -215,11 +196,10 @@ public class ValueSetTest {
 
     @Test
     public void testValueSet4() throws Exception {
-        String sourceJson = FileHelper.loadString("valueset-example-yesnodontknow.json");
+        String sourceJson = FileHelper.loadString("stu3/valueset-example-yesnodontknow.json");
         ValueSet data = parser.toFhir(ValueSet.class, sourceJson);
 
-        assertEquals(data.compose.include.get(0).valueSet.get(0),
-                "http://hl7.org/fhir/ValueSet/v2-0136");
+        assertEquals(data.compose.include.get(0).valueSet.get(0), "http://hl7.org/fhir/ValueSet/v2-0136");
         assertEquals(data.compose.include.get(1).concept.get(0).code, "asked");
         assertEquals(data.compose.include.get(1).concept.get(0).display, "Don't know");
         assertEquals(data.compose.include.get(1).system, "http://hl7.org/fhir/data-absent-reason");
@@ -237,8 +217,8 @@ public class ValueSetTest {
         assertEquals(data.expansion.timestamp.toString(), "2015-07-14T10:00:00Z");
         assertEquals(data.id, "yesnodontknow");
         assertEquals(data.name, "Yes/No/Don't Know");
-        assertEquals(data.status, CodeSystems.PublicationStatus.DRAFT);
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.status, CodeSystemPublicationStatus.DRAFT);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
         assertEquals(data.url, "http://hl7.org/fhir/ValueSet/yesnodontknow");
 
         String json = parser.fromFhir(data);
@@ -248,36 +228,31 @@ public class ValueSetTest {
 
     @Test
     public void testValueSet5() throws Exception {
-        String sourceJson = FileHelper.loadString("valueset-list-example-codes.json");
+        String sourceJson = FileHelper.loadString("stu3/valueset-list-example-codes.json");
         ValueSet data = parser.toFhir(ValueSet.class, sourceJson);
 
         assertEquals(data.compose.include.get(0).system, "http://hl7.org/fhir/list-example-use-codes");
-        assertEquals(data.contact.get(0).telecom.get(0).system, CodeSystems.ContactPointSystem.URL);
+        assertEquals(data.contact.get(0).telecom.get(0).system, CodeSystemContactPointSystem.URL);
         assertEquals(data.contact.get(0).telecom.get(0).value, "http://hl7.org/fhir");
         assertEquals(data.date.toString(), "2017-04-19T07:44:43+10:00");
-        assertEquals(data.description,
-                "Example use codes for the List resource - typical kinds of use.");
+        assertEquals(data.description, "Example use codes for the List resource - typical kinds of use.");
         assertEquals(data.experimental, true);
-        assertEquals(data.extension.get(0).url,
-                "http://hl7.org/fhir/StructureDefinition/structuredefinition-ballot-status");
+        assertEquals(data.extension.get(0).url, "http://hl7.org/fhir/StructureDefinition/structuredefinition-ballot-status");
         assertEquals(data.extension.get(0).valueString, "Informative");
-        assertEquals(data.extension.get(1).url,
-                "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm");
+        assertEquals(data.extension.get(1).url, "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm");
         assertTrue(data.extension.get(1).valueInteger == 1);
-        assertEquals(data.extension.get(2).url,
-                "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg");
+        assertEquals(data.extension.get(2).url, "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg");
         assertEquals(data.extension.get(2).valueCode, "fhir");
         assertEquals(data.id, "list-example-codes");
         assertEquals(data.identifier.get(0).system, "urn:ietf:rfc:3986");
         assertEquals(data.identifier.get(0).value, "urn:oid:2.16.840.1.113883.4.642.3.307");
         assertEquals(data.immutable, true);
         assertEquals(data.meta.lastUpdated.toString(), "2017-04-19T07:44:43.294+10:00");
-        assertEquals(data.meta.profile.get(0),
-                "http://hl7.org/fhir/StructureDefinition/shareablevalueset");
+        assertEquals(data.meta.profile.get(0), "http://hl7.org/fhir/StructureDefinition/shareablevalueset");
         assertEquals(data.name, "Example Use Codes for List");
         assertEquals(data.publisher, "FHIR Project");
-        assertEquals(data.status, CodeSystems.PublicationStatus.DRAFT);
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.status, CodeSystemPublicationStatus.DRAFT);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
         assertEquals(data.url, "http://hl7.org/fhir/ValueSet/list-example-codes");
         assertEquals(data.version, "3.0.1");
 
@@ -288,35 +263,31 @@ public class ValueSetTest {
 
     @Test
     public void testValueSet6() throws Exception {
-        String sourceJson = FileHelper.loadString("valueset-example-intensional.json");
+        String sourceJson = FileHelper.loadString("stu3/valueset-example-intensional.json");
         ValueSet data = parser.toFhir(ValueSet.class, sourceJson);
 
         assertEquals(data.compose.exclude.get(0).concept.get(0).code, "5932-9");
-        assertEquals(data.compose.exclude.get(0).concept.get(0).display,
-                "Cholesterol [Presence] in Blood by Test strip");
+        assertEquals(data.compose.exclude.get(0).concept.get(0).display, "Cholesterol [Presence] in Blood by Test strip");
         assertEquals(data.compose.exclude.get(0).system, "http://loinc.org");
-        assertEquals(data.compose.include.get(0).filter.get(0).op, CodeSystems.FilterOperator.EQUAL);
+        assertEquals(data.compose.include.get(0).filter.get(0).op, CodeSystemFilterOperator.EQUAL);
         assertEquals(data.compose.include.get(0).filter.get(0).property, "parent");
         assertEquals(data.compose.include.get(0).filter.get(0).value, "LP43571-6");
         assertEquals(data.compose.include.get(0).system, "http://loinc.org");
         assertEquals(data.contact.get(0).name, "FHIR project team");
-        assertEquals(data.contact.get(0).telecom.get(0).system, CodeSystems.ContactPointSystem.URL);
+        assertEquals(data.contact.get(0).telecom.get(0).system, CodeSystemContactPointSystem.URL);
         assertEquals(data.contact.get(0).telecom.get(0).value, "http://hl7.org/fhir");
-        assertEquals(data.copyright,
-                "This content from LOINCÂ® is copyright Â© 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use");
+        assertEquals(data.copyright, "This content from LOINCÂ® is copyright Â© 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use");
         assertEquals(data.date.toString(), "2015-06-22");
-        assertEquals(data.description,
-                "This is an example value set that includes all the LOINC codes for serum/plasma cholesterol from v2.36.");
+        assertEquals(data.description, "This is an example value set that includes all the LOINC codes for serum/plasma cholesterol from v2.36.");
         assertEquals(data.experimental, true);
         assertEquals(data.id, "example-intensional");
         assertEquals(data.identifier.get(0).system, "http://acme.com/identifiers/valuesets");
         assertEquals(data.identifier.get(0).value, "loinc-cholesterol-ext");
-        assertEquals(data.meta.profile.get(0),
-                "http://hl7.org/fhir/StructureDefinition/shareablevalueset");
+        assertEquals(data.meta.profile.get(0), "http://hl7.org/fhir/StructureDefinition/shareablevalueset");
         assertEquals(data.name, "LOINC Codes for Cholesterol in Serum/Plasma");
         assertEquals(data.publisher, "HL7 International");
-        assertEquals(data.status, CodeSystems.PublicationStatus.DRAFT);
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.status, CodeSystemPublicationStatus.DRAFT);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
         assertEquals(data.url, "http://hl7.org/fhir/ValueSet/example-intensional");
         assertEquals(data.version, "20150622");
 

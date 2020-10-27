@@ -27,21 +27,22 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Range">Range</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Range) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Range) on 2020-10-27
  */
 public class Range extends Element {
 
     public static final String resourceType = "Range";
+
+    // Low limit.
+    @Json(name = "low")
+    @Nullable
+    public Quantity low;
 
     // High limit.
     @Json(name = "high")
     @Nullable
     public Quantity high;
 
-    // Low limit.
-    @Json(name = "low")
-    @Nullable
-    public Quantity low;
 
     public Range() {
     }
@@ -50,4 +51,6 @@ public class Range extends Element {
     public String getResourceType() {
         return Range.resourceType;
     }
+
+
 }
