@@ -19,6 +19,7 @@ tpl_resource_target = 'models'  # target directory to write the generated class 
 tpl_resource_target_ptrn = '{}.java'  # where to write the generated class files to, with one "{}" placeholder for the class name
 tpl_codesystems_source = 'template-codesystems.java'  # the template to use as source when writing enums for CodeSystems; can be `None`
 tpl_codesystems_target_name = 'CodeSystems.java'  # the filename to use for the generated code systems and value sets (in `tpl_resource_target`)
+tpl_codesystems_target_ptrn = 'CodeSystem{}.java'      # the filename pattern to use for generated code systems and value sets, with one placeholder (`{}`) for the class name
 
 # Whether and where to put the factory methods
 write_factory = True
