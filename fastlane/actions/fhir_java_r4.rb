@@ -7,7 +7,7 @@ module Fastlane
         cleanup
         generate_fhir_models
         integrate_fhir_models
-        # cleanup
+        cleanup
       end
 
       def self.generate_fhir_models
