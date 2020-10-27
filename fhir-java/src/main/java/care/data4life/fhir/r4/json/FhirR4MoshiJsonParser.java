@@ -14,7 +14,7 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir.stu3.json;
+package care.data4life.fhir.r4.json;
 
 import com.squareup.moshi.Moshi;
 
@@ -24,24 +24,26 @@ import java.net.URL;
 
 import care.data4life.fhir.FhirException;
 import care.data4life.fhir.json.FhirJsonParser;
-import care.data4life.fhir.stu3.model.FhirDate;
-import care.data4life.fhir.stu3.model.FhirDateTime;
-import care.data4life.fhir.stu3.model.FhirDecimal;
-import care.data4life.fhir.stu3.model.FhirInstant;
-import care.data4life.fhir.stu3.model.FhirStu3Base;
-import care.data4life.fhir.stu3.model.FhirTime;
+import care.data4life.fhir.r4.model.Canonical;
+import care.data4life.fhir.r4.model.FhirDate;
+import care.data4life.fhir.r4.model.FhirDateTime;
+import care.data4life.fhir.r4.model.FhirDecimal;
+import care.data4life.fhir.r4.model.FhirInstant;
+import care.data4life.fhir.r4.model.FhirR4Base;
+import care.data4life.fhir.r4.model.FhirTime;
 
-public class FhirStu3MoshiJsonParser implements FhirJsonParser<FhirStu3Base> {
+
+public class FhirR4MoshiJsonParser implements FhirJsonParser<FhirR4Base> {
 
     private Moshi moshi;
 
-    FhirStu3MoshiJsonParser(Moshi moshi) {
+    FhirR4MoshiJsonParser(Moshi moshi) {
         this.moshi = moshi;
     }
 
-    public FhirStu3MoshiJsonParser() {
+    public FhirR4MoshiJsonParser() {
         this.moshi = new Moshi.Builder()
-                .add(new FhirStu3BaseAdapterFactory())
+                .add(new FhirR4BaseAdapterFactory())
                 .add(URL.class, new FhirUrlJsonAdapter().nullSafe())
                 .add(BigDecimal.class, new BigDecimalJsonAdapter())
                 .add(FhirDate.class, new FhirDateJsonAdapter().nullSafe())
@@ -49,21 +51,23 @@ public class FhirStu3MoshiJsonParser implements FhirJsonParser<FhirStu3Base> {
                 .add(FhirDecimal.class, new FhirDecimalJsonAdapter().nullSafe())
                 .add(FhirInstant.class, new FhirInstantJsonAdapter().nullSafe())
                 .add(FhirTime.class, new FhirTimeJsonAdapter().nullSafe())
+                .add(Canonical.class, new CanonicalJsonAdapter())
                 .build();
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public <T extends FhirStu3Base> T fromJson(Class<T> fhirType, String fhirJson) throws FhirException {
+    public <T extends FhirR4Base> T fromJson(Class<T> fhirType, String fhirJson) throws FhirException {
         try {
-            return (T) moshi.adapter(FhirStu3Base.class).fromJson(fhirJson);
+            return (T) moshi.adapter(FhirR4Base.class).fromJson(fhirJson);
         } catch (IOException e) {
             throw new FhirException(FhirException.ErrorType.DECODE, FhirException.ErrorCode.FAILED_TO_PARSE_JSON, e.getMessage());
         }
     }
 
     @Override
-    public <T extends FhirStu3Base> String toJson(T fhirObject) throws FhirException {
-        return moshi.adapter(FhirStu3Base.class).toJson(fhirObject);
+    public <T extends FhirR4Base> String toJson(T fhirObject) throws FhirException {
+        return moshi.adapter(FhirR4Base.class).toJson(fhirObject);
     }
+
 }

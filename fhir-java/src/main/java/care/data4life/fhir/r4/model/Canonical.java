@@ -14,19 +14,40 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir;
+package care.data4life.fhir.r4.model;
 
-import care.data4life.fhir.r4.FhirR4Parser;
-import care.data4life.fhir.stu3.FhirStu3Parser;
+/**
+ * Canonical.java
+ * <p>
+ * A URI that is a reference to a canonical URL on a FHIR resource
+ *
+ * @see <a href="http://hl7.org/fhir/StructureDefinition/canonical">Canonical</a>
+ * <p>
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/canonical) on
+ * 2020-10-15
+ */
+public class Canonical {
 
-public final class Fhir {
+    public static final String resourceType = "Canonical";
 
-    public FhirParser createStu3Parser() {
-        return new FhirStu3Parser();
+    public String url;
+
+    public String version;
+
+    public Canonical() {
     }
 
-    public FhirParser createR4Parser() {
-        return new FhirR4Parser();
+    public Canonical(String url) {
+        this.url = url;
+    }
+
+    public Canonical(String url, String version) {
+        this.url = url;
+        this.version = version;
+    }
+
+    public String getResourceType() {
+        return resourceType;
     }
 
 }

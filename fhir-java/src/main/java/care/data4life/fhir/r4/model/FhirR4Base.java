@@ -14,19 +14,16 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir;
+package care.data4life.fhir.r4.model;
 
-import care.data4life.fhir.r4.FhirR4Parser;
-import care.data4life.fhir.stu3.FhirStu3Parser;
 
-public final class Fhir {
+import java.io.Serializable;
 
-    public FhirParser createStu3Parser() {
-        return new FhirStu3Parser();
-    }
+/**
+ * Abstract base class for FHIR STU3 models
+ */
+public abstract class FhirR4Base implements Serializable {
 
-    public FhirParser createR4Parser() {
-        return new FhirR4Parser();
-    }
+    public abstract String getResourceType();
 
 }

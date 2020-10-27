@@ -56,13 +56,13 @@ public class FhirAttachmentHelperTest {
 
     @Before
     public void setup() throws Exception {
-        DocumentReference documentReference = parser.toFhir(DocumentReference.class, FileHelper.loadString("documentreference-example.json"));
+        DocumentReference documentReference = parser.toFhir(DocumentReference.class, FileHelper.loadString("stu3/documentreference-example.json"));
         attachment = documentReference.content.get(0).attachment;
 
-        jsonPatient = FileHelper.loadString("patient-example-b.json");
-        jsonCarePlan = FileHelper.loadString("careplan-example-f002-lung.json");
-        jsonObservation = FileHelper.loadString("observation-example-eye-color.json");
-        jsonQuestionnaireResponse = FileHelper.loadString("questionnaireresponse-example-gcs.json");
+        jsonPatient = FileHelper.loadString("stu3/patient-example-b.json");
+        jsonCarePlan = FileHelper.loadString("stu3/careplan-example-f002-lung.json");
+        jsonObservation = FileHelper.loadString("stu3/observation-example-eye-color.json");
+        jsonQuestionnaireResponse = FileHelper.loadString("stu3/questionnaireresponse-example-gcs.json");
     }
 
     @Test
@@ -337,7 +337,7 @@ public class FhirAttachmentHelperTest {
     public void extractAttachments_shouldReturnEmptywhenContentIsNull() {
         //given
         List<DocumentReference.DocumentReferenceContent> content = null;
-        DocumentReference doc = new DocumentReference(content, null, null, null);
+        DocumentReference doc = new DocumentReference(null, null, null, content);
 
         //when
         List<Attachment> attachments = FhirAttachmentHelper.getAttachment(doc);
@@ -350,7 +350,7 @@ public class FhirAttachmentHelperTest {
     public void extractAttachments_shouldReturnEmpty_whenContentIsEmpty() {
         //given
         List<DocumentReference.DocumentReferenceContent> content = new ArrayList<>();
-        DocumentReference doc = new DocumentReference(content, null, null, null);
+        DocumentReference doc = new DocumentReference(null, null, null, content);
 
         //when
         List<Attachment> attachments = FhirAttachmentHelper.getAttachment(doc);

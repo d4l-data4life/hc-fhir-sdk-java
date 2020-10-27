@@ -14,29 +14,29 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir.stu3;
+package care.data4life.fhir.r4;
 
 import care.data4life.fhir.FhirException;
 import care.data4life.fhir.FhirParser;
 import care.data4life.fhir.json.FhirJsonParser;
-import care.data4life.fhir.stu3.json.FhirStu3MoshiJsonParser;
-import care.data4life.fhir.stu3.model.FhirStu3Base;
+import care.data4life.fhir.r4.json.FhirR4MoshiJsonParser;
+import care.data4life.fhir.r4.model.FhirR4Base;
 
-public final class FhirStu3Parser implements FhirParser<FhirStu3Base> {
+public final class FhirR4Parser implements FhirParser<FhirR4Base> {
 
     private FhirJsonParser jsonParser;
 
-    public FhirStu3Parser() {
-        this.jsonParser = new FhirStu3MoshiJsonParser();
+    public FhirR4Parser() {
+        this.jsonParser = new FhirR4MoshiJsonParser();
     }
 
     @Override
-    public <T extends FhirStu3Base> T toFhir(Class<T> fhirType, String fhirJson) throws FhirException {
+    public <T extends FhirR4Base> T toFhir(Class<T> fhirType, String fhirJson) throws FhirException {
         return (T) jsonParser.fromJson(fhirType, fhirJson);
     }
 
     @Override
-    public <T extends FhirStu3Base> String fromFhir(T fhirObject) throws FhirException {
+    public <T extends FhirR4Base> String fromFhir(T fhirObject) throws FhirException {
         return jsonParser.toJson(fhirObject);
     }
 }

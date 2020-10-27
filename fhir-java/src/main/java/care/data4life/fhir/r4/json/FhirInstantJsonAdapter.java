@@ -14,29 +14,32 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir.stu3;
+package care.data4life.fhir.r4.json;
 
-import care.data4life.fhir.FhirException;
-import care.data4life.fhir.FhirParser;
-import care.data4life.fhir.json.FhirJsonParser;
-import care.data4life.fhir.stu3.json.FhirStu3MoshiJsonParser;
-import care.data4life.fhir.stu3.model.FhirStu3Base;
+import com.squareup.moshi.JsonAdapter;
+import com.squareup.moshi.JsonReader;
+import com.squareup.moshi.JsonWriter;
 
-public final class FhirStu3Parser implements FhirParser<FhirStu3Base> {
+import java.io.IOException;
 
-    private FhirJsonParser jsonParser;
+import javax.annotation.Nullable;
 
-    public FhirStu3Parser() {
-        this.jsonParser = new FhirStu3MoshiJsonParser();
+import care.data4life.fhir.r4.model.FhirInstant;
+import care.data4life.fhir.r4.util.FhirDateTimeFormatter;
+import care.data4life.fhir.r4.util.FhirDateTimeParser;
+
+public class FhirInstantJsonAdapter extends JsonAdapter<FhirInstant> {
+
+    @Nullable
+    @Override
+    public FhirInstant fromJson(JsonReader reader) throws IOException {
+        return FhirDateTimeParser.parseInstant(reader.nextString());
     }
 
     @Override
-    public <T extends FhirStu3Base> T toFhir(Class<T> fhirType, String fhirJson) throws FhirException {
-        return (T) jsonParser.fromJson(fhirType, fhirJson);
-    }
-
-    @Override
-    public <T extends FhirStu3Base> String fromFhir(T fhirObject) throws FhirException {
-        return jsonParser.toJson(fhirObject);
+    public void toJson(JsonWriter writer, @Nullable FhirInstant value) throws IOException {
+        if (value != null) {
+            writer.value(FhirDateTimeFormatter.formatInstant(value));
+        }
     }
 }

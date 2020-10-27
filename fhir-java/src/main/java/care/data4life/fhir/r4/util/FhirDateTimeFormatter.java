@@ -14,18 +14,18 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir.stu3.util;
+package care.data4life.fhir.r4.util;
 
 import java.util.TimeZone;
 
 import javax.annotation.Nullable;
 
-import care.data4life.fhir.stu3.model.FhirDate;
-import care.data4life.fhir.stu3.model.FhirDateTime;
-import care.data4life.fhir.stu3.model.FhirInstant;
-import care.data4life.fhir.stu3.model.FhirTime;
+import care.data4life.fhir.r4.model.FhirDate;
+import care.data4life.fhir.r4.model.FhirDateTime;
+import care.data4life.fhir.r4.model.FhirInstant;
+import care.data4life.fhir.r4.model.FhirTime;
 
-import static care.data4life.fhir.stu3.util.FhirDateTimeParser.ZERO_OFFSET_GMT_PATTERN;
+import static care.data4life.fhir.r4.util.FhirDateTimeParser.ZERO_OFFSET_GMT_PATTERN;
 
 public final class FhirDateTimeFormatter {
 

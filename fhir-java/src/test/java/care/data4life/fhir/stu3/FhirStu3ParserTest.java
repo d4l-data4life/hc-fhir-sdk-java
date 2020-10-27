@@ -25,7 +25,8 @@ import java.util.List;
 
 import care.data4life.fhir.FhirException;
 import care.data4life.fhir.stu3.model.Attachment;
-import care.data4life.fhir.stu3.model.CodeSystems;
+import care.data4life.fhir.stu3.model.CodeSystemDiagnosticReportStatus;
+import care.data4life.fhir.stu3.model.CodeSystemDocumentReferenceStatus;
 import care.data4life.fhir.stu3.model.CodeableConcept;
 import care.data4life.fhir.stu3.model.DiagnosticReport;
 import care.data4life.fhir.stu3.model.DocumentReference;
@@ -76,15 +77,15 @@ public class FhirStu3ParserTest {
         documentReferenceContentList.add(new DocumentReference.DocumentReferenceContent(new Attachment()));
 
         DocumentReference documentReference = new DocumentReference(
-                documentReferenceContentList,
+                CodeSystemDocumentReferenceStatus.CURRENT,
+                new CodeableConcept(),
                 FhirDateTimeConverter.toFhirInstant(new Date()),
-                CodeSystems.DocumentReferenceStatus.CURRENT,
-                new CodeableConcept()
+                documentReferenceContentList
         );
         assertNotNull(parser.fromFhir(documentReference));
 
 
-        DiagnosticReport diagnosticReport = new DiagnosticReport(new CodeableConcept(), CodeSystems.DiagnosticReportStatus.APPENDED);
+        DiagnosticReport diagnosticReport = new DiagnosticReport(CodeSystemDiagnosticReportStatus.APPENDED, new CodeableConcept());
         assertNotNull(parser.fromFhir(diagnosticReport));
     }
 

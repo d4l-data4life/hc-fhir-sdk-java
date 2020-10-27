@@ -14,19 +14,16 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir;
+package care.data4life.fhir.r4.util;
 
-import care.data4life.fhir.r4.FhirR4Parser;
-import care.data4life.fhir.stu3.FhirStu3Parser;
+import java.util.Date;
 
-public final class Fhir {
+public interface FhirDateCodec {
 
-    public FhirParser createStu3Parser() {
-        return new FhirStu3Parser();
-    }
-
-    public FhirParser createR4Parser() {
-        return new FhirR4Parser();
-    }
-
+    /**
+     * Converts the object to Date representation.
+     *
+     * @return object as Date
+     */
+    Date toDate();
 }

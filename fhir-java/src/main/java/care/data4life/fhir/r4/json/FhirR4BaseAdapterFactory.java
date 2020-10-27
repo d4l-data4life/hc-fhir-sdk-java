@@ -14,19 +14,31 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir;
+package care.data4life.fhir.r4.json;
 
-import care.data4life.fhir.r4.FhirR4Parser;
-import care.data4life.fhir.stu3.FhirStu3Parser;
+import com.squareup.moshi.JsonAdapter;
+import com.squareup.moshi.Moshi;
+import com.squareup.moshi.Types;
 
-public final class Fhir {
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Type;
+import java.util.Set;
 
-    public FhirParser createStu3Parser() {
-        return new FhirStu3Parser();
-    }
+import javax.annotation.Nullable;
 
-    public FhirParser createR4Parser() {
-        return new FhirR4Parser();
+import care.data4life.fhir.r4.model.FhirR4Base;
+
+public class FhirR4BaseAdapterFactory implements JsonAdapter.Factory {
+
+    @Nullable
+    @Override
+    public JsonAdapter<?> create(Type type, Set<? extends Annotation> annotations, Moshi moshi) {
+        Class<?> rawType = Types.getRawType(type);
+        if (FhirR4Base.class == rawType) {
+            return new FhirR4BaseAdapter(moshi);
+        }
+
+        return null;
     }
 
 }

@@ -14,7 +14,7 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir.stu3.util;
+package care.data4life.fhir.r4.util;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -23,10 +23,10 @@ import java.util.TimeZone;
 
 import javax.annotation.Nullable;
 
-import care.data4life.fhir.stu3.model.FhirDate;
-import care.data4life.fhir.stu3.model.FhirDateTime;
-import care.data4life.fhir.stu3.model.FhirInstant;
-import care.data4life.fhir.stu3.model.FhirTime;
+import care.data4life.fhir.r4.model.FhirDate;
+import care.data4life.fhir.r4.model.FhirDateTime;
+import care.data4life.fhir.r4.model.FhirInstant;
+import care.data4life.fhir.r4.model.FhirTime;
 
 public final class FhirDateTimeConverter {
 
