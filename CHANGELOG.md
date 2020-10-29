@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/0.7.0...main)
 ### Added
+- Add parser config for FHIR R4 model generation
+- Add Encounter to supported models
 ### Changed
 ### Removed
 ### Fixed
