@@ -17,4 +17,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Updated
 - Updated timezone implementation to reflect the time correctly during daylight saving time
 - Update fhir-parser to use support FHIR R4 model generation
+### Bumped
+- Gradle 5.2.1 -> 6.7
+- Gradle Dependency Updated Plugin 0.20.0 -> 0.34.0
+- AndroidStudio 3.3.1 -> 4.1
+
+
 ### Migration
