@@ -2,12 +2,12 @@ require "fileutils"
 
 module Fastlane
   module Actions
-    class FhirJavaAction < Action
+    class FhirJavaR4Action < Action
       def self.run(params)
         cleanup
         generate_fhir_models
         integrate_fhir_models
-        cleanup
+        # cleanup
       end
 
       def self.generate_fhir_models
@@ -15,18 +15,18 @@ module Fastlane
           resources_path = './fhir-java/parser'
 
           # Configure our mappings
-          FileUtils.copy("#{resources_path}/config/mappings.py", "#{fhir_parser}/mappings.py")
-          FileUtils.copy("#{resources_path}/config/settings.py", "#{fhir_parser}/settings.py")
-          FileUtils.copy_entry("#{resources_path}/templates", "#{fhir_parser}/templates")
+          FileUtils.copy("#{resources_path}/r4/config/mappings.py", "#{fhir_parser}/mappings.py")
+          FileUtils.copy("#{resources_path}/r4/config/settings.py", "#{fhir_parser}/settings.py")
+          FileUtils.copy_entry("#{resources_path}/r4/templates", "#{fhir_parser}/templates")
 
-          # Create a cache for the FHIR JSON models
-          cache_src = File.join('.', 'fhir-spec', 'hl7.org','fhir','STU3')
-          cache_dst = File.join(fhir_parser, "downloads")
-          FileUtils.mkdir(cache_dst)
-          FileUtils.copy(File.join(cache_src, "version.info"), cache_dst)
-          Zip::File.open(File.join(cache_src, "examples-json.zip")) do |zipfile|
+          # Create a cache for the FHIR r4 JSON models
+          cache_r4_src = File.join('.', 'fhir-spec', 'hl7.org','fhir','r4')
+          cache_r4_dst = File.join(fhir_parser, "downloads")
+          FileUtils.mkdir(cache_r4_dst)
+          FileUtils.copy(File.join(cache_r4_src, "version.info"), cache_r4_dst)
+          Zip::File.open(File.join(cache_r4_src, "examples-json.zip")) do |zipfile|
             zipfile.each do |f|
-              zipfile.extract(f, File.join(cache_dst, f.name))
+              zipfile.extract(f, File.join(cache_r4_dst, f.name))
             end
           end
 
@@ -37,7 +37,7 @@ module Fastlane
             sh "venv/bin/python generate.py --cache-only"
           end
 
-          UI.success "Done generating FHIR models ✅"
+          UI.success "Done generating FHIR R4 models ✅"
       end
 
       def self.cleanup
@@ -62,16 +62,16 @@ module Fastlane
           modelSource = "#{fhir_parser}/models/*"
           testSource = "#{fhir_parser}/tests/*"
 
-          modelTarget = "./fhir-java/src-gen/main/java/care/data4life/fhir/stu3/model"
-          testTarget = "./fhir-java/src-gen/test/java/care/data4life/fhir/stu3/model"
-          testJsonTarget = "./fhir-java/src-gen/test/resources/"
+          modelTarget = "./fhir-java/src-gen/main/java/care/data4life/fhir/r4/model"
+          testTarget = "./fhir-java/src-gen/test/java/care/data4life/fhir/r4/model"
+          testJsonTarget = "./fhir-java/src-gen/test/resources/r4"
 
 
           # Define filenames to include
           base = ["FhirElementFactory"]
           complex = ["Ratio", "Period", "Range", "Attachment", "Identifier", "HumanName", "Annotation", "Address", "ContactPoint", "SampledData", "Money", "Count", "Duration", "Quantity", "Distance", "Age", "CodeableConcept", "Signature", "Coding", "Timing", "Element"]
           special = ["Reference", "Narrative", "Extension", "Resource", "Meta"]
-          enum = ["CodeSystems"]
+          enum = Dir[ modelSource ].select{ |f| f[/CodeSystem+/] }.map{ |f| File.basename(f, '.*') }
           model = [
               "BackboneElement",
               "DocumentReference",
@@ -99,7 +99,8 @@ module Fastlane
               "UsageContext",
               "ReferralRequest",
               "ValueSet",
-              "Procedure"
+              "Procedure",
+              "Encounter", "Contributor", "DataRequirement", "Expression", "ParameterDefinition", "RelatedArtifact", "TriggerDefinition", "Location", "ServiceRequest"
           ]
 
           # FIXME
@@ -152,7 +153,7 @@ module Fastlane
       end
 
       def self.change_package(file, target)
-        sh "find . -name Schedule.java -print | xargs perl -i -pe 's/care\.data4life\.fhir\.stu3\.model/care\.data4life\.fhir\.stu3\.model\.#{target}/g'"
+        sh "find . -name Schedule.java -print | xargs perl -i -pe 's/care\.data4life\.fhir\.r4\.model/care\.data4life\.fhir\.r4\.model\.#{target}/g'"
       end
 
       def self.change_imports()
