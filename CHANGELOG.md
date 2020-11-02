@@ -6,12 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/0.7.0...main)
 ### Added
-Add FHIR R4 generated models
+- Add FHIR R4 generated models
+- Add parser config for FHIR R4 model generation
+- Add Encounter to supported models
 ### Changed
 - Breaking: CodeSystems are now splitted into single classes
 - Breaking: Moved STU3 models into `fhir.stu3.model` package
 ### Removed
 ### Fixed
 ### Updated
-- Updated timezone implementation to reflect the time correctly during daylight saving time  
+- Updated timezone implementation to reflect the time correctly during daylight saving time
+- Update fhir-parser to use support FHIR R4 model generation
 ### Migration
