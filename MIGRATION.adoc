@@ -1,9 +1,10 @@
-# Migration guide
+= Migration guide
 
 This file will contain information to help you migrate from one version
 to another.
 
-## Migrate from Version 0.7.0 to 1.0.0
+[#migration-0_7_0-1_0_0]
+== Migrate from Version 0.7.0 to 1.0.0
 
 In version 0.7.0 the `CodeSystems` was a big `enum` that contains the
 individual `CodeSystems` for the different classes. With the new version
@@ -11,7 +12,7 @@ individual `CodeSystems` for the different classes. With the new version
 
 In detail the change for the CodeSystems looks like the following:
 
-```
+----
 // v0.7.0 
 public class CodeSystems {
 
@@ -21,24 +22,25 @@ public class CodeSystems {
     public enum AddressType {}
     ...
 }
-```
+----
 
 In version 1.0.0 each CodeSystem will be it's own standalone enum class
 with the naming pattern `CodeSystem...` e.g.
 
-```
+----
 // v1.0.0 
 public enum CodeSystemAbstracType { }    
 public enum CodeSystemAccountStatus { }
 public enum CodeSystemAddressType { }
-```
+----
 
 In case you made use of the `CodeSystems` you need to update the imports
 to th specific CodeSystem class.
-```
+
+----
 CodeSystems.AbstractType.ANY -> CodeSystemAbstractType.ANY
 CodeSystems.AccountStatus.INACTIVE -> CodeSystemAccountStatus.INACTIVE
 ...
 CodeSystems.AddressType.POSTAL -> CodeSystemAddressType.POSTAL
 ...
-```
+----
