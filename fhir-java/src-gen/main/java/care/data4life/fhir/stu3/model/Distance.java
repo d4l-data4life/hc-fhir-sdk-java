@@ -23,11 +23,12 @@ package care.data4life.fhir.stu3.model;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Distance">Distance</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Distance) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Distance) on 2020-10-27
  */
 public class Distance extends Quantity {
 
     public static final String resourceType = "Distance";
+
 
     public Distance() {
     }
@@ -36,4 +37,6 @@ public class Distance extends Quantity {
     public String getResourceType() {
         return Distance.resourceType;
     }
+
+
 }

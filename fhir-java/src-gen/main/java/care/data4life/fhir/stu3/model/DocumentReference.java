@@ -30,26 +30,83 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class DocumentReference extends DomainResource {
 
     public static final String resourceType = "DocumentReference";
 
-    // Who/what authenticated the document.
-    @Json(name = "authenticator")
+    // Master Version Specific Identifier.
+    @Json(name = "masterIdentifier")
     @Nullable
-    public Reference authenticator;
+    public Identifier masterIdentifier;
+
+    // Other identifiers for the document.
+    @Json(name = "identifier")
+    @Nullable
+    public List<Identifier> identifier;
+
+    // The status of this document reference.
+    @Json(name = "status")
+    public CodeSystemDocumentReferenceStatus status;
+
+    // The status of the underlying document.
+    @Json(name = "docStatus")
+    @Nullable
+    public CodeSystemCompositionStatus docStatus;
+
+    // Kind of document (LOINC if possible).
+    @Json(name = "type")
+    public CodeableConcept type;
+
+    // Categorization of document.
+    @Json(name = "class")
+    @Nullable
+    public CodeableConcept clazz;
+
+    // Who/what is the subject of the document.
+    @Json(name = "subject")
+    @Nullable
+    public Reference subject;
+
+    // Document creation time.
+    @Json(name = "created")
+    @Nullable
+    public FhirDateTime created;
+
+    // When this document reference was created.
+    @Json(name = "indexed")
+    public FhirInstant indexed;
 
     // Who and/or what authored the document.
     @Json(name = "author")
     @Nullable
     public List<Reference> author;
 
-    // Categorization of document.
-    @Json(name = "class")
+    // Who/what authenticated the document.
+    @Json(name = "authenticator")
     @Nullable
-    public CodeableConcept clazz;
+    public Reference authenticator;
+
+    // Organization which maintains the document.
+    @Json(name = "custodian")
+    @Nullable
+    public Reference custodian;
+
+    // Relationships to other documents.
+    @Json(name = "relatesTo")
+    @Nullable
+    public List<DocumentReferenceRelatesTo> relatesTo;
+
+    // Human-readable description (title).
+    @Json(name = "description")
+    @Nullable
+    public String description;
+
+    // Document security-tags.
+    @Json(name = "securityLabel")
+    @Nullable
+    public List<CodeableConcept> securityLabel;
 
     // Document referenced.
     @Json(name = "content")
@@ -60,83 +117,27 @@ public class DocumentReference extends DomainResource {
     @Nullable
     public DocumentReferenceContext context;
 
-    // Document creation time.
-    @Json(name = "created")
-    @Nullable
-    public FhirDateTime created;
-
-    // Organization which maintains the document.
-    @Json(name = "custodian")
-    @Nullable
-    public Reference custodian;
-
-    // Human-readable description (title).
-    @Json(name = "description")
-    @Nullable
-    public String description;
-
-    // The status of the underlying document.
-    @Json(name = "docStatus")
-    @Nullable
-    public CodeSystems.CompositionStatus docStatus;
-
-    // Other identifiers for the document.
-    @Json(name = "identifier")
-    @Nullable
-    public List<Identifier> identifier;
-
-    // When this document reference was created.
-    @Json(name = "indexed")
-    public FhirInstant indexed;
-
-    // Master Version Specific Identifier.
-    @Json(name = "masterIdentifier")
-    @Nullable
-    public Identifier masterIdentifier;
-
-    // Relationships to other documents.
-    @Json(name = "relatesTo")
-    @Nullable
-    public List<DocumentReferenceRelatesTo> relatesTo;
-
-    // Document security-tags.
-    @Json(name = "securityLabel")
-    @Nullable
-    public List<CodeableConcept> securityLabel;
-
-    // The status of this document reference.
-    @Json(name = "status")
-    public CodeSystems.DocumentReferenceStatus status;
-
-    // Who/what is the subject of the document.
-    @Json(name = "subject")
-    @Nullable
-    public Reference subject;
-
-    // Kind of document (LOINC if possible).
-    @Json(name = "type")
-    public CodeableConcept type;
 
     /**
      * Constructor for all required properties.
      *
-     * @param content List of DocumentReferenceContent
-     * @param indexed FhirInstant
-     * @param status  CodeSystems.DocumentReferenceStatus
+     * @param status  CodeSystemDocumentReferenceStatus
      * @param type    CodeableConcept
+     * @param indexed FhirInstant
+     * @param content List of DocumentReferenceContent
      */
-    public DocumentReference(List<DocumentReferenceContent> content, FhirInstant indexed,
-                             CodeSystems.DocumentReferenceStatus status, CodeableConcept type) {
-        this.content = content;
-        this.indexed = indexed;
+    public DocumentReference(CodeSystemDocumentReferenceStatus status, CodeableConcept type, FhirInstant indexed, List<DocumentReferenceContent> content) {
         this.status = status;
         this.type = type;
+        this.indexed = indexed;
+        this.content = content;
     }
 
     @Override
     public String getResourceType() {
         return DocumentReference.resourceType;
     }
+
 
     /**
      * DocumentReference.java
@@ -145,9 +146,8 @@ public class DocumentReference extends DomainResource {
      * with a different format.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
-     * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
-     * on 2020-07-29
+     * on 2020-10-27
      */
     public static class DocumentReferenceContent extends BackboneElement {
 
@@ -162,6 +162,7 @@ public class DocumentReference extends DomainResource {
         @Nullable
         public Coding format;
 
+
         /**
          * Constructor for all required properties.
          *
@@ -175,7 +176,10 @@ public class DocumentReference extends DomainResource {
         public String getResourceType() {
             return DocumentReferenceContent.resourceType;
         }
+
+
     }
+
 
     /**
      * DocumentReference.java
@@ -183,9 +187,8 @@ public class DocumentReference extends DomainResource {
      * The clinical context in which the document was prepared.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
-     * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
-     * on 2020-07-29
+     * on 2020-10-27
      */
     public static class DocumentReferenceContext extends BackboneElement {
 
@@ -201,30 +204,31 @@ public class DocumentReference extends DomainResource {
         @Nullable
         public List<CodeableConcept> event;
 
-        // Kind of facility where patient was seen.
-        @Json(name = "facilityType")
-        @Nullable
-        public CodeableConcept facilityType;
-
         // Time of service that is being documented.
         @Json(name = "period")
         @Nullable
         public Period period;
+
+        // Kind of facility where patient was seen.
+        @Json(name = "facilityType")
+        @Nullable
+        public CodeableConcept facilityType;
 
         // Additional details about where the content was created (e.g. clinical specialty).
         @Json(name = "practiceSetting")
         @Nullable
         public CodeableConcept practiceSetting;
 
+        // Patient demographics from source.
+        @Json(name = "sourcePatientInfo")
+        @Nullable
+        public Reference sourcePatientInfo;
+
         // Related identifiers or resources.
         @Json(name = "related")
         @Nullable
         public List<DocumentReferenceContextRelated> related;
 
-        // Patient demographics from source.
-        @Json(name = "sourcePatientInfo")
-        @Nullable
-        public Reference sourcePatientInfo;
 
         public DocumentReferenceContext() {
         }
@@ -233,7 +237,10 @@ public class DocumentReference extends DomainResource {
         public String getResourceType() {
             return DocumentReferenceContext.resourceType;
         }
+
+
     }
+
 
     /**
      * DocumentReference.java
@@ -241,9 +248,8 @@ public class DocumentReference extends DomainResource {
      * Related identifiers or resources associated with the DocumentReference.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
-     * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
-     * on 2020-07-29
+     * on 2020-10-27
      */
     public static class DocumentReferenceContextRelated extends BackboneElement {
 
@@ -259,6 +265,7 @@ public class DocumentReference extends DomainResource {
         @Nullable
         public Reference ref;
 
+
         public DocumentReferenceContextRelated() {
         }
 
@@ -266,7 +273,10 @@ public class DocumentReference extends DomainResource {
         public String getResourceType() {
             return DocumentReferenceContextRelated.resourceType;
         }
+
+
     }
+
 
     /**
      * DocumentReference.java
@@ -274,9 +284,8 @@ public class DocumentReference extends DomainResource {
      * Relationships that this document has with other document references that already exist.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
-     * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
-     * on 2020-07-29
+     * on 2020-10-27
      */
     public static class DocumentReferenceRelatesTo extends BackboneElement {
 
@@ -284,19 +293,20 @@ public class DocumentReference extends DomainResource {
 
         // The type of relationship that this document has with anther document.
         @Json(name = "code")
-        public CodeSystems.DocumentRelationshipType code;
+        public CodeSystemDocumentRelationshipType code;
 
         // Target of the relationship.
         @Json(name = "target")
         public Reference target;
 
+
         /**
          * Constructor for all required properties.
          *
-         * @param code   CodeSystems.DocumentRelationshipType
+         * @param code   CodeSystemDocumentRelationshipType
          * @param target Reference
          */
-        public DocumentReferenceRelatesTo(CodeSystems.DocumentRelationshipType code, Reference target) {
+        public DocumentReferenceRelatesTo(CodeSystemDocumentRelationshipType code, Reference target) {
             this.code = code;
             this.target = target;
         }
@@ -305,5 +315,9 @@ public class DocumentReference extends DomainResource {
         public String getResourceType() {
             return DocumentReferenceRelatesTo.resourceType;
         }
+
+
     }
+
+
 }

@@ -16,6 +16,7 @@
 
 package care.data4life.fhir.stu3.model;
 
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
@@ -36,7 +37,7 @@ import static org.junit.Assert.assertEquals;
  * coded interpretations, and formatted representation of diagnostic reports.
  * <p>
  * <p>
- * "Generated from FHIR 3.0.1.11917 on 2020-07-29
+ * "Generated from FHIR 3.0.1.11917 on 2020-10-27
  */
 public class DiagnosticReportTest {
 
@@ -44,7 +45,7 @@ public class DiagnosticReportTest {
 
     @Test
     public void testDiagnosticReport1() throws Exception {
-        String sourceJson = FileHelper.loadString("diagnosticreport-example-f202-bloodculture.json");
+        String sourceJson = FileHelper.loadString("stu3/diagnosticreport-example-f202-bloodculture.json");
         DiagnosticReport data = parser.toFhir(DiagnosticReport.class, sourceJson);
 
         assertEquals(data.basedOn.get(0).reference, "#req");
@@ -54,12 +55,10 @@ public class DiagnosticReportTest {
         assertEquals(data.category.coding.get(1).code, "LAB");
         assertEquals(data.category.coding.get(1).system, "http://hl7.org/fhir/v2/0074");
         assertEquals(data.code.coding.get(0).code, "104177005");
-        assertEquals(data.code.coding.get(0).display,
-                "Blood culture for bacteria, including anaerobic screen");
+        assertEquals(data.code.coding.get(0).display, "Blood culture for bacteria, including anaerobic screen");
         assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.codedDiagnosis.get(0).coding.get(0).code, "428763004");
-        assertEquals(data.codedDiagnosis.get(0).coding.get(0).display,
-                "Bacteremia due to staphylococcus");
+        assertEquals(data.codedDiagnosis.get(0).coding.get(0).display, "Bacteremia due to staphylococcus");
         assertEquals(data.codedDiagnosis.get(0).coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.conclusion, "Blood culture tested positive on staphylococcus aureus");
         assertEquals(data.contained.get(0).id, "req");
@@ -67,13 +66,12 @@ public class DiagnosticReportTest {
         assertEquals(data.issued.toString(), "2013-03-11T10:28:00+01:00");
         assertEquals(data.performer.get(0).actor.display, "AUMC");
         assertEquals(data.performer.get(0).actor.reference, "Organization/f201");
-        assertEquals(data.result.get(0).display,
-                "Results for staphylococcus analysis on Roel's blood culture");
+        assertEquals(data.result.get(0).display, "Results for staphylococcus analysis on Roel's blood culture");
         assertEquals(data.result.get(0).reference, "Observation/f206");
-        assertEquals(data.status, CodeSystems.DiagnosticReportStatus.FINAL);
+        assertEquals(data.status, CodeSystemDiagnosticReportStatus.FINAL);
         assertEquals(data.subject.display, "Roel");
         assertEquals(data.subject.reference, "Patient/f201");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -82,7 +80,7 @@ public class DiagnosticReportTest {
 
     @Test
     public void testDiagnosticReport2() throws Exception {
-        String sourceJson = FileHelper.loadString("diagnosticreport-example-ghp.json");
+        String sourceJson = FileHelper.loadString("stu3/diagnosticreport-example-ghp.json");
         DiagnosticReport data = parser.toFhir(DiagnosticReport.class, sourceJson);
 
         assertEquals(data.code.coding.get(0).code, "GHP");
@@ -105,8 +103,7 @@ public class DiagnosticReportTest {
         assertEquals(data.issued.toString(), "2015-08-17T06:40:17Z");
         assertEquals(data.meta.lastUpdated.toString(), "2015-08-16T10:35:23Z");
         assertEquals(data.performer.get(0).actor.display, "Acme Laboratory, Inc");
-        assertEquals(data.performer.get(0).actor.reference,
-                "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f");
+        assertEquals(data.performer.get(0).actor.reference, "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f");
         assertEquals(data.result.get(0).display, "Chemistry Panel");
         assertEquals(data.result.get(0).reference, "#p1");
         assertEquals(data.result.get(1).display, "CBC");
@@ -119,9 +116,9 @@ public class DiagnosticReportTest {
         assertEquals(data.specimen.get(1).reference, "#ltt");
         assertEquals(data.specimen.get(2).display, "Urine Sample");
         assertEquals(data.specimen.get(2).reference, "#urine");
-        assertEquals(data.status, CodeSystems.DiagnosticReportStatus.FINAL);
+        assertEquals(data.status, CodeSystemDiagnosticReportStatus.FINAL);
         assertEquals(data.subject.reference, "Patient/pat2");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -130,7 +127,7 @@ public class DiagnosticReportTest {
 
     @Test
     public void testDiagnosticReport3() throws Exception {
-        String sourceJson = FileHelper.loadString("diagnosticreport-example-lipids.json");
+        String sourceJson = FileHelper.loadString("stu3/diagnosticreport-example-lipids.json");
         DiagnosticReport data = parser.toFhir(DiagnosticReport.class, sourceJson);
 
         assertEquals(data.category.coding.get(0).code, "HM");
@@ -149,15 +146,14 @@ public class DiagnosticReportTest {
         assertEquals(data.identifier.get(0).value, "5234342");
         assertEquals(data.issued.toString(), "2013-01-27T11:45:33+11:00");
         assertEquals(data.performer.get(0).actor.display, "Acme Laboratory, Inc");
-        assertEquals(data.performer.get(0).actor.reference,
-                "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f");
+        assertEquals(data.performer.get(0).actor.reference, "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f");
         assertEquals(data.result.get(0).reference, "#cholesterol");
         assertEquals(data.result.get(1).reference, "#triglyceride");
         assertEquals(data.result.get(2).reference, "#hdlcholesterol");
         assertEquals(data.result.get(3).reference, "#ldlcholesterol");
-        assertEquals(data.status, CodeSystems.DiagnosticReportStatus.FINAL);
+        assertEquals(data.status, CodeSystemDiagnosticReportStatus.FINAL);
         assertEquals(data.subject.reference, "Patient/pat2");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -166,7 +162,7 @@ public class DiagnosticReportTest {
 
     @Test
     public void testDiagnosticReport4() throws Exception {
-        String sourceJson = FileHelper.loadString("diagnosticreport-example-f001-bloodexam.json");
+        String sourceJson = FileHelper.loadString("stu3/diagnosticreport-example-f001-bloodexam.json");
         DiagnosticReport data = parser.toFhir(DiagnosticReport.class, sourceJson);
 
         assertEquals(data.basedOn.get(0).reference, "#req");
@@ -176,14 +172,13 @@ public class DiagnosticReportTest {
         assertEquals(data.category.coding.get(1).code, "HM");
         assertEquals(data.category.coding.get(1).system, "http://hl7.org/fhir/v2/0074");
         assertEquals(data.code.coding.get(0).code, "58410-2");
-        assertEquals(data.code.coding.get(0).display,
-                "Complete blood count (hemogram) panel - Blood by Automated count");
+        assertEquals(data.code.coding.get(0).display, "Complete blood count (hemogram) panel - Blood by Automated count");
         assertEquals(data.code.coding.get(0).system, "http://loinc.org");
         assertEquals(data.conclusion, "Core lab");
         assertEquals(data.contained.get(0).id, "req");
         assertEquals(data.id, "f001");
         assertEquals(data.identifier.get(0).system, "http://www.bmc.nl/zorgportal/identifiers/reports");
-        assertEquals(data.identifier.get(0).use, CodeSystems.IdentifierUse.OFFICIAL);
+        assertEquals(data.identifier.get(0).use, CodeSystemIdentifierUse.OFFICIAL);
         assertEquals(data.identifier.get(0).value, "nr1239044");
         assertEquals(data.issued.toString(), "2013-05-15T19:32:52+01:00");
         assertEquals(data.performer.get(0).actor.display, "Burgers University Medical Centre");
@@ -193,10 +188,10 @@ public class DiagnosticReportTest {
         assertEquals(data.result.get(2).reference, "Observation/f003");
         assertEquals(data.result.get(3).reference, "Observation/f004");
         assertEquals(data.result.get(4).reference, "Observation/f005");
-        assertEquals(data.status, CodeSystems.DiagnosticReportStatus.FINAL);
+        assertEquals(data.status, CodeSystemDiagnosticReportStatus.FINAL);
         assertEquals(data.subject.display, "P. van den Heuvel");
         assertEquals(data.subject.reference, "Patient/f001");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -205,7 +200,7 @@ public class DiagnosticReportTest {
 
     @Test
     public void testDiagnosticReport5() throws Exception {
-        String sourceJson = FileHelper.loadString("diagnosticreport-example-ultrasound.json");
+        String sourceJson = FileHelper.loadString("stu3/diagnosticreport-example-ultrasound.json");
         DiagnosticReport data = parser.toFhir(DiagnosticReport.class, sourceJson);
 
         assertEquals(data.category.coding.get(0).code, "394914008");
@@ -222,13 +217,12 @@ public class DiagnosticReportTest {
         assertEquals(data.id, "ultrasound");
         assertEquals(data.image.get(0).comment, "A comment about the image");
         assertEquals(data.image.get(0).link.display, "WADO example image");
-        assertEquals(data.image.get(0).link.reference,
-                "Media/1.2.840.11361907579238403408700.3.0.14.19970327150033");
+        assertEquals(data.image.get(0).link.reference, "Media/1.2.840.11361907579238403408700.3.0.14.19970327150033");
         assertEquals(data.issued.toString(), "2012-12-01T12:00:00+01:00");
         assertEquals(data.performer.get(0).actor.reference, "Practitioner/example");
-        assertEquals(data.status, CodeSystems.DiagnosticReportStatus.FINAL);
+        assertEquals(data.status, CodeSystemDiagnosticReportStatus.FINAL);
         assertEquals(data.subject.reference, "Patient/example");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -237,7 +231,7 @@ public class DiagnosticReportTest {
 
     @Test
     public void testDiagnosticReport6() throws Exception {
-        String sourceJson = FileHelper.loadString("diagnosticreport-example-f201-brainct.json");
+        String sourceJson = FileHelper.loadString("stu3/diagnosticreport-example-f201-brainct.json");
         DiagnosticReport data = parser.toFhir(DiagnosticReport.class, sourceJson);
 
         assertEquals(data.category.coding.get(0).code, "394914008");
@@ -250,8 +244,7 @@ public class DiagnosticReportTest {
         assertEquals(data.code.coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.code.text, "CT of head-neck");
         assertEquals(data.codedDiagnosis.get(0).coding.get(0).code, "188340000");
-        assertEquals(data.codedDiagnosis.get(0).coding.get(0).display,
-                "Malignant tumor of craniopharyngeal duct");
+        assertEquals(data.codedDiagnosis.get(0).coding.get(0).display, "Malignant tumor of craniopharyngeal duct");
         assertEquals(data.codedDiagnosis.get(0).coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.conclusion, "CT brains: large tumor sphenoid/clivus.");
         assertEquals(data.effectiveDateTime.toString(), "2012-12-01T12:00:00+01:00");
@@ -260,10 +253,10 @@ public class DiagnosticReportTest {
         assertEquals(data.issued.toString(), "2012-12-01T12:00:00+01:00");
         assertEquals(data.performer.get(0).actor.display, "Blijdorp MC");
         assertEquals(data.performer.get(0).actor.reference, "Organization/f203");
-        assertEquals(data.status, CodeSystems.DiagnosticReportStatus.FINAL);
+        assertEquals(data.status, CodeSystemDiagnosticReportStatus.FINAL);
         assertEquals(data.subject.display, "Roel");
         assertEquals(data.subject.reference, "Patient/f201");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -272,8 +265,7 @@ public class DiagnosticReportTest {
 
     @Test
     public void testDiagnosticReport7() throws Exception {
-        String sourceJson =
-                FileHelper.loadString("diagnosticreport-genetics-example-2-familyhistory.json");
+        String sourceJson = FileHelper.loadString("stu3/diagnosticreport-genetics-example-2-familyhistory.json");
         DiagnosticReport data = parser.toFhir(DiagnosticReport.class, sourceJson);
 
         assertEquals(data.category.coding.get(0).code, "15220000");
@@ -286,8 +278,7 @@ public class DiagnosticReportTest {
         assertEquals(data.code.coding.get(0).system, "http://loinc.org");
         assertEquals(data.contained.get(0).id, "f1-genetics");
         assertEquals(data.effectiveDateTime.toString(), "2015-05-26T15:30:10+01:00");
-        assertEquals(data.extension.get(0).url,
-                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsFamilyMemberHistory");
+        assertEquals(data.extension.get(0).url, "http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsFamilyMemberHistory");
         assertEquals(data.extension.get(0).valueReference.reference, "#f1-genetics");
         assertEquals(data.id, "dg2");
         assertEquals(data.issued.toString(), "2014-05-16T10:28:00+01:00");
@@ -299,10 +290,10 @@ public class DiagnosticReportTest {
         assertEquals(data.result.get(1).reference, "Observation/ob-genetics-3-2");
         assertEquals(data.specimen.get(0).display, "Molecular Specimen ID: MLD45-Z4-1234");
         assertEquals(data.specimen.get(0).reference, "Specimen/genetics-example2");
-        assertEquals(data.status, CodeSystems.DiagnosticReportStatus.FINAL);
+        assertEquals(data.status, CodeSystemDiagnosticReportStatus.FINAL);
         assertEquals(data.subject.display, "Peter James Chalmers(MRN: 12345)");
         assertEquals(data.subject.reference, "Patient/example");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -311,14 +302,13 @@ public class DiagnosticReportTest {
 
     @Test
     public void testDiagnosticReport8() throws Exception {
-        String sourceJson = FileHelper.loadString("diagnosticreport-example.json");
+        String sourceJson = FileHelper.loadString("stu3/diagnosticreport-example.json");
         DiagnosticReport data = parser.toFhir(DiagnosticReport.class, sourceJson);
 
         assertEquals(data.category.coding.get(0).code, "HM");
         assertEquals(data.category.coding.get(0).system, "http://hl7.org/fhir/v2/0074");
         assertEquals(data.code.coding.get(0).code, "58410-2");
-        assertEquals(data.code.coding.get(0).display,
-                "Complete blood count (hemogram) panel - Blood by Automated count");
+        assertEquals(data.code.coding.get(0).display, "Complete blood count (hemogram) panel - Blood by Automated count");
         assertEquals(data.code.coding.get(0).system, "http://loinc.org");
         assertEquals(data.code.coding.get(1).code, "CBC");
         assertEquals(data.code.coding.get(1).display, "MASTER FULL BLOOD COUNT");
@@ -343,8 +333,7 @@ public class DiagnosticReportTest {
         assertEquals(data.meta.tag.get(0).display, "Needs Review");
         assertEquals(data.meta.tag.get(0).system, "http://example.org/fhir/CodeSystem/workflow-codes");
         assertEquals(data.performer.get(0).actor.display, "Acme Laboratory, Inc");
-        assertEquals(data.performer.get(0).actor.reference,
-                "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f");
+        assertEquals(data.performer.get(0).actor.reference, "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f");
         assertEquals(data.presentedForm.get(0).contentType, "application/pdf");
         assertEquals(data.presentedForm.get(0).language, "en-AU");
         assertEquals(data.presentedForm.get(0).title, "HTML Report");
@@ -358,9 +347,9 @@ public class DiagnosticReportTest {
         assertEquals(data.result.get(7).reference, "#r8");
         assertEquals(data.result.get(8).reference, "#r9");
         assertEquals(data.result.get(9).reference, "#r10");
-        assertEquals(data.status, CodeSystems.DiagnosticReportStatus.FINAL);
+        assertEquals(data.status, CodeSystemDiagnosticReportStatus.FINAL);
         assertEquals(data.subject.reference, "Patient/pat2");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -369,7 +358,7 @@ public class DiagnosticReportTest {
 
     @Test
     public void testDiagnosticReport9() throws Exception {
-        String sourceJson = FileHelper.loadString("diagnosticreport-example-papsmear.json");
+        String sourceJson = FileHelper.loadString("stu3/diagnosticreport-example-papsmear.json");
         DiagnosticReport data = parser.toFhir(DiagnosticReport.class, sourceJson);
 
         assertEquals(data.code.coding.get(0).code, "47527-7");
@@ -378,9 +367,9 @@ public class DiagnosticReportTest {
         assertEquals(data.id, "pap");
         assertEquals(data.issued.toString(), "2013-02-13T11:45:33+11:00");
         assertEquals(data.performer.get(0).actor.reference, "Practitioner/example");
-        assertEquals(data.status, CodeSystems.DiagnosticReportStatus.FINAL);
+        assertEquals(data.status, CodeSystemDiagnosticReportStatus.FINAL);
         assertEquals(data.subject.reference, "Patient/b248b1b2-1686-4b94-9936-37d7a5f94b51");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.ADDITIONAL);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.ADDITIONAL);
 
         String json = parser.fromFhir(data);
 
@@ -389,17 +378,15 @@ public class DiagnosticReportTest {
 
     @Test
     public void testDiagnosticReport10() throws Exception {
-        String sourceJson = FileHelper.loadString("diagnosticreport-example-gingival-mass.json");
+        String sourceJson = FileHelper.loadString("stu3/diagnosticreport-example-gingival-mass.json");
         DiagnosticReport data = parser.toFhir(DiagnosticReport.class, sourceJson);
 
         assertEquals(data.category.coding.get(0).code, "PAT");
-        assertEquals(data.category.coding.get(0).display,
-                "Pathology (gross & histopath, not surgical)");
+        assertEquals(data.category.coding.get(0).display, "Pathology (gross & histopath, not surgical)");
         assertEquals(data.category.coding.get(0).system, "http://hl7.org/fhir/v2/0074");
         assertEquals(data.category.text, "Pathology");
         assertEquals(data.code.coding.get(0).code, "4503");
-        assertEquals(data.code.coding.get(0).display,
-                "Biopsy without Microscopic Description (1 Site/Lesion)-Standard");
+        assertEquals(data.code.coding.get(0).display, "Biopsy without Microscopic Description (1 Site/Lesion)-Standard");
         assertEquals(data.code.coding.get(0).system, "https://www.acmeonline.com");
         assertEquals(data.code.text, "Biopsy without Microscopic Description (1 Site/Lesion)-Standard");
         assertEquals(data.effectiveDateTime.toString(), "2017-03-02");
@@ -410,11 +397,10 @@ public class DiagnosticReportTest {
         assertEquals(data.performer.get(0).actor.display, "Acme Animal Labs");
         assertEquals(data.presentedForm.get(0).contentType, "application/pdf");
         assertEquals(data.presentedForm.get(0).language, "en");
-        assertEquals(data.presentedForm.get(0).title,
-                "LAB ID: P73456090 MAX JONES Biopsy without Microscopic Description (1 Site/Lesion)-Standard");
-        assertEquals(data.status, CodeSystems.DiagnosticReportStatus.FINAL);
+        assertEquals(data.presentedForm.get(0).title, "LAB ID: P73456090 MAX JONES Biopsy without Microscopic Description (1 Site/Lesion)-Standard");
+        assertEquals(data.status, CodeSystemDiagnosticReportStatus.FINAL);
         assertEquals(data.subject.display, "Max Jones");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 

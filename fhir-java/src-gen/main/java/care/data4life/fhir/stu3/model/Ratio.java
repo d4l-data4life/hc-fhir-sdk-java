@@ -27,21 +27,22 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Ratio">Ratio</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Ratio) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Ratio) on 2020-10-27
  */
 public class Ratio extends Element {
 
     public static final String resourceType = "Ratio";
+
+    // Numerator value.
+    @Json(name = "numerator")
+    @Nullable
+    public Quantity numerator;
 
     // Denominator value.
     @Json(name = "denominator")
     @Nullable
     public Quantity denominator;
 
-    // Numerator value.
-    @Json(name = "numerator")
-    @Nullable
-    public Quantity numerator;
 
     public Ratio() {
     }
@@ -50,4 +51,6 @@ public class Ratio extends Element {
     public String getResourceType() {
         return Ratio.resourceType;
     }
+
+
 }

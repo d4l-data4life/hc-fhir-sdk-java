@@ -49,7 +49,7 @@ public final class FhirDateTimeConverter {
         if (hour > 0) {
             TimeZone timeZone = TimeZone.getDefault();
             return new FhirDateTime(convertToFhirDate(date, timeZone),
-                    convertToFhirTime(date, timeZone, false), timeZone);
+                    convertToFhirTime(date, timeZone, false), TimeZone.getDefault());
         } else {
             return new FhirDateTime(convertToFhirDate(date, null), null, null);
         }

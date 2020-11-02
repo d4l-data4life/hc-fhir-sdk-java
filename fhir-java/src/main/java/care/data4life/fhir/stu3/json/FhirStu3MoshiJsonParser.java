@@ -31,7 +31,7 @@ import care.data4life.fhir.stu3.model.FhirInstant;
 import care.data4life.fhir.stu3.model.FhirStu3Base;
 import care.data4life.fhir.stu3.model.FhirTime;
 
-public class FhirStu3MoshiJsonParser implements FhirJsonParser {
+public class FhirStu3MoshiJsonParser implements FhirJsonParser<FhirStu3Base> {
 
     private Moshi moshi;
 

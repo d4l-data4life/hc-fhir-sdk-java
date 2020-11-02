@@ -32,7 +32,7 @@ public final class FhirStu3Parser implements FhirParser<FhirStu3Base> {
 
     @Override
     public <T extends FhirStu3Base> T toFhir(Class<T> fhirType, String fhirJson) throws FhirException {
-        return jsonParser.fromJson(fhirType, fhirJson);
+        return (T) jsonParser.fromJson(fhirType, fhirJson);
     }
 
     @Override

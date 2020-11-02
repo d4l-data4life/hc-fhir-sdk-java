@@ -16,7 +16,6 @@
 
 package care.data4life.fhir.stu3.util;
 
-import java.util.Calendar;
 import java.util.TimeZone;
 
 import javax.annotation.Nullable;
@@ -36,7 +35,6 @@ public final class FhirDateTimeFormatter {
     private static final String DATE_TIME_FORMAT = "%Y-%M-%DT%h:%m:%s%z";
     private static final String INSTANT_FORMAT = "%Y-%M-%DT%h:%m:%s%z";
     private static final String TIME_FORMAT = "%h:%m:%s";
-    private static final int MONTH_OFFSET = 1;
 
     private FhirDateTimeFormatter() {
     }
@@ -131,7 +129,7 @@ public final class FhirDateTimeFormatter {
                     break;
 
                 case 'z': // time zone
-                    formatTimezoneForDate(year, month, day, timeZone, buffer);
+                    formatTimeZone(timeZone, buffer);
                     break;
 
                 default:
@@ -202,55 +200,9 @@ public final class FhirDateTimeFormatter {
     private static void formatTimeZone(@Nullable TimeZone timeZone, StringBuilder buffer) {
         if (timeZone == null) return;
 
-        int offset = timeZone.getRawOffset();
-
-        if (offset == 0 && !ZERO_OFFSET_GMT_PATTERN.matcher(timeZone.getID()).matches()) {
-            buffer.append('Z');
-            return;
-        }
-
-        if (offset >= 0) {
-            buffer.append('+');
-        } else {
-            buffer.append('-');
-            offset *= -1;
-        }
-
-        offset /= 60 * 1000; // offset is in milli-seconds
-
-        System.out.println("timezone #2 offset: " + offset);
-
-        formatTwoDigits(offset / 60, buffer);
-        buffer.append(':');
-        formatTwoDigits(offset % 60, buffer);
-    }
-
-
-    /**
-     * Formats the timezone in the context of the given date
-     */
-    private static void formatTimezoneForDate(@Nullable Integer year,
-                                              @Nullable Integer month,
-                                              @Nullable Integer day,
-                                              @Nullable TimeZone timeZone,
-                                              StringBuilder buffer) {
-        if (timeZone == null) return;
+        TimeZone.getTimeZone("UTC");
 
         int offset = timeZone.getRawOffset();
-
-        Calendar cal = Calendar.getInstance(timeZone);
-
-        if (year != null)
-            cal.set(Calendar.YEAR, year);
-        if (month != null)
-            cal.set(Calendar.MONTH, month - MONTH_OFFSET); // Calender month starts at 0
-        if (day != null)
-            cal.set(Calendar.DAY_OF_MONTH, day);
-
-        if (timeZone.useDaylightTime() && timeZone.inDaylightTime(cal.getTime())) {
-            // add the daylight saving time offset on top
-            offset += timeZone.getDSTSavings();
-        }
 
         if (offset == 0 && !ZERO_OFFSET_GMT_PATTERN.matcher(timeZone.getID()).matches()) {
             buffer.append('Z');

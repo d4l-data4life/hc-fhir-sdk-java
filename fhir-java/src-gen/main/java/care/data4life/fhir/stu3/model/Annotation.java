@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Annotation">Annotation</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Annotation) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class Annotation extends Element {
 
@@ -44,14 +44,15 @@ public class Annotation extends Element {
     @Nullable
     public String authorString;
 
-    // The annotation  - text content.
-    @Json(name = "text")
-    public String text;
-
     // When the annotation was made.
     @Json(name = "time")
     @Nullable
     public FhirDateTime time;
+
+    // The annotation  - text content.
+    @Json(name = "text")
+    public String text;
+
 
     /**
      * Constructor for all required properties.
@@ -66,4 +67,6 @@ public class Annotation extends Element {
     public String getResourceType() {
         return Annotation.resourceType;
     }
+
+
 }

@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeableConcept">CodeableConcept</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeableConcept) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class CodeableConcept extends Element {
 
@@ -47,6 +47,7 @@ public class CodeableConcept extends Element {
     @Nullable
     public String text;
 
+
     public CodeableConcept() {
     }
 
@@ -54,4 +55,6 @@ public class CodeableConcept extends Element {
     public String getResourceType() {
         return CodeableConcept.resourceType;
     }
+
+
 }

@@ -30,11 +30,21 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/HumanName">HumanName</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/HumanName) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class HumanName extends Element {
 
     public static final String resourceType = "HumanName";
+
+    // Identifies the purpose for this name.
+    @Json(name = "use")
+    @Nullable
+    public CodeSystemNameUse use;
+
+    // Text representation of the full name.
+    @Json(name = "text")
+    @Nullable
+    public String text;
 
     // Family name (often called 'Surname').
     @Json(name = "family")
@@ -46,11 +56,6 @@ public class HumanName extends Element {
     @Nullable
     public List<String> given;
 
-    // Time period when name was/is in use.
-    @Json(name = "period")
-    @Nullable
-    public Period period;
-
     // Parts that come before the name.
     @Json(name = "prefix")
     @Nullable
@@ -61,15 +66,11 @@ public class HumanName extends Element {
     @Nullable
     public List<String> suffix;
 
-    // Text representation of the full name.
-    @Json(name = "text")
+    // Time period when name was/is in use.
+    @Json(name = "period")
     @Nullable
-    public String text;
+    public Period period;
 
-    // Identifies the purpose for this name.
-    @Json(name = "use")
-    @Nullable
-    public CodeSystems.NameUse use;
 
     public HumanName() {
     }
@@ -78,4 +79,6 @@ public class HumanName extends Element {
     public String getResourceType() {
         return HumanName.resourceType;
     }
+
+
 }

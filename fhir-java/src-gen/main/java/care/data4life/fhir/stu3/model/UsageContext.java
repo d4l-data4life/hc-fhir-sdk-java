@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/UsageContext">UsageContext</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/UsageContext) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class UsageContext extends Element {
 
@@ -55,6 +55,7 @@ public class UsageContext extends Element {
     @Nullable
     public Range valueRange;
 
+
     /**
      * Constructor for all required properties.
      *
@@ -78,4 +79,6 @@ public class UsageContext extends Element {
     public String getResourceType() {
         return UsageContext.resourceType;
     }
+
+
 }

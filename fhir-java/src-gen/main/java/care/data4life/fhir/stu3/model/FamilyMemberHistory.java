@@ -29,13 +29,74 @@ import javax.annotation.Nullable;
  * context of care for the patient.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory">FamilyMemberHistory</a>
- * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class FamilyMemberHistory extends DomainResource {
 
     public static final String resourceType = "FamilyMemberHistory";
+
+    // External Id(s) for this record.
+    @Json(name = "identifier")
+    @Nullable
+    public List<Identifier> identifier;
+
+    // Instantiates protocol or definition.
+    @Json(name = "definition")
+    @Nullable
+    public List<Reference> definition;
+
+    // A code specifying the status of the record of the family history of a specific family member.
+    @Json(name = "status")
+    public CodeSystemFamilyHistoryStatus status;
+
+    // The taking of a family member's history did not occur.
+    @Json(name = "notDone")
+    @Nullable
+    public Boolean notDone;
+
+    // subject-unknown | withheld | unable-to-obtain | deferred.
+    @Json(name = "notDoneReason")
+    @Nullable
+    public CodeableConcept notDoneReason;
+
+    // Patient history is about.
+    @Json(name = "patient")
+    public Reference patient;
+
+    // When history was captured/updated.
+    @Json(name = "date")
+    @Nullable
+    public FhirDateTime date;
+
+    // The family member described.
+    @Json(name = "name")
+    @Nullable
+    public String name;
+
+    // Relationship to the subject.
+    @Json(name = "relationship")
+    public CodeableConcept relationship;
+
+    // Administrative Gender - the gender that the relative is considered to have for administration and record keeping purposes.
+    @Json(name = "gender")
+    @Nullable
+    public CodeSystemAdministrativeGender gender;
+
+    // (approximate) date of birth.
+    @Json(name = "bornPeriod")
+    @Nullable
+    public Period bornPeriod;
+
+    // (approximate) date of birth.
+    @Json(name = "bornDate")
+    @Nullable
+    public FhirDate bornDate;
+
+    // (approximate) date of birth.
+    @Json(name = "bornString")
+    @Nullable
+    public String bornString;
 
     // (approximate) age.
     @Json(name = "ageAge")
@@ -52,35 +113,10 @@ public class FamilyMemberHistory extends DomainResource {
     @Nullable
     public String ageString;
 
-    // (approximate) date of birth.
-    @Json(name = "bornDate")
+    // Age is estimated?.
+    @Json(name = "estimatedAge")
     @Nullable
-    public FhirDate bornDate;
-
-    // (approximate) date of birth.
-    @Json(name = "bornPeriod")
-    @Nullable
-    public Period bornPeriod;
-
-    // (approximate) date of birth.
-    @Json(name = "bornString")
-    @Nullable
-    public String bornString;
-
-    // Condition that the related person had.
-    @Json(name = "condition")
-    @Nullable
-    public List<FamilyMemberHistoryCondition> condition;
-
-    // When history was captured/updated.
-    @Json(name = "date")
-    @Nullable
-    public FhirDateTime date;
-
-    // Dead? How old/when?.
-    @Json(name = "deceasedAge")
-    @Nullable
-    public Age deceasedAge;
+    public Boolean estimatedAge;
 
     // Dead? How old/when?.
     @Json(name = "deceasedBoolean")
@@ -88,9 +124,9 @@ public class FamilyMemberHistory extends DomainResource {
     public Boolean deceasedBoolean;
 
     // Dead? How old/when?.
-    @Json(name = "deceasedDate")
+    @Json(name = "deceasedAge")
     @Nullable
-    public FhirDate deceasedDate;
+    public Age deceasedAge;
 
     // Dead? How old/when?.
     @Json(name = "deceasedRange")
@@ -98,53 +134,14 @@ public class FamilyMemberHistory extends DomainResource {
     public Range deceasedRange;
 
     // Dead? How old/when?.
+    @Json(name = "deceasedDate")
+    @Nullable
+    public FhirDate deceasedDate;
+
+    // Dead? How old/when?.
     @Json(name = "deceasedString")
     @Nullable
     public String deceasedString;
-
-    // Instantiates protocol or definition.
-    @Json(name = "definition")
-    @Nullable
-    public List<Reference> definition;
-
-    // Age is estimated?.
-    @Json(name = "estimatedAge")
-    @Nullable
-    public Boolean estimatedAge;
-
-    // Administrative Gender - the gender that the relative is considered to have for administration and record keeping purposes.
-    @Json(name = "gender")
-    @Nullable
-    public CodeSystems.AdministrativeGender gender;
-
-    // External Id(s) for this record.
-    @Json(name = "identifier")
-    @Nullable
-    public List<Identifier> identifier;
-
-    // The family member described.
-    @Json(name = "name")
-    @Nullable
-    public String name;
-
-    // The taking of a family member's history did not occur.
-    @Json(name = "notDone")
-    @Nullable
-    public Boolean notDone;
-
-    // subject-unknown | withheld | unable-to-obtain | deferred.
-    @Json(name = "notDoneReason")
-    @Nullable
-    public CodeableConcept notDoneReason;
-
-    // General note about related person.
-    @Json(name = "note")
-    @Nullable
-    public List<Annotation> note;
-
-    // Patient history is about.
-    @Json(name = "patient")
-    public Reference patient;
 
     // Why was family member history performed?.
     @Json(name = "reasonCode")
@@ -156,32 +153,35 @@ public class FamilyMemberHistory extends DomainResource {
     @Nullable
     public List<Reference> reasonReference;
 
-    // Relationship to the subject.
-    @Json(name = "relationship")
-    public CodeableConcept relationship;
+    // General note about related person.
+    @Json(name = "note")
+    @Nullable
+    public List<Annotation> note;
 
-    // A code specifying the status of the record of the family history of a specific family member.
-    @Json(name = "status")
-    public CodeSystems.FamilyHistoryStatus status;
+    // Condition that the related person had.
+    @Json(name = "condition")
+    @Nullable
+    public List<FamilyMemberHistoryCondition> condition;
+
 
     /**
      * Constructor for all required properties.
      *
+     * @param status       CodeSystemFamilyHistoryStatus
      * @param patient      Reference
      * @param relationship CodeableConcept
-     * @param status       CodeSystems.FamilyHistoryStatus
      */
-    public FamilyMemberHistory(Reference patient, CodeableConcept relationship,
-                               CodeSystems.FamilyHistoryStatus status) {
+    public FamilyMemberHistory(CodeSystemFamilyHistoryStatus status, Reference patient, CodeableConcept relationship) {
+        this.status = status;
         this.patient = patient;
         this.relationship = relationship;
-        this.status = status;
     }
 
     @Override
     public String getResourceType() {
         return FamilyMemberHistory.resourceType;
     }
+
 
     /**
      * FamilyMemberHistory.java
@@ -191,9 +191,8 @@ public class FamilyMemberHistory extends DomainResource {
      * nothing stopping multiple resources - one per condition.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory">FamilyMemberHistory</a>
-     * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory)
-     * on 2020-07-29
+     * on 2020-10-27
      */
     public static class FamilyMemberHistoryCondition extends BackboneElement {
 
@@ -203,10 +202,10 @@ public class FamilyMemberHistory extends DomainResource {
         @Json(name = "code")
         public CodeableConcept code;
 
-        // Extra information about condition.
-        @Json(name = "note")
+        // deceased | permanent disability | etc..
+        @Json(name = "outcome")
         @Nullable
-        public List<Annotation> note;
+        public CodeableConcept outcome;
 
         // When condition first manifested.
         @Json(name = "onsetAge")
@@ -214,24 +213,25 @@ public class FamilyMemberHistory extends DomainResource {
         public Age onsetAge;
 
         // When condition first manifested.
-        @Json(name = "onsetPeriod")
-        @Nullable
-        public Period onsetPeriod;
-
-        // When condition first manifested.
         @Json(name = "onsetRange")
         @Nullable
         public Range onsetRange;
+
+        // When condition first manifested.
+        @Json(name = "onsetPeriod")
+        @Nullable
+        public Period onsetPeriod;
 
         // When condition first manifested.
         @Json(name = "onsetString")
         @Nullable
         public String onsetString;
 
-        // deceased | permanent disability | etc..
-        @Json(name = "outcome")
+        // Extra information about condition.
+        @Json(name = "note")
         @Nullable
-        public CodeableConcept outcome;
+        public List<Annotation> note;
+
 
         /**
          * Constructor for all required properties.
@@ -246,5 +246,9 @@ public class FamilyMemberHistory extends DomainResource {
         public String getResourceType() {
             return FamilyMemberHistoryCondition.resourceType;
         }
+
+
     }
+
+
 }

@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Resource">Resource</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Resource) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Resource) on 2020-10-27
  */
 public class Resource extends FhirStu3Base {
 
@@ -37,6 +37,11 @@ public class Resource extends FhirStu3Base {
     @Json(name = "id")
     @Nullable
     public String id;
+
+    // Metadata about the resource.
+    @Json(name = "meta")
+    @Nullable
+    public Meta meta;
 
     // A set of rules under which this content was created.
     @Json(name = "implicitRules")
@@ -48,10 +53,6 @@ public class Resource extends FhirStu3Base {
     @Nullable
     public String language;
 
-    // Metadata about the resource.
-    @Json(name = "meta")
-    @Nullable
-    public Meta meta;
 
     public Resource() {
     }
@@ -60,4 +61,6 @@ public class Resource extends FhirStu3Base {
     public String getResourceType() {
         return Resource.resourceType;
     }
+
+
 }

@@ -16,6 +16,7 @@
 
 package care.data4life.fhir.stu3.model;
 
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
@@ -31,7 +32,7 @@ import static org.junit.Assert.assertTrue;
  * A reference to a document.
  * <p>
  * <p>
- * "Generated from FHIR 3.0.1.11917 on 2020-07-29
+ * "Generated from FHIR 3.0.1.11917 on 2020-10-27
  */
 public class DocumentReferenceTest {
 
@@ -39,7 +40,7 @@ public class DocumentReferenceTest {
 
     @Test
     public void testDocumentReference1() throws Exception {
-        String sourceJson = FileHelper.loadString("documentreference-example.json");
+        String sourceJson = FileHelper.loadString("stu3/documentreference-example.json");
         DocumentReference data = parser.toFhir(DocumentReference.class, sourceJson);
 
         assertEquals(data.authenticator.reference, "Organization/f001");
@@ -53,50 +54,44 @@ public class DocumentReferenceTest {
         assertEquals(data.content.get(0).attachment.hash, "2jmj7l5rSw0yVb/vlWAYkK/YBwk=");
         assertEquals(data.content.get(0).attachment.language, "en-US");
         assertTrue(data.content.get(0).attachment.size == 3654);
-        assertEquals(data.content.get(0).attachment.url,
-                "http://example.org/xds/mhd/Binary/07a6483f-732b-461e-86b6-edb665c45510");
+        assertEquals(data.content.get(0).attachment.url, "http://example.org/xds/mhd/Binary/07a6483f-732b-461e-86b6-edb665c45510");
         assertEquals(data.content.get(0).format.code, "urn:ihe:pcc:handp:2008");
         assertEquals(data.content.get(0).format.display, "History and Physical Specification");
         assertEquals(data.content.get(0).format.system, "urn:oid:1.3.6.1.4.1.19376.1.2.3");
         assertEquals(data.context.encounter.reference, "Encounter/xcda");
         assertEquals(data.context.event.get(0).coding.get(0).code, "T-D8200");
         assertEquals(data.context.event.get(0).coding.get(0).display, "Arm");
-        assertEquals(data.context.event.get(0).coding.get(0).system,
-                "http://ihe.net/xds/connectathon/eventCodes");
+        assertEquals(data.context.event.get(0).coding.get(0).system, "http://ihe.net/xds/connectathon/eventCodes");
         assertEquals(data.context.facilityType.coding.get(0).code, "Outpatient");
         assertEquals(data.context.facilityType.coding.get(0).display, "Outpatient");
-        assertEquals(data.context.facilityType.coding.get(0).system,
-                "http://www.ihe.net/xds/connectathon/healthcareFacilityTypeCodes");
+        assertEquals(data.context.facilityType.coding.get(0).system, "http://www.ihe.net/xds/connectathon/healthcareFacilityTypeCodes");
         assertEquals(data.context.period.end.toString(), "2004-12-23T08:01:00+11:00");
         assertEquals(data.context.period.start.toString(), "2004-12-23T08:00:00+11:00");
         assertEquals(data.context.practiceSetting.coding.get(0).code, "General Medicine");
         assertEquals(data.context.practiceSetting.coding.get(0).display, "General Medicine");
-        assertEquals(data.context.practiceSetting.coding.get(0).system,
-                "http://www.ihe.net/xds/connectathon/practiceSettingCodes");
+        assertEquals(data.context.practiceSetting.coding.get(0).system, "http://www.ihe.net/xds/connectathon/practiceSettingCodes");
         assertEquals(data.context.related.get(0).identifier.system, "urn:ietf:rfc:3986");
-        assertEquals(data.context.related.get(0).identifier.value,
-                "urn:oid:1.3.6.1.4.1.21367.2005.3.7.2345");
+        assertEquals(data.context.related.get(0).identifier.value, "urn:oid:1.3.6.1.4.1.21367.2005.3.7.2345");
         assertEquals(data.context.related.get(0).ref.reference, "Patient/xcda");
         assertEquals(data.context.sourcePatientInfo.reference, "Patient/xcda");
         assertEquals(data.created.toString(), "2005-12-24T09:35:00+11:00");
         assertEquals(data.custodian.reference, "Organization/f001");
         assertEquals(data.description, "Physical");
-        assertEquals(data.docStatus, CodeSystems.CompositionStatus.PRELIMINARY);
+        assertEquals(data.docStatus, CodeSystemCompositionStatus.PRELIMINARY);
         assertEquals(data.id, "example");
         assertEquals(data.identifier.get(0).system, "urn:ietf:rfc:3986");
         assertEquals(data.identifier.get(0).value, "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234");
         assertEquals(data.indexed.toString(), "2005-12-24T09:43:41+11:00");
         assertEquals(data.masterIdentifier.system, "urn:ietf:rfc:3986");
         assertEquals(data.masterIdentifier.value, "urn:oid:1.3.6.1.4.1.21367.2005.3.7");
-        assertEquals(data.relatesTo.get(0).code, CodeSystems.DocumentRelationshipType.APPENDS);
+        assertEquals(data.relatesTo.get(0).code, CodeSystemDocumentRelationshipType.APPENDS);
         assertEquals(data.relatesTo.get(0).target.reference, "DocumentReference/example");
         assertEquals(data.securityLabel.get(0).coding.get(0).code, "V");
         assertEquals(data.securityLabel.get(0).coding.get(0).display, "very restricted");
-        assertEquals(data.securityLabel.get(0).coding.get(0).system,
-                "http://hl7.org/fhir/v3/Confidentiality");
-        assertEquals(data.status, CodeSystems.DocumentReferenceStatus.CURRENT);
+        assertEquals(data.securityLabel.get(0).coding.get(0).system, "http://hl7.org/fhir/v3/Confidentiality");
+        assertEquals(data.status, CodeSystemDocumentReferenceStatus.CURRENT);
         assertEquals(data.subject.reference, "Patient/xcda");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
         assertEquals(data.type.coding.get(0).code, "34108-1");
         assertEquals(data.type.coding.get(0).display, "Outpatient Note");
         assertEquals(data.type.coding.get(0).system, "http://loinc.org");

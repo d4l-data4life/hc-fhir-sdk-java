@@ -31,7 +31,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import care.data4life.fhir.stu3.model.CodeSystems;
+import care.data4life.fhir.stu3.model.CodeSystemDocumentReferenceStatus;
 import care.data4life.fhir.stu3.model.CodeableConcept;
 import care.data4life.fhir.stu3.model.DiagnosticReport;
 import care.data4life.fhir.stu3.model.DocumentReference;
@@ -251,10 +251,10 @@ public class FhirStu3BaseAdapterTest {
         // Given
         Class type = DocumentReference.class;
         DocumentReference input = new DocumentReference(
-                new ArrayList<DocumentReference.DocumentReferenceContent>(),
+                CodeSystemDocumentReferenceStatus.CURRENT,
+                new CodeableConcept(),
                 FhirDateTimeConverter.toFhirInstant(new Date()),
-                CodeSystems.DocumentReferenceStatus.CURRENT,
-                new CodeableConcept()
+                new ArrayList<DocumentReference.DocumentReferenceContent>()
         );
         DiagnosticReport mockDiagnosticReport = mock(DiagnosticReport.class);
         List<Resource> resourceList = new ArrayList<>();

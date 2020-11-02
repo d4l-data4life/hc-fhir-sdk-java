@@ -33,16 +33,25 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class DiagnosticReport extends DomainResource {
 
     public static final String resourceType = "DiagnosticReport";
 
+    // Business identifier for report.
+    @Json(name = "identifier")
+    @Nullable
+    public List<Identifier> identifier;
+
     // What was requested.
     @Json(name = "basedOn")
     @Nullable
     public List<Reference> basedOn;
+
+    // The status of the diagnostic report as a whole.
+    @Json(name = "status")
+    public CodeSystemDiagnosticReportStatus status;
 
     // Service category.
     @Json(name = "category")
@@ -53,15 +62,10 @@ public class DiagnosticReport extends DomainResource {
     @Json(name = "code")
     public CodeableConcept code;
 
-    // Codes for the conclusion.
-    @Json(name = "codedDiagnosis")
+    // The subject of the report - usually, but not always, the patient.
+    @Json(name = "subject")
     @Nullable
-    public List<CodeableConcept> codedDiagnosis;
-
-    // Clinical Interpretation of test results.
-    @Json(name = "conclusion")
-    @Nullable
-    public String conclusion;
+    public Reference subject;
 
     // Health care event when test ordered.
     @Json(name = "context")
@@ -78,21 +82,6 @@ public class DiagnosticReport extends DomainResource {
     @Nullable
     public Period effectivePeriod;
 
-    // Business identifier for report.
-    @Json(name = "identifier")
-    @Nullable
-    public List<Identifier> identifier;
-
-    // Key images associated with this report.
-    @Json(name = "image")
-    @Nullable
-    public List<DiagnosticReportImage> image;
-
-    // Reference to full details of imaging associated with the diagnostic report.
-    @Json(name = "imagingStudy")
-    @Nullable
-    public List<Reference> imagingStudy;
-
     // DateTime this version was released.
     @Json(name = "issued")
     @Nullable
@@ -103,45 +92,58 @@ public class DiagnosticReport extends DomainResource {
     @Nullable
     public List<DiagnosticReportPerformer> performer;
 
-    // Entire report as issued.
-    @Json(name = "presentedForm")
+    // Specimens this report is based on.
+    @Json(name = "specimen")
     @Nullable
-    public List<Attachment> presentedForm;
+    public List<Reference> specimen;
 
     // Observations - simple, or complex nested groups.
     @Json(name = "result")
     @Nullable
     public List<Reference> result;
 
-    // Specimens this report is based on.
-    @Json(name = "specimen")
+    // Reference to full details of imaging associated with the diagnostic report.
+    @Json(name = "imagingStudy")
     @Nullable
-    public List<Reference> specimen;
+    public List<Reference> imagingStudy;
 
-    // The status of the diagnostic report as a whole.
-    @Json(name = "status")
-    public CodeSystems.DiagnosticReportStatus status;
-
-    // The subject of the report - usually, but not always, the patient.
-    @Json(name = "subject")
+    // Key images associated with this report.
+    @Json(name = "image")
     @Nullable
-    public Reference subject;
+    public List<DiagnosticReportImage> image;
+
+    // Clinical Interpretation of test results.
+    @Json(name = "conclusion")
+    @Nullable
+    public String conclusion;
+
+    // Codes for the conclusion.
+    @Json(name = "codedDiagnosis")
+    @Nullable
+    public List<CodeableConcept> codedDiagnosis;
+
+    // Entire report as issued.
+    @Json(name = "presentedForm")
+    @Nullable
+    public List<Attachment> presentedForm;
+
 
     /**
      * Constructor for all required properties.
      *
+     * @param status CodeSystemDiagnosticReportStatus
      * @param code   CodeableConcept
-     * @param status CodeSystems.DiagnosticReportStatus
      */
-    public DiagnosticReport(CodeableConcept code, CodeSystems.DiagnosticReportStatus status) {
-        this.code = code;
+    public DiagnosticReport(CodeSystemDiagnosticReportStatus status, CodeableConcept code) {
         this.status = status;
+        this.code = code;
     }
 
     @Override
     public String getResourceType() {
         return DiagnosticReport.resourceType;
     }
+
 
     /**
      * DiagnosticReport.java
@@ -153,7 +155,7 @@ public class DiagnosticReport extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on
-     * 2020-07-29
+     * 2020-10-27
      */
     public static class DiagnosticReportImage extends BackboneElement {
 
@@ -168,6 +170,7 @@ public class DiagnosticReport extends DomainResource {
         @Json(name = "link")
         public Reference link;
 
+
         /**
          * Constructor for all required properties.
          *
@@ -181,7 +184,10 @@ public class DiagnosticReport extends DomainResource {
         public String getResourceType() {
             return DiagnosticReportImage.resourceType;
         }
+
+
     }
+
 
     /**
      * DiagnosticReport.java
@@ -191,20 +197,21 @@ public class DiagnosticReport extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport) on
-     * 2020-07-29
+     * 2020-10-27
      */
     public static class DiagnosticReportPerformer extends BackboneElement {
 
         public static final String resourceType = "DiagnosticReportPerformer";
 
-        // Practitioner or Organization  participant.
-        @Json(name = "actor")
-        public Reference actor;
-
         // Type of performer.
         @Json(name = "role")
         @Nullable
         public CodeableConcept role;
+
+        // Practitioner or Organization  participant.
+        @Json(name = "actor")
+        public Reference actor;
+
 
         /**
          * Constructor for all required properties.
@@ -219,5 +226,9 @@ public class DiagnosticReport extends DomainResource {
         public String getResourceType() {
             return DiagnosticReportPerformer.resourceType;
         }
+
+
     }
+
+
 }
