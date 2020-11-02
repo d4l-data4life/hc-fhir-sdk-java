@@ -62,7 +62,7 @@ Check current https://www.d4l.io/[documentation]
 
 === Requirements
 
-* Android Studio 3.3.1
+* Android Studio 4.1.0
 * Java 7
 * Gradle 5.2.1
 * Python 3.5
