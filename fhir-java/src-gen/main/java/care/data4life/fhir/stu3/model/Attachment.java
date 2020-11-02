@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Attachment">Attachment</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Attachment) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class Attachment extends Element {
 
@@ -39,40 +39,41 @@ public class Attachment extends Element {
     @Nullable
     public String contentType;
 
-    // Date attachment was first created.
-    @Json(name = "creation")
+    // Human language of the content (BCP-47).
+    @Json(name = "language")
     @Nullable
-    public FhirDateTime creation;
+    public String language;
 
     // Data inline, base64ed.
     @Json(name = "data")
     @Nullable
     public String data;
 
-    // Hash of the data (sha-1, base64ed).
-    @Json(name = "hash")
+    // Uri where the data can be found.
+    @Json(name = "url")
     @Nullable
-    public String hash;
-
-    // Human language of the content (BCP-47).
-    @Json(name = "language")
-    @Nullable
-    public String language;
+    public String url;
 
     // Number of bytes of content (if url provided).
     @Json(name = "size")
     @Nullable
     public Integer size;
 
+    // Hash of the data (sha-1, base64ed).
+    @Json(name = "hash")
+    @Nullable
+    public String hash;
+
     // Label to display in place of the data.
     @Json(name = "title")
     @Nullable
     public String title;
 
-    // Uri where the data can be found.
-    @Json(name = "url")
+    // Date attachment was first created.
+    @Json(name = "creation")
     @Nullable
-    public String url;
+    public FhirDateTime creation;
+
 
     public Attachment() {
     }
@@ -81,4 +82,6 @@ public class Attachment extends Element {
     public String getResourceType() {
         return Attachment.resourceType;
     }
+
+
 }

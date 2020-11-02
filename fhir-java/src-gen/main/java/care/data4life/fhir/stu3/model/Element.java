@@ -29,21 +29,22 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Element">Element</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Element) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Element) on 2020-10-27
  */
 public class Element extends FhirStu3Base {
 
     public static final String resourceType = "Element";
+
+    // xml:id (or equivalent in JSON).
+    @Json(name = "id")
+    @Nullable
+    public String id;
 
     // Additional Content defined by implementations.
     @Json(name = "extension")
     @Nullable
     public List<Extension> extension;
 
-    // xml:id (or equivalent in JSON).
-    @Json(name = "id")
-    @Nullable
-    public String id;
 
     public Element() {
     }
@@ -52,4 +53,6 @@ public class Element extends FhirStu3Base {
     public String getResourceType() {
         return Element.resourceType;
     }
+
+
 }

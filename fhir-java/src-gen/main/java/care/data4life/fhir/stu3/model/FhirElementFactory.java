@@ -18,6 +18,7 @@ package care.data4life.fhir.stu3.model;
 
 public final class FhirElementFactory {
 
+
     public static <T extends FhirStu3Base> String getFhirTypeForClass(Class<T> clazz) {
         if (clazz == CarePlan.class) {
             return CarePlan.resourceType;

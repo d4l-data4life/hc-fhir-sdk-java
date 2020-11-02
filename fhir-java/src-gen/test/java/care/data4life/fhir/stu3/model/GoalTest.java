@@ -16,6 +16,7 @@
 
 package care.data4life.fhir.stu3.model;
 
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
@@ -34,7 +35,7 @@ import static org.junit.Assert.assertEquals;
  * meeting a process improvement objective, etc.
  * <p>
  * <p>
- * "Generated from FHIR 3.0.1.11917 on 2020-07-29
+ * "Generated from FHIR 3.0.1.11917 on 2020-10-27
  */
 public class GoalTest {
 
@@ -42,7 +43,7 @@ public class GoalTest {
 
     @Test
     public void testGoal1() throws Exception {
-        String sourceJson = FileHelper.loadString("goal-example.json");
+        String sourceJson = FileHelper.loadString("stu3/goal-example.json");
         Goal data = parser.toFhir(Goal.class, sourceJson);
 
         assertEquals(data.addresses.get(0).display, "obesity condition");
@@ -60,7 +61,7 @@ public class GoalTest {
         assertEquals(data.priority.coding.get(0).system, "http://hl7.org/fhir/goal-priority");
         assertEquals(data.priority.text, "high");
         assertEquals(data.startDate.toString(), "2015-04-05");
-        assertEquals(data.status, CodeSystems.GoalStatus.ON_HOLD);
+        assertEquals(data.status, CodeSystemGoalStatus.ON_HOLD);
         assertEquals(data.statusDate.toString(), "2016-02-14");
         assertEquals(data.statusReason, "Patient wants to defer weight loss until after honeymoon.");
         assertEquals(data.subject.display, "Peter James Chalmers");
@@ -77,7 +78,7 @@ public class GoalTest {
         assertEquals(data.target.measure.coding.get(0).code, "3141-9");
         assertEquals(data.target.measure.coding.get(0).display, "Weight Measured");
         assertEquals(data.target.measure.coding.get(0).system, "http://loinc.org");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.ADDITIONAL);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.ADDITIONAL);
 
         String json = parser.fromFhir(data);
 
@@ -86,7 +87,7 @@ public class GoalTest {
 
     @Test
     public void testGoal2() throws Exception {
-        String sourceJson = FileHelper.loadString("goal-example-stop-smoking.json");
+        String sourceJson = FileHelper.loadString("stu3/goal-example-stop-smoking.json");
         Goal data = parser.toFhir(Goal.class, sourceJson);
 
         assertEquals(data.description.text, "Stop smoking");
@@ -97,10 +98,10 @@ public class GoalTest {
         assertEquals(data.outcomeCode.get(0).coding.get(0).system, "http://snomed.info/sct");
         assertEquals(data.outcomeCode.get(0).text, "Former smoker");
         assertEquals(data.startDate.toString(), "2015-04-05");
-        assertEquals(data.status, CodeSystems.GoalStatus.ACHIEVED);
+        assertEquals(data.status, CodeSystemGoalStatus.ACHIEVED);
         assertEquals(data.subject.display, "Peter James Chalmers");
         assertEquals(data.subject.reference, "Patient/example");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.ADDITIONAL);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.ADDITIONAL);
 
         String json = parser.fromFhir(data);
 

@@ -30,36 +30,54 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ProcedureRequest">ProcedureRequest</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ProcedureRequest) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class ProcedureRequest extends DomainResource {
 
     public static final String resourceType = "ProcedureRequest";
 
-    // Preconditions for procedure or diagnostic.
-    @Json(name = "asNeededBoolean")
+    // Identifiers assigned to this order.
+    @Json(name = "identifier")
     @Nullable
-    public Boolean asNeededBoolean;
+    public List<Identifier> identifier;
 
-    // Preconditions for procedure or diagnostic.
-    @Json(name = "asNeededCodeableConcept")
+    // Protocol or definition.
+    @Json(name = "definition")
     @Nullable
-    public CodeableConcept asNeededCodeableConcept;
-
-    // Date request signed.
-    @Json(name = "authoredOn")
-    @Nullable
-    public FhirDateTime authoredOn;
+    public List<Reference> definition;
 
     // What request fulfills.
     @Json(name = "basedOn")
     @Nullable
     public List<Reference> basedOn;
 
-    // Location on Body.
-    @Json(name = "bodySite")
+    // What request replaces.
+    @Json(name = "replaces")
     @Nullable
-    public List<CodeableConcept> bodySite;
+    public List<Reference> replaces;
+
+    // Composite Request ID.
+    @Json(name = "requisition")
+    @Nullable
+    public Identifier requisition;
+
+    // The status of the order.
+    @Json(name = "status")
+    public CodeSystemRequestStatus status;
+
+    // Whether the request is a proposal, plan, an original order or a reflex order.
+    @Json(name = "intent")
+    public CodeSystemRequestIntent intent;
+
+    // Indicates how quickly the ProcedureRequest should be addressed with respect to other requests.
+    @Json(name = "priority")
+    @Nullable
+    public CodeSystemRequestPriority priority;
+
+    // True if procedure should not be performed.
+    @Json(name = "doNotPerform")
+    @Nullable
+    public Boolean doNotPerform;
 
     // Classification of procedure.
     @Json(name = "category")
@@ -70,34 +88,14 @@ public class ProcedureRequest extends DomainResource {
     @Json(name = "code")
     public CodeableConcept code;
 
+    // Individual the service is ordered for.
+    @Json(name = "subject")
+    public Reference subject;
+
     // Encounter or Episode during which request was created.
     @Json(name = "context")
     @Nullable
     public Reference context;
-
-    // Protocol or definition.
-    @Json(name = "definition")
-    @Nullable
-    public List<Reference> definition;
-
-    // True if procedure should not be performed.
-    @Json(name = "doNotPerform")
-    @Nullable
-    public Boolean doNotPerform;
-
-    // Identifiers assigned to this order.
-    @Json(name = "identifier")
-    @Nullable
-    public List<Identifier> identifier;
-
-    // Whether the request is a proposal, plan, an original order or a reflex order.
-    @Json(name = "intent")
-    public CodeSystems.RequestIntent intent;
-
-    // Comments.
-    @Json(name = "note")
-    @Nullable
-    public List<Annotation> note;
 
     // When procedure should occur.
     @Json(name = "occurrenceDateTime")
@@ -114,20 +112,35 @@ public class ProcedureRequest extends DomainResource {
     @Nullable
     public Timing occurrenceTiming;
 
-    // Requested perfomer.
-    @Json(name = "performer")
+    // Preconditions for procedure or diagnostic.
+    @Json(name = "asNeededBoolean")
     @Nullable
-    public Reference performer;
+    public Boolean asNeededBoolean;
+
+    // Preconditions for procedure or diagnostic.
+    @Json(name = "asNeededCodeableConcept")
+    @Nullable
+    public CodeableConcept asNeededCodeableConcept;
+
+    // Date request signed.
+    @Json(name = "authoredOn")
+    @Nullable
+    public FhirDateTime authoredOn;
+
+    // Who/what is requesting procedure or diagnostic.
+    @Json(name = "requester")
+    @Nullable
+    public ProcedureRequestRequester requester;
 
     // Performer role.
     @Json(name = "performerType")
     @Nullable
     public CodeableConcept performerType;
 
-    // Indicates how quickly the ProcedureRequest should be addressed with respect to other requests.
-    @Json(name = "priority")
+    // Requested perfomer.
+    @Json(name = "performer")
     @Nullable
-    public CodeSystems.RequestPriority priority;
+    public Reference performer;
 
     // Explanation/Justification for test.
     @Json(name = "reasonCode")
@@ -139,57 +152,44 @@ public class ProcedureRequest extends DomainResource {
     @Nullable
     public List<Reference> reasonReference;
 
-    // Request provenance.
-    @Json(name = "relevantHistory")
+    // Additional clinical information.
+    @Json(name = "supportingInfo")
     @Nullable
-    public List<Reference> relevantHistory;
-
-    // What request replaces.
-    @Json(name = "replaces")
-    @Nullable
-    public List<Reference> replaces;
-
-    // Who/what is requesting procedure or diagnostic.
-    @Json(name = "requester")
-    @Nullable
-    public ProcedureRequestRequester requester;
-
-    // Composite Request ID.
-    @Json(name = "requisition")
-    @Nullable
-    public Identifier requisition;
+    public List<Reference> supportingInfo;
 
     // Procedure Samples.
     @Json(name = "specimen")
     @Nullable
     public List<Reference> specimen;
 
-    // The status of the order.
-    @Json(name = "status")
-    public CodeSystems.RequestStatus status;
-
-    // Individual the service is ordered for.
-    @Json(name = "subject")
-    public Reference subject;
-
-    // Additional clinical information.
-    @Json(name = "supportingInfo")
+    // Location on Body.
+    @Json(name = "bodySite")
     @Nullable
-    public List<Reference> supportingInfo;
+    public List<CodeableConcept> bodySite;
+
+    // Comments.
+    @Json(name = "note")
+    @Nullable
+    public List<Annotation> note;
+
+    // Request provenance.
+    @Json(name = "relevantHistory")
+    @Nullable
+    public List<Reference> relevantHistory;
+
 
     /**
      * Constructor for all required properties.
      *
+     * @param status  CodeSystemRequestStatus
+     * @param intent  CodeSystemRequestIntent
      * @param code    CodeableConcept
-     * @param intent  CodeSystems.RequestIntent
-     * @param status  CodeSystems.RequestStatus
      * @param subject Reference
      */
-    public ProcedureRequest(CodeableConcept code, CodeSystems.RequestIntent intent,
-                            CodeSystems.RequestStatus status, Reference subject) {
-        this.code = code;
-        this.intent = intent;
+    public ProcedureRequest(CodeSystemRequestStatus status, CodeSystemRequestIntent intent, CodeableConcept code, Reference subject) {
         this.status = status;
+        this.intent = intent;
+        this.code = code;
         this.subject = subject;
     }
 
@@ -197,6 +197,7 @@ public class ProcedureRequest extends DomainResource {
     public String getResourceType() {
         return ProcedureRequest.resourceType;
     }
+
 
     /**
      * ProcedureRequest.java
@@ -206,7 +207,7 @@ public class ProcedureRequest extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ProcedureRequest">ProcedureRequest</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/ProcedureRequest) on
-     * 2020-07-29
+     * 2020-10-27
      */
     public static class ProcedureRequestRequester extends BackboneElement {
 
@@ -221,6 +222,7 @@ public class ProcedureRequest extends DomainResource {
         @Nullable
         public Reference onBehalfOf;
 
+
         /**
          * Constructor for all required properties.
          *
@@ -234,5 +236,9 @@ public class ProcedureRequest extends DomainResource {
         public String getResourceType() {
             return ProcedureRequestRequester.resourceType;
         }
+
+
     }
+
+
 }

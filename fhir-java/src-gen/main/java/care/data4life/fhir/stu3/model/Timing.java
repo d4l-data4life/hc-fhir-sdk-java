@@ -32,16 +32,11 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing) on 2020-10-27
  */
 public class Timing extends Element {
 
     public static final String resourceType = "Timing";
-
-    // BID | TID | QID | AM | PM | QD | QOD | Q4H | Q6H +.
-    @Json(name = "code")
-    @Nullable
-    public CodeableConcept code;
 
     // When the event occurs.
     @Json(name = "event")
@@ -53,6 +48,12 @@ public class Timing extends Element {
     @Nullable
     public TimingRepeat repeat;
 
+    // BID | TID | QID | AM | PM | QD | QOD | Q4H | Q6H +.
+    @Json(name = "code")
+    @Nullable
+    public CodeableConcept code;
+
+
     public Timing() {
     }
 
@@ -60,6 +61,7 @@ public class Timing extends Element {
     public String getResourceType() {
         return Timing.resourceType;
     }
+
 
     /**
      * Timing.java
@@ -69,7 +71,7 @@ public class Timing extends Element {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing) on
-     * 2020-07-29
+     * 2020-10-27
      */
     public static class TimingRepeat extends Element {
 
@@ -81,14 +83,14 @@ public class Timing extends Element {
         public Duration boundsDuration;
 
         // Length/Range of lengths, or (Start and/or end) limits.
-        @Json(name = "boundsPeriod")
-        @Nullable
-        public Period boundsPeriod;
-
-        // Length/Range of lengths, or (Start and/or end) limits.
         @Json(name = "boundsRange")
         @Nullable
         public Range boundsRange;
+
+        // Length/Range of lengths, or (Start and/or end) limits.
+        @Json(name = "boundsPeriod")
+        @Nullable
+        public Period boundsPeriod;
 
         // Number of times to repeat.
         @Json(name = "count")
@@ -99,11 +101,6 @@ public class Timing extends Element {
         @Json(name = "countMax")
         @Nullable
         public Integer countMax;
-
-        // If one or more days of week is provided, then the action happens only on the specified day(s).
-        @Json(name = "dayOfWeek")
-        @Nullable
-        public List<CodeSystems.DaysOfWeek> dayOfWeek;
 
         // How long when it happens.
         @Json(name = "duration")
@@ -130,11 +127,6 @@ public class Timing extends Element {
         @Nullable
         public Integer frequencyMax;
 
-        // Minutes from event (before or after).
-        @Json(name = "offset")
-        @Nullable
-        public Integer offset;
-
         // Event occurs frequency times per period.
         @Json(name = "period")
         @Nullable
@@ -150,6 +142,11 @@ public class Timing extends Element {
         @Nullable
         public String periodUnit;
 
+        // If one or more days of week is provided, then the action happens only on the specified day(s).
+        @Json(name = "dayOfWeek")
+        @Nullable
+        public List<CodeSystemDaysOfWeek> dayOfWeek;
+
         // Time of day for action.
         @Json(name = "timeOfDay")
         @Nullable
@@ -160,6 +157,12 @@ public class Timing extends Element {
         @Nullable
         public List<String> when;
 
+        // Minutes from event (before or after).
+        @Json(name = "offset")
+        @Nullable
+        public Integer offset;
+
+
         public TimingRepeat() {
         }
 
@@ -167,5 +170,9 @@ public class Timing extends Element {
         public String getResourceType() {
             return TimingRepeat.resourceType;
         }
+
+
     }
+
+
 }

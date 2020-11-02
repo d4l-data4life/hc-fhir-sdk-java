@@ -16,6 +16,7 @@
 
 package care.data4life.fhir.stu3.model;
 
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
@@ -39,7 +40,7 @@ import static org.junit.Assert.assertEquals;
  * privacy, and trust policies.
  * <p>
  * <p>
- * "Generated from FHIR 3.0.1.11917 on 2020-07-29
+ * "Generated from FHIR 3.0.1.11917 on 2020-10-27
  */
 public class ProvenanceTest {
 
@@ -47,15 +48,14 @@ public class ProvenanceTest {
 
     @Test
     public void testProvenance1() throws Exception {
-        String sourceJson = FileHelper.loadString("provenance-example-sig.json");
+        String sourceJson = FileHelper.loadString("stu3/provenance-example-sig.json");
         Provenance data = parser.toFhir(Provenance.class, sourceJson);
 
         assertEquals(data.activity.code, "AU");
         assertEquals(data.activity.display, "authenticated");
         assertEquals(data.activity.system, "http://hl7.org/fhir/v3/DocumentCompletion");
         assertEquals(data.agent.get(0).role.get(0).coding.get(0).code, "VERF");
-        assertEquals(data.agent.get(0).role.get(0).coding.get(0).system,
-                "http://www.hl7.org/fhir/contractsignertypecodes");
+        assertEquals(data.agent.get(0).role.get(0).coding.get(0).system, "http://www.hl7.org/fhir/contractsignertypecodes");
         assertEquals(data.agent.get(0).whoUri, "mailto://hhd@ssa.gov");
         assertEquals(data.id, "signature");
         assertEquals(data.reason.get(0).code, "TREAT");
@@ -70,9 +70,8 @@ public class ProvenanceTest {
         assertEquals(data.signature.get(0).when.toString(), "2015-08-27T08:39:24+10:00");
         assertEquals(data.signature.get(0).whoReference.reference, "Practitioner/xcda-author");
         assertEquals(data.target.get(0).reference, "DocumentReference/example");
-        assertEquals(data.text.div,
-                "<div xmlns=\"http://www.w3.org/1999/xhtml\">procedure record authored on 27-June 2015 by Harold Hippocrates, MD Content extracted from Referral received 26-June</div>");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.div, "<div xmlns=\"http://www.w3.org/1999/xhtml\">procedure record authored on 27-June 2015 by Harold Hippocrates, MD Content extracted from Referral received 26-June</div>");
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -81,27 +80,23 @@ public class ProvenanceTest {
 
     @Test
     public void testProvenance2() throws Exception {
-        String sourceJson = FileHelper.loadString("provenance-example-cwl.json");
+        String sourceJson = FileHelper.loadString("stu3/provenance-example-cwl.json");
         Provenance data = parser.toFhir(Provenance.class, sourceJson);
 
         assertEquals(data.agent.get(0).role.get(0).coding.get(0).code, "AUT");
-        assertEquals(data.agent.get(0).role.get(0).coding.get(0).system,
-                "http://hl7.org/fhir/v3/ParticipationType");
+        assertEquals(data.agent.get(0).role.get(0).coding.get(0).system, "http://hl7.org/fhir/v3/ParticipationType");
         assertEquals(data.agent.get(0).whoReference.reference, "Patient/example");
-        assertEquals(data.entity.get(0).role, CodeSystems.ProvenanceEntityRole.SOURCE);
+        assertEquals(data.entity.get(0).role, CodeSystemProvenanceEntityRole.SOURCE);
         assertEquals(data.entity.get(0).whatIdentifier.type.coding.get(0).code, "CWL");
         assertEquals(data.entity.get(0).whatIdentifier.type.coding.get(0).display, "lobSTR");
-        assertEquals(data.entity.get(0).whatIdentifier.type.coding.get(0).system,
-                "https://github.com/common-workflow-language/workflows");
-        assertEquals(data.entity.get(0).whatIdentifier.value,
-                "https://github.com/common-workflow-language/workflows/blob/master/workflows/lobSTR/lobSTR-workflow.cwl");
+        assertEquals(data.entity.get(0).whatIdentifier.type.coding.get(0).system, "https://github.com/common-workflow-language/workflows");
+        assertEquals(data.entity.get(0).whatIdentifier.value, "https://github.com/common-workflow-language/workflows/blob/master/workflows/lobSTR/lobSTR-workflow.cwl");
         assertEquals(data.id, "example-cwl");
         assertEquals(data.period.start.toString(), "2016-11-30");
-        assertEquals(data.reason.get(0).display,
-                "profiling Short Tandem Repeats (STRs) from high throughput sequencing data.");
+        assertEquals(data.reason.get(0).display, "profiling Short Tandem Repeats (STRs) from high throughput sequencing data.");
         assertEquals(data.recorded.toString(), "2016-12-01T08:12:14+10:00");
         assertEquals(data.target.get(0).reference, "Sequence/example-pgx-1");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -110,26 +105,23 @@ public class ProvenanceTest {
 
     @Test
     public void testProvenance3() throws Exception {
-        String sourceJson = FileHelper.loadString("provenance-example-biocompute-object.json");
+        String sourceJson = FileHelper.loadString("stu3/provenance-example-biocompute-object.json");
         Provenance data = parser.toFhir(Provenance.class, sourceJson);
 
         assertEquals(data.agent.get(0).role.get(0).coding.get(0).code, "AUT");
-        assertEquals(data.agent.get(0).role.get(0).coding.get(0).system,
-                "http://hl7.org/fhir/v3/ParticipationType");
+        assertEquals(data.agent.get(0).role.get(0).coding.get(0).system, "http://hl7.org/fhir/v3/ParticipationType");
         assertEquals(data.agent.get(0).whoReference.reference, "Practitioner/example");
-        assertEquals(data.entity.get(0).role, CodeSystems.ProvenanceEntityRole.SOURCE);
+        assertEquals(data.entity.get(0).role, CodeSystemProvenanceEntityRole.SOURCE);
         assertEquals(data.entity.get(0).whatIdentifier.type.coding.get(0).code, "biocompute");
         assertEquals(data.entity.get(0).whatIdentifier.type.coding.get(0).display, "obj.1001");
-        assertEquals(data.entity.get(0).whatIdentifier.type.coding.get(0).system,
-                "https://hive.biochemistry.gwu.edu");
-        assertEquals(data.entity.get(0).whatIdentifier.value,
-                "https://hive.biochemistry.gwu.edu/cgi-bin/prd/htscsrs/servlet.cgi?pageid=bcoexample_1");
+        assertEquals(data.entity.get(0).whatIdentifier.type.coding.get(0).system, "https://hive.biochemistry.gwu.edu");
+        assertEquals(data.entity.get(0).whatIdentifier.value, "https://hive.biochemistry.gwu.edu/cgi-bin/prd/htscsrs/servlet.cgi?pageid=bcoexample_1");
         assertEquals(data.id, "example-biocompute-object");
         assertEquals(data.period.start.toString(), "2017-06-06");
         assertEquals(data.reason.get(0).display, "antiviral resistance detection");
         assertEquals(data.recorded.toString(), "2016-06-09T08:12:14+10:00");
         assertEquals(data.target.get(0).reference, "Sequence/example");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 
@@ -138,21 +130,19 @@ public class ProvenanceTest {
 
     @Test
     public void testProvenance4() throws Exception {
-        String sourceJson = FileHelper.loadString("provenance-example.json");
+        String sourceJson = FileHelper.loadString("stu3/provenance-example.json");
         Provenance data = parser.toFhir(Provenance.class, sourceJson);
 
         assertEquals(data.agent.get(0).onBehalfOfUri, "#a1");
         assertEquals(data.agent.get(0).relatedAgentType.text, "used");
         assertEquals(data.agent.get(0).role.get(0).coding.get(0).code, "AUT");
-        assertEquals(data.agent.get(0).role.get(0).coding.get(0).system,
-                "http://hl7.org/fhir/v3/ParticipationType");
+        assertEquals(data.agent.get(0).role.get(0).coding.get(0).system, "http://hl7.org/fhir/v3/ParticipationType");
         assertEquals(data.agent.get(0).whoReference.reference, "Practitioner/xcda-author");
         assertEquals(data.agent.get(1).id, "a1");
         assertEquals(data.agent.get(1).role.get(0).coding.get(0).code, "DEV");
-        assertEquals(data.agent.get(1).role.get(0).coding.get(0).system,
-                "http://hl7.org/fhir/v3/ParticipationType");
+        assertEquals(data.agent.get(1).role.get(0).coding.get(0).system, "http://hl7.org/fhir/v3/ParticipationType");
         assertEquals(data.agent.get(1).whoReference.reference, "Device/software");
-        assertEquals(data.entity.get(0).role, CodeSystems.ProvenanceEntityRole.SOURCE);
+        assertEquals(data.entity.get(0).role, CodeSystemProvenanceEntityRole.SOURCE);
         assertEquals(data.entity.get(0).whatReference.display, "CDA Document in XDS repository");
         assertEquals(data.entity.get(0).whatReference.reference, "DocumentReference/example");
         assertEquals(data.id, "example");
@@ -165,9 +155,8 @@ public class ProvenanceTest {
         assertEquals(data.reason.get(0).system, "http://snomed.info/sct");
         assertEquals(data.recorded.toString(), "2015-06-27T08:39:24+10:00");
         assertEquals(data.target.get(0).reference, "Procedure/example/_history/1");
-        assertEquals(data.text.div,
-                "<div xmlns=\"http://www.w3.org/1999/xhtml\">procedure record authored on 27-June 2015 by Harold Hippocrates, MD Content extracted from XDS managed CDA Referral received 26-June</div>");
-        assertEquals(data.text.status, CodeSystems.NarrativeStatus.GENERATED);
+        assertEquals(data.text.div, "<div xmlns=\"http://www.w3.org/1999/xhtml\">procedure record authored on 27-June 2015 by Harold Hippocrates, MD Content extracted from XDS managed CDA Referral received 26-June</div>");
+        assertEquals(data.text.status, CodeSystemNarrativeStatus.GENERATED);
 
         String json = parser.fromFhir(data);
 

@@ -31,11 +31,85 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
  * <p>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
- * 2020-07-29
+ * 2020-10-27
  */
 public class Condition extends DomainResource {
 
     public static final String resourceType = "Condition";
+
+    // External Ids for this condition.
+    @Json(name = "identifier")
+    @Nullable
+    public List<Identifier> identifier;
+
+    // active | recurrence | inactive | remission | resolved.
+    @Json(name = "clinicalStatus")
+    @Nullable
+    public String clinicalStatus;
+
+    // The verification status to support the clinical status of the condition.
+    @Json(name = "verificationStatus")
+    @Nullable
+    public CodeSystemConditionVerificationStatus verificationStatus;
+
+    // problem-list-item | encounter-diagnosis.
+    @Json(name = "category")
+    @Nullable
+    public List<CodeableConcept> category;
+
+    // Subjective severity of condition.
+    @Json(name = "severity")
+    @Nullable
+    public CodeableConcept severity;
+
+    // Identification of the condition, problem or diagnosis.
+    @Json(name = "code")
+    @Nullable
+    public CodeableConcept code;
+
+    // Anatomical location, if relevant.
+    @Json(name = "bodySite")
+    @Nullable
+    public List<CodeableConcept> bodySite;
+
+    // Who has the condition?.
+    @Json(name = "subject")
+    public Reference subject;
+
+    // Encounter or episode when condition first asserted.
+    @Json(name = "context")
+    @Nullable
+    public Reference context;
+
+    // Estimated or actual date,  date-time, or age.
+    @Json(name = "onsetDateTime")
+    @Nullable
+    public FhirDateTime onsetDateTime;
+
+    // Estimated or actual date,  date-time, or age.
+    @Json(name = "onsetAge")
+    @Nullable
+    public Age onsetAge;
+
+    // Estimated or actual date,  date-time, or age.
+    @Json(name = "onsetPeriod")
+    @Nullable
+    public Period onsetPeriod;
+
+    // Estimated or actual date,  date-time, or age.
+    @Json(name = "onsetRange")
+    @Nullable
+    public Range onsetRange;
+
+    // Estimated or actual date,  date-time, or age.
+    @Json(name = "onsetString")
+    @Nullable
+    public String onsetString;
+
+    // If/when in resolution/remission.
+    @Json(name = "abatementDateTime")
+    @Nullable
+    public FhirDateTime abatementDateTime;
 
     // If/when in resolution/remission.
     @Json(name = "abatementAge")
@@ -46,11 +120,6 @@ public class Condition extends DomainResource {
     @Json(name = "abatementBoolean")
     @Nullable
     public Boolean abatementBoolean;
-
-    // If/when in resolution/remission.
-    @Json(name = "abatementDateTime")
-    @Nullable
-    public FhirDateTime abatementDateTime;
 
     // If/when in resolution/remission.
     @Json(name = "abatementPeriod")
@@ -77,89 +146,21 @@ public class Condition extends DomainResource {
     @Nullable
     public Reference asserter;
 
-    // Anatomical location, if relevant.
-    @Json(name = "bodySite")
+    // Stage/grade, usually assessed formally.
+    @Json(name = "stage")
     @Nullable
-    public List<CodeableConcept> bodySite;
-
-    // problem-list-item | encounter-diagnosis.
-    @Json(name = "category")
-    @Nullable
-    public List<CodeableConcept> category;
-
-    // active | recurrence | inactive | remission | resolved.
-    @Json(name = "clinicalStatus")
-    @Nullable
-    public String clinicalStatus;
-
-    // Identification of the condition, problem or diagnosis.
-    @Json(name = "code")
-    @Nullable
-    public CodeableConcept code;
-
-    // Encounter or episode when condition first asserted.
-    @Json(name = "context")
-    @Nullable
-    public Reference context;
+    public ConditionStage stage;
 
     // Supporting evidence.
     @Json(name = "evidence")
     @Nullable
     public List<ConditionEvidence> evidence;
 
-    // External Ids for this condition.
-    @Json(name = "identifier")
-    @Nullable
-    public List<Identifier> identifier;
-
     // Additional information about the Condition.
     @Json(name = "note")
     @Nullable
     public List<Annotation> note;
 
-    // Estimated or actual date,  date-time, or age.
-    @Json(name = "onsetAge")
-    @Nullable
-    public Age onsetAge;
-
-    // Estimated or actual date,  date-time, or age.
-    @Json(name = "onsetDateTime")
-    @Nullable
-    public FhirDateTime onsetDateTime;
-
-    // Estimated or actual date,  date-time, or age.
-    @Json(name = "onsetPeriod")
-    @Nullable
-    public Period onsetPeriod;
-
-    // Estimated or actual date,  date-time, or age.
-    @Json(name = "onsetRange")
-    @Nullable
-    public Range onsetRange;
-
-    // Estimated or actual date,  date-time, or age.
-    @Json(name = "onsetString")
-    @Nullable
-    public String onsetString;
-
-    // Subjective severity of condition.
-    @Json(name = "severity")
-    @Nullable
-    public CodeableConcept severity;
-
-    // Stage/grade, usually assessed formally.
-    @Json(name = "stage")
-    @Nullable
-    public ConditionStage stage;
-
-    // Who has the condition?.
-    @Json(name = "subject")
-    public Reference subject;
-
-    // The verification status to support the clinical status of the condition.
-    @Json(name = "verificationStatus")
-    @Nullable
-    public CodeSystems.ConditionVerificationStatus verificationStatus;
 
     /**
      * Constructor for all required properties.
@@ -175,6 +176,7 @@ public class Condition extends DomainResource {
         return Condition.resourceType;
     }
 
+
     /**
      * Condition.java
      * <p>
@@ -184,7 +186,7 @@ public class Condition extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
-     * 2020-07-29
+     * 2020-10-27
      */
     public static class ConditionEvidence extends BackboneElement {
 
@@ -200,6 +202,7 @@ public class Condition extends DomainResource {
         @Nullable
         public List<Reference> detail;
 
+
         public ConditionEvidence() {
         }
 
@@ -207,7 +210,10 @@ public class Condition extends DomainResource {
         public String getResourceType() {
             return ConditionEvidence.resourceType;
         }
+
+
     }
+
 
     /**
      * Condition.java
@@ -217,21 +223,22 @@ public class Condition extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
-     * 2020-07-29
+     * 2020-10-27
      */
     public static class ConditionStage extends BackboneElement {
 
         public static final String resourceType = "ConditionStage";
+
+        // Simple summary (disease specific).
+        @Json(name = "summary")
+        @Nullable
+        public CodeableConcept summary;
 
         // Formal record of assessment.
         @Json(name = "assessment")
         @Nullable
         public List<Reference> assessment;
 
-        // Simple summary (disease specific).
-        @Json(name = "summary")
-        @Nullable
-        public CodeableConcept summary;
 
         public ConditionStage() {
         }
@@ -240,5 +247,9 @@ public class Condition extends DomainResource {
         public String getResourceType() {
             return ConditionStage.resourceType;
         }
+
+
     }
+
+
 }

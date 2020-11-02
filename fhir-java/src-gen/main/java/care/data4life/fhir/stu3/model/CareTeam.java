@@ -30,51 +30,51 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CareTeam) on 2020-07-29
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CareTeam) on 2020-10-27
  */
 public class CareTeam extends DomainResource {
 
     public static final String resourceType = "CareTeam";
-
-    // Type of team.
-    @Json(name = "category")
-    @Nullable
-    public List<CodeableConcept> category;
-
-    // Encounter or episode associated with CareTeam.
-    @Json(name = "context")
-    @Nullable
-    public Reference context;
 
     // External Ids for this team.
     @Json(name = "identifier")
     @Nullable
     public List<Identifier> identifier;
 
-    // Organization responsible for the care team.
-    @Json(name = "managingOrganization")
+    // Indicates the current state of the care team.
+    @Json(name = "status")
     @Nullable
-    public List<Reference> managingOrganization;
+    public CodeSystemCareTeamStatus status;
+
+    // Type of team.
+    @Json(name = "category")
+    @Nullable
+    public List<CodeableConcept> category;
 
     // Name of the team, such as crisis assessment team.
     @Json(name = "name")
     @Nullable
     public String name;
 
-    // Comments made about the CareTeam.
-    @Json(name = "note")
+    // Who care team is for.
+    @Json(name = "subject")
     @Nullable
-    public List<Annotation> note;
+    public Reference subject;
 
-    // Members of the team.
-    @Json(name = "participant")
+    // Encounter or episode associated with CareTeam.
+    @Json(name = "context")
     @Nullable
-    public List<CareTeamParticipant> participant;
+    public Reference context;
 
     // Time period team covers.
     @Json(name = "period")
     @Nullable
     public Period period;
+
+    // Members of the team.
+    @Json(name = "participant")
+    @Nullable
+    public List<CareTeamParticipant> participant;
 
     // Why the care team exists.
     @Json(name = "reasonCode")
@@ -86,15 +86,16 @@ public class CareTeam extends DomainResource {
     @Nullable
     public List<Reference> reasonReference;
 
-    // Indicates the current state of the care team.
-    @Json(name = "status")
+    // Organization responsible for the care team.
+    @Json(name = "managingOrganization")
     @Nullable
-    public CodeSystems.CareTeamStatus status;
+    public List<Reference> managingOrganization;
 
-    // Who care team is for.
-    @Json(name = "subject")
+    // Comments made about the CareTeam.
+    @Json(name = "note")
     @Nullable
-    public Reference subject;
+    public List<Annotation> note;
+
 
     public CareTeam() {
     }
@@ -104,6 +105,7 @@ public class CareTeam extends DomainResource {
         return CareTeam.resourceType;
     }
 
+
     /**
      * CareTeam.java
      * <p>
@@ -112,11 +114,16 @@ public class CareTeam extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
      * <p>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CareTeam) on
-     * 2020-07-29
+     * 2020-10-27
      */
     public static class CareTeamParticipant extends BackboneElement {
 
         public static final String resourceType = "CareTeamParticipant";
+
+        // Type of involvement.
+        @Json(name = "role")
+        @Nullable
+        public CodeableConcept role;
 
         // Who is involved.
         @Json(name = "member")
@@ -133,10 +140,6 @@ public class CareTeam extends DomainResource {
         @Nullable
         public Period period;
 
-        // Type of involvement.
-        @Json(name = "role")
-        @Nullable
-        public CodeableConcept role;
 
         public CareTeamParticipant() {
         }
@@ -145,5 +148,9 @@ public class CareTeam extends DomainResource {
         public String getResourceType() {
             return CareTeamParticipant.resourceType;
         }
+
+
     }
+
+
 }
