@@ -15,7 +15,7 @@
  */
 
 object LibraryConfig {
-  const val version = "0.7.0"
+  const val version = "1.0.0"
   const val artifactId = "hc-fhir-sdk-java"
   const val githubGroup = "care.data4life.$artifactId"
   const val group = githubGroup
