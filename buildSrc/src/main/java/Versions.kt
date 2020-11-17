@@ -24,7 +24,7 @@ object Versions {
 
 object GradlePluginVersion {
     const val kotlin = Versions.main.kotlin
-    const val android = "3.3.1"
+    const val android = "4.1.0"
 
     /**
      * [Gradle DownloadTask](https://github.com/michel-kraemer/gradle-download-task)

@@ -12,7 +12,7 @@ buildscript {
 
 plugins {
     // https://github.com/ben-manes/gradle-versions-plugin
-    id("com.github.ben-manes.versions") version "0.20.0"
+    id("com.github.ben-manes.versions") version "0.34.0"
 }
 
 allprojects {
@@ -29,6 +29,6 @@ tasks.register("clean", Delete::class.java) {
 }
 
 tasks.named<Wrapper>("wrapper") {
-    gradleVersion = "5.2.1"
+    gradleVersion = "6.7"
     distributionType = Wrapper.DistributionType.ALL
 }
