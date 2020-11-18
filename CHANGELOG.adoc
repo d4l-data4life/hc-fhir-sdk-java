@@ -18,6 +18,8 @@ toc::[]
 
 === Changed
 
+* Migration guide for 1.0.0 to include FHIR model property order change
+
 === Removed
 
 === Fixed
