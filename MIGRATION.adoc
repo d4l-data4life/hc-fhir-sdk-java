@@ -6,12 +6,16 @@ to another.
 [#migration-0_7_0-1_0_0]
 == Migrate from Version 0.7.0 to 1.0.0
 
+
+=== CodeSystems
+
 In version 0.7.0 the `CodeSystems` was a big `enum` that contains the
 individual `CodeSystems` for the different classes. With the new version
 1.0.0 the `CodeSystems` are now stand alone classes.
 
 In detail the change for the CodeSystems looks like the following:
 
+[source, java]
 ----
 // v0.7.0 
 public class CodeSystems {
@@ -27,6 +31,7 @@ public class CodeSystems {
 In version 1.0.0 each CodeSystem will be it's own standalone enum class
 with the naming pattern `CodeSystem...` e.g.
 
+[source, java]
 ----
 // v1.0.0 
 public enum CodeSystemAbstracType { }    
@@ -37,10 +42,28 @@ public enum CodeSystemAddressType { }
 In case you made use of the `CodeSystems` you need to update the imports
 to th specific CodeSystem class.
 
+[source, java]
 ----
 CodeSystems.AbstractType.ANY -> CodeSystemAbstractType.ANY
 CodeSystems.AccountStatus.INACTIVE -> CodeSystemAccountStatus.INACTIVE
-...
+// ...
 CodeSystems.AddressType.POSTAL -> CodeSystemAddressType.POSTAL
-...
+// ...
 ----
+
+=== FHIR Model property order
+
+In our 0.7.0 version all FHIR Model properties have been in alphabetical order, this was not according the FHIR specification.
+
+From version 1.0.0 on properties are in the correct order. This could be problematic if the same property type changed positions, e.g. for link:http://hl7.org/fhir/STU3/documentreference.html[DocumentReference]
+
+[source, java]
+----
+new DocumentReference(..., Identifier identifier, Identifier masterIdentifier, ...)
+
+// changed to
+
+new DocumentReference(Identifier masterIdentifier, Identifier identifier, ...)
+----
+
+Ideally this is covered by tests.
