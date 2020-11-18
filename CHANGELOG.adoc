@@ -1,0 +1,61 @@
+= Changelog
+:toc: macro
+:toclevels: 1
+:toc-title:
+
+All notable changes to this project will be documented in this file.
+
+The format is based on http://keepachangelog.com/en/1.0.0/[Keep a Changelog]
+and this project adheres to http://semver.org/spec/v2.0.0.html[Semantic Versioning].
+
+[discrete]
+==== Versions
+toc::[]
+
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.0.0...main[Unreleased]
+
+=== Added
+
+=== Changed
+
+=== Removed
+
+=== Fixed
+
+=== Bumped
+
+=== Migration
+
+
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v0.7.0...v1.0.0[1.0.0]
+
+=== Added
+
+* Add FHIR R4 generated models
+* Add parser config for FHIR R4 model generation
+* Add Encounter to supported models
+
+=== Changed
+
+* Breaking: CodeSystems are now splitted into single classes
+* Breaking: Moved STU3 models into `fhir.stu3.model` package
+
+=== Updated
+
+* Updated timezone implementation to reflect the time correctly during daylight saving time
+* Update fhir-parser to use support FHIR R4 model generation
+
+=== Bumped
+
+* Gradle 5.2.1 -> 6.7
+* Gradle Dependency Updated Plugin 0.20.0 -> 0.34.0
+* AndroidStudio 3.3.1 -> 4.1
+
+=== Migration
+
+see link:MIGRATION.adoc#migration-0_7_0-1_0_0[Migration 0.7.0 to 1.0.0]
+
+
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v0.7.0[0.7.0]
+
+Existing project moved to open source
