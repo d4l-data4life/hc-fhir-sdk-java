@@ -55,7 +55,7 @@ CodeSystems.AddressType.POSTAL -> CodeSystemAddressType.POSTAL
 
 In our 0.7.0 version all FHIR Model properties have been in alphabetical order, this was not according the FHIR specification.
 
-From version 1.0.0 on properties are in the correct order. This could be problematic if the same property type changed positions, e.g. for [DocumentReference](http://hl7.org/fhir/STU3/documentreference.html)
+From version 1.0.0 on properties are in the correct order. This could be problematic if the same property type changed positions, e.g. for link:http://hl7.org/fhir/STU3/documentreference.html[DocumentReference]
 
 [source, java]
 ----
