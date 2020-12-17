@@ -19,8 +19,6 @@ package care.data4life.fhir.r4.model;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-import care.data4life.fhir.r4.model.Element;
-
 /**
  * FhirDecimal
  * <p>
