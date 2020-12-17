@@ -23,8 +23,6 @@ import org.junit.Test;
 
 import java.net.URL;
 
-import care.data4life.fhir.stu3.json.FhirUrlJsonAdapter;
-
 import static org.junit.Assert.assertEquals;
 
 public class FhirUrlJsonAdapterTest {
