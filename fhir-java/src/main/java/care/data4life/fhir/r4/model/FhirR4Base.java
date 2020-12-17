@@ -22,7 +22,7 @@ import java.io.Serializable;
 import care.data4life.fhir.FhirVersion;
 
 /**
- * Abstract base class for FHIR STU3 models
+ * Abstract base class for FHIR R4 models
  */
 public abstract class FhirR4Base implements FhirVersion, Serializable {
 

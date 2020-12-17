@@ -22,7 +22,7 @@ import java.util.Objects;
 import care.data4life.fhir.r4.util.FhirDateCodec;
 import care.data4life.fhir.r4.util.FhirDateTimeConverter;
 import care.data4life.fhir.r4.util.FhirDateTimeFormatter;
-import care.data4life.fhir.stu3.model.Element;
+import care.data4life.fhir.r4.model.Element;
 import care.data4life.fhir.util.Preconditions;
 
 /**
