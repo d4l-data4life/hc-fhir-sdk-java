@@ -48,7 +48,7 @@ public class FhirR4BaseAdapterFactoryTest {
     }
 
     @Test
-    public void create_shouldReturnFhirStu3BaseAdapter_whenTypeFhirStu3BaseClass() {
+    public void create_shouldReturnFhirStu3BaseAdapter_whenTypeFhirR4BaseClass() {
         // Given
         Type type = FhirR4Base.class;
 
@@ -61,7 +61,7 @@ public class FhirR4BaseAdapterFactoryTest {
 
 
     @Test
-    public void create_shouldReturnNull_whenTypeNotFhirStu3BaseClass() {
+    public void create_shouldReturnNull_whenTypeNotFhirR4BaseClass() {
         // Given
         Type type = Object.class;
 
