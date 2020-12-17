@@ -62,9 +62,9 @@ public class FhirStu3ParserTest {
 
     @Test
     public void toFhir_shouldParse_whenFhirTypeKnown() throws Exception {
-        String diagnosticReportJson = FileHelper.loadString("diagnosticreport-example.json");
-        String documentReferenceJson = FileHelper.loadString("documentreference-example.json");
-        String observationJson = FileHelper.loadString("observation-example.json");
+        String diagnosticReportJson = FileHelper.loadString("stu3/diagnosticreport-example.json");
+        String documentReferenceJson = FileHelper.loadString("stu3/documentreference-example.json");
+        String observationJson = FileHelper.loadString("stu3/observation-example.json");
 
         assertNotNull(parser.toFhir(DiagnosticReport.class, diagnosticReportJson));
         assertNotNull(parser.toFhir(DocumentReference.class, documentReferenceJson));
