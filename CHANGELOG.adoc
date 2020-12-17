@@ -16,6 +16,9 @@ toc::[]
 
 === Added
 
+* common FHIR version interface to provide version and resource type information for FHIR 3 and 4
+* test to verify FHIR 4 implementation
+
 === Changed
 
 * Migration guide for 1.0.0 to include FHIR model property order change
@@ -23,6 +26,8 @@ toc::[]
 === Removed
 
 === Fixed
+
+* FHIR 4 AttachmentHelper to use FHIR 4 resources instead of FHIR 3 ones
 
 === Bumped
 
