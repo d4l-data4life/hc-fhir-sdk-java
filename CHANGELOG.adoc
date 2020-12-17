@@ -12,7 +12,21 @@ and this project adheres to http://semver.org/spec/v2.0.0.html[Semantic Versioni
 ==== Versions
 toc::[]
 
-== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.0.0...main[Unreleased]
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.1.0...main[Unreleased]
+
+=== Added
+
+=== Changed
+
+=== Removed
+
+=== Fixed
+
+=== Bumped
+
+=== Migration
+
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.0.0...v1.1.0[1.1.0]
 
 === Added
 
@@ -23,15 +37,9 @@ toc::[]
 
 * Migration guide for 1.0.0 to include FHIR model property order change
 
-=== Removed
-
 === Fixed
 
 * FHIR 4 AttachmentHelper to use FHIR 4 resources instead of FHIR 3 ones
-
-=== Bumped
-
-=== Migration
 
 
 == https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v0.7.0...v1.0.0[1.0.0]
