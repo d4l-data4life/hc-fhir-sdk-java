@@ -21,18 +21,16 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import care.data4life.fhir.stu3.model.Attachment;
-import care.data4life.fhir.stu3.model.DiagnosticReport;
-import care.data4life.fhir.stu3.model.DocumentReference;
-import care.data4life.fhir.stu3.model.DomainResource;
-import care.data4life.fhir.stu3.model.Identifier;
-import care.data4life.fhir.stu3.model.Medication;
-import care.data4life.fhir.stu3.model.Observation;
-import care.data4life.fhir.stu3.model.Patient;
-import care.data4life.fhir.stu3.model.Practitioner;
-import care.data4life.fhir.stu3.model.Questionnaire;
-import care.data4life.fhir.stu3.model.QuestionnaireResponse;
-import care.data4life.fhir.stu3.model.Reference;
+import care.data4life.fhir.r4.model.Attachment;
+import care.data4life.fhir.r4.model.DiagnosticReport;
+import care.data4life.fhir.r4.model.DocumentReference;
+import care.data4life.fhir.r4.model.DomainResource;
+import care.data4life.fhir.r4.model.Identifier;
+import care.data4life.fhir.r4.model.Patient;
+import care.data4life.fhir.r4.model.Practitioner;
+import care.data4life.fhir.r4.model.Questionnaire;
+import care.data4life.fhir.r4.model.QuestionnaireResponse;
+import care.data4life.fhir.r4.model.Reference;
 
 public class FhirAttachmentHelper {
 
@@ -41,8 +39,6 @@ public class FhirAttachmentHelper {
             case "Patient":
             case "Practitioner":
             case "DiagnosticReport":
-            case "Medication":
-            case "Observation":
             case "DocumentReference":
             case "Questionnaire":
             case "QuestionnaireResponse":
@@ -60,22 +56,6 @@ public class FhirAttachmentHelper {
                 return ((Practitioner) domainResource).photo;
             case "DiagnosticReport":
                 return ((DiagnosticReport) domainResource).presentedForm;
-            case "Medication":
-                return ((Medication) domainResource).image;
-            case "Observation":
-                List<Attachment> observationAttachments = new ArrayList<>();
-                if (((Observation) domainResource).component == null
-                        && ((Observation) domainResource).valueAttachment == null) {
-                    return observationAttachments;
-                }
-                if (((Observation) domainResource).component != null) {
-                    for (Observation.ObservationComponent component : ((Observation) domainResource).component) {
-                        if (component == null || component.valueAttachment == null) continue;
-                        observationAttachments.add(component.valueAttachment);
-                    }
-                }
-                observationAttachments.add(((Observation) domainResource).valueAttachment);
-                return observationAttachments;
             case "DocumentReference":
                 List<Attachment> documentAttachments = new ArrayList<>();
                 if (((DocumentReference) domainResource).content == null) {
@@ -88,12 +68,17 @@ public class FhirAttachmentHelper {
                 return documentAttachments;
             case "Questionnaire":
                 List<Attachment> questionnaireAttachments = new ArrayList<>();
-                if (((Questionnaire) domainResource).item == null) {
-                    return questionnaireAttachments;
-                }
-                for (Questionnaire.QuestionnaireItem item : ((Questionnaire) domainResource).item) {
-                    if (item == null || item.initialAttachment == null) continue;
-                    questionnaireAttachments.add(item.initialAttachment);
+                Questionnaire questionnaire = ((Questionnaire) domainResource);
+
+                if (questionnaire.item == null) return questionnaireAttachments;
+
+                for (Questionnaire.QuestionnaireItem questionnaireItem : questionnaire.item) {
+                    if (questionnaireItem.initial == null) continue;
+
+                    for (Questionnaire.QuestionnaireItemInitial initial : questionnaireItem.initial) {
+                        if (initial == null || initial.valueAttachment == null) continue;
+                        questionnaireAttachments.add(initial.valueAttachment);
+                    }
                 }
                 return questionnaireAttachments;
             case "QuestionnaireResponse":
@@ -129,18 +114,6 @@ public class FhirAttachmentHelper {
                 ((DiagnosticReport) domainResource).presentedForm =
                         setHashMapAttachment(((DiagnosticReport) domainResource).presentedForm, dataHashMap);
                 break;
-            case "Medication":
-                ((Medication) domainResource).image =
-                        setHashMapAttachment(((Medication) domainResource).image, dataHashMap);
-                break;
-            case "Observation":
-                insertDataAttachment(((Observation) domainResource).valueAttachment, dataHashMap);
-                if (((Observation) domainResource).component != null) {
-                    for (Observation.ObservationComponent component : ((Observation) domainResource).component) {
-                        insertDataAttachment(component.valueAttachment, dataHashMap);
-                    }
-                }
-                break;
             case "DocumentReference":
                 if (((DocumentReference) domainResource).content != null) {
                     for (DocumentReference.DocumentReferenceContent content : ((DocumentReference) domainResource).content) {
@@ -151,7 +124,10 @@ public class FhirAttachmentHelper {
             case "Questionnaire":
                 if (((Questionnaire) domainResource).item != null) {
                     for (Questionnaire.QuestionnaireItem item : ((Questionnaire) domainResource).item) {
-                        insertDataAttachment(item.initialAttachment, dataHashMap);
+                        if (item.initial == null) continue;
+                        for (Questionnaire.QuestionnaireItemInitial initial : item.initial) {
+                            insertDataAttachment(initial.valueAttachment, dataHashMap);
+                        }
                     }
                 }
                 break;
@@ -199,8 +175,6 @@ public class FhirAttachmentHelper {
                 return ((Practitioner) domainResource).identifier;
             case "DiagnosticReport":
                 return ((DiagnosticReport) domainResource).identifier;
-            case "Observation":
-                return ((Observation) domainResource).identifier;
             case "DocumentReference":
                 return ((DocumentReference) domainResource).identifier;
             case "Questionnaire":
@@ -225,9 +199,6 @@ public class FhirAttachmentHelper {
                 break;
             case "DiagnosticReport":
                 ((DiagnosticReport) domainResource).identifier = newIdentifier;
-                break;
-            case "Observation":
-                ((Observation) domainResource).identifier = newIdentifier;
                 break;
             case "DocumentReference":
                 ((DocumentReference) domainResource).identifier = newIdentifier;

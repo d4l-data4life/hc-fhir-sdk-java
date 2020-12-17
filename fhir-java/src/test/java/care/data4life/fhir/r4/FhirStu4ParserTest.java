@@ -14,39 +14,37 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir.stu3;
+package care.data4life.fhir.r4;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import care.data4life.fhir.FhirException;
-import care.data4life.fhir.stu3.model.Attachment;
-import care.data4life.fhir.stu3.model.CodeSystemDiagnosticReportStatus;
-import care.data4life.fhir.stu3.model.CodeSystemDocumentReferenceStatus;
-import care.data4life.fhir.stu3.model.CodeableConcept;
-import care.data4life.fhir.stu3.model.DiagnosticReport;
-import care.data4life.fhir.stu3.model.DocumentReference;
-import care.data4life.fhir.stu3.model.Observation;
-import care.data4life.fhir.stu3.util.FhirDateTimeConverter;
+import care.data4life.fhir.r4.model.Attachment;
+import care.data4life.fhir.r4.model.CodeSystemDiagnosticReportStatus;
+import care.data4life.fhir.r4.model.CodeSystemDocumentReferenceStatus;
+import care.data4life.fhir.r4.model.CodeableConcept;
+import care.data4life.fhir.r4.model.DiagnosticReport;
+import care.data4life.fhir.r4.model.DocumentReference;
+import care.data4life.fhir.r4.model.Observation;
 import care.data4life.fhir.test.util.FileHelper;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class FhirStu3ParserTest {
+public class FhirStu4ParserTest {
 
 
     // SUT
-    private FhirStu3Parser parser;
+    private FhirR4Parser parser;
 
 
     @Before
     public void setup() {
-        parser = new FhirStu3Parser();
+        parser = new FhirR4Parser();
     }
 
 
@@ -62,11 +60,9 @@ public class FhirStu3ParserTest {
 
     @Test
     public void toFhir_shouldParse_whenFhirTypeKnown() throws Exception {
-        String diagnosticReportJson = FileHelper.loadString("stu3/diagnosticreport-example.json");
-        String documentReferenceJson = FileHelper.loadString("stu3/documentreference-example.json");
-        String observationJson = FileHelper.loadString("stu3/observation-example.json");
+        String documentReferenceJson = FileHelper.loadString("r4/documentreference-example.json");
+        String observationJson = FileHelper.loadString("r4/observation-example.json");
 
-        assertNotNull(parser.toFhir(DiagnosticReport.class, diagnosticReportJson));
         assertNotNull(parser.toFhir(DocumentReference.class, documentReferenceJson));
         assertNotNull(parser.toFhir(Observation.class, observationJson));
     }
@@ -78,8 +74,6 @@ public class FhirStu3ParserTest {
 
         DocumentReference documentReference = new DocumentReference(
                 CodeSystemDocumentReferenceStatus.CURRENT,
-                new CodeableConcept(),
-                FhirDateTimeConverter.toFhirInstant(new Date()),
                 documentReferenceContentList
         );
         assertNotNull(parser.fromFhir(documentReference));
@@ -88,6 +82,4 @@ public class FhirStu3ParserTest {
         DiagnosticReport diagnosticReport = new DiagnosticReport(CodeSystemDiagnosticReportStatus.APPENDED, new CodeableConcept());
         assertNotNull(parser.fromFhir(diagnosticReport));
     }
-
-
 }

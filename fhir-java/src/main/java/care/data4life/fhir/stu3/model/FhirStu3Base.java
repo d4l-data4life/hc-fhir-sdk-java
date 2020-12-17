@@ -19,11 +19,15 @@ package care.data4life.fhir.stu3.model;
 
 import java.io.Serializable;
 
+import care.data4life.fhir.FhirVersion;
+
 /**
  * Abstract base class for FHIR STU3 models
  */
-public abstract class FhirStu3Base implements Serializable {
+public abstract class FhirStu3Base implements FhirVersion, Serializable {
 
-    public abstract String getResourceType();
-
+    @Override
+    public String getVersion() {
+        return "3.0.1";
+    }
 }

@@ -14,21 +14,35 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir.r4.model;
+package care.data4life.fhir.r4.json;
+
+import com.squareup.moshi.JsonAdapter;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import java.net.URL;
+
+import static org.junit.Assert.assertEquals;
+
+public class FhirUrlJsonAdapterTest {
+
+    // SUT
+    private JsonAdapter<URL> adapter;
 
 
-import java.io.Serializable;
-
-import care.data4life.fhir.FhirVersion;
-
-/**
- * Abstract base class for FHIR R4 models
- */
-public abstract class FhirR4Base implements FhirVersion, Serializable {
-
-    @Override
-    public String getVersion() {
-        return "4.0.1";
+    @Before
+    public void setup() {
+        adapter = new FhirUrlJsonAdapter().lenient();
     }
 
+    @Test
+    public void fromJson() throws Exception {
+        assertEquals(adapter.fromJson("\"https://www.data4life.care\""), new URL("https://www.data4life.care"));
+    }
+
+    @Test
+    public void toJson() throws Exception {
+        assertEquals("\"https://www.data4life.care\"", adapter.toJson(new URL("https://www.data4life.care")));
+    }
 }
