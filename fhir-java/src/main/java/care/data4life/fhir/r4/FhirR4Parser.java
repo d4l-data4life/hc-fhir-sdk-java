@@ -24,7 +24,7 @@ import care.data4life.fhir.r4.model.FhirR4Base;
 
 public final class FhirR4Parser implements FhirParser<FhirR4Base> {
 
-    private FhirJsonParser jsonParser;
+    private final FhirJsonParser<FhirR4Base> jsonParser;
 
     public FhirR4Parser() {
         this.jsonParser = new FhirR4MoshiJsonParser();

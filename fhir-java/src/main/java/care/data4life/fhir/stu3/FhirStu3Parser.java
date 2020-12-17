@@ -24,7 +24,7 @@ import care.data4life.fhir.stu3.model.FhirStu3Base;
 
 public final class FhirStu3Parser implements FhirParser<FhirStu3Base> {
 
-    private FhirJsonParser jsonParser;
+    private final FhirJsonParser<FhirStu3Base> jsonParser;
 
     public FhirStu3Parser() {
         this.jsonParser = new FhirStu3MoshiJsonParser();
