@@ -1,12 +1,13 @@
-name: D4L Publish Artifact
+name: D4L CI - Latest Version
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
+      - release/*
 
 jobs:
-  build:
+  latest-version:
 
     runs-on: ubuntu-latest
 
@@ -17,13 +18,14 @@ jobs:
     steps:
       - name: Display runner context
         run: hostname -s
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
-          submodules: 'recursive'
+          fetch-depth: 0
       - name: Cleanup
         run: ./gradlew clean
-      - name: Build project
+      - name: Version
+        run: ./gradlew versionInfo
+      - name: Build
         run: ./gradlew build
-      - name: Publish artifacts
-        run: ./gradlew publish
+      - name: Publish Snapshot to Maven Repo
+        run: ./gradlew publishSnapshot
