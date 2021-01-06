@@ -64,7 +64,7 @@ Check current https://www.d4l.io/[documentation]
 
 * Android Studio 4.1.0
 * Java 7
-* Gradle 5.2.1
+* Gradle 6.7.1
 * Python 3.5
 * Ruby
 * http://bundler.io/[Bundler]
