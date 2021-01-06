@@ -25,7 +25,6 @@ repositories {
 }
 
 group = ProjectConfig.library.group
-version = ProjectConfig.library.version
 
 archivesBaseName = 'sdk-doc'
 

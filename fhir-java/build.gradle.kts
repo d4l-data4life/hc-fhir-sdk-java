@@ -22,7 +22,6 @@ plugins {
 }
 
 group = ProjectConfig.library.group
-version = ProjectConfig.library.version
 
 
 java {

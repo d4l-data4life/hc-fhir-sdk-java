@@ -2,6 +2,9 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        jcenter()
+
+        maven("https://dl.bintray.com/data4life/maven")
     }
 
     dependencies {
@@ -11,15 +14,16 @@ buildscript {
 }
 
 plugins {
-    // https://github.com/ben-manes/gradle-versions-plugin
-    id("com.github.ben-manes.versions") version "0.34.0"
+    dependencyUpdates()
+
+    id("scripts.versioning")
+    id("scripts.publishing")
 }
 
 allprojects {
     repositories {
         google()
         mavenCentral()
-        maven("https://jitpack.io")
         jcenter()
     }
 }
