@@ -19,8 +19,6 @@ package scripts
 import org.gradle.api.tasks.Exec
 
 plugins {
-    "maven-publish"
-
     id("care.data4life.git-publish")
 }
 
