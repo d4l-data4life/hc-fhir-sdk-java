@@ -21,6 +21,8 @@ plugins {
   id("scripts.publishing-config")
 }
 
+group = ProjectConfig.library.group
+
 java {
   sourceCompatibility = JavaVersion.VERSION_1_7
   targetCompatibility = JavaVersion.VERSION_1_7
