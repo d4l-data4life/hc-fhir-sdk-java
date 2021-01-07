@@ -25,7 +25,7 @@ object LibraryConfig {
     val publish = PublishConfig
     object PublishConfig {
         const val name = LibraryConfig.name
-        const val groupId = LibraryConfig.group
+        const val groupId = "${LibraryConfig.group}.${LibraryConfig.name}"
         const val description = "Minimal FHIR 3 + 4 standard models and data types for Android and Java."
         const val year = "2020"
 

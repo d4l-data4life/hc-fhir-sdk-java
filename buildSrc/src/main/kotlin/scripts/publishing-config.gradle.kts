@@ -21,8 +21,6 @@ plugins {
     `maven-publish`
 }
 
-group = ProjectConfig.library.group
-
 tasks.named<JacocoReport>("jacocoTestReport") {
     reports {
         xml.isEnabled = true
@@ -76,8 +74,8 @@ publishing {
     }
 
     publications {
-        create<MavenPublication>("mavenJava") {
-            groupId = "${ProjectConfig.library.publish.groupId}.${ProjectConfig.library.publish.name}"
+        withType<MavenPublication> {
+            groupId = ProjectConfig.library.publish.groupId
 
             from(components["java"])
             artifact(tasks["sourcesJar"])
