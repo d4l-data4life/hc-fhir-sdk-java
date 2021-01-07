@@ -1,3 +1,6 @@
+import org.gradle.plugin.use.PluginDependenciesSpec
+import org.gradle.plugin.use.PluginDependencySpec
+
 /*
  * Copyright (c) 2020 D4L data4life gGmbH / All rights reserved.
  *
@@ -17,9 +20,10 @@
 object GradlePluginDependency {
     const val android = "com.android.tools.build:gradle:${Versions.gradlePlugin.android}"
     const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.gradlePlugin.kotlin}"
-
-    const val downloadTask = "de.undercouch:gradle-download-task:${Versions.gradlePlugin.downloadTask}"
 }
+
+fun PluginDependenciesSpec.dependencyUpdates(): PluginDependencySpec =
+id("com.github.ben-manes.versions").version(Versions.gradlePlugin.dependencyUpdates)
 
 object MainDependency {
     const val javaXAnnotation = "com.google.code.findbugs:jsr305:${Versions.main.javaXAnnotation}"
@@ -32,8 +36,4 @@ object TestDependency {
     const val jUnit = "junit:junit:${Versions.test.jUnit}"
     const val mockitoInline = "org.mockito:mockito-inline:${Versions.test.mockito}"
     const val jsonAssert = "org.skyscreamer:jsonassert:1.5.0"
-}
-
-object AndroidTestDependency {
-
 }

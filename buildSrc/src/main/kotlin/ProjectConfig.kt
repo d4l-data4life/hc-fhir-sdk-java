@@ -14,6 +14,14 @@
  * contact D4L by email to help@data4life.care.
  */
 
-object AndroidConfig {
+object ProjectConfig {
+    val library = LibraryConfig
 
+    val gradlePlugin = GradlePluginDependency
+    val dependency = Dependency
+}
+
+object Dependency {
+    val main = MainDependency
+    val test = TestDependency
 }

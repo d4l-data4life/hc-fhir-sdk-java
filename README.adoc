@@ -58,13 +58,53 @@ toc::[]
 
 Check current https://www.d4l.io/[documentation]
 
+== Installation
+
+Add the following maven repository url to your root build.gradle:
+
+----
+allprojects {
+    repositories {
+        ...
+        maven {
+            url = URI("https://maven.pkg.github.com/d4l-data4life/hc-fhir-sdk-java")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("PACKAGE_REGISTRY_USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("PACKAGE_REGISTRY_TOKEN")
+            }
+        }
+    }
+}
+
+----
+
+Your GitHub *username* and *token* needs to be stored in your global Gradle properties: `~/.gradle/gradle.properties`
+
+NOTICE:: You need to have _read_ access to this repository and generate a https://github.com/settings/tokens/new/[personal access token] with `repo`, `write:packages` and `read:packages` scope.
+
+----
+gpr.user=github-username
+gpr.key=github-token
+----
+
+=== Gradle
+
+Add following dependencies to your app build.gradle.
+
+[source, gradle]
+----
+dependencies {
+    implementation "care.data4life.hc-fhir-sdk-java:fhir-java:$version"
+}
+----
+
 == Maintenance
 
 === Requirements
 
 * Android Studio 4.1.0
 * Java 7
-* Gradle 5.2.1
+* Gradle 6.7.1
 * Python 3.5
 * Ruby
 * http://bundler.io/[Bundler]

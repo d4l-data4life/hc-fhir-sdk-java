@@ -1,4 +1,4 @@
-name: D4L Publish Artifact
+name: D4L CI - Publish Release
 
 on:
   push:
@@ -6,9 +6,9 @@ on:
       - 'v*'
 
 jobs:
-  build:
+  publish-release:
 
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, macos]
 
     env:
       PACKAGE_REGISTRY_USERNAME: ${{ secrets.PACKAGE_REGISTRY_USERNAME }}
@@ -17,13 +17,17 @@ jobs:
     steps:
       - name: Display runner context
         run: hostname -s
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
+          fetch-depth: 0
           submodules: 'recursive'
       - name: Cleanup
         run: ./gradlew clean
+      - name: Version
+        run: ./gradlew versionInfo
       - name: Build project
         run: ./gradlew build
-      - name: Publish artifacts
-        run: ./gradlew publish
+      - name: Publish to GitHub Packages
+        run: ./gradlew publishAllPublicationToGitHubPackagesRepository
+      - name: Publish Release to Maven Repo
+        run: ./gradlew publishRelease

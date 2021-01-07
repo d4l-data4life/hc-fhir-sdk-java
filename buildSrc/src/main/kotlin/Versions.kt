@@ -27,9 +27,9 @@ object GradlePluginVersion {
     const val android = "4.1.0"
 
     /**
-     * [Gradle DownloadTask](https://github.com/michel-kraemer/gradle-download-task)
+     * [DependencyUpdates](https://github.com/ben-manes/gradle-versions-plugin)
      */
-    const val downloadTask = "3.4.3"
+    const val dependencyUpdates = "0.34.0"
 }
 
 

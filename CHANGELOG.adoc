@@ -18,6 +18,8 @@ toc::[]
 
 === Changed
 
+* BREAKING module name changed from `hc-fhir-sdk-java` to `fhir-java`
+
 === Removed
 
 === Fixed
@@ -25,6 +27,15 @@ toc::[]
 === Bumped
 
 === Migration
+
+You need to update your Gradle dependency declaration from "care.data4life.hc-fhir-sdk-java:hc-fhir-sdk-java:{version}" to:
+
+[source, gradle]
+----
+dependencies {
+    implementation("care.data4life.hc-fhir-sdk-java:fhir-java:$version")
+}
+----
 
 == https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.0.0...v1.1.0[1.1.0]
 
