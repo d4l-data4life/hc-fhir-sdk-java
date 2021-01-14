@@ -16,6 +16,10 @@
 
 package care.data4life.fhir.r4.model;
 
+import java.util.Objects;
+
+import javax.annotation.Nullable;
+
 /**
  * Canonical.java
  * <p>
@@ -46,8 +50,28 @@ public class Canonical {
         this.version = version;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    @Nullable
+    public String getVersion() {
+        return version;
+    }
+
     public String getResourceType() {
         return resourceType;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Canonical other = (Canonical) o;
+
+        return url.equals(other.url) && Objects.equals(version, other.version);
+    }
+
+    @Override
+    public int hashCode() { return Objects.hash(url, version); }
 }
