@@ -19,12 +19,8 @@ package care.data4life.fhir.r4.json;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.JsonReader;
 import com.squareup.moshi.JsonWriter;
-
 import java.io.IOException;
-
 import javax.annotation.Nullable;
-import javax.annotation.RegEx;
-
 import care.data4life.fhir.r4.model.Canonical;
 
 public class CanonicalJsonAdapter extends JsonAdapter<Canonical> {

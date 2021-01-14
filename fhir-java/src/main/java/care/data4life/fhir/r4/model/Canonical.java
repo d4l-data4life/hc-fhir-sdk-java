@@ -17,7 +17,6 @@
 package care.data4life.fhir.r4.model;
 
 import java.util.Objects;
-
 import javax.annotation.Nullable;
 
 /**

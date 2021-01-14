@@ -37,6 +37,7 @@ public class CanonicalJsonAdapterTest {
         adapter = new CanonicalJsonAdapter().lenient();
     }
 
+    
     @Test
     public void given_fromJson_is_called_with_a_url_and_without_a_version_it_returns_a_Canonical()
             throws IOException {
