@@ -23,10 +23,12 @@ import com.squareup.moshi.JsonWriter;
 import java.io.IOException;
 
 import javax.annotation.Nullable;
+import javax.annotation.RegEx;
 
 import care.data4life.fhir.r4.model.Canonical;
 
 public class CanonicalJsonAdapter extends JsonAdapter<Canonical> {
+    private final static String DELIMITER = "|";
 
     @Nullable
     @Override
@@ -36,21 +38,25 @@ public class CanonicalJsonAdapter extends JsonAdapter<Canonical> {
         }
         String value = reader.nextString();
         if (value.contains("|")) {
-            String[] result = value.split("\\|");
+            String[] result = value.split("\\" + DELIMITER);
             return new Canonical(result[0], result[1]);
         }
 
         return new Canonical(value);
     }
 
+    private String buildUrl(Canonical canonical) {
+        if (canonical.version != null && !canonical.version.isEmpty()) {
+            return canonical.url + DELIMITER + canonical.version;
+        } else {
+            return canonical.url;
+        }
+    }
+
     @Override
     public void toJson(JsonWriter writer, @Nullable Canonical value) throws IOException {
         if (value != null) {
-            writer.value(value.url);
-            if (value.version != null && !value.version.isEmpty()) {
-                writer.value("|");
-                writer.value(value.version);
-            }
+            writer.value(buildUrl(value));
         } else {
             writer.nullValue();
         }
