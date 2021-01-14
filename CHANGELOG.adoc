@@ -17,10 +17,12 @@ toc::[]
 === Added
 
 === Changed
+* Canonical(R4): had been aligned with the other classes of the repo
 
 === Removed
 
 === Fixed
+* CanonicalJsonAdapter#toJson(R4): it accesses `value` of a writer now only once
 
 === Bumped
 
