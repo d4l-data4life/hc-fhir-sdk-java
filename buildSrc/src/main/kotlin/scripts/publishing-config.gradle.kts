@@ -30,12 +30,12 @@ tasks.named<JacocoReport>("jacocoTestReport") {
 
 tasks.register<Jar>("sourcesJar") {
     from(sourceSets.main.get().allSource)
-    classifier = "sources"
+    archiveClassifier.set("sources")
 }
 
 tasks.register<Jar>("javadocJar") {
     from(tasks.javadoc)
-    classifier = "javadoc"
+    archiveClassifier.set("javadoc")
 }
 
 tasks.javadoc {
@@ -74,7 +74,7 @@ publishing {
     }
 
     publications {
-        withType<MavenPublication> {
+        create<MavenPublication>("jvm") {
             groupId = ProjectConfig.library.publish.groupId
 
             from(components["java"])
