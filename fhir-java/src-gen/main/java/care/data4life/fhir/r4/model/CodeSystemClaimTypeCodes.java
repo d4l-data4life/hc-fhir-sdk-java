@@ -45,7 +45,8 @@ public enum CodeSystemClaimTypeCodes {
     PHARMACY,
 
     /**
-     * Typically, outpatient claims from Physician, Psychological, Chiropractor, Physiotherapy, Speech Pathology, rehabilitative, consulting.
+     * Typically, outpatient claims from Physician, Psychological, Chiropractor, Physiotherapy, Speech Pathology,
+     * rehabilitative, consulting.
      */
     @Json(name = "professional")
     PROFESSIONAL,

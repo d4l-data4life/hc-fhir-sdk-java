@@ -39,7 +39,8 @@ public enum CodeSystemSlicingRules {
     OPEN,
 
     /**
-     * Additional content is allowed, but only at the end of the list. Note that using this requires that the slices be ordered, which makes it hard to share uses. This should only be done where absolutely required.
+     * Additional content is allowed, but only at the end of the list. Note that using this requires that the slices be
+     * ordered, which makes it hard to share uses. This should only be done where absolutely required.
      */
     @Json(name = "openAtEnd")
     OPENATEND,

@@ -45,13 +45,15 @@ public enum CodeSystemQuestionnaireItemUsageMode {
     DISPLAY,
 
     /**
-     * Render the item only when displaying a completed form and the item has been answered (or has child items that have been answered).
+     * Render the item only when displaying a completed form and the item has been answered (or has child items that
+     * have been answered).
      */
     @Json(name = "display-non-empty")
     DISPLAY_NON_EMPTY,
 
     /**
-     * Render the item when capturing data or when displaying a completed form and the item has been answered (or has child items that have been answered).
+     * Render the item when capturing data or when displaying a completed form and the item has been answered (or has
+     * child items that have been answered).
      */
     @Json(name = "capture-display-non-empty")
     CAPTURE_DISPLAY_NON_EMPTY,

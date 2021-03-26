@@ -34,7 +34,9 @@ import static org.junit.Assert.*;
  * <p>
  * A set of codes drawn from one or more code systems.
  * <p>
- * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+ * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a
+ * particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded
+ * elements](terminologies.html).
  * <p>
  * <p>
  * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26

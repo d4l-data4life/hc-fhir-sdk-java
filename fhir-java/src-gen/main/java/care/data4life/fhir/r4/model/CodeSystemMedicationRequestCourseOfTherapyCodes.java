@@ -27,13 +27,15 @@ import com.squareup.moshi.Json;
 public enum CodeSystemMedicationRequestCourseOfTherapyCodes {
 
     /**
-     * A medication which is expected to be continued beyond the present order and which the patient should be assumed to be taking unless explicitly stopped.
+     * A medication which is expected to be continued beyond the present order and which the patient should be assumed
+     * to be taking unless explicitly stopped.
      */
     @Json(name = "continuous")
     CONTINUOUS,
 
     /**
-     * A medication which the patient is only expected to consume for the duration of the current order and which is not expected to be renewed.
+     * A medication which the patient is only expected to consume for the duration of the current order and which is not
+     * expected to be renewed.
      */
     @Json(name = "acute")
     ACUTE,

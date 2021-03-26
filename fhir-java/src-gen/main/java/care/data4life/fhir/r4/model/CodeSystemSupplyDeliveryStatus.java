@@ -45,7 +45,8 @@ public enum CodeSystemSupplyDeliveryStatus {
     ABANDONED,
 
     /**
-     * This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be "abandoned" rather than "entered-in-error".).
+     * This electronic record should never have existed, though it is possible that real-world decisions were based on
+     * it. (If real-world activity has occurred, the status should be "abandoned" rather than "entered-in-error".).
      */
     @Json(name = "entered-in-error")
     ENTERED_IN_ERROR,

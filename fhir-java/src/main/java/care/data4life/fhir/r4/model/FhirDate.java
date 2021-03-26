@@ -29,8 +29,8 @@ import care.data4life.fhir.util.Preconditions;
 /**
  * FhirDate
  * <p>
- * A date, or partial date (e.g. just year or year + month) as used in human communication. There is
- * no time zone. Dates SHALL be valid dates. Month and day are optional.
+ * A date, or partial date (e.g. just year or year + month) as used in human communication. There is no time zone. Dates
+ * SHALL be valid dates. Month and day are optional.
  * <p>
  * Regex: -?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?
  *

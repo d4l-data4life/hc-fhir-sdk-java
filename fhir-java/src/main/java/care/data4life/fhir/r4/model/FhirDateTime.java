@@ -30,10 +30,9 @@ import care.data4life.fhir.util.Preconditions;
 /**
  * FhirDateTime
  * <p>
- * A date, date-time or partial date (e.g. just year or year + month) as used in human
- * communication. If hours and minutes are specified, a time zone SHALL be populated. Seconds must
- * be provided due to schema type constraints but may be zero-filled and may be ignored. Dates SHALL
- * be valid dates. The time "24:00" is not allowed.
+ * A date, date-time or partial date (e.g. just year or year + month) as used in human communication. If hours and
+ * minutes are specified, a time zone SHALL be populated. Seconds must be provided due to schema type constraints but
+ * may be zero-filled and may be ignored. Dates SHALL be valid dates. The time "24:00" is not allowed.
  * <p>
  * Regex: -?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?
  *

@@ -34,7 +34,9 @@ import static org.junit.Assert.*;
  * <p>
  * A grouping of people or organizations with a common purpose.
  * <p>
- * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
+ * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form
+ * of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare
+ * practice groups, payer/insurer, etc.
  * <p>
  * <p>
  * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26

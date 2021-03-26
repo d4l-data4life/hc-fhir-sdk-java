@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemCanonicalStatusCodesForFHIRResources {
 
     /**
-     * The resource was created in error, and should not be treated as valid (note: in many cases, for various data integrity related reasons, the information cannot be removed from the record)
+     * The resource was created in error, and should not be treated as valid (note: in many cases, for various data
+     * integrity related reasons, the information cannot be removed from the record)
      */
     @Json(name = "error")
     ERROR,
@@ -39,7 +40,8 @@ public enum CodeSystemCanonicalStatusCodesForFHIRResources {
     PROPOSED,
 
     /**
-     * The resource describes a course of action that is planned and agreed/approved, but at the time of recording was still future
+     * The resource describes a course of action that is planned and agreed/approved, but at the time of recording was
+     * still future
      */
     @Json(name = "planned")
     PLANNED,
@@ -117,7 +119,8 @@ public enum CodeSystemCanonicalStatusCodesForFHIRResources {
     INACTIVE,
 
     /**
-     * The process described/requested in the resource did not complete - usually due to some workflow error, and no further action is planned
+     * The process described/requested in the resource did not complete - usually due to some workflow error, and no
+     * further action is planned
      */
     @Json(name = "abandoned")
     ABANDONED,

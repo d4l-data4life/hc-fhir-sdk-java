@@ -34,7 +34,8 @@ import static org.junit.Assert.*;
  * <p>
  * An action that is being or was performed on a patient.
  * <p>
- * An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.
+ * An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or
+ * less invasive like long term services, counseling, or hypnotherapy.
  * <p>
  * <p>
  * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26

@@ -39,7 +39,8 @@ public enum CodeSystemConditionVerificationStatus {
     PROVISIONAL,
 
     /**
-     * One of a set of potential (and typically mutually exclusive) diagnoses asserted to further guide the diagnostic process and preliminary treatment.
+     * One of a set of potential (and typically mutually exclusive) diagnoses asserted to further guide the diagnostic
+     * process and preliminary treatment.
      */
     @Json(name = "differential")
     DIFFERENTIAL,

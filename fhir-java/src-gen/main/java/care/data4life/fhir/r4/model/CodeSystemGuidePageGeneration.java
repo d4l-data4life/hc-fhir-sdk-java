@@ -33,13 +33,15 @@ public enum CodeSystemGuidePageGeneration {
     HTML,
 
     /**
-     * Page is markdown with templating.  Will use the template to create a file that imports the markdown file prior to post-processing.
+     * Page is markdown with templating.  Will use the template to create a file that imports the markdown file prior to
+     * post-processing.
      */
     @Json(name = "markdown")
     MARKDOWN,
 
     /**
-     * Page is xml with templating.  Will use the template to create a file that imports the source file and run the nominated XSLT transform (see parameters) if present prior to post-processing.
+     * Page is xml with templating.  Will use the template to create a file that imports the source file and run the
+     * nominated XSLT transform (see parameters) if present prior to post-processing.
      */
     @Json(name = "xml")
     XML,

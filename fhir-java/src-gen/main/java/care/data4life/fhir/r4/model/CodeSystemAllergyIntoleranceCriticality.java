@@ -27,13 +27,15 @@ import com.squareup.moshi.Json;
 public enum CodeSystemAllergyIntoleranceCriticality {
 
     /**
-     * Worst case result of a future exposure is not assessed to be life-threatening or having high potential for organ system failure.
+     * Worst case result of a future exposure is not assessed to be life-threatening or having high potential for organ
+     * system failure.
      */
     @Json(name = "low")
     LOW,
 
     /**
-     * Worst case result of a future exposure is assessed to be life-threatening or having high potential for organ system failure.
+     * Worst case result of a future exposure is assessed to be life-threatening or having high potential for organ
+     * system failure.
      */
     @Json(name = "high")
     HIGH,

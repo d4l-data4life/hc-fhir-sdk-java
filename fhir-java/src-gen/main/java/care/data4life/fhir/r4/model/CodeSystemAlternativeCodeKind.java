@@ -39,19 +39,22 @@ public enum CodeSystemAlternativeCodeKind {
     DEPRECATED,
 
     /**
-     * The code is an alternative to be used when a case insensitive code is required (when the primary codes are case sensitive).
+     * The code is an alternative to be used when a case insensitive code is required (when the primary codes are case
+     * sensitive).
      */
     @Json(name = "case-insensitive")
     CASE_INSENSITIVE,
 
     /**
-     * The code is an alternative to be used when a case sensitive code is required (when the primary codes are case insensitive).
+     * The code is an alternative to be used when a case sensitive code is required (when the primary codes are case
+     * insensitive).
      */
     @Json(name = "case-sensitive")
     CASE_SENSITIVE,
 
     /**
-     * The code is an alternative for the primary code that is built using the expression grammar defined by the code system.
+     * The code is an alternative for the primary code that is built using the expression grammar defined by the code
+     * system.
      */
     @Json(name = "expression")
     EXPRESSION,

@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Indicates the degree of adherence to a specified behavior or capability expected for a system to be deemed conformant with a specification.
+ * Indicates the degree of adherence to a specified behavior or capability expected for a system to be deemed conformant
+ * with a specification.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/conformance-expectation">ConformanceExpectation</a>
  */
@@ -33,13 +34,15 @@ public enum CodeSystemConformanceExpectation {
     SHALL,
 
     /**
-     * Support for the specified capability is strongly encouraged, and failure to support it should only occur after careful consideration.
+     * Support for the specified capability is strongly encouraged, and failure to support it should only occur after
+     * careful consideration.
      */
     @Json(name = "SHOULD")
     SHOULD,
 
     /**
-     * Support for the specified capability is not necessary to be considered conformant, and the requirement should be considered strictly optional.
+     * Support for the specified capability is not necessary to be considered conformant, and the requirement should be
+     * considered strictly optional.
      */
     @Json(name = "MAY")
     MAY,

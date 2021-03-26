@@ -34,7 +34,8 @@ import static org.junit.Assert.*;
  * <p>
  * Roles/organizations the practitioner is associated with.
  * <p>
- * A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.
+ * A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a
+ * period of time.
  * <p>
  * <p>
  * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26

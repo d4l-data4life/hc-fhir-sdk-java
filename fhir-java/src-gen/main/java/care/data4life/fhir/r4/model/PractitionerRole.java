@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * PractitionerRole.java
  * <p>
- * A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.
+ * A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a
+ * period of time.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/PractitionerRole">PractitionerRole</a>
  * <p>
@@ -122,7 +123,8 @@ public class PractitionerRole extends DomainResource {
     /**
      * PractitionerRole.java
      * <p>
-     * A collection of times the practitioner is available or performing this role at the location and/or healthcareservice.
+     * A collection of times the practitioner is available or performing this role at the location and/or
+     * healthcareservice.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/PractitionerRole">PractitionerRole</a>
      * <p>

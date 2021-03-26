@@ -75,7 +75,8 @@ public enum CodeSystemEncounterStatus {
     ENTERED_IN_ERROR,
 
     /**
-     * The encounter status is unknown. Note that "unknown" is a value of last resort and every attempt should be made to provide a meaningful value other than "unknown".
+     * The encounter status is unknown. Note that "unknown" is a value of last resort and every attempt should be made
+     * to provide a meaningful value other than "unknown".
      */
     @Json(name = "unknown")
     UNKNOWN,

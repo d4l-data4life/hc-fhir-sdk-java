@@ -29,7 +29,9 @@ import javax.annotation.Nullable;
 /**
  * UsageContext.java
  * <p>
- * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
+ * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This
+ * metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of
+ * care (e.g., venue, care setting, provider of care).
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/UsageContext">UsageContext</a>
  * <p>

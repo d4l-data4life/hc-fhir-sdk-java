@@ -33,7 +33,8 @@ public enum CodeSystemLocationType {
     SI,
 
     /**
-     * Any Building or structure. This may contain rooms, corridors, wings, etc. It might not have walls, or a roof, but is considered a defined/allocated space.
+     * Any Building or structure. This may contain rooms, corridors, wings, etc. It might not have walls, or a roof, but
+     * is considered a defined/allocated space.
      */
     @Json(name = "bu")
     BU,
@@ -69,7 +70,8 @@ public enum CodeSystemLocationType {
     RO,
 
     /**
-     * A space that is allocated for sleeping/laying on. This is not the physical bed/trolley that may be moved about, but the space it may occupy.
+     * A space that is allocated for sleeping/laying on. This is not the physical bed/trolley that may be moved about,
+     * but the space it may occupy.
      */
     @Json(name = "bd")
     BD,
@@ -105,7 +107,10 @@ public enum CodeSystemLocationType {
     AREA,
 
     /**
-     * A wide scope that covers a conceptual domain, such as a Nation (Country wide community or Federal Government - e.g. Ministry of Health),  Province or State (community or Government), Business (throughout the enterprise), Nation with a business scope of an agency (e.g. CDC, FDA etc.) or a Business segment (UK Pharmacy), not just an physical boundary
+     * A wide scope that covers a conceptual domain, such as a Nation (Country wide community or Federal Government -
+     * e.g. Ministry of Health),  Province or State (community or Government), Business (throughout the enterprise),
+     * Nation with a business scope of an agency (e.g. CDC, FDA etc.) or a Business segment (UK Pharmacy), not just an
+     * physical boundary
      */
     @Json(name = "jdn")
     JDN,

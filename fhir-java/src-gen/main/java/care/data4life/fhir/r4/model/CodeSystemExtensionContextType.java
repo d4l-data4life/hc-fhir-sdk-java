@@ -33,13 +33,16 @@ public enum CodeSystemExtensionContextType {
     FHIRPATH,
 
     /**
-     * The context is any element that has an ElementDefinition.id that matches that found in the expression. This includes ElementDefinition Ids that have slicing identifiers. The full path for the element is [url]#[elementid]. If there is no #, the Element id is one defined in the base specification.
+     * The context is any element that has an ElementDefinition.id that matches that found in the expression. This
+     * includes ElementDefinition Ids that have slicing identifiers. The full path for the element is [url]#[elementid].
+     * If there is no #, the Element id is one defined in the base specification.
      */
     @Json(name = "element")
     ELEMENT,
 
     /**
-     * The context is a particular extension from a particular StructureDefinition, and the expression is just a uri that identifies the extension.
+     * The context is a particular extension from a particular StructureDefinition, and the expression is just a uri
+     * that identifies the extension.
      */
     @Json(name = "extension")
     EXTENSION,

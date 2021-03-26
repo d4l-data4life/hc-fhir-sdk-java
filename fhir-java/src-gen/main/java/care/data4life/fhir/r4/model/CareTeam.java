@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * CareTeam.java
  * <p>
- * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.
+ * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of
+ * care for a patient.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
  * <p>

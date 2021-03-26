@@ -45,7 +45,8 @@ public enum CodeSystemBundleType {
     TRANSACTION,
 
     /**
-     * The bundle is a transaction response. Because the response is a transaction response, the transaction has succeeded, and all responses are error free.
+     * The bundle is a transaction response. Because the response is a transaction response, the transaction has
+     * succeeded, and all responses are error free.
      */
     @Json(name = "transaction-response")
     TRANSACTION_RESPONSE,
@@ -75,7 +76,8 @@ public enum CodeSystemBundleType {
     SEARCHSET,
 
     /**
-     * The bundle is a set of resources collected into a single package for ease of distribution that imposes no processing obligations or behavioral rules beyond persistence.
+     * The bundle is a set of resources collected into a single package for ease of distribution that imposes no
+     * processing obligations or behavioral rules beyond persistence.
      */
     @Json(name = "collection")
     COLLECTION,

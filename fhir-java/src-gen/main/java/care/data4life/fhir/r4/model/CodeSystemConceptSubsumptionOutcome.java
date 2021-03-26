@@ -20,7 +20,9 @@ import com.squareup.moshi.Json;
 
 
 /**
- * The subsumption relationship between code/Coding "A" and code/Coding "B". There are 4 possible codes to be returned: equivalent, subsumes, subsumed-by, and not-subsumed. If the server is unable to determine the relationship between the codes/Codings, then it returns an error (i.e. an OperationOutcome).
+ * The subsumption relationship between code/Coding "A" and code/Coding "B". There are 4 possible codes to be returned:
+ * equivalent, subsumes, subsumed-by, and not-subsumed. If the server is unable to determine the relationship between
+ * the codes/Codings, then it returns an error (i.e. an OperationOutcome).
  *
  * @see <a href="http://hl7.org/fhir/concept-subsumption-outcome">ConceptSubsumptionOutcome</a>
  */

@@ -27,13 +27,16 @@ import com.squareup.moshi.Json;
 public enum CodeSystemTriggerType {
 
     /**
-     * The trigger occurs in response to a specific named event, and no other information about the trigger is specified. Named events are completely pre-coordinated, and the formal semantics of the trigger are not provided.
+     * The trigger occurs in response to a specific named event, and no other information about the trigger is
+     * specified. Named events are completely pre-coordinated, and the formal semantics of the trigger are not
+     * provided.
      */
     @Json(name = "named-event")
     NAMED_EVENT,
 
     /**
-     * The trigger occurs at a specific time or periodically as described by a timing or schedule. A periodic event cannot have any data elements, but may have a name assigned as a shorthand for the event.
+     * The trigger occurs at a specific time or periodically as described by a timing or schedule. A periodic event
+     * cannot have any data elements, but may have a name assigned as a shorthand for the event.
      */
     @Json(name = "periodic")
     PERIODIC,

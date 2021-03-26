@@ -39,7 +39,8 @@ public enum CodeSystemProvenanceParticipantRole {
     PERFORMER,
 
     /**
-     * A party that originates the resource and therefore has responsibility for the information given in the resource and ownership of this resource
+     * A party that originates the resource and therefore has responsibility for the information given in the resource
+     * and ownership of this resource
      */
     @Json(name = "author")
     AUTHOR,
@@ -75,13 +76,15 @@ public enum CodeSystemProvenanceParticipantRole {
     CUSTODIAN,
 
     /**
-     * A device that operates independently of an author on custodian's algorithms for data extraction of existing information for purpose of generating a new artifact.
+     * A device that operates independently of an author on custodian's algorithms for data extraction of existing
+     * information for purpose of generating a new artifact.
      */
     @Json(name = "assembler")
     ASSEMBLER,
 
     /**
-     * A device used by an author to record new information, which may also be used by the author to select existing information for aggregation with newly recorded information for the purpose of generating a new artifact.
+     * A device used by an author to record new information, which may also be used by the author to select existing
+     * information for aggregation with newly recorded information for the purpose of generating a new artifact.
      */
     @Json(name = "composer")
     COMPOSER,

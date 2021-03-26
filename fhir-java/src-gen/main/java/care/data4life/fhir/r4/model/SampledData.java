@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * SampledData.java
  * <p>
- * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
+ * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the
+ * data.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/SampledData">SampledData</a>
  * <p>

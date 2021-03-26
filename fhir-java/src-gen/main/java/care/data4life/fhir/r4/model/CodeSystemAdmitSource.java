@@ -33,7 +33,8 @@ public enum CodeSystemAdmitSource {
     HOSP_TRANS,
 
     /**
-     * The patient has been transferred from the emergency department within the hospital. This is typically used in the transition to an inpatient encounter
+     * The patient has been transferred from the emergency department within the hospital. This is typically used in the
+     * transition to an inpatient encounter
      */
     @Json(name = "emd")
     EMD,
@@ -45,7 +46,8 @@ public enum CodeSystemAdmitSource {
     OUTP,
 
     /**
-     * The patient is a newborn and the encounter will track the baby related activities (as opposed to the Mothers encounter - that may be associated using the newborn encounters partof property)
+     * The patient is a newborn and the encounter will track the baby related activities (as opposed to the Mothers
+     * encounter - that may be associated using the newborn encounters partof property)
      */
     @Json(name = "born")
     BORN,

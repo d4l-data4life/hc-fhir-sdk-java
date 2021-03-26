@@ -69,7 +69,8 @@ public enum CodeSystemCarePlanActivityStatus {
     STOPPED,
 
     /**
-     * The current state of the care plan activity is not known.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which one.
+     * The current state of the care plan activity is not known.  Note: This concept is not to be used for "other" - one
+     * of the listed statuses is presumed to apply, but the authoring/source system does not know which one.
      */
     @Json(name = "unknown")
     UNKNOWN,

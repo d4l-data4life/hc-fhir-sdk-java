@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemTaskIntent {
 
     /**
-     * The intent is not known.  When dealing with Task, it's not always known (or relevant) how the task was initiated - i.e. whether it was proposed, planned, ordered or just done spontaneously.
+     * The intent is not known.  When dealing with Task, it's not always known (or relevant) how the task was initiated
+     * - i.e. whether it was proposed, planned, ordered or just done spontaneously.
      */
     @Json(name = "unknown")
     UNKNOWN,

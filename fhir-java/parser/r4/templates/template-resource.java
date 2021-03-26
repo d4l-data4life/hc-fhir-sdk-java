@@ -29,12 +29,8 @@ import javax.annotation.Nullable;
 {%-for klass in classes%}
 
 /**
- * {{ profile.targetname }}.java
- * {%- if klass.formal %}
- * {{ klass.formal }}
- * {%- else  %}{%- if klass.short %}
- * {{ klass.short }}
- * {% endif %}{%- endif %}
+ * {{ profile.targetname }}.java {%- if klass.formal %} {{ klass.formal }} {%- else  %}{%- if klass.short %} {{
+ * klass.short }} {% endif %}{%- endif %}
  *
  * @see <a href="{{ profile.url }}">{{ profile.targetname }}</a>
  * <p>

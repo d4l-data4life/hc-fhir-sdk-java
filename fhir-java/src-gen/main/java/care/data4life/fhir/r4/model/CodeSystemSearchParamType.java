@@ -33,19 +33,23 @@ public enum CodeSystemSearchParamType {
     NUMBER,
 
     /**
-     * Search parameter is on a date/time. The date format is the standard XML format, though other formats may be supported.
+     * Search parameter is on a date/time. The date format is the standard XML format, though other formats may be
+     * supported.
      */
     @Json(name = "date")
     DATE,
 
     /**
-     * Search parameter is a simple string, like a name part. Search is case-insensitive and accent-insensitive. May match just the start of a string. String parameters may contain spaces.
+     * Search parameter is a simple string, like a name part. Search is case-insensitive and accent-insensitive. May
+     * match just the start of a string. String parameters may contain spaces.
      */
     @Json(name = "string")
     STRING,
 
     /**
-     * Search parameter on a coded element or identifier. May be used to search through the text, display, code and code/codesystem (for codes) and label, system and key (for identifier). Its value is either a string or a pair of namespace and value, separated by a "|", depending on the modifier used.
+     * Search parameter on a coded element or identifier. May be used to search through the text, display, code and
+     * code/codesystem (for codes) and label, system and key (for identifier). Its value is either a string or a pair of
+     * namespace and value, separated by a "|", depending on the modifier used.
      */
     @Json(name = "token")
     TOKEN,

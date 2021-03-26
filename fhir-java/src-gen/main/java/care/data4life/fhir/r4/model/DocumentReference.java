@@ -29,7 +29,9 @@ import javax.annotation.Nullable;
 /**
  * DocumentReference.java
  * <p>
- * A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.
+ * A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can
+ * be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal
+ * patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
  * <p>
@@ -138,7 +140,8 @@ public class DocumentReference extends DomainResource {
     /**
      * DocumentReference.java
      * <p>
-     * The document and format referenced. There may be multiple content element repetitions, each with a different format.
+     * The document and format referenced. There may be multiple content element repetitions, each with a different
+     * format.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
      * <p>

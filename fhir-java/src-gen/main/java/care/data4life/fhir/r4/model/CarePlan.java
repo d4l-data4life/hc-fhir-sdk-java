@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * CarePlan.java
  * <p>
- * Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
+ * Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or
+ * community for a period of time, possibly limited to care for a specific condition or set of conditions.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
  * <p>
@@ -175,7 +176,8 @@ public class CarePlan extends DomainResource {
     /**
      * CarePlan.java
      * <p>
-     * Identifies a planned action to occur as part of the plan.  For example, a medication to be used, lab tests to perform, self-monitoring, education, etc.
+     * Identifies a planned action to occur as part of the plan.  For example, a medication to be used, lab tests to
+     * perform, self-monitoring, education, etc.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
      * <p>
@@ -226,7 +228,8 @@ public class CarePlan extends DomainResource {
     /**
      * CarePlan.java
      * <p>
-     * A simple summary of a planned activity suitable for a general care plan system (e.g. form driven) that doesn't know about specific resources such as procedure etc.
+     * A simple summary of a planned activity suitable for a general care plan system (e.g. form driven) that doesn't
+     * know about specific resources such as procedure etc.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
      * <p>

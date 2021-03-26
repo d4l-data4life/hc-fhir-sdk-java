@@ -32,10 +32,7 @@ import static org.junit.Assert.*;
 /**
  * {{ class.name }}Test.java
  * <p>
- * {{ class.short }}.
- * {%- if class.formal %}
- * {{ class.formal }}
- * {%- endif %}
+ * {{ class.short }}. {%- if class.formal %} {{ class.formal }} {%- endif %}
  * <p>
  * "Generated from FHIR {{ info.version }} on {{ info.date }}
  */

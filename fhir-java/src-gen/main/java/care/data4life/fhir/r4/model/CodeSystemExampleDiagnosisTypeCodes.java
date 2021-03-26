@@ -51,13 +51,15 @@ public enum CodeSystemExampleDiagnosisTypeCodes {
     DISCHARGE,
 
     /**
-     * A diagnosis based significantly on laboratory reports or test results, rather than the physical examination of the patient.
+     * A diagnosis based significantly on laboratory reports or test results, rather than the physical examination of
+     * the patient.
      */
     @Json(name = "laboratory")
     LABORATORY,
 
     /**
-     * A diagnosis which identifies people's responses to situations in their lives, such as a readiness to change or a willingness to accept assistance.
+     * A diagnosis which identifies people's responses to situations in their lives, such as a readiness to change or a
+     * willingness to accept assistance.
      */
     @Json(name = "nursing")
     NURSING,
@@ -87,7 +89,8 @@ public enum CodeSystemExampleDiagnosisTypeCodes {
     REMOTE,
 
     /**
-     * The labeling of an illness in a specific historical event using modern knowledge, methods and disease classifications.
+     * The labeling of an illness in a specific historical event using modern knowledge, methods and disease
+     * classifications.
      */
     @Json(name = "retrospective")
     RETROSPECTIVE,

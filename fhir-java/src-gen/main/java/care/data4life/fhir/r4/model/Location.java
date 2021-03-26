@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * Location.java
  * <p>
- * Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
+ * Details and position information for a physical place where services are provided and resources and participants may
+ * be stored, found, contained, or accommodated.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Location">Location</a>
  * <p>
@@ -183,7 +184,8 @@ public class Location extends DomainResource {
     /**
      * Location.java
      * <p>
-     * The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).
+     * The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate
+     * system used in KML).
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Location">Location</a>
      * <p>

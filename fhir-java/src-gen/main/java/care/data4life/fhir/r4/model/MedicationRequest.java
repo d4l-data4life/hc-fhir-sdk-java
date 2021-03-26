@@ -29,7 +29,10 @@ import javax.annotation.Nullable;
 /**
  * MedicationRequest.java
  * <p>
- * An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
+ * An order or request for both supply of the medication and the instructions for administration of the medication to a
+ * patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to
+ * generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with
+ * workflow patterns.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
  * <p>
@@ -237,7 +240,10 @@ public class MedicationRequest extends DomainResource {
     /**
      * MedicationRequest.java
      * <p>
-     * Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department.
+     * Indicates the specific details for the dispense or medication supply part of a medication request (also known as
+     * a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.
+     * There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense
+     * details in the pharmacy department.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
      * <p>
@@ -334,7 +340,9 @@ public class MedicationRequest extends DomainResource {
     /**
      * MedicationRequest.java
      * <p>
-     * Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.
+     * Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must
+     * happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is
+     * specified substitution may be done.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
      * <p>

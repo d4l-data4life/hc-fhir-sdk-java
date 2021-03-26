@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * Encounter.java
  * <p>
- * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
+ * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or
+ * assessing the health status of a patient.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
  * <p>
@@ -173,7 +174,11 @@ public class Encounter extends DomainResource {
     /**
      * Encounter.java
      * <p>
-     * The class history permits the tracking of the encounters transitions without needing to go  through the resource history.  This would be used for a case where an admission starts of as an emergency encounter, then transitions into an inpatient scenario. Doing this and not restarting a new encounter ensures that any lab/diagnostic results can more easily follow the patient and not require re-processing and not get lost or cancelled during a kind of discharge from emergency to inpatient.
+     * The class history permits the tracking of the encounters transitions without needing to go  through the resource
+     * history.  This would be used for a case where an admission starts of as an emergency encounter, then transitions
+     * into an inpatient scenario. Doing this and not restarting a new encounter ensures that any lab/diagnostic results
+     * can more easily follow the patient and not require re-processing and not get lost or cancelled during a kind of
+     * discharge from emergency to inpatient.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
      * <p>
@@ -424,7 +429,8 @@ public class Encounter extends DomainResource {
     /**
      * Encounter.java
      * <p>
-     * The status history permits the encounter resource to contain the status history without needing to read through the historical versions of the resource, or even have the server store them.
+     * The status history permits the encounter resource to contain the status history without needing to read through
+     * the historical versions of the resource, or even have the server store them.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
      * <p>

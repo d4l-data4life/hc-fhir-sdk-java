@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * Count.java
  * <p>
- * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
+ * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that
+ * are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Count">Count</a>
  * <p>

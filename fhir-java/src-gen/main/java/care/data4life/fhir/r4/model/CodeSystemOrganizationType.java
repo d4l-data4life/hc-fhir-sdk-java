@@ -39,13 +39,15 @@ public enum CodeSystemOrganizationType {
     DEPT,
 
     /**
-     * An organizational team is usually a grouping of practitioners that perform a specific function within an organization (which could be a top level organization, or a department).
+     * An organizational team is usually a grouping of practitioners that perform a specific function within an
+     * organization (which could be a top level organization, or a department).
      */
     @Json(name = "team")
     TEAM,
 
     /**
-     * A political body, often used when including organization records for government bodies such as a Federal Government, State or Local Government.
+     * A political body, often used when including organization records for government bodies such as a Federal
+     * Government, State or Local Government.
      */
     @Json(name = "govt")
     GOVT,
@@ -57,7 +59,8 @@ public enum CodeSystemOrganizationType {
     INS,
 
     /**
-     * A company, charity, or governmental organization, which processes claims and/or issues payments to providers on behalf of patients or groups of patients.
+     * A company, charity, or governmental organization, which processes claims and/or issues payments to providers on
+     * behalf of patients or groups of patients.
      */
     @Json(name = "pay")
     PAY,

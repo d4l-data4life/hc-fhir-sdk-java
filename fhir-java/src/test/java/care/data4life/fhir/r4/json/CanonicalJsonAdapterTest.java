@@ -17,6 +17,7 @@
 package care.data4life.fhir.r4.json;
 
 import com.squareup.moshi.JsonAdapter;
+
 import org.junit.Before;
 import org.junit.Test;
 

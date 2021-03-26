@@ -51,14 +51,17 @@ public enum CodeSystemResearchStudyStatus {
     CLOSED_TO_ACCRUAL,
 
     /**
-     * Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have completed treatment or intervention but are still being followed according to the primary objective of the study.
+     * Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have
+     * completed treatment or intervention but are still being followed according to the primary objective of the
+     * study.
      */
     @Json(name = "closed-to-accrual-and-intervention")
     CLOSED_TO_ACCRUAL_AND_INTERVENTION,
 
     /**
-     * Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have completed treatment
-     * or intervention but are still being followed according to the primary objective of the study.
+     * Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have
+     * completed treatment or intervention but are still being followed according to the primary objective of the
+     * study.
      */
     @Json(name = "completed")
     COMPLETED,
@@ -76,7 +79,8 @@ public enum CodeSystemResearchStudyStatus {
     IN_REVIEW,
 
     /**
-     * Study is temporarily closed for accrual; can be potentially resumed in the future; patients can be examined and treated.
+     * Study is temporarily closed for accrual; can be potentially resumed in the future; patients can be examined and
+     * treated.
      */
     @Json(name = "temporarily-closed-to-accrual")
     TEMPORARILY_CLOSED_TO_ACCRUAL,

@@ -189,7 +189,9 @@ public class FamilyMemberHistory extends DomainResource {
     /**
      * FamilyMemberHistory.java
      * <p>
-     * The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition.
+     * The significant Conditions (or condition) that the family member had. This is a repeating section to allow a
+     * system to represent more than one condition per resource, though there is nothing stopping multiple resources -
+     * one per condition.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory">FamilyMemberHistory</a>
      * <p>

@@ -51,7 +51,8 @@ public enum CodeSystemAuditEventAction {
     D,
 
     /**
-     * Perform a system or application function such as log-on, program execution or use of an object's method, or perform a query/search operation.
+     * Perform a system or application function such as log-on, program execution or use of an object's method, or
+     * perform a query/search operation.
      */
     @Json(name = "E")
     E,

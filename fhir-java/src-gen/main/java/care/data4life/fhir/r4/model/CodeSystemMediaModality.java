@@ -39,7 +39,8 @@ public enum CodeSystemMediaModality {
     FAX,
 
     /**
-     * A digital scan of a document. This is reserved for when there is not enough metadata to create a document reference
+     * A digital scan of a document. This is reserved for when there is not enough metadata to create a document
+     * reference
      */
     @Json(name = "scan")
     SCAN,

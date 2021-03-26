@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemAppointmentStatus {
 
     /**
-     * None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time might not be set yet.
+     * None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time
+     * might not be set yet.
      */
     @Json(name = "proposed")
     PROPOSED,
@@ -39,7 +40,8 @@ public enum CodeSystemAppointmentStatus {
     PENDING,
 
     /**
-     * All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.
+     * All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times
+     * specified.
      */
     @Json(name = "booked")
     BOOKED,
@@ -51,7 +53,8 @@ public enum CodeSystemAppointmentStatus {
     ARRIVED,
 
     /**
-     * The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.
+     * The planning stages of the appointment are now complete, the encounter resource will exist and will track further
+     * status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.
      */
     @Json(name = "fulfilled")
     FULFILLED,
@@ -75,14 +78,15 @@ public enum CodeSystemAppointmentStatus {
     ENTERED_IN_ERROR,
 
     /**
-     * When checked in, all pre-encounter administrative work is complete, and the encounter may begin. (where multiple patients are involved, they are all present).
+     * When checked in, all pre-encounter administrative work is complete, and the encounter may begin. (where multiple
+     * patients are involved, they are all present).
      */
     @Json(name = "checked-in")
     CHECKED_IN,
 
     /**
-     * The appointment has been placed on a waitlist, to be scheduled/confirmed in the future when a slot/service is available.
-     * A specific time might or might not be pre-allocated.
+     * The appointment has been placed on a waitlist, to be scheduled/confirmed in the future when a slot/service is
+     * available. A specific time might or might not be pre-allocated.
      */
     @Json(name = "waitlist")
     WAITLIST,

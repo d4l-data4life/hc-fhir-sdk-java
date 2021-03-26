@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * CodeSystem.java
  * <p>
- * The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
+ * The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and
+ * its key properties, and optionally define a part or all of its content.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
  * <p>
@@ -188,7 +189,8 @@ public class CodeSystem extends DomainResource {
     /**
      * CodeSystem.java
      * <p>
-     * Concepts that are in the code system. The concept definitions are inherently hierarchical, but the definitions must be consulted to determine what the meanings of the hierarchical relationships are.
+     * Concepts that are in the code system. The concept definitions are inherently hierarchical, but the definitions
+     * must be consulted to determine what the meanings of the hierarchical relationships are.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
      * <p>
@@ -249,7 +251,8 @@ public class CodeSystem extends DomainResource {
     /**
      * CodeSystem.java
      * <p>
-     * Additional representations for the concept - other languages, aliases, specialized purposes, used for particular purposes, etc.
+     * Additional representations for the concept - other languages, aliases, specialized purposes, used for particular
+     * purposes, etc.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
      * <p>

@@ -39,7 +39,8 @@ public enum CodeSystemAggregationMode {
     REFERENCED,
 
     /**
-     * The resource the reference points to will be found in the same bundle as the resource that includes the reference.
+     * The resource the reference points to will be found in the same bundle as the resource that includes the
+     * reference.
      */
     @Json(name = "bundled")
     BUNDLED,

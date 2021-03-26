@@ -57,7 +57,8 @@ public enum CodeSystemSynthesisType {
     RANGE,
 
     /**
-     * An approach describing a body of evidence by categorically classifying individual studies (eg 3 studies showed beneft and 2 studied found no effect).
+     * An approach describing a body of evidence by categorically classifying individual studies (eg 3 studies showed
+     * beneft and 2 studied found no effect).
      */
     @Json(name = "classification")
     CLASSIFICATION,

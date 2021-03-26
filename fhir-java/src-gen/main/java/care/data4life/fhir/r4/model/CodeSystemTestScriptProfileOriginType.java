@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set defines a set of codes that are used to indicate the profile type of a test system when acting as the origin within a TestScript.
+ * This value set defines a set of codes that are used to indicate the profile type of a test system when acting as the
+ * origin within a TestScript.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types">TestScriptProfileOriginType</a>
  */

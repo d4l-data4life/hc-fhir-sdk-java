@@ -33,7 +33,8 @@ public enum CodeSystemDischargeDisposition {
     HOME,
 
     /**
-     * The patient was discharged and has indicated that they are going to return home afterwards, but not the patient's home - e.g. a family member's home.
+     * The patient was discharged and has indicated that they are going to return home afterwards, but not the patient's
+     * home - e.g. a family member's home.
      */
     @Json(name = "alt-home")
     ALT_HOME,
@@ -51,7 +52,8 @@ public enum CodeSystemDischargeDisposition {
     HOSP,
 
     /**
-     * The patient has been discharged into long-term care where is likely to be monitored through an ongoing episode-of-care.
+     * The patient has been discharged into long-term care where is likely to be monitored through an ongoing
+     * episode-of-care.
      */
     @Json(name = "long")
     LONG,

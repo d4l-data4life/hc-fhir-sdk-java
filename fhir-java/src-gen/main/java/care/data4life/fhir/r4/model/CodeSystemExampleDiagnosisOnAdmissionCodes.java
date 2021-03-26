@@ -45,7 +45,8 @@ public enum CodeSystemExampleDiagnosisOnAdmissionCodes {
     U,
 
     /**
-     * Clinically undetermined. Provider unable to clinically determine whether the condition was present at the time of inpatient admission.
+     * Clinically undetermined. Provider unable to clinically determine whether the condition was present at the time of
+     * inpatient admission.
      */
     @Json(name = "w")
     W,

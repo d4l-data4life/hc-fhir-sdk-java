@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * EnteralFormulaAdditiveType: Codes for the type of modular component such as protein, carbohydrate or fiber to be provided in addition to or mixed with the base formula. This value set is provided as a suggestive example.
+ * EnteralFormulaAdditiveType: Codes for the type of modular component such as protein, carbohydrate or fiber to be
+ * provided in addition to or mixed with the base formula. This value set is provided as a suggestive example.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/entformula-additive">EnteralFormulaAdditiveTypeCode</a>
  */

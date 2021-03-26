@@ -33,7 +33,8 @@ public enum CodeSystemFamilyHistoryStatus {
     PARTIAL,
 
     /**
-     * All available related health information is captured as of the date (and possibly time) when the family member history was taken.
+     * All available related health information is captured as of the date (and possibly time) when the family member
+     * history was taken.
      */
     @Json(name = "completed")
     COMPLETED,

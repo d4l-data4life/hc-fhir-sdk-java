@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set is suitable for use with the provenance resource. It is derived from, but not compatible with, the HL7 v3 Purpose of use Code system.
+ * This value set is suitable for use with the provenance resource. It is derived from, but not compatible with, the HL7
+ * v3 Purpose of use Code system.
  *
  * @see <a href="http://healthit.gov/nhin/purposeofuse">NHINPurposeOfUse</a>
  */

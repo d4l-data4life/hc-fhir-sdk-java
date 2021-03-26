@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemPerformerRoleCodes {
 
     /**
-     * An entity or an entity's delegatee who is the grantee in an agreement such as a consent for services, advanced directive, or a privacy consent directive in accordance with jurisdictional, organizational, or patient policy.
+     * An entity or an entity's delegatee who is the grantee in an agreement such as a consent for services, advanced
+     * directive, or a privacy consent directive in accordance with jurisdictional, organizational, or patient policy.
      */
     @Json(name = "consenter")
     CONSENTER,

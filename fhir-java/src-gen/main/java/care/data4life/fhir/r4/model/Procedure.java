@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * Procedure.java
  * <p>
- * An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.
+ * An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or
+ * less invasive like long term services, counseling, or hypnotherapy.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
  * <p>
@@ -218,7 +219,8 @@ public class Procedure extends DomainResource {
     /**
      * Procedure.java
      * <p>
-     * A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
+     * A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a
+     * prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
      * <p>

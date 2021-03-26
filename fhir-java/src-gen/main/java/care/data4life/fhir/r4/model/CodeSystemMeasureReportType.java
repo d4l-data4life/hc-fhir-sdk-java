@@ -27,13 +27,15 @@ import com.squareup.moshi.Json;
 public enum CodeSystemMeasureReportType {
 
     /**
-     * An individual report that provides information on the performance for a given measure with respect to a single subject.
+     * An individual report that provides information on the performance for a given measure with respect to a single
+     * subject.
      */
     @Json(name = "individual")
     INDIVIDUAL,
 
     /**
-     * A subject list report that includes a listing of subjects that satisfied each population criteria in the measure.
+     * A subject list report that includes a listing of subjects that satisfied each population criteria in the
+     * measure.
      */
     @Json(name = "subject-list")
     SUBJECT_LIST,

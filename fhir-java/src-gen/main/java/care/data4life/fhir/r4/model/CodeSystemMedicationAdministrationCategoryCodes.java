@@ -33,13 +33,15 @@ public enum CodeSystemMedicationAdministrationCategoryCodes {
     INPATIENT,
 
     /**
-     * Includes administrations in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+     * Includes administrations in an outpatient setting (for example, Emergency Department, Outpatient Clinic,
+     * Outpatient Surgery, Doctor's office)
      */
     @Json(name = "outpatient")
     OUTPATIENT,
 
     /**
-     * Includes administrations by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
+     * Includes administrations by the patient in their home (this would include long term care or nursing homes,
+     * hospices, etc.)
      */
     @Json(name = "community")
     COMMUNITY,

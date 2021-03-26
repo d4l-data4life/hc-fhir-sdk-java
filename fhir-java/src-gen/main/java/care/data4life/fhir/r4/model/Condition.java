@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * Condition.java
  * <p>
- * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
+ * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a
+ * level of concern.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
  * <p>
@@ -182,7 +183,8 @@ public class Condition extends DomainResource {
     /**
      * Condition.java
      * <p>
-     * Supporting evidence / manifestations that are the basis of the Condition's verification status, such as evidence that confirmed or refuted the condition.
+     * Supporting evidence / manifestations that are the basis of the Condition's verification status, such as evidence
+     * that confirmed or refuted the condition.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
      * <p>

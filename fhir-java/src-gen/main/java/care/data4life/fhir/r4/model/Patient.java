@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * Patient.java
  * <p>
- * Demographics and other administrative information about an individual or animal receiving care or other health-related services.
+ * Demographics and other administrative information about an individual or animal receiving care or other
+ * health-related services.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
  * <p>

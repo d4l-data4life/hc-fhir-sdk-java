@@ -29,7 +29,9 @@ import javax.annotation.Nullable;
 /**
  * ValueSet.java
  * <p>
- * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+ * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a
+ * particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded
+ * elements](terminologies.html).
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
  * <p>
@@ -147,7 +149,9 @@ public class ValueSet extends DomainResource {
     /**
      * ValueSet.java
      * <p>
-     * A set of criteria that define the contents of the value set by including or excluding codes selected from the specified code system(s) that the value set draws from. This is also known as the Content Logical Definition (CLD).
+     * A set of criteria that define the contents of the value set by including or excluding codes selected from the
+     * specified code system(s) that the value set draws from. This is also known as the Content Logical Definition
+     * (CLD).
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
@@ -295,7 +299,8 @@ public class ValueSet extends DomainResource {
     /**
      * ValueSet.java
      * <p>
-     * Additional representations for this concept when used in this value set - other languages, aliases, specialized purposes, used for particular purposes, etc.
+     * Additional representations for this concept when used in this value set - other languages, aliases, specialized
+     * purposes, used for particular purposes, etc.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
@@ -341,7 +346,8 @@ public class ValueSet extends DomainResource {
     /**
      * ValueSet.java
      * <p>
-     * Select concepts by specify a matching criterion based on the properties (including relationships) defined by the system, or on filters defined by the system. If multiple filters are specified, they SHALL all be true.
+     * Select concepts by specify a matching criterion based on the properties (including relationships) defined by the
+     * system, or on filters defined by the system. If multiple filters are specified, they SHALL all be true.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
@@ -389,7 +395,8 @@ public class ValueSet extends DomainResource {
     /**
      * ValueSet.java
      * <p>
-     * A value set can also be "expanded", where the value set is turned into a simple collection of enumerated codes. This element holds the expansion, if it has been performed.
+     * A value set can also be "expanded", where the value set is turned into a simple collection of enumerated codes.
+     * This element holds the expansion, if it has been performed.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
@@ -516,7 +523,8 @@ public class ValueSet extends DomainResource {
     /**
      * ValueSet.java
      * <p>
-     * A parameter that controlled the expansion process. These parameters may be used by users of expanded value sets to check whether the expansion is suitable for a particular purpose, or to pick the correct expansion.
+     * A parameter that controlled the expansion process. These parameters may be used by users of expanded value sets
+     * to check whether the expansion is suitable for a particular purpose, or to pick the correct expansion.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>

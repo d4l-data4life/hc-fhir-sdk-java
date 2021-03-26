@@ -30,8 +30,8 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * Details and position information for a physical place.
  * <p>
- * Details and position information for a physical place where services are provided and resources
- * and participants may be stored, found, contained, or accommodated.
+ * Details and position information for a physical place where services are provided and resources and participants may
+ * be stored, found, contained, or accommodated.
  * <p>
  * <p>
  * "Generated from FHIR 4.0.1-9346c8cc45 on 2020-10-27

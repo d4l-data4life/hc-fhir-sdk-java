@@ -188,7 +188,8 @@ public class Specimen extends DomainResource {
     /**
      * Specimen.java
      * <p>
-     * The container holding the specimen.  The recursive nature of containers; i.e. blood in tube in tray in rack is not addressed here.
+     * The container holding the specimen.  The recursive nature of containers; i.e. blood in tube in tray in rack is
+     * not addressed here.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
      * <p>

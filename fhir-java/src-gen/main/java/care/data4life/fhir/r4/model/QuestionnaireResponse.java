@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * QuestionnaireResponse.java
  * <p>
- * A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
+ * A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets,
+ * corresponding to the structure of the grouping of the questionnaire being responded to.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
  * <p>
@@ -116,7 +117,8 @@ public class QuestionnaireResponse extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on
+     * 2021-03-26
      */
     public static class QuestionnaireResponseItem extends BackboneElement {
 
@@ -172,7 +174,8 @@ public class QuestionnaireResponse extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on
+     * 2021-03-26
      */
     public static class QuestionnaireResponseItemAnswer extends BackboneElement {
 

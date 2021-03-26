@@ -33,7 +33,8 @@ public enum CodeSystemLocationMode {
     INSTANCE,
 
     /**
-     * The Location represents a class of locations (e.g. Any Operating Theatre) although this class of locations could be constrained within a specific boundary (such as organization, or parent location, address etc.).
+     * The Location represents a class of locations (e.g. Any Operating Theatre) although this class of locations could
+     * be constrained within a specific boundary (such as organization, or parent location, address etc.).
      */
     @Json(name = "kind")
     KIND,

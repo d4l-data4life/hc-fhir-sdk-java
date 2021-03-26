@@ -27,7 +27,9 @@ import com.squareup.moshi.Json;
 public enum CodeSystemContactPointUse {
 
     /**
-     * A communication contact point at a home; attempted contacts for business purposes might intrude privacy and chances are one will contact family or other household members instead of the person one wishes to call. Typically used with urgent cases, or if no other contacts are available.
+     * A communication contact point at a home; attempted contacts for business purposes might intrude privacy and
+     * chances are one will contact family or other household members instead of the person one wishes to call.
+     * Typically used with urgent cases, or if no other contacts are available.
      */
     @Json(name = "home")
     HOME,
@@ -51,7 +53,8 @@ public enum CodeSystemContactPointUse {
     OLD,
 
     /**
-     * A telecommunication device that moves and stays with its owner. May have characteristics of all other use codes, suitable for urgent matters, not the first choice for routine business.
+     * A telecommunication device that moves and stays with its owner. May have characteristics of all other use codes,
+     * suitable for urgent matters, not the first choice for routine business.
      */
     @Json(name = "mobile")
     MOBILE,

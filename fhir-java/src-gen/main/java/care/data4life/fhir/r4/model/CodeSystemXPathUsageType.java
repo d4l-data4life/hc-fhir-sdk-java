@@ -45,7 +45,8 @@ public enum CodeSystemXPathUsageType {
     NEARBY,
 
     /**
-     * The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle.
+     * The search parameter is based on a spatial transform of the selected nodes, using physical distance from the
+     * middle.
      */
     @Json(name = "distance")
     DISTANCE,

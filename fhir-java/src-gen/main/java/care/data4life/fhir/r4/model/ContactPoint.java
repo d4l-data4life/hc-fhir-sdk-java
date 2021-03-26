@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
 /**
  * ContactPoint.java
  * <p>
- * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
+ * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email,
+ * etc.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ContactPoint">ContactPoint</a>
  * <p>

@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set includes sample Claim SubType codes which are used to distinguish the claim types for example within type institutional there may be subtypes for emergency services, bed stay and transportation.
+ * This value set includes sample Claim SubType codes which are used to distinguish the claim types for example within
+ * type institutional there may be subtypes for emergency services, bed stay and transportation.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/ex-claimsubtype">ExampleClaimSubTypeCodes</a>
  */

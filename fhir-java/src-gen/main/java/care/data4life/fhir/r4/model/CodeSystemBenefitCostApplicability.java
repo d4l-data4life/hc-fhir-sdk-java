@@ -27,13 +27,15 @@ import com.squareup.moshi.Json;
 public enum CodeSystemBenefitCostApplicability {
 
     /**
-     * Provider is contracted with the health insurance company to provide services to plan members for specific pre-negotiated rates
+     * Provider is contracted with the health insurance company to provide services to plan members for specific
+     * pre-negotiated rates
      */
     @Json(name = "in-network")
     IN_NETWORK,
 
     /**
-     * Provider is  not contracted with the health insurance company to provide services to plan members for specific pre-negotiated rates
+     * Provider is  not contracted with the health insurance company to provide services to plan members for specific
+     * pre-negotiated rates
      */
     @Json(name = "out-of-network")
     OUT_OF_NETWORK,

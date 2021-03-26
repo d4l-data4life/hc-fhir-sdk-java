@@ -21,6 +21,7 @@ import com.squareup.moshi.JsonReader;
 import com.squareup.moshi.JsonWriter;
 
 import java.io.IOException;
+
 import javax.annotation.Nullable;
 
 import care.data4life.fhir.r4.model.Canonical;

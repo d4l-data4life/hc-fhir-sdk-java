@@ -34,7 +34,8 @@ import static org.junit.Assert.*;
  * <p>
  * Information about an individual or animal receiving health care services.
  * <p>
- * Demographics and other administrative information about an individual or animal receiving care or other health-related services.
+ * Demographics and other administrative information about an individual or animal receiving care or other
+ * health-related services.
  * <p>
  * <p>
  * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26

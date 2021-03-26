@@ -102,7 +102,9 @@ public class Practitioner extends DomainResource {
     /**
      * Practitioner.java
      * <p>
-     * The official certifications, training, and licenses that authorize or otherwise pertain to the provision of care by the practitioner.  For example, a medical license issued by a medical board authorizing the practitioner to practice medicine within a certian locality.
+     * The official certifications, training, and licenses that authorize or otherwise pertain to the provision of care
+     * by the practitioner.  For example, a medical license issued by a medical board authorizing the practitioner to
+     * practice medicine within a certian locality.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Practitioner">Practitioner</a>
      * <p>

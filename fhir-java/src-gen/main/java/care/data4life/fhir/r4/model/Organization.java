@@ -29,7 +29,9 @@ import javax.annotation.Nullable;
 /**
  * Organization.java
  * <p>
- * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
+ * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form
+ * of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare
+ * practice groups, payer/insurer, etc.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
  * <p>

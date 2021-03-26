@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * A list of the base types defined by this version of the FHIR specification - types that are defined, but for which only specializations actually are created.
+ * A list of the base types defined by this version of the FHIR specification - types that are defined, but for which
+ * only specializations actually are created.
  *
  * @see <a href="http://hl7.org/fhir/abstract-types">AbstractType</a>
  */

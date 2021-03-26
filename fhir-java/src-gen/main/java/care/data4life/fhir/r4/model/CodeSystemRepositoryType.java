@@ -33,7 +33,8 @@ public enum CodeSystemRepositoryType {
     DIRECTLINK,
 
     /**
-     * When the API method (e.g. [base_url]/[parameter]) related with the URL of the website is executed, the resource can be seen directly (usually in JSON or XML format).
+     * When the API method (e.g. [base_url]/[parameter]) related with the URL of the website is executed, the resource
+     * can be seen directly (usually in JSON or XML format).
      */
     @Json(name = "openapi")
     OPENAPI,

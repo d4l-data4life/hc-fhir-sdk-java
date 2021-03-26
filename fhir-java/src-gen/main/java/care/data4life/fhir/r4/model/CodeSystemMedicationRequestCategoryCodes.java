@@ -33,13 +33,15 @@ public enum CodeSystemMedicationRequestCategoryCodes {
     INPATIENT,
 
     /**
-     * Includes requests for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+     * Includes requests for medications to be administered or consumed in an outpatient setting (for example, Emergency
+     * Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
      */
     @Json(name = "outpatient")
     OUTPATIENT,
 
     /**
-     * Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
+     * Includes requests for medications to be administered or consumed by the patient in their home (this would include
+     * long term care or nursing homes, hospices, etc.)
      */
     @Json(name = "community")
     COMMUNITY,

@@ -51,13 +51,15 @@ public enum CodeSystemTaskStatus {
     ACCEPTED,
 
     /**
-     * The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action.
+     * The potential performer who claimed ownership of the task has decided not to execute it prior to performing any
+     * action.
      */
     @Json(name = "rejected")
     REJECTED,
 
     /**
-     * The task is ready to be performed, but no action has yet been taken.  Used in place of requested/received/accepted/rejected when request assignment and acceptance is a given.
+     * The task is ready to be performed, but no action has yet been taken.  Used in place of
+     * requested/received/accepted/rejected when request assignment and acceptance is a given.
      */
     @Json(name = "ready")
     READY,

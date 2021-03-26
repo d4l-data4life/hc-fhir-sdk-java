@@ -51,7 +51,8 @@ public enum CodeSystemCoverageCopayTypeCodes {
     INPTHOSP,
 
     /**
-     * A visit held where the patient is remote relative to the practitioner, e.g. by phone, computer or video conference.
+     * A visit held where the patient is remote relative to the practitioner, e.g. by phone, computer or video
+     * conference.
      */
     @Json(name = "televisit")
     TELEVISIT,

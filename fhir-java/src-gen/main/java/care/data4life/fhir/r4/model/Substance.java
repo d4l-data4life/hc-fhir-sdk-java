@@ -145,7 +145,8 @@ public class Substance extends DomainResource {
     /**
      * Substance.java
      * <p>
-     * Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance.
+     * Substance may be used to describe a kind of substance, or a specific package/container of the substance: an
+     * instance.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
      * <p>
