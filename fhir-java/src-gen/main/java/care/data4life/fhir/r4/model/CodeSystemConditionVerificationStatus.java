@@ -27,8 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemConditionVerificationStatus {
 
     /**
-     * There is not sufficient diagnostic and/or clinical evidence to treat this as a confirmed
-     * condition.
+     * There is not sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
      */
     @Json(name = "unconfirmed")
     UNCONFIRMED,
@@ -40,15 +39,13 @@ public enum CodeSystemConditionVerificationStatus {
     PROVISIONAL,
 
     /**
-     * One of a set of potential (and typically mutually exclusive) diagnoses asserted to further
-     * guide the diagnostic process and preliminary treatment.
+     * One of a set of potential (and typically mutually exclusive) diagnoses asserted to further guide the diagnostic process and preliminary treatment.
      */
     @Json(name = "differential")
     DIFFERENTIAL,
 
     /**
-     * There is sufficient diagnostic and/or clinical evidence to treat this as a confirmed
-     * condition.
+     * There is sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
      */
     @Json(name = "confirmed")
     CONFIRMED,

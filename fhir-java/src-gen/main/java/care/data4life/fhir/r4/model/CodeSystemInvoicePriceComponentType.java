@@ -27,8 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemInvoicePriceComponentType {
 
     /**
-     * the amount is the base price used for calculating the total price before applying surcharges,
-     * discount or taxes.
+     * the amount is the base price used for calculating the total price before applying surcharges, discount or taxes.
      */
     @Json(name = "base")
     BASE,
@@ -58,8 +57,7 @@ public enum CodeSystemInvoicePriceComponentType {
     TAX,
 
     /**
-     * the amount is of informational character, it has not been applied in the calculation of the
-     * total price.
+     * the amount is of informational character, it has not been applied in the calculation of the total price.
      */
     @Json(name = "informational")
     INFORMATIONAL,

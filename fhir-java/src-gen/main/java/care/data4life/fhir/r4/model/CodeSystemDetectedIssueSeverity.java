@@ -33,15 +33,13 @@ public enum CodeSystemDetectedIssueSeverity {
     HIGH,
 
     /**
-     * Indicates the issue may result in noticeable adverse consequences but is unlikely to be
-     * life-threatening or cause permanent injury.
+     * Indicates the issue may result in noticeable adverse consequences but is unlikely to be life-threatening or cause permanent injury.
      */
     @Json(name = "moderate")
     MODERATE,
 
     /**
-     * Indicates the issue may result in some adverse consequences but is unlikely to substantially
-     * affect the situation of the subject.
+     * Indicates the issue may result in some adverse consequences but is unlikely to substantially affect the situation of the subject.
      */
     @Json(name = "low")
     LOW,

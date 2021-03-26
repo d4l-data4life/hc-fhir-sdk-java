@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Detailed information about the type of the image - its kind, purpose, or the kind of equipment
- * used to generate it.
+ * Detailed information about the type of the image - its kind, purpose, or the kind of equipment used to generate it.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/media-modality">MediaModality</a>
  */
@@ -40,8 +39,7 @@ public enum CodeSystemMediaModality {
     FAX,
 
     /**
-     * A digital scan of a document. This is reserved for when there is not enough metadata to
-     * create a document reference
+     * A digital scan of a document. This is reserved for when there is not enough metadata to create a document reference
      */
     @Json(name = "scan")
     SCAN,

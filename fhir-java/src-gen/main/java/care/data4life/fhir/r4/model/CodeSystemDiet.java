@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set defines a set of codes that can be used to indicate dietary preferences or
- * restrictions a patient may have.
+ * This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/diet">Diet</a>
  */
@@ -52,8 +51,7 @@ public enum CodeSystemDiet {
     GLUTEN_FREE,
 
     /**
-     * Food without meat, poultry, seafood, eggs, dairy products and other animal-derived
-     * substances.
+     * Food without meat, poultry, seafood, eggs, dairy products and other animal-derived substances.
      */
     @Json(name = "vegan")
     VEGAN,

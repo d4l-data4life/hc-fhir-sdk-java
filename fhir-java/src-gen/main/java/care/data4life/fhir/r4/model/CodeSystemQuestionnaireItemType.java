@@ -39,8 +39,7 @@ public enum CodeSystemQuestionnaireItemType {
     DISPLAY,
 
     /**
-     * An item that defines a specific answer to be captured, and which may have child items. (the
-     * answer provided in the QuestionnaireResponse should be of the defined datatype).
+     * An item that defines a specific answer to be captured, and which may have child items. (the answer provided in the QuestionnaireResponse should be of the defined datatype).
      */
     @Json(name = "question")
     QUESTION,
@@ -100,16 +99,13 @@ public enum CodeSystemQuestionnaireItemType {
     URL,
 
     /**
-     * Question with a Coding drawn from a list of possible answers (specified in either the
-     * answerOption property, or via the valueset referenced in the answerValueSet property) as an
-     * answer (valueCoding).
+     * Question with a Coding drawn from a list of possible answers (specified in either the answerOption property, or via the valueset referenced in the answerValueSet property) as an answer (valueCoding).
      */
     @Json(name = "choice")
     CHOICE,
 
     /**
-     * Answer is a Coding drawn from a list of possible answers (as with the choice type) or a
-     * free-text entry in a string (valueCoding or valueString).
+     * Answer is a Coding drawn from a list of possible answers (as with the choice type) or a free-text entry in a string (valueCoding or valueString).
      */
     @Json(name = "open-choice")
     OPEN_CHOICE,
@@ -121,17 +117,13 @@ public enum CodeSystemQuestionnaireItemType {
     ATTACHMENT,
 
     /**
-     * Question with a reference to another resource (practitioner, organization, etc.) as an answer
-     * (valueReference).
+     * Question with a reference to another resource (practitioner, organization, etc.) as an answer (valueReference).
      */
     @Json(name = "reference")
     REFERENCE,
 
     /**
-     * Question with a combination of a numeric value and unit, potentially with a comparator (<, >,
-     * etc.) as an answer. (valueQuantity) There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit'
-     * that can be used to define what unit should be captured (or the unit that has a ucum
-     * conversion from the provided unit).
+     * Question with a combination of a numeric value and unit, potentially with a comparator (<, >, etc.) as an answer. (valueQuantity) There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to define what unit should be captured (or the unit that has a ucum conversion from the provided unit).
      */
     @Json(name = "quantity")
     QUANTITY,

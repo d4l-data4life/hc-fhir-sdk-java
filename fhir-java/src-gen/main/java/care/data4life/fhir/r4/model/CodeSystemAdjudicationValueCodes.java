@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set includes a smattering of Adjudication Value codes which includes codes to indicate
- * the amounts eligible under the plan, the amount of benefit, copays etc.
+ * This value set includes a smattering of Adjudication Value codes which includes codes to indicate the amounts eligible under the plan, the amount of benefit, copays etc.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/adjudication">AdjudicationValueCodes</a>
  */

@@ -81,8 +81,7 @@ public enum CodeSystemObservationDataType {
     TIME,
 
     /**
-     * A date, date-time or partial date (e.g. just year or year + month) as used in human
-     * communication.
+     * A date, date-time or partial date (e.g. just year or year + month) as used in human communication.
      */
     @Json(name = "dateTime")
     DATETIME,

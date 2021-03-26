@@ -99,8 +99,7 @@ public enum CodeSystemAdverseEventCategory {
     MEDICAL_DEVICE_USE_ERROR,
 
     /**
-     * The adverse event pertains to a problem with a different manufacturer of the same
-     * medication.
+     * The adverse event pertains to a problem with a different manufacturer of the same medication.
      */
     @Json(name = "problem-different-manufacturer")
     PROBLEM_DIFFERENT_MANUFACTURER,

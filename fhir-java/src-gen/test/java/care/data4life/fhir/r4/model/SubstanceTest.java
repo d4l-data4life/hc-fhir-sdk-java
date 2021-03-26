@@ -17,13 +17,17 @@
 package care.data4life.fhir.r4.model;
 
 
+import javax.annotation.Nullable;
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
+
+import java.util.Date;
 
 import care.data4life.fhir.r4.FhirR4Parser;
 import care.data4life.fhir.test.util.FileHelper;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * SubstanceTest.java
@@ -31,7 +35,7 @@ import static org.junit.Assert.assertEquals;
  * A homogeneous material with a definite composition.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2020-10-27
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26
  */
 public class SubstanceTest {
 

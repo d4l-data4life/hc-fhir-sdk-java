@@ -20,25 +20,20 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This is an example value set defined by the FHIR project, that could be used to represent
- * possible payload document types.
+ * This is an example value set defined by the FHIR project, that could be used to represent possible payload document types.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/endpoint-payload-type">EndpointPayloadType</a>
  */
 public enum CodeSystemEndpointPayloadType {
 
     /**
-     * Any payload type can be used with this endpoint, it is either a payload agnostic
-     * infrastructure (such as a storage repository), or some other type of endpoint where payload
-     * considerations are internally handled, and not available
+     * Any payload type can be used with this endpoint, it is either a payload agnostic infrastructure (such as a storage repository), or some other type of endpoint where payload considerations are internally handled, and not available
      */
     @Json(name = "any")
     ANY,
 
     /**
-     * This endpoint does not require any content to be sent; simply connecting to the endpoint is
-     * enough notification. This can be used as a 'ping' to wakeup a service to retrieve content,
-     * which could be to ensure security considerations are correctly handled
+     * This endpoint does not require any content to be sent; simply connecting to the endpoint is enough notification. This can be used as a 'ping' to wakeup a service to retrieve content, which could be to ensure security considerations are correctly handled
      */
     @Json(name = "none")
     NONE,

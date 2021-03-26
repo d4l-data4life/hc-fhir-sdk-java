@@ -27,8 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemCareTeamStatus {
 
     /**
-     * The care team has been drafted and proposed, but not yet participating in the coordination
-     * and delivery of patient care.
+     * The care team has been drafted and proposed, but not yet participating in the coordination and delivery of patient care.
      */
     @Json(name = "proposed")
     PROPOSED,
@@ -40,8 +39,7 @@ public enum CodeSystemCareTeamStatus {
     ACTIVE,
 
     /**
-     * The care team is temporarily on hold or suspended and not participating in the coordination
-     * and delivery of care.
+     * The care team is temporarily on hold or suspended and not participating in the coordination and delivery of care.
      */
     @Json(name = "suspended")
     SUSPENDED,

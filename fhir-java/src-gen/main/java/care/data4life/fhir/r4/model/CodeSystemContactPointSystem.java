@@ -27,15 +27,13 @@ import com.squareup.moshi.Json;
 public enum CodeSystemContactPointSystem {
 
     /**
-     * The value is a telephone number used for voice calls. Use of full international numbers
-     * starting with + is recommended to enable automatic dialing support but not required.
+     * The value is a telephone number used for voice calls. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required.
      */
     @Json(name = "phone")
     PHONE,
 
     /**
-     * The value is a fax machine. Use of full international numbers starting with + is recommended
-     * to enable automatic dialing support but not required.
+     * The value is a fax machine. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required.
      */
     @Json(name = "fax")
     FAX,
@@ -47,16 +45,13 @@ public enum CodeSystemContactPointSystem {
     EMAIL,
 
     /**
-     * The value is a pager number. These may be local pager numbers that are only usable on a
-     * particular pager system.
+     * The value is a pager number. These may be local pager numbers that are only usable on a particular pager system.
      */
     @Json(name = "pager")
     PAGER,
 
     /**
-     * A contact that is not a phone, fax, pager or email address and is expressed as a URL.  This
-     * is intended for various institutional or personal contacts including web sites, blogs, Skype,
-     * Twitter, Facebook, etc. Do not use for email addresses.
+     * A contact that is not a phone, fax, pager or email address and is expressed as a URL.  This is intended for various institutional or personal contacts including web sites, blogs, Skype, Twitter, Facebook, etc. Do not use for email addresses.
      */
     @Json(name = "url")
     URL,
@@ -68,10 +63,7 @@ public enum CodeSystemContactPointSystem {
     SMS,
 
     /**
-     * A contact that is not a phone, fax, page or email address and is not expressible as a URL.
-     * E.g. Internal mail address.  This SHOULD NOT be used for contacts that are expressible as a
-     * URL (e.g. Skype, Twitter, Facebook, etc.)  Extensions may be used to distinguish "other"
-     * contact types.
+     * A contact that is not a phone, fax, page or email address and is not expressible as a URL.  E.g. Internal mail address.  This SHOULD NOT be used for contacts that are expressible as a URL (e.g. Skype, Twitter, Facebook, etc.)  Extensions may be used to distinguish "other" contact types.
      */
     @Json(name = "other")
     OTHER,

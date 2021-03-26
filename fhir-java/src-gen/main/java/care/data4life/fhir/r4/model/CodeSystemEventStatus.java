@@ -27,8 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemEventStatus {
 
     /**
-     * The core event has not started yet, but some staging activities have begun (e.g. surgical
-     * suite preparation).  Preparation stages may be tracked for billing purposes.
+     * The core event has not started yet, but some staging activities have begun (e.g. surgical suite preparation).  Preparation stages may be tracked for billing purposes.
      */
     @Json(name = "preparation")
     PREPARATION,
@@ -40,9 +39,7 @@ public enum CodeSystemEventStatus {
     IN_PROGRESS,
 
     /**
-     * The event was terminated prior to any activity beyond preparation.  I.e. The 'main' activity
-     * has not yet begun.  The boundary between preparatory and the 'main' activity is
-     * context-specific.
+     * The event was terminated prior to any activity beyond preparation.  I.e. The 'main' activity has not yet begun.  The boundary between preparatory and the 'main' activity is context-specific.
      */
     @Json(name = "not-done")
     NOT_DONE,
@@ -54,8 +51,7 @@ public enum CodeSystemEventStatus {
     ON_HOLD,
 
     /**
-     * The event was terminated prior to the full completion of the intended activity but after at
-     * least some of the 'main' activity (beyond preparation) has occurred.
+     * The event was terminated prior to the full completion of the intended activity but after at least some of the 'main' activity (beyond preparation) has occurred.
      */
     @Json(name = "stopped")
     STOPPED,
@@ -67,17 +63,13 @@ public enum CodeSystemEventStatus {
     COMPLETED,
 
     /**
-     * This electronic record should never have existed, though it is possible that real-world
-     * decisions were based on it.  (If real-world activity has occurred, the status should be
-     * "stopped" rather than "entered-in-error".).
+     * This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be "stopped" rather than "entered-in-error".).
      */
     @Json(name = "entered-in-error")
     ENTERED_IN_ERROR,
 
     /**
-     * The authoring/source system does not know which of the status values currently applies for
-     * this event.  Note: This concept is not to be used for "other" - one of the listed statuses is
-     * presumed to apply,  but the authoring/source system does not know which.
+     * The authoring/source system does not know which of the status values currently applies for this event.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply,  but the authoring/source system does not know which.
      */
     @Json(name = "unknown")
     UNKNOWN,

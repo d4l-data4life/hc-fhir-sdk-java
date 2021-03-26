@@ -72,5 +72,7 @@ public class Canonical {
     }
 
     @Override
-    public int hashCode() { return Objects.hash(url, version); }
+    public int hashCode() {
+        return Objects.hash(url, version);
+    }
 }

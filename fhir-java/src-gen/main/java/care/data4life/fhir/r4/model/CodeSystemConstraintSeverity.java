@@ -33,8 +33,7 @@ public enum CodeSystemConstraintSeverity {
     ERROR,
 
     /**
-     * If the constraint is violated, the resource is conformant, but it is not necessarily
-     * following best practice.
+     * If the constraint is violated, the resource is conformant, but it is not necessarily following best practice.
      */
     @Json(name = "warning")
     WARNING,

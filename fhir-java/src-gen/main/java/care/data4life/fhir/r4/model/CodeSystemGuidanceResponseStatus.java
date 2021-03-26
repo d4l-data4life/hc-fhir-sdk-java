@@ -33,8 +33,7 @@ public enum CodeSystemGuidanceResponseStatus {
     SUCCESS,
 
     /**
-     * The request was processed successfully, but more data may result in a more complete
-     * evaluation.
+     * The request was processed successfully, but more data may result in a more complete evaluation.
      */
     @Json(name = "data-requested")
     DATA_REQUESTED,

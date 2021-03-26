@@ -18,18 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
  * ContactPoint.java
  * <p>
- * Details for all kinds of technology mediated contact points for a person or organization,
- * including telephone, email, etc.
+ * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ContactPoint">ContactPoint</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ContactPoint) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ContactPoint) on 2021-03-26
  */
 public class ContactPoint extends Element {
 

@@ -16,6 +16,16 @@
 
 package care.data4life.fhir.r4.model;
 
+import com.squareup.moshi.Json;
+
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
+import javax.annotation.Nullable;
+
 /**
  * Distance.java
  * <p>
@@ -23,8 +33,7 @@ package care.data4life.fhir.r4.model;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Distance">Distance</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Distance) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Distance) on 2021-03-26
  */
 public class Distance extends Quantity {
 

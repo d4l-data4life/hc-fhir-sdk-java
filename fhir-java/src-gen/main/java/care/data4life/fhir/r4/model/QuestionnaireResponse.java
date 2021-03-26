@@ -18,20 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * QuestionnaireResponse.java
  * <p>
- * A structured set of questions and their answers. The questions are ordered and grouped into
- * coherent subsets, corresponding to the structure of the grouping of the questionnaire being
- * responded to.
+ * A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
- * on 2020-10-27
+ * <p>
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on 2021-03-26
  */
 public class QuestionnaireResponse extends DomainResource {
 
@@ -113,8 +115,8 @@ public class QuestionnaireResponse extends DomainResource {
      * A group or question item from the original questionnaire for which answers are provided.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
-     * on 2020-10-27
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on 2021-03-26
      */
     public static class QuestionnaireResponseItem extends BackboneElement {
 
@@ -169,8 +171,8 @@ public class QuestionnaireResponse extends DomainResource {
      * The respondent's answer(s) to the question.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
-     * on 2020-10-27
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on 2021-03-26
      */
     public static class QuestionnaireResponseItemAnswer extends BackboneElement {
 

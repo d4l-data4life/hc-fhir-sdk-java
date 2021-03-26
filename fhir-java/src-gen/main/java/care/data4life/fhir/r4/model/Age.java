@@ -16,6 +16,16 @@
 
 package care.data4life.fhir.r4.model;
 
+import com.squareup.moshi.Json;
+
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
+import javax.annotation.Nullable;
+
 /**
  * Age.java
  * <p>
@@ -23,7 +33,7 @@ package care.data4life.fhir.r4.model;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Age">Age</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Age) on 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Age) on 2021-03-26
  */
 public class Age extends Quantity {
 

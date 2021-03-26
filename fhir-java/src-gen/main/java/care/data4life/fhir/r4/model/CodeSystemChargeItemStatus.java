@@ -27,8 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemChargeItemStatus {
 
     /**
-     * The charge item has been entered, but the charged service is not  yet complete, so it shall
-     * not be billed yet but might be used in the context of pre-authorization.
+     * The charge item has been entered, but the charged service is not  yet complete, so it shall not be billed yet but might be used in the context of pre-authorization.
      */
     @Json(name = "planned")
     PLANNED,
@@ -40,8 +39,7 @@ public enum CodeSystemChargeItemStatus {
     BILLABLE,
 
     /**
-     * The charge item has been determined to be not billable (e.g. due to rules associated with the
-     * billing code).
+     * The charge item has been determined to be not billable (e.g. due to rules associated with the billing code).
      */
     @Json(name = "not-billable")
     NOT_BILLABLE,
@@ -53,9 +51,7 @@ public enum CodeSystemChargeItemStatus {
     ABORTED,
 
     /**
-     * The charge item has been billed (e.g. a billing engine has generated financial transactions
-     * by applying the associated ruled for the charge item to the context of the Encounter, and
-     * placed them into Claims/Invoices.
+     * The charge item has been billed (e.g. a billing engine has generated financial transactions by applying the associated ruled for the charge item to the context of the Encounter, and placed them into Claims/Invoices.
      */
     @Json(name = "billed")
     BILLED,
@@ -67,9 +63,7 @@ public enum CodeSystemChargeItemStatus {
     ENTERED_IN_ERROR,
 
     /**
-     * The authoring system does not know which of the status values currently applies for this
-     * charge item  Note: This concept is not to be used for "other" - one of the listed statuses is
-     * presumed to apply, it's just not known which one.
+     * The authoring system does not know which of the status values currently applies for this charge item  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
      */
     @Json(name = "unknown")
     UNKNOWN,

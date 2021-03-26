@@ -18,20 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Patient.java
  * <p>
- * Demographics and other administrative information about an individual or animal receiving care or
- * other health-related services.
+ * Demographics and other administrative information about an individual or animal receiving care or other health-related services.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-03-26
  */
 public class Patient extends DomainResource {
 
@@ -144,8 +146,7 @@ public class Patient extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-03-26
      */
     public static class PatientCommunication extends BackboneElement {
 
@@ -186,8 +187,7 @@ public class Patient extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-03-26
      */
     public static class PatientContact extends BackboneElement {
 
@@ -248,8 +248,7 @@ public class Patient extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-03-26
      */
     public static class PatientLink extends BackboneElement {
 

@@ -93,15 +93,13 @@ public enum CodeSystemDataAbsentReason {
     NOT_A_NUMBER,
 
     /**
-     * The numeric value is excessively low and unrepresentable due to a floating point processing
-     * error.
+     * The numeric value is excessively low and unrepresentable due to a floating point processing error.
      */
     @Json(name = "negative-infinity")
     NEGATIVE_INFINITY,
 
     /**
-     * The numeric value is excessively high and unrepresentable due to a floating point processing
-     * error.
+     * The numeric value is excessively high and unrepresentable due to a floating point processing error.
      */
     @Json(name = "positive-infinity")
     POSITIVE_INFINITY,

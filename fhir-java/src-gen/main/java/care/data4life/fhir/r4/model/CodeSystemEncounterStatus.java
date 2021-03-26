@@ -33,22 +33,19 @@ public enum CodeSystemEncounterStatus {
     PLANNED,
 
     /**
-     * The Patient is present for the encounter, however is not currently meeting with a
-     * practitioner.
+     * The Patient is present for the encounter, however is not currently meeting with a practitioner.
      */
     @Json(name = "arrived")
     ARRIVED,
 
     /**
-     * The patient has been assessed for the priority of their treatment based on the severity of
-     * their condition.
+     * The patient has been assessed for the priority of their treatment based on the severity of their condition.
      */
     @Json(name = "triaged")
     TRIAGED,
 
     /**
-     * The Encounter has begun and the patient is present / the practitioner and the patient are
-     * meeting.
+     * The Encounter has begun and the patient is present / the practitioner and the patient are meeting.
      */
     @Json(name = "in-progress")
     IN_PROGRESS,
@@ -78,8 +75,7 @@ public enum CodeSystemEncounterStatus {
     ENTERED_IN_ERROR,
 
     /**
-     * The encounter status is unknown. Note that "unknown" is a value of last resort and every
-     * attempt should be made to provide a meaningful value other than "unknown".
+     * The encounter status is unknown. Note that "unknown" is a value of last resort and every attempt should be made to provide a meaningful value other than "unknown".
      */
     @Json(name = "unknown")
     UNKNOWN,

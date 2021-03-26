@@ -18,19 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * FamilyMemberHistory.java
  * <p>
- * Significant health conditions for a person related to the patient relevant in the context of care
- * for the patient.
+ * Significant health conditions for a person related to the patient relevant in the context of care for the patient.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory">FamilyMemberHistory</a>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory)
- * on 2020-10-27
+ * <p>
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory) on 2021-03-26
  */
 public class FamilyMemberHistory extends DomainResource {
 
@@ -186,13 +189,11 @@ public class FamilyMemberHistory extends DomainResource {
     /**
      * FamilyMemberHistory.java
      * <p>
-     * The significant Conditions (or condition) that the family member had. This is a repeating
-     * section to allow a system to represent more than one condition per resource, though there is
-     * nothing stopping multiple resources - one per condition.
+     * The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory">FamilyMemberHistory</a>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory)
-     * on 2020-10-27
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory) on 2021-03-26
      */
     public static class FamilyMemberHistoryCondition extends BackboneElement {
 

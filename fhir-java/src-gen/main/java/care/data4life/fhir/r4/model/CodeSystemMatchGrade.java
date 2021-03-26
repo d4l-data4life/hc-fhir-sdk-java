@@ -33,23 +33,19 @@ public enum CodeSystemMatchGrade {
     CERTAIN,
 
     /**
-     * This record is a close match, but not a certain match. Additional review (e.g. by a human)
-     * may be required before using this as a match.
+     * This record is a close match, but not a certain match. Additional review (e.g. by a human) may be required before using this as a match.
      */
     @Json(name = "probable")
     PROBABLE,
 
     /**
-     * This record may be a matching one. Additional review (e.g. by a human) SHOULD be performed
-     * before using this as a match.
+     * This record may be a matching one. Additional review (e.g. by a human) SHOULD be performed before using this as a match.
      */
     @Json(name = "possible")
     POSSIBLE,
 
     /**
-     * This record is known not to be a match. Note that usually non-matching records are not
-     * returned, but in some cases records previously or likely considered as a match may
-     * specifically be negated by the matching engine.
+     * This record is known not to be a match. Note that usually non-matching records are not returned, but in some cases records previously or likely considered as a match may specifically be negated by the matching engine.
      */
     @Json(name = "certainly-not")
     CERTAINLY_NOT,

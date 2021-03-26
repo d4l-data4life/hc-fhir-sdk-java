@@ -39,8 +39,7 @@ public enum CodeSystemDiscriminatorType {
     EXISTS,
 
     /**
-     * The slices have different values in the nominated element, as determined by testing them
-     * against the applicable ElementDefinition.pattern[x].
+     * The slices have different values in the nominated element, as determined by testing them against the applicable ElementDefinition.pattern[x].
      */
     @Json(name = "pattern")
     PATTERN,
@@ -52,10 +51,7 @@ public enum CodeSystemDiscriminatorType {
     TYPE,
 
     /**
-     * The slices are differentiated by conformance of the nominated element to a specified profile.
-     * Note that if the path specifies .resolve() then the profile is the target profile on the
-     * reference. In this case, validation by the possible profiles is required to differentiate the
-     * slices.
+     * The slices are differentiated by conformance of the nominated element to a specified profile. Note that if the path specifies .resolve() then the profile is the target profile on the reference. In this case, validation by the possible profiles is required to differentiate the slices.
      */
     @Json(name = "profile")
     PROFILE,

@@ -20,37 +20,32 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Statement about the degree of clinical certainty that a specific substance was the cause of the
- * manifestation in a reaction event.
+ * Statement about the degree of clinical certainty that a specific substance was the cause of the manifestation in a reaction event.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/reaction-event-certainty">AllergyIntoleranceCertainty</a>
  */
 public enum CodeSystemAllergyIntoleranceCertainty {
 
     /**
-     * There is a low level of clinical certainty that the reaction was caused by the identified
-     * substance.
+     * There is a low level of clinical certainty that the reaction was caused by the identified substance.
      */
     @Json(name = "unlikely")
     UNLIKELY,
 
     /**
-     * There is a high level of clinical certainty that the reaction was caused by the identified
-     * substance.
+     * There is a high level of clinical certainty that the reaction was caused by the identified substance.
      */
     @Json(name = "likely")
     LIKELY,
 
     /**
-     * There is a very high level of clinical certainty that the reaction was due to the identified
-     * substance, which may include clinical evidence by testing or rechallenge.
+     * There is a very high level of clinical certainty that the reaction was due to the identified substance, which may include clinical evidence by testing or rechallenge.
      */
     @Json(name = "confirmed")
     CONFIRMED,
 
     /**
-     * The clinical certainty that the reaction was caused by the identified substance is unknown.
-     * It is an explicit assertion that certainty is not known.
+     * The clinical certainty that the reaction was caused by the identified substance is unknown.  It is an explicit assertion that certainty is not known.
      */
     @Json(name = "unknown")
     UNKNOWN,

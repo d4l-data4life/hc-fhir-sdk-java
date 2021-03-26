@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * The risk of an adverse reaction (allergy or intolerance) for this patient upon exposure to the
- * substance (including pharmaceutical products).
+ * The risk of an adverse reaction (allergy or intolerance) for this patient upon exposure to the substance (including pharmaceutical products).
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk">AllergyIntoleranceSubstanceExposureRisk</a>
  */

@@ -33,15 +33,13 @@ public enum CodeSystemAggregationMode {
     CONTAINED,
 
     /**
-     * The reference to a resource that has to be resolved externally to the resource that includes
-     * the reference.
+     * The reference to a resource that has to be resolved externally to the resource that includes the reference.
      */
     @Json(name = "referenced")
     REFERENCED,
 
     /**
-     * The resource the reference points to will be found in the same bundle as the resource that
-     * includes the reference.
+     * The resource the reference points to will be found in the same bundle as the resource that includes the reference.
      */
     @Json(name = "bundled")
     BUNDLED,

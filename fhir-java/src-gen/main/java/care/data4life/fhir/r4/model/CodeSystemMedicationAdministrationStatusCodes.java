@@ -33,15 +33,13 @@ public enum CodeSystemMedicationAdministrationStatusCodes {
     IN_PROGRESS,
 
     /**
-     * The administration was terminated prior to any impact on the subject (though preparatory
-     * actions may have been taken)
+     * The administration was terminated prior to any impact on the subject (though preparatory actions may have been taken)
      */
     @Json(name = "not-done")
     NOT_DONE,
 
     /**
-     * Actions implied by the administration have been temporarily halted, but are expected to
-     * continue later. May also be called 'suspended'.
+     * Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called 'suspended'.
      */
     @Json(name = "on-hold")
     ON_HOLD,
@@ -59,16 +57,13 @@ public enum CodeSystemMedicationAdministrationStatusCodes {
     ENTERED_IN_ERROR,
 
     /**
-     * Actions implied by the administration have been permanently halted, before all of them
-     * occurred.
+     * Actions implied by the administration have been permanently halted, before all of them occurred.
      */
     @Json(name = "stopped")
     STOPPED,
 
     /**
-     * The authoring system does not know which of the status values currently applies for this
-     * request. Note: This concept is not to be used for 'other' - one of the listed statuses is
-     * presumed to apply, it's just not known which one.
+     * The authoring system does not know which of the status values currently applies for this request. Note: This concept is not to be used for 'other' - one of the listed statuses is presumed to apply, it's just not known which one.
      */
     @Json(name = "unknown")
     UNKNOWN,

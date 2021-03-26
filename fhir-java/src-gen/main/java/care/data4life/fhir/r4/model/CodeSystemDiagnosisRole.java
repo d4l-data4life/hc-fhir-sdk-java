@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set defines a set of codes that can be used to express the role of a diagnosis on the
- * Encounter or EpisodeOfCare record.
+ * This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/diagnosis-role">DiagnosisRole</a>
  */

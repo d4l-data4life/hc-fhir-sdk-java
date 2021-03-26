@@ -39,8 +39,7 @@ public enum CodeSystemIssueSeverity {
     ERROR,
 
     /**
-     * The issue is not important enough to cause the action to fail but may cause it to be
-     * performed suboptimally or in a way that is not as desired.
+     * The issue is not important enough to cause the action to fail but may cause it to be performed suboptimally or in a way that is not as desired.
      */
     @Json(name = "warning")
     WARNING,

@@ -17,26 +17,27 @@
 package care.data4life.fhir.r4.model;
 
 
+import javax.annotation.Nullable;
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
+
+import java.util.Date;
 
 import care.data4life.fhir.r4.FhirR4Parser;
 import care.data4life.fhir.test.util.FileHelper;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * ValueSetTest.java
  * <p>
  * A set of codes drawn from one or more code systems.
  * <p>
- * A ValueSet resource instance specifies a set of codes drawn from one or more code systems,
- * intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html)
- * definitions and their use in [coded elements](terminologies.html).
+ * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2020-10-27
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26
  */
 public class ValueSetTest {
 

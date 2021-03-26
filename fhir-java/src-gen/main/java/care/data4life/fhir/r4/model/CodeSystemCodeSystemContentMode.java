@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * The extent of the content of the code system (the concepts and codes it defines) are represented
- * in a code system resource.
+ * The extent of the content of the code system (the concepts and codes it defines) are represented in a code system resource.
  *
  * @see <a href="http://hl7.org/fhir/codesystem-content-mode">CodeSystemContentMode</a>
  */
@@ -34,19 +33,13 @@ public enum CodeSystemCodeSystemContentMode {
     NOT_PRESENT,
 
     /**
-     * A few representative concepts are included in the code system resource. There is no useful
-     * intent in the subset choice and there's no process to make it workable: it's not intended to
-     * be workable.
+     * A few representative concepts are included in the code system resource. There is no useful intent in the subset choice and there's no process to make it workable: it's not intended to be workable.
      */
     @Json(name = "example")
     EXAMPLE,
 
     /**
-     * A subset of the code system concepts are included in the code system resource. This is a
-     * curated subset released for a specific purpose under the governance of the code system
-     * steward, and that the intent, bounds and consequences of the fragmentation are clearly
-     * defined in the fragment or the code system documentation. Fragments are also known as
-     * partitions.
+     * A subset of the code system concepts are included in the code system resource. This is a curated subset released for a specific purpose under the governance of the code system steward, and that the intent, bounds and consequences of the fragmentation are clearly defined in the fragment or the code system documentation. Fragments are also known as partitions.
      */
     @Json(name = "fragment")
     FRAGMENT,
@@ -58,8 +51,7 @@ public enum CodeSystemCodeSystemContentMode {
     COMPLETE,
 
     /**
-     * The resource doesn't define any new concepts; it just provides additional designations and
-     * properties to another code system.
+     * The resource doesn't define any new concepts; it just provides additional designations and properties to another code system.
      */
     @Json(name = "supplement")
     SUPPLEMENT,

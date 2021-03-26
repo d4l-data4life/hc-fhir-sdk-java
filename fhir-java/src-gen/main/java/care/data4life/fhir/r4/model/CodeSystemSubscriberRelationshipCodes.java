@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set includes codes for the relationship between the Subscriber and the Beneficiary
- * (insured/covered party/patient).
+ * This value set includes codes for the relationship between the Subscriber and the Beneficiary (insured/covered party/patient).
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/subscriber-relationship">SubscriberRelationshipCodes</a>
  */

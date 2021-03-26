@@ -17,24 +17,27 @@
 package care.data4life.fhir.r4.model;
 
 
+import javax.annotation.Nullable;
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
+
+import java.util.Date;
 
 import care.data4life.fhir.r4.FhirR4Parser;
 import care.data4life.fhir.test.util.FileHelper;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * ConditionTest.java
  * <p>
  * Detailed information about conditions, problems or diagnoses.
  * <p>
- * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept
- * that has risen to a level of concern.
+ * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2020-10-27
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26
  */
 public class ConditionTest {
 

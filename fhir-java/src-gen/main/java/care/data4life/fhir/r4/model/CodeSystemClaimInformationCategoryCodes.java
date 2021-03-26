@@ -87,15 +87,13 @@ public enum CodeSystemClaimInformationCategoryCodes {
     OTHER,
 
     /**
-     * An indication that the patient was hospitalized, the period if known otherwise a Yes/No
-     * (boolean).
+     * An indication that the patient was hospitalized, the period if known otherwise a Yes/No (boolean).
      */
     @Json(name = "hospitalized")
     HOSPITALIZED,
 
     /**
-     * An indication that the patient was unable to work, the period if known otherwise a Yes/No
-     * (boolean).
+     * An indication that the patient was unable to work, the period if known otherwise a Yes/No (boolean).
      */
     @Json(name = "employmentimpacted")
     EMPLOYMENTIMPACTED,

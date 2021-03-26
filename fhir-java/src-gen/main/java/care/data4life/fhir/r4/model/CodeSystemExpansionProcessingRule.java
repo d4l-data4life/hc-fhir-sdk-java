@@ -33,8 +33,7 @@ public enum CodeSystemExpansionProcessingRule {
     ALL_CODES,
 
     /**
-     * The expanion (when in UI mode) lists the groups, and then any codes that have not been
-     * included in a group.
+     * The expanion (when in UI mode) lists the groups, and then any codes that have not been included in a group.
      */
     @Json(name = "ungrouped")
     UNGROUPED,

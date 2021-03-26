@@ -51,8 +51,7 @@ public enum CodeSystemGoalLifecycleStatus {
     ACTIVE,
 
     /**
-     * The goal remains a long term objective but is no longer being actively pursued for a
-     * temporary period of time.
+     * The goal remains a long term objective but is no longer being actively pursued for a temporary period of time.
      */
     @Json(name = "on-hold")
     ON_HOLD,

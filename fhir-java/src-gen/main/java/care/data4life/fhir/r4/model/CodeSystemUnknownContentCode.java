@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * A code that indicates whether an application accepts unknown elements or extensions when reading
- * resources.
+ * A code that indicates whether an application accepts unknown elements or extensions when reading resources.
  *
  * @see <a href="http://hl7.org/fhir/unknown-content-code">UnknownContentCode</a>
  */

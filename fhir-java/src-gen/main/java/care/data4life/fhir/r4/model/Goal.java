@@ -18,21 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Goal.java
  * <p>
- * Describes the intended objective(s) for a patient, group or organization care, for example,
- * weight loss, restoring an activity of daily living, obtaining herd immunity via immunization,
- * meeting a process improvement objective, etc.
+ * Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Goal">Goal</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Goal) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Goal) on 2021-03-26
  */
 public class Goal extends DomainResource {
 
@@ -147,8 +148,7 @@ public class Goal extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Goal">Goal</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Goal) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Goal) on 2021-03-26
      */
     public static class GoalTarget extends BackboneElement {
 

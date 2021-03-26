@@ -17,25 +17,27 @@
 package care.data4life.fhir.r4.model;
 
 
+import javax.annotation.Nullable;
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
+
+import java.util.Date;
 
 import care.data4life.fhir.r4.FhirR4Parser;
 import care.data4life.fhir.test.util.FileHelper;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * GoalTest.java
  * <p>
  * Describes the intended objective(s) for a patient, group or organization.
  * <p>
- * Describes the intended objective(s) for a patient, group or organization care, for example,
- * weight loss, restoring an activity of daily living, obtaining herd immunity via immunization,
- * meeting a process improvement objective, etc.
+ * Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2020-10-27
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26
  */
 public class GoalTest {
 

@@ -27,8 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemQuestionnaireItemOperator {
 
     /**
-     * True if whether an answer exists is equal to the enableWhen answer (which must be a
-     * boolean).
+     * True if whether an answer exists is equal to the enableWhen answer (which must be a boolean).
      */
     @Json(name = "exists")
     EXISTS,
@@ -58,15 +57,13 @@ public enum CodeSystemQuestionnaireItemOperator {
     LESS_THAN,
 
     /**
-     * True if whether at least no answer has a value that is greater or equal to the enableWhen
-     * answer.
+     * True if whether at least no answer has a value that is greater or equal to the enableWhen answer.
      */
     @Json(name = ">=")
     GREATER_OR_EQUAL,
 
     /**
-     * True if whether at least no answer has a value that is less or equal to the enableWhen
-     * answer.
+     * True if whether at least no answer has a value that is less or equal to the enableWhen answer.
      */
     @Json(name = "<=")
     LESS_OR_EQUAL,

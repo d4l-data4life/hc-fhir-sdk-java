@@ -27,9 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemMedicationDispenseStatusCodes {
 
     /**
-     * The core event has not started yet, but some staging activities have begun (e.g. initial
-     * compounding or packaging of medication). Preparation stages may be tracked for billing
-     * purposes.
+     * The core event has not started yet, but some staging activities have begun (e.g. initial compounding or packaging of medication). Preparation stages may be tracked for billing purposes.
      */
     @Json(name = "preparation")
     PREPARATION,
@@ -47,8 +45,7 @@ public enum CodeSystemMedicationDispenseStatusCodes {
     CANCELLED,
 
     /**
-     * The dispense process is paused while waiting for an external event to reactivate the
-     * dispense.  For example, new stock has arrived or the prescriber has called.
+     * The dispense process is paused while waiting for an external event to reactivate the dispense.  For example, new stock has arrived or the prescriber has called.
      */
     @Json(name = "on-hold")
     ON_HOLD,
@@ -78,9 +75,7 @@ public enum CodeSystemMedicationDispenseStatusCodes {
     DECLINED,
 
     /**
-     * The authoring system does not know which of the status values applies for this medication
-     * dispense.  Note: this concept is not to be used for other - one of the listed statuses is
-     * presumed to apply, it's just now known which one.
+     * The authoring system does not know which of the status values applies for this medication dispense.  Note: this concept is not to be used for other - one of the listed statuses is presumed to apply, it's just now known which one.
      */
     @Json(name = "unknown")
     UNKNOWN,

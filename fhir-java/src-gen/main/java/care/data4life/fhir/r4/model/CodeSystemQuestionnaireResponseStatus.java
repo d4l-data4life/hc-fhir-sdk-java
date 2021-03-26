@@ -27,22 +27,19 @@ import com.squareup.moshi.Json;
 public enum CodeSystemQuestionnaireResponseStatus {
 
     /**
-     * This QuestionnaireResponse has been partially filled out with answers but changes or
-     * additions are still expected to be made to it.
+     * This QuestionnaireResponse has been partially filled out with answers but changes or additions are still expected to be made to it.
      */
     @Json(name = "in-progress")
     IN_PROGRESS,
 
     /**
-     * This QuestionnaireResponse has been filled out with answers and the current content is
-     * regarded as definitive.
+     * This QuestionnaireResponse has been filled out with answers and the current content is regarded as definitive.
      */
     @Json(name = "completed")
     COMPLETED,
 
     /**
-     * This QuestionnaireResponse has been filled out with answers, then marked as complete, yet
-     * changes or additions have been made to it afterwards.
+     * This QuestionnaireResponse has been filled out with answers, then marked as complete, yet changes or additions have been made to it afterwards.
      */
     @Json(name = "amended")
     AMENDED,
@@ -54,8 +51,7 @@ public enum CodeSystemQuestionnaireResponseStatus {
     ENTERED_IN_ERROR,
 
     /**
-     * This QuestionnaireResponse has been partially filled out with answers but has been abandoned.
-     * It is unknown whether changes or additions are expected to be made to it.
+     * This QuestionnaireResponse has been partially filled out with answers but has been abandoned. It is unknown whether changes or additions are expected to be made to it.
      */
     @Json(name = "stopped")
     STOPPED,

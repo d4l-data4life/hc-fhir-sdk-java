@@ -33,8 +33,7 @@ public enum CodeSystemDeviceMetricCategory {
     MEASUREMENT,
 
     /**
-     * DeviceObservations generated for this DeviceMetric is a setting that will influence the
-     * behavior of the Device.
+     * DeviceObservations generated for this DeviceMetric is a setting that will influence the behavior of the Device.
      */
     @Json(name = "setting")
     SETTING,

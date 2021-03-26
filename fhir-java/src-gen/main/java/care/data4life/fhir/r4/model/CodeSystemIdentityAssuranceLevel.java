@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * The level of confidence that this link represents the same actual person, based on NIST
- * Authentication Levels.
+ * The level of confidence that this link represents the same actual person, based on NIST Authentication Levels.
  *
  * @see <a href="http://hl7.org/fhir/identity-assuranceLevel">IdentityAssuranceLevel</a>
  */

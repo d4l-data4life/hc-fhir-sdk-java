@@ -18,21 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Organization.java
  * <p>
- * A formally or informally recognized grouping of people or organizations formed for the purpose of
- * achieving some form of collective action.  Includes companies, institutions, corporations,
- * departments, community groups, healthcare practice groups, payer/insurer, etc.
+ * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Organization) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Organization) on 2021-03-26
  */
 public class Organization extends DomainResource {
 
@@ -105,8 +106,7 @@ public class Organization extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Organization)
-     * on 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Organization) on 2021-03-26
      */
     public static class OrganizationContact extends BackboneElement {
 

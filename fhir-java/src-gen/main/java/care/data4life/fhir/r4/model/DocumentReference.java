@@ -18,22 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * DocumentReference.java
  * <p>
- * A reference to a document of any kind for any purpose. Provides metadata about the document so
- * that the document can be discovered and managed. The scope of a document is any seralized object
- * with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned
- * paper, and non-patient specific documents like policy text.
+ * A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
- * on 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-03-26
  */
 public class DocumentReference extends DomainResource {
 
@@ -138,12 +138,11 @@ public class DocumentReference extends DomainResource {
     /**
      * DocumentReference.java
      * <p>
-     * The document and format referenced. There may be multiple content element repetitions, each
-     * with a different format.
+     * The document and format referenced. There may be multiple content element repetitions, each with a different format.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
-     * on 2020-10-27
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-03-26
      */
     public static class DocumentReferenceContent extends BackboneElement {
 
@@ -183,8 +182,8 @@ public class DocumentReference extends DomainResource {
      * The clinical context in which the document was prepared.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
-     * on 2020-10-27
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-03-26
      */
     public static class DocumentReferenceContext extends BackboneElement {
 
@@ -244,8 +243,8 @@ public class DocumentReference extends DomainResource {
      * Relationships that this document has with other document references that already exist.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
-     * on 2020-10-27
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-03-26
      */
     public static class DocumentReferenceRelatesTo extends BackboneElement {
 

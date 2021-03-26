@@ -18,22 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Timing.java
  * <p>
- * Specifies an event that may occur multiple times. Timing schedules are used to record when things
- * are planned, expected or requested to occur. The most common usage is in dosage instructions for
- * medications. They are also used when planning care of various kinds, and may be used for
- * reporting the schedule to which past regular activities were carried out.
+ * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on 2021-03-26
  */
 public class Timing extends BackboneElement {
 
@@ -71,8 +71,7 @@ public class Timing extends BackboneElement {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on 2021-03-26
      */
     public static class TimingRepeat extends Element {
 

@@ -26,7 +26,7 @@ import java.util.Objects;
 
 import javax.annotation.Nullable;
 
-{%- for klass in classes %}
+{%-for klass in classes%}
 
 /**
  * {{ profile.targetname }}.java
@@ -35,79 +35,80 @@ import javax.annotation.Nullable;
  * {%- else  %}{%- if klass.short %}
  * {{ klass.short }}
  * {% endif %}{%- endif %}
- * @see <a href="{{ profile.url }}">{{ profile.targetname }}</a>
  *
+ * @see <a href="{{ profile.url }}">{{ profile.targetname }}</a>
+ * <p>
  * Generated from FHIR {{ info.version }} ({{ profile.url }}) on {{ info.date }}
  */
-public {% if not loop.first %}static {% endif %}class {{ klass.name }}{% if klass.superclass.name %} extends {{ klass.superclass.name}} {% endif %}{% if klass.name == "Element" or klass.name == "Resource" %} extends FhirR4Base{% endif %} {
+public {%if not loop.first%}static {%endif%}class {{klass.name}}{%if klass.superclass.name%}extends{{klass.superclass.name}}{%endif%}{%if klass.name=="Element"or klass.name=="Resource"%}extends FhirR4Base{%endif%}{
 
-	public static final String resourceType = "{{ klass.name }}";
+public static final String resourceType="{{ klass.name }}";
 
-{%- for prop in klass.properties %}
-  {% if prop.enum %}
-	// {{ prop.formal }}
-    {%- if prop.enum.restricted_to %}
-	// Only use: {{ prop.enum.restricted_to }}
-    {%- endif %}
-  {%- else %}
-	// {{ prop.short }}.
-  {%- endif %}
-    @Json(name = "{{prop.orig_name}}")
-	{%- if prop.nonoptional %}
-	{%- if prop.one_of_many %}
-	@Nullable
-    {%- endif %}
-	{%- else %}
-	@Nullable
-    {%- endif %}
-	public {% if prop.is_array %}List<{% endif %}{% if prop.enum %}CodeSystem{% endif %}{{ prop.enum.name or prop.class_name }}{% if prop.is_array %}>{% endif %} {{ prop.name }};
-{%- endfor %}
+        {%-for prop in klass.properties%}
+        {%if prop.enum %}
+        // {{ prop.formal }}
+        {%-if prop.enum.restricted_to%}
+        // Only use: {{ prop.enum.restricted_to }}
+        {%-endif%}
+        {%-else%}
+        // {{ prop.short }}.
+        {%-endif%}
+@Json(name = "{{prop.orig_name}}")
+	{%-if prop.nonoptional%}
+            {%-if prop.one_of_many%}
+@Nullable
+    {%-endif%}
+            {%-else%}
+@Nullable
+    {%-endif%}
+public {%if prop.is_array%}List<{%endif%}{%if prop.enum %}CodeSystem{%endif%}{{prop.enum.name or prop.class_name}}{%if prop.is_array%}>{%endif%}{{prop.name}};
+        {%-endfor%}
 
-    {% if klass.has_nonoptional %}
-	/**
-	 * Constructor for all required properties.
-	 * {%- for nonop in klass.nonexpanded_nonoptionals %}
-	 * {%- if nonop.one_of_many %} @param {{ nonop.one_of_many }} as one of{% for expanded in klass.expanded_nonoptionals[nonop.one_of_many] %}{%- if not loop.first %},{% endif %} {{ expanded.class_name }}{%- endfor -%}
-	 * {%- else %} @param {{ nonop.name }} {% if nonop.is_array %}List of {% endif %}{% if nonop.enum %}CodeSystem{% endif %}{{ nonop.enum.name or nonop.class_name }}{%- endif %}
-	 * {%- endfor %}
-	 */
-	public {{ klass.name }}(
-		{%- for nonop in klass.nonexpanded_nonoptionals %}
-		{%- if not loop.first %}, {% endif -%}
-		{%- if nonop.one_of_many -%}
-		Object {{ nonop.one_of_many }}
-		{%- else -%}
-		{% if nonop.is_array %}List<{% endif %}{% if nonop.enum %}CodeSystem{% endif %}{{ nonop.enum.name or nonop.class_name }}{% if nonop.is_array %}>{% endif %} {{ nonop.name }}
-		{%- endif -%}
-		{%- endfor -%}
-	) {
-		{%- for nonop in klass.nonexpanded_nonoptionals %}
-		{%- if nonop.one_of_many %}{% for expanded in klass.expanded_nonoptionals[nonop.one_of_many] %}
-		{% if not loop.first %}else {% endif -%}
-		if ({{ nonop.one_of_many }} instanceof {{ expanded.class_name }}) {
-			this.{{ expanded.name }} = ({{ expanded.class_name }}) {{ nonop.one_of_many }};
-		}
-		{%- endfor %}
-		else {
-			//FIXME Type: (of: {{ nonop.one_of_many }})) for property ({{ nonop.one_of_many }}) is invalid, ignoring")
-		}
-		{%- else %}
-		this.{{ nonop.name }} = {{ nonop.name }};
-		{%- endif %}
-		{%- endfor %}
-	}
-	{%- else %}
-	public {{ klass.name }}() {
-	}
-	{% endif -%}
+        {%if klass.has_nonoptional%}
+/**
+ * Constructor for all required properties.
+ * {%- for nonop in klass.nonexpanded_nonoptionals %}
+ * {%- if nonop.one_of_many %} @param {{ nonop.one_of_many }} as one of{% for expanded in klass.expanded_nonoptionals[nonop.one_of_many] %}{%- if not loop.first %},{% endif %} {{ expanded.class_name }}{%- endfor -%}
+ * {%- else %} @param {{ nonop.name }} {% if nonop.is_array %}List of {% endif %}{% if nonop.enum %}CodeSystem{% endif %}{{ nonop.enum.name or nonop.class_name }}{%- endif %}
+ * {%- endfor %}
+ */
+public {{klass.name}}(
+        {%-for nonop in klass.nonexpanded_nonoptionals%}
+        {%-if not loop.first%},{%endif-%}
+        {%-if nonop.one_of_many-%}
+        Object{{nonop.one_of_many}}
+        {%-else-%}
+        {%if nonop.is_array%}List<{%endif%}{%if nonop.enum %}CodeSystem{%endif%}{{nonop.enum.name or nonop.class_name}}{%if nonop.is_array%}>{%endif%}{{nonop.name}}
+        {%-endif-%}
+        {%-endfor-%}
+        ){
+        {%-for nonop in klass.nonexpanded_nonoptionals%}
+        {%-if nonop.one_of_many%}{%for expanded in klass.expanded_nonoptionals[nonop.one_of_many]%}
+        {%if not loop.first%}else{%endif-%}
+        if({{nonop.one_of_many}}instanceof{{expanded.class_name}}){
+        this.{{expanded.name}}=({{expanded.class_name}}){{nonop.one_of_many}};
+        }
+        {%-endfor%}
+        else{
+        //FIXME Type: (of: {{ nonop.one_of_many }})) for property ({{ nonop.one_of_many }}) is invalid, ignoring")
+        }
+        {%-else%}
+        this.{{nonop.name}}={{nonop.name}};
+        {%-endif%}
+        {%-endfor%}
+        }
+        {%-else%}
+public {{klass.name}}(){
+        }
+        {%endif-%}
 
-	@Override
-	public String getResourceType() {
-		return {{ klass.name }}.resourceType;
-	}
+@Override
+public String getResourceType(){
+        return{{klass.name}}.resourceType;
+        }
 
-{% if not loop.first %}
-}
-{% endif %}
-{% endfor %}
-}
+        {%if not loop.first%}
+        }
+        {%endif%}
+        {%endfor%}
+        }

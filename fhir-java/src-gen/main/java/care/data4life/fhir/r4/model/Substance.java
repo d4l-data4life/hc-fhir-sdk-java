@@ -18,7 +18,11 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
@@ -29,8 +33,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Substance) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Substance) on 2021-03-26
  */
 public class Substance extends DomainResource {
 
@@ -93,8 +96,7 @@ public class Substance extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Substance) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Substance) on 2021-03-26
      */
     public static class SubstanceIngredient extends BackboneElement {
 
@@ -143,13 +145,11 @@ public class Substance extends DomainResource {
     /**
      * Substance.java
      * <p>
-     * Substance may be used to describe a kind of substance, or a specific package/container of the
-     * substance: an instance.
+     * Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Substance">Substance</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Substance) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Substance) on 2021-03-26
      */
     public static class SubstanceInstance extends BackboneElement {
 

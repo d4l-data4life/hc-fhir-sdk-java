@@ -18,16 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
+import javax.annotation.Nullable;
+
 /**
  * Narrative.java
  * <p>
- * A human-readable summary of the resource conveying the essential clinical and business
- * information for the resource.
+ * A human-readable summary of the resource conveying the essential clinical and business information for the resource.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Narrative">Narrative</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Narrative) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Narrative) on 2021-03-26
  */
 public class Narrative extends Element {
 

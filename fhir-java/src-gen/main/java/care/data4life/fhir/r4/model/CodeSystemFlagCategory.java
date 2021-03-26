@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Example list of general categories for flagged issues. (Not complete or necessarily
- * appropriate.)
+ * Example list of general categories for flagged issues. (Not complete or necessarily appropriate.)
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/flag-category">FlagCategory</a>
  */

@@ -18,7 +18,11 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
@@ -29,8 +33,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Practitioner">Practitioner</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Practitioner) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Practitioner) on 2021-03-26
  */
 public class Practitioner extends DomainResource {
 
@@ -99,14 +102,11 @@ public class Practitioner extends DomainResource {
     /**
      * Practitioner.java
      * <p>
-     * The official certifications, training, and licenses that authorize or otherwise pertain to
-     * the provision of care by the practitioner.  For example, a medical license issued by a
-     * medical board authorizing the practitioner to practice medicine within a certian locality.
+     * The official certifications, training, and licenses that authorize or otherwise pertain to the provision of care by the practitioner.  For example, a medical license issued by a medical board authorizing the practitioner to practice medicine within a certian locality.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Practitioner">Practitioner</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Practitioner)
-     * on 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Practitioner) on 2021-03-26
      */
     public static class PractitionerQualification extends BackboneElement {
 

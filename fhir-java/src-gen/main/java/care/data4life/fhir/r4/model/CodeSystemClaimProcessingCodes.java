@@ -27,8 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemClaimProcessingCodes {
 
     /**
-     * The Claim/Pre-authorization/Pre-determination has been received but processing has not
-     * begun.
+     * The Claim/Pre-authorization/Pre-determination has been received but processing has not begun.
      */
     @Json(name = "queued")
     QUEUED,

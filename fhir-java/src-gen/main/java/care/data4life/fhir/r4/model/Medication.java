@@ -18,21 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Medication.java
  * <p>
- * This resource is primarily used for the identification and definition of a medication for the
- * purposes of prescribing, dispensing, and administering a medication as well as for making
- * statements about medication use.
+ * This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-03-26
  */
 public class Medication extends DomainResource {
 
@@ -95,8 +96,7 @@ public class Medication extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-03-26
      */
     public static class MedicationBatch extends BackboneElement {
 
@@ -132,8 +132,7 @@ public class Medication extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-03-26
      */
     public static class MedicationIngredient extends BackboneElement {
 

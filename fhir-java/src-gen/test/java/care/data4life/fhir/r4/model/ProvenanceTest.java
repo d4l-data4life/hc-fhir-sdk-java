@@ -17,30 +17,27 @@
 package care.data4life.fhir.r4.model;
 
 
+import javax.annotation.Nullable;
+
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
+
+import java.util.Date;
 
 import care.data4life.fhir.r4.FhirR4Parser;
 import care.data4life.fhir.test.util.FileHelper;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * ProvenanceTest.java
  * <p>
  * Who, What, When for a set of resources.
  * <p>
- * Provenance of a resource is a record that describes entities and processes involved in producing
- * and delivering or otherwise influencing that resource. Provenance provides a critical foundation
- * for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions
- * are a form of contextual metadata and can themselves become important records with their own
- * provenance. Provenance statement indicates clinical significance in terms of confidence in
- * authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document
- * Completion - has the artifact been legally authenticated), all of which may impact security,
- * privacy, and trust policies.
+ * Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2020-10-27
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26
  */
 public class ProvenanceTest {
 

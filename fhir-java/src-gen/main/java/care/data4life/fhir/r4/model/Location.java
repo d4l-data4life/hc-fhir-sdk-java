@@ -18,20 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Location.java
  * <p>
- * Details and position information for a physical place where services are provided and resources
- * and participants may be stored, found, contained, or accommodated.
+ * Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Location">Location</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on 2021-03-26
  */
 public class Location extends DomainResource {
 
@@ -139,8 +141,7 @@ public class Location extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Location">Location</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on 2021-03-26
      */
     public static class LocationHoursOfOperation extends BackboneElement {
 
@@ -182,13 +183,11 @@ public class Location extends DomainResource {
     /**
      * Location.java
      * <p>
-     * The absolute geographic location of the Location, expressed using the WGS84 datum (This is
-     * the same co-ordinate system used in KML).
+     * The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Location">Location</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on 2021-03-26
      */
     public static class LocationPosition extends BackboneElement {
 

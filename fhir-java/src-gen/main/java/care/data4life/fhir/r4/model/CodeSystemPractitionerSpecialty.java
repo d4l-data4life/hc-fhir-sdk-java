@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This example value set defines a set of codes that can be used to indicate the specialty of a
- * Practitioner.
+ * This example value set defines a set of codes that can be used to indicate the specialty of a Practitioner.
  *
  * @see <a href="http://hl7.org/fhir/practitioner-specialty">PractitionerSpecialty</a>
  */

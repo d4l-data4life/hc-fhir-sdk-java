@@ -18,20 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.Nullable;
 
 /**
  * Condition.java
  * <p>
- * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept
- * that has risen to a level of concern.
+ * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on 2021-03-26
  */
 public class Condition extends DomainResource {
 
@@ -180,13 +182,11 @@ public class Condition extends DomainResource {
     /**
      * Condition.java
      * <p>
-     * Supporting evidence / manifestations that are the basis of the Condition's verification
-     * status, such as evidence that confirmed or refuted the condition.
+     * Supporting evidence / manifestations that are the basis of the Condition's verification status, such as evidence that confirmed or refuted the condition.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on 2021-03-26
      */
     public static class ConditionEvidence extends BackboneElement {
 
@@ -222,8 +222,7 @@ public class Condition extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on 2021-03-26
      */
     public static class ConditionStage extends BackboneElement {
 

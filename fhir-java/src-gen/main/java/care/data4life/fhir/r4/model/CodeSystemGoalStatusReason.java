@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Example codes indicating the reason for a current status.  Note that these are in no way complete
- * and might not even be appropriate for some uses.
+ * Example codes indicating the reason for a current status.  Note that these are in no way complete and might not even be appropriate for some uses.
  *
  * @see <a href="http://hl7.org/fhir/goal-status-reason">GoalStatusReason</a>
  */
@@ -34,8 +33,7 @@ public enum CodeSystemGoalStatusReason {
     SURGERY,
 
     /**
-     * Goal suspended or ended because of a significant life event (marital change, bereavement,
-     * etc.).
+     * Goal suspended or ended because of a significant life event (marital change, bereavement, etc.).
      */
     @Json(name = "life-event")
     LIFE_EVENT,

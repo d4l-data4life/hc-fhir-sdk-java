@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set defines a set of codes that can be used to indicate the meaning/use of a reference
- * range for a particular target population.
+ * This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/referencerange-meaning">ObservationReferenceRangeMeaningCodes</a>
  */
@@ -34,10 +33,7 @@ public enum CodeSystemObservationReferenceRangeMeaningCodes {
     TYPE,
 
     /**
-     * Values expected for a normal member of the relevant control population being measured.
-     * Typically each results producer such as a laboratory has specific normal ranges and they are
-     * usually defined as within two standard deviations from the mean and account for 95.45% of
-     * this population.
+     * Values expected for a normal member of the relevant control population being measured. Typically each results producer such as a laboratory has specific normal ranges and they are usually defined as within two standard deviations from the mean and account for 95.45% of this population.
      */
     @Json(name = "normal")
     NORMAL,
@@ -61,15 +57,13 @@ public enum CodeSystemObservationReferenceRangeMeaningCodes {
     THERAPEUTIC,
 
     /**
-     * The optimal range for best therapeutic outcomes for a specimen taken immediately before
-     * administration.
+     * The optimal range for best therapeutic outcomes for a specimen taken immediately before administration.
      */
     @Json(name = "pre")
     PRE,
 
     /**
-     * The optimal range for best therapeutic outcomes for a specimen taken immediately after
-     * administration.
+     * The optimal range for best therapeutic outcomes for a specimen taken immediately after administration.
      */
     @Json(name = "post")
     POST,

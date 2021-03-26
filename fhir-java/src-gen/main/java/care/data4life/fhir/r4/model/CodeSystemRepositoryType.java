@@ -27,15 +27,13 @@ import com.squareup.moshi.Json;
 public enum CodeSystemRepositoryType {
 
     /**
-     * When URL is clicked, the resource can be seen directly (by webpage or by download link
-     * format).
+     * When URL is clicked, the resource can be seen directly (by webpage or by download link format).
      */
     @Json(name = "directlink")
     DIRECTLINK,
 
     /**
-     * When the API method (e.g. [base_url]/[parameter]) related with the URL of the website is
-     * executed, the resource can be seen directly (usually in JSON or XML format).
+     * When the API method (e.g. [base_url]/[parameter]) related with the URL of the website is executed, the resource can be seen directly (usually in JSON or XML format).
      */
     @Json(name = "openapi")
     OPENAPI,
@@ -47,8 +45,7 @@ public enum CodeSystemRepositoryType {
     LOGIN,
 
     /**
-     * When logged in and  follow the API in the website related with URL, the resource can be
-     * seen.
+     * When logged in and  follow the API in the website related with URL, the resource can be seen.
      */
     @Json(name = "oauth")
     OAUTH,

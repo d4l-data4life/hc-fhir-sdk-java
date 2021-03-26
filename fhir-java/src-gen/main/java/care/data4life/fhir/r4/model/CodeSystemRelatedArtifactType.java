@@ -27,26 +27,19 @@ import com.squareup.moshi.Json;
 public enum CodeSystemRelatedArtifactType {
 
     /**
-     * Additional documentation for the knowledge resource. This would include additional
-     * instructions on usage as well as additional information on clinical context or
-     * appropriateness.
+     * Additional documentation for the knowledge resource. This would include additional instructions on usage as well as additional information on clinical context or appropriateness.
      */
     @Json(name = "documentation")
     DOCUMENTATION,
 
     /**
-     * A summary of the justification for the knowledge resource including supporting evidence,
-     * relevant guidelines, or other clinically important information. This information is intended
-     * to provide a way to make the justification for the knowledge resource available to the
-     * consumer of interventions or results produced by the knowledge resource.
+     * A summary of the justification for the knowledge resource including supporting evidence, relevant guidelines, or other clinically important information. This information is intended to provide a way to make the justification for the knowledge resource available to the consumer of interventions or results produced by the knowledge resource.
      */
     @Json(name = "justification")
     JUSTIFICATION,
 
     /**
-     * Bibliographic citation for papers, references, or other relevant material for the knowledge
-     * resource. This is intended to allow for citation of related material, but that was not
-     * necessarily specifically prepared in connection with this knowledge resource.
+     * Bibliographic citation for papers, references, or other relevant material for the knowledge resource. This is intended to allow for citation of related material, but that was not necessarily specifically prepared in connection with this knowledge resource.
      */
     @Json(name = "citation")
     CITATION,
@@ -64,11 +57,7 @@ public enum CodeSystemRelatedArtifactType {
     SUCCESSOR,
 
     /**
-     * The knowledge resource is derived from the related artifact. This is intended to capture the
-     * relationship in which a particular knowledge resource is based on the content of another
-     * artifact, but is modified to capture either a different set of overall requirements, or a
-     * more specific set of requirements such as those involved in a particular institution or
-     * clinical setting.
+     * The knowledge resource is derived from the related artifact. This is intended to capture the relationship in which a particular knowledge resource is based on the content of another artifact, but is modified to capture either a different set of overall requirements, or a more specific set of requirements such as those involved in a particular institution or clinical setting.
      */
     @Json(name = "derived-from")
     DERIVED_FROM,

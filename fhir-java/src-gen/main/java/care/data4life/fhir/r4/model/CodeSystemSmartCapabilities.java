@@ -57,8 +57,7 @@ public enum CodeSystemSmartCapabilities {
     SSO_OPENID_CONNECT,
 
     /**
-     * support for “need patient banner” launch context (conveyed via need_patient_banner token
-     * parameter).
+     * support for “need patient banner” launch context (conveyed via need_patient_banner token parameter).
      */
     @Json(name = "context-passthrough-banner")
     CONTEXT_PASSTHROUGH_BANNER,
@@ -70,29 +69,25 @@ public enum CodeSystemSmartCapabilities {
     CONTEXT_PASSTHROUGH_STYLE,
 
     /**
-     * support for patient-level launch context (requested by launch/patient scope, conveyed via
-     * patient token parameter).
+     * support for patient-level launch context (requested by launch/patient scope, conveyed via patient token parameter).
      */
     @Json(name = "context-ehr-patient")
     CONTEXT_EHR_PATIENT,
 
     /**
-     * support for encounter-level launch context (requested by launch/encounter scope, conveyed via
-     * encounter token parameter).
+     * support for encounter-level launch context (requested by launch/encounter scope, conveyed via encounter token parameter).
      */
     @Json(name = "context-ehr-encounter")
     CONTEXT_EHR_ENCOUNTER,
 
     /**
-     * support for patient-level launch context (requested by launch/patient scope, conveyed via
-     * patient token parameter).
+     * support for patient-level launch context (requested by launch/patient scope, conveyed via patient token parameter).
      */
     @Json(name = "context-standalone-patient")
     CONTEXT_STANDALONE_PATIENT,
 
     /**
-     * support for encounter-level launch context (requested by launch/encounter scope, conveyed via
-     * encounter token parameter).
+     * support for encounter-level launch context (requested by launch/encounter scope, conveyed via encounter token parameter).
      */
     @Json(name = "context-standalone-encounter")
     CONTEXT_STANDALONE_ENCOUNTER,

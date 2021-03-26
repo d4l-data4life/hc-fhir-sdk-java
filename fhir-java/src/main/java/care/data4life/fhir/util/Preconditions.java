@@ -26,6 +26,10 @@
   */
  public final class Preconditions {
 
+     private Preconditions() {
+         throw new IllegalStateException("This type is not intended to be instantiated");
+     }
+
      /**
       * Ensures that an object reference passed as a parameter to the calling method is not null.
       *
@@ -64,9 +68,5 @@
          if (!expression) {
              throw new IllegalArgumentException(String.valueOf(errorMessage));
          }
-     }
-
-     private Preconditions() {
-         throw new IllegalStateException("This type is not intended to be instantiated");
      }
  }

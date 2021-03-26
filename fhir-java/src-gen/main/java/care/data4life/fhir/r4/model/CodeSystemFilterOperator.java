@@ -33,24 +33,19 @@ public enum CodeSystemFilterOperator {
     EQUAL,
 
     /**
-     * Includes all concept ids that have a transitive is-a relationship with the concept Id
-     * provided as the value, including the provided concept itself (include descendant codes and
-     * self).
+     * Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, including the provided concept itself (include descendant codes and self).
      */
     @Json(name = "is-a")
     IS_A,
 
     /**
-     * Includes all concept ids that have a transitive is-a relationship with the concept Id
-     * provided as the value, excluding the provided concept itself i.e. include descendant codes
-     * only).
+     * Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, excluding the provided concept itself i.e. include descendant codes only).
      */
     @Json(name = "descendent-of")
     DESCENDENT_OF,
 
     /**
-     * The specified property of the code does not have an is-a relationship with the provided
-     * value.
+     * The specified property of the code does not have an is-a relationship with the provided value.
      */
     @Json(name = "is-not-a")
     IS_NOT_A,
@@ -62,31 +57,25 @@ public enum CodeSystemFilterOperator {
     REGEX,
 
     /**
-     * The specified property of the code is in the set of codes or concepts specified in the
-     * provided value (comma separated list).
+     * The specified property of the code is in the set of codes or concepts specified in the provided value (comma separated list).
      */
     @Json(name = "in")
     IN,
 
     /**
-     * The specified property of the code is not in the set of codes or concepts specified in the
-     * provided value (comma separated list).
+     * The specified property of the code is not in the set of codes or concepts specified in the provided value (comma separated list).
      */
     @Json(name = "not-in")
     NOT_IN,
 
     /**
-     * Includes all concept ids that have a transitive is-a relationship from the concept Id
-     * provided as the value, including the provided concept itself (i.e. include ancestor codes and
-     * self).
+     * Includes all concept ids that have a transitive is-a relationship from the concept Id provided as the value, including the provided concept itself (i.e. include ancestor codes and self).
      */
     @Json(name = "generalizes")
     GENERALIZES,
 
     /**
-     * The specified property of the code has at least one value (if the specified value is true; if
-     * the specified value is false, then matches when the specified property of the code has no
-     * values).
+     * The specified property of the code has at least one value (if the specified value is true; if the specified value is false, then matches when the specified property of the code has no values).
      */
     @Json(name = "exists")
     EXISTS,

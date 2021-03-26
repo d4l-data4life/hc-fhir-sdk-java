@@ -20,8 +20,7 @@ import com.squareup.moshi.Json;
 
 
 /**
- * A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or
- * HGPS systems.
+ * A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/recommendation-strength">StrengthOfRecommendationRating</a>
  */

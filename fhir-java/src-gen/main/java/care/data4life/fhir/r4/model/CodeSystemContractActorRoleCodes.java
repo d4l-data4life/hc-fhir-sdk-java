@@ -27,8 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemContractActorRoleCodes {
 
     /**
-     * Someone who provides health care related services to people or animals including both
-     * clinical and support services.
+     * Someone who provides health care related services to people or animals including both clinical and support services.
      */
     @Json(name = "practitioner")
     PRACTITIONER,

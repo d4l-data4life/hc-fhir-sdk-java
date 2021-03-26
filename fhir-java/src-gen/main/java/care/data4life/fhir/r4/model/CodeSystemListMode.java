@@ -27,8 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemListMode {
 
     /**
-     * This list is the master list, maintained in an ongoing fashion with regular updates as the
-     * real world list it is tracking changes.
+     * This list is the master list, maintained in an ongoing fashion with regular updates as the real world list it is tracking changes.
      */
     @Json(name = "working")
     WORKING,
@@ -40,8 +39,7 @@ public enum CodeSystemListMode {
     SNAPSHOT,
 
     /**
-     * A point-in-time list that shows what changes have been made or recommended.  E.g. a discharge
-     * medication list showing what was added and removed during an encounter.
+     * A point-in-time list that shows what changes have been made or recommended.  E.g. a discharge medication list showing what was added and removed during an encounter.
      */
     @Json(name = "changes")
     CHANGES,

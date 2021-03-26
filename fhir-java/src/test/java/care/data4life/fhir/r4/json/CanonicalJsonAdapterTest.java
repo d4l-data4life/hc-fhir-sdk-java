@@ -19,8 +19,11 @@ package care.data4life.fhir.r4.json;
 import com.squareup.moshi.JsonAdapter;
 import org.junit.Before;
 import org.junit.Test;
+
 import java.io.IOException;
+
 import care.data4life.fhir.r4.model.Canonical;
+
 import static org.junit.Assert.assertEquals;
 
 public class CanonicalJsonAdapterTest {
@@ -37,7 +40,7 @@ public class CanonicalJsonAdapterTest {
         adapter = new CanonicalJsonAdapter().lenient();
     }
 
-    
+
     @Test
     public void given_fromJson_is_called_with_a_url_and_without_a_version_it_returns_a_Canonical()
             throws IOException {

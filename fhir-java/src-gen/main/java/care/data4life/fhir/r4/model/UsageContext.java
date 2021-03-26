@@ -18,19 +18,22 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
  * UsageContext.java
  * <p>
- * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize
- * an artifact. This metadata can either be specific to the applicable population (e.g., age
- * category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
+ * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/UsageContext">UsageContext</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/UsageContext) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/UsageContext) on 2021-03-26
  */
 public class UsageContext extends Element {
 

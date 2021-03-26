@@ -33,24 +33,19 @@ public enum CodeSystemNarrativeStatus {
     GENERATED,
 
     /**
-     * The contents of the narrative are entirely generated from the core elements in the content
-     * and some of the content is generated from extensions. The narrative SHALL reflect the impact
-     * of all modifier extensions.
+     * The contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions. The narrative SHALL reflect the impact of all modifier extensions.
      */
     @Json(name = "extensions")
     EXTENSIONS,
 
     /**
-     * The contents of the narrative may contain additional information not found in the structured
-     * data. Note that there is no computable way to determine what the extra information is, other
-     * than by human inspection.
+     * The contents of the narrative may contain additional information not found in the structured data. Note that there is no computable way to determine what the extra information is, other than by human inspection.
      */
     @Json(name = "additional")
     ADDITIONAL,
 
     /**
-     * The contents of the narrative are some equivalent of "No human-readable text provided in this
-     * case".
+     * The contents of the narrative are some equivalent of "No human-readable text provided in this case".
      */
     @Json(name = "empty")
     EMPTY,

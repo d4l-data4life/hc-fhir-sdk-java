@@ -27,8 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemConditionCategoryCodes {
 
     /**
-     * An item on a problem list that can be managed over time and can be expressed by a
-     * practitioner (e.g. physician, nurse), patient, or related person.
+     * An item on a problem list that can be managed over time and can be expressed by a practitioner (e.g. physician, nurse), patient, or related person.
      */
     @Json(name = "problem-list-item")
     PROBLEM_LIST_ITEM,

@@ -27,15 +27,13 @@ import com.squareup.moshi.Json;
 public enum CodeSystemFHIRDeviceStatus {
 
     /**
-     * The device is available for use.  Note: For *implanted devices*  this means that the device
-     * is implanted in the patient.
+     * The device is available for use.  Note: For *implanted devices*  this means that the device is implanted in the patient.
      */
     @Json(name = "active")
     ACTIVE,
 
     /**
-     * The device is no longer available for use (e.g. lost, expired, damaged).  Note: For
-     * *implanted devices*  this means that the device has been removed from the patient.
+     * The device is no longer available for use (e.g. lost, expired, damaged).  Note: For *implanted devices*  this means that the device has been removed from the patient.
      */
     @Json(name = "inactive")
     INACTIVE,

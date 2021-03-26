@@ -33,8 +33,7 @@ public enum CodeSystemMeasureDataUsage {
     SUPPLEMENTAL_DATA,
 
     /**
-     * The data is intended to be used to calculate and apply a risk adjustment model for the
-     * measure.
+     * The data is intended to be used to calculate and apply a risk adjustment model for the measure.
      */
     @Json(name = "risk-adjustment-factor")
     RISK_ADJUSTMENT_FACTOR,

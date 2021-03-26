@@ -27,15 +27,13 @@ import com.squareup.moshi.Json;
 public enum CodeSystemRequestResourceType {
 
     /**
-     * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or
-     * device(s) for a specific date/time. This may result in one or more Encounter(s).
+     * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
      */
     @Json(name = "Appointment")
     APPOINTMENT,
 
     /**
-     * A reply to an appointment request for a patient and/or practitioner(s), such as a
-     * confirmation or rejection.
+     * A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
      */
     @Json(name = "AppointmentResponse")
     APPOINTMENTRESPONSE,
@@ -95,8 +93,7 @@ public enum CodeSystemRequestResourceType {
     NUTRITIONORDER,
 
     /**
-     * A record of a request for service such as diagnostic investigations, treatments, or
-     * operations to be performed.
+     * A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
      */
     @Json(name = "ServiceRequest")
     SERVICEREQUEST,

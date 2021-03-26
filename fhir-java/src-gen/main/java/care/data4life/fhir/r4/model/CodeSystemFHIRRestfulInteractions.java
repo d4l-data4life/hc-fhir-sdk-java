@@ -57,8 +57,7 @@ public enum CodeSystemFHIRRestfulInteractions {
     DELETE,
 
     /**
-     * Retrieve the change history for a particular resource, type of resource, or the entire
-     * system.
+     * Retrieve the change history for a particular resource, type of resource, or the entire system.
      */
     @Json(name = "history")
     HISTORY,

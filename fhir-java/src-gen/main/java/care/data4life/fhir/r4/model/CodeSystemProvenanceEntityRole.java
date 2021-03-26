@@ -27,8 +27,7 @@ import com.squareup.moshi.Json;
 public enum CodeSystemProvenanceEntityRole {
 
     /**
-     * A transformation of an entity into another, an update of an entity resulting in a new one, or
-     * the construction of a new entity based on a pre-existing entity.
+     * A transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.
      */
     @Json(name = "derivation")
     DERIVATION,
@@ -40,23 +39,19 @@ public enum CodeSystemProvenanceEntityRole {
     REVISION,
 
     /**
-     * The repeat of (some or all of) an entity, such as text or image, by someone who might or
-     * might not be its original author.
+     * The repeat of (some or all of) an entity, such as text or image, by someone who might or might not be its original author.
      */
     @Json(name = "quotation")
     QUOTATION,
 
     /**
-     * A primary source for a topic refers to something produced by some agent with direct
-     * experience and knowledge about the topic, at the time of the topic's study, without benefit
-     * from hindsight.
+     * A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight.
      */
     @Json(name = "source")
     SOURCE,
 
     /**
-     * A derivation for which the entity is removed from accessibility usually through the use of
-     * the Delete operation.
+     * A derivation for which the entity is removed from accessibility usually through the use of the Delete operation.
      */
     @Json(name = "removal")
     REMOVAL,
