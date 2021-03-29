@@ -17,17 +17,14 @@
 package care.data4life.fhir.r4.model;
 
 
-import javax.annotation.Nullable;
-
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
-
-import java.util.Date;
 
 import care.data4life.fhir.r4.FhirR4Parser;
 import care.data4life.fhir.test.util.FileHelper;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * CodeSystemTest.java

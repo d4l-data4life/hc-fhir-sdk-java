@@ -16,16 +16,6 @@
 
 package care.data4life.fhir.r4.model;
 
-import com.squareup.moshi.Json;
-
-import java.net.URI;
-import java.net.URL;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
-
-import javax.annotation.Nullable;
-
 /**
  * Age.java
  * <p>
