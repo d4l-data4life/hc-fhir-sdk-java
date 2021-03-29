@@ -18,54 +18,50 @@ package care.data4life.fhir.r4.model;
 
 import com.squareup.moshi.Json;
 
-{%if system.generate_enum%}
+{% if system.generate_enum %}
 
 /**
  * {{ system.definition.description }}
  *
  * @see <a href="{{ system.url }}">{{ system.name }}</a>
  */
-public enum CodeSystem {
-    {
-        system.name
-    }
-} {
-        {%-for code in system.codes%}
+public enum CodeSystem{{ system.name }} {
+	{%- for code in system.codes %}
 
-/**
- * {{ code.definition }}
- */
-@Json(name = "{{code.code}}")
-	{%-if code.code=="="%}
-            EQUAL,
-            {%-else%}
-            {%-if code.code=="!="%}
-            NOT_EQUAL,
-            {%-else%}
-            {%-if code.code=="<"%}
-            LESS_THAN,
-            {%-else%}
-            {%-if code.code=="<="%}
-            LESS_OR_EQUAL,
-            {%-else%}
-            {%-if code.code==">"%}
-            GREATER_THAN,
-            {%-else%}
-            {%-if code.code==">="%}
-            GREATER_OR_EQUAL,
-            {%-else%}
-            {%-if code.code=="*"%}
-            MAX,
-            {%-else%}
-            {{code.code.upper()|replace('-','_')|replace('.','_')|replace('/','_')}},
-            {%-endif%}
-            {%-endif%}
-            {%-endif%}
-            {%-endif%}
-            {%-endif%}
-            {%-endif%}
-            {%-endif%}
+	/**
+	* {{ code.definition }}
+	*/
+	@Json(name = "{{code.code}}")
+	{%- if code.code == "=" %}
+	EQUAL,
+	{%- else %}
+	{%- if code.code == "!=" %}
+	NOT_EQUAL,
+	{%- else %}
+	{%- if code.code == "<" %}
+	LESS_THAN,
+	{%- else %}
+	{%- if code.code == "<=" %}
+	LESS_OR_EQUAL,
+	{%- else %}
+	{%- if code.code == ">" %}
+	GREATER_THAN,
+	{%- else %}
+	{%- if code.code == ">=" %}
+	GREATER_OR_EQUAL,
+	{%- else %}
+	{%- if code.code == "*" %}
+	MAX,
+	{%- else %}
+	{{ code.code.upper()|replace('-', '_')|replace('.', '_')|replace('/', '_') }},
+	{%- endif %}
+	{%- endif %}
+	{%- endif %}
+	{%- endif %}
+	{%- endif %}
+	{%- endif %}
+	{%- endif %}
 
-            {%-endfor%}
-            }
-            {%endif%}
+	{%- endfor %}
+}
+{% endif %}

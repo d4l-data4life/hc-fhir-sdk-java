@@ -18,26 +18,22 @@ package care.data4life.fhir.r4.model;
 
 
 import javax.annotation.Nullable;
-
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
-
 import java.util.Date;
-
 import care.data4life.fhir.r4.FhirR4Parser;
 import care.data4life.fhir.test.util.FileHelper;
-
 import static org.junit.Assert.*;
 
 /**
  * FhirElementFactoryTest.java
- * <p>
+ *
  * "Generated from FHIR {{ info.version }} on {{ info.date }}
  */
-public class {{class.name}}FhirElementFactory{
+public class {{ class.name }}FhirElementFactory {
 
-        FhirR4Parser parser=new FhirR4Parser();
-        {%set resource_list=["CarePlan",
+        FhirR4Parser parser = new FhirR4Parser();
+        {% set resource_list = ["CarePlan",
         "CareTeam",
         "Condition",
         "DiagnosticReport",
@@ -62,22 +58,22 @@ public class {{class.name}}FhirElementFactory{
         "Procedure",
         "Encounter",
         "Location",
-        "ServiceRequest"]%}
+        "ServiceRequest"] %}
 
-@Tests
-public void getFhirTypeForClassTest()throws Exception{
-        {%-for klass in classes%}{%if klass.name in resource_list%}
-        if(clazz=={{klass.name}}.class){
-        assertEquals(getFhirTypeForClass(Klass),{{klass.resource_type}}.resourceType);
+        @Tests
+        public void getFhirTypeForClassTest () throws Exception {
+        {%- for klass in classes %}{% if klass.name in resource_list %}
+        if(clazz == {{ klass.name }}.class){
+        assertEquals(getFhirTypeForClass(Klass), {{ klass.resource_type }}.resourceType);
         }
-        {%-endif%}{%endfor%}
+        {%- endif %}{% endfor %}
         }
 
-@Test
-public void getClassForFhirTypeTest()throws Exception{
-        {%-for klass in classes%}{%if klass.name in resource_list%}
-        if(clazz=={{klass.name}}.class){
-        assertEquals(getClassForFhirType({{klass.resource_type}}.resourceType),klass);
+        @Test
+        public void getClassForFhirTypeTest () throws Exception {
+        {%- for klass in classes %}{% if klass.name in resource_list %}
+        if(clazz == {{ klass.name }}.class){
+        assertEquals(getClassForFhirType({{ klass.resource_type }}.resourceType), klass);
         }
-        {%-endif%}{%endfor%}
+        {%- endif %}{% endfor %}
         }

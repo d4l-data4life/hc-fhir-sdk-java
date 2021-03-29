@@ -17,61 +17,53 @@
 package care.data4life.fhir.r4.model;
 
 public final class FhirElementFactory {
-    {%set resource_list = ["CarePlan",
-            "CareTeam",
-            "Condition",
-            "DiagnosticReport",
-            "DocumentReference",
-            "FamilyMemberHistory",
-            "Goal",
-            "Medication",
-            "MedicationRequest",
-            "Observation",
-            "Organization",
-            "Patient",
-            "Practitioner",
-            "Procedure",
-            "ProcedureRequest",
-            "Provenance",
-            "Questionnaire",
-            "QuestionnaireResponse",
-            "ReferralRequest",
-            "Specimen",
-            "Substance",
-            "ValueSet",
-            "Procedure",
-            "Encounter",
-            "Location",
-            "ServiceRequest"] %}
+  {% set resource_list = ["CarePlan",
+      "CareTeam",
+      "Condition",
+      "DiagnosticReport",
+      "DocumentReference",
+      "FamilyMemberHistory",
+      "Goal",
+      "Medication",
+      "MedicationRequest",
+      "Observation",
+      "Organization",
+      "Patient",
+      "Practitioner",
+      "Procedure",
+      "ProcedureRequest",
+      "Provenance",
+      "Questionnaire",
+      "QuestionnaireResponse",
+      "ReferralRequest",
+      "Specimen",
+      "Substance",
+      "ValueSet",
+      "Procedure",
+      "Encounter",
+      "Location",
+      "ServiceRequest"] %}
 
-    public static <T extends FhirR4Base> String getFhirTypeForClass(Class<T> clazz) {
-        {%- for klass in classes %
-        } {%if klass.name in resource_list %
-        }
-        if (clazz == {{klass.name}}. class){
-            return {{klass.resource_type}}.resourceType;
-        }
-        {%-endif %
-        } {%endfor %
-        }
-        return null;
+  public static <T extends FhirR4Base> String getFhirTypeForClass(Class<T> clazz) {
+    {%- for klass in classes %}{% if klass.name in resource_list %}
+    if (clazz == {{ klass.name }}.class) {
+      return {{ klass.resource_type }}.resourceType;
+    }
+    {%- endif %}{% endfor %}
+    return null;
+  }
+
+  public static Class<?> getClassForFhirType(String typeName) {
+    switch (typeName) {
+      {%- for klass in classes %}{%if klass.name in resource_list %}
+      case "{{ klass.resource_type }}":
+        return {{ klass.name }}.class;
+      {%-endif %}{% endfor %}
+
+      default:
+        break;
     }
 
-    public static Class<?> getClassForFhirType(String typeName) {
-        switch (typeName) {
-            {%- for klass in classes %
-            } {%if klass.name in resource_list %
-            }
-            case "{{ klass.resource_type }}":
-                return {{klass.name}}. class ;
-            {%-endif %
-            } {%endfor %
-            }
-
-            default:
-                break;
-        }
-
-        return null;
-    }
+    return null;
+  }
 }
