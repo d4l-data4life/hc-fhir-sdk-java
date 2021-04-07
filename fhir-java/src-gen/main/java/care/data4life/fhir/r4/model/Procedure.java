@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2021-04-07
  */
 public class Procedure extends DomainResource {
 
@@ -220,7 +220,7 @@ public class Procedure extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2021-04-07
      */
     public static class ProcedureFocalDevice extends BackboneElement {
 
@@ -240,6 +240,7 @@ public class Procedure extends DomainResource {
          * Constructor for all required properties.
          *
          * @param manipulated Reference
+         *
          */
         public ProcedureFocalDevice(Reference manipulated) {
             this.manipulated = manipulated;
@@ -256,12 +257,12 @@ public class Procedure extends DomainResource {
 
     /**
      * Procedure.java
-     * <p>
+     *
      * Limited to "real" people rather than equipment.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2021-04-07
      */
     public static class ProcedurePerformer extends BackboneElement {
 
@@ -286,6 +287,7 @@ public class Procedure extends DomainResource {
          * Constructor for all required properties.
          *
          * @param actor Reference
+         *
          */
         public ProcedurePerformer(Reference actor) {
             this.actor = actor;

@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on 2021-04-07
  */
 public class CareTeam extends DomainResource {
 
@@ -113,12 +113,12 @@ public class CareTeam extends DomainResource {
 
     /**
      * CareTeam.java
-     * <p>
+     *
      * Identifies all people and organizations who are expected to be involved in the care team.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on 2021-04-07
      */
     public static class CareTeamParticipant extends BackboneElement {
 

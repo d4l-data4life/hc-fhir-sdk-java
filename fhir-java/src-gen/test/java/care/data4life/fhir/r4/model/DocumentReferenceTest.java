@@ -36,7 +36,7 @@ import static org.junit.Assert.assertTrue;
  * patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
  */
 public class DocumentReferenceTest {
 

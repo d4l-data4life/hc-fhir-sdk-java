@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-04-07
  */
 public class Encounter extends DomainResource {
 
@@ -178,7 +178,7 @@ public class Encounter extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-04-07
      */
     public static class EncounterClassHistory extends BackboneElement {
 
@@ -196,8 +196,10 @@ public class Encounter extends DomainResource {
         /**
          * Constructor for all required properties.
          *
-         * @param clazz  Coding
+         * @param clazz Coding
+         *
          * @param period Period
+         *
          */
         public EncounterClassHistory(Coding clazz, Period period) {
             this.clazz = clazz;
@@ -215,12 +217,12 @@ public class Encounter extends DomainResource {
 
     /**
      * Encounter.java
-     * <p>
+     *
      * The list of diagnosis relevant to this encounter
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-04-07
      */
     public static class EncounterDiagnosis extends BackboneElement {
 
@@ -245,6 +247,7 @@ public class Encounter extends DomainResource {
          * Constructor for all required properties.
          *
          * @param condition Reference
+         *
          */
         public EncounterDiagnosis(Reference condition) {
             this.condition = condition;
@@ -261,12 +264,12 @@ public class Encounter extends DomainResource {
 
     /**
      * Encounter.java
-     * <p>
+     *
      * Details about the admission to a healthcare service
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-04-07
      */
     public static class EncounterHospitalization extends BackboneElement {
 
@@ -332,12 +335,12 @@ public class Encounter extends DomainResource {
 
     /**
      * Encounter.java
-     * <p>
+     *
      * List of locations where  the patient has been during this encounter.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-04-07
      */
     public static class EncounterLocation extends BackboneElement {
 
@@ -367,6 +370,7 @@ public class Encounter extends DomainResource {
          * Constructor for all required properties.
          *
          * @param location Reference
+         *
          */
         public EncounterLocation(Reference location) {
             this.location = location;
@@ -383,12 +387,12 @@ public class Encounter extends DomainResource {
 
     /**
      * Encounter.java
-     * <p>
+     *
      * The list of people responsible for providing the service.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-04-07
      */
     public static class EncounterParticipant extends BackboneElement {
 
@@ -424,13 +428,12 @@ public class Encounter extends DomainResource {
 
     /**
      * Encounter.java
-     * <p>
-     * The status history permits the encounter resource to contain the status history without needing to read through
-     * the historical versions of the resource, or even have the server store them.
+     *
+     * The status history permits the encounter resource to contain the status history without needing to read through the historical versions of the resource, or even have the server store them.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on 2021-04-07
      */
     public static class EncounterStatusHistory extends BackboneElement {
 
@@ -449,7 +452,9 @@ public class Encounter extends DomainResource {
          * Constructor for all required properties.
          *
          * @param status CodeSystemEncounterStatus
+         *
          * @param period Period
+         *
          */
         public EncounterStatusHistory(CodeSystemEncounterStatus status, Period period) {
             this.status = status;

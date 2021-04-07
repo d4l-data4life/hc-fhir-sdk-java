@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2021-04-07
  */
 public class Questionnaire extends DomainResource {
 
@@ -150,6 +150,7 @@ public class Questionnaire extends DomainResource {
      * Constructor for all required properties.
      *
      * @param status CodeSystemPublicationStatus
+     *
      */
     public Questionnaire(CodeSystemPublicationStatus status) {
         this.status = status;
@@ -163,12 +164,12 @@ public class Questionnaire extends DomainResource {
 
     /**
      * Questionnaire.java
-     * <p>
+     *
      * A particular question, question grouping or display text that is part of the questionnaire.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2021-04-07
      */
     public static class QuestionnaireItem extends BackboneElement {
 
@@ -275,12 +276,12 @@ public class Questionnaire extends DomainResource {
 
     /**
      * Questionnaire.java
-     * <p>
+     *
      * One of the permitted answers for a "choice" or "open-choice" question.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2021-04-07
      */
     public static class QuestionnaireItemAnswerOption extends BackboneElement {
 
@@ -326,6 +327,7 @@ public class Questionnaire extends DomainResource {
          * Constructor for all required properties.
          *
          * @param value as one of Coding, FhirDate, Integer, Reference, String, FhirTime*
+         *
          */
         public QuestionnaireItemAnswerOption(Object value) {
             if (value instanceof Coding) {
@@ -362,7 +364,7 @@ public class Questionnaire extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2021-04-07
      */
     public static class QuestionnaireItemEnableWhen extends BackboneElement {
 
@@ -431,9 +433,11 @@ public class Questionnaire extends DomainResource {
          * Constructor for all required properties.
          *
          * @param question String
+         *
          * @param operator CodeSystemQuestionnaireItemOperator
-         * @param answer   as one of Boolean, Coding, FhirDate, FhirDateTime, FhirDecimal, Integer, Quantity, Reference,
-         *                 String, FhirTime*
+         *
+         * @param answer as one of Boolean, Coding, FhirDate, FhirDateTime, FhirDecimal, Integer, Quantity, Reference, String, FhirTime*
+         *
          */
         public QuestionnaireItemEnableWhen(String question, CodeSystemQuestionnaireItemOperator operator, Object answer) {
             this.question = question;
@@ -474,13 +478,12 @@ public class Questionnaire extends DomainResource {
 
     /**
      * Questionnaire.java
-     * <p>
-     * One or more values that should be pre-populated in the answer when initially rendering the questionnaire for user
-     * input.
+     *
+     * One or more values that should be pre-populated in the answer when initially rendering the questionnaire for user input.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on 2021-04-07
      */
     public static class QuestionnaireItemInitial extends BackboneElement {
 
@@ -550,8 +553,8 @@ public class Questionnaire extends DomainResource {
         /**
          * Constructor for all required properties.
          *
-         * @param value as one of Attachment, Boolean, Coding, FhirDate, FhirDateTime, FhirDecimal, Integer, Quantity,
-         *              Reference, String, FhirTime, String*
+         * @param value as one of Attachment, Boolean, Coding, FhirDate, FhirDateTime, FhirDecimal, Integer, Quantity, Reference, String, FhirTime, String*
+         *
          */
         public QuestionnaireItemInitial(Object value) {
             if (value instanceof Attachment) {

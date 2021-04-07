@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on 2021-04-07
  */
 public class QuestionnaireResponse extends DomainResource {
 
@@ -95,6 +95,7 @@ public class QuestionnaireResponse extends DomainResource {
      * Constructor for all required properties.
      *
      * @param status CodeSystemQuestionnaireResponseStatus
+     *
      */
     public QuestionnaireResponse(CodeSystemQuestionnaireResponseStatus status) {
         this.status = status;
@@ -108,13 +109,12 @@ public class QuestionnaireResponse extends DomainResource {
 
     /**
      * QuestionnaireResponse.java
-     * <p>
+     *
      * A group or question item from the original questionnaire for which answers are provided.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on
-     * 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on 2021-04-07
      */
     public static class QuestionnaireResponseItem extends BackboneElement {
 
@@ -149,6 +149,7 @@ public class QuestionnaireResponse extends DomainResource {
          * Constructor for all required properties.
          *
          * @param linkId String
+         *
          */
         public QuestionnaireResponseItem(String linkId) {
             this.linkId = linkId;
@@ -165,13 +166,12 @@ public class QuestionnaireResponse extends DomainResource {
 
     /**
      * QuestionnaireResponse.java
-     * <p>
+     *
      * The respondent's answer(s) to the question.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on
-     * 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse) on 2021-04-07
      */
     public static class QuestionnaireResponseItemAnswer extends BackboneElement {
 

@@ -23,7 +23,7 @@ package care.data4life.fhir.r4.model;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Age">Age</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Age) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Age) on 2021-04-07
  */
 public class Age extends Quantity {
 

@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-04-07
  */
 public class Medication extends DomainResource {
 
@@ -88,12 +88,12 @@ public class Medication extends DomainResource {
 
     /**
      * Medication.java
-     * <p>
+     *
      * Information that only applies to packages (not products).
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-04-07
      */
     public static class MedicationBatch extends BackboneElement {
 
@@ -124,12 +124,12 @@ public class Medication extends DomainResource {
 
     /**
      * Medication.java
-     * <p>
+     *
      * Identifies a particular constituent of interest in the product.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-04-07
      */
     public static class MedicationIngredient extends BackboneElement {
 
@@ -160,6 +160,7 @@ public class Medication extends DomainResource {
          * Constructor for all required properties.
          *
          * @param item as one of CodeableConcept, Reference*
+         *
          */
         public MedicationIngredient(Object item) {
             if (item instanceof CodeableConcept) {

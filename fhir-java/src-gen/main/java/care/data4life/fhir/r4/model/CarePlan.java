@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CarePlan) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CarePlan) on 2021-04-07
  */
 public class CarePlan extends DomainResource {
 
@@ -177,7 +177,7 @@ public class CarePlan extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CarePlan) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CarePlan) on 2021-04-07
      */
     public static class CarePlanActivity extends BackboneElement {
 
@@ -223,13 +223,12 @@ public class CarePlan extends DomainResource {
 
     /**
      * CarePlan.java
-     * <p>
-     * A simple summary of a planned activity suitable for a general care plan system (e.g. form driven) that doesn't
-     * know about specific resources such as procedure etc.
+     *
+     * A simple summary of a planned activity suitable for a general care plan system (e.g. form driven) that doesn't know about specific resources such as procedure etc.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CarePlan) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CarePlan) on 2021-04-07
      */
     public static class CarePlanActivityDetail extends BackboneElement {
 
@@ -340,6 +339,7 @@ public class CarePlan extends DomainResource {
          * Constructor for all required properties.
          *
          * @param status CodeSystemCarePlanActivityStatus
+         *
          */
         public CarePlanActivityDetail(CodeSystemCarePlanActivityStatus status) {
             this.status = status;

@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-04-07
  */
 public class DocumentReference extends DomainResource {
 
@@ -141,7 +141,7 @@ public class DocumentReference extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-04-07
      */
     public static class DocumentReferenceContent extends BackboneElement {
 
@@ -161,6 +161,7 @@ public class DocumentReference extends DomainResource {
          * Constructor for all required properties.
          *
          * @param attachment Attachment
+         *
          */
         public DocumentReferenceContent(Attachment attachment) {
             this.attachment = attachment;
@@ -177,12 +178,12 @@ public class DocumentReference extends DomainResource {
 
     /**
      * DocumentReference.java
-     * <p>
+     *
      * The clinical context in which the document was prepared.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-04-07
      */
     public static class DocumentReferenceContext extends BackboneElement {
 
@@ -238,12 +239,12 @@ public class DocumentReference extends DomainResource {
 
     /**
      * DocumentReference.java
-     * <p>
+     *
      * Relationships that this document has with other document references that already exist.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference) on 2021-04-07
      */
     public static class DocumentReferenceRelatesTo extends BackboneElement {
 
@@ -261,8 +262,10 @@ public class DocumentReference extends DomainResource {
         /**
          * Constructor for all required properties.
          *
-         * @param code   CodeSystemDocumentRelationshipType
+         * @param code CodeSystemDocumentRelationshipType
+         *
          * @param target Reference
+         *
          */
         public DocumentReferenceRelatesTo(CodeSystemDocumentRelationshipType code, Reference target) {
             this.code = code;

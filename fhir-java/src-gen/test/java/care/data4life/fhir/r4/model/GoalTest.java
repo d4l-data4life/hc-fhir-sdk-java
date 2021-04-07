@@ -34,7 +34,7 @@ import static org.junit.Assert.assertEquals;
  * activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
  */
 public class GoalTest {
 

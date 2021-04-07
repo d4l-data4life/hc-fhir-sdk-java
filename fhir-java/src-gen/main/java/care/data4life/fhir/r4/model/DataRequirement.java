@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-04-07
  */
 public class DataRequirement extends Element {
 
@@ -85,6 +85,7 @@ public class DataRequirement extends Element {
      * Constructor for all required properties.
      *
      * @param type String
+     *
      */
     public DataRequirement(String type) {
         this.type = type;
@@ -105,7 +106,7 @@ public class DataRequirement extends Element {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-04-07
      */
     public static class DataRequirementCodeFilter extends Element {
 
@@ -153,7 +154,7 @@ public class DataRequirement extends Element {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-04-07
      */
     public static class DataRequirementDateFilter extends Element {
 
@@ -199,12 +200,12 @@ public class DataRequirement extends Element {
 
     /**
      * DataRequirement.java
-     * <p>
+     *
      * Specifies the order of the results to be returned.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-04-07
      */
     public static class DataRequirementSort extends Element {
 
@@ -222,8 +223,10 @@ public class DataRequirement extends Element {
         /**
          * Constructor for all required properties.
          *
-         * @param path      String
+         * @param path String
+         *
          * @param direction CodeSystemSortDirection
+         *
          */
         public DataRequirementSort(String path, CodeSystemSortDirection direction) {
             this.path = path;

@@ -22,12 +22,12 @@ import javax.annotation.Nullable;
 
 /**
  * Resource.java
- * <p>
+ *
  * This is the base resource type for everything.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Resource">Resource</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Resource) on 2021-03-26
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Resource) on 2021-04-07
  */
 public class Resource extends FhirR4Base {
 

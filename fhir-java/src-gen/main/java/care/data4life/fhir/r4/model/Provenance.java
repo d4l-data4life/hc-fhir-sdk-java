@@ -35,7 +35,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on 2021-04-07
  */
 public class Provenance extends DomainResource {
 
@@ -121,7 +121,7 @@ public class Provenance extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on 2021-04-07
      */
     public static class ProvenanceAgent extends BackboneElement {
 
@@ -151,6 +151,7 @@ public class Provenance extends DomainResource {
          * Constructor for all required properties.
          *
          * @param who Reference
+         *
          */
         public ProvenanceAgent(Reference who) {
             this.who = who;
@@ -167,12 +168,12 @@ public class Provenance extends DomainResource {
 
     /**
      * Provenance.java
-     * <p>
+     *
      * An entity used in this activity
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on 2021-04-07
      */
     public static class ProvenanceEntity extends BackboneElement {
 
@@ -196,7 +197,9 @@ public class Provenance extends DomainResource {
          * Constructor for all required properties.
          *
          * @param role CodeSystemProvenanceEntityRole
+         *
          * @param what Reference
+         *
          */
         public ProvenanceEntity(CodeSystemProvenanceEntityRole role, Reference what) {
             this.role = role;

@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on 2021-04-07
  */
 public class Timing extends BackboneElement {
 
@@ -65,12 +65,12 @@ public class Timing extends BackboneElement {
 
     /**
      * Timing.java
-     * <p>
+     *
      * A set of rules that describe when the event is scheduled.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on 2021-04-07
      */
     public static class TimingRepeat extends Element {
 

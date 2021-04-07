@@ -35,7 +35,7 @@ import static org.junit.Assert.assertTrue;
  * its key properties, and optionally define a part or all of its content.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-03-26
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
  */
 public class CodeSystemTest {
 

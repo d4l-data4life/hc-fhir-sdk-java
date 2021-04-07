@@ -24,12 +24,12 @@ import javax.annotation.Nullable;
 
 /**
  * Element.java
- * <p>
+ *
  * Base definition for all elements in a resource.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Element">Element</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Element) on 2021-03-26
+ *
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Element) on 2021-04-07
  */
 public class Element extends FhirR4Base {
 

@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on 2021-04-07
  */
 public class Observation extends DomainResource {
 
@@ -245,7 +245,7 @@ public class Observation extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on 2021-04-07
      */
     public static class ObservationComponent extends BackboneElement {
 
@@ -330,6 +330,7 @@ public class Observation extends DomainResource {
          * Constructor for all required properties.
          *
          * @param code CodeableConcept
+         *
          */
         public ObservationComponent(CodeableConcept code) {
             this.code = code;
@@ -346,14 +347,12 @@ public class Observation extends DomainResource {
 
     /**
      * Observation.java
-     * <p>
-     * Guidance on how to interpret the value by comparison to a normal or recommended range.  Multiple reference ranges
-     * are interpreted as an "OR".   In other words, to represent two distinct target populations, two `referenceRange`
-     * elements would be used.
+     *
+     * Guidance on how to interpret the value by comparison to a normal or recommended range.  Multiple reference ranges are interpreted as an "OR".   In other words, to represent two distinct target populations, two `referenceRange` elements would be used.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on 2021-04-07
      */
     public static class ObservationReferenceRange extends BackboneElement {
 

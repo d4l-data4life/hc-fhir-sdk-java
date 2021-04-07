@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-04-07
  */
 public class Patient extends DomainResource {
 
@@ -138,12 +138,12 @@ public class Patient extends DomainResource {
 
     /**
      * Patient.java
-     * <p>
+     *
      * A language which may be used to communicate with the patient about his or her health
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-04-07
      */
     public static class PatientCommunication extends BackboneElement {
 
@@ -163,6 +163,7 @@ public class Patient extends DomainResource {
          * Constructor for all required properties.
          *
          * @param language CodeableConcept
+         *
          */
         public PatientCommunication(CodeableConcept language) {
             this.language = language;
@@ -179,12 +180,12 @@ public class Patient extends DomainResource {
 
     /**
      * Patient.java
-     * <p>
+     *
      * A contact party (e.g. guardian, partner, friend) for the patient
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-04-07
      */
     public static class PatientContact extends BackboneElement {
 
@@ -240,12 +241,12 @@ public class Patient extends DomainResource {
 
     /**
      * Patient.java
-     * <p>
+     *
      * Link to another patient resource that concerns the same actual patient.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Patient) on 2021-04-07
      */
     public static class PatientLink extends BackboneElement {
 

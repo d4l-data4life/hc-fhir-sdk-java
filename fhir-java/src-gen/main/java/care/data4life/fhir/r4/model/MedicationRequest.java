@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MedicationRequest) on 2021-03-26
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MedicationRequest) on 2021-04-07
  */
 public class MedicationRequest extends DomainResource {
 
@@ -243,7 +243,7 @@ public class MedicationRequest extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MedicationRequest) on 2021-03-26
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MedicationRequest) on 2021-04-07
      */
     public static class MedicationRequestDispenseRequest extends BackboneElement {
 
@@ -299,12 +299,12 @@ public class MedicationRequest extends DomainResource {
 
     /**
      * MedicationRequest.java
-     * <p>
+     *
      * Indicates the quantity or duration for the first dispense of the medication.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MedicationRequest) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MedicationRequest) on 2021-04-07
      */
     public static class MedicationRequestDispenseRequestInitialFill extends BackboneElement {
 
@@ -335,14 +335,12 @@ public class MedicationRequest extends DomainResource {
 
     /**
      * MedicationRequest.java
-     * <p>
-     * Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must
-     * happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is
-     * specified substitution may be done.
+     *
+     * Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
-     * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MedicationRequest) on 2021-03-26
+     *
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MedicationRequest) on 2021-04-07
      */
     public static class MedicationRequestSubstitution extends BackboneElement {
 
@@ -368,6 +366,7 @@ public class MedicationRequest extends DomainResource {
          * Constructor for all required properties.
          *
          * @param allowed as one of Boolean, CodeableConcept*
+         *
          */
         public MedicationRequestSubstitution(Object allowed) {
             if (allowed instanceof Boolean) {
