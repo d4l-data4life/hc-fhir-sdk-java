@@ -23,8 +23,7 @@ package care.data4life.fhir.r4.model;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Duration">Duration</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Duration) on
- * 2021-04-08
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Duration)
  */
 public class Duration extends Quantity {
 

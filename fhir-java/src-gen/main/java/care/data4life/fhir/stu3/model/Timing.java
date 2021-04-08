@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing) on 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing)
  */
 public class Timing extends Element {
 
@@ -70,8 +70,7 @@ public class Timing extends Element {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Timing)
      */
     public static class TimingRepeat extends Element {
 

@@ -30,8 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
- * 2021-04-08
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter)
  */
 public class Encounter extends DomainResource {
 
@@ -180,8 +179,7 @@ public class Encounter extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter)
      */
     public static class EncounterClassHistory extends BackboneElement {
 
@@ -223,8 +221,7 @@ public class Encounter extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter)
      */
     public static class EncounterDiagnosis extends BackboneElement {
 
@@ -270,8 +267,7 @@ public class Encounter extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter)
      */
     public static class EncounterHospitalization extends BackboneElement {
 
@@ -342,8 +338,7 @@ public class Encounter extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter)
      */
     public static class EncounterLocation extends BackboneElement {
 
@@ -394,8 +389,7 @@ public class Encounter extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter)
      */
     public static class EncounterParticipant extends BackboneElement {
 
@@ -438,8 +432,7 @@ public class Encounter extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Encounter)
      */
     public static class EncounterStatusHistory extends BackboneElement {
 

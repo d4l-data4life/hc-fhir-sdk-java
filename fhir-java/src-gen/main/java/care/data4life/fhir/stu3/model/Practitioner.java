@@ -29,8 +29,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Practitioner">Practitioner</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Practitioner) on
- * 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Practitioner)
  */
 public class Practitioner extends DomainResource {
 
@@ -103,8 +102,7 @@ public class Practitioner extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Practitioner">Practitioner</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Practitioner) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Practitioner)
      */
     public static class PractitionerQualification extends BackboneElement {
 

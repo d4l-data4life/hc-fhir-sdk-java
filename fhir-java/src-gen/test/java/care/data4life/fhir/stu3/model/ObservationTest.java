@@ -33,7 +33,7 @@ import static org.junit.Assert.assertEquals;
  * Measurements and simple assertions made about a patient, device or other subject.
  * <p>
  * <p>
- * "Generated from FHIR 3.0.1.11917 on 2020-10-27
+ * Generated from FHIR 3.0.1.11917
  */
 public class ObservationTest {
 
@@ -287,7 +287,7 @@ public class ObservationTest {
         assertEquals(data.valueQuantity.code, "[in_i]");
         assertEquals(data.valueQuantity.system, "http://unitsofmeasure.org");
         assertEquals(data.valueQuantity.unit, "in");
-        assertEquals(data.valueQuantity.value.toString(), "66.899999999999991");
+        assertEquals(data.valueQuantity.value.toString(), "66.89999999999999");
 
         String json = parser.fromFhir(data);
 

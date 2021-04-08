@@ -31,8 +31,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
- * 2021-04-08
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet)
  */
 public class ValueSet extends DomainResource {
 
@@ -152,8 +151,7 @@ public class ValueSet extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet)
      */
     public static class ValueSetCompose extends BackboneElement {
 
@@ -204,8 +202,7 @@ public class ValueSet extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet)
      */
     public static class ValueSetComposeInclude extends BackboneElement {
 
@@ -256,8 +253,7 @@ public class ValueSet extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet)
      */
     public static class ValueSetComposeIncludeConcept extends BackboneElement {
 
@@ -304,8 +300,7 @@ public class ValueSet extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet)
      */
     public static class ValueSetComposeIncludeConceptDesignation extends BackboneElement {
 
@@ -353,8 +348,7 @@ public class ValueSet extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet)
      */
     public static class ValueSetComposeIncludeFilter extends BackboneElement {
 
@@ -403,8 +397,7 @@ public class ValueSet extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet)
      */
     public static class ValueSetExpansion extends BackboneElement {
 
@@ -465,8 +458,7 @@ public class ValueSet extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet)
      */
     public static class ValueSetExpansionContains extends BackboneElement {
 
@@ -534,8 +526,7 @@ public class ValueSet extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet)
      */
     public static class ValueSetExpansionParameter extends BackboneElement {
 

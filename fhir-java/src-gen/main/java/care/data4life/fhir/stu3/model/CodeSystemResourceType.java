@@ -528,8 +528,8 @@ public enum CodeSystemResourceType {
     MEDICATION,
 
     /**
-     * Describes the event of a patient consuming or otherwise being administered a medication. This
-     * may be as simple as swallowing a tablet or it may be a long running infusion.  Related
+     * Describes the event of a patient consuming or otherwise being administered a medication.
+     * This may be as simple as swallowing a tablet or it may be a long running infusion.  Related
      * resources tie this event to the authorizing prescription, and the specific encounter between
      * patient and health care practitioner.
      */

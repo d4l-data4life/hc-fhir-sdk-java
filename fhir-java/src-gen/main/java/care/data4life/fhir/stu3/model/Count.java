@@ -25,7 +25,7 @@ package care.data4life.fhir.stu3.model;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Count">Count</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Count) on 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Count)
  */
 public class Count extends Quantity {
 

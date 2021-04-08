@@ -37,7 +37,7 @@ import javax.annotation.Nullable;
  * {% endif %}{%- endif %}
  * @see <a href="{{ profile.url }}">{{ profile.targetname }}</a>
  *
- * Generated from FHIR {{ info.version }} ({{ profile.url }}) on {{ info.date }}
+ * Generated from FHIR {{ info.version }} ({{ profile.url }})
  */
 public {% if not loop.first %}static {% endif %}class {{ klass.name }}{% if klass.superclass.name %} extends {{ klass.superclass.name}} {% endif %}{% if klass.name == "Element" or klass.name == "Resource" %} extends FhirStu3Base{% endif %} {
 

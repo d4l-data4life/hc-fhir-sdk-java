@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Goal">Goal</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Goal) on 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Goal)
  */
 public class Goal extends DomainResource {
 
@@ -140,7 +140,7 @@ public class Goal extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Goal">Goal</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Goal) on 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Goal)
      */
     public static class GoalTarget extends BackboneElement {
 

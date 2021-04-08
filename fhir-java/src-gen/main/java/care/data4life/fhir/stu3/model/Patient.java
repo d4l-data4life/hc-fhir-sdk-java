@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient) on 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient)
  */
 public class Patient extends DomainResource {
 
@@ -148,8 +148,7 @@ public class Patient extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient)
      */
     public static class PatientAnimal extends BackboneElement {
 
@@ -195,8 +194,7 @@ public class Patient extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient)
      */
     public static class PatientCommunication extends BackboneElement {
 
@@ -237,8 +235,7 @@ public class Patient extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient)
      */
     public static class PatientContact extends BackboneElement {
 
@@ -299,8 +296,7 @@ public class Patient extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Patient)
      */
     public static class PatientLink extends BackboneElement {
 

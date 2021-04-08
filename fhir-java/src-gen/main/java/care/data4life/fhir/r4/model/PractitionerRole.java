@@ -31,7 +31,6 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/PractitionerRole">PractitionerRole</a>
  * <p>
  * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/PractitionerRole)
- * on 2021-04-08
  */
 public class PractitionerRole extends DomainResource {
 
@@ -126,7 +125,6 @@ public class PractitionerRole extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/PractitionerRole">PractitionerRole</a>
      * <p>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/PractitionerRole)
-     * on 2021-04-08
      */
     public static class PractitionerRoleAvailableTime extends BackboneElement {
 
@@ -174,7 +172,6 @@ public class PractitionerRole extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/PractitionerRole">PractitionerRole</a>
      * <p>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/PractitionerRole)
-     * on 2021-04-08
      */
     public static class PractitionerRoleNotAvailable extends BackboneElement {
 

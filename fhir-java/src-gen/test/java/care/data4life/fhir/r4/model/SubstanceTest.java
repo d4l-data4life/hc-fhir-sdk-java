@@ -31,7 +31,7 @@ import static org.junit.Assert.assertEquals;
  * A homogeneous material with a definite composition.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
+ * "Generated from FHIR 4.0.1-9346c8cc45
  */
 public class SubstanceTest {
 

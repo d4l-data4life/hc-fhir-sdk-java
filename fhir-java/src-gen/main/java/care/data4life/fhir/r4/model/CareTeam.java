@@ -30,8 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on
- * 2021-04-08
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam)
  */
 public class CareTeam extends DomainResource {
 
@@ -119,8 +118,7 @@ public class CareTeam extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam)
      */
     public static class CareTeamParticipant extends BackboneElement {
 

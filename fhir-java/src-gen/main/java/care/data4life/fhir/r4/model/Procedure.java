@@ -30,8 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on
- * 2021-04-08
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure)
  */
 public class Procedure extends DomainResource {
 
@@ -222,8 +221,7 @@ public class Procedure extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure)
      */
     public static class ProcedureFocalDevice extends BackboneElement {
 
@@ -264,8 +262,7 @@ public class Procedure extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure)
      */
     public static class ProcedurePerformer extends BackboneElement {
 

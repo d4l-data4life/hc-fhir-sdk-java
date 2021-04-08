@@ -31,8 +31,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Organization) on
- * 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Organization)
  */
 public class Organization extends DomainResource {
 
@@ -105,8 +104,7 @@ public class Organization extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Organization) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Organization)
      */
     public static class OrganizationContact extends BackboneElement {
 

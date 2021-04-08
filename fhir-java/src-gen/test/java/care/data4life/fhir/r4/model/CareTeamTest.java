@@ -34,7 +34,7 @@ import static org.junit.Assert.assertEquals;
  * coordination and delivery of care for a patient.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
+ * "Generated from FHIR 4.0.1-9346c8cc45
  */
 public class CareTeamTest {
 

@@ -33,7 +33,7 @@ import static org.junit.Assert.assertEquals;
  * Measurements and simple assertions made about a patient, device or other subject.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
+ * "Generated from FHIR 4.0.1-9346c8cc45
  */
 public class ObservationTest {
 

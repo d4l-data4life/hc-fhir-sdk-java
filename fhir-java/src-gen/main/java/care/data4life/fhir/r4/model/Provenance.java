@@ -36,8 +36,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on
- * 2021-04-08
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance)
  */
 public class Provenance extends DomainResource {
 
@@ -123,8 +122,7 @@ public class Provenance extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance)
      */
     public static class ProvenanceAgent extends BackboneElement {
 
@@ -175,8 +173,7 @@ public class Provenance extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on
-     * 2021-04-08
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance)
      */
     public static class ProvenanceEntity extends BackboneElement {
 

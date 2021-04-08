@@ -35,7 +35,7 @@ import static org.junit.Assert.assertTrue;
  * other health-related services.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
+ * "Generated from FHIR 4.0.1-9346c8cc45
  */
 public class PatientTest {
 
