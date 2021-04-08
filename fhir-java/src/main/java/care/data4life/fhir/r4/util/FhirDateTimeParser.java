@@ -29,17 +29,22 @@ import care.data4life.fhir.util.Preconditions;
 
 public final class FhirDateTimeParser {
 
-    static final String GMT_ID = "GMT";
     private static final String DATE_FORMAT_REGEX = "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?";
     private static final Pattern DATE_PATTERN = Pattern.compile(DATE_FORMAT_REGEX);
+
     private static final String DATE_TIME_FORMAT_REGEX = "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?";
     private static final Pattern DATE_TIME_PATTERN = Pattern.compile(DATE_TIME_FORMAT_REGEX);
+
     private static final String INSTANT_FORMAT_REGEX = "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))))";
     private static final Pattern INSTANT_PATTERN = Pattern.compile(INSTANT_FORMAT_REGEX);
+
     private static final String TIME_FORMAT_REGEX = "([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?";
     private static final Pattern TIME_PATTERN = Pattern.compile(TIME_FORMAT_REGEX);
+
     private static final String ZERO_OFFSET_GMT_REGEX = "^GMT[+-]00:00$";
     static final Pattern ZERO_OFFSET_GMT_PATTERN = Pattern.compile(ZERO_OFFSET_GMT_REGEX);
+
+    static final String GMT_ID = "GMT";
     private static final TimeZone TIMEZONE_Z = TimeZone.getTimeZone(GMT_ID);
 
 
