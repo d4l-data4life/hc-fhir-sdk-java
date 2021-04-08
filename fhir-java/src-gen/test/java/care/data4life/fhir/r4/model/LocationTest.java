@@ -231,8 +231,8 @@ public class LocationTest {
         assertEquals(data.physicalType.coding.get(0).code, "bu");
         assertEquals(data.physicalType.coding.get(0).display, "Building");
         assertEquals(data.physicalType.coding.get(0).system, "http://terminology.hl7.org/CodeSystem/location-physical-type");
-        assertEquals(data.position.latitude.toString(), "-83.69471");
-        assertEquals(data.position.longitude.toString(), "42.2565");
+        assertEquals(data.position.latitude.toString(), "-83.694710");
+        assertEquals(data.position.longitude.toString(), "42.256500");
         assertEquals(data.status, CodeSystemLocationStatus.ACTIVE);
         assertEquals(data.telecom.get(0).system, CodeSystemContactPointSystem.PHONE);
         assertEquals(data.telecom.get(0).value, "(+1) 734-677-7777");

@@ -287,7 +287,7 @@ public class ObservationTest {
         assertEquals(data.valueQuantity.code, "[in_i]");
         assertEquals(data.valueQuantity.system, "http://unitsofmeasure.org");
         assertEquals(data.valueQuantity.unit, "in");
-        assertEquals(data.valueQuantity.value.toString(), "66.89999999999999");
+        assertEquals(data.valueQuantity.value.toString(), "66.899999999999991");
 
         String json = parser.fromFhir(data);
 
