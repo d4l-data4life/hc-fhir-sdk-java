@@ -50,9 +50,9 @@ public final class FhirElementFactory {
   }
 
   public static Class<?> getClassForFhirType(String typeName) {
-    switch (typeName) {
+    switch (typeName.toLowerCase()) {
       {%- for klass in classes %}{%if klass.name in resource_list %}
-      case "{{ klass.resource_type }}":
+      case "{{ klass.resource_type.lower() }}":
         return {{ klass.name }}.class;
       {%-endif %}{% endfor %}
 
