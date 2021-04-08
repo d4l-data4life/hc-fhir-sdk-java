@@ -90,50 +90,50 @@ public final class FhirElementFactory {
     }
 
     public static Class<?> getClassForFhirType(String typeName) {
-        switch (typeName) {
-            case "CarePlan":
+        switch (typeName.toLowerCase()) {
+            case "careplan":
                 return CarePlan.class;
-            case "CareTeam":
+            case "careteam":
                 return CareTeam.class;
-            case "Condition":
+            case "condition":
                 return Condition.class;
-            case "DiagnosticReport":
+            case "diagnosticreport":
                 return DiagnosticReport.class;
-            case "DocumentReference":
+            case "documentreference":
                 return DocumentReference.class;
-            case "FamilyMemberHistory":
+            case "familymemberhistory":
                 return FamilyMemberHistory.class;
-            case "Goal":
+            case "goal":
                 return Goal.class;
-            case "Medication":
+            case "medication":
                 return Medication.class;
-            case "MedicationRequest":
+            case "medicationrequest":
                 return MedicationRequest.class;
-            case "Observation":
+            case "observation":
                 return Observation.class;
-            case "Organization":
+            case "organization":
                 return Organization.class;
-            case "Patient":
+            case "patient":
                 return Patient.class;
-            case "Practitioner":
+            case "practitioner":
                 return Practitioner.class;
-            case "Procedure":
+            case "procedure":
                 return Procedure.class;
-            case "ProcedureRequest":
+            case "procedurerequest":
                 return ProcedureRequest.class;
-            case "Provenance":
+            case "provenance":
                 return Provenance.class;
-            case "Questionnaire":
+            case "questionnaire":
                 return Questionnaire.class;
-            case "QuestionnaireResponse":
+            case "questionnaireresponse":
                 return QuestionnaireResponse.class;
-            case "ReferralRequest":
+            case "referralrequest":
                 return ReferralRequest.class;
-            case "Specimen":
+            case "specimen":
                 return Specimen.class;
-            case "Substance":
+            case "substance":
                 return Substance.class;
-            case "ValueSet":
+            case "valueset":
                 return ValueSet.class;
 
             default:
