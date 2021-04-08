@@ -40,7 +40,7 @@ import static org.junit.Assert.assertEquals;
  * privacy, and trust policies.
  * <p>
  * <p>
- * "Generated from FHIR 3.0.1.11917 on 2020-10-27
+ * Generated from FHIR 3.0.1.11917
  */
 public class ProvenanceTest {
 

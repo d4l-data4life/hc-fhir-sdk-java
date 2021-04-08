@@ -30,8 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
- * 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition)
  */
 public class Condition extends DomainResource {
 
@@ -185,8 +184,7 @@ public class Condition extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition)
      */
     public static class ConditionEvidence extends BackboneElement {
 
@@ -222,8 +220,7 @@ public class Condition extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Condition)
      */
     public static class ConditionStage extends BackboneElement {
 

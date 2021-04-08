@@ -17,6 +17,7 @@
 package care.data4life.fhir.r4.model;
 
 import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
@@ -26,8 +27,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/canonical">Canonical</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/canonical) on
- * 2020-10-15
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/canonical) on 2020-10-15
  */
 public class Canonical {
 
@@ -72,5 +72,7 @@ public class Canonical {
     }
 
     @Override
-    public int hashCode() { return Objects.hash(url, version); }
+    public int hashCode() {
+        return Objects.hash(url, version);
+    }
 }

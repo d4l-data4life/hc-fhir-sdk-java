@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Coding">Coding</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Coding) on 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Coding)
  */
 public class Coding extends Element {
 

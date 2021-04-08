@@ -31,8 +31,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication)
  */
 public class Medication extends DomainResource {
 
@@ -95,8 +94,7 @@ public class Medication extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication)
      */
     public static class MedicationBatch extends BackboneElement {
 
@@ -132,8 +130,7 @@ public class Medication extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication)
      */
     public static class MedicationIngredient extends BackboneElement {
 

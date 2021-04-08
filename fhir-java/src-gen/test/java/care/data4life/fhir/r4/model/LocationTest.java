@@ -34,7 +34,7 @@ import static org.junit.Assert.assertEquals;
  * and participants may be stored, found, contained, or accommodated.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2020-10-27
+ * "Generated from FHIR 4.0.1-9346c8cc45
  */
 public class LocationTest {
 

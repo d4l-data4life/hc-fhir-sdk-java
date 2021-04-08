@@ -33,7 +33,7 @@ import static org.junit.Assert.assertEquals;
  * A person who is directly or indirectly involved in the provisioning of healthcare.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2020-10-27
+ * "Generated from FHIR 4.0.1-9346c8cc45
  */
 public class PractitionerTest {
 

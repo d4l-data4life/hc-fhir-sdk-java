@@ -36,7 +36,7 @@ import static org.junit.Assert.assertTrue;
  * definitions and their use in [coded elements](terminologies.html).
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2020-10-27
+ * "Generated from FHIR 4.0.1-9346c8cc45
  */
 public class ValueSetTest {
 

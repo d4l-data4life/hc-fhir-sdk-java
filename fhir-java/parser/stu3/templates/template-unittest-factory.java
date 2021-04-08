@@ -28,7 +28,7 @@ import static org.junit.Assert.*;
 /**
  * FhirElementFactoryTest.java
  *
- * "Generated from FHIR {{ info.version }} on {{ info.date }}
+ * Generated from FHIR {{ info.version }}
  */
 public class {{ class.name }}FhirElementFactory {
 

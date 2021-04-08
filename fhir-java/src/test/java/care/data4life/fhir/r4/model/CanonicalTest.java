@@ -18,6 +18,7 @@ package care.data4life.fhir.r4.model;
 
 import org.junit.Before;
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
 public class CanonicalTest {
@@ -38,13 +39,19 @@ public class CanonicalTest {
 
 
     @Test
-    public void it_contains_a_url() { assertEquals(URL, canonical.url); }
+    public void it_contains_a_url() {
+        assertEquals(URL, canonical.url);
+    }
 
     @Test
-    public void it_contains_a_version() { assertEquals(VERSION, canonical.version); }
+    public void it_contains_a_version() {
+        assertEquals(VERSION, canonical.version);
+    }
 
     @Test
-    public void it_contains_a_resourceType() { assertEquals(RESOURCE_TYPE, canonical.getResourceType()); }
+    public void it_contains_a_resourceType() {
+        assertEquals(RESOURCE_TYPE, canonical.getResourceType());
+    }
 
     @Test
     public void given_another_canonical_equals_it_returns_true() {

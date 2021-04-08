@@ -29,8 +29,7 @@ import javax.annotation.Nullable;
  * context of care for the patient.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory">FamilyMemberHistory</a>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory) on
- * 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory)
  */
 public class FamilyMemberHistory extends DomainResource {
 
@@ -192,7 +191,6 @@ public class FamilyMemberHistory extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory">FamilyMemberHistory</a>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory)
-     * on 2020-10-27
      */
     public static class FamilyMemberHistoryCondition extends BackboneElement {
 

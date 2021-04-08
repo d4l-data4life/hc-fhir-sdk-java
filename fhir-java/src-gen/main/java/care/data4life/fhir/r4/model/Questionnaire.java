@@ -31,8 +31,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire)
  */
 public class Questionnaire extends DomainResource {
 
@@ -171,7 +170,6 @@ public class Questionnaire extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
      * <p>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire)
-     * on 2020-10-27
      */
     public static class QuestionnaireItem extends BackboneElement {
 
@@ -284,7 +282,6 @@ public class Questionnaire extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
      * <p>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire)
-     * on 2020-10-27
      */
     public static class QuestionnaireItemAnswerOption extends BackboneElement {
 
@@ -367,7 +364,6 @@ public class Questionnaire extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
      * <p>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire)
-     * on 2020-10-27
      */
     public static class QuestionnaireItemEnableWhen extends BackboneElement {
 
@@ -486,7 +482,6 @@ public class Questionnaire extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Questionnaire">Questionnaire</a>
      * <p>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Questionnaire)
-     * on 2020-10-27
      */
     public static class QuestionnaireItemInitial extends BackboneElement {
 

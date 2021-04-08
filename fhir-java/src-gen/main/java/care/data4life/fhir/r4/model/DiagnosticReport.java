@@ -33,7 +33,6 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
  * <p>
  * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport)
- * on 2020-10-27
  */
 public class DiagnosticReport extends DomainResource {
 
@@ -160,7 +159,6 @@ public class DiagnosticReport extends DomainResource {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a>
      * <p>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DiagnosticReport)
-     * on 2020-10-27
      */
     public static class DiagnosticReportMedia extends BackboneElement {
 

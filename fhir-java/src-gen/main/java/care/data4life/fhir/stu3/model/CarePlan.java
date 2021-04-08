@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CarePlan) on 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CarePlan)
  */
 public class CarePlan extends DomainResource {
 
@@ -162,8 +162,7 @@ public class CarePlan extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CarePlan) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CarePlan)
      */
     public static class CarePlanActivity extends BackboneElement {
 
@@ -215,8 +214,7 @@ public class CarePlan extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CarePlan">CarePlan</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CarePlan) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CarePlan)
      */
     public static class CarePlanActivityDetail extends BackboneElement {
 

@@ -23,8 +23,7 @@ package care.data4life.fhir.r4.model;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Distance">Distance</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Distance) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Distance)
  */
 public class Distance extends Quantity {
 

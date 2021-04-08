@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen)
  */
 public class Specimen extends DomainResource {
 
@@ -117,8 +117,7 @@ public class Specimen extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen)
      */
     public static class SpecimenCollection extends BackboneElement {
 
@@ -175,8 +174,7 @@ public class Specimen extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen)
      */
     public static class SpecimenContainer extends BackboneElement {
 
@@ -237,8 +235,7 @@ public class Specimen extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/Specimen)
      */
     public static class SpecimenProcessing extends BackboneElement {
 

@@ -16,6 +16,9 @@
 
 package care.data4life.fhir.stu3.model;
 
+/**
+ * Generated from FHIR 3.0.1.11917
+ */
 public final class FhirElementFactory {
 
 

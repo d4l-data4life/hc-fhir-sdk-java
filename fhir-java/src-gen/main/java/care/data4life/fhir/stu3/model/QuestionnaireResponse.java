@@ -31,7 +31,6 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
  * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
- * on 2020-10-27
  */
 public class QuestionnaireResponse extends DomainResource {
 
@@ -114,7 +113,6 @@ public class QuestionnaireResponse extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
-     * on 2020-10-27
      */
     public static class QuestionnaireResponseItem extends BackboneElement {
 
@@ -175,7 +173,6 @@ public class QuestionnaireResponse extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse">QuestionnaireResponse</a>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
-     * on 2020-10-27
      */
     public static class QuestionnaireResponseItemAnswer extends BackboneElement {
 

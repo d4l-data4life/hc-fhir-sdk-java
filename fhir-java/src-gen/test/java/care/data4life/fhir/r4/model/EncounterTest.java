@@ -35,7 +35,7 @@ import static org.junit.Assert.assertTrue;
  * healthcare service(s) or assessing the health status of a patient.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2020-10-27
+ * "Generated from FHIR 4.0.1-9346c8cc45
  */
 public class EncounterTest {
 

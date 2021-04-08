@@ -37,7 +37,7 @@ import static org.junit.Assert.*;
  * {{ class.formal }}
  * {%- endif %}
  *
- * "Generated from FHIR {{ info.version }} on {{ info.date }}
+ * "Generated from FHIR {{ info.version }}
  */
 public class {{ class.name }}Test {
 

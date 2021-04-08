@@ -34,7 +34,7 @@ import static org.junit.Assert.assertTrue;
  * A code system resource specifies a set of codes drawn from one or more code systems.
  * <p>
  * <p>
- * "Generated from FHIR 3.0.1.11917 on 2020-10-27
+ * Generated from FHIR 3.0.1.11917
  */
 public class CodeSystemTest {
 

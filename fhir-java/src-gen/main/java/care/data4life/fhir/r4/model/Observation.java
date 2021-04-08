@@ -29,8 +29,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation)
  */
 public class Observation extends DomainResource {
 
@@ -247,8 +246,7 @@ public class Observation extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation)
      */
     public static class ObservationComponent extends BackboneElement {
 
@@ -356,8 +354,7 @@ public class Observation extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation)
      */
     public static class ObservationReferenceRange extends BackboneElement {
 

@@ -30,8 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement)
  */
 public class DataRequirement extends Element {
 
@@ -107,7 +106,6 @@ public class DataRequirement extends Element {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
      * <p>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement)
-     * on 2020-10-27
      */
     public static class DataRequirementCodeFilter extends Element {
 
@@ -156,7 +154,6 @@ public class DataRequirement extends Element {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
      * <p>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement)
-     * on 2020-10-27
      */
     public static class DataRequirementDateFilter extends Element {
 
@@ -208,7 +205,6 @@ public class DataRequirement extends Element {
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
      * <p>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement)
-     * on 2020-10-27
      */
     public static class DataRequirementSort extends Element {
 

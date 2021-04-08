@@ -29,8 +29,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
- * 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem)
  */
 public class CodeSystem extends DomainResource {
 
@@ -186,8 +185,7 @@ public class CodeSystem extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem)
      */
     public static class CodeSystemConcept extends BackboneElement {
 
@@ -249,8 +247,7 @@ public class CodeSystem extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem)
      */
     public static class CodeSystemConceptDesignation extends BackboneElement {
 
@@ -296,8 +293,7 @@ public class CodeSystem extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem)
      */
     public static class CodeSystemConceptProperty extends BackboneElement {
 
@@ -380,8 +376,7 @@ public class CodeSystem extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem)
      */
     public static class CodeSystemFilter extends BackboneElement {
 
@@ -435,8 +430,7 @@ public class CodeSystem extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
      * <p>
-     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
-     * 2020-10-27
+     * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/CodeSystem)
      */
     public static class CodeSystemProperty extends BackboneElement {
 

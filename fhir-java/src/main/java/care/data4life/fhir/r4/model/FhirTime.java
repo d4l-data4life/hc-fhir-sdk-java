@@ -29,9 +29,8 @@ import care.data4life.fhir.util.Preconditions;
 /**
  * FhirTime
  * <p>
- * A time during the day, with no date specified (can be converted to a Duration since midnight).
- * Seconds must be provided due to schema type constraints but may be zero-filled and may be
- * ignored.
+ * A time during the day, with no date specified (can be converted to a Duration since midnight). Seconds must be
+ * provided due to schema type constraints but may be zero-filled and may be ignored.
  * <p>
  * The time "24:00" is not allowed, and neither is a time zone.
  * <p>
@@ -62,8 +61,7 @@ public class FhirTime extends Element implements FhirDateCodec {
      * @param minute           Minute of the hour, allowed range from 0 to 59
      * @param second           Second of the minute, allowed range form 0 to 59
      * @param fractionOfSecond Fraction of the second
-     * @param fractionPadding  Left padding of the fraction for leading zeros, e.g. 00001 = padding
-     *                         of 4
+     * @param fractionPadding  Left padding of the fraction for leading zeros, e.g. 00001 = padding of 4
      */
     public FhirTime(int hour, int minute, @Nullable Integer second, @Nullable Integer fractionOfSecond, @Nullable Integer fractionPadding) {
         Preconditions.checkArgument(hour >= 0, "hour should be >= 0");

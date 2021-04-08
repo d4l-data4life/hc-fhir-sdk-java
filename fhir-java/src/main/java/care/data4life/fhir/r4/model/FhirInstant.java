@@ -29,8 +29,8 @@ import care.data4life.fhir.util.Preconditions;
  * <p>
  * An instant in time - known at least to the second and always includes a time zone.
  * <p>
- * Note: This is intended for precisely observed times (typically system logs etc.), and not
- * human-reported times - for them, use date and dateTime. instant is a more constrained dateTime
+ * Note: This is intended for precisely observed times (typically system logs etc.), and not human-reported times - for
+ * them, use date and dateTime. instant is a more constrained dateTime
  * <p>
  * Regex: -?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))))
  *
@@ -41,8 +41,7 @@ public class FhirInstant extends Element implements FhirDateCodec {
     private FhirDateTime dateTime;
 
     /**
-     * Constructor, takes a DateTime that is defined at least to the second and always includes a
-     * time zone
+     * Constructor, takes a DateTime that is defined at least to the second and always includes a time zone
      *
      * @param dateTime DateTime of the FhirInstant.
      */

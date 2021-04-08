@@ -32,8 +32,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
  * <p>
- * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/MedicationRequest) on
- * 2020-10-27
+ * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/MedicationRequest)
  */
 public class MedicationRequest extends DomainResource {
 
@@ -199,7 +198,6 @@ public class MedicationRequest extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/MedicationRequest)
-     * on 2020-10-27
      */
     public static class MedicationRequestDispenseRequest extends BackboneElement {
 
@@ -251,7 +249,6 @@ public class MedicationRequest extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/MedicationRequest)
-     * on 2020-10-27
      */
     public static class MedicationRequestRequester extends BackboneElement {
 
@@ -294,7 +291,6 @@ public class MedicationRequest extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/MedicationRequest">MedicationRequest</a>
      * Generated from FHIR 3.0.1.11917 (http://hl7.org/fhir/StructureDefinition/MedicationRequest)
-     * on 2020-10-27
      */
     public static class MedicationRequestSubstitution extends BackboneElement {
 

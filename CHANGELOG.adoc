@@ -16,6 +16,8 @@ toc::[]
 
 === Added
 
+* Add FHIR R4 model MedicationStatement and PractitionerRole
+
 === Changed
 
 * FhirElementFactory#getClassForFhirType is now case insensitive.
@@ -32,9 +34,11 @@ toc::[]
 == https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.2.0...v1.2.1[1.2.1]
 
 === Changed
+
 * Canonical(R4): had been aligned with the other classes of the repo
 
 === Fixed
+
 * CanonicalJsonAdapter#toJson(R4): it accesses `value` of a writer now only once
 
 

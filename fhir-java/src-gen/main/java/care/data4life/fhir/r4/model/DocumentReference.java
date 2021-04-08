@@ -33,7 +33,6 @@ import javax.annotation.Nullable;
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
  * <p>
  * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
- * on 2020-10-27
  */
 public class DocumentReference extends DomainResource {
 
@@ -143,7 +142,6 @@ public class DocumentReference extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
-     * on 2020-10-27
      */
     public static class DocumentReferenceContent extends BackboneElement {
 
@@ -184,7 +182,6 @@ public class DocumentReference extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
-     * on 2020-10-27
      */
     public static class DocumentReferenceContext extends BackboneElement {
 
@@ -245,7 +242,6 @@ public class DocumentReference extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>
      * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DocumentReference)
-     * on 2020-10-27
      */
     public static class DocumentReferenceRelatesTo extends BackboneElement {
 

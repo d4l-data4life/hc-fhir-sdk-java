@@ -30,8 +30,7 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Location">Location</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on
- * 2020-10-27
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location)
  */
 public class Location extends DomainResource {
 
@@ -139,8 +138,7 @@ public class Location extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Location">Location</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location)
      */
     public static class LocationHoursOfOperation extends BackboneElement {
 
@@ -187,8 +185,7 @@ public class Location extends DomainResource {
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Location">Location</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location) on
-     * 2020-10-27
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Location)
      */
     public static class LocationPosition extends BackboneElement {
 
