@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Used for results by exposure in variant states such as low-risk, medium-risk and high-risk states.
+ * Used for results by exposure in variant states such as low-risk, medium-risk and high-risk
+ * states.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/evidence-variant-state">EvidenceVariantState</a>
  */

@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemStructureMapTransform {
 
     /**
-     * create(type : string) - type is passed through to the application on the standard API, and must be known by it.
+     * create(type : string) - type is passed through to the application on the standard API, and
+     * must be known by it.
      */
     @Json(name = "create")
     CREATE,
@@ -45,15 +46,15 @@ public enum CodeSystemStructureMapTransform {
     TRUNCATE,
 
     /**
-     * escape(source, fmt1, fmt2) - change source from one kind of escaping to another (plain, java, xml, json). note
-     * that this is for when the string itself is escaped.
+     * escape(source, fmt1, fmt2) - change source from one kind of escaping to another (plain, java,
+     * xml, json). note that this is for when the string itself is escaped.
      */
     @Json(name = "escape")
     ESCAPE,
 
     /**
-     * cast(source, type?) - case source from one type to another. target type can be left as implicit if there is one
-     * and only one target type known.
+     * cast(source, type?) - case source from one type to another. target type can be left as
+     * implicit if there is one and only one target type known.
      */
     @Json(name = "cast")
     CAST,
@@ -89,7 +90,8 @@ public enum CodeSystemStructureMapTransform {
     UUID,
 
     /**
-     * Return the appropriate string to put in a reference that refers to the resource provided as a parameter.
+     * Return the appropriate string to put in a reference that refers to the resource provided as a
+     * parameter.
      */
     @Json(name = "pointer")
     POINTER,
@@ -113,22 +115,22 @@ public enum CodeSystemStructureMapTransform {
     C,
 
     /**
-     * Create a quantity. Parameters = (text) or (value, unit, [system, code]) where text is the natural representation
-     * e.g. [comparator]value[space]unit.
+     * Create a quantity. Parameters = (text) or (value, unit, [system, code]) where text is the
+     * natural representation e.g. [comparator]value[space]unit.
      */
     @Json(name = "qty")
     QTY,
 
     /**
-     * Create an identifier. Parameters = (system, value[, type]) where type is a code from the identifier type value
-     * set.
+     * Create an identifier. Parameters = (system, value[, type]) where type is a code from the
+     * identifier type value set.
      */
     @Json(name = "id")
     ID,
 
     /**
-     * Create a contact details. Parameters = (value) or (system, value). If no system is provided, the system should be
-     * inferred from the content of the value.
+     * Create a contact details. Parameters = (value) or (system, value). If no system is provided,
+     * the system should be inferred from the content of the value.
      */
     @Json(name = "cp")
     CP,

@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Specimen) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Specimen) on
+ * 2021-04-08
  */
 public class Specimen extends DomainResource {
 
@@ -112,12 +113,13 @@ public class Specimen extends DomainResource {
 
     /**
      * Specimen.java
-     *
+     * <p>
      * Details concerning the specimen collection.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Specimen) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Specimen) on
+     * 2021-04-08
      */
     public static class SpecimenCollection extends BackboneElement {
 
@@ -184,12 +186,13 @@ public class Specimen extends DomainResource {
     /**
      * Specimen.java
      * <p>
-     * The container holding the specimen.  The recursive nature of containers; i.e. blood in tube in tray in rack is
-     * not addressed here.
+     * The container holding the specimen.  The recursive nature of containers; i.e. blood in tube
+     * in tray in rack is not addressed here.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Specimen) on 2021-04-07
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Specimen) on
+     * 2021-04-08
      */
     public static class SpecimenContainer extends BackboneElement {
 
@@ -245,12 +248,13 @@ public class Specimen extends DomainResource {
 
     /**
      * Specimen.java
-     *
+     * <p>
      * Details concerning processing and processing steps for the specimen.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Specimen">Specimen</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Specimen) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Specimen) on
+     * 2021-04-08
      */
     public static class SpecimenProcessing extends BackboneElement {
 

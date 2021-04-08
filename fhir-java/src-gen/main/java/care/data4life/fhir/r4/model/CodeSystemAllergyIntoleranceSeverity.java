@@ -20,8 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different
- * manifestations.
+ * Clinical assessment of the severity of a reaction event as a whole, potentially considering
+ * multiple different manifestations.
  *
  * @see <a href="http://hl7.org/fhir/reaction-event-severity">AllergyIntoleranceSeverity</a>
  */

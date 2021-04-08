@@ -45,7 +45,8 @@ public enum CodeSystemCarePlanActivityStatus {
     IN_PROGRESS,
 
     /**
-     * Care plan activity was started but has temporarily ceased with an expectation of resumption at a future time.
+     * Care plan activity was started but has temporarily ceased with an expectation of resumption
+     * at a future time.
      */
     @Json(name = "on-hold")
     ON_HOLD,
@@ -63,14 +64,16 @@ public enum CodeSystemCarePlanActivityStatus {
     CANCELLED,
 
     /**
-     * The planned care plan activity has been ended prior to completion after the activity was started.
+     * The planned care plan activity has been ended prior to completion after the activity was
+     * started.
      */
     @Json(name = "stopped")
     STOPPED,
 
     /**
-     * The current state of the care plan activity is not known.  Note: This concept is not to be used for "other" - one
-     * of the listed statuses is presumed to apply, but the authoring/source system does not know which one.
+     * The current state of the care plan activity is not known.  Note: This concept is not to be
+     * used for "other" - one of the listed statuses is presumed to apply, but the authoring/source
+     * system does not know which one.
      */
     @Json(name = "unknown")
     UNKNOWN,

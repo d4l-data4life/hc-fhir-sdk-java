@@ -27,8 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemGoalAchievementStatus {
 
     /**
-     * The goal is being sought but has not yet been reached. (Also applies if the goal was reached in the past but
-     * there has been regression and the goal is again being sought).
+     * The goal is being sought but has not yet been reached. (Also applies if the goal was reached
+     * in the past but there has been regression and the goal is again being sought).
      */
     @Json(name = "in-progress")
     IN_PROGRESS,

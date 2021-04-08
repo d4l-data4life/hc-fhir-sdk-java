@@ -39,13 +39,15 @@ public enum CodeSystemSynthesisType {
     IPD_MA,
 
     /**
-     * An indirect meta-analysis derived from 2 or more direct comparisons in a network meta-analysis.
+     * An indirect meta-analysis derived from 2 or more direct comparisons in a network
+     * meta-analysis.
      */
     @Json(name = "indirect-NMA")
     INDIRECT_NMA,
 
     /**
-     * An composite meta-analysis derived from direct comparisons and indirect comparisons in a network meta-analysis.
+     * An composite meta-analysis derived from direct comparisons and indirect comparisons in a
+     * network meta-analysis.
      */
     @Json(name = "combined-NMA")
     COMBINED_NMA,
@@ -57,8 +59,8 @@ public enum CodeSystemSynthesisType {
     RANGE,
 
     /**
-     * An approach describing a body of evidence by categorically classifying individual studies (eg 3 studies showed
-     * beneft and 2 studied found no effect).
+     * An approach describing a body of evidence by categorically classifying individual studies (eg
+     * 3 studies showed beneft and 2 studied found no effect).
      */
     @Json(name = "classification")
     CLASSIFICATION,

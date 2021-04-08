@@ -27,15 +27,15 @@ import com.squareup.moshi.Json;
 public enum CodeSystemRequestIntent {
 
     /**
-     * The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and
-     * without providing an authorization to act.
+     * The request is a suggestion made by someone/something that does not have an intention to
+     * ensure it occurs and without providing an authorization to act.
      */
     @Json(name = "proposal")
     PROPOSAL,
 
     /**
-     * The request represents an intention to ensure something occurs without providing an authorization for others to
-     * act.
+     * The request represents an intention to ensure something occurs without providing an
+     * authorization for others to act.
      */
     @Json(name = "plan")
     PLAN,
@@ -59,30 +59,31 @@ public enum CodeSystemRequestIntent {
     ORIGINAL_ORDER,
 
     /**
-     * The request represents an automatically generated supplemental authorization for action based on a parent
-     * authorization together with initial results of the action taken against that parent authorization.
+     * The request represents an automatically generated supplemental authorization for action based
+     * on a parent authorization together with initial results of the action taken against that
+     * parent authorization.
      */
     @Json(name = "reflex-order")
     REFLEX_ORDER,
 
     /**
-     * The request represents the view of an authorization instantiated by a fulfilling system representing the details
-     * of the fulfiller's intention to act upon a submitted order.
+     * The request represents the view of an authorization instantiated by a fulfilling system
+     * representing the details of the fulfiller's intention to act upon a submitted order.
      */
     @Json(name = "filler-order")
     FILLER_ORDER,
 
     /**
-     * An order created in fulfillment of a broader order that represents the authorization for a single activity
-     * occurrence.  E.g. The administration of a single dose of a drug.
+     * An order created in fulfillment of a broader order that represents the authorization for a
+     * single activity occurrence.  E.g. The administration of a single dose of a drug.
      */
     @Json(name = "instance-order")
     INSTANCE_ORDER,
 
     /**
-     * The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or
-     * other constraints among a set of requests.  Refer to [[[RequestGroup]]] for additional information on how this
-     * status is used.
+     * The request represents a component or option for a RequestGroup that establishes timing,
+     * conditionality and/or other constraints among a set of requests.  Refer to [[[RequestGroup]]]
+     * for additional information on how this status is used.
      */
     @Json(name = "option")
     OPTION,

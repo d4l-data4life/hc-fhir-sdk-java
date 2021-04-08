@@ -25,12 +25,14 @@ import javax.annotation.Nullable;
 /**
  * Medication.java
  * <p>
- * This resource is primarily used for the identification and definition of a medication for the purposes of
- * prescribing, dispensing, and administering a medication as well as for making statements about medication use.
+ * This resource is primarily used for the identification and definition of a medication for the
+ * purposes of prescribing, dispensing, and administering a medication as well as for making
+ * statements about medication use.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on
+ * 2021-04-08
  */
 public class Medication extends DomainResource {
 
@@ -88,12 +90,13 @@ public class Medication extends DomainResource {
 
     /**
      * Medication.java
-     *
+     * <p>
      * Information that only applies to packages (not products).
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on
+     * 2021-04-08
      */
     public static class MedicationBatch extends BackboneElement {
 
@@ -124,12 +127,13 @@ public class Medication extends DomainResource {
 
     /**
      * Medication.java
-     *
+     * <p>
      * Identifies a particular constituent of interest in the product.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Medication">Medication</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Medication) on
+     * 2021-04-08
      */
     public static class MedicationIngredient extends BackboneElement {
 
@@ -160,7 +164,6 @@ public class Medication extends DomainResource {
          * Constructor for all required properties.
          *
          * @param item as one of CodeableConcept, Reference*
-         *
          */
         public MedicationIngredient(Object item) {
             if (item instanceof CodeableConcept) {

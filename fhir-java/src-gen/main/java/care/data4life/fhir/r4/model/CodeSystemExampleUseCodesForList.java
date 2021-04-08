@@ -57,8 +57,8 @@ public enum CodeSystemExampleUseCodesForList {
     PROBLEMS,
 
     /**
-     * A list of items that constitute a set of work to be performed (typically this code would be specialized for more
-     * specific uses, such as a ward round list).
+     * A list of items that constitute a set of work to be performed (typically this code would be
+     * specialized for more specific uses, such as a ward round list).
      */
     @Json(name = "worklist")
     WORKLIST,

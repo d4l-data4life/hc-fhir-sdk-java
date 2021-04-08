@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM systems.
+ * A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM
+ * systems.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/evidence-quality">QualityOfEvidenceRating</a>
  */

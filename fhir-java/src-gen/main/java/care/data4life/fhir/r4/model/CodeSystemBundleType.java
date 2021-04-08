@@ -45,20 +45,22 @@ public enum CodeSystemBundleType {
     TRANSACTION,
 
     /**
-     * The bundle is a transaction response. Because the response is a transaction response, the transaction has
-     * succeeded, and all responses are error free.
+     * The bundle is a transaction response. Because the response is a transaction response, the
+     * transaction has succeeded, and all responses are error free.
      */
     @Json(name = "transaction-response")
     TRANSACTION_RESPONSE,
 
     /**
-     * The bundle is a set of actions - intended to be processed by a server as a group of independent actions.
+     * The bundle is a set of actions - intended to be processed by a server as a group of
+     * independent actions.
      */
     @Json(name = "batch")
     BATCH,
 
     /**
-     * The bundle is a batch response. Note that as a batch, some responses may indicate failure and others success.
+     * The bundle is a batch response. Note that as a batch, some responses may indicate failure and
+     * others success.
      */
     @Json(name = "batch-response")
     BATCH_RESPONSE,
@@ -70,14 +72,15 @@ public enum CodeSystemBundleType {
     HISTORY,
 
     /**
-     * The bundle is a list of resources returned as a result of a search/query interaction, operation, or message.
+     * The bundle is a list of resources returned as a result of a search/query interaction,
+     * operation, or message.
      */
     @Json(name = "searchset")
     SEARCHSET,
 
     /**
-     * The bundle is a set of resources collected into a single package for ease of distribution that imposes no
-     * processing obligations or behavioral rules beyond persistence.
+     * The bundle is a set of resources collected into a single package for ease of distribution
+     * that imposes no processing obligations or behavioral rules beyond persistence.
      */
     @Json(name = "collection")
     COLLECTION,

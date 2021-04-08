@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set defines a set of codes that can be used to indicate from where the patient came in.
+ * This value set defines a set of codes that can be used to indicate from where the patient came
+ * in.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/admit-source">AdmitSource</a>
  */
@@ -33,8 +34,8 @@ public enum CodeSystemAdmitSource {
     HOSP_TRANS,
 
     /**
-     * The patient has been transferred from the emergency department within the hospital. This is typically used in the
-     * transition to an inpatient encounter
+     * The patient has been transferred from the emergency department within the hospital. This is
+     * typically used in the transition to an inpatient encounter
      */
     @Json(name = "emd")
     EMD,
@@ -46,8 +47,9 @@ public enum CodeSystemAdmitSource {
     OUTP,
 
     /**
-     * The patient is a newborn and the encounter will track the baby related activities (as opposed to the Mothers
-     * encounter - that may be associated using the newborn encounters partof property)
+     * The patient is a newborn and the encounter will track the baby related activities (as opposed
+     * to the Mothers encounter - that may be associated using the newborn encounters partof
+     * property)
      */
     @Json(name = "born")
     BORN,
@@ -59,7 +61,8 @@ public enum CodeSystemAdmitSource {
     GP,
 
     /**
-     * The patient has been admitted due to a referred from a Specialist (as opposed to a General Practitioner).
+     * The patient has been admitted due to a referred from a Specialist (as opposed to a General
+     * Practitioner).
      */
     @Json(name = "mp")
     MP,

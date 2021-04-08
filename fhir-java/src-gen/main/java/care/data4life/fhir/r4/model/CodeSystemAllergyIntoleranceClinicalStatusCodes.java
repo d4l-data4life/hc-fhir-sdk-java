@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemAllergyIntoleranceClinicalStatusCodes {
 
     /**
-     * The subject is currently experiencing, or is at risk of, a reaction to the identified substance.
+     * The subject is currently experiencing, or is at risk of, a reaction to the identified
+     * substance.
      */
     @Json(name = "active")
     ACTIVE,
@@ -39,8 +40,9 @@ public enum CodeSystemAllergyIntoleranceClinicalStatusCodes {
     INACTIVE,
 
     /**
-     * A reaction to the identified substance has been clinically reassessed by testing or re-exposure and is considered
-     * no longer to be present. Re-exposure could be accidental, unplanned, or outside of any clinical setting.
+     * A reaction to the identified substance has been clinically reassessed by testing or
+     * re-exposure and is considered no longer to be present. Re-exposure could be accidental,
+     * unplanned, or outside of any clinical setting.
      */
     @Json(name = "resolved")
     RESOLVED,

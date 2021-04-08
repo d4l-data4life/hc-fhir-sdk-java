@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set defines the set of codes for describing the type or mode of the patient's preferred language.
+ * This value set defines the set of codes for describing the type or mode of the patient's
+ * preferred language.
  *
  * @see <a href="http://hl7.org/fhir/language-preference-type">LanguagePreferenceType</a>
  */

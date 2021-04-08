@@ -25,12 +25,14 @@ import javax.annotation.Nullable;
 /**
  * Meta.java
  * <p>
- * The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to
- * the content might not always be associated with version changes to the resource.
+ * The metadata about a resource. This is content in the resource that is maintained by the
+ * infrastructure. Changes to the content might not always be associated with version changes to the
+ * resource.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Meta">Meta</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Meta) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Meta) on
+ * 2021-04-08
  */
 public class Meta extends Element {
 

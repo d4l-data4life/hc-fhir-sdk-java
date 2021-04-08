@@ -27,38 +27,40 @@ import com.squareup.moshi.Json;
 public enum CodeSystemFHIRDefinedConceptProperties {
 
     /**
-     * True if the concept is not considered active - e.g. not a valid concept any more. Property type is boolean,
-     * default value is false
+     * True if the concept is not considered active - e.g. not a valid concept any more. Property
+     * type is boolean, default value is false
      */
     @Json(name = "inactive")
     INACTIVE,
 
     /**
-     * The date at which a concept was deprecated. Concepts that are deprecated but not inactive can still be used, but
-     * their use is discouraged, and they should be expected to be made inactive in a future release. Property type is
-     * dateTime
+     * The date at which a concept was deprecated. Concepts that are deprecated but not inactive can
+     * still be used, but their use is discouraged, and they should be expected to be made inactive
+     * in a future release. Property type is dateTime
      */
     @Json(name = "deprecated")
     DEPRECATED,
 
     /**
-     * The concept is not intended to be chosen by the user - only intended to be used as a selector for other concepts.
-     * Note, though, that the interpretation of this is highly contextual; all concepts are selectable in some context.
-     * Property type is boolean
+     * The concept is not intended to be chosen by the user - only intended to be used as a selector
+     * for other concepts. Note, though, that the interpretation of this is highly contextual; all
+     * concepts are selectable in some context. Property type is boolean
      */
     @Json(name = "notSelectable")
     NOTSELECTABLE,
 
     /**
-     * The concept identified in this property is a parent of the concept on which it is a property. The property type
-     * will be 'code'. The meaning of 'parent' is defined by the hierarchyMeaning attribute
+     * The concept identified in this property is a parent of the concept on which it is a property.
+     * The property type will be 'code'. The meaning of 'parent' is defined by the hierarchyMeaning
+     * attribute
      */
     @Json(name = "parent")
     PARENT,
 
     /**
-     * The concept identified in this property is a child of the concept on which it is a property. The property type
-     * will be 'code'. The meaning of 'child' is defined by the hierarchyMeaning attribute
+     * The concept identified in this property is a child of the concept on which it is a property.
+     * The property type will be 'code'. The meaning of 'child' is defined by the hierarchyMeaning
+     * attribute
      */
     @Json(name = "child")
     CHILD,

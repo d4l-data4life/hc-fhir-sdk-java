@@ -27,8 +27,9 @@ import com.squareup.moshi.Json;
 public enum CodeSystemReferenceHandlingPolicy {
 
     /**
-     * The server supports and populates Literal references (i.e. using Reference.reference) where they are known (this
-     * code does not guarantee that all references are literal; see 'enforced').
+     * The server supports and populates Literal references (i.e. using Reference.reference) where
+     * they are known (this code does not guarantee that all references are literal; see
+     * 'enforced').
      */
     @Json(name = "literal")
     LITERAL,
@@ -41,15 +42,16 @@ public enum CodeSystemReferenceHandlingPolicy {
 
     /**
      * The server will attempt to resolve logical references to literal references - i.e. converting
-     * Reference.identifier to Reference.reference (if resolution fails, the server may still accept resources; see
-     * logical).
+     * Reference.identifier to Reference.reference (if resolution fails, the server may still accept
+     * resources; see logical).
      */
     @Json(name = "resolves")
     RESOLVES,
 
     /**
-     * The server enforces that references have integrity - e.g. it ensures that references can always be resolved. This
-     * is typically the case for clinical record systems, but often not the case for middleware/proxy systems.
+     * The server enforces that references have integrity - e.g. it ensures that references can
+     * always be resolved. This is typically the case for clinical record systems, but often not the
+     * case for middleware/proxy systems.
      */
     @Json(name = "enforced")
     ENFORCED,

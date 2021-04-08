@@ -25,12 +25,13 @@ import javax.annotation.Nullable;
 /**
  * TriggerDefinition.java
  * <p>
- * A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined
- * by the type element.
+ * A description of a triggering event. Triggering events can be named events, data events, or
+ * periodic, as determined by the type element.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/TriggerDefinition">TriggerDefinition</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/TriggerDefinition) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/TriggerDefinition)
+ * on 2021-04-08
  */
 public class TriggerDefinition extends Element {
 

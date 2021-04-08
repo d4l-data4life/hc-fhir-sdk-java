@@ -25,17 +25,19 @@ import javax.annotation.Nullable;
 /**
  * Provenance.java
  * <p>
- * Provenance of a resource is a record that describes entities and processes involved in producing and delivering or
- * otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling
- * trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves
- * become important records with their own provenance. Provenance statement indicates clinical significance in terms of
- * confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document
- * Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust
- * policies.
+ * Provenance of a resource is a record that describes entities and processes involved in producing
+ * and delivering or otherwise influencing that resource. Provenance provides a critical foundation
+ * for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions
+ * are a form of contextual metadata and can themselves become important records with their own
+ * provenance. Provenance statement indicates clinical significance in terms of confidence in
+ * authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document
+ * Completion - has the artifact been legally authenticated), all of which may impact security,
+ * privacy, and trust policies.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on
+ * 2021-04-08
  */
 public class Provenance extends DomainResource {
 
@@ -116,12 +118,13 @@ public class Provenance extends DomainResource {
     /**
      * Provenance.java
      * <p>
-     * An actor taking a role in an activity  for which it can be assigned some degree of responsibility for the
-     * activity taking place.
+     * An actor taking a role in an activity  for which it can be assigned some degree of
+     * responsibility for the activity taking place.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on 2021-04-07
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on
+     * 2021-04-08
      */
     public static class ProvenanceAgent extends BackboneElement {
 
@@ -151,7 +154,6 @@ public class Provenance extends DomainResource {
          * Constructor for all required properties.
          *
          * @param who Reference
-         *
          */
         public ProvenanceAgent(Reference who) {
             this.who = who;
@@ -168,12 +170,13 @@ public class Provenance extends DomainResource {
 
     /**
      * Provenance.java
-     *
+     * <p>
      * An entity used in this activity
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Provenance">Provenance</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Provenance) on
+     * 2021-04-08
      */
     public static class ProvenanceEntity extends BackboneElement {
 
@@ -197,9 +200,7 @@ public class Provenance extends DomainResource {
          * Constructor for all required properties.
          *
          * @param role CodeSystemProvenanceEntityRole
-         *
          * @param what Reference
-         *
          */
         public ProvenanceEntity(CodeSystemProvenanceEntityRole role, Reference what) {
             this.role = role;

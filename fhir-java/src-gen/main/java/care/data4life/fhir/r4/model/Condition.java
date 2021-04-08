@@ -25,12 +25,13 @@ import javax.annotation.Nullable;
 /**
  * Condition.java
  * <p>
- * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a
- * level of concern.
+ * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept
+ * that has risen to a level of concern.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on
+ * 2021-04-08
  */
 public class Condition extends DomainResource {
 
@@ -165,7 +166,6 @@ public class Condition extends DomainResource {
      * Constructor for all required properties.
      *
      * @param subject Reference
-     *
      */
     public Condition(Reference subject) {
         this.subject = subject;
@@ -180,12 +180,13 @@ public class Condition extends DomainResource {
     /**
      * Condition.java
      * <p>
-     * Supporting evidence / manifestations that are the basis of the Condition's verification status, such as evidence
-     * that confirmed or refuted the condition.
+     * Supporting evidence / manifestations that are the basis of the Condition's verification
+     * status, such as evidence that confirmed or refuted the condition.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on 2021-04-07
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on
+     * 2021-04-08
      */
     public static class ConditionEvidence extends BackboneElement {
 
@@ -216,12 +217,13 @@ public class Condition extends DomainResource {
 
     /**
      * Condition.java
-     *
+     * <p>
      * Clinical stage or grade of a condition. May include formal severity assessments.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Condition">Condition</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Condition) on
+     * 2021-04-08
      */
     public static class ConditionStage extends BackboneElement {
 

@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.
+ * HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for
+ * details.
  *
  * @see <a href="http://hl7.org/fhir/http-verb">HTTPVerb</a>
  */

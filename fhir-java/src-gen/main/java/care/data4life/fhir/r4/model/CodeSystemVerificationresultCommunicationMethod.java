@@ -20,10 +20,10 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Attested information may be validated by process that are manual or automated. For automated processes it may
- * accomplished by the system of record reaching out through another system's API or information may be sent to the
- * system of record. This value set defines a set of codes to describing the process, the how, a resource or data
- * element is validated.
+ * Attested information may be validated by process that are manual or automated. For automated
+ * processes it may accomplished by the system of record reaching out through another system's API
+ * or information may be sent to the system of record. This value set defines a set of codes to
+ * describing the process, the how, a resource or data element is validated.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/verificationresult-communication-method">VerificationresultCommunicationMethod</a>
  */
@@ -48,7 +48,8 @@ public enum CodeSystemVerificationresultCommunicationMethod {
     PULL,
 
     /**
-     * The information is sent (i.e. pushed) from a source (e.g. over an API, asynchronously, secure messaging)
+     * The information is sent (i.e. pushed) from a source (e.g. over an API, asynchronously, secure
+     * messaging)
      */
     @Json(name = "push")
     PUSH,

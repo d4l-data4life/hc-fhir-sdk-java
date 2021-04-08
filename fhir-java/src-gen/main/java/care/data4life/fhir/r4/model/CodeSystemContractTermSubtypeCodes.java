@@ -39,7 +39,8 @@ public enum CodeSystemContractTermSubtypeCodes {
     WARRANTY,
 
     /**
-     * Breach of which might or might not go to the root of the contract depending upon the nature of the breach
+     * Breach of which might or might not go to the root of the contract depending upon the nature
+     * of the breach
      */
     @Json(name = "innominate")
     INNOMINATE,

@@ -39,7 +39,8 @@ public enum CodeSystemSpecimenStatus {
     UNAVAILABLE,
 
     /**
-     * The specimen cannot be used because of a quality issue such as a broken container, contamination, or too old.
+     * The specimen cannot be used because of a quality issue such as a broken container,
+     * contamination, or too old.
      */
     @Json(name = "unsatisfactory")
     UNSATISFACTORY,

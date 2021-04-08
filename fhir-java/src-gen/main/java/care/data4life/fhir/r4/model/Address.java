@@ -25,13 +25,15 @@ import javax.annotation.Nullable;
 /**
  * Address.java
  * <p>
- * An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data
- * type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be
- * valid for mail delivery.  There are a variety of postal address formats defined around the world.
+ * An address expressed using postal conventions (as opposed to GPS or other location definition
+ * formats).  This data type may be used to convey addresses for use in delivering mail as well as
+ * for visiting locations which might not be valid for mail delivery.  There are a variety of postal
+ * address formats defined around the world.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Address">Address</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Address) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Address) on
+ * 2021-04-08
  */
 public class Address extends Element {
 

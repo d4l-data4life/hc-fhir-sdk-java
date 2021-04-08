@@ -25,13 +25,14 @@ import javax.annotation.Nullable;
 /**
  * Organization.java
  * <p>
- * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form
- * of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare
- * practice groups, payer/insurer, etc.
+ * A formally or informally recognized grouping of people or organizations formed for the purpose of
+ * achieving some form of collective action.  Includes companies, institutions, corporations,
+ * departments, community groups, healthcare practice groups, payer/insurer, etc.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Organization) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Organization) on
+ * 2021-04-08
  */
 public class Organization extends DomainResource {
 
@@ -99,12 +100,13 @@ public class Organization extends DomainResource {
 
     /**
      * Organization.java
-     *
+     * <p>
      * Contact for the organization for a certain purpose
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Organization) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Organization)
+     * on 2021-04-08
      */
     public static class OrganizationContact extends BackboneElement {
 

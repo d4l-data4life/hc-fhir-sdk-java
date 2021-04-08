@@ -20,8 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Method of reporting variability of estimates, such as confidence intervals, interquartile range or standard
- * deviation.
+ * Method of reporting variability of estimates, such as confidence intervals, interquartile range
+ * or standard deviation.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/precision-estimate-type">PrecisionEstimateType</a>
  */

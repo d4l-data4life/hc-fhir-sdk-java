@@ -27,8 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemNamingSystemType {
 
     /**
-     * The naming system is used to define concepts and symbols to represent those concepts; e.g. UCUM, LOINC, NDC code,
-     * local lab codes, etc.
+     * The naming system is used to define concepts and symbols to represent those concepts; e.g.
+     * UCUM, LOINC, NDC code, local lab codes, etc.
      */
     @Json(name = "codesystem")
     CODESYSTEM,

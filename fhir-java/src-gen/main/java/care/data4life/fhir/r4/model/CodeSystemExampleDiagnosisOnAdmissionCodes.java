@@ -39,14 +39,15 @@ public enum CodeSystemExampleDiagnosisOnAdmissionCodes {
     N,
 
     /**
-     * Documentation insufficient to determine if condition was present at the time of inpatient admission.
+     * Documentation insufficient to determine if condition was present at the time of inpatient
+     * admission.
      */
     @Json(name = "u")
     U,
 
     /**
-     * Clinically undetermined. Provider unable to clinically determine whether the condition was present at the time of
-     * inpatient admission.
+     * Clinically undetermined. Provider unable to clinically determine whether the condition was
+     * present at the time of inpatient admission.
      */
     @Json(name = "w")
     W,

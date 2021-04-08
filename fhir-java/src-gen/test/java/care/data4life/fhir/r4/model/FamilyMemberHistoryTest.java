@@ -30,10 +30,11 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * Information about patient's relatives, relevant for patient.
  * <p>
- * Significant health conditions for a person related to the patient relevant in the context of care for the patient.
+ * Significant health conditions for a person related to the patient relevant in the context of care
+ * for the patient.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
  */
 public class FamilyMemberHistoryTest {
 

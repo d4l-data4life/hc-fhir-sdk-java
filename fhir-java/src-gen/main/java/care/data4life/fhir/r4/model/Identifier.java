@@ -23,11 +23,13 @@ import javax.annotation.Nullable;
 /**
  * Identifier.java
  * <p>
- * An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
+ * An identifier - identifies some entity uniquely and unambiguously. Typically this is used for
+ * business identifiers.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Identifier">Identifier</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Identifier) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Identifier) on
+ * 2021-04-08
  */
 public class Identifier extends Element {
 

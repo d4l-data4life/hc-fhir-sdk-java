@@ -23,12 +23,13 @@ import javax.annotation.Nullable;
 /**
  * SampledData.java
  * <p>
- * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the
- * data.
+ * A series of measurements taken by a device, with upper and lower limits. There may be more than
+ * one dimension in the data.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/SampledData">SampledData</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/SampledData) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/SampledData) on
+ * 2021-04-08
  */
 public class SampledData extends Element {
 

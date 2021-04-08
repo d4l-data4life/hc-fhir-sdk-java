@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on
+ * 2021-04-08
  */
 public class Observation extends DomainResource {
 
@@ -239,13 +240,15 @@ public class Observation extends DomainResource {
     /**
      * Observation.java
      * <p>
-     * Some observations have multiple component observations.  These component observations are expressed as separate
-     * code value pairs that share the same attributes.  Examples include systolic and diastolic component observations
-     * for blood pressure measurement and multiple component observations for genetics observations.
+     * Some observations have multiple component observations.  These component observations are
+     * expressed as separate code value pairs that share the same attributes.  Examples include
+     * systolic and diastolic component observations for blood pressure measurement and multiple
+     * component observations for genetics observations.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on 2021-04-07
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on
+     * 2021-04-08
      */
     public static class ObservationComponent extends BackboneElement {
 
@@ -330,7 +333,6 @@ public class Observation extends DomainResource {
          * Constructor for all required properties.
          *
          * @param code CodeableConcept
-         *
          */
         public ObservationComponent(CodeableConcept code) {
             this.code = code;
@@ -347,12 +349,15 @@ public class Observation extends DomainResource {
 
     /**
      * Observation.java
-     *
-     * Guidance on how to interpret the value by comparison to a normal or recommended range.  Multiple reference ranges are interpreted as an "OR".   In other words, to represent two distinct target populations, two `referenceRange` elements would be used.
+     * <p>
+     * Guidance on how to interpret the value by comparison to a normal or recommended range.
+     * Multiple reference ranges are interpreted as an "OR".   In other words, to represent two
+     * distinct target populations, two `referenceRange` elements would be used.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Observation) on
+     * 2021-04-08
      */
     public static class ObservationReferenceRange extends BackboneElement {
 

@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemEventResourceType {
 
     /**
-     * Item containing charge code(s) associated with the provision of healthcare provider products.
+     * Item containing charge code(s) associated with the provision of healthcare provider
+     * products.
      */
     @Json(name = "ChargeItem")
     CHARGEITEM,
@@ -39,7 +40,8 @@ public enum CodeSystemEventResourceType {
     CLAIMRESPONSE,
 
     /**
-     * A clinical assessment performed when planning treatments and management strategies for a patient.
+     * A clinical assessment performed when planning treatments and management strategies for a
+     * patient.
      */
     @Json(name = "ClinicalImpression")
     CLINICALIMPRESSION,
@@ -51,7 +53,8 @@ public enum CodeSystemEventResourceType {
     COMMUNICATION,
 
     /**
-     * A set of resources composed into a single coherent clinical statement with clinical attestation.
+     * A set of resources composed into a single coherent clinical statement with clinical
+     * attestation.
      */
     @Json(name = "Composition")
     COMPOSITION,
@@ -63,8 +66,8 @@ public enum CodeSystemEventResourceType {
     CONDITION,
 
     /**
-     * A healthcare consumer's policy choices to permits or denies recipients or roles to perform actions for specific
-     * purposes and periods of time.
+     * A healthcare consumer's policy choices to permits or denies recipients or roles to perform
+     * actions for specific purposes and periods of time.
      */
     @Json(name = "Consent")
     CONSENT,
@@ -82,8 +85,8 @@ public enum CodeSystemEventResourceType {
     DEVICEUSESTATEMENT,
 
     /**
-     * A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as
-     * formatted reports.
+     * A Diagnostic report - a combination of request information, atomic results, images,
+     * interpretation, as well as formatted reports.
      */
     @Json(name = "DiagnosticReport")
     DIAGNOSTICREPORT,
@@ -113,8 +116,8 @@ public enum CodeSystemEventResourceType {
     ENROLLMENTRESPONSE,
 
     /**
-     * An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the
-     * Organization assumes some level of responsibility.
+     * An association of a Patient with an Organization and  Healthcare Provider(s) for a period of
+     * time that the Organization assumes some level of responsibility.
      */
     @Json(name = "EpisodeOfCare")
     EPISODEOFCARE,
@@ -156,8 +159,8 @@ public enum CodeSystemEventResourceType {
     MEASUREREPORT,
 
     /**
-     * A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided
-     * by direct reference.
+     * A photo, video, or audio recording acquired or used in healthcare. The actual content may be
+     * inline or provided by direct reference.
      */
     @Json(name = "Media")
     MEDIA,

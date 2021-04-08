@@ -25,12 +25,13 @@ import javax.annotation.Nullable;
 /**
  * DataRequirement.java
  * <p>
- * Describes a required data item for evaluation in terms of the type of data, and optional code or date-based filters
- * of the data.
+ * Describes a required data item for evaluation in terms of the type of data, and optional code or
+ * date-based filters of the data.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on
+ * 2021-04-08
  */
 public class DataRequirement extends Element {
 
@@ -85,7 +86,6 @@ public class DataRequirement extends Element {
      * Constructor for all required properties.
      *
      * @param type String
-     *
      */
     public DataRequirement(String type) {
         this.type = type;
@@ -100,13 +100,14 @@ public class DataRequirement extends Element {
     /**
      * DataRequirement.java
      * <p>
-     * Code filters specify additional constraints on the data, specifying the value set of interest for a particular
-     * element of the data. Each code filter defines an additional constraint on the data, i.e. code filters are AND'ed,
-     * not OR'ed.
+     * Code filters specify additional constraints on the data, specifying the value set of interest
+     * for a particular element of the data. Each code filter defines an additional constraint on
+     * the data, i.e. code filters are AND'ed, not OR'ed.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-04-07
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement)
+     * on 2021-04-08
      */
     public static class DataRequirementCodeFilter extends Element {
 
@@ -148,13 +149,14 @@ public class DataRequirement extends Element {
     /**
      * DataRequirement.java
      * <p>
-     * Date filters specify additional constraints on the data in terms of the applicable date range for specific
-     * elements. Each date filter specifies an additional constraint on the data, i.e. date filters are AND'ed, not
-     * OR'ed.
+     * Date filters specify additional constraints on the data in terms of the applicable date range
+     * for specific elements. Each date filter specifies an additional constraint on the data, i.e.
+     * date filters are AND'ed, not OR'ed.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-04-07
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement)
+     * on 2021-04-08
      */
     public static class DataRequirementDateFilter extends Element {
 
@@ -200,12 +202,13 @@ public class DataRequirement extends Element {
 
     /**
      * DataRequirement.java
-     *
+     * <p>
      * Specifies the order of the results to be returned.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/DataRequirement">DataRequirement</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/DataRequirement)
+     * on 2021-04-08
      */
     public static class DataRequirementSort extends Element {
 
@@ -223,10 +226,8 @@ public class DataRequirement extends Element {
         /**
          * Constructor for all required properties.
          *
-         * @param path String
-         *
+         * @param path      String
          * @param direction CodeSystemSortDirection
-         *
          */
         public DataRequirementSort(String path, CodeSystemSortDirection direction) {
             this.path = path;

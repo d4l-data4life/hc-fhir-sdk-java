@@ -30,11 +30,11 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * Planned participants in the coordination and delivery of care for a patient or group.
  * <p>
- * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of
- * care for a patient.
+ * The Care Team includes all the people and organizations who plan to participate in the
+ * coordination and delivery of care for a patient.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
  */
 public class CareTeamTest {
 

@@ -33,7 +33,7 @@ import static org.junit.Assert.assertEquals;
  * A sample to be used for analysis.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
  */
 public class SpecimenTest {
 

@@ -20,17 +20,18 @@ import com.squareup.moshi.Json;
 
 
 /**
- * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists
- * of or contains concepts to support describing the validity of a dose relative to a particular recommended schedule.
- * This value set is provided as a suggestive example.
+ * The value set to instantiate this attribute should be drawn from a terminologically robust code
+ * system that consists of or contains concepts to support describing the validity of a dose
+ * relative to a particular recommended schedule. This value set is provided as a suggestive
+ * example.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status">ImmunizationEvaluationDoseStatusCodes</a>
  */
 public enum CodeSystemImmunizationEvaluationDoseStatusCodes {
 
     /**
-     * The dose counts toward fulfilling a path to immunity for a patient, providing protection against the target
-     * disease.
+     * The dose counts toward fulfilling a path to immunity for a patient, providing protection
+     * against the target disease.
      */
     @Json(name = "valid")
     VALID,

@@ -23,12 +23,13 @@ import javax.annotation.Nullable;
 /**
  * ParameterDefinition.java
  * <p>
- * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are
- * provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
+ * The parameters to the module. This collection specifies both the input and output parameters.
+ * Input parameters are provided by the caller as part of the $evaluate operation. Output parameters
+ * are included in the GuidanceResponse.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ParameterDefinition">ParameterDefinition</a>
- * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ParameterDefinition) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ParameterDefinition)
+ * on 2021-04-08
  */
 public class ParameterDefinition extends Element {
 

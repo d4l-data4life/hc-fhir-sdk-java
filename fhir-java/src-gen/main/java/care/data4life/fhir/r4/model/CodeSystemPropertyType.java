@@ -33,8 +33,8 @@ public enum CodeSystemPropertyType {
     CODE,
 
     /**
-     * The property  value is a code defined in an external code system. This may be used for translations, but is not
-     * the intent.
+     * The property  value is a code defined in an external code system. This may be used for
+     * translations, but is not the intent.
      */
     @Json(name = "Coding")
     CODING,
@@ -46,8 +46,8 @@ public enum CodeSystemPropertyType {
     STRING,
 
     /**
-     * The property value is a string (often used to assign ranking values to concepts for supporting score
-     * assessments).
+     * The property value is a string (often used to assign ranking values to concepts for
+     * supporting score assessments).
      */
     @Json(name = "integer")
     INTEGER,

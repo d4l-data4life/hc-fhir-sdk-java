@@ -23,12 +23,14 @@ import javax.annotation.Nullable;
 /**
  * Quantity.java
  * <p>
- * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that
- * are not precisely quantified, including amounts involving arbitrary units and floating currencies.
+ * A measured amount (or an amount that can potentially be measured). Note that measured amounts
+ * include amounts that are not precisely quantified, including amounts involving arbitrary units
+ * and floating currencies.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/MoneyQuantity">Quantity</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MoneyQuantity) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/MoneyQuantity) on
+ * 2021-04-08
  */
 public class Quantity extends Element {
 

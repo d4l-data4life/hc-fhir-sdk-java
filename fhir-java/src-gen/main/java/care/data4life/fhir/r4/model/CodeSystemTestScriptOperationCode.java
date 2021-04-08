@@ -20,8 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set defines a set of codes that are used to indicate the supported operations of a testing engine or
- * tool.
+ * This value set defines a set of codes that are used to indicate the supported operations of a
+ * testing engine or tool.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/testscript-operation-codes">TestScriptOperationCode</a>
  */
@@ -136,8 +136,8 @@ public enum CodeSystemTestScriptOperationCode {
     CONFORMS,
 
     /**
-     * Aggregates and returns the parameters and data requirements for a resource and all its dependencies as a single
-     * module definition
+     * Aggregates and returns the parameters and data requirements for a resource and all its
+     * dependencies as a single module definition
      */
     @Json(name = "data-requirements")
     DATA_REQUIREMENTS,

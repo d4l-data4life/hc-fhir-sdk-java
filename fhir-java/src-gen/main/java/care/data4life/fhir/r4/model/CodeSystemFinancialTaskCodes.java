@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemFinancialTaskCodes {
 
     /**
-     * Cancel or reverse a resource, such as a claim or preauthorization, which is in-process or complete.
+     * Cancel or reverse a resource, such as a claim or preauthorization, which is in-process or
+     * complete.
      */
     @Json(name = "cancel")
     CANCEL,
@@ -39,15 +40,16 @@ public enum CodeSystemFinancialTaskCodes {
     POLL,
 
     /**
-     * Release any reserved funds or material obligations associated with a resource. For example, any unused but
-     * reserved funds or treatment allowance associated with a preauthorization once treatment is complete.
+     * Release any reserved funds or material obligations associated with a resource. For example,
+     * any unused but reserved funds or treatment allowance associated with a preauthorization once
+     * treatment is complete.
      */
     @Json(name = "release")
     RELEASE,
 
     /**
-     * Indication that the processing of a resource, such as a claim, for some or all of the required work is now being
-     * requested.
+     * Indication that the processing of a resource, such as a claim, for some or all of the
+     * required work is now being requested.
      */
     @Json(name = "reprocess")
     REPROCESS,

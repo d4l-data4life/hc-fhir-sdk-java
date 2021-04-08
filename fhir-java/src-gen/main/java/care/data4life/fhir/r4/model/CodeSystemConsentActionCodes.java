@@ -33,8 +33,8 @@ public enum CodeSystemConsentActionCodes {
     COLLECT,
 
     /**
-     * Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or
-     * disclosure (view-only access)
+     * Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for
+     * collection, use or disclosure (view-only access)
      */
     @Json(name = "access")
     ACCESS,

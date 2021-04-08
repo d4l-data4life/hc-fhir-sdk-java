@@ -25,12 +25,13 @@ import javax.annotation.Nullable;
 /**
  * CareTeam.java
  * <p>
- * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of
- * care for a patient.
+ * The Care Team includes all the people and organizations who plan to participate in the
+ * coordination and delivery of care for a patient.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on
+ * 2021-04-08
  */
 public class CareTeam extends DomainResource {
 
@@ -113,12 +114,13 @@ public class CareTeam extends DomainResource {
 
     /**
      * CareTeam.java
-     *
+     * <p>
      * Identifies all people and organizations who are expected to be involved in the care team.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CareTeam">CareTeam</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CareTeam) on
+     * 2021-04-08
      */
     public static class CareTeamParticipant extends BackboneElement {
 

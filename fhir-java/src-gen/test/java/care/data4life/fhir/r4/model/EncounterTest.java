@@ -31,11 +31,11 @@ import static org.junit.Assert.assertTrue;
  * <p>
  * An interaction during which services are provided to the patient.
  * <p>
- * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or
- * assessing the health status of a patient.
+ * An interaction between a patient and healthcare provider(s) for the purpose of providing
+ * healthcare service(s) or assessing the health status of a patient.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
  */
 public class EncounterTest {
 

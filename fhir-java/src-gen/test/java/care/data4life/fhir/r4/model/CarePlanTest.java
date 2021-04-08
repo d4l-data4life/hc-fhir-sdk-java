@@ -31,11 +31,12 @@ import static org.junit.Assert.assertTrue;
  * <p>
  * Healthcare plan for patient or group.
  * <p>
- * Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or
- * community for a period of time, possibly limited to care for a specific condition or set of conditions.
+ * Describes the intention of how one or more practitioners intend to deliver care for a particular
+ * patient, group or community for a period of time, possibly limited to care for a specific
+ * condition or set of conditions.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
  */
 public class CarePlanTest {
 

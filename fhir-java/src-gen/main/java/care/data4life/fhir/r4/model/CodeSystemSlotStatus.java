@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemSlotStatus {
 
     /**
-     * Indicates that the time interval is busy because one  or more events have been scheduled for that interval.
+     * Indicates that the time interval is busy because one  or more events have been scheduled for
+     * that interval.
      */
     @Json(name = "busy")
     BUSY,
@@ -45,8 +46,8 @@ public enum CodeSystemSlotStatus {
     BUSY_UNAVAILABLE,
 
     /**
-     * Indicates that the time interval is busy because one or more events have been tentatively scheduled for that
-     * interval.
+     * Indicates that the time interval is busy because one or more events have been tentatively
+     * scheduled for that interval.
      */
     @Json(name = "busy-tentative")
     BUSY_TENTATIVE,

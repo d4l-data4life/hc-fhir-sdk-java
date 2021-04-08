@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Enumeration indicating whether the condition is currently active, inactive, or has been resolved.
+ * Enumeration indicating whether the condition is currently active, inactive, or has been
+ * resolved.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/condition-state">ConditionState</a>
  */

@@ -33,8 +33,8 @@ public enum CodeSystemGraphCompartmentRule {
     IDENTICAL,
 
     /**
-     * The compartment must be the same - the record must be about the same patient, but the reference may be
-     * different.
+     * The compartment must be the same - the record must be about the same patient, but the
+     * reference may be different.
      */
     @Json(name = "matching")
     MATCHING,

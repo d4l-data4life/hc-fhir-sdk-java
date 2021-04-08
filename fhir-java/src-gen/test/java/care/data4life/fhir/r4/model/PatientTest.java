@@ -31,11 +31,11 @@ import static org.junit.Assert.assertTrue;
  * <p>
  * Information about an individual or animal receiving health care services.
  * <p>
- * Demographics and other administrative information about an individual or animal receiving care or other
- * health-related services.
+ * Demographics and other administrative information about an individual or animal receiving care or
+ * other health-related services.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
  */
 public class PatientTest {
 

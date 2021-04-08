@@ -20,8 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set includes example Onset Type codes which are used to identify the event for which the onset, starting
- * date, is required.
+ * This value set includes example Onset Type codes which are used to identify the event for which
+ * the onset, starting date, is required.
  *
  * @see <a href="http://hl7.org/fhir/ex-onsettype">ExampleOnsetTypeReasonCodes</a>
  */

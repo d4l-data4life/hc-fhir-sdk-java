@@ -33,7 +33,8 @@ public enum CodeSystemSupplyType {
     CENTRAL,
 
     /**
-     * Supply is not onsite and must be requested from an outside vendor using a non-stock requisition.
+     * Supply is not onsite and must be requested from an outside vendor using a non-stock
+     * requisition.
      */
     @Json(name = "nonstock")
     NONSTOCK,

@@ -27,21 +27,22 @@ import com.squareup.moshi.Json;
 public enum CodeSystemEligibilityResponsePurpose {
 
     /**
-     * The prior authorization requirements for the listed, or discovered if specified, converages for the categories of
-     * service and/or specifed biling codes are requested.
+     * The prior authorization requirements for the listed, or discovered if specified, converages
+     * for the categories of service and/or specifed biling codes are requested.
      */
     @Json(name = "auth-requirements")
     AUTH_REQUIREMENTS,
 
     /**
-     * The plan benefits and optionally benefits consumed  for the listed, or discovered if specified, converages are
-     * requested.
+     * The plan benefits and optionally benefits consumed  for the listed, or discovered if
+     * specified, converages are requested.
      */
     @Json(name = "benefits")
     BENEFITS,
 
     /**
-     * The insurer is requested to report on any coverages which they are aware of in addition to any specifed.
+     * The insurer is requested to report on any coverages which they are aware of in addition to
+     * any specifed.
      */
     @Json(name = "discovery")
     DISCOVERY,

@@ -33,27 +33,29 @@ public enum CodeSystemNameUse {
     USUAL,
 
     /**
-     * The formal name as registered in an official (government) registry, but which name might not be commonly used.
-     * May be called "legal name".
+     * The formal name as registered in an official (government) registry, but which name might not
+     * be commonly used. May be called "legal name".
      */
     @Json(name = "official")
     OFFICIAL,
 
     /**
-     * A temporary name. Name.period can provide more detailed information. This may also be used for temporary names
-     * assigned at birth or in emergency situations.
+     * A temporary name. Name.period can provide more detailed information. This may also be used
+     * for temporary names assigned at birth or in emergency situations.
      */
     @Json(name = "temp")
     TEMP,
 
     /**
-     * A name that is used to address the person in an informal manner, but is not part of their formal or usual name.
+     * A name that is used to address the person in an informal manner, but is not part of their
+     * formal or usual name.
      */
     @Json(name = "nickname")
     NICKNAME,
 
     /**
-     * Anonymous assigned name, alias, or pseudonym (used to protect a person's identity for privacy reasons).
+     * Anonymous assigned name, alias, or pseudonym (used to protect a person's identity for privacy
+     * reasons).
      */
     @Json(name = "anonymous")
     ANONYMOUS,
@@ -65,10 +67,10 @@ public enum CodeSystemNameUse {
     OLD,
 
     /**
-     * A name used prior to changing name because of marriage. This name use is for use by applications that collect and
-     * store names that were used prior to a marriage. Marriage naming customs vary greatly around the world, and are
-     * constantly changing. This term is not gender specific. The use of this term does not imply any particular history
-     * for a person's name.
+     * A name used prior to changing name because of marriage. This name use is for use by
+     * applications that collect and store names that were used prior to a marriage. Marriage naming
+     * customs vary greatly around the world, and are constantly changing. This term is not gender
+     * specific. The use of this term does not imply any particular history for a person's name.
      */
     @Json(name = "maiden")
     MAIDEN,

@@ -27,22 +27,23 @@ import com.squareup.moshi.Json;
 public enum CodeSystemConceptMapEquivalence {
 
     /**
-     * The concepts are related to each other, and have at least some overlap in meaning, but the exact relationship is
-     * not known.
+     * The concepts are related to each other, and have at least some overlap in meaning, but the
+     * exact relationship is not known.
      */
     @Json(name = "relatedto")
     RELATEDTO,
 
     /**
-     * The definitions of the concepts mean the same thing (including when structural implications of meaning are
-     * considered) (i.e. extensionally identical).
+     * The definitions of the concepts mean the same thing (including when structural implications
+     * of meaning are considered) (i.e. extensionally identical).
      */
     @Json(name = "equivalent")
     EQUIVALENT,
 
     /**
-     * The definitions of the concepts are exactly the same (i.e. only grammatical differences) and structural
-     * implications of meaning are identical or irrelevant (i.e. intentionally identical).
+     * The definitions of the concepts are exactly the same (i.e. only grammatical differences) and
+     * structural implications of meaning are identical or irrelevant (i.e. intentionally
+     * identical).
      */
     @Json(name = "equal")
     EQUAL,
@@ -60,24 +61,26 @@ public enum CodeSystemConceptMapEquivalence {
     SUBSUMES,
 
     /**
-     * The target mapping is narrower in meaning than the source concept. The sense in which the mapping is narrower
-     * SHALL be described in the comments in this case, and applications should be careful when attempting to use these
-     * mappings operationally.
+     * The target mapping is narrower in meaning than the source concept. The sense in which the
+     * mapping is narrower SHALL be described in the comments in this case, and applications should
+     * be careful when attempting to use these mappings operationally.
      */
     @Json(name = "narrower")
     NARROWER,
 
     /**
-     * The target mapping specializes the meaning of the source concept (e.g. the target is-a source).
+     * The target mapping specializes the meaning of the source concept (e.g. the target is-a
+     * source).
      */
     @Json(name = "specializes")
     SPECIALIZES,
 
     /**
-     * The target mapping overlaps with the source concept, but both source and target cover additional meaning, or the
-     * definitions are imprecise and it is uncertain whether they have the same boundaries to their meaning. The sense
-     * in which the mapping is inexact SHALL be described in the comments in this case, and applications should be
-     * careful when attempting to use these mappings operationally.
+     * The target mapping overlaps with the source concept, but both source and target cover
+     * additional meaning, or the definitions are imprecise and it is uncertain whether they have
+     * the same boundaries to their meaning. The sense in which the mapping is inexact SHALL be
+     * described in the comments in this case, and applications should be careful when attempting to
+     * use these mappings operationally.
      */
     @Json(name = "inexact")
     INEXACT,
@@ -89,7 +92,8 @@ public enum CodeSystemConceptMapEquivalence {
     UNMATCHED,
 
     /**
-     * This is an explicit assertion that there is no mapping between the source and target concept.
+     * This is an explicit assertion that there is no mapping between the source and target
+     * concept.
      */
     @Json(name = "disjoint")
     DISJOINT,

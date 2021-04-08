@@ -20,8 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This is an example value set defined by the FHIR project, that could be used to represent possible connection type
- * profile values.
+ * This is an example value set defined by the FHIR project, that could be used to represent
+ * possible connection type profile values.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/endpoint-connection-type">EndpointConnectionType</a>
  */
@@ -82,15 +82,17 @@ public enum CodeSystemEndpointConnectionType {
     DICOM_WADO_URI,
 
     /**
-     * Interact with the server interface using FHIR's RESTful interface. For details on its version/capabilities you
-     * should connect the value in Endpoint.address and retrieve the FHIR CapabilityStatement.
+     * Interact with the server interface using FHIR's RESTful interface. For details on its
+     * version/capabilities you should connect the value in Endpoint.address and retrieve the FHIR
+     * CapabilityStatement.
      */
     @Json(name = "hl7-fhir-rest")
     HL7_FHIR_REST,
 
     /**
-     * Use the servers FHIR Messaging interface. Details can be found on the messaging.html page in the FHIR
-     * Specification. The FHIR server's base address is specified in the Endpoint.address property.
+     * Use the servers FHIR Messaging interface. Details can be found on the messaging.html page in
+     * the FHIR Specification. The FHIR server's base address is specified in the Endpoint.address
+     * property.
      */
     @Json(name = "hl7-fhir-msg")
     HL7_FHIR_MSG,
@@ -102,8 +104,8 @@ public enum CodeSystemEndpointConnectionType {
     HL7V2_MLLP,
 
     /**
-     * Email delivery using a digital certificate to encrypt the content using the public key, receiver must have the
-     * private key to decrypt the content
+     * Email delivery using a digital certificate to encrypt the content using the public key,
+     * receiver must have the private key to decrypt the content
      */
     @Json(name = "secure-email")
     SECURE_EMAIL,

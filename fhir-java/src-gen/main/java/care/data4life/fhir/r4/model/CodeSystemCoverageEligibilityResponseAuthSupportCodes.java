@@ -51,7 +51,8 @@ public enum CodeSystemCoverageEligibilityResponseAuthSupportCodes {
     DIAGNOSTICIMAGEREPORT,
 
     /**
-     * A report from a licensed professional regarding the siutation, condition or proposed treatment.
+     * A report from a licensed professional regarding the siutation, condition or proposed
+     * treatment.
      */
     @Json(name = "professionalreport")
     PROFESSIONALREPORT,

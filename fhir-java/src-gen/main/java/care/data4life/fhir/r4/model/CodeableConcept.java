@@ -25,11 +25,13 @@ import javax.annotation.Nullable;
 /**
  * CodeableConcept.java
  * <p>
- * A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
+ * A concept that may be defined by a formal reference to a terminology or ontology or may be
+ * provided by text.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeableConcept">CodeableConcept</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeableConcept) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeableConcept) on
+ * 2021-04-08
  */
 public class CodeableConcept extends Element {
 

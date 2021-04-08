@@ -31,11 +31,11 @@ import static org.junit.Assert.assertTrue;
  * <p>
  * Declares the existence of and describes a code system or code system supplement.
  * <p>
- * The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and
- * its key properties, and optionally define a part or all of its content.
+ * The CodeSystem resource is used to declare the existence of and describe a code system or code
+ * system supplement and its key properties, and optionally define a part or all of its content.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
  */
 public class CodeSystemTest {
 

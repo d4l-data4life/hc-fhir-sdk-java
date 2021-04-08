@@ -23,12 +23,13 @@ import javax.annotation.Nullable;
 /**
  * ContactPoint.java
  * <p>
- * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email,
- * etc.
+ * Details for all kinds of technology mediated contact points for a person or organization,
+ * including telephone, email, etc.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ContactPoint">ContactPoint</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ContactPoint) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ContactPoint) on
+ * 2021-04-08
  */
 public class ContactPoint extends Element {
 

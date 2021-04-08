@@ -25,11 +25,13 @@ import javax.annotation.Nullable;
 /**
  * ServiceRequest.java
  * <p>
- * A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
+ * A record of a request for service such as diagnostic investigations, treatments, or operations to
+ * be performed.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ServiceRequest">ServiceRequest</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ServiceRequest) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ServiceRequest) on
+ * 2021-04-08
  */
 public class ServiceRequest extends DomainResource {
 

@@ -25,14 +25,15 @@ import javax.annotation.Nullable;
 /**
  * Timing.java
  * <p>
- * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned,
- * expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used
- * when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were
- * carried out.
+ * Specifies an event that may occur multiple times. Timing schedules are used to record when things
+ * are planned, expected or requested to occur. The most common usage is in dosage instructions for
+ * medications. They are also used when planning care of various kinds, and may be used for
+ * reporting the schedule to which past regular activities were carried out.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on
+ * 2021-04-08
  */
 public class Timing extends BackboneElement {
 
@@ -65,12 +66,13 @@ public class Timing extends BackboneElement {
 
     /**
      * Timing.java
-     *
+     * <p>
      * A set of rules that describe when the event is scheduled.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Timing">Timing</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Timing) on
+     * 2021-04-08
      */
     public static class TimingRepeat extends Element {
 

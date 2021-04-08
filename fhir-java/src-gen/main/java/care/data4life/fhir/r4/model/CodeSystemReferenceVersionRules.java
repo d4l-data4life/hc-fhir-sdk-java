@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Whether a reference needs to be version specific or version independent, or whether either can be used.
+ * Whether a reference needs to be version specific or version independent, or whether either can be
+ * used.
  *
  * @see <a href="http://hl7.org/fhir/reference-version-rules">ReferenceVersionRules</a>
  */

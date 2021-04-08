@@ -31,10 +31,11 @@ import static org.junit.Assert.assertTrue;
  * <p>
  * A request for a service to be performed.
  * <p>
- * A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
+ * A record of a request for service such as diagnostic investigations, treatments, or operations to
+ * be performed.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
  */
 public class ServiceRequestTest {
 

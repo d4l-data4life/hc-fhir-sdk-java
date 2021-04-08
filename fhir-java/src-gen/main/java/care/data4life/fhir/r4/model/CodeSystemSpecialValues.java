@@ -45,8 +45,8 @@ public enum CodeSystemSpecialValues {
     TRACE,
 
     /**
-     * The specific quantity is not known, but is known to be non-zero and is not specified because it makes up the bulk
-     * of the material.
+     * The specific quantity is not known, but is known to be non-zero and is not specified because
+     * it makes up the bulk of the material.
      */
     @Json(name = "sufficient")
     SUFFICIENT,

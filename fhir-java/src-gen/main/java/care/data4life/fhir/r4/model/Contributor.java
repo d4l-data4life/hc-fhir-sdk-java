@@ -25,11 +25,13 @@ import javax.annotation.Nullable;
 /**
  * Contributor.java
  * <p>
- * A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.
+ * A contributor to the content of a knowledge asset, including authors, editors, reviewers, and
+ * endorsers.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Contributor">Contributor</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Contributor) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Contributor) on
+ * 2021-04-08
  */
 public class Contributor extends Element {
 

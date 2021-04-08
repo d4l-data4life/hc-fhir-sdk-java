@@ -35,7 +35,8 @@ public enum CodeSystemEncounterLocationStatus {
     /**
      * The patient is currently at this location, or was between the period specified.
      * <p>
-     * A system may update these records when the patient leaves the location to either reserved, or completed.
+     * A system may update these records when the patient leaves the location to either reserved, or
+     * completed.
      */
     @Json(name = "active")
     ACTIVE,

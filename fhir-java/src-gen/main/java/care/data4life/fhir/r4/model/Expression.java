@@ -23,12 +23,14 @@ import javax.annotation.Nullable;
 /**
  * Expression.java
  * <p>
- * A expression that is evaluated in a specified context and returns a value. The context of use of the expression must
- * specify the context in which the expression is evaluated, and how the result of the expression is used.
+ * A expression that is evaluated in a specified context and returns a value. The context of use of
+ * the expression must specify the context in which the expression is evaluated, and how the result
+ * of the expression is used.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Expression">Expression</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Expression) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Expression) on
+ * 2021-04-08
  */
 public class Expression extends Element {
 

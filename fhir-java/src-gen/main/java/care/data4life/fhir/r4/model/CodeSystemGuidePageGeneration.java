@@ -27,21 +27,23 @@ import com.squareup.moshi.Json;
 public enum CodeSystemGuidePageGeneration {
 
     /**
-     * Page is proper xhtml with no templating.  Will be brought across unchanged for standard post-processing.
+     * Page is proper xhtml with no templating.  Will be brought across unchanged for standard
+     * post-processing.
      */
     @Json(name = "html")
     HTML,
 
     /**
-     * Page is markdown with templating.  Will use the template to create a file that imports the markdown file prior to
-     * post-processing.
+     * Page is markdown with templating.  Will use the template to create a file that imports the
+     * markdown file prior to post-processing.
      */
     @Json(name = "markdown")
     MARKDOWN,
 
     /**
-     * Page is xml with templating.  Will use the template to create a file that imports the source file and run the
-     * nominated XSLT transform (see parameters) if present prior to post-processing.
+     * Page is xml with templating.  Will use the template to create a file that imports the source
+     * file and run the nominated XSLT transform (see parameters) if present prior to
+     * post-processing.
      */
     @Json(name = "xml")
     XML,

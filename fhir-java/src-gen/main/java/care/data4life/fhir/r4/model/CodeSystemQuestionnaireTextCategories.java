@@ -27,8 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemQuestionnaireTextCategories {
 
     /**
-     * The text provides guidance on how to populate or use a portion of the questionnaire (or the questionnaire as a
-     * whole).
+     * The text provides guidance on how to populate or use a portion of the questionnaire (or the
+     * questionnaire as a whole).
      */
     @Json(name = "instructions")
     INSTRUCTIONS,
@@ -41,9 +41,9 @@ public enum CodeSystemQuestionnaireTextCategories {
     SECURITY,
 
     /**
-     * The text provides additional guidance on populating the containing item.  Help text isn't necessarily expected to
-     * be rendered as part of the form, but may instead be made available through fly-over, pop-up button, link to a
-     * "help" page, etc.
+     * The text provides additional guidance on populating the containing item.  Help text isn't
+     * necessarily expected to be rendered as part of the form, but may instead be made available
+     * through fly-over, pop-up button, link to a "help" page, etc.
      */
     @Json(name = "help")
     HELP,

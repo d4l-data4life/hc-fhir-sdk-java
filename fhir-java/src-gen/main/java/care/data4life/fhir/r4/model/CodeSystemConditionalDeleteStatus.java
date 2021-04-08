@@ -39,7 +39,8 @@ public enum CodeSystemConditionalDeleteStatus {
     SINGLE,
 
     /**
-     * Conditional deletes are supported, and multiple resources can be deleted in a single interaction.
+     * Conditional deletes are supported, and multiple resources can be deleted in a single
+     * interaction.
      */
     @Json(name = "multiple")
     MULTIPLE,

@@ -39,15 +39,16 @@ public enum CodeSystemParticipationStatus {
     DECLINED,
 
     /**
-     * The participant has  tentatively accepted the appointment. This could be automatically created by a system and
-     * requires further processing before it can be accepted. There is no commitment that attendance will occur.
+     * The participant has  tentatively accepted the appointment. This could be automatically
+     * created by a system and requires further processing before it can be accepted. There is no
+     * commitment that attendance will occur.
      */
     @Json(name = "tentative")
     TENTATIVE,
 
     /**
-     * The participant needs to indicate if they accept the appointment by changing this status to one of the other
-     * statuses.
+     * The participant needs to indicate if they accept the appointment by changing this status to
+     * one of the other statuses.
      */
     @Json(name = "needs-action")
     NEEDS_ACTION,

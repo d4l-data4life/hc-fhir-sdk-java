@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This example value set defines a set of codes that can be used to indicate a type of organization.
+ * This example value set defines a set of codes that can be used to indicate a type of
+ * organization.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/organization-type">OrganizationType</a>
  */
@@ -33,34 +34,36 @@ public enum CodeSystemOrganizationType {
     PROV,
 
     /**
-     * A department or ward within a hospital (Generally is not applicable to top level organizations)
+     * A department or ward within a hospital (Generally is not applicable to top level
+     * organizations)
      */
     @Json(name = "dept")
     DEPT,
 
     /**
-     * An organizational team is usually a grouping of practitioners that perform a specific function within an
-     * organization (which could be a top level organization, or a department).
+     * An organizational team is usually a grouping of practitioners that perform a specific
+     * function within an organization (which could be a top level organization, or a department).
      */
     @Json(name = "team")
     TEAM,
 
     /**
-     * A political body, often used when including organization records for government bodies such as a Federal
-     * Government, State or Local Government.
+     * A political body, often used when including organization records for government bodies such
+     * as a Federal Government, State or Local Government.
      */
     @Json(name = "govt")
     GOVT,
 
     /**
-     * A company that provides insurance to its subscribers that may include healthcare related policies.
+     * A company that provides insurance to its subscribers that may include healthcare related
+     * policies.
      */
     @Json(name = "ins")
     INS,
 
     /**
-     * A company, charity, or governmental organization, which processes claims and/or issues payments to providers on
-     * behalf of patients or groups of patients.
+     * A company, charity, or governmental organization, which processes claims and/or issues
+     * payments to providers on behalf of patients or groups of patients.
      */
     @Json(name = "pay")
     PAY,
@@ -90,7 +93,8 @@ public enum CodeSystemOrganizationType {
     CG,
 
     /**
-     * An organization that is a registered business or corporation but not identified by other types.
+     * An organization that is a registered business or corporation but not identified by other
+     * types.
      */
     @Json(name = "bus")
     BUS,

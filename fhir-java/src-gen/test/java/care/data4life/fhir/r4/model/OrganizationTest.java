@@ -30,12 +30,12 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * A grouping of people or organizations with a common purpose.
  * <p>
- * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form
- * of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare
- * practice groups, payer/insurer, etc.
+ * A formally or informally recognized grouping of people or organizations formed for the purpose of
+ * achieving some form of collective action.  Includes companies, institutions, corporations,
+ * departments, community groups, healthcare practice groups, payer/insurer, etc.
  * <p>
  * <p>
- * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-07
+ * "Generated from FHIR 4.0.1-9346c8cc45 on 2021-04-08
  */
 public class OrganizationTest {
 

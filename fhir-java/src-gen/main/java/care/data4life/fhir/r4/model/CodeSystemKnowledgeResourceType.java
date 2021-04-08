@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemKnowledgeResourceType {
 
     /**
-     * The definition of a specific activity to be taken, independent of any particular patient or context.
+     * The definition of a specific activity to be taken, independent of any particular patient or
+     * context.
      */
     @Json(name = "ActivityDefinition")
     ACTIVITYDEFINITION,
@@ -57,7 +58,8 @@ public enum CodeSystemKnowledgeResourceType {
     MEASURE,
 
     /**
-     * The definition of a plan for a series of actions, independent of any specific patient or context.
+     * The definition of a plan for a series of actions, independent of any specific patient or
+     * context.
      */
     @Json(name = "PlanDefinition")
     PLANDEFINITION,

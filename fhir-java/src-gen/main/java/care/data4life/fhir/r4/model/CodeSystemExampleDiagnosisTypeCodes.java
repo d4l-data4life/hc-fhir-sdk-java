@@ -33,13 +33,15 @@ public enum CodeSystemExampleDiagnosisTypeCodes {
     ADMITTING,
 
     /**
-     * A diagnosis made on the basis of medical signs and patient-reported symptoms, rather than diagnostic tests.
+     * A diagnosis made on the basis of medical signs and patient-reported symptoms, rather than
+     * diagnostic tests.
      */
     @Json(name = "clinical")
     CLINICAL,
 
     /**
-     * One of a set of the possible diagnoses that could be connected to the signs, symptoms, and lab findings.
+     * One of a set of the possible diagnoses that could be connected to the signs, symptoms, and
+     * lab findings.
      */
     @Json(name = "differential")
     DIFFERENTIAL,
@@ -51,15 +53,15 @@ public enum CodeSystemExampleDiagnosisTypeCodes {
     DISCHARGE,
 
     /**
-     * A diagnosis based significantly on laboratory reports or test results, rather than the physical examination of
-     * the patient.
+     * A diagnosis based significantly on laboratory reports or test results, rather than the
+     * physical examination of the patient.
      */
     @Json(name = "laboratory")
     LABORATORY,
 
     /**
-     * A diagnosis which identifies people's responses to situations in their lives, such as a readiness to change or a
-     * willingness to accept assistance.
+     * A diagnosis which identifies people's responses to situations in their lives, such as a
+     * readiness to change or a willingness to accept assistance.
      */
     @Json(name = "nursing")
     NURSING,
@@ -71,7 +73,8 @@ public enum CodeSystemExampleDiagnosisTypeCodes {
     PRENATAL,
 
     /**
-     * The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment.
+     * The single medical diagnosis that is most relevant to the patient's chief complaint or need
+     * for treatment.
      */
     @Json(name = "principal")
     PRINCIPAL,
@@ -89,8 +92,8 @@ public enum CodeSystemExampleDiagnosisTypeCodes {
     REMOTE,
 
     /**
-     * The labeling of an illness in a specific historical event using modern knowledge, methods and disease
-     * classifications.
+     * The labeling of an illness in a specific historical event using modern knowledge, methods and
+     * disease classifications.
      */
     @Json(name = "retrospective")
     RETROSPECTIVE,

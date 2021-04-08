@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * Example Message Reasons. These are the set of codes that might be used an updating an encounter using admin-update.
+ * Example Message Reasons. These are the set of codes that might be used an updating an encounter
+ * using admin-update.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/message-reasons-encounter">ExampleMessageReasonCodes</a>
  */

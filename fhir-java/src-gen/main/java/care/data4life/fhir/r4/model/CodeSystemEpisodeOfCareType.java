@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This example value set defines a set of codes that can be used to express the usage type of an EpisodeOfCare record.
+ * This example value set defines a set of codes that can be used to express the usage type of an
+ * EpisodeOfCare record.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/episodeofcare-type">EpisodeOfCareType</a>
  */

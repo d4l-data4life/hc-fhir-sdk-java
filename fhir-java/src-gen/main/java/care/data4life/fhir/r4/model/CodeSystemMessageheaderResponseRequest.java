@@ -20,8 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * HL7-defined table of codes which identify conditions under which acknowledgments are required to be returned in
- * response to a message.
+ * HL7-defined table of codes which identify conditions under which acknowledgments are required to
+ * be returned in response to a message.
  *
  * @see <a href="http://hl7.org/fhir/messageheader-response-request">MessageheaderResponseRequest</a>
  */

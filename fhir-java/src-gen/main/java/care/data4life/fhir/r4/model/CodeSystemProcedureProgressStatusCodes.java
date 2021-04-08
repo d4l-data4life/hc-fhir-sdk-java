@@ -20,8 +20,9 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust
- * terminology code system that consists of or contains concepts to support the procedure performance process.
+ * This value set is provided as an example. The value set to instantiate this attribute should be
+ * drawn from a robust terminology code system that consists of or contains concepts to support the
+ * procedure performance process.
  *
  * @see <a href="http://hl7.org/fhir/procedure-progress-status-code">ProcedureProgressStatusCodes</a>
  */

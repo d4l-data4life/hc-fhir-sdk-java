@@ -25,13 +25,14 @@ import javax.annotation.Nullable;
 /**
  * ValueSet.java
  * <p>
- * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a
- * particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded
- * elements](terminologies.html).
+ * A ValueSet resource instance specifies a set of codes drawn from one or more code systems,
+ * intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html)
+ * definitions and their use in [coded elements](terminologies.html).
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
+ * 2021-04-08
  */
 public class ValueSet extends DomainResource {
 
@@ -131,7 +132,6 @@ public class ValueSet extends DomainResource {
      * Constructor for all required properties.
      *
      * @param status CodeSystemPublicationStatus
-     *
      */
     public ValueSet(CodeSystemPublicationStatus status) {
         this.status = status;
@@ -146,13 +146,14 @@ public class ValueSet extends DomainResource {
     /**
      * ValueSet.java
      * <p>
-     * A set of criteria that define the contents of the value set by including or excluding codes selected from the
-     * specified code system(s) that the value set draws from. This is also known as the Content Logical Definition
-     * (CLD).
+     * A set of criteria that define the contents of the value set by including or excluding codes
+     * selected from the specified code system(s) that the value set draws from. This is also known
+     * as the Content Logical Definition (CLD).
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on 2021-04-07
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
+     * 2021-04-08
      */
     public static class ValueSetCompose extends BackboneElement {
 
@@ -182,7 +183,6 @@ public class ValueSet extends DomainResource {
          * Constructor for all required properties.
          *
          * @param include List of ValueSetComposeInclude
-         *
          */
         public ValueSetCompose(List<ValueSetComposeInclude> include) {
             this.include = include;
@@ -199,12 +199,13 @@ public class ValueSet extends DomainResource {
 
     /**
      * ValueSet.java
-     *
+     * <p>
      * Include one or more codes from a code system or other value set(s)
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
+     * 2021-04-08
      */
     public static class ValueSetComposeInclude extends BackboneElement {
 
@@ -250,12 +251,13 @@ public class ValueSet extends DomainResource {
 
     /**
      * ValueSet.java
-     *
+     * <p>
      * Specifies a concept to be included or excluded.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
+     * 2021-04-08
      */
     public static class ValueSetComposeIncludeConcept extends BackboneElement {
 
@@ -280,7 +282,6 @@ public class ValueSet extends DomainResource {
          * Constructor for all required properties.
          *
          * @param code String
-         *
          */
         public ValueSetComposeIncludeConcept(String code) {
             this.code = code;
@@ -298,12 +299,13 @@ public class ValueSet extends DomainResource {
     /**
      * ValueSet.java
      * <p>
-     * Additional representations for this concept when used in this value set - other languages, aliases, specialized
-     * purposes, used for particular purposes, etc.
+     * Additional representations for this concept when used in this value set - other languages,
+     * aliases, specialized purposes, used for particular purposes, etc.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on 2021-04-07
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
+     * 2021-04-08
      */
     public static class ValueSetComposeIncludeConceptDesignation extends BackboneElement {
 
@@ -328,7 +330,6 @@ public class ValueSet extends DomainResource {
          * Constructor for all required properties.
          *
          * @param value String
-         *
          */
         public ValueSetComposeIncludeConceptDesignation(String value) {
             this.value = value;
@@ -345,12 +346,15 @@ public class ValueSet extends DomainResource {
 
     /**
      * ValueSet.java
-     *
-     * Select concepts by specify a matching criterion based on the properties (including relationships) defined by the system, or on filters defined by the system. If multiple filters are specified, they SHALL all be true.
+     * <p>
+     * Select concepts by specify a matching criterion based on the properties (including
+     * relationships) defined by the system, or on filters defined by the system. If multiple
+     * filters are specified, they SHALL all be true.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
+     * 2021-04-08
      */
     public static class ValueSetComposeIncludeFilter extends BackboneElement {
 
@@ -373,11 +377,8 @@ public class ValueSet extends DomainResource {
          * Constructor for all required properties.
          *
          * @param property String
-         *
-         * @param op CodeSystemFilterOperator
-         *
-         * @param value String
-         *
+         * @param op       CodeSystemFilterOperator
+         * @param value    String
          */
         public ValueSetComposeIncludeFilter(String property, CodeSystemFilterOperator op, String value) {
             this.property = property;
@@ -396,12 +397,14 @@ public class ValueSet extends DomainResource {
 
     /**
      * ValueSet.java
-     *
-     * A value set can also be "expanded", where the value set is turned into a simple collection of enumerated codes. This element holds the expansion, if it has been performed.
+     * <p>
+     * A value set can also be "expanded", where the value set is turned into a simple collection of
+     * enumerated codes. This element holds the expansion, if it has been performed.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
+     * 2021-04-08
      */
     public static class ValueSetExpansion extends BackboneElement {
 
@@ -441,7 +444,6 @@ public class ValueSet extends DomainResource {
          * Constructor for all required properties.
          *
          * @param timestamp FhirDateTime
-         *
          */
         public ValueSetExpansion(FhirDateTime timestamp) {
             this.timestamp = timestamp;
@@ -458,12 +460,13 @@ public class ValueSet extends DomainResource {
 
     /**
      * ValueSet.java
-     *
+     * <p>
      * The codes that are contained in the value set expansion.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
+     * 2021-04-08
      */
     public static class ValueSetExpansionContains extends BackboneElement {
 
@@ -524,12 +527,15 @@ public class ValueSet extends DomainResource {
 
     /**
      * ValueSet.java
-     *
-     * A parameter that controlled the expansion process. These parameters may be used by users of expanded value sets to check whether the expansion is suitable for a particular purpose, or to pick the correct expansion.
+     * <p>
+     * A parameter that controlled the expansion process. These parameters may be used by users of
+     * expanded value sets to check whether the expansion is suitable for a particular purpose, or
+     * to pick the correct expansion.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/ValueSet) on
+     * 2021-04-08
      */
     public static class ValueSetExpansionParameter extends BackboneElement {
 
@@ -579,7 +585,6 @@ public class ValueSet extends DomainResource {
          * Constructor for all required properties.
          *
          * @param name String
-         *
          */
         public ValueSetExpansionParameter(String name) {
             this.name = name;

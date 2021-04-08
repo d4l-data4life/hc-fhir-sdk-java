@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemGoalRelationshipType {
 
     /**
-     * Indicates that the target goal is one which must be met before striving for the current goal.
+     * Indicates that the target goal is one which must be met before striving for the current
+     * goal.
      */
     @Json(name = "predecessor")
     PREDECESSOR,
@@ -51,8 +52,8 @@ public enum CodeSystemGoalRelationshipType {
     MILESTONE,
 
     /**
-     * Indicates that the relationship is not covered by one of the pre-defined codes.  (An extension may convey more
-     * information about the meaning of the relationship.).
+     * Indicates that the relationship is not covered by one of the pre-defined codes.  (An
+     * extension may convey more information about the meaning of the relationship.).
      */
     @Json(name = "other")
     OTHER,

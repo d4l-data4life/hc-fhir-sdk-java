@@ -25,12 +25,13 @@ import javax.annotation.Nullable;
 /**
  * Procedure.java
  * <p>
- * An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or
- * less invasive like long term services, counseling, or hypnotherapy.
+ * An action that is or was performed on or for a patient. This can be a physical intervention like
+ * an operation, or less invasive like long term services, counseling, or hypnotherapy.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on
+ * 2021-04-08
  */
 public class Procedure extends DomainResource {
 
@@ -215,12 +216,14 @@ public class Procedure extends DomainResource {
     /**
      * Procedure.java
      * <p>
-     * A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a
-     * prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
+     * A device that is implanted, removed or otherwise manipulated (calibration, battery
+     * replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the
+     * Procedure.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2021-04-07
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on
+     * 2021-04-08
      */
     public static class ProcedureFocalDevice extends BackboneElement {
 
@@ -240,7 +243,6 @@ public class Procedure extends DomainResource {
          * Constructor for all required properties.
          *
          * @param manipulated Reference
-         *
          */
         public ProcedureFocalDevice(Reference manipulated) {
             this.manipulated = manipulated;
@@ -257,12 +259,13 @@ public class Procedure extends DomainResource {
 
     /**
      * Procedure.java
-     *
+     * <p>
      * Limited to "real" people rather than equipment.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/Procedure">Procedure</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Procedure) on
+     * 2021-04-08
      */
     public static class ProcedurePerformer extends BackboneElement {
 
@@ -287,7 +290,6 @@ public class Procedure extends DomainResource {
          * Constructor for all required properties.
          *
          * @param actor Reference
-         *
          */
         public ProcedurePerformer(Reference actor) {
             this.actor = actor;

@@ -25,12 +25,13 @@ import javax.annotation.Nullable;
 /**
  * CodeSystem.java
  * <p>
- * The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and
- * its key properties, and optionally define a part or all of its content.
+ * The CodeSystem resource is used to declare the existence of and describe a code system or code
+ * system supplement and its key properties, and optionally define a part or all of its content.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
+ * 2021-04-08
  */
 public class CodeSystem extends DomainResource {
 
@@ -185,12 +186,14 @@ public class CodeSystem extends DomainResource {
     /**
      * CodeSystem.java
      * <p>
-     * Concepts that are in the code system. The concept definitions are inherently hierarchical, but the definitions
-     * must be consulted to determine what the meanings of the hierarchical relationships are.
+     * Concepts that are in the code system. The concept definitions are inherently hierarchical,
+     * but the definitions must be consulted to determine what the meanings of the hierarchical
+     * relationships are.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on 2021-04-07
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
+     * 2021-04-08
      */
     public static class CodeSystemConcept extends BackboneElement {
 
@@ -230,7 +233,6 @@ public class CodeSystem extends DomainResource {
          * Constructor for all required properties.
          *
          * @param code String
-         *
          */
         public CodeSystemConcept(String code) {
             this.code = code;
@@ -247,12 +249,14 @@ public class CodeSystem extends DomainResource {
 
     /**
      * CodeSystem.java
-     *
-     * Additional representations for the concept - other languages, aliases, specialized purposes, used for particular purposes, etc.
+     * <p>
+     * Additional representations for the concept - other languages, aliases, specialized purposes,
+     * used for particular purposes, etc.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
+     * 2021-04-08
      */
     public static class CodeSystemConceptDesignation extends BackboneElement {
 
@@ -277,7 +281,6 @@ public class CodeSystem extends DomainResource {
          * Constructor for all required properties.
          *
          * @param value String
-         *
          */
         public CodeSystemConceptDesignation(String value) {
             this.value = value;
@@ -294,12 +297,13 @@ public class CodeSystem extends DomainResource {
 
     /**
      * CodeSystem.java
-     *
+     * <p>
      * A property value for this concept.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
+     * 2021-04-08
      */
     public static class CodeSystemConceptProperty extends BackboneElement {
 
@@ -348,10 +352,9 @@ public class CodeSystem extends DomainResource {
         /**
          * Constructor for all required properties.
          *
-         * @param code String
-         *
-         * @param value as one of Boolean, String, Coding, FhirDateTime, FhirDecimal, Integer, String*
-         *
+         * @param code  String
+         * @param value as one of Boolean, String, Coding, FhirDateTime, FhirDecimal, Integer,
+         *              String*
          */
         public CodeSystemConceptProperty(String code, Object value) {
             this.code = code;
@@ -385,12 +388,14 @@ public class CodeSystem extends DomainResource {
 
     /**
      * CodeSystem.java
-     *
-     * A filter that can be used in a value set compose statement when selecting concepts using a filter.
+     * <p>
+     * A filter that can be used in a value set compose statement when selecting concepts using a
+     * filter.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
+     * 2021-04-08
      */
     public static class CodeSystemFilter extends BackboneElement {
 
@@ -417,12 +422,9 @@ public class CodeSystem extends DomainResource {
         /**
          * Constructor for all required properties.
          *
-         * @param code String
-         *
+         * @param code     String
          * @param operator List of CodeSystemFilterOperator
-         *
-         * @param value String
-         *
+         * @param value    String
          */
         public CodeSystemFilter(String code, List<CodeSystemFilterOperator> operator, String value) {
             this.code = code;
@@ -441,12 +443,14 @@ public class CodeSystem extends DomainResource {
 
     /**
      * CodeSystem.java
-     *
-     * A property defines an additional slot through which additional information can be provided about a concept.
+     * <p>
+     * A property defines an additional slot through which additional information can be provided
+     * about a concept.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/CodeSystem">CodeSystem</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/CodeSystem) on
+     * 2021-04-08
      */
     public static class CodeSystemProperty extends BackboneElement {
 
@@ -475,9 +479,7 @@ public class CodeSystem extends DomainResource {
          * Constructor for all required properties.
          *
          * @param code String
-         *
          * @param type CodeSystemPropertyType
-         *
          */
         public CodeSystemProperty(String code, CodeSystemPropertyType type) {
             this.code = code;

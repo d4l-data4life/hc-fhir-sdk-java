@@ -39,13 +39,15 @@ public enum CodeSystemNamingSystemIdentifierType {
     UUID,
 
     /**
-     * A uniform resource identifier (ideally a URL - uniform resource locator); e.g. http://unitsofmeasure.org.
+     * A uniform resource identifier (ideally a URL - uniform resource locator); e.g.
+     * http://unitsofmeasure.org.
      */
     @Json(name = "uri")
     URI,
 
     /**
-     * Some other type of unique identifier; e.g. HL7-assigned reserved string such as LN for LOINC.
+     * Some other type of unique identifier; e.g. HL7-assigned reserved string such as LN for
+     * LOINC.
      */
     @Json(name = "other")
     OTHER,

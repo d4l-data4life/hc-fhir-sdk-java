@@ -57,8 +57,8 @@ public enum CodeSystemDeviceUseStatementStatus {
     STOPPED,
 
     /**
-     * Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be
-     * called "suspended".
+     * Actions implied by the statement have been temporarily halted, but are expected to continue
+     * later. May also be called "suspended".
      */
     @Json(name = "on-hold")
     ON_HOLD,

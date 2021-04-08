@@ -51,7 +51,8 @@ public enum CodeSystemUDIEntryType {
     CARD,
 
     /**
-     * The data originated from a patient source and was not directly scanned or read from a label or card.
+     * The data originated from a patient source and was not directly scanned or read from a label
+     * or card.
      */
     @Json(name = "self-reported")
     SELF_REPORTED,

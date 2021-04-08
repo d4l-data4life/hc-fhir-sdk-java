@@ -27,8 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemMediaType {
 
     /**
-     * The media consists of one or more unmoving images, including photographs, computer-generated graphs and charts,
-     * and scanned documents
+     * The media consists of one or more unmoving images, including photographs, computer-generated
+     * graphs and charts, and scanned documents
      */
     @Json(name = "image")
     IMAGE,

@@ -20,7 +20,8 @@ import com.squareup.moshi.Json;
 
 
 /**
- * This example value set defines a set of codes that can be used to indicate the role of a Practitioner.
+ * This example value set defines a set of codes that can be used to indicate the role of a
+ * Practitioner.
  *
  * @see <a href="http://terminology.hl7.org/CodeSystem/practitioner-role">PractitionerRole</a>
  */

@@ -21,11 +21,13 @@ import com.squareup.moshi.Json;
 /**
  * Narrative.java
  * <p>
- * A human-readable summary of the resource conveying the essential clinical and business information for the resource.
+ * A human-readable summary of the resource conveying the essential clinical and business
+ * information for the resource.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/Narrative">Narrative</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Narrative) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/Narrative) on
+ * 2021-04-08
  */
 public class Narrative extends Element {
 

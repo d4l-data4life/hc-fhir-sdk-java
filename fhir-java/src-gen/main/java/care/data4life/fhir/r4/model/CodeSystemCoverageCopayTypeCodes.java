@@ -51,8 +51,8 @@ public enum CodeSystemCoverageCopayTypeCodes {
     INPTHOSP,
 
     /**
-     * A visit held where the patient is remote relative to the practitioner, e.g. by phone, computer or video
-     * conference.
+     * A visit held where the patient is remote relative to the practitioner, e.g. by phone,
+     * computer or video conference.
      */
     @Json(name = "televisit")
     TELEVISIT,
@@ -70,7 +70,8 @@ public enum CodeSystemCoverageCopayTypeCodes {
     COPAYPCT,
 
     /**
-     * A standard fixed currency amount applied to all classes or service or product not otherwise specified.
+     * A standard fixed currency amount applied to all classes or service or product not otherwise
+     * specified.
      */
     @Json(name = "copay")
     COPAY,
@@ -82,7 +83,8 @@ public enum CodeSystemCoverageCopayTypeCodes {
     DEDUCTIBLE,
 
     /**
-     * The maximum amout of payment for services which a patient, or family, is expected to incur - typically annually.
+     * The maximum amout of payment for services which a patient, or family, is expected to incur -
+     * typically annually.
      */
     @Json(name = "maxoutofpocket")
     MAXOUTOFPOCKET,

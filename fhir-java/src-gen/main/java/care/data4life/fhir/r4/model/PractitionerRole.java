@@ -25,12 +25,13 @@ import javax.annotation.Nullable;
 /**
  * PractitionerRole.java
  * <p>
- * A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a
- * period of time.
+ * A specific set of Roles/Locations/specialties/services that a practitioner may perform at an
+ * organization for a period of time.
  *
  * @see <a href="http://hl7.org/fhir/StructureDefinition/PractitionerRole">PractitionerRole</a>
  * <p>
- * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/PractitionerRole) on 2021-04-07
+ * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/PractitionerRole)
+ * on 2021-04-08
  */
 public class PractitionerRole extends DomainResource {
 
@@ -119,12 +120,13 @@ public class PractitionerRole extends DomainResource {
     /**
      * PractitionerRole.java
      * <p>
-     * A collection of times the practitioner is available or performing this role at the location and/or
-     * healthcareservice.
+     * A collection of times the practitioner is available or performing this role at the location
+     * and/or healthcareservice.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/PractitionerRole">PractitionerRole</a>
      * <p>
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/PractitionerRole) on 2021-04-07
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/PractitionerRole)
+     * on 2021-04-08
      */
     public static class PractitionerRoleAvailableTime extends BackboneElement {
 
@@ -165,12 +167,14 @@ public class PractitionerRole extends DomainResource {
 
     /**
      * PractitionerRole.java
-     *
-     * The practitioner is not available or performing this role during this period of time due to the provided reason.
+     * <p>
+     * The practitioner is not available or performing this role during this period of time due to
+     * the provided reason.
      *
      * @see <a href="http://hl7.org/fhir/StructureDefinition/PractitionerRole">PractitionerRole</a>
-     *
-     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/PractitionerRole) on 2021-04-07
+     * <p>
+     * Generated from FHIR 4.0.1-9346c8cc45 (http://hl7.org/fhir/StructureDefinition/PractitionerRole)
+     * on 2021-04-08
      */
     public static class PractitionerRoleNotAvailable extends BackboneElement {
 
@@ -190,7 +194,6 @@ public class PractitionerRole extends DomainResource {
          * Constructor for all required properties.
          *
          * @param description String
-         *
          */
         public PractitionerRoleNotAvailable(String description) {
             this.description = description;

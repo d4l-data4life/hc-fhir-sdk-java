@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemClaimItemTypeCodes {
 
     /**
-     * A group of products and/or Services, amount ar the summary or detail level products and services.
+     * A group of products and/or Services, amount ar the summary or detail level products and
+     * services.
      */
     @Json(name = "group")
     GROUP,

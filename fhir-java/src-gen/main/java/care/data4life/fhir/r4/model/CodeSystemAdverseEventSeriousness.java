@@ -69,8 +69,8 @@ public enum CodeSystemAdverseEventSeriousness {
     SERIOUSISBIRTHDEFECT,
 
     /**
-     * Requires intervention to prevent permanent impairment or damage (i.e., an important medical event that requires
-     * medical judgement).
+     * Requires intervention to prevent permanent impairment or damage (i.e., an important medical
+     * event that requires medical judgement).
      */
     @Json(name = "SeriousRequiresPreventImpairment")
     SERIOUSREQUIRESPREVENTIMPAIRMENT,

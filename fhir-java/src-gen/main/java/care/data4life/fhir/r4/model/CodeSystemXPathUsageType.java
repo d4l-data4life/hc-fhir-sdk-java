@@ -27,7 +27,8 @@ import com.squareup.moshi.Json;
 public enum CodeSystemXPathUsageType {
 
     /**
-     * The search parameter is derived directly from the selected nodes based on the type definitions.
+     * The search parameter is derived directly from the selected nodes based on the type
+     * definitions.
      */
     @Json(name = "normal")
     NORMAL,
@@ -45,8 +46,8 @@ public enum CodeSystemXPathUsageType {
     NEARBY,
 
     /**
-     * The search parameter is based on a spatial transform of the selected nodes, using physical distance from the
-     * middle.
+     * The search parameter is based on a spatial transform of the selected nodes, using physical
+     * distance from the middle.
      */
     @Json(name = "distance")
     DISTANCE,
