@@ -18,6 +18,8 @@ toc::[]
 
 === Changed
 
+* FhirElementFactory#getClassForFhirType is now case insensitive.
+
 === Removed
 
 === Fixed

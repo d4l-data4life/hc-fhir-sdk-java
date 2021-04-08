@@ -69,7 +69,7 @@ public class {{ class.name }}FhirElementFactory {
         public void getClassForFhirTypeTest () throws Exception {
         {%- for klass in classes %}{% if klass.name in resource_list %}
         if(clazz == {{ klass.name }}.class){
-        assertEquals(getClassForFhirType({{ klass.resource_type }}.resourceType), klass);
+        assertEquals(getClassForFhirType({{ klass.resource_type }}.resourceType.toUpperCase()), klass);
         }
         {%- endif %}{% endfor %}
         }
