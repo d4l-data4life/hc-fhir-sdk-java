@@ -12,7 +12,7 @@ and this project adheres to http://semver.org/spec/v2.0.0.html[Semantic Versioni
 ==== Versions
 toc::[]
 
-== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.2.1...main[Unreleased]
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.3.0...main[Unreleased]
 
 === Added
 
@@ -30,6 +30,15 @@ toc::[]
 
 === Migration
 
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.2.1...v1.3.0[1.3.0]
+
+=== Added
+
+* Add FHIR R4 model MedicationStatement and PractitionerRole
+
+=== Changed
+
+* FhirElementFactory#getClassForFhirType is now case insensitive.
 
 == https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.2.0...v1.2.1[1.2.1]
 
