@@ -16,6 +16,9 @@
 
 package care.data4life.fhir.r4.model;
 
+/**
+ * Generated from FHIR 4.0.1-9346c8cc45
+ */
 public final class FhirElementFactory {
 
 
@@ -53,6 +56,9 @@ public final class FhirElementFactory {
         if (clazz == MedicationRequest.class) {
             return MedicationRequest.resourceType;
         }
+        if (clazz == MedicationStatement.class) {
+            return MedicationStatement.resourceType;
+        }
         if (clazz == Observation.class) {
             return Observation.resourceType;
         }
@@ -64,6 +70,9 @@ public final class FhirElementFactory {
         }
         if (clazz == Practitioner.class) {
             return Practitioner.resourceType;
+        }
+        if (clazz == PractitionerRole.class) {
+            return PractitionerRole.resourceType;
         }
         if (clazz == Procedure.class) {
             return Procedure.resourceType;
@@ -116,6 +125,8 @@ public final class FhirElementFactory {
                 return Medication.class;
             case "medicationrequest":
                 return MedicationRequest.class;
+            case "medicationstatement":
+                return MedicationStatement.class;
             case "observation":
                 return Observation.class;
             case "organization":
@@ -124,6 +135,8 @@ public final class FhirElementFactory {
                 return Patient.class;
             case "practitioner":
                 return Practitioner.class;
+            case "practitionerrole":
+                return PractitionerRole.class;
             case "procedure":
                 return Procedure.class;
             case "provenance":

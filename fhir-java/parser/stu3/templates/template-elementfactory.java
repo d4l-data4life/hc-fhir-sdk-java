@@ -16,6 +16,9 @@
 
 package care.data4life.fhir.stu3.model;
 
+/**
+ * Generated from FHIR {{ info.version }}
+ */
 public final class FhirElementFactory {
   {% set resource_list = ["CarePlan",
       "CareTeam",
