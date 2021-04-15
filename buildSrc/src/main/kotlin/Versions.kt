@@ -25,11 +25,6 @@ object Versions {
 object GradlePluginVersion {
     const val kotlin = Versions.main.kotlin
     const val android = "4.1.0"
-
-    /**
-     * [DependencyUpdates](https://github.com/ben-manes/gradle-versions-plugin)
-     */
-    const val dependencyUpdates = "0.34.0"
 }
 
 

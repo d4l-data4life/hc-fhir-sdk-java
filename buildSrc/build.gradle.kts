@@ -20,12 +20,14 @@ plugins {
 
 
 repositories {
-    jcenter()
+    gradlePluginPortal()
     mavenCentral()
     maven("https://dl.bintray.com/data4life/maven")
 }
 
 dependencies {
+    // dependency check
+    implementation("com.github.ben-manes:gradle-versions-plugin:0.38.0")
     // download scripts
     implementation("de.undercouch:gradle-download-task:4.1.1")
     // publishing.gradle.kts
