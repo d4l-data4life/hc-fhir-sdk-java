@@ -26,8 +26,12 @@ repositories {
 }
 
 dependencies {
-    implementation("com.palantir.gradle.gitversion:gradle-git-version:0.12.3")
+    // download scripts
+    implementation("de.undercouch:gradle-download-task:4.1.1")
+    // publishing.gradle.kts
     implementation("care.data4life:gradle-git-publish:3.2.0")
+    // versioning.gradle.kts
+    implementation("com.palantir.gradle.gitversion:gradle-git-version:0.12.3")
 }
 
 kotlinDslPluginOptions {
