@@ -16,6 +16,25 @@
 
 package scripts
 
+import LibraryConfig
+import org.gradle.api.publish.maven.MavenPublication
+
+/**
+ * Usage:
+ *
+ * Now just add id("scripts.publishing-config") to your projects build.gradle.kts plugins section
+ *
+ * plugins {
+ *     id("scripts.publishing")
+ * }
+ *
+ * To publish to to https://github.com/d4l-data4life/maven-repository/ just run:
+ * - ./gradlew publishFeature
+ * - ./gradlew publishSnapshot
+ * - ./gradlew publishRelease
+ *
+ * This requires a LibraryConfig as defined here https://github.com/d4l-data4life/hc-gradle-scripts/blob/main/buildSrc/src/main/kotlin/LibraryConfig.kt
+ */
 plugins {
     `java-library`
     `maven-publish`
@@ -48,10 +67,10 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/d4l-data4life/hc-fhir-sdk-java")
             credentials {
-                username = project.findProperty("gpr.user") as String?
-                        ?: System.getenv("PACKAGE_REGISTRY_USERNAME")
-                password = project.findProperty("gpr.key") as String?
-                        ?: System.getenv("PACKAGE_REGISTRY_TOKEN")
+                username = (project.findProperty("gpr.user")
+                    ?: System.getenv("PACKAGE_REGISTRY_USERNAME")).toString()
+                password = (project.findProperty("gpr.key")
+                    ?: System.getenv("PACKAGE_REGISTRY_TOKEN")).toString()
             }
         }
 
@@ -59,17 +78,17 @@ publishing {
 
         maven {
             name = "ReleasePackages"
-            url = uri("$target/releases")
+            setUrl("$target/releases")
         }
 
         maven {
             name = "SnapshotPackages"
-            url = uri("$target/snapshots")
+            setUrl("$target/snapshots")
         }
 
         maven {
             name = "FeaturePackages"
-            url = uri("$target/features")
+            setUrl("$target/features")
         }
     }
 

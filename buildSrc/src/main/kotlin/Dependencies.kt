@@ -22,9 +22,6 @@ object GradlePluginDependency {
     const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.gradlePlugin.kotlin}"
 }
 
-fun PluginDependenciesSpec.dependencyUpdates(): PluginDependencySpec =
-id("com.github.ben-manes.versions").version(Versions.gradlePlugin.dependencyUpdates)
-
 object MainDependency {
     const val javaXAnnotation = "com.google.code.findbugs:jsr305:${Versions.main.javaXAnnotation}"
 
