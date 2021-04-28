@@ -24,6 +24,8 @@ import java.util.Map;
 
 import javax.annotation.Nullable;
 
+import okio.BufferedSource;
+
 public class BigDecimalDelegateJsonReader extends JsonReader {
 
     JsonReader delegate;
@@ -163,6 +165,11 @@ public class BigDecimalDelegateJsonReader extends JsonReader {
     }
 
     @Override
+    public BufferedSource nextSource() throws IOException {
+        return delegate.nextSource();
+    }
+
+    @Override
     public void skipValue() throws IOException {
         delegate.skipValue();
     }
@@ -173,7 +180,7 @@ public class BigDecimalDelegateJsonReader extends JsonReader {
     }
 
     @Override
-    void promoteNameToValue() throws IOException {
+    public void promoteNameToValue() throws IOException {
         delegate.promoteNameToValue();
     }
 
