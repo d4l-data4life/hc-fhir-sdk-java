@@ -55,6 +55,8 @@ module Fastlane
           UI.success "Done cleanup ✅"
       end
 
+	  # Hotfix for https://gesundheitscloud.atlassian.net/browse/SDK-576
+	  # TODO Remove once the Spec is fixed
       def self.includeStatics
           modelSource = "./fhir-java/parser/r4/statics"
           modelTarget = "./fhir-java/src-gen/main/java/care/data4life/fhir/r4/model"
