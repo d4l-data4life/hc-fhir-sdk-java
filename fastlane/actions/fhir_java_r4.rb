@@ -60,9 +60,11 @@ module Fastlane
       def self.includeStatics
           modelSource = "./fhir-java/parser/r4/statics"
           modelTarget = "./fhir-java/src-gen/main/java/care/data4life/fhir/r4/model"
+          modelTestTarget = "./fhir-java/src-gen/test/java/care/data4life/fhir/r4/model"
 
           sh "cp #{modelSource}/CodeSystemMedicationStatementStatusCodes.java #{modelTarget}"
           sh "cp #{modelSource}/MedicationStatement.java #{modelTarget}"
+          sh "cp #{modelSource}/MedicationStatementTest.java #{modelTestTarget}"
       end
 
 
