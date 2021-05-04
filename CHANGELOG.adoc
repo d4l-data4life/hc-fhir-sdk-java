@@ -30,7 +30,7 @@ toc::[]
 
 === Fixed
 
-* MedicationStatement now used the wrong CodingSystem for status.
+* MedicationStatement used the wrong CodingSystem for status.
 
 === Bumped
 
