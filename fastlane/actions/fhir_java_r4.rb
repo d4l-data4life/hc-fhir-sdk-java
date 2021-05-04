@@ -55,6 +55,19 @@ module Fastlane
           UI.success "Done cleanup ✅"
       end
 
+	  # Hotfix for https://gesundheitscloud.atlassian.net/browse/SDK-576
+	  # TODO Remove once the Spec is fixed
+      def self.includeStatics
+          modelSource = "./fhir-java/parser/r4/statics"
+          modelTarget = "./fhir-java/src-gen/main/java/care/data4life/fhir/r4/model"
+          modelTestTarget = "./fhir-java/src-gen/test/java/care/data4life/fhir/r4/model"
+
+          sh "cp #{modelSource}/CodeSystemMedicationStatementStatusCodes.java #{modelTarget}"
+          sh "cp #{modelSource}/MedicationStatement.java #{modelTarget}"
+          sh "cp #{modelSource}/MedicationStatementTest.java #{modelTestTarget}"
+      end
+
+
       def self.integrate_fhir_models
           fhir_parser = './fhir-spec-parser'
           file_type = ".java"
@@ -142,6 +155,9 @@ module Fastlane
           # Move test example jsons
           FileUtils.mkdir_p(testJsonTarget)
           sh "find #{fhir_parser}/downloads -name '*example*' -exec cp {} #{testJsonTarget} \\;"
+
+          # Static fixes
+          includeStatics()
 
           UI.success "Done integrating generated models ✅"
       end

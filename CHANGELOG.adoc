@@ -22,6 +22,8 @@ toc::[]
 
 === Fixed
 
+* MedicationStatement now used the wrong CodingSystem for status.
+
 === Bumped
 
 * Moshi 1.8.0 -> 1.12.0
