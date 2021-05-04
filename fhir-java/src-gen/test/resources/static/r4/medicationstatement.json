@@ -1,0 +1,46 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "mii-de-med-statement-example-1",
+  "meta": {
+    "profile": [
+      "http://fhir.smart4health.eu/StructureDefinition/s4h-medicationstatement"
+    ]
+  },
+  "dosage": [{
+    "doseAndRate": [{
+      "doseRange": {
+        "high": {
+          "code": "mg",
+          "system": "http://unitsofmeasure.org",
+          "unit": "milligram",
+          "value": 2600.0
+        },
+        "low": {
+          "code": "mg",
+          "system": "http://unitsofmeasure.org",
+          "unit": "milligram",
+          "value": 2400.0
+        }
+      }
+    }],
+    "route": {
+      "coding": [{
+        "code": "20045000",
+        "display": "Intravenous use",
+        "system": "http://standardterms.edqm.eu"
+      }]
+    },
+    "text": "Parenterale Applikation von 2.400 mg bis unter 2.600 mg Thiotepa"
+  }],
+  "effectiveDateTime": "2018-05-26",
+  "medicationReference": {
+    "identifier": {
+      "system": "http://example.com/mymedcodes",
+      "value": "mii-med-5"
+    }
+  },
+  "status": "completed",
+  "subject": {
+    "display": "Marie Lux-Brennard"
+  }
+}
