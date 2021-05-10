@@ -78,17 +78,17 @@ publishing {
 
         maven {
             name = "ReleasePackages"
-            setUrl("$target/releases")
+            setUrl("$target/maven-releases/releases")
         }
 
         maven {
             name = "SnapshotPackages"
-            setUrl("$target/snapshots")
+            setUrl("$target/maven-snapshots/snapshots")
         }
 
         maven {
             name = "FeaturePackages"
-            setUrl("$target/features")
+            setUrl("$target/maven-features/features")
         }
     }
 
@@ -106,11 +106,6 @@ publishing {
                 url.set(ProjectConfig.library.publish.url)
                 inceptionYear.set(ProjectConfig.library.publish.year)
 
-                scm {
-                    connection.set(ProjectConfig.library.publish.scmConnection)
-                    developerConnection.set(ProjectConfig.library.publish.scmDeveloperConnection)
-                    url.set(ProjectConfig.library.publish.scmUrl)
-                }
                 licenses {
                     license {
                         name.set(ProjectConfig.library.publish.licenseName)
@@ -124,6 +119,11 @@ publishing {
                         name.set(ProjectConfig.library.publish.developerName)
                         email.set(ProjectConfig.library.publish.developerEmail)
                     }
+                }
+                scm {
+                    connection.set(ProjectConfig.library.publish.scmConnection)
+                    developerConnection.set(ProjectConfig.library.publish.scmDeveloperConnection)
+                    url.set(ProjectConfig.library.publish.scmUrl)
                 }
             }
         }
