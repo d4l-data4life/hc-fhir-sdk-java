@@ -20,13 +20,17 @@ package care.data4life.fhir.r4.model;
  * Generated from FHIR {{ info.version }}
  */
 public final class FhirElementFactory {
-  {% set resource_list = ["CarePlan",
+  {% set resource_list = ["AllergyIntolerance",
+      "CarePlan",
       "CareTeam",
       "Condition",
       "DiagnosticReport",
+      "Device",
+      "DeviceUseStatement",
       "DocumentReference",
       "FamilyMemberHistory",
       "Goal",
+      "Immunization",
       "Medication",
       "MedicationRequest",
       "MedicationStatement",
