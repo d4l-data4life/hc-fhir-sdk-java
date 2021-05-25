@@ -12,11 +12,10 @@ and this project adheres to http://semver.org/spec/v2.0.0.html[Semantic Versioni
 ==== Versions
 toc::[]
 
-== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.4.0...main[Unreleased]
+
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.4.1...main[Unreleased]
 
 === Added
-
-* Add FHIR R4 model AllergyIntolerance, Device, DeviceUseStatement and Immunization.
 
 === Changed
 
@@ -27,6 +26,12 @@ toc::[]
 === Bumped
 
 === Migration
+
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.4.0...v1.4.1
+
+=== Added
+
+* Add FHIR R4 model AllergyIntolerance, Device, DeviceUseStatement and Immunization.
 
 == https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.3.1...v1.4.0[1.4.0]
 
