@@ -67,6 +67,17 @@ module Fastlane
           sh "cp #{modelSource}/MedicationStatementTest.java #{modelTestTarget}"
       end
 
+	  # Hotfix for broken generation of Device
+	  def self.cleanupDevice
+	  	  location = "./fhir-java/src-gen/main/java/care/data4life/fhir/r4/model"
+	  	  text = File.read(location + "/Device.java")
+	  	  cleanDevice = text.gsub(
+			  /\nUDILabelName \| UserFriendlyName \| PatientReportedName \| ManufactureDeviceName \| ModelName\./,
+			   ""
+	  	  )
+
+	  	  File.open(location + "/Device.java", "w") {|file| file.puts cleanDevice }
+	  end
 
       def self.integrate_fhir_models
           fhir_parser = './fhir-spec-parser'
@@ -86,11 +97,15 @@ module Fastlane
           special = ["Reference", "Narrative", "Extension", "Resource", "Meta"]
           enum = Dir[ modelSource ].select{ |f| f[/CodeSystem+/] }.map{ |f| File.basename(f, '.*') }
           model = [
+              "AllergyIntolerance",
               "BackboneElement",
               "DocumentReference",
               "DomainResource",
               "Observation",
+              "Device",
+              "DeviceUseStatement",
               "DiagnosticReport",
+              "Immunization",
               "Organization",
               "Practitioner",
               "PractitionerRole",
@@ -158,6 +173,7 @@ module Fastlane
 
           # Static fixes
           includeStatics()
+          cleanupDevice()
 
           UI.success "Done integrating generated models ✅"
       end
