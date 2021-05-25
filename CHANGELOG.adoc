@@ -16,6 +16,8 @@ toc::[]
 
 === Added
 
+* Add FHIR R4 model AllergyIntolerance, Device, DeviceUseStatement and Immunization.
+
 === Changed
 
 === Removed

@@ -23,6 +23,9 @@ public final class FhirElementFactory {
 
 
     public static <T extends FhirR4Base> String getFhirTypeForClass(Class<T> clazz) {
+        if (clazz == AllergyIntolerance.class) {
+            return AllergyIntolerance.resourceType;
+        }
         if (clazz == CarePlan.class) {
             return CarePlan.resourceType;
         }
@@ -31,6 +34,12 @@ public final class FhirElementFactory {
         }
         if (clazz == Condition.class) {
             return Condition.resourceType;
+        }
+        if (clazz == Device.class) {
+            return Device.resourceType;
+        }
+        if (clazz == DeviceUseStatement.class) {
+            return DeviceUseStatement.resourceType;
         }
         if (clazz == DiagnosticReport.class) {
             return DiagnosticReport.resourceType;
@@ -46,6 +55,9 @@ public final class FhirElementFactory {
         }
         if (clazz == Goal.class) {
             return Goal.resourceType;
+        }
+        if (clazz == Immunization.class) {
+            return Immunization.resourceType;
         }
         if (clazz == Location.class) {
             return Location.resourceType;
@@ -103,12 +115,18 @@ public final class FhirElementFactory {
 
     public static Class<?> getClassForFhirType(String typeName) {
         switch (typeName.toLowerCase()) {
+            case "allergyintolerance":
+                return AllergyIntolerance.class;
             case "careplan":
                 return CarePlan.class;
             case "careteam":
                 return CareTeam.class;
             case "condition":
                 return Condition.class;
+            case "device":
+                return Device.class;
+            case "deviceusestatement":
+                return DeviceUseStatement.class;
             case "diagnosticreport":
                 return DiagnosticReport.class;
             case "documentreference":
@@ -119,6 +137,8 @@ public final class FhirElementFactory {
                 return FamilyMemberHistory.class;
             case "goal":
                 return Goal.class;
+            case "immunization":
+                return Immunization.class;
             case "location":
                 return Location.class;
             case "medication":
