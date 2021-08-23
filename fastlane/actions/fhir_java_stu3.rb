@@ -99,7 +99,8 @@ module Fastlane
               "UsageContext",
               "ReferralRequest",
               "ValueSet",
-              "Procedure"
+              "Procedure",
+              "Consent"
           ]
 
           # FIXME
