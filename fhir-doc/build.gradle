@@ -13,6 +13,7 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
+import care.data4life.fhir.LibraryConfig
 
 plugins {
     id 'org.asciidoctor.convert' version '1.5.9.1'
@@ -24,7 +25,7 @@ repositories {
     maven { url "http://rubygems-proxy.torquebox.org/releases" }
 }
 
-group = ProjectConfig.library.group
+group = LibraryConfig.group
 
 archivesBaseName = 'sdk-doc'
 

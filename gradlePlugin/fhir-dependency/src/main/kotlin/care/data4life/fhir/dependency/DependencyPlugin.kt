@@ -13,24 +13,15 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
-plugins {
-    id("care.data4life.fhir.dependency")
 
-    id("care.data4life.fhir.dependency-updates")
-    id("care.data4life.fhir.download-scripts")
-    id("care.data4life.fhir.publishing")
-    id("care.data4life.fhir.versioning")
-}
+package care.data4life.fhir.dependency
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        jcenter()
+import org.gradle.api.Plugin
+import org.gradle.api.Project
+
+class DependencyPlugin : Plugin<Project> {
+
+    override fun apply(target: Project) {
+        // nothing to do
     }
-}
-
-tasks.named<Wrapper>("wrapper") {
-    gradleVersion = "6.9.1"
-    distributionType = Wrapper.DistributionType.ALL
 }

@@ -13,24 +13,22 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
-plugins {
-    id("care.data4life.fhir.dependency")
+package care.data4life.fhir.dependency
 
-    id("care.data4life.fhir.dependency-updates")
-    id("care.data4life.fhir.download-scripts")
-    id("care.data4life.fhir.publishing")
-    id("care.data4life.fhir.versioning")
-}
+object Dependency {
+    val jvm = Java
+    object Java {
+        const val javaXAnnotation = "com.google.code.findbugs:jsr305:${Version.javaXAnnotation}"
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        jcenter()
+        const val moshi = "com.squareup.moshi:moshi:${Version.moshi}"
+        const val moshiAdapters = "com.squareup.moshi:moshi-adapters:${Version.moshi}"
+
+        val test = Test
+        object Test
+        {
+            const val jUnit = "junit:junit:${Version.jUnit}"
+            const val mockitoInline = "org.mockito:mockito-inline:${Version.mockito}"
+            const val jsonAssert = "org.skyscreamer:jsonassert:${Version.jsonassert}"
+        }
     }
-}
-
-tasks.named<Wrapper>("wrapper") {
-    gradleVersion = "6.9.1"
-    distributionType = Wrapper.DistributionType.ALL
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 D4L data4life gGmbH / All rights reserved.
+ * Copyright (c) 2021 D4L data4life gGmbH / All rights reserved.
  *
  * D4L owns all legal rights, title and interest in and to the Software Development Kit ("SDK"),
  * including any intellectual property rights that subsist in the SDK.
@@ -13,24 +13,17 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
+package care.data4life.fhir.dependency
 
-object Versions {
-    val gradlePlugin = GradlePluginVersion
+object Version {
+    object GradlePlugin {
+        const val kotlin = Version.kotlin
+        const val android = "4.2.2" //
+    }
 
-    val main = MainVersion
-    val test = TestVersion
-    val androidTest = AndroidTestVersion
-}
-
-object GradlePluginVersion {
-    const val kotlin = Versions.main.kotlin
-    const val android = "4.1.0"
-}
-
-
-object MainVersion {
     // Kotlin
-    const val kotlin = "1.3.61"
+    // https://github.com/JetBrains/kotlin
+    const val kotlin = "1.4.32"
 
     // Java
     const val javaXAnnotation = "3.0.2"
@@ -40,21 +33,16 @@ object MainVersion {
      * [moshi](https://github.com/square/moshi)
      */
     const val moshi = "1.12.0"
-}
 
-object TestVersion {
+
     // Junit Test
-    const val jUnit = "4.13"
+    const val jUnit = "4.13.2"
 
     /**
      * [mockito](https://github.com/mockito/mockito)
      */
     const val mockito = "2.24.0"
-}
 
-object AndroidTestVersion {
-    // Android Test
-    const val androidTest = "1.0.2"
 
-    const val espresso = "3.0.2"
+    const val jsonassert = "1.5.0"
 }
