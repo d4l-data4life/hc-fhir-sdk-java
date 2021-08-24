@@ -18,7 +18,7 @@ package care.data4life.fhir.dependency
 object Version {
     object GradlePlugin {
         const val kotlin = Version.kotlin
-        const val android = "4.2.2" //
+        const val android = "4.2.2"
     }
 
     // Kotlin
