@@ -16,7 +16,7 @@
 package care.data4life.fhir
 
 object LibraryConfig {
-    const val group = "care.data4life"
+    const val group = "care.data4life.fhir"
     const val name = "hc-fhir-sdk-java"
 
     const val githubOwner = "d4l-data4life"
