@@ -13,15 +13,18 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
+import care.data4life.fhir.dependency.Dependency
+import care.data4life.fhir.LibraryConfig
 
 plugins {
   `java-library`
   jacoco
 
-  id("scripts.publishing-config")
+  // Publish
+  id("care.data4life.fhir.publishing-config")
 }
 
-group = ProjectConfig.library.group
+group = LibraryConfig.group
 
 java {
   sourceCompatibility = JavaVersion.VERSION_1_7
@@ -55,11 +58,11 @@ java {
 }
 
 dependencies {
-  implementation(ProjectConfig.dependency.main.javaXAnnotation)
-  implementation(ProjectConfig.dependency.main.moshi)
-  implementation(ProjectConfig.dependency.main.moshiAdapters)
+  implementation(Dependency.jvm.javaXAnnotation)
+  implementation(Dependency.jvm.moshi)
+  implementation(Dependency.jvm.moshiAdapters)
 
-  testImplementation(ProjectConfig.dependency.test.jUnit)
-  testImplementation(ProjectConfig.dependency.test.mockitoInline)
-  testImplementation(ProjectConfig.dependency.test.jsonAssert)
+  testImplementation(Dependency.jvm.test.jUnit)
+  testImplementation(Dependency.jvm.test.mockitoInline)
+  testImplementation(Dependency.jvm.test.jsonAssert)
 }

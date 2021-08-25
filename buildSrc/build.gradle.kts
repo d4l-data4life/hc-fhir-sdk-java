@@ -13,18 +13,24 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
-
 plugins {
     `kotlin-dsl`
+
+    id("care.data4life.fhir.dependency")
 }
+
 
 
 repositories {
     gradlePluginPortal()
     mavenCentral()
+    google()
 }
 
 dependencies {
+    implementation(care.data4life.fhir.dependency.GradlePlugin.kotlin)
+    implementation(care.data4life.fhir.dependency.GradlePlugin.android)
+
     // dependency check
     implementation("com.github.ben-manes:gradle-versions-plugin:0.38.0")
     // download scripts
