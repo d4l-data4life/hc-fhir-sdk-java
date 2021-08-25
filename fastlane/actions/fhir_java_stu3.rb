@@ -100,7 +100,8 @@ module Fastlane
               "ReferralRequest",
               "ValueSet",
               "Procedure",
-              "Consent"
+              "Consent",
+              "ResearchSubject"
           ]
 
           # FIXME
