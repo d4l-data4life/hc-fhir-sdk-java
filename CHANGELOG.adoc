@@ -17,7 +17,7 @@ toc::[]
 
 === Added
 
-* Consent (R4 & STU3).
+* Consent and ResearchSubject (R4 & STU3).
 
 === Changed
 
