@@ -16,16 +16,15 @@
 
 package care.data4life.fhir
 
-import care.data4life.fhir.LibraryConfig
 import org.gradle.api.publish.maven.MavenPublication
 
 /**
  * Usage:
  *
- * Now just add id("scripts.publishing-config") to your projects build.gradle.kts plugins section
+ * Now just add id("care.data4life.fhir.publishing-config") to your projects build.gradle.kts plugins section
  *
  * plugins {
- *     id("scripts.publishing")
+ *     id("care.data4life.fhir.publishing")
  * }
  *
  * To publish to to https://github.com/d4l-data4life/maven-repository/ just run:
@@ -68,9 +67,9 @@ publishing {
             url = uri("https://maven.pkg.github.com/d4l-data4life/hc-fhir-sdk-java")
             credentials {
                 username = (project.findProperty("gpr.user")
-                        ?: System.getenv("PACKAGE_REGISTRY_USERNAME")).toString()
+                        ?: System.getenv("PACKAGE_REGISTRY_UPLOAD_USERNAME")).toString()
                 password = (project.findProperty("gpr.key")
-                        ?: System.getenv("PACKAGE_REGISTRY_TOKEN")).toString()
+                        ?: System.getenv("PACKAGE_REGISTRY_UPLOAD_TOKEN")).toString()
             }
         }
 
