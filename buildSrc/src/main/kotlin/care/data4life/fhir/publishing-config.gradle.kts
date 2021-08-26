@@ -19,20 +19,22 @@ package care.data4life.fhir
 import org.gradle.api.publish.maven.MavenPublication
 
 /**
- * Usage:
+ * Install:
  *
- * Now just add id("care.data4life.fhir.publishing-config") to your projects build.gradle.kts plugins section
+ * Just add id("care.data4life.fhir.publishing-config") to your project module build.gradle.kts plugins section
  *
  * plugins {
- *     id("care.data4life.fhir.publishing")
+ *     id("care.data4life.fhir.publishing-config")
  * }
+ *
+ * Usage:
  *
  * To publish to to https://github.com/d4l-data4life/maven-repository/ just run:
  * - ./gradlew publishFeature
  * - ./gradlew publishSnapshot
  * - ./gradlew publishRelease
  *
- * This requires a LibraryConfig as defined here https://github.com/d4l-data4life/hc-gradle-scripts/blob/main/buildSrc/src/main/kotlin/LibraryConfig.kt
+ * This requires a care.data4life.fhir.LibraryConfig configured
  */
 plugins {
     `java-library`
