@@ -13,7 +13,7 @@ and this project adheres to http://semver.org/spec/v2.0.0.html[Semantic Versioni
 toc::[]
 
 
-== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.6.0...main[Unreleased]
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.6.1...main[Unreleased]
 
 === Added
 
@@ -26,6 +26,13 @@ toc::[]
 === Bumped
 
 === Migration
+
+
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.6.0...v1.6.1[1.6.1]
+
+=== Bumped
+
+Re-release of 1.6.0 due to build issues.
 
 
 == https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.5.0...v1.6.0[1.6.0]
