@@ -16,40 +16,61 @@
 
 package care.data4life.fhir
 
+import care.data4life.fhir.LibraryConfig
 import org.gradle.api.publish.maven.MavenPublication
 
 /**
- * Install:
+ * Usage:
  *
- * Just add id("care.data4life.fhir.publishing-config") to your project module build.gradle.kts plugins section
+ * Now just add id("scripts.publishing-config") to your projects build.gradle.kts plugins section
  *
  * plugins {
- *     id("care.data4life.fhir.publishing-config")
+ *     id("scripts.publishing")
  * }
- *
- * Usage:
  *
  * To publish to to https://github.com/d4l-data4life/maven-repository/ just run:
  * - ./gradlew publishFeature
  * - ./gradlew publishSnapshot
  * - ./gradlew publishRelease
  *
- * This requires a care.data4life.fhir.LibraryConfig configured
+ * This requires a LibraryConfig as defined here https://github.com/d4l-data4life/hc-gradle-scripts/blob/main/buildSrc/src/main/kotlin/LibraryConfig.kt
  */
 plugins {
+    `java-library`
     `maven-publish`
+}
+
+tasks.named<JacocoReport>("jacocoTestReport") {
+    reports {
+        xml.isEnabled = true
+        csv.isEnabled = false
+    }
+}
+
+tasks.register<Jar>("sourcesJar") {
+    from(sourceSets.main.get().allSource)
+    archiveClassifier.set("sources")
+}
+
+tasks.register<Jar>("javadocJar") {
+    from(tasks.javadoc)
+    archiveClassifier.set("javadoc")
+}
+
+tasks.javadoc {
+    isFailOnError = false
 }
 
 publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            setUrl("https://maven.pkg.github.com/${LibraryConfig.githubOwner}/${LibraryConfig.githubRepository}")
+            url = uri("https://maven.pkg.github.com/d4l-data4life/hc-fhir-sdk-java")
             credentials {
                 username = (project.findProperty("gpr.user")
-                    ?: System.getenv("PACKAGE_REGISTRY_UPLOAD_USERNAME")).toString()
+                        ?: System.getenv("PACKAGE_REGISTRY_USERNAME")).toString()
                 password = (project.findProperty("gpr.key")
-                    ?: System.getenv("PACKAGE_REGISTRY_UPLOAD_TOKEN")).toString()
+                        ?: System.getenv("PACKAGE_REGISTRY_TOKEN")).toString()
             }
         }
 
@@ -72,34 +93,37 @@ publishing {
     }
 
     publications {
-        withType<MavenPublication> {
-            groupId = LibraryConfig.PublishConfig.groupId
+        create<MavenPublication>("jvm") {
+            groupId = LibraryConfig.publish.groupId
+
+            from(components["java"])
+            artifact(tasks["sourcesJar"])
+            artifact(tasks["javadocJar"])
 
             pom {
-                description.set(LibraryConfig.PublishConfig.description)
-                url.set(LibraryConfig.PublishConfig.url)
-                inceptionYear.set(LibraryConfig.PublishConfig.year)
+                name.set(LibraryConfig.publish.name)
+                description.set(LibraryConfig.publish.description)
+                url.set(LibraryConfig.publish.url)
+                inceptionYear.set(LibraryConfig.publish.year)
 
                 licenses {
                     license {
-                        name.set(LibraryConfig.PublishConfig.licenseName)
-                        url.set(LibraryConfig.PublishConfig.licenseUrl)
-                        distribution.set(LibraryConfig.PublishConfig.licenseDistribution)
+                        name.set(LibraryConfig.publish.licenseName)
+                        url.set(LibraryConfig.publish.licenseUrl)
+                        distribution.set(LibraryConfig.publish.licenseDistribution)
                     }
                 }
-
                 developers {
                     developer {
-                        id.set(LibraryConfig.PublishConfig.developerId)
-                        name.set(LibraryConfig.PublishConfig.developerName)
-                        email.set(LibraryConfig.PublishConfig.developerEmail)
+                        id.set(LibraryConfig.publish.developerId)
+                        name.set(LibraryConfig.publish.developerName)
+                        email.set(LibraryConfig.publish.developerEmail)
                     }
                 }
-
                 scm {
-                    connection.set(LibraryConfig.PublishConfig.scmConnection)
-                    developerConnection.set(LibraryConfig.PublishConfig.scmDeveloperConnection)
-                    url.set(LibraryConfig.PublishConfig.scmUrl)
+                    connection.set(LibraryConfig.publish.scmConnection)
+                    developerConnection.set(LibraryConfig.publish.scmDeveloperConnection)
+                    url.set(LibraryConfig.publish.scmUrl)
                 }
             }
         }
