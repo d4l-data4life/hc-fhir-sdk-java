@@ -35,6 +35,9 @@ public final class FhirElementFactory {
         if (clazz == Condition.class) {
             return Condition.resourceType;
         }
+        if (clazz == Consent.class) {
+            return Consent.resourceType;
+        }
         if (clazz == Device.class) {
             return Device.resourceType;
         }
@@ -98,6 +101,9 @@ public final class FhirElementFactory {
         if (clazz == QuestionnaireResponse.class) {
             return QuestionnaireResponse.resourceType;
         }
+        if (clazz == ResearchSubject.class) {
+            return ResearchSubject.resourceType;
+        }
         if (clazz == ServiceRequest.class) {
             return ServiceRequest.resourceType;
         }
@@ -123,6 +129,8 @@ public final class FhirElementFactory {
                 return CareTeam.class;
             case "condition":
                 return Condition.class;
+            case "consent":
+                return Consent.class;
             case "device":
                 return Device.class;
             case "deviceusestatement":
@@ -165,6 +173,8 @@ public final class FhirElementFactory {
                 return Questionnaire.class;
             case "questionnaireresponse":
                 return QuestionnaireResponse.class;
+            case "researchsubject":
+                return ResearchSubject.class;
             case "servicerequest":
                 return ServiceRequest.class;
             case "specimen":

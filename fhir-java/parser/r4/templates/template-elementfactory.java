@@ -51,7 +51,9 @@ public final class FhirElementFactory {
       "Procedure",
       "Encounter",
       "Location",
-      "ServiceRequest"] %}
+      "ServiceRequest",
+      "Consent",
+      "ResearchSubject"] %}
 
   public static <T extends FhirR4Base> String getFhirTypeForClass(Class<T> clazz) {
     {%- for klass in classes %}{% if klass.name in resource_list %}

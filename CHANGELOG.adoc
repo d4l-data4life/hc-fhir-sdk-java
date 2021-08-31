@@ -23,6 +23,8 @@ toc::[]
 
 === Fixed
 
+* ElementFactory did not contain Consent and ResearchSubject.
+
 === Bumped
 
 === Migration
