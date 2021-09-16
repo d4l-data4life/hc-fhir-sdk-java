@@ -36,15 +36,11 @@ dependencies {
     implementation(care.data4life.gradle.fhir.dependency.GradlePlugin.android)
 
     // dependency-updates.gradle.kts
-    implementation("com.github.ben-manes:gradle-versions-plugin:0.38.0")
+    implementation("com.github.ben-manes:gradle-versions-plugin:0.39.0")
     // download-scripts.gradle.kts
-    implementation("de.undercouch:gradle-download-task:4.1.1")
+    implementation("de.undercouch:gradle-download-task:4.1.2")
     // publishing.gradle.kts
     implementation("org.eclipse.jgit:org.eclipse.jgit:5.11.0.202103091610-r")
     // versioning.gradle.kts
     implementation("care.data4life.gradle.gitversion:gradle-git-version:0.12.4-d4l")
-}
-
-kotlinDslPluginOptions {
-    experimentalWarning.set(false)
 }
