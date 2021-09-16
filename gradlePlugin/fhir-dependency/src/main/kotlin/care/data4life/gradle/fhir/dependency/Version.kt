@@ -34,15 +34,13 @@ object Version {
      */
     const val moshi = "1.12.0"
 
-
     // Junit Test
     const val jUnit = "4.13.2"
 
     /**
      * [mockito](https://github.com/mockito/mockito)
      */
-    const val mockito = "2.24.0"
-
+    const val mockito = "2.28.2"
 
     const val jsonassert = "1.5.0"
 }
