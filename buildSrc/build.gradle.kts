@@ -13,10 +13,13 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
+
+import care.data4life.gradle.fhir.dependency.d4l
+
 plugins {
     `kotlin-dsl`
 
-    id("care.data4life.fhir.dependency")
+    id("care.data4life.gradle.fhir.dependency")
 }
 
 
@@ -25,20 +28,21 @@ repositories {
     gradlePluginPortal()
     mavenCentral()
     google()
+    d4l()
 }
 
 dependencies {
-    implementation(care.data4life.fhir.dependency.GradlePlugin.kotlin)
-    implementation(care.data4life.fhir.dependency.GradlePlugin.android)
+    implementation(care.data4life.gradle.fhir.dependency.GradlePlugin.kotlin)
+    implementation(care.data4life.gradle.fhir.dependency.GradlePlugin.android)
 
-    // dependency check
+    // dependency-updates.gradle.kts
     implementation("com.github.ben-manes:gradle-versions-plugin:0.38.0")
-    // download scripts
+    // download-scripts.gradle.kts
     implementation("de.undercouch:gradle-download-task:4.1.1")
     // publishing.gradle.kts
     implementation("org.eclipse.jgit:org.eclipse.jgit:5.11.0.202103091610-r")
     // versioning.gradle.kts
-    implementation("com.palantir.gradle.gitversion:gradle-git-version:0.12.3")
+    implementation("care.data4life.gradle.gitversion:gradle-git-version:0.12.4-d4l")
 }
 
 kotlinDslPluginOptions {

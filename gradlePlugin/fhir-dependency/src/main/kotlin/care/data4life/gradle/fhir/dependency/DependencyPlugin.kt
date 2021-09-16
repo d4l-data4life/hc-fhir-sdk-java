@@ -13,22 +13,15 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
-package care.data4life.fhir.dependency
 
-object Dependency {
-    val jvm = Java
-    object Java {
-        const val javaXAnnotation = "com.google.code.findbugs:jsr305:${Version.javaXAnnotation}"
+package care.data4life.gradle.fhir.dependency
 
-        const val moshi = "com.squareup.moshi:moshi:${Version.moshi}"
-        const val moshiAdapters = "com.squareup.moshi:moshi-adapters:${Version.moshi}"
+import org.gradle.api.Plugin
+import org.gradle.api.Project
 
-        val test = Test
-        object Test
-        {
-            const val jUnit = "junit:junit:${Version.jUnit}"
-            const val mockitoInline = "org.mockito:mockito-inline:${Version.mockito}"
-            const val jsonAssert = "org.skyscreamer:jsonassert:${Version.jsonassert}"
-        }
+class DependencyPlugin : Plugin<Project> {
+
+    override fun apply(target: Project) {
+        // nothing to do
     }
 }

@@ -14,8 +14,9 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package care.data4life.fhir
+package care.data4life.gradle.fhir.script
 
+import care.data4life.gradle.fhir.config.LibraryConfig
 import org.gradle.api.publish.maven.MavenPublication
 
 /**
@@ -69,9 +70,9 @@ publishing {
             url = uri("https://maven.pkg.github.com/d4l-data4life/hc-fhir-sdk-java")
             credentials {
                 username = (project.findProperty("gpr.user")
-                        ?: System.getenv("PACKAGE_REGISTRY_UPLOAD_USERNAME")).toString()
+                    ?: System.getenv("PACKAGE_REGISTRY_UPLOAD_USERNAME")).toString()
                 password = (project.findProperty("gpr.key")
-                        ?: System.getenv("PACKAGE_REGISTRY_UPLOAD_TOKEN")).toString()
+                    ?: System.getenv("PACKAGE_REGISTRY_UPLOAD_TOKEN")).toString()
             }
         }
 

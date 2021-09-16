@@ -14,19 +14,18 @@
  * contact D4L by email to help@data4life.care.
  */
 plugins {
-    id("care.data4life.fhir.dependency")
+    id("care.data4life.gradle.fhir.dependency")
 
-    id("care.data4life.fhir.dependency-updates")
-    id("care.data4life.fhir.download-scripts")
-    id("care.data4life.fhir.publishing")
-    id("care.data4life.fhir.versioning")
+    id("care.data4life.gradle.fhir.script.dependency-updates")
+    id("care.data4life.gradle.fhir.script.download-scripts")
+    id("care.data4life.gradle.fhir.script.publishing")
+    id("care.data4life.gradle.fhir.script.versioning")
 }
 
 allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
     }
 }
 
