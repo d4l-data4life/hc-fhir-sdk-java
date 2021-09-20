@@ -41,8 +41,6 @@ toc::[]
 
 === Bumped
 
-=== Deprecated
-
 === Migration
 
 == https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.6.2...v1.6.3[1.6.3]
