@@ -1,4 +1,6 @@
+= Data4life FHIR SDK for Android/Java
 :library_version: 1.6.2
+:link-repository: https://github.com/d4l-data4life/hc-fhir-sdk-java
 :toc: macro
 :toclevels: 2
 :toc-title:
@@ -23,12 +25,14 @@ endif::[]
 <div align="center">
     <!-- PROJECT LOGO -->
     <p>
-        <a><img src="https://github.com/d4l-data4life/hc-fhir-sdk-java/blob/main/assets/images/d4l-logo.svg" width="150"/></a>
+        <a href="https://github.com/d4l-data4life/hc-fhir-sdk-java">
+            <img src="assets/images/d4l-logo.svg" width="150"/>
+        </a>
     </p>
     <!-- PROJECT HEADER -->
-    <h1>data4life FHIR STU3 for Android/Java</h1>
+    <h1>Data4life FHIR SDK for Android/Java</h1>
     <p><!-- PROJECT DESCRIPTION -->
-        Minimal FHIR standard models and data types for Android and Java
+        Minimal FHIR standard models and data types of STU3 and R4 for Android and Java
     </p>
     <p><!-- PROJECT DOCUMENTATION -->
         <a href="https://github.com/d4l-data4life/hc-fhir-sdk-java"><strong>Explore the docs »</strong></a>
@@ -40,7 +44,7 @@ endif::[]
     </p>
     <p><!-- PROJECT BADGES -->
         <a href="https://github.com/d4l-data4life/hc-fhir-sdk-java/actions">
-            <img src="https://github.com/d4l-data4life/hc-fhir-sdk-java/workflows/D4L%20CI/badge.svg" alt="Build Status"/>
+            <img src="https://github.com/d4l-data4life/hc-fhir-sdk-java/workflows/D4L%20CI/badge.svg" alt="D4L CI - Latest Version"/>
         </a>
         <a href="https://github.com/d4l-data4life/hc-fhir-sdk-java/blob/main/LICENSE">
             <img src="https://img.shields.io/badge/license-PRIVATE-blue.svg"/>

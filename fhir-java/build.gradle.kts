@@ -13,15 +13,16 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
-import care.data4life.fhir.dependency.Dependency
-import care.data4life.fhir.LibraryConfig
+
+import care.data4life.gradle.fhir.dependency.Dependency
+import care.data4life.gradle.fhir.config.LibraryConfig
 
 plugins {
   `java-library`
   jacoco
 
   // Publish
-  id("care.data4life.fhir.publishing-config")
+  id("care.data4life.gradle.fhir.script.publishing-config")
 }
 
 group = LibraryConfig.group

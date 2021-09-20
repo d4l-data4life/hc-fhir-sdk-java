@@ -11,8 +11,6 @@ plugins {
     id("com.gradle.enterprise") version("3.4.1")
 }
 
-rootProject.name = "hc-fhir-sdk-java"
-
 include(":fhir-java")
 include(":fhir-doc")
 
@@ -23,3 +21,5 @@ buildCache {
         removeUnusedEntriesAfterDays = 30
     }
 }
+
+rootProject.name = "hc-fhir-sdk-java"
