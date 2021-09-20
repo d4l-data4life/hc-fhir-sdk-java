@@ -45,8 +45,6 @@ toc::[]
 * *_BREAKING_* Kotlin 1.4.32 -> 1.5.21
 * *_BREAKING_* Android Gradle Plugin 4.2.2 -> 7.0.2
 
-=== Deprecated
-
 === Migration
 
 == https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.6.2...v1.6.3[1.6.3]
