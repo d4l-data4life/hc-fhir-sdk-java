@@ -18,12 +18,12 @@ package care.data4life.gradle.fhir.dependency
 object Version {
     object GradlePlugin {
         const val kotlin = Version.kotlin
-        const val android = "4.2.2"
+        const val android = "7.0.2"
     }
 
     // Kotlin
     // https://github.com/JetBrains/kotlin
-    const val kotlin = "1.4.32"
+    const val kotlin = "1.5.21"
 
     // Java
     const val javaXAnnotation = "3.0.2"
@@ -34,15 +34,13 @@ object Version {
      */
     const val moshi = "1.12.0"
 
-
     // Junit Test
     const val jUnit = "4.13.2"
 
     /**
      * [mockito](https://github.com/mockito/mockito)
      */
-    const val mockito = "2.24.0"
-
+    const val mockito = "2.28.2"
 
     const val jsonassert = "1.5.0"
 }

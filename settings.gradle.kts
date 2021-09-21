@@ -3,12 +3,12 @@ pluginManagement {
         gradlePluginPortal()
         google()
     }
-
-    includeBuild("gradlePlugin/fhir-dependency")
 }
 
+includeBuild("gradlePlugin/fhir-dependency")
+
 plugins {
-    id("com.gradle.enterprise") version("3.4.1")
+    id("com.gradle.enterprise") version("3.7")
 }
 
 include(":fhir-java")
