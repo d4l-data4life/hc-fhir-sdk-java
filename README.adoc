@@ -1,5 +1,5 @@
 = Data4life FHIR SDK for Android/Java
-:library_version: 1.6.2
+:library_version: 1.7.0
 :link-repository: https://github.com/d4l-data4life/hc-fhir-sdk-java
 :toc: macro
 :toclevels: 2
