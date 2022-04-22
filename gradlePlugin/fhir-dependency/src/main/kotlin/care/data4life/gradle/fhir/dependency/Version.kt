@@ -23,7 +23,7 @@ object Version {
 
     // Kotlin
     // https://github.com/JetBrains/kotlin
-    const val kotlin = "1.5.21"
+    const val kotlin = "1.6.10"
 
     // Java
     const val javaXAnnotation = "3.0.2"

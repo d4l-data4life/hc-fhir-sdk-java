@@ -44,6 +44,7 @@ toc::[]
 === Bumped
 
 * Gradle 7.2 -> 7.4.2
+* _**BREAKING**_ Kotlin 1.5.21 -> 1.6.10
 
 === Migration
 
