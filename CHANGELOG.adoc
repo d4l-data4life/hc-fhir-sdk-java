@@ -43,6 +43,8 @@ toc::[]
 
 === Bumped
 
+* Gradle 7.2 -> 7.4.2
+
 === Migration
 
 == https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.6.3...v1.7.0[1.7.0]
