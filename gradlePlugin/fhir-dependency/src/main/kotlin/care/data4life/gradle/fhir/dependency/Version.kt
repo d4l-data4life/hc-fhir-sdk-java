@@ -40,7 +40,7 @@ object Version {
     /**
      * [mockito](https://github.com/mockito/mockito)
      */
-    const val mockito = "2.28.2"
+    const val mockito = "4.5.1"
 
     const val jsonassert = "1.5.0"
 }
