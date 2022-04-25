@@ -1,5 +1,5 @@
 = Data4life FHIR SDK for Android/Java
-:library_version: 1.7.0
+:library_version: 1.8.0
 :link-repository: https://github.com/d4l-data4life/hc-fhir-sdk-java
 :toc: macro
 :toclevels: 2
@@ -106,9 +106,9 @@ dependencies {
 
 === Requirements
 
-* Android Studio 4.1.0
-* Java 7
-* Gradle 6.7.1
+* Android Studio 7.1.3
+* Java 8
+* Gradle 7.4.2
 * Python 3.5
 * Ruby
 * http://bundler.io/[Bundler]
