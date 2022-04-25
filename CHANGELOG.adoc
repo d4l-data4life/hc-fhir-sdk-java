@@ -43,6 +43,10 @@ toc::[]
 
 === Bumped
 
+* Gradle 7.2 -> 7.4.2
+* _**BREAKING**_ Kotlin 1.5.21 -> 1.6.10
+* moshi 1.12.0 -> 1.13.0
+
 === Migration
 
 == https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.6.3...v1.7.0[1.7.0]

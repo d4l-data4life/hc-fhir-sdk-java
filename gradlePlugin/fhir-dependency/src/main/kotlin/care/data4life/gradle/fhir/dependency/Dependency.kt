@@ -24,8 +24,8 @@ object Dependency {
         const val moshiAdapters = "com.squareup.moshi:moshi-adapters:${Version.moshi}"
 
         val test = Test
-        object Test
-        {
+
+        object Test {
             const val jUnit = "junit:junit:${Version.jUnit}"
             const val mockitoInline = "org.mockito:mockito-inline:${Version.mockito}"
             const val jsonAssert = "org.skyscreamer:jsonassert:${Version.jsonassert}"

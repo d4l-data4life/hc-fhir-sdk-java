@@ -23,7 +23,7 @@ object Version {
 
     // Kotlin
     // https://github.com/JetBrains/kotlin
-    const val kotlin = "1.5.21"
+    const val kotlin = "1.6.10"
 
     // Java
     const val javaXAnnotation = "3.0.2"
@@ -32,7 +32,7 @@ object Version {
     /**
      * [moshi](https://github.com/square/moshi)
      */
-    const val moshi = "1.12.0"
+    const val moshi = "1.13.0"
 
     // Junit Test
     const val jUnit = "4.13.2"
@@ -40,7 +40,7 @@ object Version {
     /**
      * [mockito](https://github.com/mockito/mockito)
      */
-    const val mockito = "2.28.2"
+    const val mockito = "4.5.1"
 
     const val jsonassert = "1.5.0"
 }
