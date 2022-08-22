@@ -25,9 +25,7 @@ Template could be found here: link:https://github.com/d4l-data4life/hc-readme-te
 ==== Versions
 toc::[]
 
-
-
-== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.8.0\...main[Unreleased]
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.9.0\...main[Unreleased]
 
 === Added
 
@@ -43,12 +41,15 @@ toc::[]
 
 === Bumped
 
+=== Migration
+
+== https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.8.0\...v1.9.0[1.9.0]
+
+=== Bumped
+
 * Gradle 7.4.2 -> 7.5.1
 * Android Gradle Plugin 7.1.3 -> 7.2.2
 * _**BREAKING**_ Kotlin 1.6.10 -> 1.7.10
-
-
-=== Migration
 
 == https://github.com/d4l-data4life/hc-fhir-sdk-java/compare/v1.7.0\...v1.8.0[1.8.0]
 
